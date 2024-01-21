@@ -79,6 +79,7 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         multiDexEnabled true
+        resValue "string", "APP_BASE_URL", dartEnvironmentVariables.APP_BASE_URL
     }
 
     signingConfigs {
