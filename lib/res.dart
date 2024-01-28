@@ -16,4 +16,9 @@ class Res {
   static const String errorSnackBar = "assets/images/error_snack_bar.svg";
   static const String warningSnackBar = "assets/images/warning_snack_bar.svg";
   static const String successSnackBar = "assets/images/success_snack_bar.svg";
+  static const String splashLogo = "assets/images/splash_logo.svg";
+  static const String fingerprintIcon = "assets/images/fingerprint_icon.svg";
+  static const String emailIcon = "assets/images/email_icon.svg";
+  static const String passwordIcon = "assets/images/password_icon.svg";
+  static const String otpIcon = "assets/images/otp_icon.svg";
 }

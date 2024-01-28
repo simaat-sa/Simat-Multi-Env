@@ -19,24 +19,16 @@ class _SplashState extends State<Splash> {
 
   @override
   void didChangeDependencies() {
-    precacheImage(const AssetImage(Res.logo), context);
+    // precacheImage(const AssetImage(Res.logo), context);
     super.didChangeDependencies();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.colors.background,
-      body: Center(
-        child: TextAnimator(
-          'Base Structure',
-          initialDelay: const Duration(milliseconds: 1000),
-          style: AppTextStyle.s32_w700(color: context.colors.black),
-          incomingEffect: WidgetTransitionEffects.incomingScaleDown(
-            duration: const Duration(milliseconds: 600),
-          ),
-        ),
-      ),
+      backgroundColor: context.colors.white,
+      body: const SplashLogo(),
+      bottomNavigationBar: const SplashBottomItemWidget(),
     );
   }
 }

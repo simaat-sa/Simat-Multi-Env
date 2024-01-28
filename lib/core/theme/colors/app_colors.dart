@@ -33,6 +33,10 @@ abstract class AppColors {
 
   Color get secondary;
 
+  Color get textColor;
+
+  Color get filedColor;
+
   Color get greyWhite;
 
   Color get blackOpacity;
@@ -47,6 +51,10 @@ abstract class AppColors {
 
   Color get background;
 
+  Color get backgroundWhite;
+
   Color get disableGray;
+
+  Color get inputBorder;
 
 }

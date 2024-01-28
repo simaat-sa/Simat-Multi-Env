@@ -66,7 +66,7 @@ class CustomInputDecoration extends InputDecoration {
   TextStyle get labelStyle => AppTextStyle.s16_w400(color: AppColors.noContextInstance.blackOpacity);
 
   @override
-  TextStyle? get hintStyle => AppTextStyle.s16_w400(color: AppColors.noContextInstance.blackOpacity);
+  TextStyle? get hintStyle => AppTextStyle.s16_w400(color: AppColors.noContextInstance.textColor);
 
   @override
   EdgeInsetsGeometry get contentPadding =>
