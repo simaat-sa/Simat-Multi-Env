@@ -1,10 +1,11 @@
-part of'forget_password_imports.dart';
+part of'verify_otp_imports.dart';
 
-class ForgetPasswordController{
+
+class VerifyOtpController{
   GlobalKey<FormState> formKey = GlobalKey();
   GlobalKey<CustomButtonState> btnKey = GlobalKey();
   final GlobalKey<ScaffoldState> drawerKey = GlobalKey<ScaffoldState>();
-  TextEditingController email = TextEditingController();
+  TextEditingController verifyOTP = TextEditingController();
 
 
   final BaseBloc<String> phoneCubit = BaseBloc("");

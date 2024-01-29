@@ -17,8 +17,8 @@ class BuildLoginSocialMedia extends StatelessWidget {
             style: AppTextStyle.s16_w400(color: context.colors.blackOpacity),
           ),
           const SizedBox(height: 15),
-          const BuildSocialItem(icon: Res.facebook, title: "Continue with Facebook"),
-          const BuildSocialItem(icon: Res.apple, title: "Continue with Apple"),
+          // const login_finger_print_widget(icon: Res.facebook, title: "Continue with Facebook"),
+          // const login_finger_print_widget(icon: Res.apple, title: "Continue with Apple"),
         ],
       ),
     );

@@ -6,7 +6,6 @@ class Login extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() => _LoginState();
-
 }
 
 class _LoginState extends State<Login> {
@@ -14,25 +13,38 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: context.colors.background,
-      appBar: const AuthAppBarWidget(showBack: false),
-      body: GestureDetector(
-        onTap: FocusScope.of(context).unfocus,
-        child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-          children: [
-            Text(
-              "Welcome back",
-              style: AppTextStyle.s20_w500(color: context.colors.black),
+    return PopScope(
+      canPop: false,
+      child: SafeArea(
+        top: true,
+        child: AuthScaffoldWidget(
+          scaffoldKey: controller.drawerKey,
+          appBar: AuthAppBarWidget(
+            showBack: false,
+            scaffoldkey: controller.drawerKey,
+          ),
+          body: GestureDetector(
+            onTap: FocusScope.of(context).unfocus,
+            child: Column(
+              children: [
+                const LoginHeaderWidget(),
+                Flexible(
+                  child: ListView(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 25,
+                    ),
+                    children: [
+                      LoginFormWidget(controller: controller),
+                      LoginButtonWidget(controller: controller),
+                      const ForgetPasswordViewWidget(),
+                      Gaps.vGap32,
+                      const LoginFingerPrintWidget(),
+                    ],
+                  ),
+                ),
+              ],
             ),
-            Gaps.vGap20,
-            BuildLoginForm(controller: controller),
-            BuildLoginButton(controller: controller),
-            const BuildForgetPasswordView(),
-            const Divider(height: 30),
-            BuildLoginSocialMedia(controller: controller),
-          ],
+          ),
         ),
       ),
     );

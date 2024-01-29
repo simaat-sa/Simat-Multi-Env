@@ -79,7 +79,7 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         multiDexEnabled true
-        resValue "string", "APP_BASE_URL", dartEnvironmentVariables.APP_BASE_URL
+       // resValue "string", "APP_BASE_URL", dartEnvironmentVariables.APP_BASE_URL
     }
 
     signingConfigs {
@@ -99,7 +99,7 @@ android {
             signingConfig signingConfigs.debug
             applicationVariants.all { variant ->
                 variant.outputs.all {
-                    def appName = "OSOS_V_"
+                    def appName = "SIMAAT_V_"
                     def newName = "${appName}${defaultConfig.versionName}_${defaultConfig.versionCode}.apk"
                     outputFileName = newName
                 }

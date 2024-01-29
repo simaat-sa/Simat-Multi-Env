@@ -7,6 +7,7 @@ class AppRouter extends $AppRouter {
   final List<AutoRoute> routes = [
     AdaptiveRoute(page: Splash.page, initial: true),
     AdaptiveRoute(page: Login.page),
+    AdaptiveRoute(page: VerifyOTP.page),
     AdaptiveRoute(page: ActiveAccount.page),
     AdaptiveRoute(page: ResetPassword.page),
     AdaptiveRoute(page: ForgetPassword.page),
