@@ -36,4 +36,15 @@ class LoginController {
       logUser: email.text,
     );
   }
+
+  void qrScan() async {
+    String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
+      "#ff6666",
+      "Cancel",
+      true,
+      ScanMode.DEFAULT,
+    );
+
+    print("Scanned barcode: $barcodeScanRes");
+  }
 }

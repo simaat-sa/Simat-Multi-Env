@@ -23,7 +23,7 @@ class _LoginState extends State<Login> {
             showBack: false,
             scaffoldkey: controller.drawerKey,
             leading: InkWell(
-              onTap: () {},
+              onTap: () => controller.qrScan(),
               child: const Icon(
                 Icons.qr_code_rounded,
                 color: Colors.black,
@@ -45,9 +45,11 @@ class _LoginState extends State<Login> {
                     children: [
                       LoginFormWidget(controller: controller),
                       LoginButtonWidget(controller: controller),
-                       // ForgetPasswordViewWidget(controller: controller,),
+                      // ForgetPasswordViewWidget(controller: controller,),
                       Gaps.vGap32,
-                      const LoginFingerPrintWidget(),
+                      LoginFingerPrintWidget(
+                        controller: controller,
+                      ),
                     ],
                   ),
                 ),
