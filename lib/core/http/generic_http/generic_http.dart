@@ -29,6 +29,7 @@ class GenericHttpImpl<T> extends GenericHttp<T> {
   Future<MyResult<T>> call(HttpRequestModel model) async {
     RequestBodyModel params = RequestBodyModel(
       url: model.url,
+      isFormData: model.isFormData,
       showLoader: model.showLoader ?? false,
       forceRefresh: model.refresh,
       errorFunc: model.errorFunc ?? (data) => data,

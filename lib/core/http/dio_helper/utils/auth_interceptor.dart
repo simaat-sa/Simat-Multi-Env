@@ -55,6 +55,7 @@ class AuthInterceptor extends Interceptor {
 
       RequestBodyModel params = RequestBodyModel(
         url: ApiNames.refreshToken,
+        isFormData: false,
         body: {
           'accessToken': resistanceAccessToken,
           'refreshToken': refreshToken,

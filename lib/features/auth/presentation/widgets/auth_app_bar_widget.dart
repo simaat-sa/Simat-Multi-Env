@@ -8,10 +8,13 @@ class AuthAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final Function()? onBack;
   final bool showBack;
+
+  final Widget? leading;
   const AuthAppBarWidget(
       {super.key,
         this.title,
         this.onBack,
+        this.leading,
         this.showBack = true,
         this.scaffoldkey});
 
@@ -29,7 +32,7 @@ class AuthAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         )
             : null,
         backgroundColor: Colors.transparent,
-        leading: Offstage(
+        leading: leading??Offstage(
           offstage: !showBack,
           child: InkWell(
             onTap: onBack ?? AutoRouter.of(context).pop,

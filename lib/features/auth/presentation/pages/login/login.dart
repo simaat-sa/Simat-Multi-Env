@@ -22,11 +22,20 @@ class _LoginState extends State<Login> {
           appBar: AuthAppBarWidget(
             showBack: false,
             scaffoldkey: controller.drawerKey,
+            leading: InkWell(
+              onTap: () {},
+              child: const Icon(
+                Icons.qr_code_rounded,
+                color: Colors.black,
+                size: 25,
+              ),
+            ),
           ),
           body: GestureDetector(
             onTap: FocusScope.of(context).unfocus,
             child: Column(
               children: [
+                const SizedBox(height: 50),
                 const LoginHeaderWidget(),
                 Flexible(
                   child: ListView(
@@ -36,7 +45,7 @@ class _LoginState extends State<Login> {
                     children: [
                       LoginFormWidget(controller: controller),
                       LoginButtonWidget(controller: controller),
-                       ForgetPasswordViewWidget(controller: controller,),
+                       // ForgetPasswordViewWidget(controller: controller,),
                       Gaps.vGap32,
                       const LoginFingerPrintWidget(),
                     ],

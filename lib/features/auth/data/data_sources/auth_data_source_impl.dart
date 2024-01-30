@@ -17,6 +17,7 @@ class AuthDataSourceImpl extends AuthDataSource {
       url: ApiNames.login,
       requestMethod: RequestMethod.post,
       responseType: ResType.model,
+      isFormData: true,
       requestBody: param.toJson(),
       responseKey: (data) => data['data'],
       showLoader: true,

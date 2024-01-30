@@ -12,6 +12,8 @@ class HttpRequestModel {
   bool? showLoader;
   bool refresh;
 
+  final bool isFormData;
+
   HttpRequestModel(
       {required this.url,
       required this.responseType,
@@ -21,5 +23,6 @@ class HttpRequestModel {
       this.toJsonFunc,
       this.showLoader,
       this.errorFunc,
+      this.isFormData = false,
       this.refresh = true});
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/bloc/value_state_manager/value_state_manager_import.dart';
-import 'package:flutter_tdd/core/constants/app_constants.dart';
+import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/constants/app_loader_widget.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
 import 'package:flutter_tdd/core/extensions/common_extension.dart';
@@ -159,7 +159,7 @@ class _BaseFormOptionState<T> extends State<BaseFormOption<T>> {
       },
       builder: (context, state) {
         return OptionSheetButton<List<T>>(
-          constraints: BoxConstraints(minHeight: ApplicationConstants.textFieldConstrains.minHeight),
+          constraints: BoxConstraints(minHeight: AppConfig.textFieldConstrains.minHeight),
           hintText: widget.hintText,
           bottomSheetTitle: widget.bottomSheetTitle,
           controller: _optionController,
