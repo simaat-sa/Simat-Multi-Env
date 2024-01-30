@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tdd/core/helpers/color_helper.dart';
 import 'package:flutter_tdd/core/theme/colors/app_colors.dart';
 
 class AppDarkColors extends AppColors {
 
   @override
-  Color get primary => const Color(0xff238FC0);
+  Color get primary => ColorHelper.hexToColor(const String.fromEnvironment("PRIMARY_COLOR"));
 
   @override
-  Color get secondary => const Color(0xFFEAAC27);
+  Color get secondary => ColorHelper.hexToColor(const String.fromEnvironment("SECONDARY_COLOR"));
 
   @override
-  Color get textColor => const Color(0xff239397);
+  Color get textColor => ColorHelper.hexToColor(const String.fromEnvironment("TEXT_COLOR"));
 
   @override
   Color get filedColor => const Color(0xffD7EBEB);

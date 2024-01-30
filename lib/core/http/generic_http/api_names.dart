@@ -2,9 +2,10 @@ import 'package:flutter_tdd/core/constants/app_config.dart';
 
 class ApiNames{
   static String baseUrl = AppConfig.instance.baseUrl;
+  static String version1Part = "v1/";
 
   // auth routes
-  static const String login = "auth";
+  static String login = "${version1Part}auth/login";
   static const String refreshToken = "auth";
   static const String savePublicKey = "users/";
   static const String updateUser = "users/";
