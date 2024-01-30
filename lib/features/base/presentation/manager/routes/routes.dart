@@ -3,5 +3,5 @@ import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 
 
 var baseRoute = [
-  AutoRoute(page: Profile.page)
+  // AutoRoute(page: Profile.page)
 ];

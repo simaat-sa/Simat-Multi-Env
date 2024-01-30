@@ -10,7 +10,7 @@ class LoginButtonWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16),
       child: AppTextButton.maxCustom(
-        onPressed: () {},
+        onPressed: () =>  controller.onSubmit(context),
         bgColor: context.colors.primary,
         txtColor: context.colors.white,
         textSize: 14,

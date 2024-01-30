@@ -20,16 +20,38 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$UserModel {
-  @JsonKey(name: "id")
-  String get id => throw _privateConstructorUsedError;
-  @JsonKey(name: "first_name")
-  String get firstName => throw _privateConstructorUsedError;
-  @JsonKey(name: "last_name")
-  String get lastName => throw _privateConstructorUsedError;
-  @JsonKey(name: "email")
-  String get email => throw _privateConstructorUsedError;
-  @JsonKey(name: "phone")
-  String get phone => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_type_code")
+  String get userTypeCode => throw _privateConstructorUsedError;
+  @JsonKey(name: "userid")
+  String get userid => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_token")
+  String get userToken => throw _privateConstructorUsedError;
+  @JsonKey(name: "username")
+  String get username => throw _privateConstructorUsedError;
+  @JsonKey(name: "usermobile")
+  String get userMobile => throw _privateConstructorUsedError;
+  @JsonKey(name: "useremail")
+  String get userEmail => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_active")
+  String get userActive => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_lang")
+  String get userLang => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_lastonline")
+  String get userLastOnline => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_fullname")
+  String get userFullname => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_fullname_en")
+  String get userFullnameEn => throw _privateConstructorUsedError;
+  @JsonKey(name: "active")
+  String get active => throw _privateConstructorUsedError;
+  @JsonKey(name: "uuid")
+  String get uuid => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_type_id")
+  String get userTypeId => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_type_ar")
+  String get userTypeAr => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_type_en")
+  String get userTypeEn => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,11 +65,22 @@ abstract class $UserModelCopyWith<$Res> {
       _$UserModelCopyWithImpl<$Res, UserModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: "id") String id,
-      @JsonKey(name: "first_name") String firstName,
-      @JsonKey(name: "last_name") String lastName,
-      @JsonKey(name: "email") String email,
-      @JsonKey(name: "phone") String phone});
+      {@JsonKey(name: "user_type_code") String userTypeCode,
+      @JsonKey(name: "userid") String userid,
+      @JsonKey(name: "user_token") String userToken,
+      @JsonKey(name: "username") String username,
+      @JsonKey(name: "usermobile") String userMobile,
+      @JsonKey(name: "useremail") String userEmail,
+      @JsonKey(name: "user_active") String userActive,
+      @JsonKey(name: "user_lang") String userLang,
+      @JsonKey(name: "user_lastonline") String userLastOnline,
+      @JsonKey(name: "user_fullname") String userFullname,
+      @JsonKey(name: "user_fullname_en") String userFullnameEn,
+      @JsonKey(name: "active") String active,
+      @JsonKey(name: "uuid") String uuid,
+      @JsonKey(name: "user_type_id") String userTypeId,
+      @JsonKey(name: "user_type_ar") String userTypeAr,
+      @JsonKey(name: "user_type_en") String userTypeEn});
 }
 
 /// @nodoc
@@ -63,32 +96,87 @@ class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? firstName = null,
-    Object? lastName = null,
-    Object? email = null,
-    Object? phone = null,
+    Object? userTypeCode = null,
+    Object? userid = null,
+    Object? userToken = null,
+    Object? username = null,
+    Object? userMobile = null,
+    Object? userEmail = null,
+    Object? userActive = null,
+    Object? userLang = null,
+    Object? userLastOnline = null,
+    Object? userFullname = null,
+    Object? userFullnameEn = null,
+    Object? active = null,
+    Object? uuid = null,
+    Object? userTypeId = null,
+    Object? userTypeAr = null,
+    Object? userTypeEn = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      userTypeCode: null == userTypeCode
+          ? _value.userTypeCode
+          : userTypeCode // ignore: cast_nullable_to_non_nullable
               as String,
-      firstName: null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
+      userid: null == userid
+          ? _value.userid
+          : userid // ignore: cast_nullable_to_non_nullable
               as String,
-      lastName: null == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
+      userToken: null == userToken
+          ? _value.userToken
+          : userToken // ignore: cast_nullable_to_non_nullable
               as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
+      username: null == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String,
-      phone: null == phone
-          ? _value.phone
-          : phone // ignore: cast_nullable_to_non_nullable
+      userMobile: null == userMobile
+          ? _value.userMobile
+          : userMobile // ignore: cast_nullable_to_non_nullable
+              as String,
+      userEmail: null == userEmail
+          ? _value.userEmail
+          : userEmail // ignore: cast_nullable_to_non_nullable
+              as String,
+      userActive: null == userActive
+          ? _value.userActive
+          : userActive // ignore: cast_nullable_to_non_nullable
+              as String,
+      userLang: null == userLang
+          ? _value.userLang
+          : userLang // ignore: cast_nullable_to_non_nullable
+              as String,
+      userLastOnline: null == userLastOnline
+          ? _value.userLastOnline
+          : userLastOnline // ignore: cast_nullable_to_non_nullable
+              as String,
+      userFullname: null == userFullname
+          ? _value.userFullname
+          : userFullname // ignore: cast_nullable_to_non_nullable
+              as String,
+      userFullnameEn: null == userFullnameEn
+          ? _value.userFullnameEn
+          : userFullnameEn // ignore: cast_nullable_to_non_nullable
+              as String,
+      active: null == active
+          ? _value.active
+          : active // ignore: cast_nullable_to_non_nullable
+              as String,
+      uuid: null == uuid
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
+              as String,
+      userTypeId: null == userTypeId
+          ? _value.userTypeId
+          : userTypeId // ignore: cast_nullable_to_non_nullable
+              as String,
+      userTypeAr: null == userTypeAr
+          ? _value.userTypeAr
+          : userTypeAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      userTypeEn: null == userTypeEn
+          ? _value.userTypeEn
+          : userTypeEn // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -103,11 +191,22 @@ abstract class _$$UserModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "id") String id,
-      @JsonKey(name: "first_name") String firstName,
-      @JsonKey(name: "last_name") String lastName,
-      @JsonKey(name: "email") String email,
-      @JsonKey(name: "phone") String phone});
+      {@JsonKey(name: "user_type_code") String userTypeCode,
+      @JsonKey(name: "userid") String userid,
+      @JsonKey(name: "user_token") String userToken,
+      @JsonKey(name: "username") String username,
+      @JsonKey(name: "usermobile") String userMobile,
+      @JsonKey(name: "useremail") String userEmail,
+      @JsonKey(name: "user_active") String userActive,
+      @JsonKey(name: "user_lang") String userLang,
+      @JsonKey(name: "user_lastonline") String userLastOnline,
+      @JsonKey(name: "user_fullname") String userFullname,
+      @JsonKey(name: "user_fullname_en") String userFullnameEn,
+      @JsonKey(name: "active") String active,
+      @JsonKey(name: "uuid") String uuid,
+      @JsonKey(name: "user_type_id") String userTypeId,
+      @JsonKey(name: "user_type_ar") String userTypeAr,
+      @JsonKey(name: "user_type_en") String userTypeEn});
 }
 
 /// @nodoc
@@ -121,32 +220,87 @@ class __$$UserModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? firstName = null,
-    Object? lastName = null,
-    Object? email = null,
-    Object? phone = null,
+    Object? userTypeCode = null,
+    Object? userid = null,
+    Object? userToken = null,
+    Object? username = null,
+    Object? userMobile = null,
+    Object? userEmail = null,
+    Object? userActive = null,
+    Object? userLang = null,
+    Object? userLastOnline = null,
+    Object? userFullname = null,
+    Object? userFullnameEn = null,
+    Object? active = null,
+    Object? uuid = null,
+    Object? userTypeId = null,
+    Object? userTypeAr = null,
+    Object? userTypeEn = null,
   }) {
     return _then(_$UserModelImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      userTypeCode: null == userTypeCode
+          ? _value.userTypeCode
+          : userTypeCode // ignore: cast_nullable_to_non_nullable
               as String,
-      firstName: null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
+      userid: null == userid
+          ? _value.userid
+          : userid // ignore: cast_nullable_to_non_nullable
               as String,
-      lastName: null == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
+      userToken: null == userToken
+          ? _value.userToken
+          : userToken // ignore: cast_nullable_to_non_nullable
               as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
+      username: null == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String,
-      phone: null == phone
-          ? _value.phone
-          : phone // ignore: cast_nullable_to_non_nullable
+      userMobile: null == userMobile
+          ? _value.userMobile
+          : userMobile // ignore: cast_nullable_to_non_nullable
+              as String,
+      userEmail: null == userEmail
+          ? _value.userEmail
+          : userEmail // ignore: cast_nullable_to_non_nullable
+              as String,
+      userActive: null == userActive
+          ? _value.userActive
+          : userActive // ignore: cast_nullable_to_non_nullable
+              as String,
+      userLang: null == userLang
+          ? _value.userLang
+          : userLang // ignore: cast_nullable_to_non_nullable
+              as String,
+      userLastOnline: null == userLastOnline
+          ? _value.userLastOnline
+          : userLastOnline // ignore: cast_nullable_to_non_nullable
+              as String,
+      userFullname: null == userFullname
+          ? _value.userFullname
+          : userFullname // ignore: cast_nullable_to_non_nullable
+              as String,
+      userFullnameEn: null == userFullnameEn
+          ? _value.userFullnameEn
+          : userFullnameEn // ignore: cast_nullable_to_non_nullable
+              as String,
+      active: null == active
+          ? _value.active
+          : active // ignore: cast_nullable_to_non_nullable
+              as String,
+      uuid: null == uuid
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
+              as String,
+      userTypeId: null == userTypeId
+          ? _value.userTypeId
+          : userTypeId // ignore: cast_nullable_to_non_nullable
+              as String,
+      userTypeAr: null == userTypeAr
+          ? _value.userTypeAr
+          : userTypeAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      userTypeEn: null == userTypeEn
+          ? _value.userTypeEn
+          : userTypeEn // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -157,35 +311,79 @@ class __$$UserModelImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$UserModelImpl extends _UserModel {
   const _$UserModelImpl(
-      {@JsonKey(name: "id") required this.id,
-      @JsonKey(name: "first_name") required this.firstName,
-      @JsonKey(name: "last_name") required this.lastName,
-      @JsonKey(name: "email") required this.email,
-      @JsonKey(name: "phone") required this.phone})
+      {@JsonKey(name: "user_type_code") required this.userTypeCode,
+      @JsonKey(name: "userid") required this.userid,
+      @JsonKey(name: "user_token") required this.userToken,
+      @JsonKey(name: "username") required this.username,
+      @JsonKey(name: "usermobile") required this.userMobile,
+      @JsonKey(name: "useremail") required this.userEmail,
+      @JsonKey(name: "user_active") required this.userActive,
+      @JsonKey(name: "user_lang") required this.userLang,
+      @JsonKey(name: "user_lastonline") required this.userLastOnline,
+      @JsonKey(name: "user_fullname") required this.userFullname,
+      @JsonKey(name: "user_fullname_en") required this.userFullnameEn,
+      @JsonKey(name: "active") required this.active,
+      @JsonKey(name: "uuid") required this.uuid,
+      @JsonKey(name: "user_type_id") required this.userTypeId,
+      @JsonKey(name: "user_type_ar") required this.userTypeAr,
+      @JsonKey(name: "user_type_en") required this.userTypeEn})
       : super._();
 
   factory _$UserModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserModelImplFromJson(json);
 
   @override
-  @JsonKey(name: "id")
-  final String id;
+  @JsonKey(name: "user_type_code")
+  final String userTypeCode;
   @override
-  @JsonKey(name: "first_name")
-  final String firstName;
+  @JsonKey(name: "userid")
+  final String userid;
   @override
-  @JsonKey(name: "last_name")
-  final String lastName;
+  @JsonKey(name: "user_token")
+  final String userToken;
   @override
-  @JsonKey(name: "email")
-  final String email;
+  @JsonKey(name: "username")
+  final String username;
   @override
-  @JsonKey(name: "phone")
-  final String phone;
+  @JsonKey(name: "usermobile")
+  final String userMobile;
+  @override
+  @JsonKey(name: "useremail")
+  final String userEmail;
+  @override
+  @JsonKey(name: "user_active")
+  final String userActive;
+  @override
+  @JsonKey(name: "user_lang")
+  final String userLang;
+  @override
+  @JsonKey(name: "user_lastonline")
+  final String userLastOnline;
+  @override
+  @JsonKey(name: "user_fullname")
+  final String userFullname;
+  @override
+  @JsonKey(name: "user_fullname_en")
+  final String userFullnameEn;
+  @override
+  @JsonKey(name: "active")
+  final String active;
+  @override
+  @JsonKey(name: "uuid")
+  final String uuid;
+  @override
+  @JsonKey(name: "user_type_id")
+  final String userTypeId;
+  @override
+  @JsonKey(name: "user_type_ar")
+  final String userTypeAr;
+  @override
+  @JsonKey(name: "user_type_en")
+  final String userTypeEn;
 
   @override
   String toString() {
-    return 'UserModel(id: $id, firstName: $firstName, lastName: $lastName, email: $email, phone: $phone)';
+    return 'UserModel(userTypeCode: $userTypeCode, userid: $userid, userToken: $userToken, username: $username, userMobile: $userMobile, userEmail: $userEmail, userActive: $userActive, userLang: $userLang, userLastOnline: $userLastOnline, userFullname: $userFullname, userFullnameEn: $userFullnameEn, active: $active, uuid: $uuid, userTypeId: $userTypeId, userTypeAr: $userTypeAr, userTypeEn: $userTypeEn)';
   }
 
   @override
@@ -193,19 +391,57 @@ class _$UserModelImpl extends _UserModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UserModelImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.firstName, firstName) ||
-                other.firstName == firstName) &&
-            (identical(other.lastName, lastName) ||
-                other.lastName == lastName) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.phone, phone) || other.phone == phone));
+            (identical(other.userTypeCode, userTypeCode) ||
+                other.userTypeCode == userTypeCode) &&
+            (identical(other.userid, userid) || other.userid == userid) &&
+            (identical(other.userToken, userToken) ||
+                other.userToken == userToken) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.userMobile, userMobile) ||
+                other.userMobile == userMobile) &&
+            (identical(other.userEmail, userEmail) ||
+                other.userEmail == userEmail) &&
+            (identical(other.userActive, userActive) ||
+                other.userActive == userActive) &&
+            (identical(other.userLang, userLang) ||
+                other.userLang == userLang) &&
+            (identical(other.userLastOnline, userLastOnline) ||
+                other.userLastOnline == userLastOnline) &&
+            (identical(other.userFullname, userFullname) ||
+                other.userFullname == userFullname) &&
+            (identical(other.userFullnameEn, userFullnameEn) ||
+                other.userFullnameEn == userFullnameEn) &&
+            (identical(other.active, active) || other.active == active) &&
+            (identical(other.uuid, uuid) || other.uuid == uuid) &&
+            (identical(other.userTypeId, userTypeId) ||
+                other.userTypeId == userTypeId) &&
+            (identical(other.userTypeAr, userTypeAr) ||
+                other.userTypeAr == userTypeAr) &&
+            (identical(other.userTypeEn, userTypeEn) ||
+                other.userTypeEn == userTypeEn));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, firstName, lastName, email, phone);
+  int get hashCode => Object.hash(
+      runtimeType,
+      userTypeCode,
+      userid,
+      userToken,
+      username,
+      userMobile,
+      userEmail,
+      userActive,
+      userLang,
+      userLastOnline,
+      userFullname,
+      userFullnameEn,
+      active,
+      uuid,
+      userTypeId,
+      userTypeAr,
+      userTypeEn);
 
   @JsonKey(ignore: true)
   @override
@@ -223,31 +459,76 @@ class _$UserModelImpl extends _UserModel {
 
 abstract class _UserModel extends UserModel {
   const factory _UserModel(
-      {@JsonKey(name: "id") required final String id,
-      @JsonKey(name: "first_name") required final String firstName,
-      @JsonKey(name: "last_name") required final String lastName,
-      @JsonKey(name: "email") required final String email,
-      @JsonKey(name: "phone") required final String phone}) = _$UserModelImpl;
+      {@JsonKey(name: "user_type_code") required final String userTypeCode,
+      @JsonKey(name: "userid") required final String userid,
+      @JsonKey(name: "user_token") required final String userToken,
+      @JsonKey(name: "username") required final String username,
+      @JsonKey(name: "usermobile") required final String userMobile,
+      @JsonKey(name: "useremail") required final String userEmail,
+      @JsonKey(name: "user_active") required final String userActive,
+      @JsonKey(name: "user_lang") required final String userLang,
+      @JsonKey(name: "user_lastonline") required final String userLastOnline,
+      @JsonKey(name: "user_fullname") required final String userFullname,
+      @JsonKey(name: "user_fullname_en") required final String userFullnameEn,
+      @JsonKey(name: "active") required final String active,
+      @JsonKey(name: "uuid") required final String uuid,
+      @JsonKey(name: "user_type_id") required final String userTypeId,
+      @JsonKey(name: "user_type_ar") required final String userTypeAr,
+      @JsonKey(name: "user_type_en")
+      required final String userTypeEn}) = _$UserModelImpl;
   const _UserModel._() : super._();
 
   factory _UserModel.fromJson(Map<String, dynamic> json) =
       _$UserModelImpl.fromJson;
 
   @override
-  @JsonKey(name: "id")
-  String get id;
+  @JsonKey(name: "user_type_code")
+  String get userTypeCode;
   @override
-  @JsonKey(name: "first_name")
-  String get firstName;
+  @JsonKey(name: "userid")
+  String get userid;
   @override
-  @JsonKey(name: "last_name")
-  String get lastName;
+  @JsonKey(name: "user_token")
+  String get userToken;
   @override
-  @JsonKey(name: "email")
-  String get email;
+  @JsonKey(name: "username")
+  String get username;
   @override
-  @JsonKey(name: "phone")
-  String get phone;
+  @JsonKey(name: "usermobile")
+  String get userMobile;
+  @override
+  @JsonKey(name: "useremail")
+  String get userEmail;
+  @override
+  @JsonKey(name: "user_active")
+  String get userActive;
+  @override
+  @JsonKey(name: "user_lang")
+  String get userLang;
+  @override
+  @JsonKey(name: "user_lastonline")
+  String get userLastOnline;
+  @override
+  @JsonKey(name: "user_fullname")
+  String get userFullname;
+  @override
+  @JsonKey(name: "user_fullname_en")
+  String get userFullnameEn;
+  @override
+  @JsonKey(name: "active")
+  String get active;
+  @override
+  @JsonKey(name: "uuid")
+  String get uuid;
+  @override
+  @JsonKey(name: "user_type_id")
+  String get userTypeId;
+  @override
+  @JsonKey(name: "user_type_ar")
+  String get userTypeAr;
+  @override
+  @JsonKey(name: "user_type_en")
+  String get userTypeEn;
   @override
   @JsonKey(ignore: true)
   _$$UserModelImplCopyWith<_$UserModelImpl> get copyWith =>

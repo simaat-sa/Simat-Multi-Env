@@ -36,7 +36,7 @@ class _LoginState extends State<Login> {
                     children: [
                       LoginFormWidget(controller: controller),
                       LoginButtonWidget(controller: controller),
-                      const ForgetPasswordViewWidget(),
+                       ForgetPasswordViewWidget(controller: controller,),
                       Gaps.vGap32,
                       const LoginFingerPrintWidget(),
                     ],
