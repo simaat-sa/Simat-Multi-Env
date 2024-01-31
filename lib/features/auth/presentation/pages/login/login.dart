@@ -12,6 +12,12 @@ class _LoginState extends State<Login> {
   final LoginController controller = LoginController();
 
   @override
+  void initState() {
+    controller.checkBiometric();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return PopScope(
       canPop: false,
@@ -46,7 +52,7 @@ class _LoginState extends State<Login> {
                       LoginFormWidget(controller: controller),
                       LoginButtonWidget(controller: controller),
                       // ForgetPasswordViewWidget(controller: controller,),
-                      Gaps.vGap32,
+                      Gaps.vGap50,
                       LoginFingerPrintWidget(
                         controller: controller,
                       ),

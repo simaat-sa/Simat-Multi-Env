@@ -17,7 +17,8 @@ import 'package:flutter_tdd/core/helpers/loading_helper.dart' as _i23;
 import 'package:flutter_tdd/core/helpers/location_service.dart' as _i24;
 import 'package:flutter_tdd/core/helpers/psermission_services.dart' as _i27;
 import 'package:flutter_tdd/core/helpers/share_services.dart' as _i30;
-import 'package:flutter_tdd/core/helpers/utilities.dart' as _i31;
+import 'package:flutter_tdd/core/helpers/shared_pref_service.dart' as _i31;
+import 'package:flutter_tdd/core/helpers/utilities.dart' as _i32;
 import 'package:flutter_tdd/core/http/dio_helper/actions/delete.dart' as _i10;
 import 'package:flutter_tdd/core/http/dio_helper/actions/get.dart' as _i15;
 import 'package:flutter_tdd/core/http/dio_helper/actions/patch.dart' as _i26;
@@ -92,7 +93,8 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i28.Post>(() => _i28.Post());
     gh.lazySingleton<_i29.Put>(() => _i29.Put());
     gh.factory<_i30.ShareServices>(() => _i30.ShareServices());
-    gh.lazySingleton<_i31.Utilities>(() => _i31.Utilities());
+    gh.lazySingleton<_i31.SharedPrefService>(() => _i31.SharedPrefService());
+    gh.lazySingleton<_i32.Utilities>(() => _i32.Utilities());
     return this;
   }
 }

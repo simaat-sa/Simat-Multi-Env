@@ -2,6 +2,8 @@ class ApplicationConstants {
   static const keyLanguage = 'language';
   static const keyToken = 'token';
   static const headerBearer = 'bearer';
+  static const userCredential = 'user_credential';
+  static const userSavedModel = 'user_model';
   static const maxFileCount = 500;
 
 

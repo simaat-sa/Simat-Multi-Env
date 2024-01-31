@@ -12,4 +12,9 @@ class LoginParams {
     'log_user': logUser,
     'log_pass': logPassword,
   };
+
+  factory LoginParams.fromJson(Map<String, dynamic> json) => LoginParams(
+    logUser: json['log_user'],
+    logPassword: json['log_pass'],
+  );
 }

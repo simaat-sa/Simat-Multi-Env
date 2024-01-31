@@ -41,7 +41,7 @@ class LoginFormWidget extends StatelessWidget {
             ),
           ),
           ObsValueConsumer(
-            observable: controller.visabelBloc,
+            observable: controller.visableObs,
             builder: (context, state) {
               return GenericTextField(
                 radius: BorderRadius.circular(5.r),
@@ -66,7 +66,7 @@ class LoginFormWidget extends StatelessWidget {
                   ),
                 ),
                 suffixIcon: InkWell(
-                  onTap: () => controller.visabelBloc.setValue(!state),
+                  onTap: () => controller.visableObs.setValue(!state),
                   child: Icon(
                     state == true
                         ? Icons.visibility_outlined
