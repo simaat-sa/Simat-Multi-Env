@@ -370,6 +370,16 @@ class S {
     );
   }
 
+  /// `Copied successfully`
+  String get copied_successfully {
+    return Intl.message(
+      'Copied successfully',
+      name: 'copied_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Password`
   String get label_password {
     return Intl.message(
@@ -535,6 +545,46 @@ class S {
     return Intl.message(
       'Internet connected',
       name: 'internet_connected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Successfully Logged in`
+  String get successfully_Logged_in {
+    return Intl.message(
+      'Successfully Logged in',
+      name: 'successfully_Logged_in',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SIGN IN`
+  String get Sign_In {
+    return Intl.message(
+      'SIGN IN',
+      name: 'Sign_In',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome`
+  String get Welcome {
+    return Intl.message(
+      'Welcome',
+      name: 'Welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please authenticate to login to your account`
+  String get Please_authenticate_to_login {
+    return Intl.message(
+      'Please authenticate to login to your account',
+      name: 'Please_authenticate_to_login',
       desc: '',
       args: [],
     );

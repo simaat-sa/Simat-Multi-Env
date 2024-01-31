@@ -27,6 +27,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "AddressValidation":
             MessageLookupByLibrary.simpleMessage("Please enter the address"),
+        "Please_authenticate_to_login": MessageLookupByLibrary.simpleMessage(
+            "Please authenticate to login to your account"),
+        "Sign_In": MessageLookupByLibrary.simpleMessage("SIGN IN"),
+        "Welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
         "access_denied": MessageLookupByLibrary.simpleMessage("Access denied"),
         "add_new_item": MessageLookupByLibrary.simpleMessage("Add new item"),
         "app_cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -35,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "Please enter the password identical"),
+        "copied_successfully":
+            MessageLookupByLibrary.simpleMessage("Copied successfully"),
         "done": MessageLookupByLibrary.simpleMessage("Done"),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("BAD REQUEST"),
@@ -100,6 +106,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "size_more_than_mg_error": m0,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
+        "successfully_Logged_in":
+            MessageLookupByLibrary.simpleMessage("Successfully Logged in"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN")
       };
 }

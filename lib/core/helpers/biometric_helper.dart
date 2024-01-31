@@ -1,5 +1,7 @@
 import 'package:biometric_login/biometric_login.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_tdd/core/helpers/app_snack_bar_service.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
 
 class BiometricHelper {
 
@@ -15,10 +17,10 @@ class BiometricHelper {
     return canAuthenticate;
   }
 
-   Future<bool> authenticate() async {
+   Future<bool> authenticate(BuildContext context) async {
     try {
       final bool didAuthenticate = await _auth.authenticate(
-          localizedReason: 'Please authenticate to login to your account',
+          localizedReason: Translate.of(context).Please_authenticate_to_login,
           options: const AuthenticationOptions(
             biometricOnly: true,
           )

@@ -32,6 +32,7 @@
   "label_forget_pass": "Forget password?",
   "label_phone": "Phone",
   "label_email": "Email",
+  "copied_successfully": "Copied successfully",
   "label_password": "Password",
   "label_full_name": "Full name",
   "label_confirm_password": "Confirm password",
@@ -48,5 +49,9 @@
   "retry": "Retry",
   "size_more_than_mg_error": "Files size must be less than {MB} MB, {files}",
   "no_internet_connection": "No internet connection",
-  "internet_connected": "Internet connected"
+  "internet_connected": "Internet connected",
+  "successfully_Logged_in": "Successfully Logged in",
+  "Sign_In": "SIGN IN",
+  "Welcome": "Welcome",
+  "Please_authenticate_to_login": "Please authenticate to login to your account"
 }

@@ -10,9 +10,9 @@ import 'package:url_launcher/url_launcher.dart';
 class ShareServices {
   static ShareServices get instance => GetIt.I<ShareServices>();
 
-  void copyToClipBoard(String text) {
+  void copyToClipBoard(String text,BuildContext context) {
     Clipboard.setData(ClipboardData(text: text)).then((value) {
-        AppSnackBar.showSimpleToast(msg: "Copied successfully");
+        AppSnackBar.showSimpleToast(msg: Translate.of(context).copied_successfully);
     });
   }
 
@@ -45,8 +45,8 @@ class ShareServices {
     }
   }
 
-  void launchWhatsApp(phone) async {
-    String message = 'مرحبا بك';
+  void launchWhatsApp(phone,BuildContext context) async {
+    String message = Translate.of(context).Welcome;
     var whatsAppUrl = "https://api.whatsapp.com/send?phone=+$phone&text=$message";
     if (await canLaunchUrl(Uri.parse(whatsAppUrl))) {
       await launchUrl(Uri.parse(whatsAppUrl));

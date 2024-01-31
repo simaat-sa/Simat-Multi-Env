@@ -21,7 +21,7 @@ class LoginFormWidget extends StatelessWidget {
             type: TextInputType.emailAddress,
             action: TextInputAction.next,
             validate: (value) => value?.noValidate(),
-            hint: "Email",
+            hint: Translate.of(context).label_email,
             textColor: context.colors.secondary,
             margin: const EdgeInsets.only(top: 40),
             prefixIcon: Padding(
@@ -53,7 +53,7 @@ class LoginFormWidget extends StatelessWidget {
                 type: TextInputType.text,
                 action: TextInputAction.done,
                 validate: (value) => value?.noValidate(),
-                hint: "Password",
+                hint: Translate.of(context).label_password,
                 contentPadding: const EdgeInsets.all(10),
                 textColor: context.colors.secondary,
                 margin: const EdgeInsets.only(top: 15),

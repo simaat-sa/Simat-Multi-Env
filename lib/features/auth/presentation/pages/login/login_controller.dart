@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 part of 'login_imports.dart';
 
 class LoginController {
@@ -29,7 +31,7 @@ class LoginController {
             UserHelperService.instance.saveUserCredentials(params);
             AppSnackBar.showSimpleToast(
                 color: context.colors.black,
-                msg: 'Successfully Logged in',
+                msg: Translate.of(context).successfully_Logged_in,
                 type: ToastType.success);
             AutoRouter.of(context).push(const Home());
           }}
@@ -57,7 +59,7 @@ class LoginController {
   Future<void> loginWithCredentials(BuildContext context) async {
     LoginParams? params = await UserHelperService.instance.getUserCredentials();
     if (params != null) {
-      var authorize = await BiometricHelper.instance.authenticate();
+      var authorize = await BiometricHelper.instance.authenticate(context);
       if (authorize) {
         email.text = params.logUser;
         password.text = params.logPassword;
@@ -65,21 +67,20 @@ class LoginController {
       }
     }else{
       if (formKey.currentState!.validate()) {
-        var authorize = await BiometricHelper.instance.authenticate();
+        var authorize = await BiometricHelper.instance.authenticate(context);
         if (authorize) {
           onSubmit(context);
         }
       }
     }
   }
-
   /// to login with qr code
   /// scan the qr code and get the token
   /// then send the token to the server to get the user data
-  void qrScan() async {
+  void qrScan(BuildContext context) async {
     String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
       "#ff6666",
-      "Cancel",
+      Translate.of(context).cancel,
       true,
       ScanMode.DEFAULT,
     );

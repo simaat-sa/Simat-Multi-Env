@@ -14,7 +14,7 @@ class LoginButtonWidget extends StatelessWidget {
         bgColor: context.colors.primary,
         txtColor: context.colors.white,
         textSize: 14,
-        maxHeight: 45, text: 'SIGN IN',
+        maxHeight: 45, text: Translate.of(context).Sign_In,
       ),
     );
   }
