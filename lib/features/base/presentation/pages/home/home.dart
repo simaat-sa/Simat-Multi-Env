@@ -2,63 +2,39 @@ part of 'home_imports.dart';
 
 @RoutePage()
 class Home extends StatefulWidget {
-  const Home({super.key});
+  final int index;
+
+  const Home({super.key, this.index = 0});
 
   @override
   State<StatefulWidget> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<Home> with TickerProviderStateMixin {
   final HomeController controller = HomeController();
 
   @override
   void initState() {
+    controller.initBottomNavigation(this, widget.index);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const DefaultAppBar(title: "Home"),
-      body: ListView(
-        children: [
-          ObsValueConsumer(
-            observable: controller.termsObs,
-            builder: (context, value) {
-              return Checkbox(
-                value: value,
-                onChanged: (value) {
-                  controller.termsObs.setValue(value!);
-                },
-              );
-            },
-          ),
-
-          BaseBlocBuilder(
-            bloc: controller.bloc,
-            onSuccessWidget: (data) {
-              return Text(data);
-            },
-            onLoadingWidget: (context) {
-              return const Center(child: CircularProgressIndicator());
-            },
-            onFailedWidget: (context, error, callback) {
-              return Center(
-                child: Column(
-                  children: [
-                    const Text("error"),
-                    ElevatedButton(
-                      onPressed: () {
-                        callback();
-                      },
-                      child: const Text("Retry"),
-                    ),
-                  ],
-                ),
-              );
-            },
-          ),
-        ],
+    var listAccessUser = context.watch<UserCubit>().state.model!.userAccess.take(5).toList();
+    return DefaultTabController(
+      length: listAccessUser.length,
+      initialIndex: widget.index,
+      child: Scaffold(
+        appBar: const DefaultAppBar(title: "Home"),
+        body: TabBarView(
+          physics: const NeverScrollableScrollPhysics(),
+          controller: controller.tabController,
+          children: List.generate(listAccessUser.length, (index) {
+            return Container();
+          }),
+        ),
+        bottomNavigationBar: BottomNavBarWidget(controller: controller),
       ),
     );
   }

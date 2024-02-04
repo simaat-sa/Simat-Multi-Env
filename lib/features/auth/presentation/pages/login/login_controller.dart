@@ -27,13 +27,14 @@ class LoginController {
         isSuccess: (data) {
           if (formKey.currentState!.validate()) {
           if (data != null) {
+            context.read<UserCubit>().onUpdateUserData(data);
             UserHelperService.instance.saveUserData(data);
             UserHelperService.instance.saveUserCredentials(params);
             AppSnackBar.showSimpleToast(
                 color: context.colors.black,
                 msg: Translate.of(context).successfully_Logged_in,
                 type: ToastType.success);
-            AutoRouter.of(context).push(const Home());
+            AutoRouter.of(context).push(Home());
           }}
         },
         isError: (error) {

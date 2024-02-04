@@ -24,6 +24,9 @@ _$UserModelImpl _$$UserModelImplFromJson(Map<String, dynamic> json) =>
       userTypeId: json['user_type_id'] as String,
       userTypeAr: json['user_type_ar'] as String,
       userTypeEn: json['user_type_en'] as String,
+      userAccess: (json['user_access'] as List<dynamic>)
+          .map((e) => UserAccessModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$UserModelImplToJson(_$UserModelImpl instance) =>
@@ -44,4 +47,5 @@ Map<String, dynamic> _$$UserModelImplToJson(_$UserModelImpl instance) =>
       'user_type_id': instance.userTypeId,
       'user_type_ar': instance.userTypeAr,
       'user_type_en': instance.userTypeEn,
+      'user_access': instance.userAccess.map((e) => e.toJson()).toList(),
     };

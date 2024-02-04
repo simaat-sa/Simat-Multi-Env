@@ -92,6 +92,7 @@ dependencies:
   flutter_barcode_scanner: ^2.0.0
   biometric_fingerprint: ^0.0.7
   biometric_login: ^0.0.1
+  animated_bottom_navigation_bar: ^1.1.0
 
 
 

@@ -1,3 +1,4 @@
+import 'package:flutter_tdd/features/auth/data/models/user_access_model/user_access_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user_model.freezed.dart';
@@ -27,6 +28,7 @@ class UserModel  with _$UserModel {
     @JsonKey(name: "user_type_id") required String userTypeId,
     @JsonKey(name: "user_type_ar") required String userTypeAr,
     @JsonKey(name: "user_type_en") required String userTypeEn,
+    @JsonKey(name: "user_access") required List<UserAccessModel> userAccess,
   }) = _UserModel;
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>

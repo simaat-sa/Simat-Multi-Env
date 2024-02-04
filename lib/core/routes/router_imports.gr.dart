@@ -9,6 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i9;
+import 'package:flutter/material.dart' as _i10;
 import 'package:flutter_tdd/features/auth/presentation/pages/active_account/active_account_imports.dart'
     as _i1;
 import 'package:flutter_tdd/features/auth/presentation/pages/forget_password/forget_password_imports.dart'
@@ -44,9 +45,13 @@ abstract class $AppRouter extends _i9.RootStackRouter {
       );
     },
     Home.name: (routeData) {
+      final args = routeData.argsAs<HomeArgs>(orElse: () => const HomeArgs());
       return _i9.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.Home(),
+        child: _i3.Home(
+          key: args.key,
+          index: args.index,
+        ),
       );
     },
     Login.name: (routeData) {
@@ -112,16 +117,39 @@ class ForgetPassword extends _i9.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.Home]
-class Home extends _i9.PageRouteInfo<void> {
-  const Home({List<_i9.PageRouteInfo>? children})
-      : super(
+class Home extends _i9.PageRouteInfo<HomeArgs> {
+  Home({
+    _i10.Key? key,
+    int index = 0,
+    List<_i9.PageRouteInfo>? children,
+  }) : super(
           Home.name,
+          args: HomeArgs(
+            key: key,
+            index: index,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'Home';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static const _i9.PageInfo<HomeArgs> page = _i9.PageInfo<HomeArgs>(name);
+}
+
+class HomeArgs {
+  const HomeArgs({
+    this.key,
+    this.index = 0,
+  });
+
+  final _i10.Key? key;
+
+  final int index;
+
+  @override
+  String toString() {
+    return 'HomeArgs{key: $key, index: $index}';
+  }
 }
 
 /// generated route for
