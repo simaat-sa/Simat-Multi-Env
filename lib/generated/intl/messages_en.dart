@@ -81,7 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Choose language"),
         "label_confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
-        "label_email": MessageLookupByLibrary.simpleMessage("Email"),
+        "label_email": MessageLookupByLibrary.simpleMessage("User name"),
         "label_forget_pass":
             MessageLookupByLibrary.simpleMessage("Forget password?"),
         "label_full_name": MessageLookupByLibrary.simpleMessage("Full name"),

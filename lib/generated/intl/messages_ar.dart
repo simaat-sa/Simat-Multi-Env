@@ -79,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اختيار اللغة"),
         "label_confirm_password":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
-        "label_email": MessageLookupByLibrary.simpleMessage("البريد الاكتروني"),
+        "label_email": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "label_forget_pass":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور؟"),
         "label_full_name": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),

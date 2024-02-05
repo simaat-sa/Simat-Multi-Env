@@ -31,7 +31,7 @@
   "label_register": "Register",
   "label_forget_pass": "Forget password?",
   "label_phone": "Phone",
-  "label_email": "Email",
+  "label_email": "User name",
   "copied_successfully": "Copied successfully",
   "label_password": "Password",
   "label_full_name": "Full name",

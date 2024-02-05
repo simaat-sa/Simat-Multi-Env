@@ -360,10 +360,10 @@ class S {
     );
   }
 
-  /// `Email`
+  /// `User name`
   String get label_email {
     return Intl.message(
-      'Email',
+      'User name',
       name: 'label_email',
       desc: '',
       args: [],

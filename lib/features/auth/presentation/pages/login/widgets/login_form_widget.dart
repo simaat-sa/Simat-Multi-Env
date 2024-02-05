@@ -32,13 +32,6 @@ class LoginFormWidget extends StatelessWidget {
                 width: 24,
               ),
             ),
-            suffixIcon: Padding(
-              padding: const EdgeInsetsDirectional.only(end: 12, top: 15),
-              child: Text(
-                '@simaat.sa',
-                style: AppTextStyle.s16_w400(color: context.colors.textColor),
-              ),
-            ),
           ),
           ObsValueConsumer(
             observable: controller.visableObs,

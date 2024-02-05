@@ -7,11 +7,11 @@ class LoginController {
   ObsValue<bool> supportBiometricObs = ObsValue.withInit(false);
 
   final GlobalKey<FormState> formKey = GlobalKey();
+
   final GlobalKey<CustomButtonState> btnKey = GlobalKey();
   final GlobalKey<ScaffoldState> drawerKey = GlobalKey<ScaffoldState>();
   final TextEditingController email = TextEditingController();
   final TextEditingController password = TextEditingController();
-
 
   /// to check if the device support biometric or not [finger print or face id]
   Future<void> checkBiometric() async {
@@ -22,26 +22,18 @@ class LoginController {
   /// to submit the login form
   void onSubmit(BuildContext context) async {
     LoginParams params = loginParams();
-    await getIt<AuthRepository>(). setLogin(params).then((data) { {
-      data.when(
-        isSuccess: (data) {
-          if (formKey.currentState!.validate()) {
-          if (data != null) {
-            context.read<UserCubit>().onUpdateUserData(data);
-            UserHelperService.instance.saveUserData(data);
-            UserHelperService.instance.saveUserCredentials(params);
-            AppSnackBar.showSimpleToast(
-                color: context.colors.black,
-                msg: Translate.of(context).successfully_Logged_in,
-                type: ToastType.success);
-            AutoRouter.of(context).push(Home());
-          }}
-        },
-        isError: (error) {
-          error.message;
-        },
-      );
-    }});
+    var loginResponse = await getIt<AuthRepository>().setLogin(params);
+    _handleLoginResponse(context, loginResponse);
+  }
+
+  void _handleLoginResponse(BuildContext context, MyResult<UserModel> response) {
+    response.whenOrNull(isSuccess: (userModel) {
+      context.read<UserCubit>().onUpdateUserData(userModel!);
+      UserHelperService.instance.saveUserData(userModel);
+      AppSnackBar.showSimpleToast(
+          color: context.colors.black, msg: Translate.of(context).successfully_Logged_in, type: ToastType.success);
+      AutoRouter.of(context).push(Home());
+    });
   }
 
   /// handle login params
@@ -52,6 +44,10 @@ class LoginController {
     );
   }
 
+  Future<void> _loginWithQr(BuildContext context, String token) async {
+    var loginResponse = await getIt<AuthRepository>().setLoginQr(token);
+    _handleLoginResponse(context, loginResponse);
+  }
 
   /// to login with credentials
   /// first check if the user save his credentials before or not
@@ -83,9 +79,8 @@ class LoginController {
       "#ff6666",
       Translate.of(context).cancel,
       true,
-      ScanMode.DEFAULT,
+      ScanMode.QR,
     );
-
-    print("Scanned barcode: $barcodeScanRes");
+    _loginWithQr(context, barcodeScanRes);
   }
 }
