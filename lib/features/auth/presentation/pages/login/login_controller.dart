@@ -22,7 +22,7 @@ class LoginController {
   /// to submit the login form
   void onSubmit(BuildContext context) async {
     LoginParams params = loginParams();
-    var loginResponse = await getIt<AuthRepository>().setLogin(params);
+    var loginResponse = await getIt<AuthRepository>().login(params);
     _handleLoginResponse(context, loginResponse);
   }
 
@@ -45,7 +45,7 @@ class LoginController {
   }
 
   Future<void> _loginWithQr(BuildContext context, String token) async {
-    var loginResponse = await getIt<AuthRepository>().setLoginQr(token);
+    var loginResponse = await getIt<AuthRepository>().loginWithQr(token);
     _handleLoginResponse(context, loginResponse);
   }
 
@@ -75,12 +75,21 @@ class LoginController {
   /// scan the qr code and get the token
   /// then send the token to the server to get the user data
   void qrScan(BuildContext context) async {
-    String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
-      "#ff6666",
-      Translate.of(context).cancel,
-      true,
-      ScanMode.QR,
-    );
-    _loginWithQr(context, barcodeScanRes);
+    // String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
+    //   "#ff6666",
+    //   Translate.of(context).cancel,
+    //   true,
+    //   ScanMode.DEFAULT,
+    // );
+    String? scannedCode = await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => const ScannerScreen()));
+    if (scannedCode != null) {
+      var token = scannedCode.split(",").first.split("<").last;
+      print("==============> $token");
+      _loginWithQr(context, token);
+    }
+
   }
 }

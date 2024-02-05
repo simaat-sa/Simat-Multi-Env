@@ -5,7 +5,7 @@ import 'package:flutter_tdd/features/auth/domain/entity/login_params.dart';
 
 abstract class AuthRepository {
 
-  Future<MyResult<UserModel>> setLogin(LoginParams param);
-  Future<MyResult<UserModel>> setLoginQr(String param);
+  Future<MyResult<UserModel>> login(LoginParams param);
+  Future<MyResult<UserModel>> loginWithQr(String param);
 
 }

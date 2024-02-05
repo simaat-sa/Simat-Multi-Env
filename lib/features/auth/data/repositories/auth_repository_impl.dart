@@ -11,12 +11,12 @@ import 'package:injectable/injectable.dart';
 @Injectable(as: AuthRepository)
 class AuthRepositoryImpl extends AuthRepository with ModelToDomainResult {
   @override
-  Future<MyResult<UserModel>> setLogin(LoginParams param) async {
-    return await getIt.get<AuthDataSource>().setLogin(param);
+  Future<MyResult<UserModel>> login(LoginParams param) async {
+    return await getIt.get<AuthDataSource>().login(param);
   }
 
   @override
-  Future<MyResult<UserModel>> setLoginQr(String param)async {
-    return await getIt.get<AuthDataSource>().setLoginQr(param);
+  Future<MyResult<UserModel>> loginWithQr(String param)async {
+    return await getIt.get<AuthDataSource>().loginWithQr(param);
   }
 }

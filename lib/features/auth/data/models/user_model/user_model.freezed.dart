@@ -46,13 +46,7 @@ mixin _$UserModel {
   String get active => throw _privateConstructorUsedError;
   @JsonKey(name: "uuid")
   String get uuid => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_type_id")
-  String get userTypeId => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_type_ar")
-  String get userTypeAr => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_type_en")
-  String get userTypeEn => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_access")
+  @JsonKey(name: "user_access", defaultValue: [])
   List<UserAccessModel> get userAccess => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -80,10 +74,8 @@ abstract class $UserModelCopyWith<$Res> {
       @JsonKey(name: "user_fullname_en") String userFullnameEn,
       @JsonKey(name: "active") String active,
       @JsonKey(name: "uuid") String uuid,
-      @JsonKey(name: "user_type_id") String userTypeId,
-      @JsonKey(name: "user_type_ar") String userTypeAr,
-      @JsonKey(name: "user_type_en") String userTypeEn,
-      @JsonKey(name: "user_access") List<UserAccessModel> userAccess});
+      @JsonKey(name: "user_access", defaultValue: [])
+      List<UserAccessModel> userAccess});
 }
 
 /// @nodoc
@@ -112,9 +104,6 @@ class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
     Object? userFullnameEn = null,
     Object? active = null,
     Object? uuid = null,
-    Object? userTypeId = null,
-    Object? userTypeAr = null,
-    Object? userTypeEn = null,
     Object? userAccess = null,
   }) {
     return _then(_value.copyWith(
@@ -170,18 +159,6 @@ class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
               as String,
-      userTypeId: null == userTypeId
-          ? _value.userTypeId
-          : userTypeId // ignore: cast_nullable_to_non_nullable
-              as String,
-      userTypeAr: null == userTypeAr
-          ? _value.userTypeAr
-          : userTypeAr // ignore: cast_nullable_to_non_nullable
-              as String,
-      userTypeEn: null == userTypeEn
-          ? _value.userTypeEn
-          : userTypeEn // ignore: cast_nullable_to_non_nullable
-              as String,
       userAccess: null == userAccess
           ? _value.userAccess
           : userAccess // ignore: cast_nullable_to_non_nullable
@@ -212,10 +189,8 @@ abstract class _$$UserModelImplCopyWith<$Res>
       @JsonKey(name: "user_fullname_en") String userFullnameEn,
       @JsonKey(name: "active") String active,
       @JsonKey(name: "uuid") String uuid,
-      @JsonKey(name: "user_type_id") String userTypeId,
-      @JsonKey(name: "user_type_ar") String userTypeAr,
-      @JsonKey(name: "user_type_en") String userTypeEn,
-      @JsonKey(name: "user_access") List<UserAccessModel> userAccess});
+      @JsonKey(name: "user_access", defaultValue: [])
+      List<UserAccessModel> userAccess});
 }
 
 /// @nodoc
@@ -242,9 +217,6 @@ class __$$UserModelImplCopyWithImpl<$Res>
     Object? userFullnameEn = null,
     Object? active = null,
     Object? uuid = null,
-    Object? userTypeId = null,
-    Object? userTypeAr = null,
-    Object? userTypeEn = null,
     Object? userAccess = null,
   }) {
     return _then(_$UserModelImpl(
@@ -300,18 +272,6 @@ class __$$UserModelImplCopyWithImpl<$Res>
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
               as String,
-      userTypeId: null == userTypeId
-          ? _value.userTypeId
-          : userTypeId // ignore: cast_nullable_to_non_nullable
-              as String,
-      userTypeAr: null == userTypeAr
-          ? _value.userTypeAr
-          : userTypeAr // ignore: cast_nullable_to_non_nullable
-              as String,
-      userTypeEn: null == userTypeEn
-          ? _value.userTypeEn
-          : userTypeEn // ignore: cast_nullable_to_non_nullable
-              as String,
       userAccess: null == userAccess
           ? _value._userAccess
           : userAccess // ignore: cast_nullable_to_non_nullable
@@ -338,10 +298,7 @@ class _$UserModelImpl extends _UserModel {
       @JsonKey(name: "user_fullname_en") required this.userFullnameEn,
       @JsonKey(name: "active") required this.active,
       @JsonKey(name: "uuid") required this.uuid,
-      @JsonKey(name: "user_type_id") required this.userTypeId,
-      @JsonKey(name: "user_type_ar") required this.userTypeAr,
-      @JsonKey(name: "user_type_en") required this.userTypeEn,
-      @JsonKey(name: "user_access")
+      @JsonKey(name: "user_access", defaultValue: [])
       required final List<UserAccessModel> userAccess})
       : _userAccess = userAccess,
         super._();
@@ -388,18 +345,9 @@ class _$UserModelImpl extends _UserModel {
   @override
   @JsonKey(name: "uuid")
   final String uuid;
-  @override
-  @JsonKey(name: "user_type_id")
-  final String userTypeId;
-  @override
-  @JsonKey(name: "user_type_ar")
-  final String userTypeAr;
-  @override
-  @JsonKey(name: "user_type_en")
-  final String userTypeEn;
   final List<UserAccessModel> _userAccess;
   @override
-  @JsonKey(name: "user_access")
+  @JsonKey(name: "user_access", defaultValue: [])
   List<UserAccessModel> get userAccess {
     if (_userAccess is EqualUnmodifiableListView) return _userAccess;
     // ignore: implicit_dynamic_type
@@ -408,7 +356,7 @@ class _$UserModelImpl extends _UserModel {
 
   @override
   String toString() {
-    return 'UserModel(userTypeCode: $userTypeCode, userid: $userid, userToken: $userToken, username: $username, userMobile: $userMobile, userEmail: $userEmail, userActive: $userActive, userLang: $userLang, userLastOnline: $userLastOnline, userFullname: $userFullname, userFullnameEn: $userFullnameEn, active: $active, uuid: $uuid, userTypeId: $userTypeId, userTypeAr: $userTypeAr, userTypeEn: $userTypeEn, userAccess: $userAccess)';
+    return 'UserModel(userTypeCode: $userTypeCode, userid: $userid, userToken: $userToken, username: $username, userMobile: $userMobile, userEmail: $userEmail, userActive: $userActive, userLang: $userLang, userLastOnline: $userLastOnline, userFullname: $userFullname, userFullnameEn: $userFullnameEn, active: $active, uuid: $uuid, userAccess: $userAccess)';
   }
 
   @override
@@ -439,12 +387,6 @@ class _$UserModelImpl extends _UserModel {
                 other.userFullnameEn == userFullnameEn) &&
             (identical(other.active, active) || other.active == active) &&
             (identical(other.uuid, uuid) || other.uuid == uuid) &&
-            (identical(other.userTypeId, userTypeId) ||
-                other.userTypeId == userTypeId) &&
-            (identical(other.userTypeAr, userTypeAr) ||
-                other.userTypeAr == userTypeAr) &&
-            (identical(other.userTypeEn, userTypeEn) ||
-                other.userTypeEn == userTypeEn) &&
             const DeepCollectionEquality()
                 .equals(other._userAccess, _userAccess));
   }
@@ -466,9 +408,6 @@ class _$UserModelImpl extends _UserModel {
       userFullnameEn,
       active,
       uuid,
-      userTypeId,
-      userTypeAr,
-      userTypeEn,
       const DeepCollectionEquality().hash(_userAccess));
 
   @JsonKey(ignore: true)
@@ -500,10 +439,7 @@ abstract class _UserModel extends UserModel {
       @JsonKey(name: "user_fullname_en") required final String userFullnameEn,
       @JsonKey(name: "active") required final String active,
       @JsonKey(name: "uuid") required final String uuid,
-      @JsonKey(name: "user_type_id") required final String userTypeId,
-      @JsonKey(name: "user_type_ar") required final String userTypeAr,
-      @JsonKey(name: "user_type_en") required final String userTypeEn,
-      @JsonKey(name: "user_access")
+      @JsonKey(name: "user_access", defaultValue: [])
       required final List<UserAccessModel> userAccess}) = _$UserModelImpl;
   const _UserModel._() : super._();
 
@@ -550,16 +486,7 @@ abstract class _UserModel extends UserModel {
   @JsonKey(name: "uuid")
   String get uuid;
   @override
-  @JsonKey(name: "user_type_id")
-  String get userTypeId;
-  @override
-  @JsonKey(name: "user_type_ar")
-  String get userTypeAr;
-  @override
-  @JsonKey(name: "user_type_en")
-  String get userTypeEn;
-  @override
-  @JsonKey(name: "user_access")
+  @JsonKey(name: "user_access", defaultValue: [])
   List<UserAccessModel> get userAccess;
   @override
   @JsonKey(ignore: true)
