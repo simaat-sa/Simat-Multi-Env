@@ -3,7 +3,7 @@
 part of 'login_imports.dart';
 
 class LoginController {
-  ObsValue<bool> visableObs = ObsValue.withInit(false);
+  ObsValue<bool> visibleObs = ObsValue.withInit(false);
   ObsValue<bool> supportBiometricObs = ObsValue.withInit(false);
 
   final GlobalKey<FormState> formKey = GlobalKey();
@@ -75,19 +75,12 @@ class LoginController {
   /// scan the qr code and get the token
   /// then send the token to the server to get the user data
   void qrScan(BuildContext context) async {
-    // String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
-    //   "#ff6666",
-    //   Translate.of(context).cancel,
-    //   true,
-    //   ScanMode.DEFAULT,
-    // );
     String? scannedCode = await Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => const ScannerScreen()));
     if (scannedCode != null) {
       var token = scannedCode.split(",").first.split("<").last;
-      print("==============> $token");
       _loginWithQr(context, token);
     }
 
