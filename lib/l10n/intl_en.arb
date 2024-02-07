@@ -53,5 +53,6 @@
   "successfully_Logged_in": "Successfully Logged in",
   "Sign_In": "SIGN IN",
   "Welcome": "Welcome",
-  "Please_authenticate_to_login": "Please authenticate to login to your account"
+  "Please_authenticate_to_login": "Please authenticate to login to your account",
+  "Invalid_login_data": "Please verify your login information"
 }

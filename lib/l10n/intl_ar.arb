@@ -53,7 +53,8 @@
   "successfully_Logged_in": "تم تسجيل الدخول بنجاح",
   "Sign_In": "تسجيل الدخول",
   "copied_successfully": "تم النسخ بنجاح",
-  "Please_authenticate_to_login": "يرجى التسجيل لدخول إلى حسابك"
+  "Please_authenticate_to_login": "يرجى التسجيل لدخول إلى حسابك",
+  "Invalid_login_data": "من فضلك تاكد من بيانات تسجيل الدخول"
 }
 
 

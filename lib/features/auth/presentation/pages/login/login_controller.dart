@@ -27,12 +27,15 @@ class LoginController {
   }
 
   void _handleLoginResponse(BuildContext context, MyResult<UserModel> response) {
-    response.whenOrNull(isSuccess: (userModel) {
+    response.when(isSuccess: (userModel) {
       context.read<UserCubit>().onUpdateUserData(userModel!);
       UserHelperService.instance.saveUserData(userModel);
       AppSnackBar.showSimpleToast(
           color: context.colors.black, msg: Translate.of(context).successfully_Logged_in, type: ToastType.success);
       AutoRouter.of(context).push(Home());
+    }, isError: (error) {
+      AppSnackBar.showSimpleToast(
+          msg: Translate.of(context).Invalid_login_data, type: ToastType.error);
     });
   }
 

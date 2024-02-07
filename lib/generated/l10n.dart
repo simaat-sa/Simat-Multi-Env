@@ -589,6 +589,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Please verify your login information`
+  String get Invalid_login_data {
+    return Intl.message(
+      'Please verify your login information',
+      name: 'Invalid_login_data',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

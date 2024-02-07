@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "AddressValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل العنوان"),
+        "Invalid_login_data": MessageLookupByLibrary.simpleMessage(
+            "من فضلك تاكد من بيانات تسجيل الدخول"),
         "Please_authenticate_to_login": MessageLookupByLibrary.simpleMessage(
             "يرجى التسجيل لدخول إلى حسابك"),
         "Sign_In": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
