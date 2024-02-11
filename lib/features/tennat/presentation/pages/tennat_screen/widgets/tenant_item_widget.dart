@@ -25,38 +25,42 @@ class TenantItemWidget extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.all(8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Column(
                 children: [
-                  Container(
-                    height: 35,
-                    padding: const EdgeInsets.symmetric(horizontal: 5),
-                    decoration: BoxDecoration(
-                        color: context.colors.blackOpacity.withOpacity(0.5), borderRadius: BorderRadius.circular(5)),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.map_outlined,
-                          color: context.colors.white,
-                          size: 22,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        height: 35,
+                        padding: const EdgeInsets.symmetric(horizontal: 5),
+                        decoration: BoxDecoration(
+                            color: context.colors.blackOpacity.withOpacity(0.2), borderRadius: BorderRadius.circular(5)),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.map_outlined,
+                              color: context.colors.white,
+                              size: 22,
+                            ),
+                            Text(
+                              "${model.propRegion} . ${model.propCity}",
+                              style: AppTextStyle.s14_w400(color: context.colors.white),
+                            ),
+                          ],
                         ),
-                        Text(
-                          "${model.propRegion} ${model.propCity}",
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        height: 35,
+                        padding: const EdgeInsets.symmetric(horizontal: 5),
+                        decoration: BoxDecoration(
+                            color: context.colors.blackOpacity.withOpacity(0.2), borderRadius: BorderRadius.circular(5)),
+                        child: Text(
+                         "#${model.myoCode}",
                           style: AppTextStyle.s14_w400(color: context.colors.white),
                         ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    height: 35,
-                    padding: const EdgeInsets.symmetric(horizontal: 5),
-                    decoration: BoxDecoration(
-                        color: context.colors.blackOpacity.withOpacity(0.5), borderRadius: BorderRadius.circular(5)),
-                    child: Text(
-                      model.myoCode,
-                      style: AppTextStyle.s14_w400(color: context.colors.white),
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -75,10 +79,10 @@ class TenantItemWidget extends StatelessWidget {
                     ),
                     Text(
                       model.amtTot,
-                      style: AppTextStyle.s18_w500(color: context.colors.primary),
+                      style: AppTextStyle.s16_w700(color: context.colors.primary),
                     ),
                     Text(
-                      'ر.س',
+                      ' ر.س',
                       style: AppTextStyle.s16_w400(color: context.colors.primary),
                     ),
                   ],
@@ -91,7 +95,7 @@ class TenantItemWidget extends StatelessWidget {
                   ),
                   child: Text(
                     model.deedName,
-                    style: AppTextStyle.s16_w500(color: context.colors.white),
+                    style: AppTextStyle.s16_w400(color: context.colors.white),
                   ),
                 ),
               ],
@@ -109,7 +113,7 @@ class TenantItemWidget extends StatelessWidget {
                       color: context.colors.primary,
                     ),
                     Text(
-                      'مكتب | ',
+                      ' مكتب | ',
                       style: AppTextStyle.s16_w400(color: context.colors.brown),
                     ),
                     Text(
@@ -123,7 +127,7 @@ class TenantItemWidget extends StatelessWidget {
                   ],
                 ),
                 Text(
-                  model.deedIssue,
+                  ' ينتهي${model.deedIssue}',
                   style: AppTextStyle.s14_w400(color: context.colors.primary),
                 ),
               ],
