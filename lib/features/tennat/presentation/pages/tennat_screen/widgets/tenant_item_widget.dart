@@ -6,7 +6,6 @@ class TenantItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("===> ${model.unitImage}");
     return Container(
       margin: const EdgeInsets.only(top: 10),
       decoration: BoxDecoration(
