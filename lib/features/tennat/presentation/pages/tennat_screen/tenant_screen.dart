@@ -12,7 +12,6 @@ class _TenantScreenState extends State<TenantScreen> {
 
   @override
   void initState() {
-    controller.initRequester();
     super.initState();
   }
 
@@ -23,24 +22,25 @@ class _TenantScreenState extends State<TenantScreen> {
       body: RequesterConsumer(
         requester: controller.requester,
         successBuilder: (context, data) {
-          return ListView(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-            children: [
-              const HeaderTextWidget(),
-              Gaps.vGap10,
-              ...List.generate(data.length, (index) {
-                return TenantItemWidget(model: data[index],);
-              },)
-            ],
+          return RefreshIndicator(
+            onRefresh: () => controller.requestData(),
+            child: ListView(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+              children: [
+                const HeaderTextWidget(),
+                Gaps.vGap10,
+                ...List.generate(data.length, (index) {
+                  return TenantItemWidget(model: data[index],);
+                },)
+              ],
+            ),
           );
         },
         failureBuilder: (context, error, callback) {
           return const FailureItemWidget();
         },
         loadingBuilder: (context) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
+          return const UnitLoadingListWidget();
         },
       ),
     );
