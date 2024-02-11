@@ -1,3 +1,4 @@
+import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/features/auth/data/models/user_access_model/user_access_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -16,6 +17,7 @@ class UserModel  with _$UserModel {
     @JsonKey(name: "userid") required String userid,
     @JsonKey(name: "user_token") required String userToken,
     @JsonKey(name: "username") required String username,
+    @JsonKey(name: "user_avatar", defaultValue: "") required String userAvatar,
     @JsonKey(name: "usermobile") required String userMobile,
     @JsonKey(name: "useremail") required String userEmail,
     @JsonKey(name: "user_active") required String userActive,
@@ -30,4 +32,8 @@ class UserModel  with _$UserModel {
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);
+
+
+  String get userImage => AppConfig.instance.baseUrl + userAvatar;
+
 }
