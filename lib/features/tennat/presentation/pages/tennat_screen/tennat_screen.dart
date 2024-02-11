@@ -35,10 +35,12 @@ class _TennatScreenState extends State<TennatScreen> {
           );
         },
         failureBuilder: (context, error, callback) {
-          return Container();
+          return const FailureItemWidget();
         },
         loadingBuilder: (context) {
-          return const CircularProgressIndicator();
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
         },
       ),
     );
