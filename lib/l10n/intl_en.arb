@@ -54,6 +54,9 @@
   "Sign_In": "SIGN IN",
   "Welcome": "Welcome",
   "Please_authenticate_to_login": "Please authenticate to login to your account",
+    "please_fill_all_fields": "Please fill all fields",
   "Invalid_login_data": "Please verify your login information",
-    "please_fill_all_fields": "Please fill all fields"
+  "login_with_qr": "Scan the QR code to log in",
+  "how_get_code": "How can I get the code?",
+  "rented_units": "Rented units{count}"
 }

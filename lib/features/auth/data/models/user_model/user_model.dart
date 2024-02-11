@@ -25,7 +25,7 @@ class UserModel  with _$UserModel {
     @JsonKey(name: "user_fullname_en") required String userFullnameEn,
     @JsonKey(name: "active") required String active,
     @JsonKey(name: "uuid") required String uuid,
-    @JsonKey(name: "user_access", defaultValue: []) required List<UserAccessModel> userAccess,
+    @JsonKey(name: "app_page_access", defaultValue: []) required List<UserAccessModel> userAccess,
   }) = _UserModel;
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>

@@ -600,13 +600,33 @@ class S {
     );
   }
 
-  /// `Please fill all fields`
-  String get please_fill_all_fields {
+  /// `Scan the QR code to log in`
+  String get login_with_qr {
     return Intl.message(
-      'Please fill all fields',
-      name: 'please_fill_all_fields',
+      'Scan the QR code to log in',
+      name: 'login_with_qr',
       desc: '',
       args: [],
+    );
+  }
+
+  /// `How can I get the code?`
+  String get how_get_code {
+    return Intl.message(
+      'How can I get the code?',
+      name: 'how_get_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rented units{count}`
+  String rented_units(Object count) {
+    return Intl.message(
+      'Rented units$count',
+      name: 'rented_units',
+      desc: '',
+      args: [count],
     );
   }
 }

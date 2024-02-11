@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(MB, files) =>
+  static String m0(count) => "Rented units${count}";
+
+  static String m1(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -73,6 +75,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Failure Actions"),
         "fillField":
             MessageLookupByLibrary.simpleMessage("Please enter this field"),
+        "how_get_code":
+            MessageLookupByLibrary.simpleMessage("How can I get the code?"),
         "internet_connected":
             MessageLookupByLibrary.simpleMessage("Internet connected"),
         "label_Login": MessageLookupByLibrary.simpleMessage("Login"),
@@ -92,6 +96,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "label_phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "label_register": MessageLookupByLibrary.simpleMessage("Register"),
         "loadingText": MessageLookupByLibrary.simpleMessage("Loading…"),
+        "login_with_qr":
+            MessageLookupByLibrary.simpleMessage("Scan the QR code to log in"),
         "mailValidation":
             MessageLookupByLibrary.simpleMessage("Please enter a valid email"),
         "nameValidation": MessageLookupByLibrary.simpleMessage(
@@ -103,11 +109,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneValidation": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid mobile phone"),
         "pick": MessageLookupByLibrary.simpleMessage("Pick"),
-        "please_fill_all_fields":
-            MessageLookupByLibrary.simpleMessage("Please fill all fields"),
+        "rented_units": m0,
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
-        "size_more_than_mg_error": m0,
+        "size_more_than_mg_error": m1,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "successfully_Logged_in":
