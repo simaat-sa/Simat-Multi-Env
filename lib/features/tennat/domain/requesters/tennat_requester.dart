@@ -9,10 +9,12 @@ class TennatRequester extends Requester<List<Tennat>> {
     var result = await getIt.get<TennatRepository>().getTennat(fromRemote);
     result.when(
       isSuccess: (data) {
-        return data;
+        successState(data??[]);
       },
       isError: (error) {
-        return error.message;
+        failedState(error, () {
+          request(fromRemote: fromRemote);
+        });
       },
     );
   }

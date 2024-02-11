@@ -60,7 +60,6 @@ class LoginController {
   }
 
   Future<void> _loginWithQr(BuildContext context, String token) async {
-    log("<<<<<<<<<<$token>>>>>>>");
     var loginResponse = await getIt<AuthRepository>().loginWithQr(token);
     _handleLoginResponse(context, loginResponse);
   }

@@ -590,6 +590,16 @@ class S {
     );
   }
 
+  /// `Please fill all fields`
+  String get please_fill_all_fields {
+    return Intl.message(
+      'Please fill all fields',
+      name: 'please_fill_all_fields',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Please verify your login information`
   String get Invalid_login_data {
     return Intl.message(
