@@ -3,10 +3,10 @@ import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/core/widgets/CachedImage.dart';
 
-class TennatAppBar extends StatelessWidget implements PreferredSizeWidget {
+class TenantAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double? size;
 
-  const TennatAppBar({
+  const TenantAppBar({
     super.key,
     this.size,
   });

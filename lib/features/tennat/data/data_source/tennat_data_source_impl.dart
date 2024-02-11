@@ -5,20 +5,20 @@ import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:flutter_tdd/features/tennat/data/data_source/tennat_data_source.dart';
 import 'package:flutter_tdd/features/tennat/data/models/tennat_model/tennat_model.dart';
 import 'package:injectable/injectable.dart';
-@Injectable(as: TennatDataSource)
-class TennatDataSourceImpl extends TennatDataSource {
+@Injectable(as: TenantDataSource)
+class TenantDataSourceImpl extends TenantDataSource {
   @override
-  Future<MyResult<List<TennatModel>>> getTennat(bool params) async {
+  Future<MyResult<List<TenantModel>>> getTenant(bool params) async {
     HttpRequestModel model = HttpRequestModel(
-      url: ApiNames.getTennat,
+      url: ApiNames.getTenant,
       responseType: ResType.list,
       requestMethod: RequestMethod.get,
       refresh: params,
       responseKey: (data) => data['data'],
       toJsonFunc: (data) {
-        return List<TennatModel>.from(data.map((e)=>TennatModel.fromJson(e)));
+        return List<TenantModel>.from(data.map((e)=>TenantModel.fromJson(e)));
       },
     );
-        return GenericHttpImpl<List<TennatModel>>()(model);
+        return GenericHttpImpl<List<TenantModel>>()(model);
   }
 }

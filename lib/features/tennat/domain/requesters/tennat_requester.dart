@@ -3,10 +3,10 @@ import 'package:flutter_tdd/core/requester/requester.dart';
 import 'package:flutter_tdd/features/tennat/domain/models/tennat.dart';
 import 'package:flutter_tdd/features/tennat/domain/repositories/tennat_repository.dart';
 
-class TennatRequester extends Requester<List<Tennat>> {
+class TenantRequester extends Requester<List<Tenant>> {
   @override
   Future<void> request({bool fromRemote = true}) async {
-    var result = await getIt.get<TennatRepository>().getTennat(fromRemote);
+    var result = await getIt.get<TenantRepository>().getTenant(fromRemote);
     result.when(
       isSuccess: (data) {
         successState(data??[]);

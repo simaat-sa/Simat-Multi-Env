@@ -1,4 +1,4 @@
-part of 'tennat_screen_widgets_imports.dart';
+part of 'tenant_screen_widgets_imports.dart';
 
 class HeaderTextWidget extends StatelessWidget {
   const HeaderTextWidget({super.key});

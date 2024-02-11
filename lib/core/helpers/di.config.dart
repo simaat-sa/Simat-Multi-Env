@@ -102,8 +102,8 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i29.Put>(() => _i29.Put());
     gh.factory<_i30.ShareServices>(() => _i30.ShareServices());
     gh.lazySingleton<_i31.SharedPrefService>(() => _i31.SharedPrefService());
-    gh.factory<_i32.TennatDataSource>(() => _i33.TennatDataSourceImpl());
-    gh.factory<_i34.TennatRepository>(() => _i35.TennatRepositoryImpl());
+    gh.factory<_i32.TenantDataSource>(() => _i33.TenantDataSourceImpl());
+    gh.factory<_i34.TenantRepository>(() => _i35.TenantRepositoryImpl());
     gh.lazySingleton<_i36.Utilities>(() => _i36.Utilities());
     return this;
   }

@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_tdd/core/helpers/di.dart';
+import 'package:flutter_tdd/core/http/dio_helper/utils/dio_header.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 
 
@@ -38,11 +40,11 @@ class CachedImage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-
     return CachedNetworkImage(
       imageUrl: url,
       width: width,
       height: height,
+      httpHeaders: getIt.get<DioHeader>().call(),
       imageBuilder: (context, imageProvider) => Container(
         width: width,
         height: height,

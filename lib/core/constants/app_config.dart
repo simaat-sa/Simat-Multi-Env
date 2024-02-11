@@ -7,7 +7,9 @@ class AppConfig {
 
   String get defaultLanguage => 'en';
 
-  String get baseUrl => "https://${const String.fromEnvironment('APP_BASE_URL')}${const String.fromEnvironment('APP_API')}";
+  String get baseUrl => "https://${const String.fromEnvironment('APP_BASE_URL')}/";
+
+  String get baseAPIUrl => "https://${const String.fromEnvironment('APP_BASE_URL')}${const String.fromEnvironment('APP_API')}";
 
   static BoxConstraints get textFieldConstrains =>
       const BoxConstraints(minHeight: 50, maxHeight: 50);

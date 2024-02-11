@@ -7,11 +7,11 @@ part 'tennat_model.freezed.dart';
 part 'tennat_model.g.dart';
 
 @freezed
-class TennatModel extends BaseApiModel<Tennat> with _$TennatModel {
-  const TennatModel._();
+class TenantModel extends BaseApiModel<Tenant> with _$TenantModel {
+  const TenantModel._();
 
   @JsonSerializable(explicitToJson: true)
-  factory TennatModel({
+  factory TenantModel({
     @JsonKey(name: 'prop_id')required String propId,
     @JsonKey(name: 'are_id')required String areId,
     @JsonKey(name: 'are_code')required String areCode,
@@ -27,13 +27,13 @@ class TennatModel extends BaseApiModel<Tennat> with _$TennatModel {
     @JsonKey(name: 'prop_region')required String propRegion,
     @JsonKey(name: 'are_desc_full')required String areDescFull,
     @JsonKey(name: 'amt_tot')required String amtTot,
-  }) = _TennatModel;
+  }) = _TenantModel;
 
-  factory TennatModel.fromJson(Map<String, dynamic> json) => _$TennatModelFromJson(json);
+  factory TenantModel.fromJson(Map<String, dynamic> json) => _$TenantModelFromJson(json);
 
   @override
-  Tennat toDomainModel() {
-    return Tennat(
+  Tenant toDomainModel() {
+    return Tenant(
       areAreId: areAreId,
       areDescFull: areDescFull,
       areCode: areCode,

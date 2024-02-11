@@ -30,7 +30,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
           physics: const NeverScrollableScrollPhysics(),
           controller: controller.tabController,
           children: List.generate(listAccessUser.length, (index) {
-            return const TennatScreen();
+            return const TenantScreen();
           }),
         ),
         bottomNavigationBar: BottomNavBarWidget(controller: controller),

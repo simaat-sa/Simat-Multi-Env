@@ -7,4 +7,4 @@ import 'package:flutter_tdd/core/widgets/CachedImage.dart';
 import 'package:flutter_tdd/features/tennat/domain/models/tennat.dart';
 
 part 'header_text_widget.dart';
-part 'tennat_screen_item_widget.dart';
+part 'tenant_item_widget.dart';

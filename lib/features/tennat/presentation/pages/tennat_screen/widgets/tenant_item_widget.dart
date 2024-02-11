@@ -1,11 +1,12 @@
-part of 'tennat_screen_widgets_imports.dart';
+part of 'tenant_screen_widgets_imports.dart';
 
-class TennatScreenItemWidget extends StatelessWidget {
-  final Tennat model;
-  const TennatScreenItemWidget({super.key, required this.model});
+class TenantItemWidget extends StatelessWidget {
+  final Tenant model;
+  const TenantItemWidget({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
+    print("===> ${model.unitImage}");
     return Container(
       margin: const EdgeInsets.only(top: 10),
       decoration: BoxDecoration(
@@ -16,7 +17,7 @@ class TennatScreenItemWidget extends StatelessWidget {
         children: [
           CachedImage(
             alignment: Alignment.topCenter,
-            url: model.propImg,
+            url: model.unitImage,
             height: 200,
             borderRadius: const BorderRadius.only(
               topRight: Radius.circular(10),

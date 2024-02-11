@@ -6,12 +6,12 @@ import 'package:flutter_tdd/features/tennat/data/models/tennat_model/tennat_mode
 import 'package:flutter_tdd/features/tennat/domain/models/tennat.dart';
 import 'package:flutter_tdd/features/tennat/domain/repositories/tennat_repository.dart';
 import 'package:injectable/injectable.dart';
-@Injectable(as:TennatRepository)
-class TennatRepositoryImpl extends TennatRepository with ModelToDomainResult{
+@Injectable(as:TenantRepository)
+class TenantRepositoryImpl extends TenantRepository with ModelToDomainResult{
   @override
-  Future<MyResult<List<Tennat>>> getTennat(bool params)async {
-    var result = await getIt.get<TennatDataSource>().getTennat(params);
-    return toDomainResultList<Tennat,TennatModel>(result);
+  Future<MyResult<List<Tenant>>> getTenant(bool params)async {
+    var result = await getIt.get<TenantDataSource>().getTenant(params);
+    return toDomainResultList<Tenant,TenantModel>(result);
   }
 
 }

@@ -6,8 +6,8 @@ part of 'tennat_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$TennatModelImpl _$$TennatModelImplFromJson(Map<String, dynamic> json) =>
-    _$TennatModelImpl(
+_$TenantModelImpl _$$TenantModelImplFromJson(Map<String, dynamic> json) =>
+    _$TenantModelImpl(
       propId: json['prop_id'] as String,
       areId: json['are_id'] as String,
       areCode: json['are_code'] as String,
@@ -25,7 +25,7 @@ _$TennatModelImpl _$$TennatModelImplFromJson(Map<String, dynamic> json) =>
       amtTot: json['amt_tot'] as String,
     );
 
-Map<String, dynamic> _$$TennatModelImplToJson(_$TennatModelImpl instance) =>
+Map<String, dynamic> _$$TenantModelImplToJson(_$TenantModelImpl instance) =>
     <String, dynamic>{
       'prop_id': instance.propId,
       'are_id': instance.areId,

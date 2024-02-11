@@ -1,14 +1,14 @@
-part of 'tennat_screen_imports.dart';
+part of 'tenant_screen_imports.dart';
 
-class TennatScreen extends StatefulWidget {
-  const TennatScreen({super.key});
+class TenantScreen extends StatefulWidget {
+  const TenantScreen({super.key});
 
   @override
-  State<TennatScreen> createState() => _TennatScreenState();
+  State<TenantScreen> createState() => _TenantScreenState();
 }
 
-class _TennatScreenState extends State<TennatScreen> {
-  final TennatScreenController controller = TennatScreenController();
+class _TenantScreenState extends State<TenantScreen> {
+  final TenantScreenController controller = TenantScreenController();
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _TennatScreenState extends State<TennatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const TennatAppBar(),
+      appBar: const TenantAppBar(),
       body: RequesterConsumer(
         requester: controller.requester,
         successBuilder: (context, data) {
@@ -29,7 +29,7 @@ class _TennatScreenState extends State<TennatScreen> {
               const HeaderTextWidget(),
               Gaps.vGap10,
               ...List.generate(data.length, (index) {
-                return TennatScreenItemWidget(model: data[index],);
+                return TenantItemWidget(model: data[index],);
               },)
             ],
           );

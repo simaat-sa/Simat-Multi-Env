@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-TennatModel _$TennatModelFromJson(Map<String, dynamic> json) {
-  return _TennatModel.fromJson(json);
+TenantModel _$TenantModelFromJson(Map<String, dynamic> json) {
+  return _TenantModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$TennatModel {
+mixin _$TenantModel {
   @JsonKey(name: 'prop_id')
   String get propId => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_id')
@@ -53,15 +53,15 @@ mixin _$TennatModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TennatModelCopyWith<TennatModel> get copyWith =>
+  $TenantModelCopyWith<TenantModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TennatModelCopyWith<$Res> {
-  factory $TennatModelCopyWith(
-          TennatModel value, $Res Function(TennatModel) then) =
-      _$TennatModelCopyWithImpl<$Res, TennatModel>;
+abstract class $TenantModelCopyWith<$Res> {
+  factory $TenantModelCopyWith(
+          TenantModel value, $Res Function(TenantModel) then) =
+      _$TenantModelCopyWithImpl<$Res, TenantModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'prop_id') String propId,
@@ -82,9 +82,9 @@ abstract class $TennatModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TennatModelCopyWithImpl<$Res, $Val extends TennatModel>
-    implements $TennatModelCopyWith<$Res> {
-  _$TennatModelCopyWithImpl(this._value, this._then);
+class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
+    implements $TenantModelCopyWith<$Res> {
+  _$TenantModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -176,11 +176,11 @@ class _$TennatModelCopyWithImpl<$Res, $Val extends TennatModel>
 }
 
 /// @nodoc
-abstract class _$$TennatModelImplCopyWith<$Res>
-    implements $TennatModelCopyWith<$Res> {
-  factory _$$TennatModelImplCopyWith(
-          _$TennatModelImpl value, $Res Function(_$TennatModelImpl) then) =
-      __$$TennatModelImplCopyWithImpl<$Res>;
+abstract class _$$TenantModelImplCopyWith<$Res>
+    implements $TenantModelCopyWith<$Res> {
+  factory _$$TenantModelImplCopyWith(
+          _$TenantModelImpl value, $Res Function(_$TenantModelImpl) then) =
+      __$$TenantModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -202,11 +202,11 @@ abstract class _$$TennatModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$TennatModelImplCopyWithImpl<$Res>
-    extends _$TennatModelCopyWithImpl<$Res, _$TennatModelImpl>
-    implements _$$TennatModelImplCopyWith<$Res> {
-  __$$TennatModelImplCopyWithImpl(
-      _$TennatModelImpl _value, $Res Function(_$TennatModelImpl) _then)
+class __$$TenantModelImplCopyWithImpl<$Res>
+    extends _$TenantModelCopyWithImpl<$Res, _$TenantModelImpl>
+    implements _$$TenantModelImplCopyWith<$Res> {
+  __$$TenantModelImplCopyWithImpl(
+      _$TenantModelImpl _value, $Res Function(_$TenantModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -228,7 +228,7 @@ class __$$TennatModelImplCopyWithImpl<$Res>
     Object? areDescFull = null,
     Object? amtTot = null,
   }) {
-    return _then(_$TennatModelImpl(
+    return _then(_$TenantModelImpl(
       propId: null == propId
           ? _value.propId
           : propId // ignore: cast_nullable_to_non_nullable
@@ -296,8 +296,8 @@ class __$$TennatModelImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$TennatModelImpl extends _TennatModel {
-  _$TennatModelImpl(
+class _$TenantModelImpl extends _TenantModel {
+  _$TenantModelImpl(
       {@JsonKey(name: 'prop_id') required this.propId,
       @JsonKey(name: 'are_id') required this.areId,
       @JsonKey(name: 'are_code') required this.areCode,
@@ -315,8 +315,8 @@ class _$TennatModelImpl extends _TennatModel {
       @JsonKey(name: 'amt_tot') required this.amtTot})
       : super._();
 
-  factory _$TennatModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TennatModelImplFromJson(json);
+  factory _$TenantModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TenantModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'prop_id')
@@ -366,14 +366,14 @@ class _$TennatModelImpl extends _TennatModel {
 
   @override
   String toString() {
-    return 'TennatModel(propId: $propId, areId: $areId, areCode: $areCode, areAreId: $areAreId, parentCode: $parentCode, propImg: $propImg, propLat: $propLat, propLng: $propLng, deedIssue: $deedIssue, deedName: $deedName, myoCode: $myoCode, propCity: $propCity, propRegion: $propRegion, areDescFull: $areDescFull, amtTot: $amtTot)';
+    return 'TenantModel(propId: $propId, areId: $areId, areCode: $areCode, areAreId: $areAreId, parentCode: $parentCode, propImg: $propImg, propLat: $propLat, propLng: $propLng, deedIssue: $deedIssue, deedName: $deedName, myoCode: $myoCode, propCity: $propCity, propRegion: $propRegion, areDescFull: $areDescFull, amtTot: $amtTot)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$TennatModelImpl &&
+            other is _$TenantModelImpl &&
             (identical(other.propId, propId) || other.propId == propId) &&
             (identical(other.areId, areId) || other.areId == areId) &&
             (identical(other.areCode, areCode) || other.areCode == areCode) &&
@@ -421,19 +421,19 @@ class _$TennatModelImpl extends _TennatModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$TennatModelImplCopyWith<_$TennatModelImpl> get copyWith =>
-      __$$TennatModelImplCopyWithImpl<_$TennatModelImpl>(this, _$identity);
+  _$$TenantModelImplCopyWith<_$TenantModelImpl> get copyWith =>
+      __$$TenantModelImplCopyWithImpl<_$TenantModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TennatModelImplToJson(
+    return _$$TenantModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _TennatModel extends TennatModel {
-  factory _TennatModel(
+abstract class _TenantModel extends TenantModel {
+  factory _TenantModel(
           {@JsonKey(name: 'prop_id') required final String propId,
           @JsonKey(name: 'are_id') required final String areId,
           @JsonKey(name: 'are_code') required final String areCode,
@@ -449,11 +449,11 @@ abstract class _TennatModel extends TennatModel {
           @JsonKey(name: 'prop_region') required final String propRegion,
           @JsonKey(name: 'are_desc_full') required final String areDescFull,
           @JsonKey(name: 'amt_tot') required final String amtTot}) =
-      _$TennatModelImpl;
-  _TennatModel._() : super._();
+      _$TenantModelImpl;
+  _TenantModel._() : super._();
 
-  factory _TennatModel.fromJson(Map<String, dynamic> json) =
-      _$TennatModelImpl.fromJson;
+  factory _TenantModel.fromJson(Map<String, dynamic> json) =
+      _$TenantModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'prop_id')
@@ -502,6 +502,6 @@ abstract class _TennatModel extends TennatModel {
   String get amtTot;
   @override
   @JsonKey(ignore: true)
-  _$$TennatModelImplCopyWith<_$TennatModelImpl> get copyWith =>
+  _$$TenantModelImplCopyWith<_$TenantModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,7 +1,7 @@
 import 'package:flutter_tdd/core/constants/app_config.dart';
 
 class ApiNames{
-  static String baseUrl = AppConfig.instance.baseUrl;
+  static String baseUrl = AppConfig.instance.baseAPIUrl;
   static String version1Part = "v1/";
 
   // auth routes
@@ -15,7 +15,7 @@ class ApiNames{
   static const String switchNotify = "SwitchNotify";
   static const String forgetPassword = "cabaf46ee69d7b8445a5d791";
   static const String resetPassword = "A2q4mG84Z9rE2B38In4HALSWTwt9eQ5Slzq56Cod";
-  static  String getTennat = "${version1Part}tenant/units";
+  static  String getTenant = "${version1Part}tenant/units";
 
 
 

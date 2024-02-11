@@ -1,6 +1,7 @@
+import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/models/domain_model/base_domain_model.dart';
 
-class Tennat extends BaseDomainModel {
+class Tenant extends BaseDomainModel {
   String propId;
   String areId;
   String areCode;
@@ -17,7 +18,7 @@ class Tennat extends BaseDomainModel {
   String areDescFull;
   String amtTot;
 
-  Tennat({
+  Tenant({
     required this.areAreId,
     required this.areDescFull,
     required this.areCode,
@@ -34,4 +35,8 @@ class Tennat extends BaseDomainModel {
     required this.propRegion,
     required this.amtTot,
   });
+
+
+  String get unitImage => AppConfig.instance.baseUrl + propImg;
+
 }
