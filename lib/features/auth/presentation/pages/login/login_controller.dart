@@ -10,7 +10,7 @@ class LoginController {
 
   final GlobalKey<CustomButtonState> btnKey = GlobalKey();
   final GlobalKey<ScaffoldState> drawerKey = GlobalKey<ScaffoldState>();
-  final TextEditingController email = TextEditingController();
+  final TextEditingController name = TextEditingController();
   final TextEditingController password = TextEditingController();
 
   /// to check if the device support biometric or not [finger print or face id]
@@ -20,22 +20,33 @@ class LoginController {
   }
 
   /// to submit the login form
-  void onSubmit(BuildContext context) async {
-    LoginParams params = loginParams();
-    var loginResponse = await getIt<AuthRepository>().login(params);
-    _handleLoginResponse(context, loginResponse);
+  Future<bool> onSubmit(BuildContext context) async {
+    if (_checkFormValidation(context)) {
+      LoginParams params = loginParams();
+      var loginResponse = await getIt<AuthRepository>().login(params);
+     return _handleLoginResponse(context, loginResponse);
+    }else{
+      return false;
+    }
   }
 
-  void _handleLoginResponse(BuildContext context, MyResult<UserModel> response) {
-    response.when(isSuccess: (userModel) {
+  bool _handleLoginResponse(BuildContext context, MyResult<UserModel> response) {
+    return response.when(isSuccess: (userModel) {
       context.read<UserCubit>().onUpdateUserData(userModel!);
       UserHelperService.instance.saveUserData(userModel);
       AppSnackBar.showSimpleToast(
-          color: context.colors.black, msg: Translate.of(context).successfully_Logged_in, type: ToastType.success);
+        color: context.colors.black,
+        msg: Translate.of(context).successfully_Logged_in,
+        type: ToastType.success,
+      );
       AutoRouter.of(context).push(Home());
+      return true;
     }, isError: (error) {
       AppSnackBar.showSimpleToast(
-          msg: Translate.of(context).Invalid_login_data, type: ToastType.error);
+        msg: Translate.of(context).Invalid_login_data,
+        type: ToastType.error,
+      );
+      return false;
     });
   }
 
@@ -43,7 +54,7 @@ class LoginController {
   LoginParams loginParams() {
     return LoginParams(
       logPassword: password.text,
-      logUser: email.text,
+      logUser: name.text,
     );
   }
 
@@ -56,36 +67,42 @@ class LoginController {
   /// first check if the user save his credentials before or not
   /// if yes authenticate with biometric
   /// if no check form validation and authenticate with biometric
-  Future<void> loginWithCredentials(BuildContext context) async {
+  Future<void> loginWithBiometric(BuildContext context) async {
     LoginParams? params = await UserHelperService.instance.getUserCredentials();
     if (params != null) {
       var authorize = await BiometricHelper.instance.authenticate(context);
       if (authorize) {
-        email.text = params.logUser;
+        name.text = params.logUser;
         password.text = params.logPassword;
         onSubmit(context);
       }
-    }else{
-      if (formKey.currentState!.validate()) {
+    } else {
+      if (_checkFormValidation(context)) {
         var authorize = await BiometricHelper.instance.authenticate(context);
         if (authorize) {
-          onSubmit(context);
+          onSubmit(context).then((value) {
+            if (value) {
+              UserHelperService.instance.saveUserCredentials(loginParams());
+            }
+          });
         }
       }
     }
   }
+
+  bool _checkFormValidation(BuildContext context) {
+    return formKey.currentState!.validate();
+  }
+
   /// to login with qr code
   /// scan the qr code and get the token
   /// then send the token to the server to get the user data
   void qrScan(BuildContext context) async {
     String? scannedCode = await Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => const ScannerScreen()));
+        context, MaterialPageRoute(builder: (context) => const ScannerScreen()));
     if (scannedCode != null) {
       var token = scannedCode.split(",").first.split("<").last;
       _loginWithQr(context, token);
     }
-
   }
 }

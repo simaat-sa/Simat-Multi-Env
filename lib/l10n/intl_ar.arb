@@ -54,7 +54,8 @@
   "Sign_In": "تسجيل الدخول",
   "copied_successfully": "تم النسخ بنجاح",
   "Please_authenticate_to_login": "يرجى التسجيل لدخول إلى حسابك",
-  "Invalid_login_data": "من فضلك تاكد من بيانات تسجيل الدخول"
+  "Invalid_login_data": "من فضلك تاكد من بيانات تسجيل الدخول",
+  "please_fill_all_fields": "من فضلك املأ جميع الحقول"
 }
 
 

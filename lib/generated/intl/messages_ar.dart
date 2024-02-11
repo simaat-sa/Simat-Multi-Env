@@ -102,6 +102,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل الجوال صحيحا"),
         "pick": MessageLookupByLibrary.simpleMessage("اختيار"),
+        "please_fill_all_fields":
+            MessageLookupByLibrary.simpleMessage("من فضلك املأ جميع الحقول"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "size_more_than_mg_error": m0,

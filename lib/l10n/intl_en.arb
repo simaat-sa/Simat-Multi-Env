@@ -54,5 +54,6 @@
   "Sign_In": "SIGN IN",
   "Welcome": "Welcome",
   "Please_authenticate_to_login": "Please authenticate to login to your account",
-  "Invalid_login_data": "Please verify your login information"
+  "Invalid_login_data": "Please verify your login information",
+    "please_fill_all_fields": "Please fill all fields"
 }

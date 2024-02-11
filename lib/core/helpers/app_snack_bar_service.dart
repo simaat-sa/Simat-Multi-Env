@@ -72,7 +72,7 @@ abstract class AppSnackBar {
     Fluttertoast.showToast(
         msg: msg,
         toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.CENTER,
+        gravity: ToastGravity.BOTTOM,
         backgroundColor: color ?? toastBgColors[type],
         textColor: textColor ?? Colors.white,
         fontSize: 16.0);

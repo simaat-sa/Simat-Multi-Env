@@ -16,7 +16,7 @@ class LoginFingerPrintWidget extends StatelessWidget {
         if (supportBiometric) {
           return Center(
             child: GestureDetector(
-              onTap: () => controller.loginWithCredentials(context),
+              onTap: () => controller.loginWithBiometric(context),
               child: SvgPicture.asset(
                 Res.fingerprintIcon,
                 width: 65,
