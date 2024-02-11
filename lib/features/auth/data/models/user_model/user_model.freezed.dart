@@ -46,7 +46,7 @@ mixin _$UserModel {
   String get active => throw _privateConstructorUsedError;
   @JsonKey(name: "uuid")
   String get uuid => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_access", defaultValue: [])
+  @JsonKey(name: "app_page_access", defaultValue: [])
   List<UserAccessModel> get userAccess => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -74,7 +74,7 @@ abstract class $UserModelCopyWith<$Res> {
       @JsonKey(name: "user_fullname_en") String userFullnameEn,
       @JsonKey(name: "active") String active,
       @JsonKey(name: "uuid") String uuid,
-      @JsonKey(name: "user_access", defaultValue: [])
+      @JsonKey(name: "app_page_access", defaultValue: [])
       List<UserAccessModel> userAccess});
 }
 
@@ -189,7 +189,7 @@ abstract class _$$UserModelImplCopyWith<$Res>
       @JsonKey(name: "user_fullname_en") String userFullnameEn,
       @JsonKey(name: "active") String active,
       @JsonKey(name: "uuid") String uuid,
-      @JsonKey(name: "user_access", defaultValue: [])
+      @JsonKey(name: "app_page_access", defaultValue: [])
       List<UserAccessModel> userAccess});
 }
 
@@ -298,7 +298,7 @@ class _$UserModelImpl extends _UserModel {
       @JsonKey(name: "user_fullname_en") required this.userFullnameEn,
       @JsonKey(name: "active") required this.active,
       @JsonKey(name: "uuid") required this.uuid,
-      @JsonKey(name: "user_access", defaultValue: [])
+      @JsonKey(name: "app_page_access", defaultValue: [])
       required final List<UserAccessModel> userAccess})
       : _userAccess = userAccess,
         super._();
@@ -347,7 +347,7 @@ class _$UserModelImpl extends _UserModel {
   final String uuid;
   final List<UserAccessModel> _userAccess;
   @override
-  @JsonKey(name: "user_access", defaultValue: [])
+  @JsonKey(name: "app_page_access", defaultValue: [])
   List<UserAccessModel> get userAccess {
     if (_userAccess is EqualUnmodifiableListView) return _userAccess;
     // ignore: implicit_dynamic_type
@@ -439,7 +439,7 @@ abstract class _UserModel extends UserModel {
       @JsonKey(name: "user_fullname_en") required final String userFullnameEn,
       @JsonKey(name: "active") required final String active,
       @JsonKey(name: "uuid") required final String uuid,
-      @JsonKey(name: "user_access", defaultValue: [])
+      @JsonKey(name: "app_page_access", defaultValue: [])
       required final List<UserAccessModel> userAccess}) = _$UserModelImpl;
   const _UserModel._() : super._();
 
@@ -486,7 +486,7 @@ abstract class _UserModel extends UserModel {
   @JsonKey(name: "uuid")
   String get uuid;
   @override
-  @JsonKey(name: "user_access", defaultValue: [])
+  @JsonKey(name: "app_page_access", defaultValue: [])
   List<UserAccessModel> get userAccess;
   @override
   @JsonKey(ignore: true)

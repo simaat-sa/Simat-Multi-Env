@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
-  static String m0(MB, files) =>
+  static String m0(count) => "الوحدات المستأجرة${count}";
+
+  static String m1(MB, files) =>
       "يجب أن تكون حجم الملفات التالية أقل من ${MB} ميحابيت, ${files}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -71,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تأكد من إتصالك بالانترنيت"),
         "failureActions": MessageLookupByLibrary.simpleMessage("إجراءات الفشل"),
         "fillField": MessageLookupByLibrary.simpleMessage("الرجاء ملء الحقل"),
+        "how_get_code": MessageLookupByLibrary.simpleMessage(
+            "كيف يمكنني الحصول علي الرمز؟"),
         "internet_connected":
             MessageLookupByLibrary.simpleMessage("تم الاتصال بالانترنت"),
         "label_Login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
@@ -91,6 +95,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "label_register":
             MessageLookupByLibrary.simpleMessage("تسجيل حساب جديد"),
         "loadingText": MessageLookupByLibrary.simpleMessage("تحميل…"),
+        "login_with_qr": MessageLookupByLibrary.simpleMessage(
+            "مسح رمز الاستجابة لتسجيل الدخول"),
         "mailValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل البريد صحيحا"),
         "nameValidation": MessageLookupByLibrary.simpleMessage(
@@ -102,9 +108,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل الجوال صحيحا"),
         "pick": MessageLookupByLibrary.simpleMessage("اختيار"),
+        "rented_units": m0,
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
-        "size_more_than_mg_error": m0,
+        "size_more_than_mg_error": m1,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "successfully_Logged_in":

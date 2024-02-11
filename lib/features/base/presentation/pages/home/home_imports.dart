@@ -9,6 +9,7 @@ import 'package:flutter_tdd/core/helpers/global_context.dart';
 import 'package:flutter_tdd/core/widgets/default_app_bar.dart';
 import 'package:flutter_tdd/features/auth/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:flutter_tdd/features/base/presentation/pages/home/widgets/home_widgets_imports.dart';
+import 'package:flutter_tdd/features/tennat/presentation/pages/tennat_screen/tennat_screen_imports.dart';
 
 
 part 'home.dart';

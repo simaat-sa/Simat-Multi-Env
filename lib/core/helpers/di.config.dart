@@ -18,7 +18,7 @@ import 'package:flutter_tdd/core/helpers/location_service.dart' as _i24;
 import 'package:flutter_tdd/core/helpers/psermission_services.dart' as _i27;
 import 'package:flutter_tdd/core/helpers/share_services.dart' as _i30;
 import 'package:flutter_tdd/core/helpers/shared_pref_service.dart' as _i31;
-import 'package:flutter_tdd/core/helpers/utilities.dart' as _i32;
+import 'package:flutter_tdd/core/helpers/utilities.dart' as _i36;
 import 'package:flutter_tdd/core/http/dio_helper/actions/delete.dart' as _i10;
 import 'package:flutter_tdd/core/http/dio_helper/actions/get.dart' as _i15;
 import 'package:flutter_tdd/core/http/dio_helper/actions/patch.dart' as _i26;
@@ -51,6 +51,14 @@ import 'package:flutter_tdd/features/base/data/repositories/impl_base_repository
     as _i9;
 import 'package:flutter_tdd/features/base/domain/repositories/base_repository.dart'
     as _i8;
+import 'package:flutter_tdd/features/tennat/data/data_source/tennat_data_source.dart'
+    as _i32;
+import 'package:flutter_tdd/features/tennat/data/data_source/tennat_data_source_impl.dart'
+    as _i33;
+import 'package:flutter_tdd/features/tennat/data/repositories/tennat_repository_impl.dart'
+    as _i35;
+import 'package:flutter_tdd/features/tennat/domain/repositories/tennat_repository.dart'
+    as _i34;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -94,7 +102,9 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i29.Put>(() => _i29.Put());
     gh.factory<_i30.ShareServices>(() => _i30.ShareServices());
     gh.lazySingleton<_i31.SharedPrefService>(() => _i31.SharedPrefService());
-    gh.lazySingleton<_i32.Utilities>(() => _i32.Utilities());
+    gh.factory<_i32.TennatDataSource>(() => _i33.TennatDataSourceImpl());
+    gh.factory<_i34.TennatRepository>(() => _i35.TennatRepositoryImpl());
+    gh.lazySingleton<_i36.Utilities>(() => _i36.Utilities());
     return this;
   }
 }

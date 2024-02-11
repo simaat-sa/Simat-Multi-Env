@@ -12,6 +12,11 @@ class HomeController {
     var listAccessUser = context.watch<UserCubit>().state.model!.userAccess;
     tabController = TabController(length: listAccessUser.take(5).length, vsync: ticker, initialIndex: index);
     tabController.animateTo(index);
-    navigationBarObs.getValue();
+    navigationBarObs.setValue(index);
+  }
+
+  void changeSelectPage(int index){
+    tabController.animateTo(index);
+    navigationBarObs.setValue(index);
   }
 }

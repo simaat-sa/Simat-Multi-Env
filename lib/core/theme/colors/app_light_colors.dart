@@ -42,9 +42,11 @@ class AppLightColors extends AppColors {
   Color get greyWhite => Colors.grey.withOpacity(.2);
 
   @override
-  Color get disableGray=> const Color(0xFFCBCBCB);
+  Color get disableGray => const Color(0xFFCBCBCB);
 
   @override
-  Color get green=>  Colors.green;
+  Color get green => Colors.green;
 
+  @override
+  Color get brown => const Color(0xff786760);
 }

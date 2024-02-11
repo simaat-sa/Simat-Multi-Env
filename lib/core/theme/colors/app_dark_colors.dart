@@ -45,4 +45,7 @@ class AppDarkColors extends AppColors {
 
   @override
   Color get green=>  Colors.green;
+
+  @override
+  Color get brown => const Color(0xff786760);
 }

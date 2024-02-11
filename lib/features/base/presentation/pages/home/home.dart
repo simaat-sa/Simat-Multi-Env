@@ -26,12 +26,11 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       length: listAccessUser.length,
       initialIndex: widget.index,
       child: Scaffold(
-        appBar: const DefaultAppBar(title: "Home"),
         body: TabBarView(
           physics: const NeverScrollableScrollPhysics(),
           controller: controller.tabController,
           children: List.generate(listAccessUser.length, (index) {
-            return Container();
+            return const TennatScreen();
           }),
         ),
         bottomNavigationBar: BottomNavBarWidget(controller: controller),

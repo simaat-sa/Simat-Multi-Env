@@ -29,6 +29,7 @@ class LoginController {
   void _handleLoginResponse(BuildContext context, MyResult<UserModel> response) {
     response.when(isSuccess: (userModel) {
       context.read<UserCubit>().onUpdateUserData(userModel!);
+      GlobalState.instance.set("token", response.data?.userToken);
       UserHelperService.instance.saveUserData(userModel);
       AppSnackBar.showSimpleToast(
           color: context.colors.black, msg: Translate.of(context).successfully_Logged_in, type: ToastType.success);
@@ -48,6 +49,7 @@ class LoginController {
   }
 
   Future<void> _loginWithQr(BuildContext context, String token) async {
+    log("<<<<<<<<<<$token>>>>>>>");
     var loginResponse = await getIt<AuthRepository>().loginWithQr(token);
     _handleLoginResponse(context, loginResponse);
   }

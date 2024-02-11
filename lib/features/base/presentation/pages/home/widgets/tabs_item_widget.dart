@@ -12,10 +12,12 @@ class TabsItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.network(
-      color: isActive ? context.colors.black : context.colors.primary,
-      model.iconSvg,
-      height: 22,
+    return Container(
+      padding: const EdgeInsets.all(15),
+      child: SvgPicture.network(
+        color: isActive ? context.colors.primary : context.colors.black,
+        model.iconSvg,
+      ),
     );
   }
 }
