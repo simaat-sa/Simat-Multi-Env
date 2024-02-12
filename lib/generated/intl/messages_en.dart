@@ -36,11 +36,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "Sign_In": MessageLookupByLibrary.simpleMessage("SIGN IN"),
         "Welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
         "access_denied": MessageLookupByLibrary.simpleMessage("Access denied"),
+        "active": MessageLookupByLibrary.simpleMessage("Active"),
         "add_new_item": MessageLookupByLibrary.simpleMessage("Add new item"),
         "app_cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "app_confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "application_approval":
+            MessageLookupByLibrary.simpleMessage("Application Approval"),
+        "attribution": MessageLookupByLibrary.simpleMessage("Attribution"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "canceled": MessageLookupByLibrary.simpleMessage("Canceled"),
+        "closed": MessageLookupByLibrary.simpleMessage("Closed"),
+        "commercial": MessageLookupByLibrary.simpleMessage("Commercial"),
+        "completed": MessageLookupByLibrary.simpleMessage("Completed"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "Please enter the password identical"),
         "copied_successfully":
@@ -71,12 +79,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("INTERNAL SERVER ERROR"),
         "error_socket":
             MessageLookupByLibrary.simpleMessage("No internet connection"),
+        "expired": MessageLookupByLibrary.simpleMessage("Expired"),
         "failureActions":
             MessageLookupByLibrary.simpleMessage("Failure Actions"),
         "fillField":
             MessageLookupByLibrary.simpleMessage("Please enter this field"),
         "how_get_code":
             MessageLookupByLibrary.simpleMessage("How can I get the code?"),
+        "implemented": MessageLookupByLibrary.simpleMessage("Implemented"),
+        "inactive": MessageLookupByLibrary.simpleMessage("Inactive"),
         "internet_connected":
             MessageLookupByLibrary.simpleMessage("Internet connected"),
         "label_Login": MessageLookupByLibrary.simpleMessage("Login"),
@@ -104,14 +115,22 @@ class MessageLookup extends MessageLookupByLibrary {
             "Should be more than 8 and less than 30"),
         "no_internet_connection":
             MessageLookupByLibrary.simpleMessage("No internet connection"),
+        "owner": MessageLookupByLibrary.simpleMessage("Owner"),
         "passValidation": MessageLookupByLibrary.simpleMessage(
             "Should have Upper and Lower case, numbers and special characters"),
+        "paused": MessageLookupByLibrary.simpleMessage("Paused"),
         "phoneValidation": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid mobile phone"),
         "pick": MessageLookupByLibrary.simpleMessage("Pick"),
         "please_fill_all_fields":
             MessageLookupByLibrary.simpleMessage("Please fill all fields"),
+        "posted": MessageLookupByLibrary.simpleMessage("Posted"),
+        "rejected_by_the_owner":
+            MessageLookupByLibrary.simpleMessage("rejected By The Owner"),
+        "rejected_by_the_supervisor":
+            MessageLookupByLibrary.simpleMessage("rejected By The Supervisor"),
         "rented_units": m0,
+        "residential": MessageLookupByLibrary.simpleMessage("Residential"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "size_more_than_mg_error": m1,
@@ -119,6 +138,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "successfully_Logged_in":
             MessageLookupByLibrary.simpleMessage("Successfully Logged in"),
+        "supervisor_approved":
+            MessageLookupByLibrary.simpleMessage("supervisor Approved"),
+        "supervisor_identifications":
+            MessageLookupByLibrary.simpleMessage("supervisor Identifications"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN")
       };
 }

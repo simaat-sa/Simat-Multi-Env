@@ -1,4 +1,5 @@
 import 'package:flutter_tdd/core/constants/enum_extension/enum_factory_extension.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 @JsonEnum(valueField: 'value')
@@ -21,9 +22,9 @@ enum ContractTypes {
   String getLocalizedName(){
     switch (this) {
       case ContractTypes.residential:
-        return "Residential";
+        return Translate.s.residential;
       case ContractTypes.commercial:
-        return "Commercial";
+        return Translate.s.commercial;
       default:
         return "";
     }

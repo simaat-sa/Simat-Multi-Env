@@ -36,11 +36,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "Sign_In": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "Welcome": MessageLookupByLibrary.simpleMessage("مرحبا بك"),
         "access_denied": MessageLookupByLibrary.simpleMessage("تم رفض الوصول"),
+        "active": MessageLookupByLibrary.simpleMessage("فعال"),
         "add_new_item": MessageLookupByLibrary.simpleMessage("إضافة عنصر جديد"),
         "app_cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "app_confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "application_approval":
+            MessageLookupByLibrary.simpleMessage("الموافقة على الطلب"),
+        "attribution": MessageLookupByLibrary.simpleMessage("الإسناد"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
+        "canceled": MessageLookupByLibrary.simpleMessage("ألغيت"),
+        "closed": MessageLookupByLibrary.simpleMessage("مغلق"),
+        "commercial": MessageLookupByLibrary.simpleMessage("تجاري"),
+        "completed": MessageLookupByLibrary.simpleMessage("مكتمل"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل كلمة المرورمتطابق"),
         "copied_successfully":
@@ -71,10 +79,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("حصل خطأ في السيرفر"),
         "error_socket":
             MessageLookupByLibrary.simpleMessage("تأكد من إتصالك بالانترنيت"),
+        "expired": MessageLookupByLibrary.simpleMessage("منتهي"),
         "failureActions": MessageLookupByLibrary.simpleMessage("إجراءات الفشل"),
         "fillField": MessageLookupByLibrary.simpleMessage("الرجاء ملء الحقل"),
         "how_get_code": MessageLookupByLibrary.simpleMessage(
             "كيف يمكنني الحصول علي الرمز؟"),
+        "implemented": MessageLookupByLibrary.simpleMessage("مُنفّذ"),
+        "inactive": MessageLookupByLibrary.simpleMessage("غير نشط"),
         "internet_connected":
             MessageLookupByLibrary.simpleMessage("تم الاتصال بالانترنت"),
         "label_Login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
@@ -103,14 +114,22 @@ class MessageLookup extends MessageLookupByLibrary {
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
         "no_internet_connection":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالانترنت"),
+        "owner": MessageLookupByLibrary.simpleMessage("مالك"),
         "passValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل على الاقل 6 حروف او ارقام"),
+        "paused": MessageLookupByLibrary.simpleMessage("متوقف مؤقتا"),
         "phoneValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل الجوال صحيحا"),
         "pick": MessageLookupByLibrary.simpleMessage("اختيار"),
         "please_fill_all_fields":
             MessageLookupByLibrary.simpleMessage("من فضلك املأ جميع الحقول"),
+        "posted": MessageLookupByLibrary.simpleMessage("نشر"),
+        "rejected_by_the_owner":
+            MessageLookupByLibrary.simpleMessage("مرفوض من قبل المالك"),
+        "rejected_by_the_supervisor":
+            MessageLookupByLibrary.simpleMessage("مرفوض من المشرف"),
         "rented_units": m0,
+        "residential": MessageLookupByLibrary.simpleMessage("سكني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "size_more_than_mg_error": m1,
@@ -118,6 +137,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "successfully_Logged_in":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
+        "supervisor_approved":
+            MessageLookupByLibrary.simpleMessage("تمت الموافقة من قبل المشرف"),
+        "supervisor_identifications":
+            MessageLookupByLibrary.simpleMessage("هويات المشرف"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا")
       };
 }

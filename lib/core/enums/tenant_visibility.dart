@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter_tdd/core/constants/enum_extension/enum_factory_extension.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/theme/colors/app_colors.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -26,13 +27,13 @@ enum TenantVisibility {
   String getLocalizedName(){
     switch (this) {
       case TenantVisibility.active:
-        return "Active";
+        return Translate.s.active;
       case TenantVisibility.inactive:
-        return "Inactive";
+        return Translate.s.inactive;
       case TenantVisibility.closed:
-        return "Closed";
+        return Translate.s.closed;
       case TenantVisibility.expired:
-        return "Expired";
+        return Translate.s.expired;
       default:
         return "";
     }

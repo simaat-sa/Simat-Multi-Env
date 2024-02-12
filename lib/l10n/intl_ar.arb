@@ -58,7 +58,25 @@
   "Invalid_login_data": "من فضلك تاكد من بيانات تسجيل الدخول",
   "login_with_qr": "مسح رمز الاستجابة لتسجيل الدخول",
   "how_get_code": "كيف يمكنني الحصول علي الرمز؟",
-  "rented_units": "العقود {count}"
+  "rented_units": "العقود {count}",
+  "active": "فعال",
+  "inactive": "غير نشط",
+  "closed": "مغلق",
+  "expired": "منتهي",
+  "residential": "سكني",
+  "commercial": "تجاري",
+  "application_approval": "الموافقة على الطلب",
+  "attribution": "الإسناد",
+  "canceled": "ألغيت",
+  "completed": "مكتمل",
+  "implemented": "مُنفّذ",
+  "owner": "مالك",
+  "paused": "متوقف مؤقتا",
+  "posted": "نشر",
+  "rejected_by_the_owner": "مرفوض من قبل المالك",
+  "rejected_by_the_supervisor": "مرفوض من المشرف",
+  "supervisor_approved": "تمت الموافقة من قبل المشرف",
+  "supervisor_identifications": "هويات المشرف"
 }
 
 

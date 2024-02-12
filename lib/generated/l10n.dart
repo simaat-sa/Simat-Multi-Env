@@ -639,6 +639,186 @@ class S {
       args: [count],
     );
   }
+
+  /// `Active`
+  String get active {
+    return Intl.message(
+      'Active',
+      name: 'active',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inactive`
+  String get inactive {
+    return Intl.message(
+      'Inactive',
+      name: 'inactive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expired`
+  String get expired {
+    return Intl.message(
+      'Expired',
+      name: 'expired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Closed`
+  String get closed {
+    return Intl.message(
+      'Closed',
+      name: 'closed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commercial`
+  String get commercial {
+    return Intl.message(
+      'Commercial',
+      name: 'commercial',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Residential`
+  String get residential {
+    return Intl.message(
+      'Residential',
+      name: 'residential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Application Approval`
+  String get application_approval {
+    return Intl.message(
+      'Application Approval',
+      name: 'application_approval',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attribution`
+  String get attribution {
+    return Intl.message(
+      'Attribution',
+      name: 'attribution',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Canceled`
+  String get canceled {
+    return Intl.message(
+      'Canceled',
+      name: 'canceled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Completed`
+  String get completed {
+    return Intl.message(
+      'Completed',
+      name: 'completed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Implemented`
+  String get implemented {
+    return Intl.message(
+      'Implemented',
+      name: 'implemented',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Owner`
+  String get owner {
+    return Intl.message(
+      'Owner',
+      name: 'owner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Paused`
+  String get paused {
+    return Intl.message(
+      'Paused',
+      name: 'paused',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Posted`
+  String get posted {
+    return Intl.message(
+      'Posted',
+      name: 'posted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `rejected By The Owner`
+  String get rejected_by_the_owner {
+    return Intl.message(
+      'rejected By The Owner',
+      name: 'rejected_by_the_owner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `rejected By The Supervisor`
+  String get rejected_by_the_supervisor {
+    return Intl.message(
+      'rejected By The Supervisor',
+      name: 'rejected_by_the_supervisor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `supervisor Approved`
+  String get supervisor_approved {
+    return Intl.message(
+      'supervisor Approved',
+      name: 'supervisor_approved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `supervisor Identifications`
+  String get supervisor_identifications {
+    return Intl.message(
+      'supervisor Identifications',
+      name: 'supervisor_identifications',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
