@@ -58,5 +58,5 @@
   "Invalid_login_data": "Please verify your login information",
   "login_with_qr": "Scan the QR code to log in",
   "how_get_code": "How can I get the code?",
-  "rented_units": "Rented units{count}"
+  "rented_units": "Contracts  {count}"
 }

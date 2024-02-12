@@ -20,7 +20,7 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(count) => "Rented units${count}";
+  static String m0(count) => "Contracts  ${count}";
 
   static String m1(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";

@@ -21,4 +21,7 @@ class Res {
   static const String emailIcon = "assets/images/email_icon.svg";
   static const String passwordIcon = "assets/images/password_icon.svg";
   static const String otpIcon = "assets/images/otp_icon.svg";
+  static const String filterLogo = "assets/images/filter_logo.svg";
+  static const String noticesLogo = "assets/images/notif_logo.svg";
+  static const String unitLogo = "assets/images/unit_logo.svg";
 }

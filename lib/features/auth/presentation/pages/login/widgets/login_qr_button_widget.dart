@@ -10,7 +10,7 @@ class LoginWithQrButtonWidget extends StatelessWidget {
     return InkWell(
       onTap: () => controller.qrScan(context),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 26),
+        padding: const EdgeInsetsDirectional.only(start: 20),
         height: 45,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),

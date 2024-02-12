@@ -35,7 +35,7 @@ class AppDarkColors extends AppColors {
   Color get backgroundWhite => Colors.black;
 
   @override
-  Color get blackOpacity => Colors.white70;
+  Color get blackOpacity => const Color(0xff868788);
 
   @override
   Color get greyWhite => Colors.grey.withOpacity(.2);
@@ -47,5 +47,11 @@ class AppDarkColors extends AppColors {
   Color get green=>  Colors.green;
 
   @override
-  Color get brown => const Color(0xff786760);
+  Color get brown => const Color(0xff635048);
+
+  @override
+  Color get primaryText => const Color(0xff2c979b);
+
+  @override
+  Color get darkTextColor => const Color(0xff3F3F3F);
 }

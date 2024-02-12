@@ -57,4 +57,6 @@ abstract class AppColors {
 
   Color get inputBorder;
   Color get brown;
+  Color get primaryText;
+  Color get darkTextColor;
 }

@@ -23,13 +23,12 @@ class BottomNavBarWidget extends StatelessWidget {
               isActive: isActive,
             );
           },
+          height: 70,
           activeIndex: value,
           backgroundColor: Colors.white,
           splashColor: context.colors.primary,
           gapLocation: GapLocation.none,
           splashSpeedInMilliseconds: 200,
-          leftCornerRadius: 18,
-          rightCornerRadius: 18,
         );
       },
     );

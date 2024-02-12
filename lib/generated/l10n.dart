@@ -630,10 +630,10 @@ class S {
     );
   }
 
-  /// `Rented units{count}`
+  /// `Contracts  {count}`
   String rented_units(Object count) {
     return Intl.message(
-      'Rented units$count',
+      'Contracts  $count',
       name: 'rented_units',
       desc: '',
       args: [count],

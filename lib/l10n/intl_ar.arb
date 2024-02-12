@@ -58,7 +58,7 @@
   "Invalid_login_data": "من فضلك تاكد من بيانات تسجيل الدخول",
   "login_with_qr": "مسح رمز الاستجابة لتسجيل الدخول",
   "how_get_code": "كيف يمكنني الحصول علي الرمز؟",
-  "rented_units": "الوحدات المستأجرة{count}"
+  "rented_units": "العقود {count}"
 }
 
 

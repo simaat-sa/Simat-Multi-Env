@@ -31,10 +31,11 @@ class TenantItemWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        height: 35,
+                        alignment: Alignment.center,
+                        height: 26,
                         padding: const EdgeInsets.symmetric(horizontal: 5),
                         decoration: BoxDecoration(
-                            color: context.colors.blackOpacity.withOpacity(0.2), borderRadius: BorderRadius.circular(5)),
+                            color: context.colors.black.withOpacity(0.15), borderRadius: BorderRadius.circular(5)),
                         child: Row(
                           children: [
                             Icon(
@@ -51,13 +52,13 @@ class TenantItemWidget extends StatelessWidget {
                       ),
                       Container(
                         alignment: Alignment.center,
-                        height: 35,
+                        height: 26,
                         padding: const EdgeInsets.symmetric(horizontal: 5),
                         decoration: BoxDecoration(
-                            color: context.colors.blackOpacity.withOpacity(0.2), borderRadius: BorderRadius.circular(5)),
+                            color: context.colors.black.withOpacity(0.15), borderRadius: BorderRadius.circular(5)),
                         child: Text(
-                         "#${model.myoCode}",
-                          style: AppTextStyle.s14_w400(color: context.colors.white),
+                          "#${model.myoCode}",
+                          style: AppTextStyle.s14_w400(color: context.colors.white).copyWith(height: 2.2),
                         ),
                       ),
                     ],
@@ -75,15 +76,15 @@ class TenantItemWidget extends StatelessWidget {
                   children: [
                     Text(
                       'مستحق ',
-                      style: AppTextStyle.s16_w400(color: context.colors.primary),
+                      style: AppTextStyle.s14_w400(color: context.colors.primary),
                     ),
                     Text(
                       model.amtTot,
-                      style: AppTextStyle.s16_w700(color: context.colors.primary),
+                      style: AppTextStyle.s20_w600(color: context.colors.primary),
                     ),
                     Text(
                       ' ر.س',
-                      style: AppTextStyle.s16_w400(color: context.colors.primary),
+                      style: AppTextStyle.s14_w400(color: context.colors.primary),
                     ),
                   ],
                 ),
@@ -95,7 +96,7 @@ class TenantItemWidget extends StatelessWidget {
                   ),
                   child: Text(
                     model.deedName,
-                    style: AppTextStyle.s16_w400(color: context.colors.white),
+                    style: AppTextStyle.s12_w400(color: context.colors.white),
                   ),
                 ),
               ],
@@ -108,27 +109,18 @@ class TenantItemWidget extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(
-                      Icons.domain,
-                      color: context.colors.primary,
+                    SvgPicture.asset(
+                      Res.unitLogo
                     ),
                     Text(
-                      ' مكتب | ',
-                      style: AppTextStyle.s16_w400(color: context.colors.brown),
-                    ),
-                    Text(
-                      '. ',
-                      style: AppTextStyle.s14_w400(color: context.colors.primary),
-                    ),
-                    Text(
-                      'تجاري',
+                      ' مكتب | . تجاري',
                       style: AppTextStyle.s16_w400(color: context.colors.brown),
                     ),
                   ],
                 ),
                 Text(
                   ' ينتهي${model.deedIssue}',
-                  style: AppTextStyle.s14_w400(color: context.colors.primary),
+                  style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                 ),
               ],
             ),
@@ -137,4 +129,5 @@ class TenantItemWidget extends StatelessWidget {
       ),
     );
   }
+
 }

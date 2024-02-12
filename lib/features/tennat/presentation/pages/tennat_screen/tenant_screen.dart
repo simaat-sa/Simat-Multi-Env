@@ -27,7 +27,7 @@ class _TenantScreenState extends State<TenantScreen> {
             child: ListView(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               children: [
-                const HeaderTextWidget(),
+                HeaderTextWidget(listTenant: data,),
                 Gaps.vGap10,
                 ...List.generate(data.length, (index) {
                   return TenantItemWidget(model: data[index],);
