@@ -1,9 +1,9 @@
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/requester/requester.dart';
-import 'package:flutter_tdd/features/tennat/domain/models/tennat.dart';
+import 'package:flutter_tdd/features/tennat/data/models/tennat_model/tennat_model.dart';
 import 'package:flutter_tdd/features/tennat/domain/repositories/tennat_repository.dart';
 
-class TenantRequester extends Requester<List<Tenant>> {
+class TenantRequester extends Requester<List<TenantModel>> {
 
   void setLoadingState() {
     loadingState();

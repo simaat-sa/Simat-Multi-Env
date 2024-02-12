@@ -9,37 +9,55 @@ part of 'tennat_model.dart';
 _$TenantModelImpl _$$TenantModelImplFromJson(Map<String, dynamic> json) =>
     _$TenantModelImpl(
       propId: json['prop_id'] as String,
-      areId: json['are_id'] as String,
-      areCode: json['are_code'] as String,
-      areAreId: json['are_are_id'] as String,
-      parentCode: json['parent_code'] as String,
-      propImg: json['prop_img'] as String,
+      code: json['tts_code'] as String,
+      unitName: json['are_desc_fo'] as String,
+      dateType: $enumDecode(_$DateTypesEnumMap, json['cal_type']),
+      dataTimeHj: json['tts_end_date_hj'] as String,
+      dataTimeStamp: json['tts_end_date_dgr'] as String,
+      price: json['amt_due'] as String? ?? '0',
+      status: $enumDecode(_$TenantVisibilityEnumMap, json['tts_validity']),
+      type: $enumDecode(_$ContractTypesEnumMap, json['contract_type']),
       propLat: json['prop_lat'] as String,
       propLng: json['prop_lng'] as String,
-      deedIssue: json['deed_issue'] as String,
-      deedName: json['deed_name'] as String,
-      myoCode: json['myo_code'] as String,
+      propImg: json['prop_img'] as String,
       propCity: json['prop_city'] as String,
       propRegion: json['prop_region'] as String,
-      areDescFull: json['are_desc_full'] as String,
-      amtTot: json['amt_tot'] as String,
     );
 
 Map<String, dynamic> _$$TenantModelImplToJson(_$TenantModelImpl instance) =>
     <String, dynamic>{
       'prop_id': instance.propId,
-      'are_id': instance.areId,
-      'are_code': instance.areCode,
-      'are_are_id': instance.areAreId,
-      'parent_code': instance.parentCode,
-      'prop_img': instance.propImg,
+      'tts_code': instance.code,
+      'are_desc_fo': instance.unitName,
+      'cal_type': _$DateTypesEnumMap[instance.dateType]!,
+      'tts_end_date_hj': instance.dataTimeHj,
+      'tts_end_date_dgr': instance.dataTimeStamp,
+      'amt_due': instance.price,
+      'tts_validity': _$TenantVisibilityEnumMap[instance.status]!,
+      'contract_type': _$ContractTypesEnumMap[instance.type]!,
       'prop_lat': instance.propLat,
       'prop_lng': instance.propLng,
-      'deed_issue': instance.deedIssue,
-      'deed_name': instance.deedName,
-      'myo_code': instance.myoCode,
+      'prop_img': instance.propImg,
       'prop_city': instance.propCity,
       'prop_region': instance.propRegion,
-      'are_desc_full': instance.areDescFull,
-      'amt_tot': instance.amtTot,
     };
+
+const _$DateTypesEnumMap = {
+  DateTypes.normal: 'cal_gr',
+  DateTypes.hj: 'cal_hj',
+  DateTypes.non: '',
+};
+
+const _$TenantVisibilityEnumMap = {
+  TenantVisibility.active: 'active',
+  TenantVisibility.inactive: 'inactive',
+  TenantVisibility.closed: 'closed',
+  TenantVisibility.expired: 'expired',
+  TenantVisibility.non: '',
+};
+
+const _$ContractTypesEnumMap = {
+  ContractTypes.residential: 'residential',
+  ContractTypes.commercial: 'commercial',
+  ContractTypes.non: '',
+};

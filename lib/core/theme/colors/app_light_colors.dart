@@ -24,13 +24,10 @@ class AppLightColors extends AppColors {
   Color get white => Colors.white;
 
   @override
-  Color get background => const  Color(0xffF5F6F8);
+  Color get background => const  Color(0xffF2F6F8);
 
  @override
   Color get backgroundWhite => const  Color(0xffFFFFFC);
-
-  @override
-  Color get appBarColor => const Color(0xFFF9656B);
 
   @override
   Color get black => Colors.black;
@@ -48,6 +45,9 @@ class AppLightColors extends AppColors {
   Color get green => Colors.green;
 
   @override
+  Color get green2 => const Color(0xff239397);
+
+  @override
   Color get brown => const Color(0xff635048);
 
   @override
@@ -55,4 +55,7 @@ class AppLightColors extends AppColors {
 
   @override
   Color get darkTextColor => const Color(0xff3F3F3F);
+  @override
+  Color get red => const Color(0xffFF6969);
+
 }

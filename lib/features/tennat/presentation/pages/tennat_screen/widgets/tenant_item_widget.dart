@@ -1,7 +1,7 @@
 part of 'tenant_screen_widgets_imports.dart';
 
 class TenantItemWidget extends StatelessWidget {
-  final Tenant model;
+  final TenantModel model;
   const TenantItemWidget({super.key, required this.model});
 
   @override
@@ -17,7 +17,7 @@ class TenantItemWidget extends StatelessWidget {
           CachedImage(
             alignment: Alignment.topCenter,
             url: model.unitImage,
-            height: 200,
+            height: 150,
             borderRadius: const BorderRadius.only(
               topRight: Radius.circular(10),
               topLeft: Radius.circular(10),
@@ -56,7 +56,7 @@ class TenantItemWidget extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: context.colors.black.withOpacity(0.15), borderRadius: BorderRadius.circular(5)),
                         child: Text(
-                          "#${model.myoCode}",
+                          "#${model.code}",
                           style: AppTextStyle.s14_w400(color: context.colors.white).copyWith(height: 2.2),
                         ),
                       ),
@@ -78,7 +78,7 @@ class TenantItemWidget extends StatelessWidget {
                       style: AppTextStyle.s14_w400(color: context.colors.primary),
                     ),
                     Text(
-                      model.amtTot,
+                      model.price,
                       style: AppTextStyle.s20_w600(color: context.colors.primary),
                     ),
                     Text(
@@ -90,12 +90,12 @@ class TenantItemWidget extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
                   decoration: BoxDecoration(
-                    color: context.colors.primary,
+                    color: model.status.getColor(),
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Text(
-                    model.deedName,
-                    style: AppTextStyle.s12_w400(color: context.colors.white),
+                    model.status.getLocalizedName(),
+                    style: AppTextStyle.s12_w500(color: context.colors.white),
                   ),
                 ),
               ],
@@ -111,14 +111,30 @@ class TenantItemWidget extends StatelessWidget {
                     SvgPicture.asset(
                       Res.unitLogo
                     ),
-                    Text(
-                      ' مكتب | . تجاري',
-                      style: AppTextStyle.s16_w400(color: context.colors.brown),
+                    Gaps.hGap5,
+                    Row(
+                      children: [
+                        Text(
+                          model.unitName,
+                          style: AppTextStyle.s16_w400(color: context.colors.brown),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 4),
+                          child: Text(
+                            '.',
+                            style: AppTextStyle.s16_w500(color: context.colors.primary),
+                          ),
+                        ),
+                        Text(
+                          model.type.getLocalizedName(),
+                          style: AppTextStyle.s16_w400(color: context.colors.brown),
+                        ),
+                      ],
                     ),
                   ],
                 ),
                 Text(
-                  ' ينتهي${model.deedIssue}',
+                  ' ينتهي${model.date}',
                   style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                 ),
               ],

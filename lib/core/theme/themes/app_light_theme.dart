@@ -23,7 +23,7 @@ class AppLightTheme extends AppTheme {
       checkColor: MaterialStateProperty.all(_colorsLight.primary),
     ),
     appBarTheme: AppBarTheme(
-      color: _colorsLight.appBarColor,
+      color: _colorsLight.background,
       elevation: 0,
       centerTitle: true,
       // titleTextStyle: textTheme.headline2!.copyWith(color: _colorsLight.black),

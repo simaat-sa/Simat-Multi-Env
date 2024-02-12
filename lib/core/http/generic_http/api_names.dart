@@ -15,7 +15,9 @@ class ApiNames{
   static const String switchNotify = "SwitchNotify";
   static const String forgetPassword = "cabaf46ee69d7b8445a5d791";
   static const String resetPassword = "A2q4mG84Z9rE2B38In4HALSWTwt9eQ5Slzq56Cod";
-  static  String getTenant = "${version1Part}tenant/units";
+
+  /// tenant routes
+  static  String getTenant = "${version1Part}tenant/list";
 
 
 

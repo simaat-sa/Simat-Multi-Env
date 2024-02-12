@@ -25,7 +25,7 @@ class AppDarkTheme extends AppTheme {
       checkColor: MaterialStateProperty.all(_colorsDark.primary),
     ),
     appBarTheme: AppBarTheme(
-      color: _colorsDark.appBarColor,
+      color: _colorsDark.background,
       elevation: 0,
       centerTitle: true,
       // titleTextStyle: textTheme.headline2!.copyWith(color: _colorsDark.black),

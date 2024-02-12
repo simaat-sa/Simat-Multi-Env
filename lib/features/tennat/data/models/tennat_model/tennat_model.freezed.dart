@@ -22,34 +22,32 @@ TenantModel _$TenantModelFromJson(Map<String, dynamic> json) {
 mixin _$TenantModel {
   @JsonKey(name: 'prop_id')
   String get propId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'are_id')
-  String get areId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'are_code')
-  String get areCode => throw _privateConstructorUsedError;
-  @JsonKey(name: 'are_are_id')
-  String get areAreId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'parent_code')
-  String get parentCode => throw _privateConstructorUsedError;
-  @JsonKey(name: 'prop_img')
-  String get propImg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tts_code')
+  String get code => throw _privateConstructorUsedError;
+  @JsonKey(name: 'are_desc_fo')
+  String get unitName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cal_type')
+  DateTypes get dateType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tts_end_date_hj')
+  String get dataTimeHj => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tts_end_date_dgr')
+  String get dataTimeStamp => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amt_due', defaultValue: "0")
+  String get price => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tts_validity')
+  TenantVisibility get status => throw _privateConstructorUsedError;
+  @JsonKey(name: 'contract_type')
+  ContractTypes get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_lat')
   String get propLat => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_lng')
   String get propLng => throw _privateConstructorUsedError;
-  @JsonKey(name: 'deed_issue')
-  String get deedIssue => throw _privateConstructorUsedError;
-  @JsonKey(name: 'deed_name')
-  String get deedName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'myo_code')
-  String get myoCode => throw _privateConstructorUsedError;
+  @JsonKey(name: 'prop_img')
+  String get propImg => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_city')
   String get propCity => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_region')
   String get propRegion => throw _privateConstructorUsedError;
-  @JsonKey(name: 'are_desc_full')
-  String get areDescFull => throw _privateConstructorUsedError;
-  @JsonKey(name: 'amt_tot')
-  String get amtTot => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -65,20 +63,19 @@ abstract class $TenantModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'prop_id') String propId,
-      @JsonKey(name: 'are_id') String areId,
-      @JsonKey(name: 'are_code') String areCode,
-      @JsonKey(name: 'are_are_id') String areAreId,
-      @JsonKey(name: 'parent_code') String parentCode,
-      @JsonKey(name: 'prop_img') String propImg,
+      @JsonKey(name: 'tts_code') String code,
+      @JsonKey(name: 'are_desc_fo') String unitName,
+      @JsonKey(name: 'cal_type') DateTypes dateType,
+      @JsonKey(name: 'tts_end_date_hj') String dataTimeHj,
+      @JsonKey(name: 'tts_end_date_dgr') String dataTimeStamp,
+      @JsonKey(name: 'amt_due', defaultValue: "0") String price,
+      @JsonKey(name: 'tts_validity') TenantVisibility status,
+      @JsonKey(name: 'contract_type') ContractTypes type,
       @JsonKey(name: 'prop_lat') String propLat,
       @JsonKey(name: 'prop_lng') String propLng,
-      @JsonKey(name: 'deed_issue') String deedIssue,
-      @JsonKey(name: 'deed_name') String deedName,
-      @JsonKey(name: 'myo_code') String myoCode,
+      @JsonKey(name: 'prop_img') String propImg,
       @JsonKey(name: 'prop_city') String propCity,
-      @JsonKey(name: 'prop_region') String propRegion,
-      @JsonKey(name: 'are_desc_full') String areDescFull,
-      @JsonKey(name: 'amt_tot') String amtTot});
+      @JsonKey(name: 'prop_region') String propRegion});
 }
 
 /// @nodoc
@@ -95,46 +92,57 @@ class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
   @override
   $Res call({
     Object? propId = null,
-    Object? areId = null,
-    Object? areCode = null,
-    Object? areAreId = null,
-    Object? parentCode = null,
-    Object? propImg = null,
+    Object? code = null,
+    Object? unitName = null,
+    Object? dateType = null,
+    Object? dataTimeHj = null,
+    Object? dataTimeStamp = null,
+    Object? price = null,
+    Object? status = null,
+    Object? type = null,
     Object? propLat = null,
     Object? propLng = null,
-    Object? deedIssue = null,
-    Object? deedName = null,
-    Object? myoCode = null,
+    Object? propImg = null,
     Object? propCity = null,
     Object? propRegion = null,
-    Object? areDescFull = null,
-    Object? amtTot = null,
   }) {
     return _then(_value.copyWith(
       propId: null == propId
           ? _value.propId
           : propId // ignore: cast_nullable_to_non_nullable
               as String,
-      areId: null == areId
-          ? _value.areId
-          : areId // ignore: cast_nullable_to_non_nullable
+      code: null == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
               as String,
-      areCode: null == areCode
-          ? _value.areCode
-          : areCode // ignore: cast_nullable_to_non_nullable
+      unitName: null == unitName
+          ? _value.unitName
+          : unitName // ignore: cast_nullable_to_non_nullable
               as String,
-      areAreId: null == areAreId
-          ? _value.areAreId
-          : areAreId // ignore: cast_nullable_to_non_nullable
+      dateType: null == dateType
+          ? _value.dateType
+          : dateType // ignore: cast_nullable_to_non_nullable
+              as DateTypes,
+      dataTimeHj: null == dataTimeHj
+          ? _value.dataTimeHj
+          : dataTimeHj // ignore: cast_nullable_to_non_nullable
               as String,
-      parentCode: null == parentCode
-          ? _value.parentCode
-          : parentCode // ignore: cast_nullable_to_non_nullable
+      dataTimeStamp: null == dataTimeStamp
+          ? _value.dataTimeStamp
+          : dataTimeStamp // ignore: cast_nullable_to_non_nullable
               as String,
-      propImg: null == propImg
-          ? _value.propImg
-          : propImg // ignore: cast_nullable_to_non_nullable
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
               as String,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as TenantVisibility,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ContractTypes,
       propLat: null == propLat
           ? _value.propLat
           : propLat // ignore: cast_nullable_to_non_nullable
@@ -143,17 +151,9 @@ class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
           ? _value.propLng
           : propLng // ignore: cast_nullable_to_non_nullable
               as String,
-      deedIssue: null == deedIssue
-          ? _value.deedIssue
-          : deedIssue // ignore: cast_nullable_to_non_nullable
-              as String,
-      deedName: null == deedName
-          ? _value.deedName
-          : deedName // ignore: cast_nullable_to_non_nullable
-              as String,
-      myoCode: null == myoCode
-          ? _value.myoCode
-          : myoCode // ignore: cast_nullable_to_non_nullable
+      propImg: null == propImg
+          ? _value.propImg
+          : propImg // ignore: cast_nullable_to_non_nullable
               as String,
       propCity: null == propCity
           ? _value.propCity
@@ -162,14 +162,6 @@ class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
       propRegion: null == propRegion
           ? _value.propRegion
           : propRegion // ignore: cast_nullable_to_non_nullable
-              as String,
-      areDescFull: null == areDescFull
-          ? _value.areDescFull
-          : areDescFull // ignore: cast_nullable_to_non_nullable
-              as String,
-      amtTot: null == amtTot
-          ? _value.amtTot
-          : amtTot // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -185,20 +177,19 @@ abstract class _$$TenantModelImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'prop_id') String propId,
-      @JsonKey(name: 'are_id') String areId,
-      @JsonKey(name: 'are_code') String areCode,
-      @JsonKey(name: 'are_are_id') String areAreId,
-      @JsonKey(name: 'parent_code') String parentCode,
-      @JsonKey(name: 'prop_img') String propImg,
+      @JsonKey(name: 'tts_code') String code,
+      @JsonKey(name: 'are_desc_fo') String unitName,
+      @JsonKey(name: 'cal_type') DateTypes dateType,
+      @JsonKey(name: 'tts_end_date_hj') String dataTimeHj,
+      @JsonKey(name: 'tts_end_date_dgr') String dataTimeStamp,
+      @JsonKey(name: 'amt_due', defaultValue: "0") String price,
+      @JsonKey(name: 'tts_validity') TenantVisibility status,
+      @JsonKey(name: 'contract_type') ContractTypes type,
       @JsonKey(name: 'prop_lat') String propLat,
       @JsonKey(name: 'prop_lng') String propLng,
-      @JsonKey(name: 'deed_issue') String deedIssue,
-      @JsonKey(name: 'deed_name') String deedName,
-      @JsonKey(name: 'myo_code') String myoCode,
+      @JsonKey(name: 'prop_img') String propImg,
       @JsonKey(name: 'prop_city') String propCity,
-      @JsonKey(name: 'prop_region') String propRegion,
-      @JsonKey(name: 'are_desc_full') String areDescFull,
-      @JsonKey(name: 'amt_tot') String amtTot});
+      @JsonKey(name: 'prop_region') String propRegion});
 }
 
 /// @nodoc
@@ -213,46 +204,57 @@ class __$$TenantModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? propId = null,
-    Object? areId = null,
-    Object? areCode = null,
-    Object? areAreId = null,
-    Object? parentCode = null,
-    Object? propImg = null,
+    Object? code = null,
+    Object? unitName = null,
+    Object? dateType = null,
+    Object? dataTimeHj = null,
+    Object? dataTimeStamp = null,
+    Object? price = null,
+    Object? status = null,
+    Object? type = null,
     Object? propLat = null,
     Object? propLng = null,
-    Object? deedIssue = null,
-    Object? deedName = null,
-    Object? myoCode = null,
+    Object? propImg = null,
     Object? propCity = null,
     Object? propRegion = null,
-    Object? areDescFull = null,
-    Object? amtTot = null,
   }) {
     return _then(_$TenantModelImpl(
       propId: null == propId
           ? _value.propId
           : propId // ignore: cast_nullable_to_non_nullable
               as String,
-      areId: null == areId
-          ? _value.areId
-          : areId // ignore: cast_nullable_to_non_nullable
+      code: null == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
               as String,
-      areCode: null == areCode
-          ? _value.areCode
-          : areCode // ignore: cast_nullable_to_non_nullable
+      unitName: null == unitName
+          ? _value.unitName
+          : unitName // ignore: cast_nullable_to_non_nullable
               as String,
-      areAreId: null == areAreId
-          ? _value.areAreId
-          : areAreId // ignore: cast_nullable_to_non_nullable
+      dateType: null == dateType
+          ? _value.dateType
+          : dateType // ignore: cast_nullable_to_non_nullable
+              as DateTypes,
+      dataTimeHj: null == dataTimeHj
+          ? _value.dataTimeHj
+          : dataTimeHj // ignore: cast_nullable_to_non_nullable
               as String,
-      parentCode: null == parentCode
-          ? _value.parentCode
-          : parentCode // ignore: cast_nullable_to_non_nullable
+      dataTimeStamp: null == dataTimeStamp
+          ? _value.dataTimeStamp
+          : dataTimeStamp // ignore: cast_nullable_to_non_nullable
               as String,
-      propImg: null == propImg
-          ? _value.propImg
-          : propImg // ignore: cast_nullable_to_non_nullable
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
               as String,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as TenantVisibility,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ContractTypes,
       propLat: null == propLat
           ? _value.propLat
           : propLat // ignore: cast_nullable_to_non_nullable
@@ -261,17 +263,9 @@ class __$$TenantModelImplCopyWithImpl<$Res>
           ? _value.propLng
           : propLng // ignore: cast_nullable_to_non_nullable
               as String,
-      deedIssue: null == deedIssue
-          ? _value.deedIssue
-          : deedIssue // ignore: cast_nullable_to_non_nullable
-              as String,
-      deedName: null == deedName
-          ? _value.deedName
-          : deedName // ignore: cast_nullable_to_non_nullable
-              as String,
-      myoCode: null == myoCode
-          ? _value.myoCode
-          : myoCode // ignore: cast_nullable_to_non_nullable
+      propImg: null == propImg
+          ? _value.propImg
+          : propImg // ignore: cast_nullable_to_non_nullable
               as String,
       propCity: null == propCity
           ? _value.propCity
@@ -280,14 +274,6 @@ class __$$TenantModelImplCopyWithImpl<$Res>
       propRegion: null == propRegion
           ? _value.propRegion
           : propRegion // ignore: cast_nullable_to_non_nullable
-              as String,
-      areDescFull: null == areDescFull
-          ? _value.areDescFull
-          : areDescFull // ignore: cast_nullable_to_non_nullable
-              as String,
-      amtTot: null == amtTot
-          ? _value.amtTot
-          : amtTot // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -299,20 +285,19 @@ class __$$TenantModelImplCopyWithImpl<$Res>
 class _$TenantModelImpl extends _TenantModel {
   _$TenantModelImpl(
       {@JsonKey(name: 'prop_id') required this.propId,
-      @JsonKey(name: 'are_id') required this.areId,
-      @JsonKey(name: 'are_code') required this.areCode,
-      @JsonKey(name: 'are_are_id') required this.areAreId,
-      @JsonKey(name: 'parent_code') required this.parentCode,
-      @JsonKey(name: 'prop_img') required this.propImg,
+      @JsonKey(name: 'tts_code') required this.code,
+      @JsonKey(name: 'are_desc_fo') required this.unitName,
+      @JsonKey(name: 'cal_type') required this.dateType,
+      @JsonKey(name: 'tts_end_date_hj') required this.dataTimeHj,
+      @JsonKey(name: 'tts_end_date_dgr') required this.dataTimeStamp,
+      @JsonKey(name: 'amt_due', defaultValue: "0") required this.price,
+      @JsonKey(name: 'tts_validity') required this.status,
+      @JsonKey(name: 'contract_type') required this.type,
       @JsonKey(name: 'prop_lat') required this.propLat,
       @JsonKey(name: 'prop_lng') required this.propLng,
-      @JsonKey(name: 'deed_issue') required this.deedIssue,
-      @JsonKey(name: 'deed_name') required this.deedName,
-      @JsonKey(name: 'myo_code') required this.myoCode,
+      @JsonKey(name: 'prop_img') required this.propImg,
       @JsonKey(name: 'prop_city') required this.propCity,
-      @JsonKey(name: 'prop_region') required this.propRegion,
-      @JsonKey(name: 'are_desc_full') required this.areDescFull,
-      @JsonKey(name: 'amt_tot') required this.amtTot})
+      @JsonKey(name: 'prop_region') required this.propRegion})
       : super._();
 
   factory _$TenantModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -322,20 +307,29 @@ class _$TenantModelImpl extends _TenantModel {
   @JsonKey(name: 'prop_id')
   final String propId;
   @override
-  @JsonKey(name: 'are_id')
-  final String areId;
+  @JsonKey(name: 'tts_code')
+  final String code;
   @override
-  @JsonKey(name: 'are_code')
-  final String areCode;
+  @JsonKey(name: 'are_desc_fo')
+  final String unitName;
   @override
-  @JsonKey(name: 'are_are_id')
-  final String areAreId;
+  @JsonKey(name: 'cal_type')
+  final DateTypes dateType;
   @override
-  @JsonKey(name: 'parent_code')
-  final String parentCode;
+  @JsonKey(name: 'tts_end_date_hj')
+  final String dataTimeHj;
   @override
-  @JsonKey(name: 'prop_img')
-  final String propImg;
+  @JsonKey(name: 'tts_end_date_dgr')
+  final String dataTimeStamp;
+  @override
+  @JsonKey(name: 'amt_due', defaultValue: "0")
+  final String price;
+  @override
+  @JsonKey(name: 'tts_validity')
+  final TenantVisibility status;
+  @override
+  @JsonKey(name: 'contract_type')
+  final ContractTypes type;
   @override
   @JsonKey(name: 'prop_lat')
   final String propLat;
@@ -343,30 +337,18 @@ class _$TenantModelImpl extends _TenantModel {
   @JsonKey(name: 'prop_lng')
   final String propLng;
   @override
-  @JsonKey(name: 'deed_issue')
-  final String deedIssue;
-  @override
-  @JsonKey(name: 'deed_name')
-  final String deedName;
-  @override
-  @JsonKey(name: 'myo_code')
-  final String myoCode;
+  @JsonKey(name: 'prop_img')
+  final String propImg;
   @override
   @JsonKey(name: 'prop_city')
   final String propCity;
   @override
   @JsonKey(name: 'prop_region')
   final String propRegion;
-  @override
-  @JsonKey(name: 'are_desc_full')
-  final String areDescFull;
-  @override
-  @JsonKey(name: 'amt_tot')
-  final String amtTot;
 
   @override
   String toString() {
-    return 'TenantModel(propId: $propId, areId: $areId, areCode: $areCode, areAreId: $areAreId, parentCode: $parentCode, propImg: $propImg, propLat: $propLat, propLng: $propLng, deedIssue: $deedIssue, deedName: $deedName, myoCode: $myoCode, propCity: $propCity, propRegion: $propRegion, areDescFull: $areDescFull, amtTot: $amtTot)';
+    return 'TenantModel(propId: $propId, code: $code, unitName: $unitName, dateType: $dateType, dataTimeHj: $dataTimeHj, dataTimeStamp: $dataTimeStamp, price: $price, status: $status, type: $type, propLat: $propLat, propLng: $propLng, propImg: $propImg, propCity: $propCity, propRegion: $propRegion)';
   }
 
   @override
@@ -375,27 +357,25 @@ class _$TenantModelImpl extends _TenantModel {
         (other.runtimeType == runtimeType &&
             other is _$TenantModelImpl &&
             (identical(other.propId, propId) || other.propId == propId) &&
-            (identical(other.areId, areId) || other.areId == areId) &&
-            (identical(other.areCode, areCode) || other.areCode == areCode) &&
-            (identical(other.areAreId, areAreId) ||
-                other.areAreId == areAreId) &&
-            (identical(other.parentCode, parentCode) ||
-                other.parentCode == parentCode) &&
-            (identical(other.propImg, propImg) || other.propImg == propImg) &&
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.unitName, unitName) ||
+                other.unitName == unitName) &&
+            (identical(other.dateType, dateType) ||
+                other.dateType == dateType) &&
+            (identical(other.dataTimeHj, dataTimeHj) ||
+                other.dataTimeHj == dataTimeHj) &&
+            (identical(other.dataTimeStamp, dataTimeStamp) ||
+                other.dataTimeStamp == dataTimeStamp) &&
+            (identical(other.price, price) || other.price == price) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.propLat, propLat) || other.propLat == propLat) &&
             (identical(other.propLng, propLng) || other.propLng == propLng) &&
-            (identical(other.deedIssue, deedIssue) ||
-                other.deedIssue == deedIssue) &&
-            (identical(other.deedName, deedName) ||
-                other.deedName == deedName) &&
-            (identical(other.myoCode, myoCode) || other.myoCode == myoCode) &&
+            (identical(other.propImg, propImg) || other.propImg == propImg) &&
             (identical(other.propCity, propCity) ||
                 other.propCity == propCity) &&
             (identical(other.propRegion, propRegion) ||
-                other.propRegion == propRegion) &&
-            (identical(other.areDescFull, areDescFull) ||
-                other.areDescFull == areDescFull) &&
-            (identical(other.amtTot, amtTot) || other.amtTot == amtTot));
+                other.propRegion == propRegion));
   }
 
   @JsonKey(ignore: true)
@@ -403,20 +383,19 @@ class _$TenantModelImpl extends _TenantModel {
   int get hashCode => Object.hash(
       runtimeType,
       propId,
-      areId,
-      areCode,
-      areAreId,
-      parentCode,
-      propImg,
+      code,
+      unitName,
+      dateType,
+      dataTimeHj,
+      dataTimeStamp,
+      price,
+      status,
+      type,
       propLat,
       propLng,
-      deedIssue,
-      deedName,
-      myoCode,
+      propImg,
       propCity,
-      propRegion,
-      areDescFull,
-      amtTot);
+      propRegion);
 
   @JsonKey(ignore: true)
   @override
@@ -434,22 +413,21 @@ class _$TenantModelImpl extends _TenantModel {
 
 abstract class _TenantModel extends TenantModel {
   factory _TenantModel(
-          {@JsonKey(name: 'prop_id') required final String propId,
-          @JsonKey(name: 'are_id') required final String areId,
-          @JsonKey(name: 'are_code') required final String areCode,
-          @JsonKey(name: 'are_are_id') required final String areAreId,
-          @JsonKey(name: 'parent_code') required final String parentCode,
-          @JsonKey(name: 'prop_img') required final String propImg,
-          @JsonKey(name: 'prop_lat') required final String propLat,
-          @JsonKey(name: 'prop_lng') required final String propLng,
-          @JsonKey(name: 'deed_issue') required final String deedIssue,
-          @JsonKey(name: 'deed_name') required final String deedName,
-          @JsonKey(name: 'myo_code') required final String myoCode,
-          @JsonKey(name: 'prop_city') required final String propCity,
-          @JsonKey(name: 'prop_region') required final String propRegion,
-          @JsonKey(name: 'are_desc_full') required final String areDescFull,
-          @JsonKey(name: 'amt_tot') required final String amtTot}) =
-      _$TenantModelImpl;
+      {@JsonKey(name: 'prop_id') required final String propId,
+      @JsonKey(name: 'tts_code') required final String code,
+      @JsonKey(name: 'are_desc_fo') required final String unitName,
+      @JsonKey(name: 'cal_type') required final DateTypes dateType,
+      @JsonKey(name: 'tts_end_date_hj') required final String dataTimeHj,
+      @JsonKey(name: 'tts_end_date_dgr') required final String dataTimeStamp,
+      @JsonKey(name: 'amt_due', defaultValue: "0") required final String price,
+      @JsonKey(name: 'tts_validity') required final TenantVisibility status,
+      @JsonKey(name: 'contract_type') required final ContractTypes type,
+      @JsonKey(name: 'prop_lat') required final String propLat,
+      @JsonKey(name: 'prop_lng') required final String propLng,
+      @JsonKey(name: 'prop_img') required final String propImg,
+      @JsonKey(name: 'prop_city') required final String propCity,
+      @JsonKey(name: 'prop_region')
+      required final String propRegion}) = _$TenantModelImpl;
   _TenantModel._() : super._();
 
   factory _TenantModel.fromJson(Map<String, dynamic> json) =
@@ -459,20 +437,29 @@ abstract class _TenantModel extends TenantModel {
   @JsonKey(name: 'prop_id')
   String get propId;
   @override
-  @JsonKey(name: 'are_id')
-  String get areId;
+  @JsonKey(name: 'tts_code')
+  String get code;
   @override
-  @JsonKey(name: 'are_code')
-  String get areCode;
+  @JsonKey(name: 'are_desc_fo')
+  String get unitName;
   @override
-  @JsonKey(name: 'are_are_id')
-  String get areAreId;
+  @JsonKey(name: 'cal_type')
+  DateTypes get dateType;
   @override
-  @JsonKey(name: 'parent_code')
-  String get parentCode;
+  @JsonKey(name: 'tts_end_date_hj')
+  String get dataTimeHj;
   @override
-  @JsonKey(name: 'prop_img')
-  String get propImg;
+  @JsonKey(name: 'tts_end_date_dgr')
+  String get dataTimeStamp;
+  @override
+  @JsonKey(name: 'amt_due', defaultValue: "0")
+  String get price;
+  @override
+  @JsonKey(name: 'tts_validity')
+  TenantVisibility get status;
+  @override
+  @JsonKey(name: 'contract_type')
+  ContractTypes get type;
   @override
   @JsonKey(name: 'prop_lat')
   String get propLat;
@@ -480,26 +467,14 @@ abstract class _TenantModel extends TenantModel {
   @JsonKey(name: 'prop_lng')
   String get propLng;
   @override
-  @JsonKey(name: 'deed_issue')
-  String get deedIssue;
-  @override
-  @JsonKey(name: 'deed_name')
-  String get deedName;
-  @override
-  @JsonKey(name: 'myo_code')
-  String get myoCode;
+  @JsonKey(name: 'prop_img')
+  String get propImg;
   @override
   @JsonKey(name: 'prop_city')
   String get propCity;
   @override
   @JsonKey(name: 'prop_region')
   String get propRegion;
-  @override
-  @JsonKey(name: 'are_desc_full')
-  String get areDescFull;
-  @override
-  @JsonKey(name: 'amt_tot')
-  String get amtTot;
   @override
   @JsonKey(ignore: true)
   _$$TenantModelImplCopyWith<_$TenantModelImpl> get copyWith =>

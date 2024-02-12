@@ -30,34 +30,36 @@ class TenantAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         SvgPicture.asset(Res.filterLogo),
-        Gaps.hGap15,
+        Gaps.hGap8,
         Padding(
           padding: const EdgeInsetsDirectional.only(end: 16),
           child: Stack(
-            alignment: AlignmentDirectional.topEnd,
+            alignment: AlignmentDirectional.center,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.only(end: 5),
+                padding: const EdgeInsets.all(6.0),
                 child: SvgPicture.asset(
                   Res.noticesLogo,
                 ),
               ),
-              Container(
-                margin: const EdgeInsetsDirectional.only(top: 2),
-                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1.5),
-                decoration: BoxDecoration(
-                  color: context.colors.appBarColor,
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Text(
-                  '2',
-                  style: AppTextStyle.s9_w400(color: context.colors.white),
+              PositionedDirectional(
+                top: 0,
+                end: 0,
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                    color: context.colors.red,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Text(
+                    '2',
+                    style: AppTextStyle.s9_w400(color: context.colors.white),
+                  ),
                 ),
               ),
             ],
           ),
         ),
-
       ],
       leading: Padding(
         padding: const EdgeInsetsDirectional.only(start: 20, top: 3, bottom: 3),

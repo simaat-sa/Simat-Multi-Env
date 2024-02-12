@@ -1,0 +1,56 @@
+import 'dart:ui';
+
+import 'package:flutter_tdd/core/constants/enum_extension/enum_factory_extension.dart';
+import 'package:flutter_tdd/core/theme/colors/app_colors.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+@JsonEnum(valueField: 'value')
+enum TenantVisibility {
+  active("active"),
+  inactive("inactive"),
+  closed("closed"),
+  expired("expired"),
+  non("");
+
+  final String value;
+
+  const TenantVisibility(this.value);
+
+  factory TenantVisibility.fromValue(String val) {
+    try {
+      return TenantVisibility.values.enumFactory(val);
+    } catch (_) {}
+    return non;
+  }
+
+  String getLocalizedName(){
+    switch (this) {
+      case TenantVisibility.active:
+        return "Active";
+      case TenantVisibility.inactive:
+        return "Inactive";
+      case TenantVisibility.closed:
+        return "Closed";
+      case TenantVisibility.expired:
+        return "Expired";
+      default:
+        return "";
+    }
+  }
+
+  Color getColor(){
+    switch (this) {
+      case TenantVisibility.active:
+        return AppColors.fixedColors.green2;
+      case TenantVisibility.inactive:
+        return AppColors.fixedColors.secondary;
+      case TenantVisibility.closed:
+        return AppColors.fixedColors.red;
+      case TenantVisibility.expired:
+        return AppColors.fixedColors.red;
+      default:
+        return AppColors.fixedColors.primary;
+    }
+  }
+
+}

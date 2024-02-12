@@ -41,8 +41,6 @@ abstract class AppColors {
 
   Color get blackOpacity;
 
-  Color get appBarColor;
-
   Color get white;
 
   Color get black;
@@ -59,4 +57,6 @@ abstract class AppColors {
   Color get brown;
   Color get primaryText;
   Color get darkTextColor;
+  Color get red;
+  Color get green2;
 }

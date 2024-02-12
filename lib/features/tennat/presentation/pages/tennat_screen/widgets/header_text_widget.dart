@@ -1,7 +1,7 @@
 part of 'tenant_screen_widgets_imports.dart';
 
 class HeaderTextWidget extends StatelessWidget {
-  final List<Tenant> listTenant;
+  final List<TenantModel> listTenant;
   const HeaderTextWidget({super.key, required this.listTenant});
 
   @override
