@@ -22,7 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(count) => "العقود ${count}";
 
-  static String m1(MB, files) =>
+  static String m1(count) => "طلبات الصيانة ${count}";
+
+  static String m2(MB, files) =>
       "يجب أن تكون حجم الملفات التالية أقل من ${MB} ميحابيت, ${files}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -51,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "completed": MessageLookupByLibrary.simpleMessage("مكتمل"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل كلمة المرورمتطابق"),
+        "contractsCount": m0,
         "copied_successfully":
             MessageLookupByLibrary.simpleMessage("تم النسخ بنجاح"),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
@@ -110,6 +113,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "مسح رمز الاستجابة لتسجيل الدخول"),
         "mailValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل البريد صحيحا"),
+        "maintenanceCount": m1,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
         "no_internet_connection":
@@ -128,11 +132,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مرفوض من قبل المالك"),
         "rejected_by_the_supervisor":
             MessageLookupByLibrary.simpleMessage("مرفوض من المشرف"),
-        "rented_units": m0,
         "residential": MessageLookupByLibrary.simpleMessage("سكني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
-        "size_more_than_mg_error": m1,
+        "size_more_than_mg_error": m2,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "successfully_Logged_in":

@@ -6,6 +6,7 @@ class Res {
   static const String en = "assets/lang/en.json";
   static const String facebook = "assets/images/facebook.svg";
   static const String icon = "assets/images/icon.png";
+  static const String calendarIcon = "assets/images/calendarIcon.svg";
   static const String logo = "assets/images/logo.png";
   static const String logoSvg = "assets/images/logoSvg.svg";
   static const String marker = "assets/images/marker.png";

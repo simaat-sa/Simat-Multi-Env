@@ -8,10 +8,10 @@ import 'package:flutter_tdd/core/widgets/CachedImage.dart';
 import 'package:flutter_tdd/features/auth/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:flutter_tdd/res.dart';
 
-class TenantAppBar extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double? size;
 
-  const TenantAppBar({
+  const CustomAppBar({
     super.key,
     this.size,
   });

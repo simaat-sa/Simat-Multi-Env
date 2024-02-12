@@ -20,9 +20,11 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(count) => "Contracts  ${count}";
+  static String m0(count) => "Contracts ${count}";
 
-  static String m1(MB, files) =>
+  static String m1(count) => "Maintenance Orders ${count}";
+
+  static String m2(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -51,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "Please enter the password identical"),
+        "contractsCount": m0,
         "copied_successfully":
             MessageLookupByLibrary.simpleMessage("Copied successfully"),
         "done": MessageLookupByLibrary.simpleMessage("Done"),
@@ -111,6 +114,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Scan the QR code to log in"),
         "mailValidation":
             MessageLookupByLibrary.simpleMessage("Please enter a valid email"),
+        "maintenanceCount": m1,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "Should be more than 8 and less than 30"),
         "no_internet_connection":
@@ -129,11 +133,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("rejected By The Owner"),
         "rejected_by_the_supervisor":
             MessageLookupByLibrary.simpleMessage("rejected By The Supervisor"),
-        "rented_units": m0,
         "residential": MessageLookupByLibrary.simpleMessage("Residential"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
-        "size_more_than_mg_error": m1,
+        "size_more_than_mg_error": m2,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "successfully_Logged_in":

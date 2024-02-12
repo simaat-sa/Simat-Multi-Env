@@ -42,7 +42,7 @@ enum TenantVisibility {
   Color getColor(){
     switch (this) {
       case TenantVisibility.active:
-        return AppColors.fixedColors.green2;
+        return AppColors.fixedColors.green3;
       case TenantVisibility.inactive:
         return AppColors.fixedColors.secondary;
       case TenantVisibility.closed:

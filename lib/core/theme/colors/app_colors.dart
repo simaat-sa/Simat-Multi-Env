@@ -59,4 +59,5 @@ abstract class AppColors {
   Color get darkTextColor;
   Color get red;
   Color get green2;
+  Color get green3;
 }

@@ -19,6 +19,9 @@ class ApiNames{
   /// tenant routes
   static  String getTenant = "${version1Part}tenant/list";
 
+  /// contracts routes
+  static  String getContracts= "${version1Part}maintenance/list";
+
 
 
 

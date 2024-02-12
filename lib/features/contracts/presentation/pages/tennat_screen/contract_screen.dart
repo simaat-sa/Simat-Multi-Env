@@ -1,14 +1,14 @@
-part of 'tenant_screen_imports.dart';
+part of 'contract_screen_imports.dart';
 
-class TenantScreen extends StatefulWidget {
-  const TenantScreen({super.key});
+class ContractScreen extends StatefulWidget {
+  const ContractScreen({super.key});
 
   @override
-  State<TenantScreen> createState() => _TenantScreenState();
+  State<ContractScreen> createState() => _ContractScreenState();
 }
 
-class _TenantScreenState extends State<TenantScreen> {
-  final TenantScreenController controller = TenantScreenController();
+class _ContractScreenState extends State<ContractScreen> {
+  final ContractController controller = ContractController();
 
   @override
   void initState() {
@@ -28,11 +28,10 @@ class _TenantScreenState extends State<TenantScreen> {
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               children: [
                 PageHeaderTitleWidget(
-                  title: Translate.of(context).contractsCount([data.length]),
-                ),
-                Gaps.vGap10,
+                  title: Translate.of(context).maintenanceCount([data.length]),
+                ),                Gaps.vGap10,
                 ...List.generate(data.length, (index) {
-                  return TenantItemWidget(model: data[index],);
+                  return ContractItemWidget(model: data[index],);
                 },)
               ],
             ),

@@ -1,28 +1,31 @@
 
+import 'dart:ui';
+
 import 'package:flutter_tdd/core/constants/enum_extension/enum_factory_extension.dart';
 import 'package:flutter_tdd/core/localization/translate.dart';
+import 'package:flutter_tdd/core/theme/colors/app_colors.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 @JsonEnum(valueField: 'value')
 enum ContractStatus{
-  canceled(37790),
-  paused(37780),
-  posted(37770),
-  completed(37760),
-  implemented(37750),
-  rejectedByTheOwner(37732),
-  attribution(37731),
-  owner(37730),
-  rejectedByTheSupervisor(37722),
-  supervisorApproved(37721),
-  applicationApproval(37720),
-  supervisorIdentifications(37715),
-  non(0);
-  final int value;
+  canceled('37790'),
+  paused('37780'),
+  posted('37770'),
+  completed('37760'),
+  implemented('37750'),
+  rejectedByTheOwner('37732'),
+  attribution('37731'),
+  owner('37730'),
+  rejectedByTheSupervisor('37722'),
+  supervisorApproved('37721'),
+  applicationApproval('37720'),
+  supervisorIdentifications('37715'),
+  non('0');
+  final String value;
 
 
   const ContractStatus(this.value);
-  factory ContractStatus.fromValue(int val) {
+  factory ContractStatus.fromValue(String val) {
     try {
       return ContractStatus.values.enumFactory(val);
     } catch (_) {}
@@ -59,4 +62,38 @@ enum ContractStatus{
         return "";
     }
   }
+
+
+  Color getColor(){
+    switch (this) {
+      case ContractStatus.applicationApproval:
+        return AppColors.fixedColors.secondary;
+      case ContractStatus.attribution:
+        return AppColors.fixedColors.secondary;
+      case ContractStatus.canceled:
+        return AppColors.fixedColors.red;
+      case ContractStatus.completed:
+        return AppColors.fixedColors.primary;
+      case ContractStatus.implemented:
+        return AppColors.fixedColors.secondary;
+      case ContractStatus.owner:
+        return AppColors.fixedColors.secondary;
+      case ContractStatus.paused:
+        return AppColors.fixedColors.secondary;
+      case ContractStatus.posted:
+        return AppColors.fixedColors.secondary;
+      case ContractStatus.rejectedByTheOwner:
+        return AppColors.fixedColors.red;
+      case ContractStatus.rejectedByTheSupervisor:
+        return AppColors.fixedColors.secondary;
+      case ContractStatus.supervisorApproved:
+        return AppColors.fixedColors.green2;
+      case ContractStatus.supervisorIdentifications:
+        return AppColors.fixedColors.secondary;
+      default:
+        return AppColors.fixedColors.primary;
+    }
+  }
+
+
 }

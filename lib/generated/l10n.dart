@@ -630,11 +630,21 @@ class S {
     );
   }
 
-  /// `Contracts  {count}`
-  String rented_units(Object count) {
+  /// `Contracts {count}`
+  String contractsCount(Object count) {
     return Intl.message(
-      'Contracts  $count',
-      name: 'rented_units',
+      'Contracts $count',
+      name: 'contractsCount',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Maintenance Orders {count}`
+  String maintenanceCount(Object count) {
+    return Intl.message(
+      'Maintenance Orders $count',
+      name: 'maintenanceCount',
       desc: '',
       args: [count],
     );

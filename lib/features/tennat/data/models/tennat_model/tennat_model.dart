@@ -3,6 +3,7 @@ import 'package:flutter_tdd/core/enums/contract_types.dart';
 import 'package:flutter_tdd/core/enums/date_types.dart';
 import 'package:flutter_tdd/core/enums/tenant_visibility.dart';
 import 'package:flutter_tdd/core/extensions/date_format.dart';
+import 'package:flutter_tdd/core/extensions/string_helper_extension.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'tennat_model.freezed.dart';
@@ -39,7 +40,6 @@ class TenantModel with _$TenantModel {
     if (dateType == DateTypes.hj) {
       return dataTimeHj;
     }
-    var date = DateTime.fromMillisecondsSinceEpoch(int.parse(dataTimeStamp) * 1000);
-    return date.toFormattedString();
+    return dataTimeStamp.formatTimeStampDate();
   }
 }
