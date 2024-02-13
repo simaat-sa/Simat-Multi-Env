@@ -73,7 +73,14 @@ class ContractItemWidget extends StatelessWidget {
                 ),
               ],
             ),
-            Gaps.vGap5,
+            Padding(
+              padding: const EdgeInsets.only(top: 5, bottom: 10),
+              child: Divider(
+                color: context.colors.greyWhite,
+                thickness: 1,
+                height: 0,
+              ),
+            ),
             Row(
               children: [
                 Text(

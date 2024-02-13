@@ -67,25 +67,25 @@ enum ContractStatus{
   Color getColor(){
     switch (this) {
       case ContractStatus.applicationApproval:
-        return AppColors.fixedColors.secondary;
+        return AppColors.fixedColors.primary;
       case ContractStatus.attribution:
         return AppColors.fixedColors.secondary;
       case ContractStatus.canceled:
         return AppColors.fixedColors.red;
       case ContractStatus.completed:
-        return AppColors.fixedColors.primary;
+        return AppColors.fixedColors.green2;
       case ContractStatus.implemented:
-        return AppColors.fixedColors.secondary;
+        return AppColors.fixedColors.green3;
       case ContractStatus.owner:
-        return AppColors.fixedColors.secondary;
+        return AppColors.fixedColors.primary;
       case ContractStatus.paused:
         return AppColors.fixedColors.secondary;
       case ContractStatus.posted:
-        return AppColors.fixedColors.secondary;
+        return AppColors.fixedColors.primary;
       case ContractStatus.rejectedByTheOwner:
         return AppColors.fixedColors.red;
       case ContractStatus.rejectedByTheSupervisor:
-        return AppColors.fixedColors.secondary;
+        return AppColors.fixedColors.red;
       case ContractStatus.supervisorApproved:
         return AppColors.fixedColors.green2;
       case ContractStatus.supervisorIdentifications:
