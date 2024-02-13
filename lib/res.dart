@@ -25,4 +25,6 @@ class Res {
   static const String filterLogo = "assets/images/filter_logo.svg";
   static const String noticesLogo = "assets/images/notif_logo.svg";
   static const String unitLogo = "assets/images/unit_logo.svg";
+  static const String unselectLogo = "assets/images/unselect_logo.svg";
+  static const String selectLogo = "assets/images/select_logo.svg";
 }

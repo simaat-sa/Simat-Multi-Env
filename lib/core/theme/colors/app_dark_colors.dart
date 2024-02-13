@@ -27,7 +27,7 @@ class AppDarkColors extends AppColors {
   Color get black => Colors.white;
 
   @override
-  Color get background => Colors.black;
+  Color get background => const Color(0xffF2F6F8);
 
  @override
   Color get backgroundWhite => Colors.black;
@@ -61,4 +61,7 @@ class AppDarkColors extends AppColors {
 
   @override
   Color get red => const Color(0xffFF6969);
+
+  @override
+  Color get backgroundLight => const Color(0xffe0e6ec);
 }

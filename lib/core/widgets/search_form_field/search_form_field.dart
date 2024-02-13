@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 
 class SearchFormField extends StatefulWidget {
   final Function(String)? onSubmit;
@@ -65,7 +66,7 @@ class _SearchFormFieldState extends State<SearchFormField> {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 400),
       width: _isSearchFieldExpand ? _expandSearchFieldWidth : _collapsedSearchFieldWidth,
-      height: _isSearchFieldExpand ? 32.h : 28.h,
+      height: _isSearchFieldExpand ? 44.h : 34.h,
       padding: EdgeInsets.zero,
       child: TextField(
         focusNode: _focusNode,
@@ -78,11 +79,11 @@ class _SearchFormFieldState extends State<SearchFormField> {
         decoration: InputDecoration(
             hintText: widget.searchHint??"Search",
             contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 12),
-            fillColor: const Color(0xFFF7F7F7),
+            fillColor: context.colors.white ,
             filled: true,
             hintStyle: TextStyle(
                 fontSize: 12.sp,
-                color: const Color.fromRGBO(151, 151, 151, 1),
+                color: context.colors.primaryText,
                 fontWeight: FontWeight.w400),
             prefixIcon: InkWell(
               onTap: () {
@@ -90,7 +91,7 @@ class _SearchFormFieldState extends State<SearchFormField> {
                   widget.onSubmit!(_searchController.text);
                 }
               },
-              child: const Icon(Icons.search_rounded, color: Color(0xFF6E6E6E), size: 20),
+              child:  Icon(Icons.search_rounded, color:context.colors.primaryText, size: 25),
             ),
             border: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(99)), borderSide: BorderSide.none)),

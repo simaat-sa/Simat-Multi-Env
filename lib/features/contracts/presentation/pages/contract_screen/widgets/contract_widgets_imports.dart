@@ -7,6 +7,7 @@ import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/core/widgets/CachedImage.dart';
 import 'package:flutter_tdd/core/widgets/svg_icon_wrapper.dart';
 import 'package:flutter_tdd/features/contracts/data/models/tennat_model/contract_model.dart';
+import 'package:flutter_tdd/features/contracts/presentation/pages/contract_screen/contract_screen_imports.dart';
 import 'package:flutter_tdd/features/tennat/data/models/tennat_model/tennat_model.dart';
 import 'package:flutter_tdd/res.dart';
 

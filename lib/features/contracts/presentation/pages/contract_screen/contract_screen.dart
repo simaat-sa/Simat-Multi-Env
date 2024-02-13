@@ -27,11 +27,14 @@ class _ContractScreenState extends State<ContractScreen> {
             child: ListView(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               children: [
+                FilterItemWidget(
+                  onTap: () =>AutoRouter.of(context).push(const FilterContractRoute()),
+                ),
                 PageHeaderTitleWidget(
                   title: Translate.of(context).maintenanceCount([data.length]),
                 ),                Gaps.vGap10,
                 ...List.generate(data.length, (index) {
-                  return ContractItemWidget(model: data[index],);
+                  return ContractItemWidget(model: data[index], controller: controller,);
                 },)
               ],
             ),

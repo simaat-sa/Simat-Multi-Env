@@ -13,7 +13,9 @@ class AppRouter extends $AppRouter {
     AdaptiveRoute(page: ForgetPassword.page),
     AdaptiveRoute(page: Terms.page),
     AutoRoute(page: Home.page),
-    ...baseRoute
+    ...baseRoute,
+    ...tenantRoutes,
+    ...contractRoutes,
   ];
 }
 

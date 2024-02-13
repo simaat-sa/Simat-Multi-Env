@@ -29,8 +29,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         style: AppTextStyle.s16_w400(color: context.colors.black),
       ),
       actions: [
-        SvgPicture.asset(Res.filterLogo),
-        Gaps.hGap8,
         Padding(
           padding: const EdgeInsetsDirectional.only(end: 16),
           child: Stack(

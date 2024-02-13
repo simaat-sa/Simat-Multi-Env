@@ -26,6 +26,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       length: listAccessUser.length,
       initialIndex: widget.index,
       child: Scaffold(
+        backgroundColor: context.colors.background,
         body: TabBarView(
           physics: const NeverScrollableScrollPhysics(),
           controller: controller.tabController,

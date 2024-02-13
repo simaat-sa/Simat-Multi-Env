@@ -18,6 +18,7 @@ class _TenantScreenState extends State<TenantScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: context.colors.background,
       appBar: const CustomAppBar(),
       body: RequesterConsumer(
         requester: controller.requester,
@@ -27,6 +28,9 @@ class _TenantScreenState extends State<TenantScreen> {
             child: ListView(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               children: [
+                FilterItemWidget(
+                  onTap: () => AutoRouter.of(context).push(const FilterTenantRoute()),
+                ),
                 PageHeaderTitleWidget(
                   title: Translate.of(context).contractsCount([data.length]),
                 ),

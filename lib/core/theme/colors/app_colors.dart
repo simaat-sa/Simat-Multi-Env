@@ -49,6 +49,8 @@ abstract class AppColors {
 
   Color get background;
 
+  Color get backgroundLight;
+
   Color get backgroundWhite;
 
   Color get disableGray;
