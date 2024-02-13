@@ -25,9 +25,11 @@ class LoginWithQrButtonWidget extends StatelessWidget {
               size: 30,
             ),
             Gaps.hGap10,
-            Text(
-              Translate.of(context).login_with_qr,
-              style: AppTextStyle.s16_w500(color: context.colors.secondary),
+            Expanded(
+              child: Text(
+                Translate.of(context).login_with_qr,
+                style: AppTextStyle.s15_w500(color: context.colors.secondary).copyWith(overflow: TextOverflow.ellipsis),
+              ),
             ),
           ],
         ),

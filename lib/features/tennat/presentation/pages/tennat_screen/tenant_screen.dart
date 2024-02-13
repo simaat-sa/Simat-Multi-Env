@@ -29,15 +29,30 @@ class _TenantScreenState extends State<TenantScreen> {
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               children: [
                 FilterItemWidget(
-                  onTap: () => AutoRouter.of(context).push(const FilterTenantRoute()),
+                  onSubmit:(val) => controller.onChangeSearch(val),
+                  onChange: (val) => controller.onChangeSearch(val),
+                  onTap: () => AutoRouter.of(context).push(FilterTenantRoute(controller: controller)),
                 ),
                 PageHeaderTitleWidget(
                   title: Translate.of(context).contractsCount([data.length]),
                 ),
                 Gaps.vGap10,
-                ...List.generate(data.length, (index) {
-                  return TenantItemWidget(model: data[index],);
-                },)
+                Visibility(
+                  visible: controller.requester.data!.isNotEmpty,
+                  replacement: const EmptyListItemWidget(),
+                  child: Column(
+                    children: [
+                      ...List.generate(
+                        data.length,
+                        (index) {
+                          return TenantItemWidget(
+                            model: data[index],
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           );

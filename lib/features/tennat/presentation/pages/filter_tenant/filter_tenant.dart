@@ -1,60 +1,38 @@
 part of 'filter_tenant_imports.dart';
 
 @RoutePage(name: 'FilterTenantRoute')
-class FilterTenant extends StatefulWidget {
-  const FilterTenant({super.key});
+class FilterTenant extends StatelessWidget {
+  final TenantScreenController controller;
 
-  @override
-  State<FilterTenant> createState() => _FilterTenantState();
-}
-
-class _FilterTenantState extends State<FilterTenant> {
-  final FilterTenantController controller = FilterTenantController();
+  const FilterTenant({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: context.colors.background,
-      appBar: DefaultAppBar(
-        title: 'تصفية',
-        showBack: false,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.close),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
-        ],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 22),
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 22),
+      color: context.colors.white,
+      width: MediaQuery.of(context).size.width,
+      child: Container(
+        color: context.colors.white,
         child: Column(
           children: [
-            const FilterHeaderTitle(
-              title: 'حاله العقد',
+            const FilterAppBarWidget(),
+            Flexible(
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: [
+                  FilterSelectStatusWidget(controller: controller),
+                  Divider(thickness: 1, height: 30, color: context.colors.backgroundLight),
+                  FilterSelectTypeWidget(controller: controller),
+                  Divider(
+                    thickness: 1,
+                    height: 30,
+                    color: context.colors.backgroundLight,
+                  ),
+                ],
+              ),
             ),
-            Gaps.vGap10,
-            FilterSelectStatusWidget(
-              controller: controller,
-            ),
-            Divider(
-              thickness: 1,
-              height: 30,
-              color: context.colors.backgroundLight,
-            ),
-            const FilterHeaderTitle(
-              title: 'نوع العقد',
-            ),
-            Gaps.vGap10,
-            FilterSelectTypeWidget(
-              controller: controller,
-            ),
-            Divider(
-              thickness: 1,
-              height: 30,
-              color: context.colors.backgroundLight,
-            ),
-            const Spacer(),
-            const FilterButtonsWidget(),
+            FilterButtonsWidget(controller: controller),
           ],
         ),
       ),

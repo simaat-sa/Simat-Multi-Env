@@ -1,7 +1,6 @@
 part of 'filter_widgets_imports.dart';
 
 class FilterSelectItemWidget extends StatelessWidget {
-  final FilterTenantController controller;
   final String title;
   final void Function() onTap;
   final int value;
@@ -12,7 +11,6 @@ class FilterSelectItemWidget extends StatelessWidget {
     required this.title,
     required this.value,
     required this.changeValue,
-    required this.controller,
     required this.onTap,
   });
 

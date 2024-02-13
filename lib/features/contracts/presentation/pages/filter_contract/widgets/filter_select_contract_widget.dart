@@ -2,7 +2,7 @@ part of'filter_contract_widgets_imports.dart';
 
 
 class FilterSelectContractWidget extends StatelessWidget {
-  final FilterContractController controller;
+  final ContractController controller;
   const FilterSelectContractWidget({super.key, required this.controller});
 
   @override
@@ -16,7 +16,6 @@ class FilterSelectContractWidget extends StatelessWidget {
               visible:  e != ContractStatus.non,
               child: FilterContractSelectItemWidget(
                 onTap: () =>controller.filterContractObs.setValue(e),
-                controller: controller,
                 changeValue: value.index,
                 title: title(e),
                 value: e.index,

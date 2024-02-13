@@ -34,7 +34,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             return listAccessUser[index].pageCode.getPage();
           }),
         ),
-        bottomNavigationBar: BottomNavBarWidget(controller: controller),
+       bottomNavigationBar: BottomNavBarWidget(controller: controller),
       ),
     );
   }

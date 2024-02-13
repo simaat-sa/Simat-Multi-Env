@@ -2,7 +2,9 @@ part of'filter_contract_widgets_imports.dart';
 
 
 class FilterContractButtons extends StatelessWidget {
-  const FilterContractButtons({super.key});
+  final ContractController controller;
+
+  const FilterContractButtons({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,10 @@ class FilterContractButtons extends StatelessWidget {
         children: [
           Expanded(
             child: InkWell(
-              onTap: () => AutoRouter.of(context).pop(),
+              onTap: () {
+                controller.onSubmitFilter();
+                AutoRouter.of(context).pop();
+              },
               child: Container(
                 alignment: Alignment.center,
                 height: 40,
@@ -30,7 +35,10 @@ class FilterContractButtons extends StatelessWidget {
           Gaps.hGap10,
           Expanded(
             child: InkWell(
-              onTap: () => AutoRouter.of(context).pop(),
+              onTap: () {
+                controller.onResetFilter();
+                AutoRouter.of(context).pop();
+              },
               child: Container(
                 alignment: Alignment.center,
                 height: 40,

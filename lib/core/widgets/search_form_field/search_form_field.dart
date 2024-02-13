@@ -71,7 +71,9 @@ class _SearchFormFieldState extends State<SearchFormField> {
       child: TextField(
         focusNode: _focusNode,
         controller: _searchController,
-        style: Theme.of(context).textTheme.bodyMedium,
+        style: TextStyle(
+          color: context.colors.black
+        ),
         maxLines: 1,
         onChanged: widget.onChange,
         textInputAction: TextInputAction.search,

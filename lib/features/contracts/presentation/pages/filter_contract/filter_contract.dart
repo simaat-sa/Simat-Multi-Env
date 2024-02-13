@@ -1,38 +1,30 @@
 part of 'filter_contract_imports.dart';
 
 @RoutePage(name: "FilterContractRoute")
-class FilterContract extends StatefulWidget {
-  const FilterContract({super.key});
+class FilterContract extends StatelessWidget {
+  final ContractController controller;
 
-  @override
-  State<FilterContract> createState() => _FilterContractState();
-}
+  const FilterContract({super.key, required this.controller});
 
-class _FilterContractState extends State<FilterContract> {
-  final FilterContractController controller = FilterContractController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: context.colors.background,
-      appBar: DefaultAppBar(
-        title: 'تصفية',
-        showBack: false,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.close),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
-        ],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 22),
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 22),
+      color: context.colors.white,
+      width: MediaQuery.of(context).size.width,
+      child: Container(
+        color: context.colors.white,
         child: Column(
           children: [
-            const FilterContractTitleHeaderWidget(),
-            Gaps.vGap10,
-            FilterSelectContractWidget(controller: controller,),
-            const Spacer(),
-            const FilterContractButtons()
+            const FilterAppBarWidget(),
+            Expanded(
+              child: ListView(padding: EdgeInsets.zero, children: [
+                const FilterContractTitleHeaderWidget(),
+                Gaps.vGap10,
+                FilterSelectContractWidget(controller: controller),
+              ]),
+            ),
+            FilterContractButtons(controller: controller),
           ],
         ),
       ),

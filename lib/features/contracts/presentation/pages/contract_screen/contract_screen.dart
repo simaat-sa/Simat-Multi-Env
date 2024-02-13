@@ -28,14 +28,30 @@ class _ContractScreenState extends State<ContractScreen> {
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               children: [
                 FilterItemWidget(
-                  onTap: () =>AutoRouter.of(context).push(const FilterContractRoute()),
+                  onChange: (value) => controller.onSearch(value),
+                  onTap: () => AutoRouter.of(context).push(FilterContractRoute(controller: controller)),
                 ),
                 PageHeaderTitleWidget(
                   title: Translate.of(context).maintenanceCount([data.length]),
-                ),                Gaps.vGap10,
-                ...List.generate(data.length, (index) {
-                  return ContractItemWidget(model: data[index], controller: controller,);
-                },)
+                ),
+                Gaps.vGap10,
+                Visibility(
+                  visible: controller.requester.data!.isNotEmpty,
+                  replacement: const EmptyListItemWidget(),
+                  child: Column(
+                    children: [
+                      ...List.generate(
+                        data.length,
+                        (index) {
+                          return ContractItemWidget(
+                            model: data[index],
+                            controller: controller,
+                          );
+                        },
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
           );

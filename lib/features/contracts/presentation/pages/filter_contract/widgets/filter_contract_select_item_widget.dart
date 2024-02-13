@@ -1,7 +1,6 @@
 part of 'filter_contract_widgets_imports.dart';
 
 class FilterContractSelectItemWidget extends StatelessWidget {
-  final FilterContractController controller;
   final String title;
   final void Function() onTap;
   final int value;
@@ -11,7 +10,6 @@ class FilterContractSelectItemWidget extends StatelessWidget {
     required this.title,
     required this.value,
     required this.changeValue,
-    required this.controller,
     required this.onTap,
   });
 

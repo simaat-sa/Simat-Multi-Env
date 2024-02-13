@@ -24,12 +24,16 @@ import 'package:flutter_tdd/features/auth/presentation/pages/verify_otp/verify_o
     as _i10;
 import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart'
     as _i5;
+import 'package:flutter_tdd/features/contracts/presentation/pages/contract_screen/contract_screen_imports.dart'
+    as _i13;
 import 'package:flutter_tdd/features/contracts/presentation/pages/filter_contract/filter_contract_imports.dart'
     as _i2;
 import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart'
     as _i9;
 import 'package:flutter_tdd/features/tennat/presentation/pages/filter_tenant/filter_tenant_imports.dart'
     as _i3;
+import 'package:flutter_tdd/features/tennat/presentation/pages/tennat_screen/tenant_screen_imports.dart'
+    as _i14;
 
 abstract class $AppRouter extends _i11.RootStackRouter {
   $AppRouter({super.navigatorKey});
@@ -43,15 +47,23 @@ abstract class $AppRouter extends _i11.RootStackRouter {
       );
     },
     FilterContractRoute.name: (routeData) {
+      final args = routeData.argsAs<FilterContractRouteArgs>();
       return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.FilterContract(),
+        child: _i2.FilterContract(
+          key: args.key,
+          controller: args.controller,
+        ),
       );
     },
     FilterTenantRoute.name: (routeData) {
+      final args = routeData.argsAs<FilterTenantRouteArgs>();
       return _i11.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.FilterTenant(),
+        child: _i3.FilterTenant(
+          key: args.key,
+          controller: args.controller,
+        ),
       );
     },
     ForgetPassword.name: (routeData) {
@@ -119,30 +131,78 @@ class ActiveAccount extends _i11.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.FilterContract]
-class FilterContractRoute extends _i11.PageRouteInfo<void> {
-  const FilterContractRoute({List<_i11.PageRouteInfo>? children})
-      : super(
+class FilterContractRoute extends _i11.PageRouteInfo<FilterContractRouteArgs> {
+  FilterContractRoute({
+    _i12.Key? key,
+    required _i13.ContractController controller,
+    List<_i11.PageRouteInfo>? children,
+  }) : super(
           FilterContractRoute.name,
+          args: FilterContractRouteArgs(
+            key: key,
+            controller: controller,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'FilterContractRoute';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i11.PageInfo<FilterContractRouteArgs> page =
+      _i11.PageInfo<FilterContractRouteArgs>(name);
+}
+
+class FilterContractRouteArgs {
+  const FilterContractRouteArgs({
+    this.key,
+    required this.controller,
+  });
+
+  final _i12.Key? key;
+
+  final _i13.ContractController controller;
+
+  @override
+  String toString() {
+    return 'FilterContractRouteArgs{key: $key, controller: $controller}';
+  }
 }
 
 /// generated route for
 /// [_i3.FilterTenant]
-class FilterTenantRoute extends _i11.PageRouteInfo<void> {
-  const FilterTenantRoute({List<_i11.PageRouteInfo>? children})
-      : super(
+class FilterTenantRoute extends _i11.PageRouteInfo<FilterTenantRouteArgs> {
+  FilterTenantRoute({
+    _i12.Key? key,
+    required _i14.TenantScreenController controller,
+    List<_i11.PageRouteInfo>? children,
+  }) : super(
           FilterTenantRoute.name,
+          args: FilterTenantRouteArgs(
+            key: key,
+            controller: controller,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'FilterTenantRoute';
 
-  static const _i11.PageInfo<void> page = _i11.PageInfo<void>(name);
+  static const _i11.PageInfo<FilterTenantRouteArgs> page =
+      _i11.PageInfo<FilterTenantRouteArgs>(name);
+}
+
+class FilterTenantRouteArgs {
+  const FilterTenantRouteArgs({
+    this.key,
+    required this.controller,
+  });
+
+  final _i12.Key? key;
+
+  final _i14.TenantScreenController controller;
+
+  @override
+  String toString() {
+    return 'FilterTenantRouteArgs{key: $key, controller: $controller}';
+  }
 }
 
 /// generated route for

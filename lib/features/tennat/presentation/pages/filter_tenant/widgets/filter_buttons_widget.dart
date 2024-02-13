@@ -1,7 +1,9 @@
 part of 'filter_widgets_imports.dart';
 
 class FilterButtonsWidget extends StatelessWidget {
-  const FilterButtonsWidget({super.key});
+  final TenantScreenController controller;
+
+  const FilterButtonsWidget({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,10 @@ class FilterButtonsWidget extends StatelessWidget {
         children: [
           Expanded(
             child: InkWell(
-              onTap: () => AutoRouter.of(context).pop(),
+              onTap: () {
+                controller.onSubmitFilter();
+                AutoRouter.of(context).pop();
+              },
               child: Container(
                 alignment: Alignment.center,
                 height: 40,
@@ -29,7 +34,10 @@ class FilterButtonsWidget extends StatelessWidget {
           Gaps.hGap10,
           Expanded(
             child: InkWell(
-              onTap: () => AutoRouter.of(context).pop(),
+              onTap: () {
+                controller.onResetFilter();
+                AutoRouter.of(context).pop();
+              },
               child: Container(
                 alignment: Alignment.center,
                 height: 40,

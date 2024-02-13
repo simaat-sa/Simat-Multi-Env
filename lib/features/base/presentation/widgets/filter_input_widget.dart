@@ -11,7 +11,10 @@ import 'package:flutter_tdd/res.dart';
 
 class FilterItemWidget extends StatelessWidget {
   final void Function() onTap;
-  const FilterItemWidget({super.key, required this.onTap});
+  final Function(String)? onSubmit;
+  final Function(String)? onChange;
+
+  const FilterItemWidget({super.key, required this.onTap, this.onSubmit, this.onChange});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +22,10 @@ class FilterItemWidget extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 15),
       child: Row(
         children: [
-          const Expanded(
+           Expanded(
             child: SearchFormField(
+              onChange: onChange,
+              onSubmit: onSubmit,
               searchHint: 'بحث',
             ),
           ),

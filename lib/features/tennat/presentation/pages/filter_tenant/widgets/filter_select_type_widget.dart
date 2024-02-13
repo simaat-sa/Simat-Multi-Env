@@ -1,30 +1,30 @@
 part of 'filter_widgets_imports.dart';
 
 class FilterSelectTypeWidget extends StatelessWidget {
-  final FilterTenantController controller;
+  final TenantScreenController controller;
 
   const FilterSelectTypeWidget({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return ObsValueConsumer<ContractTypes>(
-      observable:controller.selectTypeObs,
+      observable: controller.selectTypeObs,
       builder: (context, value) {
-        return Column(
-          children: ContractTypes.values.map((e) {
+        return Column(children: [
+          const FilterHeaderTitle(title: 'نوع العقد'),
+          Gaps.vGap10,
+          ...ContractTypes.values.map((e) {
             return Visibility(
               visible: e != ContractTypes.non,
               child: FilterSelectItemWidget(
-                controller: controller,
-                onTap: () =>
-                    controller.selectTypeObs.setValue(e),
+                onTap: () => controller.selectTypeObs.setValue(e),
                 title: title(e),
                 value: e.index,
                 changeValue: value.index,
               ),
             );
-          }).toList(),
-        );
+          }),
+        ]);
       },
     );
   }
