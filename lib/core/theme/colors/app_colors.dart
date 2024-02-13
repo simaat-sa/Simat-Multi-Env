@@ -50,6 +50,7 @@ abstract class AppColors {
   Color get background;
 
   Color get backgroundLight;
+  Color get bgLight;
 
   Color get backgroundWhite;
 

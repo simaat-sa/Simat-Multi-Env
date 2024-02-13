@@ -64,4 +64,7 @@ class AppLightColors extends AppColors {
   @override
   Color get backgroundLight => const Color(0xffe0e6ec);
 
+  @override
+  Color get bgLight => const Color(0xffF5F6F8);
+
 }
