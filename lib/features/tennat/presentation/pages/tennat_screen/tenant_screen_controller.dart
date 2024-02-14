@@ -7,6 +7,7 @@ class TenantScreenController {
   final ObsValue<TenantVisibility> selectStatusObs = ObsValue<TenantVisibility>.withInit(TenantVisibility.non);
 
   final TenantRequester requester = TenantRequester();
+   String searchText ='';
 
   TenantScreenController() {
     requester.setLoadingState();
@@ -22,29 +23,19 @@ class TenantScreenController {
     );
   }
 
-  late List<TenantModel> listTenant;
 
   Future<void> requestData() async {
     await requester.request();
-    listTenant = requester.data ?? [];
   }
 
-  void onSubmitFilter() {
-    final list = listTenant.where((element) {
-      return element.status == selectStatusObs.getValue() && element.type == selectTypeObs.getValue();
-    }).toList();
-    requester.successState(list ?? []);
+  void onFilter(){
+    requester.applyTenantFilter(selectStatusObs.getValue(), selectTypeObs.getValue(), searchText);
   }
-  void onChangeSearch(String value) {
-    final list = listTenant.where((element) {
-      return element.unitName.contains(value.trim()) || element.code.contains(value.trim());
-    }).toList();
-    requester.successState(list ?? []);
-  }
+
 
   void onResetFilter() {
     selectStatusObs.setValue(TenantVisibility.non);
     selectTypeObs.setValue(ContractTypes.non);
-    requester.successState(listTenant);
+    requester.resetFilter();
   }
 }

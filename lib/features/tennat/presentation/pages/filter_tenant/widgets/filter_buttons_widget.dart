@@ -14,7 +14,7 @@ class FilterButtonsWidget extends StatelessWidget {
           Expanded(
             child: InkWell(
               onTap: () {
-                controller.onSubmitFilter();
+                controller.onFilter();
                 AutoRouter.of(context).pop();
               },
               child: Container(

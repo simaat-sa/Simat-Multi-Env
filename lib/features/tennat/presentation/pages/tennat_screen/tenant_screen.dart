@@ -29,8 +29,14 @@ class _TenantScreenState extends State<TenantScreen> {
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               children: [
                 FilterItemWidget(
-                  onSubmit:(val) => controller.onChangeSearch(val),
-                  onChange: (val) => controller.onChangeSearch(val),
+                  onChange: (val) {
+                    controller.searchText = val;
+                    controller.onFilter();
+                  },
+                  onSubmit: (value) {
+                    controller.searchText = value;
+                    controller.onFilter();
+                  },
                   onTap: () => AutoRouter.of(context).push(FilterTenantRoute(controller: controller)),
                 ),
                 PageHeaderTitleWidget(

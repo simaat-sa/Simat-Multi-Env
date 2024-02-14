@@ -31,8 +31,9 @@ class ContractRequester extends Requester<List<ContractModel>> {
 
   void applyContractFilter(ContractStatus status, String searchText) {
     final list = _listContract.where((element) {
-      var textSearch = element.code.contains(searchText.trim()) || element.unitName.contains(searchText.trim());
-      return element.status == status && textSearch;
+      final textSearch = element.code.contains(searchText.trim()) || element.unitName.contains(searchText.trim());
+      final statusCheck = status == ContractStatus.non ? true : element.status == status;
+      return statusCheck && textSearch;
     }).toList();
     successState(list);
   }
