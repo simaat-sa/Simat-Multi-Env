@@ -54,7 +54,7 @@ class ContractDialog extends StatelessWidget {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                        color: context.colors.primary,
+                        color: model.statusColor,
                         borderRadius: BorderRadius.circular(5),
                       ),
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),

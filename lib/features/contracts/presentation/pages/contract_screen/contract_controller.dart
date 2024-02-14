@@ -5,7 +5,8 @@ part of 'contract_screen_imports.dart';
 class ContractController{
   ObsValue<ContractStatus> filterContractObs = ObsValue<ContractStatus>.withInit(ContractStatus.non);
   final ContractRequester requester = ContractRequester();
-  late List<ContractModel> listContract;
+
+  String searchText = "";
 
   ContractController() {
     requester.setLoadingState();
@@ -34,24 +35,14 @@ class ContractController{
 
   Future<void> requestData() async {
     await requester.request();
-    listContract = requester.data ?? [];
   }
 
-  void onSubmitFilter() {
-    final list = listContract.where((element) {
-      return element.status == filterContractObs.getValue();
-    }).toList();
-    requester.successState(list ?? []);
+  void onFilter() {
+    requester.applyContractFilter(filterContractObs.getValue(), searchText);
   }
 
-  void onSearch(String value) {
-    final list = listContract.where((element) {
-      return element.code.contains(value.trim())||element.unitName.contains(value.trim());
-    }).toList();
-    requester.successState(list ?? []);
-  }
   void onResetFilter() {
     filterContractObs.setValue(ContractStatus.non);
-    requester.successState(listContract);
+    requester.resetFilter();
   }
 }

@@ -28,7 +28,10 @@ class _ContractScreenState extends State<ContractScreen> {
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               children: [
                 FilterItemWidget(
-                  onChange: (value) => controller.onSearch(value),
+                  onChange: (value) {
+                    controller.searchText = value;
+                    controller.onFilter();
+                  },
                   onTap: () => AutoRouter.of(context).push(FilterContractRoute(controller: controller)),
                 ),
                 PageHeaderTitleWidget(
