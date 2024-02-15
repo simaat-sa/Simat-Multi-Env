@@ -13,14 +13,13 @@ class AddContractController {
   }
 
   Future<void> addContract(BuildContext context) async {
-    //final params = addMaintenanceParams();
-    AutoRouter.of(context).push(CompleteAddContractRoute());
-    // var result = await getIt.get<ContractRepository>().addMaintenance(params);
-    // result.whenOrNull(
-    //   isSuccess: (data) {
-    //       AutoRouter.of(context).push(CompleteAddContractRoute(isSuccess: data!=null));
-    //   },
-    // );
+    final params = addMaintenanceParams();
+    var result = await getIt.get<ContractRepository>().addMaintenance(params);
+    result.whenOrNull(
+      isSuccess: (data) {
+          AutoRouter.of(context).push(CompleteAddContractRoute(model: data));
+      },
+    );
   }
 
   AddMaintenanceParams addMaintenanceParams() {
