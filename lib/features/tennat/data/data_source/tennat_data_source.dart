@@ -7,5 +7,5 @@ abstract class TenantDataSource{
 
   Future<MyResult<List<PropsModel>>> getProps (bool params);
 
-  Future<MyResult<List<PropsModel>>> getPropsUnites (int params);
+  Future<MyResult<List<PropsModel>>> getPropsUnites (String params);
 }

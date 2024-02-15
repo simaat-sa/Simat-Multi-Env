@@ -4,7 +4,7 @@ import 'package:flutter_tdd/features/tennat/data/models/props_model/props_model.
 import 'package:flutter_tdd/features/tennat/domain/repositories/tennat_repository.dart';
 
 class PropsRequester extends Requester<List<PropsModel>> {
-  final int id;
+  final String id;
 
   void setLoadingState() {
     loadingState();

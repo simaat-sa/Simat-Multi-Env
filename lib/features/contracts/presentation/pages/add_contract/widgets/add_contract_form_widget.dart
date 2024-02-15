@@ -9,31 +9,101 @@ class AddContractFormWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        BaseFormOption<TenantModel>(
+        BaseFormOption<PropsModel>(
           hintText: 'العقار الرئيسي',
           bottomSheetTitle: 'العقار الرئيسي',
           showSearch: true,
           showDecoration: true,
           isMultiple: false,
-          onClearPressed: () {},
-          onSaveValue: (values, iMultiple) {},
+          onClearPressed: () => controller.selectedProps = [],
+          onSaveValue: (values, iMultiple) => controller.selectedProps = values ?? [],
           optionsRequester: BaseOptionsRequester(
             isRemotelySearch: false,
             immediatelyRequestOptions: true,
-            valueMainTitleGetter:(value) => value?.unitName,
-            fetcher: (c) =>getIt<TenantRepository>().getProps(true),
+            valueMainTitleGetter: (value) => value?.areCode,
+            fetcher: (c) => getIt<TenantRepository>().getProps(true),
           ),
-          selectedItems: [],
-          valueIdGetter: (p0) {},
-          valueMainTitleGetter: (p0) {},
+          selectedItems: controller.selectedProps,
+          valueIdGetter: (p0) => p0?.propId,
+          valueMainTitleGetter: (p0) => p0?.areCode,
           selectedOptionBuilder: (list) {
-            return BaseOptionsDisplayWidget<TenantModel>(selectedOptions: list, titleGetter: (value) => value.unitName);
+            return BaseOptionsDisplayWidget<PropsModel>(
+              selectedOptions: list,
+              titleGetter: (value) => value.areCode,
+            );
           },
           optionItemBuilder: (item, isSelected) {
             return SelectableOptionItemWidget(
               isSelected: isSelected,
               optionItemWidget: OptionItemWidget(
-                title: item.unitName,
+                title: item.areCode,
+              ),
+            );
+          },
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16),
+          child: BaseFormOption<PropsModel>(
+            hintText: 'الوحدة العقارية',
+            bottomSheetTitle: 'الوحدة العقارية',
+            showSearch: true,
+            showDecoration: true,
+            isMultiple: false,
+            onClearPressed: () => controller.selectedPropUnits = [],
+            onSaveValue: (values, iMultiple) => controller.selectedPropUnits = values ?? [],
+            optionsRequester: BaseOptionsRequester(
+              isRemotelySearch: false,
+              immediatelyRequestOptions: true,
+              valueMainTitleGetter: (value) => value?.areDescFo,
+              fetcher: (c) => getIt<TenantRepository>().getPropsUnites(controller.selectedProps.first.areId),
+            ),
+            selectedItems: controller.selectedPropUnits,
+            valueIdGetter: (p0) => p0?.propId,
+            valueMainTitleGetter: (p0) => p0?.areDescFo,
+            selectedOptionBuilder: (list) {
+              return BaseOptionsDisplayWidget<PropsModel>(
+                selectedOptions: list,
+                titleGetter: (value) => value.areDescFo,
+              );
+            },
+            optionItemBuilder: (item, isSelected) {
+              return SelectableOptionItemWidget(
+                isSelected: isSelected,
+                optionItemWidget: OptionItemWidget(
+                  title: item.areDescFo,
+                ),
+              );
+            },
+          ),
+        ),
+        BaseFormOption<MaintenanceServicesModel>(
+          hintText: 'الوحدة العقارية',
+          bottomSheetTitle: 'الوحدة العقارية',
+          showSearch: true,
+          showDecoration: true,
+          isMultiple: true,
+          onClearPressed: () => controller.selectedServices = [],
+          onSaveValue: (values, iMultiple) => controller.selectedServices = values ?? [],
+          optionsRequester: BaseOptionsRequester(
+            isRemotelySearch: false,
+            immediatelyRequestOptions: true,
+            valueMainTitleGetter: (value) => value?.ar,
+            fetcher: (c) => getIt<ContractRepository>().getMaintenanceServices(true),
+          ),
+          selectedItems: controller.selectedServices,
+          valueIdGetter: (p0) => p0?.id,
+          valueMainTitleGetter: (p0) => p0?.ar,
+          selectedOptionBuilder: (list) {
+            return BaseOptionsDisplayWidget<MaintenanceServicesModel>(
+              selectedOptions: list,
+              titleGetter: (value) => value.ar,
+            );
+          },
+          optionItemBuilder: (item, isSelected) {
+            return SelectableOptionItemWidget(
+              isSelected: isSelected,
+              optionItemWidget: OptionItemWidget(
+                title: item.ar,
               ),
             );
           },

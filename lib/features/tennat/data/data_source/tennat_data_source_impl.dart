@@ -40,7 +40,7 @@ class TenantDataSourceImpl extends TenantDataSource {
   }
 
   @override
-  Future<MyResult<List<PropsModel>>> getPropsUnites(int params) async {
+  Future<MyResult<List<PropsModel>>> getPropsUnites(String params) async {
     HttpRequestModel model = HttpRequestModel(
       url: ApiNames.propUnits(params),
       responseType: ResType.list,

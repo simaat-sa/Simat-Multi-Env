@@ -24,7 +24,7 @@ class _AddContractState extends State<AddContract> {
             AddContractSwitchCoastWidget(controller: controller),
             Gaps.vGap12,
             const AddContractDescWidget(),
-            const AddContractButtonWidget(),
+             AddContractButtonWidget(controller: controller),
           ],
         ),
       ),

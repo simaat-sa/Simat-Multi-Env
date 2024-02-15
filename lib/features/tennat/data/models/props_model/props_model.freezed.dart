@@ -29,7 +29,7 @@ mixin _$PropsModel {
   @JsonKey(name: 'are_are_id')
   String get areAreId => throw _privateConstructorUsedError;
   @JsonKey(name: 'parent_code')
-  String get parentCode => throw _privateConstructorUsedError;
+  int? get parentCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_desc_fo')
   String get areDescFo => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_desc_en')
@@ -169,7 +169,7 @@ mixin _$PropsModel {
   @JsonKey(name: 'fxd_comm')
   String get fxdComm => throw _privateConstructorUsedError;
   @JsonKey(name: 'unit_no')
-  String get unitNo => throw _privateConstructorUsedError;
+  String? get unitNo => throw _privateConstructorUsedError;
   @JsonKey(name: 'floor_no')
   String get floorNo => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_att')
@@ -187,7 +187,7 @@ mixin _$PropsModel {
   @JsonKey(name: 'are_desc_full')
   String get areDescFull => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_en_full')
-  String get areEnFull => throw _privateConstructorUsedError;
+  String? get areEnFull => throw _privateConstructorUsedError;
   @JsonKey(name: 'uuid')
   String get uuid => throw _privateConstructorUsedError;
   @JsonKey(name: 'px_selling')
@@ -221,9 +221,9 @@ mixin _$PropsModel {
   @JsonKey(name: 'collector')
   String get collector => throw _privateConstructorUsedError;
   @JsonKey(name: 'rooms')
-  String get rooms => throw _privateConstructorUsedError;
+  String? get rooms => throw _privateConstructorUsedError;
   @JsonKey(name: 'ejar_prop_id')
-  String get ejarPropId => throw _privateConstructorUsedError;
+  String? get ejarPropId => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_floors')
   String get propFloors => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_usage')
@@ -249,9 +249,9 @@ mixin _$PropsModel {
   @JsonKey(name: 'issued_by')
   String get issuedBy => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_number')
-  String get propNumber => throw _privateConstructorUsedError;
+  String? get propNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'ejar_ownership_number')
-  String get ejarOwnershipNumber => throw _privateConstructorUsedError;
+  String? get ejarOwnershipNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'contract_type_view')
   String get contractTypeView => throw _privateConstructorUsedError;
 
@@ -272,7 +272,7 @@ abstract class $PropsModelCopyWith<$Res> {
       @JsonKey(name: 'are_id') String areId,
       @JsonKey(name: 'are_code') String areCode,
       @JsonKey(name: 'are_are_id') String areAreId,
-      @JsonKey(name: 'parent_code') String parentCode,
+      @JsonKey(name: 'parent_code') int? parentCode,
       @JsonKey(name: 'are_desc_fo') String areDescFo,
       @JsonKey(name: 'are_desc_en') String areDescEn,
       @JsonKey(name: 'parent_desc_ar') String parentDescAr,
@@ -342,7 +342,7 @@ abstract class $PropsModelCopyWith<$Res> {
       @JsonKey(name: 'due_comm') String dueComm,
       @JsonKey(name: 'pct_comm') String pctComm,
       @JsonKey(name: 'fxd_comm') String fxdComm,
-      @JsonKey(name: 'unit_no') String unitNo,
+      @JsonKey(name: 'unit_no') String? unitNo,
       @JsonKey(name: 'floor_no') String floorNo,
       @JsonKey(name: 'prop_att') String propAtt,
       @JsonKey(name: 'res_uid') String resUid,
@@ -351,7 +351,7 @@ abstract class $PropsModelCopyWith<$Res> {
       @JsonKey(name: 'prop_region') String propRegion,
       @JsonKey(name: 'country') String country,
       @JsonKey(name: 'are_desc_full') String areDescFull,
-      @JsonKey(name: 'are_en_full') String areEnFull,
+      @JsonKey(name: 'are_en_full') String? areEnFull,
       @JsonKey(name: 'uuid') String uuid,
       @JsonKey(name: 'px_selling') String pxSelling,
       @JsonKey(name: 'build_area') String buildArea,
@@ -368,8 +368,8 @@ abstract class $PropsModelCopyWith<$Res> {
       @JsonKey(name: 'qitea') String qitea,
       @JsonKey(name: 'scheme') String scheme,
       @JsonKey(name: 'collector') String collector,
-      @JsonKey(name: 'rooms') String rooms,
-      @JsonKey(name: 'ejar_prop_id') String ejarPropId,
+      @JsonKey(name: 'rooms') String? rooms,
+      @JsonKey(name: 'ejar_prop_id') String? ejarPropId,
       @JsonKey(name: 'prop_floors') String propFloors,
       @JsonKey(name: 'prop_usage') String propUsage,
       @JsonKey(name: 'deed_type') String deedType,
@@ -382,8 +382,8 @@ abstract class $PropsModelCopyWith<$Res> {
       @JsonKey(name: 'additional_number') String additionalNumber,
       @JsonKey(name: 'issue_place') String issuePlace,
       @JsonKey(name: 'issued_by') String issuedBy,
-      @JsonKey(name: 'prop_number') String propNumber,
-      @JsonKey(name: 'ejar_ownership_number') String ejarOwnershipNumber,
+      @JsonKey(name: 'prop_number') String? propNumber,
+      @JsonKey(name: 'ejar_ownership_number') String? ejarOwnershipNumber,
       @JsonKey(name: 'contract_type_view') String contractTypeView});
 }
 
@@ -404,7 +404,7 @@ class _$PropsModelCopyWithImpl<$Res, $Val extends PropsModel>
     Object? areId = null,
     Object? areCode = null,
     Object? areAreId = null,
-    Object? parentCode = null,
+    Object? parentCode = freezed,
     Object? areDescFo = null,
     Object? areDescEn = null,
     Object? parentDescAr = null,
@@ -474,7 +474,7 @@ class _$PropsModelCopyWithImpl<$Res, $Val extends PropsModel>
     Object? dueComm = null,
     Object? pctComm = null,
     Object? fxdComm = null,
-    Object? unitNo = null,
+    Object? unitNo = freezed,
     Object? floorNo = null,
     Object? propAtt = null,
     Object? resUid = null,
@@ -483,7 +483,7 @@ class _$PropsModelCopyWithImpl<$Res, $Val extends PropsModel>
     Object? propRegion = null,
     Object? country = null,
     Object? areDescFull = null,
-    Object? areEnFull = null,
+    Object? areEnFull = freezed,
     Object? uuid = null,
     Object? pxSelling = null,
     Object? buildArea = null,
@@ -500,8 +500,8 @@ class _$PropsModelCopyWithImpl<$Res, $Val extends PropsModel>
     Object? qitea = null,
     Object? scheme = null,
     Object? collector = null,
-    Object? rooms = null,
-    Object? ejarPropId = null,
+    Object? rooms = freezed,
+    Object? ejarPropId = freezed,
     Object? propFloors = null,
     Object? propUsage = null,
     Object? deedType = null,
@@ -514,8 +514,8 @@ class _$PropsModelCopyWithImpl<$Res, $Val extends PropsModel>
     Object? additionalNumber = null,
     Object? issuePlace = null,
     Object? issuedBy = null,
-    Object? propNumber = null,
-    Object? ejarOwnershipNumber = null,
+    Object? propNumber = freezed,
+    Object? ejarOwnershipNumber = freezed,
     Object? contractTypeView = null,
   }) {
     return _then(_value.copyWith(
@@ -535,10 +535,10 @@ class _$PropsModelCopyWithImpl<$Res, $Val extends PropsModel>
           ? _value.areAreId
           : areAreId // ignore: cast_nullable_to_non_nullable
               as String,
-      parentCode: null == parentCode
+      parentCode: freezed == parentCode
           ? _value.parentCode
           : parentCode // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
       areDescFo: null == areDescFo
           ? _value.areDescFo
           : areDescFo // ignore: cast_nullable_to_non_nullable
@@ -815,10 +815,10 @@ class _$PropsModelCopyWithImpl<$Res, $Val extends PropsModel>
           ? _value.fxdComm
           : fxdComm // ignore: cast_nullable_to_non_nullable
               as String,
-      unitNo: null == unitNo
+      unitNo: freezed == unitNo
           ? _value.unitNo
           : unitNo // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       floorNo: null == floorNo
           ? _value.floorNo
           : floorNo // ignore: cast_nullable_to_non_nullable
@@ -851,10 +851,10 @@ class _$PropsModelCopyWithImpl<$Res, $Val extends PropsModel>
           ? _value.areDescFull
           : areDescFull // ignore: cast_nullable_to_non_nullable
               as String,
-      areEnFull: null == areEnFull
+      areEnFull: freezed == areEnFull
           ? _value.areEnFull
           : areEnFull // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       uuid: null == uuid
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
@@ -919,14 +919,14 @@ class _$PropsModelCopyWithImpl<$Res, $Val extends PropsModel>
           ? _value.collector
           : collector // ignore: cast_nullable_to_non_nullable
               as String,
-      rooms: null == rooms
+      rooms: freezed == rooms
           ? _value.rooms
           : rooms // ignore: cast_nullable_to_non_nullable
-              as String,
-      ejarPropId: null == ejarPropId
+              as String?,
+      ejarPropId: freezed == ejarPropId
           ? _value.ejarPropId
           : ejarPropId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       propFloors: null == propFloors
           ? _value.propFloors
           : propFloors // ignore: cast_nullable_to_non_nullable
@@ -975,14 +975,14 @@ class _$PropsModelCopyWithImpl<$Res, $Val extends PropsModel>
           ? _value.issuedBy
           : issuedBy // ignore: cast_nullable_to_non_nullable
               as String,
-      propNumber: null == propNumber
+      propNumber: freezed == propNumber
           ? _value.propNumber
           : propNumber // ignore: cast_nullable_to_non_nullable
-              as String,
-      ejarOwnershipNumber: null == ejarOwnershipNumber
+              as String?,
+      ejarOwnershipNumber: freezed == ejarOwnershipNumber
           ? _value.ejarOwnershipNumber
           : ejarOwnershipNumber // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       contractTypeView: null == contractTypeView
           ? _value.contractTypeView
           : contractTypeView // ignore: cast_nullable_to_non_nullable
@@ -1004,7 +1004,7 @@ abstract class _$$PropsModelImplCopyWith<$Res>
       @JsonKey(name: 'are_id') String areId,
       @JsonKey(name: 'are_code') String areCode,
       @JsonKey(name: 'are_are_id') String areAreId,
-      @JsonKey(name: 'parent_code') String parentCode,
+      @JsonKey(name: 'parent_code') int? parentCode,
       @JsonKey(name: 'are_desc_fo') String areDescFo,
       @JsonKey(name: 'are_desc_en') String areDescEn,
       @JsonKey(name: 'parent_desc_ar') String parentDescAr,
@@ -1074,7 +1074,7 @@ abstract class _$$PropsModelImplCopyWith<$Res>
       @JsonKey(name: 'due_comm') String dueComm,
       @JsonKey(name: 'pct_comm') String pctComm,
       @JsonKey(name: 'fxd_comm') String fxdComm,
-      @JsonKey(name: 'unit_no') String unitNo,
+      @JsonKey(name: 'unit_no') String? unitNo,
       @JsonKey(name: 'floor_no') String floorNo,
       @JsonKey(name: 'prop_att') String propAtt,
       @JsonKey(name: 'res_uid') String resUid,
@@ -1083,7 +1083,7 @@ abstract class _$$PropsModelImplCopyWith<$Res>
       @JsonKey(name: 'prop_region') String propRegion,
       @JsonKey(name: 'country') String country,
       @JsonKey(name: 'are_desc_full') String areDescFull,
-      @JsonKey(name: 'are_en_full') String areEnFull,
+      @JsonKey(name: 'are_en_full') String? areEnFull,
       @JsonKey(name: 'uuid') String uuid,
       @JsonKey(name: 'px_selling') String pxSelling,
       @JsonKey(name: 'build_area') String buildArea,
@@ -1100,8 +1100,8 @@ abstract class _$$PropsModelImplCopyWith<$Res>
       @JsonKey(name: 'qitea') String qitea,
       @JsonKey(name: 'scheme') String scheme,
       @JsonKey(name: 'collector') String collector,
-      @JsonKey(name: 'rooms') String rooms,
-      @JsonKey(name: 'ejar_prop_id') String ejarPropId,
+      @JsonKey(name: 'rooms') String? rooms,
+      @JsonKey(name: 'ejar_prop_id') String? ejarPropId,
       @JsonKey(name: 'prop_floors') String propFloors,
       @JsonKey(name: 'prop_usage') String propUsage,
       @JsonKey(name: 'deed_type') String deedType,
@@ -1114,8 +1114,8 @@ abstract class _$$PropsModelImplCopyWith<$Res>
       @JsonKey(name: 'additional_number') String additionalNumber,
       @JsonKey(name: 'issue_place') String issuePlace,
       @JsonKey(name: 'issued_by') String issuedBy,
-      @JsonKey(name: 'prop_number') String propNumber,
-      @JsonKey(name: 'ejar_ownership_number') String ejarOwnershipNumber,
+      @JsonKey(name: 'prop_number') String? propNumber,
+      @JsonKey(name: 'ejar_ownership_number') String? ejarOwnershipNumber,
       @JsonKey(name: 'contract_type_view') String contractTypeView});
 }
 
@@ -1134,7 +1134,7 @@ class __$$PropsModelImplCopyWithImpl<$Res>
     Object? areId = null,
     Object? areCode = null,
     Object? areAreId = null,
-    Object? parentCode = null,
+    Object? parentCode = freezed,
     Object? areDescFo = null,
     Object? areDescEn = null,
     Object? parentDescAr = null,
@@ -1204,7 +1204,7 @@ class __$$PropsModelImplCopyWithImpl<$Res>
     Object? dueComm = null,
     Object? pctComm = null,
     Object? fxdComm = null,
-    Object? unitNo = null,
+    Object? unitNo = freezed,
     Object? floorNo = null,
     Object? propAtt = null,
     Object? resUid = null,
@@ -1213,7 +1213,7 @@ class __$$PropsModelImplCopyWithImpl<$Res>
     Object? propRegion = null,
     Object? country = null,
     Object? areDescFull = null,
-    Object? areEnFull = null,
+    Object? areEnFull = freezed,
     Object? uuid = null,
     Object? pxSelling = null,
     Object? buildArea = null,
@@ -1230,8 +1230,8 @@ class __$$PropsModelImplCopyWithImpl<$Res>
     Object? qitea = null,
     Object? scheme = null,
     Object? collector = null,
-    Object? rooms = null,
-    Object? ejarPropId = null,
+    Object? rooms = freezed,
+    Object? ejarPropId = freezed,
     Object? propFloors = null,
     Object? propUsage = null,
     Object? deedType = null,
@@ -1244,8 +1244,8 @@ class __$$PropsModelImplCopyWithImpl<$Res>
     Object? additionalNumber = null,
     Object? issuePlace = null,
     Object? issuedBy = null,
-    Object? propNumber = null,
-    Object? ejarOwnershipNumber = null,
+    Object? propNumber = freezed,
+    Object? ejarOwnershipNumber = freezed,
     Object? contractTypeView = null,
   }) {
     return _then(_$PropsModelImpl(
@@ -1265,10 +1265,10 @@ class __$$PropsModelImplCopyWithImpl<$Res>
           ? _value.areAreId
           : areAreId // ignore: cast_nullable_to_non_nullable
               as String,
-      parentCode: null == parentCode
+      parentCode: freezed == parentCode
           ? _value.parentCode
           : parentCode // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
       areDescFo: null == areDescFo
           ? _value.areDescFo
           : areDescFo // ignore: cast_nullable_to_non_nullable
@@ -1545,10 +1545,10 @@ class __$$PropsModelImplCopyWithImpl<$Res>
           ? _value.fxdComm
           : fxdComm // ignore: cast_nullable_to_non_nullable
               as String,
-      unitNo: null == unitNo
+      unitNo: freezed == unitNo
           ? _value.unitNo
           : unitNo // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       floorNo: null == floorNo
           ? _value.floorNo
           : floorNo // ignore: cast_nullable_to_non_nullable
@@ -1581,10 +1581,10 @@ class __$$PropsModelImplCopyWithImpl<$Res>
           ? _value.areDescFull
           : areDescFull // ignore: cast_nullable_to_non_nullable
               as String,
-      areEnFull: null == areEnFull
+      areEnFull: freezed == areEnFull
           ? _value.areEnFull
           : areEnFull // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       uuid: null == uuid
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
@@ -1649,14 +1649,14 @@ class __$$PropsModelImplCopyWithImpl<$Res>
           ? _value.collector
           : collector // ignore: cast_nullable_to_non_nullable
               as String,
-      rooms: null == rooms
+      rooms: freezed == rooms
           ? _value.rooms
           : rooms // ignore: cast_nullable_to_non_nullable
-              as String,
-      ejarPropId: null == ejarPropId
+              as String?,
+      ejarPropId: freezed == ejarPropId
           ? _value.ejarPropId
           : ejarPropId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       propFloors: null == propFloors
           ? _value.propFloors
           : propFloors // ignore: cast_nullable_to_non_nullable
@@ -1705,14 +1705,14 @@ class __$$PropsModelImplCopyWithImpl<$Res>
           ? _value.issuedBy
           : issuedBy // ignore: cast_nullable_to_non_nullable
               as String,
-      propNumber: null == propNumber
+      propNumber: freezed == propNumber
           ? _value.propNumber
           : propNumber // ignore: cast_nullable_to_non_nullable
-              as String,
-      ejarOwnershipNumber: null == ejarOwnershipNumber
+              as String?,
+      ejarOwnershipNumber: freezed == ejarOwnershipNumber
           ? _value.ejarOwnershipNumber
           : ejarOwnershipNumber // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       contractTypeView: null == contractTypeView
           ? _value.contractTypeView
           : contractTypeView // ignore: cast_nullable_to_non_nullable
@@ -1730,7 +1730,7 @@ class _$PropsModelImpl extends _PropsModel {
       @JsonKey(name: 'are_id') required this.areId,
       @JsonKey(name: 'are_code') required this.areCode,
       @JsonKey(name: 'are_are_id') required this.areAreId,
-      @JsonKey(name: 'parent_code') required this.parentCode,
+      @JsonKey(name: 'parent_code') this.parentCode,
       @JsonKey(name: 'are_desc_fo') required this.areDescFo,
       @JsonKey(name: 'are_desc_en') required this.areDescEn,
       @JsonKey(name: 'parent_desc_ar') required this.parentDescAr,
@@ -1800,7 +1800,7 @@ class _$PropsModelImpl extends _PropsModel {
       @JsonKey(name: 'due_comm') required this.dueComm,
       @JsonKey(name: 'pct_comm') required this.pctComm,
       @JsonKey(name: 'fxd_comm') required this.fxdComm,
-      @JsonKey(name: 'unit_no') required this.unitNo,
+      @JsonKey(name: 'unit_no') this.unitNo,
       @JsonKey(name: 'floor_no') required this.floorNo,
       @JsonKey(name: 'prop_att') required this.propAtt,
       @JsonKey(name: 'res_uid') required this.resUid,
@@ -1809,7 +1809,7 @@ class _$PropsModelImpl extends _PropsModel {
       @JsonKey(name: 'prop_region') required this.propRegion,
       @JsonKey(name: 'country') required this.country,
       @JsonKey(name: 'are_desc_full') required this.areDescFull,
-      @JsonKey(name: 'are_en_full') required this.areEnFull,
+      @JsonKey(name: 'are_en_full') this.areEnFull,
       @JsonKey(name: 'uuid') required this.uuid,
       @JsonKey(name: 'px_selling') required this.pxSelling,
       @JsonKey(name: 'build_area') required this.buildArea,
@@ -1826,8 +1826,8 @@ class _$PropsModelImpl extends _PropsModel {
       @JsonKey(name: 'qitea') required this.qitea,
       @JsonKey(name: 'scheme') required this.scheme,
       @JsonKey(name: 'collector') required this.collector,
-      @JsonKey(name: 'rooms') required this.rooms,
-      @JsonKey(name: 'ejar_prop_id') required this.ejarPropId,
+      @JsonKey(name: 'rooms') this.rooms,
+      @JsonKey(name: 'ejar_prop_id') this.ejarPropId,
       @JsonKey(name: 'prop_floors') required this.propFloors,
       @JsonKey(name: 'prop_usage') required this.propUsage,
       @JsonKey(name: 'deed_type') required this.deedType,
@@ -1840,8 +1840,8 @@ class _$PropsModelImpl extends _PropsModel {
       @JsonKey(name: 'additional_number') required this.additionalNumber,
       @JsonKey(name: 'issue_place') required this.issuePlace,
       @JsonKey(name: 'issued_by') required this.issuedBy,
-      @JsonKey(name: 'prop_number') required this.propNumber,
-      @JsonKey(name: 'ejar_ownership_number') required this.ejarOwnershipNumber,
+      @JsonKey(name: 'prop_number') this.propNumber,
+      @JsonKey(name: 'ejar_ownership_number') this.ejarOwnershipNumber,
       @JsonKey(name: 'contract_type_view') required this.contractTypeView})
       : super._();
 
@@ -1862,7 +1862,7 @@ class _$PropsModelImpl extends _PropsModel {
   final String areAreId;
   @override
   @JsonKey(name: 'parent_code')
-  final String parentCode;
+  final int? parentCode;
   @override
   @JsonKey(name: 'are_desc_fo')
   final String areDescFo;
@@ -2072,7 +2072,7 @@ class _$PropsModelImpl extends _PropsModel {
   final String fxdComm;
   @override
   @JsonKey(name: 'unit_no')
-  final String unitNo;
+  final String? unitNo;
   @override
   @JsonKey(name: 'floor_no')
   final String floorNo;
@@ -2099,7 +2099,7 @@ class _$PropsModelImpl extends _PropsModel {
   final String areDescFull;
   @override
   @JsonKey(name: 'are_en_full')
-  final String areEnFull;
+  final String? areEnFull;
   @override
   @JsonKey(name: 'uuid')
   final String uuid;
@@ -2150,10 +2150,10 @@ class _$PropsModelImpl extends _PropsModel {
   final String collector;
   @override
   @JsonKey(name: 'rooms')
-  final String rooms;
+  final String? rooms;
   @override
   @JsonKey(name: 'ejar_prop_id')
-  final String ejarPropId;
+  final String? ejarPropId;
   @override
   @JsonKey(name: 'prop_floors')
   final String propFloors;
@@ -2192,10 +2192,10 @@ class _$PropsModelImpl extends _PropsModel {
   final String issuedBy;
   @override
   @JsonKey(name: 'prop_number')
-  final String propNumber;
+  final String? propNumber;
   @override
   @JsonKey(name: 'ejar_ownership_number')
-  final String ejarOwnershipNumber;
+  final String? ejarOwnershipNumber;
   @override
   @JsonKey(name: 'contract_type_view')
   final String contractTypeView;
@@ -2515,7 +2515,7 @@ abstract class _PropsModel extends PropsModel {
       @JsonKey(name: 'are_id') required final String areId,
       @JsonKey(name: 'are_code') required final String areCode,
       @JsonKey(name: 'are_are_id') required final String areAreId,
-      @JsonKey(name: 'parent_code') required final String parentCode,
+      @JsonKey(name: 'parent_code') final int? parentCode,
       @JsonKey(name: 'are_desc_fo') required final String areDescFo,
       @JsonKey(name: 'are_desc_en') required final String areDescEn,
       @JsonKey(name: 'parent_desc_ar') required final String parentDescAr,
@@ -2586,7 +2586,7 @@ abstract class _PropsModel extends PropsModel {
       @JsonKey(name: 'due_comm') required final String dueComm,
       @JsonKey(name: 'pct_comm') required final String pctComm,
       @JsonKey(name: 'fxd_comm') required final String fxdComm,
-      @JsonKey(name: 'unit_no') required final String unitNo,
+      @JsonKey(name: 'unit_no') final String? unitNo,
       @JsonKey(name: 'floor_no') required final String floorNo,
       @JsonKey(name: 'prop_att') required final String propAtt,
       @JsonKey(name: 'res_uid') required final String resUid,
@@ -2595,7 +2595,7 @@ abstract class _PropsModel extends PropsModel {
       @JsonKey(name: 'prop_region') required final String propRegion,
       @JsonKey(name: 'country') required final String country,
       @JsonKey(name: 'are_desc_full') required final String areDescFull,
-      @JsonKey(name: 'are_en_full') required final String areEnFull,
+      @JsonKey(name: 'are_en_full') final String? areEnFull,
       @JsonKey(name: 'uuid') required final String uuid,
       @JsonKey(name: 'px_selling') required final String pxSelling,
       @JsonKey(name: 'build_area') required final String buildArea,
@@ -2612,8 +2612,8 @@ abstract class _PropsModel extends PropsModel {
       @JsonKey(name: 'qitea') required final String qitea,
       @JsonKey(name: 'scheme') required final String scheme,
       @JsonKey(name: 'collector') required final String collector,
-      @JsonKey(name: 'rooms') required final String rooms,
-      @JsonKey(name: 'ejar_prop_id') required final String ejarPropId,
+      @JsonKey(name: 'rooms') final String? rooms,
+      @JsonKey(name: 'ejar_prop_id') final String? ejarPropId,
       @JsonKey(name: 'prop_floors') required final String propFloors,
       @JsonKey(name: 'prop_usage') required final String propUsage,
       @JsonKey(name: 'deed_type') required final String deedType,
@@ -2628,9 +2628,8 @@ abstract class _PropsModel extends PropsModel {
       required final String additionalNumber,
       @JsonKey(name: 'issue_place') required final String issuePlace,
       @JsonKey(name: 'issued_by') required final String issuedBy,
-      @JsonKey(name: 'prop_number') required final String propNumber,
-      @JsonKey(name: 'ejar_ownership_number')
-      required final String ejarOwnershipNumber,
+      @JsonKey(name: 'prop_number') final String? propNumber,
+      @JsonKey(name: 'ejar_ownership_number') final String? ejarOwnershipNumber,
       @JsonKey(name: 'contract_type_view')
       required final String contractTypeView}) = _$PropsModelImpl;
   const _PropsModel._() : super._();
@@ -2652,7 +2651,7 @@ abstract class _PropsModel extends PropsModel {
   String get areAreId;
   @override
   @JsonKey(name: 'parent_code')
-  String get parentCode;
+  int? get parentCode;
   @override
   @JsonKey(name: 'are_desc_fo')
   String get areDescFo;
@@ -2862,7 +2861,7 @@ abstract class _PropsModel extends PropsModel {
   String get fxdComm;
   @override
   @JsonKey(name: 'unit_no')
-  String get unitNo;
+  String? get unitNo;
   @override
   @JsonKey(name: 'floor_no')
   String get floorNo;
@@ -2889,7 +2888,7 @@ abstract class _PropsModel extends PropsModel {
   String get areDescFull;
   @override
   @JsonKey(name: 'are_en_full')
-  String get areEnFull;
+  String? get areEnFull;
   @override
   @JsonKey(name: 'uuid')
   String get uuid;
@@ -2940,10 +2939,10 @@ abstract class _PropsModel extends PropsModel {
   String get collector;
   @override
   @JsonKey(name: 'rooms')
-  String get rooms;
+  String? get rooms;
   @override
   @JsonKey(name: 'ejar_prop_id')
-  String get ejarPropId;
+  String? get ejarPropId;
   @override
   @JsonKey(name: 'prop_floors')
   String get propFloors;
@@ -2982,10 +2981,10 @@ abstract class _PropsModel extends PropsModel {
   String get issuedBy;
   @override
   @JsonKey(name: 'prop_number')
-  String get propNumber;
+  String? get propNumber;
   @override
   @JsonKey(name: 'ejar_ownership_number')
-  String get ejarOwnershipNumber;
+  String? get ejarOwnershipNumber;
   @override
   @JsonKey(name: 'contract_type_view')
   String get contractTypeView;
