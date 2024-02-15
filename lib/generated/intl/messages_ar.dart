@@ -116,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "maintenanceCount": m1,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
+        "new_code": MessageLookupByLibrary.simpleMessage("كود جديد"),
         "no_internet_connection":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالانترنت"),
         "owner": MessageLookupByLibrary.simpleMessage("مالك"),

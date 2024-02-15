@@ -117,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "maintenanceCount": m1,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "Should be more than 8 and less than 30"),
+        "new_code": MessageLookupByLibrary.simpleMessage("New code"),
         "no_internet_connection":
             MessageLookupByLibrary.simpleMessage("No internet connection"),
         "owner": MessageLookupByLibrary.simpleMessage("Owner"),

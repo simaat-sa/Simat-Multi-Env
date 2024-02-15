@@ -77,5 +77,6 @@
   "rejected_by_the_owner": "rejected By The Owner",
   "rejected_by_the_supervisor": "rejected By The Supervisor",
   "supervisor_approved": "supervisor Approved",
-  "supervisor_identifications": "supervisor Identifications"
+  "supervisor_identifications": "supervisor Identifications",
+  "new_code": "New code"
 }

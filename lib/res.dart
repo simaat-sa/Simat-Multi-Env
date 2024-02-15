@@ -29,4 +29,5 @@ class Res {
   static const String selectLogo = "assets/images/select_logo.svg";
   static const String userLogo = "assets/images/user_icon.svg";
   static const String coinLogo = "assets/images/coin_icon.svg";
+  static const String detailsLogo = "assets/images/details_logo.svg";
 }

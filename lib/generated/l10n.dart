@@ -829,6 +829,16 @@ class S {
       args: [],
     );
   }
+
+  /// `New code`
+  String get new_code {
+    return Intl.message(
+      'New code',
+      name: 'new_code',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

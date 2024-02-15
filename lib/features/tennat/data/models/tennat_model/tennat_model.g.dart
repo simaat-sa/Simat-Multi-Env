@@ -19,7 +19,7 @@ _$TenantModelImpl _$$TenantModelImplFromJson(Map<String, dynamic> json) =>
       type: $enumDecode(_$ContractTypesEnumMap, json['contract_type']),
       propLat: json['prop_lat'] as String,
       propLng: json['prop_lng'] as String,
-      propImg: json['prop_img'] as String,
+      propImg: json['prop_img'] as String?,
       propCity: json['prop_city'] as String,
       propRegion: json['prop_region'] as String,
     );
