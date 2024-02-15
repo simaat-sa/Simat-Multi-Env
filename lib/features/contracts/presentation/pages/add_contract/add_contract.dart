@@ -20,8 +20,8 @@ class _AddContractState extends State<AddContract> {
           children: [
             const AddContractAppBarWidget(),
             Gaps.vGap24,
-            const AddContractFormWidget(),
-            AddContractSwitchCoastWidget(controller: controller,),
+            AddContractFormWidget(controller: controller),
+            AddContractSwitchCoastWidget(controller: controller),
             Gaps.vGap12,
             const AddContractDescWidget(),
             const AddContractButtonWidget(),
