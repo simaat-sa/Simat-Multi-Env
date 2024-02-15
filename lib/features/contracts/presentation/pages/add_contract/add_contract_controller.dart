@@ -34,7 +34,7 @@ class AddContractController {
     var result = await getIt.get<ContractRepository>().addMaintenance(params);
     result.when(
       isSuccess: (data) {
-        print("Success");
+        AutoRouter.of(context).push(CompleteAddContractRoute(model: data));
       },
       isError: (error) {
         print("Error");
