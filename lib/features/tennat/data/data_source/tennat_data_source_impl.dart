@@ -5,6 +5,7 @@ import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:flutter_tdd/features/tennat/data/data_source/tennat_data_source.dart';
 import 'package:flutter_tdd/features/tennat/data/models/tennat_model/tennat_model.dart';
 import 'package:injectable/injectable.dart';
+
 @Injectable(as: TenantDataSource)
 class TenantDataSourceImpl extends TenantDataSource {
   @override
@@ -16,9 +17,38 @@ class TenantDataSourceImpl extends TenantDataSource {
       refresh: params,
       responseKey: (data) => data['data'],
       toJsonFunc: (data) {
-        return List<TenantModel>.from(data.map((e)=>TenantModel.fromJson(e)));
+        return List<TenantModel>.from(data.map((e) => TenantModel.fromJson(e)));
       },
     );
-        return GenericHttpImpl<List<TenantModel>>()(model);
+    return GenericHttpImpl<List<TenantModel>>()(model);
+  }
+
+  @override
+  Future<MyResult<List<TenantModel>>> getProps(bool params) async {
+    HttpRequestModel model = HttpRequestModel(
+      url: ApiNames.properties,
+      responseType: ResType.list,
+      requestMethod: RequestMethod.get,
+      refresh: params,
+      responseKey: (data) => data['data'],
+      toJsonFunc: (data) {
+        return List<TenantModel>.from(data.map((e) => TenantModel.fromJson(e)));
+      },
+    );
+    return GenericHttpImpl<List<TenantModel>>()(model);
+  }
+
+  @override
+  Future<MyResult<List<TenantModel>>> getPropsUnites(int params) async {
+    HttpRequestModel model = HttpRequestModel(
+      url: ApiNames.propUnits(params),
+      responseType: ResType.list,
+      requestMethod: RequestMethod.get,
+      responseKey: (data) => data['data'],
+      toJsonFunc: (data) {
+        return List<TenantModel>.from(data.map((e) => TenantModel.fromJson(e)));
+      },
+    );
+    return GenericHttpImpl<List<TenantModel>>()(model);
   }
 }

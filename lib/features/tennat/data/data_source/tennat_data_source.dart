@@ -3,4 +3,8 @@ import 'package:flutter_tdd/features/tennat/data/models/tennat_model/tennat_mode
 
 abstract class TenantDataSource{
   Future<MyResult<List<TenantModel>>> getTenant (bool params);
+
+  Future<MyResult<List<TenantModel>>> getProps (bool params);
+
+  Future<MyResult<List<TenantModel>>> getPropsUnites (int params);
 }
