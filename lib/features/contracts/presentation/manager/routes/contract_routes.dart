@@ -4,4 +4,5 @@ import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 var contractRoutes =[
   AutoRoute(page: FilterContractRoute.page),
   AutoRoute(page: AddContractRoute.page),
+  AutoRoute(page: CompleteAddContractRoute.page),
 ];

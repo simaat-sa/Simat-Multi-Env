@@ -28,6 +28,7 @@ import 'package:flutter_tdd/features/tennat/domain/repositories/tennat_repositor
 import 'package:flutter_tdd/features/tennat/domain/requesters/pops_requester.dart';
 import 'package:flutter_tdd/res.dart';
 
+
 part 'add_contract_app_bar.dart';
 part 'add_contract_form_widget.dart';
 part 'add_contract_switch_coast_widget.dart';

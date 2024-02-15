@@ -12,10 +12,15 @@ class AddContractController {
     switchObs.refresh();
   }
 
-  Future<void> addContract() async {
-    final params = addMaintenanceParams();
-    var result = getIt.get<ContractRepository>().addMaintenance(params);
-
+  Future<void> addContract(BuildContext context) async {
+    //final params = addMaintenanceParams();
+    AutoRouter.of(context).push(CompleteAddContractRoute());
+    // var result = await getIt.get<ContractRepository>().addMaintenance(params);
+    // result.whenOrNull(
+    //   isSuccess: (data) {
+    //       AutoRouter.of(context).push(CompleteAddContractRoute(isSuccess: data!=null));
+    //   },
+    // );
   }
 
   AddMaintenanceParams addMaintenanceParams() {

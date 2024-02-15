@@ -30,4 +30,6 @@ class Res {
   static const String userLogo = "assets/images/user_icon.svg";
   static const String coinLogo = "assets/images/coin_icon.svg";
   static const String detailsLogo = "assets/images/details_logo.svg";
+  static const String successLogo = "assets/images/success_logo.svg";
+  static const String failLogo = "assets/images/fail_logo.svg";
 }
