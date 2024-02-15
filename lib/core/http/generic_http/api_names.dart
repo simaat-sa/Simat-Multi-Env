@@ -1,6 +1,6 @@
 import 'package:flutter_tdd/core/constants/app_config.dart';
 
-class ApiNames{
+class ApiNames {
   static String baseUrl = AppConfig.instance.baseAPIUrl;
   static String version1Part = "v1/";
 
@@ -17,12 +17,13 @@ class ApiNames{
   static const String resetPassword = "A2q4mG84Z9rE2B38In4HALSWTwt9eQ5Slzq56Cod";
 
   /// tenant routes
-  static  String getTenant = "${version1Part}tenant/list";
+  static String getTenant = "${version1Part}tenant/list";
 
   /// contracts routes
-  static  String getContracts= "${version1Part}maintenance/list";
+  static String getContracts = "${version1Part}maintenance/list";
 
-
-
-
+  static String properties = "${version1Part}tenant/properties/list";
+  static String propUnits(int id) => "${version1Part}tenant/properties/units/list?prop_id==";
+  static String maintenanceServices = "${version1Part}maintenance/services";
+  static String maintenanceAdd = "${version1Part}maintenance/add";
 }
