@@ -1,9 +1,9 @@
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/requester/requester.dart';
-import 'package:flutter_tdd/features/tennat/data/models/props_model/props_model.dart';
+import 'package:flutter_tdd/features/tennat/data/models/props_model/prop_model.dart';
 import 'package:flutter_tdd/features/tennat/domain/repositories/tennat_repository.dart';
 
-class PropsRequester extends Requester<List<PropsModel>> {
+class PropsRequester extends Requester<List<PropModel>> {
   final String id;
 
   void setLoadingState() {

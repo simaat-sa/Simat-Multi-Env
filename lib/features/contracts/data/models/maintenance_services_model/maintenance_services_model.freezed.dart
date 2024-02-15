@@ -32,9 +32,9 @@ mixin _$MaintenanceServicesModel {
   @JsonKey(name: 'list_val')
   String get value => throw _privateConstructorUsedError;
   @JsonKey(name: 'list_ar')
-  String get ar => throw _privateConstructorUsedError;
+  String get nameAr => throw _privateConstructorUsedError;
   @JsonKey(name: 'list_en')
-  String get en => throw _privateConstructorUsedError;
+  String get nameEn => throw _privateConstructorUsedError;
   @JsonKey(name: 'dt_created')
   String get createdDateTimeStamp => throw _privateConstructorUsedError;
   @JsonKey(name: 'dt_updated')
@@ -70,8 +70,8 @@ abstract class $MaintenanceServicesModelCopyWith<$Res> {
       @JsonKey(name: 'list_parent') String parent,
       @JsonKey(name: 'list_code') String code,
       @JsonKey(name: 'list_val') String value,
-      @JsonKey(name: 'list_ar') String ar,
-      @JsonKey(name: 'list_en') String en,
+      @JsonKey(name: 'list_ar') String nameAr,
+      @JsonKey(name: 'list_en') String nameEn,
       @JsonKey(name: 'dt_created') String createdDateTimeStamp,
       @JsonKey(name: 'dt_updated') String updatedDateTimeStamp,
       @JsonKey(name: 'sequence') String sequence,
@@ -102,8 +102,8 @@ class _$MaintenanceServicesModelCopyWithImpl<$Res,
     Object? parent = null,
     Object? code = null,
     Object? value = null,
-    Object? ar = null,
-    Object? en = null,
+    Object? nameAr = null,
+    Object? nameEn = null,
     Object? createdDateTimeStamp = null,
     Object? updatedDateTimeStamp = null,
     Object? sequence = null,
@@ -135,13 +135,13 @@ class _$MaintenanceServicesModelCopyWithImpl<$Res,
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
-      ar: null == ar
-          ? _value.ar
-          : ar // ignore: cast_nullable_to_non_nullable
+      nameAr: null == nameAr
+          ? _value.nameAr
+          : nameAr // ignore: cast_nullable_to_non_nullable
               as String,
-      en: null == en
-          ? _value.en
-          : en // ignore: cast_nullable_to_non_nullable
+      nameEn: null == nameEn
+          ? _value.nameEn
+          : nameEn // ignore: cast_nullable_to_non_nullable
               as String,
       createdDateTimeStamp: null == createdDateTimeStamp
           ? _value.createdDateTimeStamp
@@ -198,8 +198,8 @@ abstract class _$$MaintenanceServicesModelImplCopyWith<$Res>
       @JsonKey(name: 'list_parent') String parent,
       @JsonKey(name: 'list_code') String code,
       @JsonKey(name: 'list_val') String value,
-      @JsonKey(name: 'list_ar') String ar,
-      @JsonKey(name: 'list_en') String en,
+      @JsonKey(name: 'list_ar') String nameAr,
+      @JsonKey(name: 'list_en') String nameEn,
       @JsonKey(name: 'dt_created') String createdDateTimeStamp,
       @JsonKey(name: 'dt_updated') String updatedDateTimeStamp,
       @JsonKey(name: 'sequence') String sequence,
@@ -229,8 +229,8 @@ class __$$MaintenanceServicesModelImplCopyWithImpl<$Res>
     Object? parent = null,
     Object? code = null,
     Object? value = null,
-    Object? ar = null,
-    Object? en = null,
+    Object? nameAr = null,
+    Object? nameEn = null,
     Object? createdDateTimeStamp = null,
     Object? updatedDateTimeStamp = null,
     Object? sequence = null,
@@ -262,13 +262,13 @@ class __$$MaintenanceServicesModelImplCopyWithImpl<$Res>
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
-      ar: null == ar
-          ? _value.ar
-          : ar // ignore: cast_nullable_to_non_nullable
+      nameAr: null == nameAr
+          ? _value.nameAr
+          : nameAr // ignore: cast_nullable_to_non_nullable
               as String,
-      en: null == en
-          ? _value.en
-          : en // ignore: cast_nullable_to_non_nullable
+      nameEn: null == nameEn
+          ? _value.nameEn
+          : nameEn // ignore: cast_nullable_to_non_nullable
               as String,
       createdDateTimeStamp: null == createdDateTimeStamp
           ? _value.createdDateTimeStamp
@@ -320,8 +320,8 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
       @JsonKey(name: 'list_parent') required this.parent,
       @JsonKey(name: 'list_code') required this.code,
       @JsonKey(name: 'list_val') required this.value,
-      @JsonKey(name: 'list_ar') required this.ar,
-      @JsonKey(name: 'list_en') required this.en,
+      @JsonKey(name: 'list_ar') required this.nameAr,
+      @JsonKey(name: 'list_en') required this.nameEn,
       @JsonKey(name: 'dt_created') required this.createdDateTimeStamp,
       @JsonKey(name: 'dt_updated') required this.updatedDateTimeStamp,
       @JsonKey(name: 'sequence') required this.sequence,
@@ -353,10 +353,10 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
   final String value;
   @override
   @JsonKey(name: 'list_ar')
-  final String ar;
+  final String nameAr;
   @override
   @JsonKey(name: 'list_en')
-  final String en;
+  final String nameEn;
   @override
   @JsonKey(name: 'dt_created')
   final String createdDateTimeStamp;
@@ -385,7 +385,7 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
 
   @override
   String toString() {
-    return 'MaintenanceServicesModel(id: $id, isGroup: $isGroup, parent: $parent, code: $code, value: $value, ar: $ar, en: $en, createdDateTimeStamp: $createdDateTimeStamp, updatedDateTimeStamp: $updatedDateTimeStamp, sequence: $sequence, createBy: $createBy, updateBy: $updateBy, sysPkg: $sysPkg, uuid: $uuid, active: $active, icon: $icon)';
+    return 'MaintenanceServicesModel(id: $id, isGroup: $isGroup, parent: $parent, code: $code, value: $value, nameAr: $nameAr, nameEn: $nameEn, createdDateTimeStamp: $createdDateTimeStamp, updatedDateTimeStamp: $updatedDateTimeStamp, sequence: $sequence, createBy: $createBy, updateBy: $updateBy, sysPkg: $sysPkg, uuid: $uuid, active: $active, icon: $icon)';
   }
 
   @override
@@ -398,8 +398,8 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
             (identical(other.parent, parent) || other.parent == parent) &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.value, value) || other.value == value) &&
-            (identical(other.ar, ar) || other.ar == ar) &&
-            (identical(other.en, en) || other.en == en) &&
+            (identical(other.nameAr, nameAr) || other.nameAr == nameAr) &&
+            (identical(other.nameEn, nameEn) || other.nameEn == nameEn) &&
             (identical(other.createdDateTimeStamp, createdDateTimeStamp) ||
                 other.createdDateTimeStamp == createdDateTimeStamp) &&
             (identical(other.updatedDateTimeStamp, updatedDateTimeStamp) ||
@@ -425,8 +425,8 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
       parent,
       code,
       value,
-      ar,
-      en,
+      nameAr,
+      nameEn,
       createdDateTimeStamp,
       updatedDateTimeStamp,
       sequence,
@@ -459,8 +459,8 @@ abstract class _MaintenanceServicesModel extends MaintenanceServicesModel {
       @JsonKey(name: 'list_parent') required final String parent,
       @JsonKey(name: 'list_code') required final String code,
       @JsonKey(name: 'list_val') required final String value,
-      @JsonKey(name: 'list_ar') required final String ar,
-      @JsonKey(name: 'list_en') required final String en,
+      @JsonKey(name: 'list_ar') required final String nameAr,
+      @JsonKey(name: 'list_en') required final String nameEn,
       @JsonKey(name: 'dt_created') required final String createdDateTimeStamp,
       @JsonKey(name: 'dt_updated') required final String updatedDateTimeStamp,
       @JsonKey(name: 'sequence') required final String sequence,
@@ -492,10 +492,10 @@ abstract class _MaintenanceServicesModel extends MaintenanceServicesModel {
   String get value;
   @override
   @JsonKey(name: 'list_ar')
-  String get ar;
+  String get nameAr;
   @override
   @JsonKey(name: 'list_en')
-  String get en;
+  String get nameEn;
   @override
   @JsonKey(name: 'dt_created')
   String get createdDateTimeStamp;

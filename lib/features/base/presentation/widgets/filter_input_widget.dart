@@ -1,11 +1,7 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
-import 'package:flutter_tdd/core/helpers/validator.dart';
-import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
-import 'package:flutter_tdd/core/widgets/GenericTextField.dart';
 import 'package:flutter_tdd/core/widgets/search_form_field/search_form_field.dart';
 import 'package:flutter_tdd/res.dart';
 
@@ -26,7 +22,7 @@ class FilterItemWidget extends StatelessWidget {
             child: SearchFormField(
               onChange: onChange,
               onSubmit: onSubmit,
-              searchHint: 'بحث',
+              fillColor: context.colors.white,
             ),
           ),
           Gaps.hGap10,
@@ -34,8 +30,8 @@ class FilterItemWidget extends StatelessWidget {
             onTap: onTap,
             child: SvgPicture.asset(
               Res.filterLogo,
-              height: 30,
-              width: 28,
+              height: 26,
+              width: 26,
             ),
           ),
         ],

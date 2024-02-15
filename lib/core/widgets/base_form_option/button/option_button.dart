@@ -96,8 +96,8 @@ class _OptionsButtonState<T> extends State<OptionsButton<T>> {
                               widget.iconPath!,
                               color: widget.coloredIconWhenValueFilled &&
                                       widget.controller.selectedValue != null
-                                  ? context.colors.primary
-                                  : context.colors.blackOpacity,
+                                  ? context.colors.textColor
+                                  : context.colors.textColor,
                               fit: BoxFit.contain,
                             )),
                       ),
@@ -150,8 +150,8 @@ class _OptionsButtonState<T> extends State<OptionsButton<T>> {
                   },
                   child: Icon(
                     Icons.clear,
-                    size: 20,
-                    color: context.colors.blackOpacity,
+                    size: 22,
+                    color: context.colors.darkTextColor,
                   ),
                 ),
 
@@ -161,7 +161,7 @@ class _OptionsButtonState<T> extends State<OptionsButton<T>> {
 
             /// Suffix
             widget.customSuffixIcon ??
-                Icon(Icons.keyboard_arrow_down_rounded, size: 20, color: context.colors.blackOpacity),
+                Icon(Icons.keyboard_arrow_down_rounded, size: 24, color: context.colors.darkTextColor),
           ],
         );
       },

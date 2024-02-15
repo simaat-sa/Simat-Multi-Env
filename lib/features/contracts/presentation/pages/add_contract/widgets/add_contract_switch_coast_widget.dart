@@ -15,16 +15,20 @@ class AddContractSwitchCoastWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SvgPicture.asset(
             Res.coinLogo,
-            height: 24,
-            width: 24,
+            height: 22,
+            width: 22,
           ),
-          Text(
-            'تكلفة الصيانة على نفقتي الخاصة',
-            style: AppTextStyle.s16_w400(color: context.colors.primaryText),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
+                'تكلفة الصيانة على نفقتي الخاصة',
+                style: AppTextStyle.s16_w400(color: context.colors.primaryText),
+              ),
+            ),
           ),
           ObsValueConsumer(
             observable: controller. switchObs,

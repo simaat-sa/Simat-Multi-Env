@@ -2,7 +2,7 @@ import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:flutter_tdd/core/models/model_to_domain/model_to_domain.dart';
 import 'package:flutter_tdd/features/tennat/data/data_source/tennat_data_source.dart';
-import 'package:flutter_tdd/features/tennat/data/models/props_model/props_model.dart';
+import 'package:flutter_tdd/features/tennat/data/models/props_model/prop_model.dart';
 import 'package:flutter_tdd/features/tennat/data/models/tennat_model/tennat_model.dart';
 import 'package:flutter_tdd/features/tennat/domain/repositories/tennat_repository.dart';
 import 'package:injectable/injectable.dart';
@@ -17,12 +17,12 @@ class TenantRepositoryImpl extends TenantRepository with ModelToDomainResult {
   }
 
   @override
-  Future<MyResult<List<PropsModel>>> getProps(bool params) async {
+  Future<MyResult<List<PropModel>>> getProps(bool params) async {
     return await dataSource.getProps(params);
   }
 
   @override
-  Future<MyResult<List<PropsModel>>> getPropsUnites(String params) async {
+  Future<MyResult<List<PropModel>>> getPropsUnites(String params) async {
     return await dataSource.getPropsUnites(params);
   }
 }

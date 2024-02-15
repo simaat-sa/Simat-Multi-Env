@@ -115,7 +115,7 @@ class GenericTextField extends StatelessWidget {
       onEditingComplete: onSubmit,
       onChanged: onChange,
       validator: (value) => validate(value),
-      style: AppTextStyle.s14_w400(color: textColor??context.colors.black).copyWith(fontFamily: fontFamily),
+      style: AppTextStyle.s16_w400(color: textColor??context.colors.darkTextColor).copyWith(fontFamily: fontFamily),
       decoration: CustomInputDecoration(
         labelTxt: label,
         hint: hint,

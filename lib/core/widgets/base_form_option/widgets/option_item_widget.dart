@@ -24,8 +24,8 @@ class OptionItemWidget extends StatelessWidget {
   });
 
 
-  TextStyle  _textStyle(BuildContext context) => titleTextStyle??AppTextStyle.s12_w400(
-      color: context.colors.blackOpacity);
+  TextStyle  _textStyle(BuildContext context) => titleTextStyle??AppTextStyle.s16_w400(
+      color: context.colors.darkTextColor);
 
   @override
   Widget build(BuildContext context) {

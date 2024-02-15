@@ -31,6 +31,8 @@ class BaseFormOption<T> extends StatefulWidget {
   final String? addNewOptionButtonText;
   final VoidCallback? onAddNewOptionPressed;
 
+  final String? suffixIconPath;
+
   const BaseFormOption({
     super.key,
     required this.hintText,
@@ -46,6 +48,7 @@ class BaseFormOption<T> extends StatefulWidget {
     required this.optionItemBuilder,
     required this.valueIdGetter,
     required this.valueMainTitleGetter,
+    this.suffixIconPath,
     this.addNewOptionEnabledObs,
     this.addNewOptionButtonText,
     this.onAddNewOptionPressed,
@@ -164,6 +167,7 @@ class _BaseFormOptionState<T> extends State<BaseFormOption<T>> {
           bottomSheetTitle: widget.bottomSheetTitle,
           controller: _optionController,
           showSearch: true,
+          iconPath: widget.suffixIconPath,
           onSearch: widget.optionsRequester.search,
           onClearPressed: widget.onClearPressed,
           showDecoration: widget.showDecoration,
