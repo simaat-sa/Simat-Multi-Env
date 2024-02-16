@@ -49,7 +49,8 @@ class ContractDataSourceImpl extends ContractDataSource {
       responseKey: (data) => data['data'],
       requestBody: params.toJson(),
       showLoader: true,
-      toJsonFunc: (data) => MaintenanceServicesModel.fromJson(data),
+      isFormData: true,
+      toJsonFunc: (data) => ContractModel.fromJson(data),
     );
     return GenericHttpImpl<ContractModel>()(model);
   }

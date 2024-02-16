@@ -32,25 +32,21 @@ class AddContractController {
 
   Future<void> addContract(BuildContext context) async {
     if (formKey.currentState!.validate()){
-      try{
-        final params = addMaintenanceParams(context);
-        var result = await getIt.get<ContractRepository>().addMaintenance(params);
-        result.when(
-          isSuccess: (data) {
-            AutoRouter.of(context).popAndPush(AddContractSuccessRoute(model: data));
-          },
-          isError: (error) {
-            AutoRouter.of(context).popAndPush(AddContractSuccessRoute(model: null));
-          },
-        );
-      }catch(e){
-        AutoRouter.of(context).popAndPush(AddContractSuccessRoute(model: null));
-      }
+      final params = addMaintenanceParams(context);
+      var result = await getIt.get<ContractRepository>().addMaintenance(params);
+      result.when(
+        isSuccess: (data) {
+          AutoRouter.of(context).popAndPush(AddContractSuccessRoute(model: data));
+        },
+        isError: (error) {
+          AutoRouter.of(context).popAndPush(AddContractSuccessRoute(model: null));
+        },
+      );
     }
   }
 
   AddMaintenanceParams addMaintenanceParams(BuildContext context) {
-    var user = context.read<UserCubit>().state.model;
+    var user = context.read<UserCubit>().state.model!;
     final prop = selectedPropUnits.first;
     return AddMaintenanceParams(
       areAreId: prop.areAreId,
@@ -59,7 +55,7 @@ class AddContractController {
       contactMobile: prop.contactMobile,
       maintDesc: desc.text,
       dtCreated: DateTime.now().toFormattedEnString(),
-      createBy:  user?.userid.toString() ?? "",
+      createBy:  user.userid,
       dtDue: "2024-02-25",
       paymentByClient: switchObs.getValue(),
       maintType: selectedServices.map((e) => e.value).toList(),
