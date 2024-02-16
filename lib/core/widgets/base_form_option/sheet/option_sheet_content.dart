@@ -55,9 +55,9 @@ class _OptionSheetContentState<T> extends State<OptionSheetContent<T>> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        return await _onWillPop(context);
+    return PopScope(
+      onPopInvoked: (_)async {
+        await _onWillPop(context);
       },
       child: Padding(
         padding: MediaQuery.of(context).viewInsets,
@@ -88,8 +88,8 @@ class _OptionSheetContentState<T> extends State<OptionSheetContent<T>> {
                                     flex: 2,
                                     child: Text(
                                       widget.bottomSheetTitle!,
-                                      style: AppTextStyle.s16_w400(
-                                        color: AppColors.of(context).blackOpacity,
+                                      style: AppTextStyle.s20_w500(
+                                        color: AppColors.of(context).darkTextColor,
                                       ),
                                     ),
                                   );

@@ -35,10 +35,12 @@ class BaseOptionsRequester<T> extends Requester<List<T>> {
   }
 
   Future<void> search(String? searchTerm) async {
-    if (isRemotelySearch) {
-      _searchRemotely(searchTerm);
-    } else {
-      _searchLocally(searchTerm);
+    if (_initialOptions != null) {
+      if (isRemotelySearch) {
+        _searchRemotely(searchTerm);
+      } else {
+        _searchLocally(searchTerm);
+      }
     }
   }
 

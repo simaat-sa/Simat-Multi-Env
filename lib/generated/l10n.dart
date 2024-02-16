@@ -829,6 +829,26 @@ class S {
       args: [],
     );
   }
+
+  /// `New code`
+  String get new_code {
+    return Intl.message(
+      'New code',
+      name: 'new_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

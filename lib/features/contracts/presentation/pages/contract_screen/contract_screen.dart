@@ -70,6 +70,16 @@ class _ContractScreenState extends State<ContractScreen> {
           return const UnitLoadingListWidget();
         },
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      floatingActionButton: FloatingActionButton(
+        shape: const CircleBorder(),
+        onPressed: () =>AutoRouter.of(context).push(const AddContractRoute()),
+        child: Icon(
+          Icons.add,
+          color: context.colors.white,
+          size: 40,
+        ),
+      ),
     );
   }
 }

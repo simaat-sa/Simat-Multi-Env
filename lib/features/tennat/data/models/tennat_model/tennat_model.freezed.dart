@@ -43,7 +43,7 @@ mixin _$TenantModel {
   @JsonKey(name: 'prop_lng')
   String get propLng => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_img')
-  String get propImg => throw _privateConstructorUsedError;
+  String? get propImg => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_city')
   String get propCity => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_region')
@@ -73,7 +73,7 @@ abstract class $TenantModelCopyWith<$Res> {
       @JsonKey(name: 'contract_type') ContractTypes type,
       @JsonKey(name: 'prop_lat') String propLat,
       @JsonKey(name: 'prop_lng') String propLng,
-      @JsonKey(name: 'prop_img') String propImg,
+      @JsonKey(name: 'prop_img') String? propImg,
       @JsonKey(name: 'prop_city') String propCity,
       @JsonKey(name: 'prop_region') String propRegion});
 }
@@ -102,7 +102,7 @@ class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
     Object? type = null,
     Object? propLat = null,
     Object? propLng = null,
-    Object? propImg = null,
+    Object? propImg = freezed,
     Object? propCity = null,
     Object? propRegion = null,
   }) {
@@ -151,10 +151,10 @@ class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
           ? _value.propLng
           : propLng // ignore: cast_nullable_to_non_nullable
               as String,
-      propImg: null == propImg
+      propImg: freezed == propImg
           ? _value.propImg
           : propImg // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       propCity: null == propCity
           ? _value.propCity
           : propCity // ignore: cast_nullable_to_non_nullable
@@ -187,7 +187,7 @@ abstract class _$$TenantModelImplCopyWith<$Res>
       @JsonKey(name: 'contract_type') ContractTypes type,
       @JsonKey(name: 'prop_lat') String propLat,
       @JsonKey(name: 'prop_lng') String propLng,
-      @JsonKey(name: 'prop_img') String propImg,
+      @JsonKey(name: 'prop_img') String? propImg,
       @JsonKey(name: 'prop_city') String propCity,
       @JsonKey(name: 'prop_region') String propRegion});
 }
@@ -214,7 +214,7 @@ class __$$TenantModelImplCopyWithImpl<$Res>
     Object? type = null,
     Object? propLat = null,
     Object? propLng = null,
-    Object? propImg = null,
+    Object? propImg = freezed,
     Object? propCity = null,
     Object? propRegion = null,
   }) {
@@ -263,10 +263,10 @@ class __$$TenantModelImplCopyWithImpl<$Res>
           ? _value.propLng
           : propLng // ignore: cast_nullable_to_non_nullable
               as String,
-      propImg: null == propImg
+      propImg: freezed == propImg
           ? _value.propImg
           : propImg // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       propCity: null == propCity
           ? _value.propCity
           : propCity // ignore: cast_nullable_to_non_nullable
@@ -295,7 +295,7 @@ class _$TenantModelImpl extends _TenantModel {
       @JsonKey(name: 'contract_type') required this.type,
       @JsonKey(name: 'prop_lat') required this.propLat,
       @JsonKey(name: 'prop_lng') required this.propLng,
-      @JsonKey(name: 'prop_img') required this.propImg,
+      @JsonKey(name: 'prop_img') this.propImg,
       @JsonKey(name: 'prop_city') required this.propCity,
       @JsonKey(name: 'prop_region') required this.propRegion})
       : super._();
@@ -338,7 +338,7 @@ class _$TenantModelImpl extends _TenantModel {
   final String propLng;
   @override
   @JsonKey(name: 'prop_img')
-  final String propImg;
+  final String? propImg;
   @override
   @JsonKey(name: 'prop_city')
   final String propCity;
@@ -424,7 +424,7 @@ abstract class _TenantModel extends TenantModel {
       @JsonKey(name: 'contract_type') required final ContractTypes type,
       @JsonKey(name: 'prop_lat') required final String propLat,
       @JsonKey(name: 'prop_lng') required final String propLng,
-      @JsonKey(name: 'prop_img') required final String propImg,
+      @JsonKey(name: 'prop_img') final String? propImg,
       @JsonKey(name: 'prop_city') required final String propCity,
       @JsonKey(name: 'prop_region')
       required final String propRegion}) = _$TenantModelImpl;
@@ -468,7 +468,7 @@ abstract class _TenantModel extends TenantModel {
   String get propLng;
   @override
   @JsonKey(name: 'prop_img')
-  String get propImg;
+  String? get propImg;
   @override
   @JsonKey(name: 'prop_city')
   String get propCity;

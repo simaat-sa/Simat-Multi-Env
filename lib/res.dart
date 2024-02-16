@@ -6,6 +6,9 @@ class Res {
   static const String en = "assets/lang/en.json";
   static const String facebook = "assets/images/facebook.svg";
   static const String icon = "assets/images/icon.png";
+  static const String checkmark = "assets/images/checkmark.svg";
+  static const String checkmarkEmpty = "assets/images/checkmark_empty.svg";
+  static const String closeIcon = "assets/images/close_icon.svg";
   static const String calendarIcon = "assets/images/calendarIcon.svg";
   static const String logo = "assets/images/logo.png";
   static const String logoSvg = "assets/images/logoSvg.svg";
@@ -25,8 +28,13 @@ class Res {
   static const String filterLogo = "assets/images/filter_logo.svg";
   static const String noticesLogo = "assets/images/notif_logo.svg";
   static const String unitLogo = "assets/images/unit_logo.svg";
+  static const String propIcon = "assets/images/prop_icon.svg";
+  static const String maintenanceIcon = "assets/images/maint_icon.svg";
   static const String unselectLogo = "assets/images/unselect_logo.svg";
   static const String selectLogo = "assets/images/select_logo.svg";
   static const String userLogo = "assets/images/user_icon.svg";
   static const String coinLogo = "assets/images/coin_icon.svg";
+  static const String detailsLogo = "assets/images/details_logo.svg";
+  static const String successLogo = "assets/images/success_logo.svg";
+  static const String failLogo = "assets/images/fail_logo.svg";
 }

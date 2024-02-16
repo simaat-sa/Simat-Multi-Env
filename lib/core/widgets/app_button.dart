@@ -194,7 +194,7 @@ class AppTextButton extends StatelessWidget {
               child: Text(
                 text,
                 style: AppTextStyle.s14_w500(
-                  color: AppColors.of(context).blackOpacity,
+                  color: AppColors.of(context).darkTextColor,
                 ),
               ),
             ),
@@ -326,7 +326,7 @@ class AppTextButton extends StatelessWidget {
               onPressed: onPressed,
               child: Text(
                 text,
-                style: AppTextStyle.s14_w600(
+                style: AppTextStyle.s16_w500(
                   color: _textColor ?? AppColors.fixedColors.white,
                 ).copyWith(fontSize: _textSize ?? 14),
               ),

@@ -45,5 +45,6 @@ const _$ContractStatusEnumMap = {
   ContractStatus.supervisorApproved: '37721',
   ContractStatus.applicationApproval: '37720',
   ContractStatus.supervisorIdentifications: '37715',
+  ContractStatus.newCode: '37710',
   ContractStatus.non: '0',
 };

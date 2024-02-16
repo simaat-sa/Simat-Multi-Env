@@ -117,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "maintenanceCount": m1,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "Should be more than 8 and less than 30"),
+        "new_code": MessageLookupByLibrary.simpleMessage("New code"),
         "no_internet_connection":
             MessageLookupByLibrary.simpleMessage("No internet connection"),
         "owner": MessageLookupByLibrary.simpleMessage("Owner"),
@@ -136,6 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "residential": MessageLookupByLibrary.simpleMessage("Residential"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "size_more_than_mg_error": m2,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),

@@ -27,14 +27,14 @@ class TenantModel with _$TenantModel {
     @JsonKey(name: 'contract_type')required ContractTypes type,
     @JsonKey(name: 'prop_lat')required String propLat,
     @JsonKey(name: 'prop_lng')required String propLng,
-    @JsonKey(name: 'prop_img')required String propImg,
+    @JsonKey(name: 'prop_img')String? propImg,
     @JsonKey(name: 'prop_city')required String propCity,
     @JsonKey(name: 'prop_region')required String propRegion,
   }) = _TenantModel;
 
   factory TenantModel.fromJson(Map<String, dynamic> json) => _$TenantModelFromJson(json);
 
-  String get unitImage => AppConfig.instance.baseUrl + propImg;
+  String get unitImage => AppConfig.instance.baseUrl + (propImg??"");
 
   String get date {
     if (dateType == DateTypes.hj) {

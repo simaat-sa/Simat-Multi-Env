@@ -19,10 +19,9 @@ class OptionButtonDecoration extends StatelessWidget {
       padding: EdgeInsetsDirectional.only(top: 10, bottom: 10, start: startPadding ?? 12, end: 12),
       width: double.maxFinite,
       decoration: BoxDecoration(
-          color: context.colors.background,
-          borderRadius: Dimens.borderRadius5PX,
-          border:border?? Border.all(color: context
-              .colors.greyWhite),
+        color: context.colors.white,
+        borderRadius: Dimens.borderRadius5PX,
+        border: border ?? Border.all(color: context.colors.greyWhite),
       ),
       child: child,
     );

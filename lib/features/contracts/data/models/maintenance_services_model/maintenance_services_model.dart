@@ -16,8 +16,8 @@ class MaintenanceServicesModel with _$MaintenanceServicesModel {
     @JsonKey(name: 'list_parent') required String parent,
     @JsonKey(name: 'list_code') required String code,
     @JsonKey(name: 'list_val') required String value,
-    @JsonKey(name: 'list_ar') required String ar,
-    @JsonKey(name: 'list_en') required String en,
+    @JsonKey(name: 'list_ar') required String nameAr,
+    @JsonKey(name: 'list_en') required String nameEn,
     @JsonKey(name: 'dt_created') required String createdDateTimeStamp,
     @JsonKey(name: 'dt_updated') required String updatedDateTimeStamp,
     @JsonKey(name: 'sequence') required String sequence,
@@ -30,4 +30,7 @@ class MaintenanceServicesModel with _$MaintenanceServicesModel {
   }) = _MaintenanceServicesModel;
 
   factory MaintenanceServicesModel.fromJson(Map<String, dynamic> json) => _$MaintenanceServicesModelFromJson(json);
+
+
+  String get name => nameAr;
 }

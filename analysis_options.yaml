@@ -44,5 +44,5 @@ analyzer:
     always_declare_return_types: warning
     annotate_overrides: warning
     join_return_with_assignment: info
-    avoid_dynamic_calls: warning
+#    avoid_dynamic_calls: warning
 

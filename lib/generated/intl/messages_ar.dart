@@ -116,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "maintenanceCount": m1,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
+        "new_code": MessageLookupByLibrary.simpleMessage("كود جديد"),
         "no_internet_connection":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالانترنت"),
         "owner": MessageLookupByLibrary.simpleMessage("مالك"),
@@ -135,6 +136,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "residential": MessageLookupByLibrary.simpleMessage("سكني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "size_more_than_mg_error": m2,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),

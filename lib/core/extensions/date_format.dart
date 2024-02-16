@@ -6,4 +6,8 @@ extension DateTimeExtension on DateTime {
     return DateFormat('yyyy-MM-dd').format(this);
   }
 
+  String toFormattedEnString() {
+    return DateFormat('yyyy-MM-dd','en').format(this);
+  }
+
 }

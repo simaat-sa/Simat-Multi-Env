@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/bloc/value_state_manager/value_state_manager_import.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
+import 'package:flutter_tdd/core/theme/colors/app_colors.dart';
+import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/button/option_button.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/controller/option_controller.dart';
 import 'package:flutter_tdd/core/widgets/bottom_sheet_views/app_bottom_sheets.dart';
@@ -28,6 +31,8 @@ class OptionSheetButton<T> extends StatefulWidget {
   final VoidCallback? onAddNewOptionPressed;
   final bool isViewMode;
 
+  final bool isRequired;
+
   const OptionSheetButton({
     super.key,
     required this.hintText,
@@ -40,6 +45,7 @@ class OptionSheetButton<T> extends StatefulWidget {
     this.onSearch,
     this.sheetHeight,
     this.onTap,
+    required this.isRequired,
     this.showSearch = false,
     this.disable = false,
     this.showDecoration = true,
@@ -63,28 +69,55 @@ class OptionSheetButtonState<T> extends State<OptionSheetButton<T>> {
   Widget build(BuildContext context) {
     return IgnorePointer(
       ignoring: widget.isViewMode,
-      child: OptionsButton<T>(
-        hintText: widget.hintText,
-        controller: widget.controller,
-        valueBuilder: widget.valueBuilder,
-        iconPath: widget.iconPath,
-        customSuffixIcon: widget.customSuffixIcon,
-        showDecoration: widget.showDecoration,
-        onClearPressed: widget.onClearPressed,
-        showClearIcon: true,
-        constraints: widget.constraints,
-        border: widget.border,
-        onPressed: () {
-          if (!widget.disable) {
-            if (widget.onSearch != null) {
-              widget.onSearch!("");
-            }
-            if (widget.onTap != null) {
-              widget.onTap!();
-            }
-            showOptionsSheet(context);
+      child: FormField<T>(
+        enabled: !widget.isRequired,
+        initialValue: widget.controller.selectedValue,
+        validator: (value) {
+          if (widget.isRequired && ((widget.controller.selectedValue as List? )?.isEmpty == true || widget.controller.selectedValue == null)) {
+            return Translate.of(context).fillField;
           }
+          return null;
         },
+        builder: (state) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              OptionsButton<T>(
+                hintText: widget.hintText,
+                controller: widget.controller,
+                valueBuilder: widget.valueBuilder,
+                iconPath: widget.iconPath,
+                customSuffixIcon: widget.customSuffixIcon,
+                showDecoration: widget.showDecoration,
+                onClearPressed: widget.onClearPressed,
+                showClearIcon: true,
+                constraints: widget.constraints,
+                border: widget.border,
+                onPressed: () {
+                  if (!widget.disable) {
+                    if (widget.onSearch != null) {
+                      widget.onSearch!("");
+                    }
+                    if (widget.onTap != null) {
+                      widget.onTap!();
+                    }
+                    showOptionsSheet(context);
+                  }
+                },
+              ),
+              if (state.errorText != null)
+                Padding(
+                  padding: const EdgeInsetsDirectional.only(start: 20, top: 5),
+                  child: Text(
+                    state.errorText!,
+                    style: const AppTextStyle.s12_w400(
+                      color: AppColors.snackBarRedError,
+                    ),
+                  ),
+                ),
+            ],
+          );
+        }
       ),
     );
   }

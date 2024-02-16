@@ -20,6 +20,7 @@ enum ContractStatus{
   supervisorApproved('37721'),
   applicationApproval('37720'),
   supervisorIdentifications('37715'),
+  newCode("37710"),
   non('0');
   final String value;
 
@@ -58,6 +59,8 @@ enum ContractStatus{
         return Translate.s.supervisor_approved;
       case ContractStatus.supervisorIdentifications:
         return Translate.s.supervisor_identifications;
+      case ContractStatus.newCode:
+        return Translate.s.new_code;
       default:
         return "";
     }
