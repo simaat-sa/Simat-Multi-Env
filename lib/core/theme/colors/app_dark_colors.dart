@@ -50,6 +50,8 @@ class AppDarkColors extends AppColors {
   @override
   Color get green3 => const Color(0xff83AA54);
 
+  Color get green4 => const Color(0xff186669);
+
   @override
   Color get brown => const Color(0xff635048);
 

@@ -1,14 +1,12 @@
-part of'complete_add_widgets_imports.dart';
+part of 'add_contract_status_widgets_imports.dart';
 
-
-
-class CompleteAddButtonWidget extends StatelessWidget {
-  const CompleteAddButtonWidget({super.key});
+class NewMaintenanceRequestButtonWidget extends StatelessWidget {
+  const NewMaintenanceRequestButtonWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return AppTextButton.maxCustom(
-      onPressed: () {},
+      onPressed: () => AutoRouter.of(context).popAndPush(const AddContractRoute()),
       bgColor: context.colors.primary,
       txtColor: context.colors.white,
       textSize: 14,

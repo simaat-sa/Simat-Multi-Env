@@ -17,6 +17,7 @@ class BaseFormOption<T> extends StatefulWidget {
   final String bottomSheetTitle;
   final String hintText;
   final bool showSearch;
+  final bool isRequired;
   final bool showDecoration;
   final bool isMultiple;
   final VoidCallback onClearPressed;
@@ -52,6 +53,7 @@ class BaseFormOption<T> extends StatefulWidget {
     this.addNewOptionEnabledObs,
     this.addNewOptionButtonText,
     this.onAddNewOptionPressed,
+    this.isRequired = true,
   });
 
   @override
@@ -167,6 +169,7 @@ class _BaseFormOptionState<T> extends State<BaseFormOption<T>> {
           bottomSheetTitle: widget.bottomSheetTitle,
           controller: _optionController,
           showSearch: true,
+          isRequired: widget.isRequired,
           iconPath: widget.suffixIconPath,
           onSearch: widget.optionsRequester.search,
           onClearPressed: widget.onClearPressed,

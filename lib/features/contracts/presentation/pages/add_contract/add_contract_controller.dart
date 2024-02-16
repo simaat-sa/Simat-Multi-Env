@@ -2,6 +2,7 @@ part of 'add_contract_imports.dart';
 
 class AddContractController {
 
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController desc = TextEditingController();
   final ObsValue<bool> switchObs = ObsValue.withInit(false);
 
@@ -30,16 +31,22 @@ class AddContractController {
   }
 
   Future<void> addContract(BuildContext context) async {
-    final params = addMaintenanceParams(context);
-    var result = await getIt.get<ContractRepository>().addMaintenance(params);
-    result.when(
-      isSuccess: (data) {
-        AutoRouter.of(context).push(CompleteAddContractRoute(model: data));
-      },
-      isError: (error) {
-        print("Error");
-      },
-    );
+    if (formKey.currentState!.validate()){
+      try{
+        final params = addMaintenanceParams(context);
+        var result = await getIt.get<ContractRepository>().addMaintenance(params);
+        result.when(
+          isSuccess: (data) {
+            AutoRouter.of(context).popAndPush(AddContractSuccessRoute(model: data));
+          },
+          isError: (error) {
+            AutoRouter.of(context).popAndPush(AddContractSuccessRoute(model: null));
+          },
+        );
+      }catch(e){
+        AutoRouter.of(context).popAndPush(AddContractSuccessRoute(model: null));
+      }
+    }
   }
 
   AddMaintenanceParams addMaintenanceParams(BuildContext context) {
@@ -53,7 +60,7 @@ class AddContractController {
       maintDesc: desc.text,
       dtCreated: DateTime.now().toFormattedEnString(),
       createBy:  user?.userid.toString() ?? "",
-      dtDue: "2024-02-18",
+      dtDue: "2024-02-25",
       paymentByClient: switchObs.getValue(),
       maintType: selectedServices.map((e) => e.value).toList(),
       creatorPay: "1",

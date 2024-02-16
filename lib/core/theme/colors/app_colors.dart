@@ -47,6 +47,10 @@ abstract class AppColors {
 
   Color get green;
 
+  Color get green2;
+  Color get green3;
+  Color get green4;
+
   Color get background;
 
   Color get backgroundLight;
@@ -61,6 +65,5 @@ abstract class AppColors {
   Color get primaryText;
   Color get darkTextColor;
   Color get red;
-  Color get green2;
-  Color get green3;
+
 }

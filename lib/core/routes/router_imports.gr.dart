@@ -28,7 +28,7 @@ import 'package:flutter_tdd/features/contracts/data/models/tennat_model/contract
     as _i15;
 import 'package:flutter_tdd/features/contracts/presentation/pages/add_contract/add_contract_imports.dart'
     as _i2;
-import 'package:flutter_tdd/features/contracts/presentation/pages/complete_add_contract/complete_add_contract_imports.dart'
+import 'package:flutter_tdd/features/contracts/presentation/pages/add_contract_status/add_contract_status_imports.dart'
     as _i3;
 import 'package:flutter_tdd/features/contracts/presentation/pages/contract_screen/contract_screen_imports.dart'
     as _i16;
@@ -58,9 +58,9 @@ abstract class $AppRouter extends _i13.RootStackRouter {
         child: const _i2.AddContract(),
       );
     },
-    CompleteAddContractRoute.name: (routeData) {
-      final args = routeData.argsAs<CompleteAddContractRouteArgs>(
-          orElse: () => const CompleteAddContractRouteArgs());
+    AddContractSuccessRoute.name: (routeData) {
+      final args = routeData.argsAs<AddContractSuccessRouteArgs>(
+          orElse: () => const AddContractSuccessRouteArgs());
       return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i3.CompleteAddContract(
@@ -168,29 +168,29 @@ class AddContractRoute extends _i13.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.CompleteAddContract]
-class CompleteAddContractRoute
-    extends _i13.PageRouteInfo<CompleteAddContractRouteArgs> {
-  CompleteAddContractRoute({
+class AddContractSuccessRoute
+    extends _i13.PageRouteInfo<AddContractSuccessRouteArgs> {
+  AddContractSuccessRoute({
     _i14.Key? key,
     _i15.ContractModel? model,
     List<_i13.PageRouteInfo>? children,
   }) : super(
-          CompleteAddContractRoute.name,
-          args: CompleteAddContractRouteArgs(
+          AddContractSuccessRoute.name,
+          args: AddContractSuccessRouteArgs(
             key: key,
             model: model,
           ),
           initialChildren: children,
         );
 
-  static const String name = 'CompleteAddContractRoute';
+  static const String name = 'AddContractSuccessRoute';
 
-  static const _i13.PageInfo<CompleteAddContractRouteArgs> page =
-      _i13.PageInfo<CompleteAddContractRouteArgs>(name);
+  static const _i13.PageInfo<AddContractSuccessRouteArgs> page =
+      _i13.PageInfo<AddContractSuccessRouteArgs>(name);
 }
 
-class CompleteAddContractRouteArgs {
-  const CompleteAddContractRouteArgs({
+class AddContractSuccessRouteArgs {
+  const AddContractSuccessRouteArgs({
     this.key,
     this.model,
   });
@@ -201,7 +201,7 @@ class CompleteAddContractRouteArgs {
 
   @override
   String toString() {
-    return 'CompleteAddContractRouteArgs{key: $key, model: $model}';
+    return 'AddContractSuccessRouteArgs{key: $key, model: $model}';
   }
 }
 

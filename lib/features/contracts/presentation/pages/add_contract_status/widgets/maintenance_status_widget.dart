@@ -1,4 +1,4 @@
-part of 'complete_add_widgets_imports.dart';
+part of 'add_contract_status_widgets_imports.dart';
 
 class CompleteAddFormWidget extends StatelessWidget {
   final ContractModel? model;
@@ -18,22 +18,29 @@ class CompleteAddFormWidget extends StatelessWidget {
         Gaps.vGap32,
         Text(
           isSuccess ? 'تم طلب الصيانة' : 'حدث خطأ ما',
-          style: AppTextStyle.s30_w400(color: context.colors.darkTextColor),
+          style: AppTextStyle.s30_w400(color: context.colors.green4),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 30),
           child: Text(
             _data(isSuccess),
             textAlign: TextAlign.center,
-            style: AppTextStyle.s16_w500(color: context.colors.primaryText),
+            style: AppTextStyle.s16_w500(color: context.colors.textColor).copyWith(
+              height: 1.6,
+            ),
           ),
         ),
         Gaps.vGap16,
-        const CompleteAddButtonWidget(),
-        Gaps.vGap24,
-        Text(
-          isSuccess ? 'عودة لطلبات الصيانة' : 'ربما لاحقا، عودة الى الرئيسية',
-          style: AppTextStyle.s14_w400(color: context.colors.secondary),
+        const NewMaintenanceRequestButtonWidget(),
+        InkWell(
+          onTap: () => AutoRouter.of(context).pop(),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
+            child: Text(
+              isSuccess ? 'عودة لطلبات الصيانة' : 'ربما لاحقا، عودة الى الرئيسية',
+              style: AppTextStyle.s14_w500(color: context.colors.secondary),
+            ),
+          ),
         ),
       ],
     );

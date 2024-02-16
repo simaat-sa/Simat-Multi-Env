@@ -1,6 +1,6 @@
-part of 'complete_add_contract_imports.dart';
+part of 'add_contract_status_imports.dart';
 
-@RoutePage(name: 'CompleteAddContractRoute')
+@RoutePage(name: 'AddContractSuccessRoute')
 class CompleteAddContract extends StatefulWidget {
   final ContractModel? model;
 
