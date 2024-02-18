@@ -11,7 +11,7 @@ class FilterSelectTypeWidget extends StatelessWidget {
       observable: controller.selectTypeObs,
       builder: (context, value) {
         return Column(children: [
-          const FilterHeaderTitle(title: 'نوع العقد'),
+          FilterHeaderTitle(title: Translate.s.contract_type),
           Gaps.vGap10,
           ...ContractTypes.values.map((e) {
             return Visibility(

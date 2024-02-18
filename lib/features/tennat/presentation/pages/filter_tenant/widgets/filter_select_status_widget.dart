@@ -11,7 +11,7 @@ class FilterSelectStatusWidget extends StatelessWidget {
         observable: controller.selectStatusObs,
         builder: (context, value) {
           return Column(children: [
-            const FilterHeaderTitle(title: 'حاله العقد'),
+            FilterHeaderTitle(title: Translate.s.contract_status),
             Gaps.vGap10,
             ...TenantVisibility.values.map((e) {
               return Visibility(

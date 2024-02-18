@@ -25,7 +25,7 @@ class AddContractSwitchCoastWidget extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Text(
-                'تكلفة الصيانة على نفقتي الخاصة',
+                Translate.s.cost_at_my_own_expense,
                 style: AppTextStyle.s16_w400(color: context.colors.primaryText),
               ),
             ),

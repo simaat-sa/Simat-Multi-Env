@@ -84,7 +84,7 @@ class ContractItemWidget extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  "الوصف",
+                  Translate.s.description,
                   style: AppTextStyle.s14_w400(color: context.colors.textColor),
                 ),
                 const Spacer(),

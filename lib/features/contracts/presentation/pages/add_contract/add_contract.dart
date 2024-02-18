@@ -15,7 +15,7 @@ class _AddContractState extends State<AddContract> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.colors.background,
-      appBar: const SheetAppBar(title: 'طلب صيانة جديد'),
+      appBar: SheetAppBar(title: Translate.s.add_new_contact),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: Form(

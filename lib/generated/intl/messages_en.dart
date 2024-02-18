@@ -24,7 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m1(count) => "Maintenance Orders ${count}";
 
-  static String m2(MB, files) =>
+  static String m2(code) =>
+      "We have sent a mobile message containing the quality assurance code for your order no${code}";
+
+  static String m3(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -39,12 +42,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "Welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
         "access_denied": MessageLookupByLibrary.simpleMessage("Access denied"),
         "active": MessageLookupByLibrary.simpleMessage("Active"),
+        "add_new_contact":
+            MessageLookupByLibrary.simpleMessage("New maintenance request"),
         "add_new_item": MessageLookupByLibrary.simpleMessage("Add new item"),
         "app_cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "app_confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "applicant": MessageLookupByLibrary.simpleMessage("Applicant"),
         "application_approval":
             MessageLookupByLibrary.simpleMessage("Application Approval"),
         "attribution": MessageLookupByLibrary.simpleMessage("Attribution"),
+        "back_to_maintenance_requests": MessageLookupByLibrary.simpleMessage(
+            "Back to maintenance requests"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "canceled": MessageLookupByLibrary.simpleMessage("Canceled"),
@@ -53,9 +61,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "Please enter the password identical"),
+        "contract_status":
+            MessageLookupByLibrary.simpleMessage("Contract status"),
+        "contract_type": MessageLookupByLibrary.simpleMessage("Contract Type"),
         "contractsCount": m0,
         "copied_successfully":
             MessageLookupByLibrary.simpleMessage("Copied successfully"),
+        "cost_at_my_own_expense": MessageLookupByLibrary.simpleMessage(
+            "Maintenance cost at my own expense\'"),
+        "customer_mobile":
+            MessageLookupByLibrary.simpleMessage("Customer\'s mobile phone"),
+        "date_of_request":
+            MessageLookupByLibrary.simpleMessage("Date of request"),
+        "description": MessageLookupByLibrary.simpleMessage("Description"),
+        "description_of_maintenance":
+            MessageLookupByLibrary.simpleMessage("Description of maintenance"),
         "done": MessageLookupByLibrary.simpleMessage("Done"),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("BAD REQUEST"),
@@ -82,11 +102,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("INTERNAL SERVER ERROR"),
         "error_socket":
             MessageLookupByLibrary.simpleMessage("No internet connection"),
+        "estimated_cost":
+            MessageLookupByLibrary.simpleMessage("Estimated cost"),
         "expired": MessageLookupByLibrary.simpleMessage("Expired"),
         "failureActions":
             MessageLookupByLibrary.simpleMessage("Failure Actions"),
         "fillField":
             MessageLookupByLibrary.simpleMessage("Please enter this field"),
+        "filter": MessageLookupByLibrary.simpleMessage("Filter"),
+        "final_cost": MessageLookupByLibrary.simpleMessage("Final Cost"),
         "how_get_code":
             MessageLookupByLibrary.simpleMessage("How can I get the code?"),
         "implemented": MessageLookupByLibrary.simpleMessage("Implemented"),
@@ -114,7 +138,24 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Scan the QR code to log in"),
         "mailValidation":
             MessageLookupByLibrary.simpleMessage("Please enter a valid email"),
+        "main_property":
+            MessageLookupByLibrary.simpleMessage("The main property"),
         "maintenanceCount": m1,
+        "maintenance_has_been_requested": MessageLookupByLibrary.simpleMessage(
+            "Maintenance has been requested"),
+        "maintenance_request":
+            MessageLookupByLibrary.simpleMessage("Maintenance request"),
+        "maintenance_request_failed_please_try_again":
+            MessageLookupByLibrary.simpleMessage(
+                "A maintenance request was not requested due to an error. Please try again"),
+        "maintenance_request_status":
+            MessageLookupByLibrary.simpleMessage("Maintenance request status"),
+        "maintenance_type":
+            MessageLookupByLibrary.simpleMessage("Maintenance Type"),
+        "maybe_later_back_to_the_main_page":
+            MessageLookupByLibrary.simpleMessage(
+                "Maybe later, back to the main page"),
+        "message_containing_code_for_your_order": m2,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "Should be more than 8 and less than 30"),
         "new_code": MessageLookupByLibrary.simpleMessage("New code"),
@@ -130,15 +171,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_fill_all_fields":
             MessageLookupByLibrary.simpleMessage("Please fill all fields"),
         "posted": MessageLookupByLibrary.simpleMessage("Posted"),
+        "real_estate_unit":
+            MessageLookupByLibrary.simpleMessage("Real estate unit"),
         "rejected_by_the_owner":
             MessageLookupByLibrary.simpleMessage("rejected By The Owner"),
         "rejected_by_the_supervisor":
             MessageLookupByLibrary.simpleMessage("rejected By The Supervisor"),
+        "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "residential": MessageLookupByLibrary.simpleMessage("Residential"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
-        "size_more_than_mg_error": m2,
+        "size_more_than_mg_error": m3,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "successfully_Logged_in":
@@ -147,6 +191,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("supervisor Approved"),
         "supervisor_identifications":
             MessageLookupByLibrary.simpleMessage("supervisor Identifications"),
-        "tryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN")
+        "tryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN"),
+        "worthy": MessageLookupByLibrary.simpleMessage("Worthy")
       };
 }

@@ -7,6 +7,7 @@ import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:flutter_tdd/features/auth/data/data_sources/auth_data_source.dart';
 import 'package:flutter_tdd/features/auth/data/models/user_model/user_model.dart';
 import 'package:flutter_tdd/features/auth/domain/entity/login_params.dart';
+import 'package:flutter_tdd/features/auth/domain/entity/qr_login_params.dart';
 import 'package:injectable/injectable.dart';
 
 @Injectable(as: AuthDataSource)
@@ -27,12 +28,12 @@ class AuthDataSourceImpl extends AuthDataSource {
   }
 
   @override
-  Future<MyResult<UserModel>> loginWithQr(String param)async {
+  Future<MyResult<UserModel>> loginWithQr(QrLoginParams param)async {
     HttpRequestModel model = HttpRequestModel(
       url: ApiNames.login,
       requestMethod: RequestMethod.post,
       responseType: ResType.model,
-      requestBody: {"_token": param},
+      requestBody: param.toJson(),
       responseKey: (data) => data['data'],
       isFormData: true,
       showLoader: true,

@@ -79,7 +79,31 @@
   "supervisor_approved": "تمت الموافقة من قبل المشرف",
   "supervisor_identifications": "هويات المشرف",
   "new_code": "كود جديد",
-  "search": "بحث"
+  "search": "بحث",
+  "add_new_contact": "طلب صيانة جديد",
+  "main_property": "العقار الرئيسي",
+  "real_estate_unit": "الوحدة العقارية",
+  "maintenance_type": "نوع الصيانة",
+  "customer_mobile": "جوال العميل",
+  "cost_at_my_own_expense": "تكلفة الصيانة على نفقتي الخاصة'",
+  "description_of_maintenance": "وصف الصيانة",
+  "maintenance_request": "طلب الصيانة",
+  "maintenance_has_been_requested": "تم طلب الصيانة",
+  "back_to_maintenance_requests": "عودة لطلبات الصيانة",
+  "maybe_later_back_to_the_main_page": "ربما لاحقا، عودة الى الرئيسية",
+  "message_containing_code_for_your_order": "لقد قمنا بإرسال رسالة جوال تحتوي على رمز ضمان الجودة لطلبكم رقم {code}",
+  "maintenance_request_failed_please_try_again": "لم يتم طلب الصيانة لخطأ ما، برجاء اعادة المحاولة",
+  "filter": "تصفية",
+  "maintenance_request_status": "حالة طلب الصيانة",
+  "reset": "اعادة تعيين",
+  "description": "الوصف",
+  "date_of_request": "تاريخ الطلب",
+  "applicant": "مقدم الطلب",
+  "estimated_cost": "تكلفة تقديرية",
+  "final_cost": "تكلفة نهائية",
+  "contract_status": "حاله العقد",
+  "contract_type": "نوع العقد",
+  "worthy": "مستحق"
 }
 
 

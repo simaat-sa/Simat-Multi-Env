@@ -9,7 +9,7 @@ class FilterContractTitleHeaderWidget extends StatelessWidget {
     return Row(
       children: [
         Text(
-          'حالة طلب الصيانة',
+          Translate.s.maintenance_request_status,
           style: AppTextStyle.s18_w500(color: context.colors.darkTextColor),
         ),
       ],

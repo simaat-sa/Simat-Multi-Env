@@ -22,7 +22,7 @@ class AddContractFormWidget extends StatelessWidget {
 
         GenericTextField(
           fillColor: context.colors.white,
-          hint: 'جوال العميل',
+          hint: Translate.s.customer_mobile,
           contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
           fieldTypes: FieldTypes.normal,
           type: TextInputType.phone,

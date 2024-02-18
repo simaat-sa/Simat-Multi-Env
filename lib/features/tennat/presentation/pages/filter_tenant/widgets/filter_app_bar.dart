@@ -12,7 +12,7 @@ class FilterAppBarWidget extends StatelessWidget {
         children: [
           Gaps.hGap22,
           Text(
-            'تصفية',
+            Translate.s.filter,
             style: AppTextStyle.s24_w500(color: context.colors.darkTextColor),
           ),
           InkWell(

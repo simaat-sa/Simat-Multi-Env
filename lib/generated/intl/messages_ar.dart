@@ -24,7 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m1(count) => "طلبات الصيانة ${count}";
 
-  static String m2(MB, files) =>
+  static String m2(code) =>
+      "لقد قمنا بإرسال رسالة جوال تحتوي على رمز ضمان الجودة لطلبكم رقم ${code}";
+
+  static String m3(MB, files) =>
       "يجب أن تكون حجم الملفات التالية أقل من ${MB} ميحابيت, ${files}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -39,12 +42,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "Welcome": MessageLookupByLibrary.simpleMessage("مرحبا بك"),
         "access_denied": MessageLookupByLibrary.simpleMessage("تم رفض الوصول"),
         "active": MessageLookupByLibrary.simpleMessage("فعال"),
+        "add_new_contact":
+            MessageLookupByLibrary.simpleMessage("طلب صيانة جديد"),
         "add_new_item": MessageLookupByLibrary.simpleMessage("إضافة عنصر جديد"),
         "app_cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "app_confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "applicant": MessageLookupByLibrary.simpleMessage("مقدم الطلب"),
         "application_approval":
             MessageLookupByLibrary.simpleMessage("الموافقة على الطلب"),
         "attribution": MessageLookupByLibrary.simpleMessage("الإسناد"),
+        "back_to_maintenance_requests":
+            MessageLookupByLibrary.simpleMessage("عودة لطلبات الصيانة"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "canceled": MessageLookupByLibrary.simpleMessage("ألغيت"),
@@ -53,9 +61,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "completed": MessageLookupByLibrary.simpleMessage("مكتمل"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل كلمة المرورمتطابق"),
+        "contract_status": MessageLookupByLibrary.simpleMessage("حاله العقد"),
+        "contract_type": MessageLookupByLibrary.simpleMessage("نوع العقد"),
         "contractsCount": m0,
         "copied_successfully":
             MessageLookupByLibrary.simpleMessage("تم النسخ بنجاح"),
+        "cost_at_my_own_expense": MessageLookupByLibrary.simpleMessage(
+            "تكلفة الصيانة على نفقتي الخاصة\'"),
+        "customer_mobile": MessageLookupByLibrary.simpleMessage("جوال العميل"),
+        "date_of_request": MessageLookupByLibrary.simpleMessage("تاريخ الطلب"),
+        "description": MessageLookupByLibrary.simpleMessage("الوصف"),
+        "description_of_maintenance":
+            MessageLookupByLibrary.simpleMessage("وصف الصيانة"),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("طلب غير صالح"),
@@ -82,9 +99,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("حصل خطأ في السيرفر"),
         "error_socket":
             MessageLookupByLibrary.simpleMessage("تأكد من إتصالك بالانترنيت"),
+        "estimated_cost": MessageLookupByLibrary.simpleMessage("تكلفة تقديرية"),
         "expired": MessageLookupByLibrary.simpleMessage("منتهي"),
         "failureActions": MessageLookupByLibrary.simpleMessage("إجراءات الفشل"),
         "fillField": MessageLookupByLibrary.simpleMessage("الرجاء ملء الحقل"),
+        "filter": MessageLookupByLibrary.simpleMessage("تصفية"),
+        "final_cost": MessageLookupByLibrary.simpleMessage("تكلفة نهائية"),
         "how_get_code": MessageLookupByLibrary.simpleMessage(
             "كيف يمكنني الحصول علي الرمز؟"),
         "implemented": MessageLookupByLibrary.simpleMessage("مُنفّذ"),
@@ -113,7 +133,22 @@ class MessageLookup extends MessageLookupByLibrary {
             "مسح رمز الاستجابة لتسجيل الدخول"),
         "mailValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل البريد صحيحا"),
+        "main_property": MessageLookupByLibrary.simpleMessage("العقار الرئيسي"),
         "maintenanceCount": m1,
+        "maintenance_has_been_requested":
+            MessageLookupByLibrary.simpleMessage("تم طلب الصيانة"),
+        "maintenance_request":
+            MessageLookupByLibrary.simpleMessage("طلب الصيانة"),
+        "maintenance_request_failed_please_try_again":
+            MessageLookupByLibrary.simpleMessage(
+                "لم يتم طلب الصيانة لخطأ ما، برجاء اعادة المحاولة"),
+        "maintenance_request_status":
+            MessageLookupByLibrary.simpleMessage("حالة طلب الصيانة"),
+        "maintenance_type": MessageLookupByLibrary.simpleMessage("نوع الصيانة"),
+        "maybe_later_back_to_the_main_page":
+            MessageLookupByLibrary.simpleMessage(
+                "ربما لاحقا، عودة الى الرئيسية"),
+        "message_containing_code_for_your_order": m2,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
         "new_code": MessageLookupByLibrary.simpleMessage("كود جديد"),
@@ -129,15 +164,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_fill_all_fields":
             MessageLookupByLibrary.simpleMessage("من فضلك املأ جميع الحقول"),
         "posted": MessageLookupByLibrary.simpleMessage("نشر"),
+        "real_estate_unit":
+            MessageLookupByLibrary.simpleMessage("الوحدة العقارية"),
         "rejected_by_the_owner":
             MessageLookupByLibrary.simpleMessage("مرفوض من قبل المالك"),
         "rejected_by_the_supervisor":
             MessageLookupByLibrary.simpleMessage("مرفوض من المشرف"),
+        "reset": MessageLookupByLibrary.simpleMessage("اعادة تعيين"),
         "residential": MessageLookupByLibrary.simpleMessage("سكني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
-        "size_more_than_mg_error": m2,
+        "size_more_than_mg_error": m3,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "successfully_Logged_in":
@@ -146,6 +184,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تمت الموافقة من قبل المشرف"),
         "supervisor_identifications":
             MessageLookupByLibrary.simpleMessage("هويات المشرف"),
-        "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا")
+        "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
+        "worthy": MessageLookupByLibrary.simpleMessage("مستحق")
       };
 }

@@ -849,6 +849,246 @@ class S {
       args: [],
     );
   }
+
+  /// `New maintenance request`
+  String get add_new_contact {
+    return Intl.message(
+      'New maintenance request',
+      name: 'add_new_contact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The main property`
+  String get main_property {
+    return Intl.message(
+      'The main property',
+      name: 'main_property',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Real estate unit`
+  String get real_estate_unit {
+    return Intl.message(
+      'Real estate unit',
+      name: 'real_estate_unit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maintenance Type`
+  String get maintenance_type {
+    return Intl.message(
+      'Maintenance Type',
+      name: 'maintenance_type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customer's mobile phone`
+  String get customer_mobile {
+    return Intl.message(
+      'Customer\'s mobile phone',
+      name: 'customer_mobile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maintenance cost at my own expense'`
+  String get cost_at_my_own_expense {
+    return Intl.message(
+      'Maintenance cost at my own expense\'',
+      name: 'cost_at_my_own_expense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description of maintenance`
+  String get description_of_maintenance {
+    return Intl.message(
+      'Description of maintenance',
+      name: 'description_of_maintenance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maintenance request`
+  String get maintenance_request {
+    return Intl.message(
+      'Maintenance request',
+      name: 'maintenance_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maintenance has been requested`
+  String get maintenance_has_been_requested {
+    return Intl.message(
+      'Maintenance has been requested',
+      name: 'maintenance_has_been_requested',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back to maintenance requests`
+  String get back_to_maintenance_requests {
+    return Intl.message(
+      'Back to maintenance requests',
+      name: 'back_to_maintenance_requests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maybe later, back to the main page`
+  String get maybe_later_back_to_the_main_page {
+    return Intl.message(
+      'Maybe later, back to the main page',
+      name: 'maybe_later_back_to_the_main_page',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have sent a mobile message containing the quality assurance code for your order no{code}`
+  String message_containing_code_for_your_order(Object code) {
+    return Intl.message(
+      'We have sent a mobile message containing the quality assurance code for your order no$code',
+      name: 'message_containing_code_for_your_order',
+      desc: '',
+      args: [code],
+    );
+  }
+
+  /// `A maintenance request was not requested due to an error. Please try again`
+  String get maintenance_request_failed_please_try_again {
+    return Intl.message(
+      'A maintenance request was not requested due to an error. Please try again',
+      name: 'maintenance_request_failed_please_try_again',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Filter`
+  String get filter {
+    return Intl.message(
+      'Filter',
+      name: 'filter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maintenance request status`
+  String get maintenance_request_status {
+    return Intl.message(
+      'Maintenance request status',
+      name: 'maintenance_request_status',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset`
+  String get reset {
+    return Intl.message(
+      'Reset',
+      name: 'reset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date of request`
+  String get date_of_request {
+    return Intl.message(
+      'Date of request',
+      name: 'date_of_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Applicant`
+  String get applicant {
+    return Intl.message(
+      'Applicant',
+      name: 'applicant',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Estimated cost`
+  String get estimated_cost {
+    return Intl.message(
+      'Estimated cost',
+      name: 'estimated_cost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Final Cost`
+  String get final_cost {
+    return Intl.message(
+      'Final Cost',
+      name: 'final_cost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract status`
+  String get contract_status {
+    return Intl.message(
+      'Contract status',
+      name: 'contract_status',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract Type`
+  String get contract_type {
+    return Intl.message(
+      'Contract Type',
+      name: 'contract_type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Worthy`
+  String get worthy {
+    return Intl.message(
+      'Worthy',
+      name: 'worthy',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

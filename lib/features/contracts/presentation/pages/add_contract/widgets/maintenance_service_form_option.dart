@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/base_form_option.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/base_options_requester.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/widgets/base_options_display_widget.dart';
@@ -17,8 +18,8 @@ class MaintenanceServiceFormOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseFormOption<MaintenanceServicesModel>(
-      hintText: 'الوحدة العقارية',
-      bottomSheetTitle: 'الوحدة العقارية',
+      hintText: Translate.s.maintenance_type,
+      bottomSheetTitle: Translate.s.maintenance_type,
       showSearch: true,
       showDecoration: true,
       isMultiple: true,

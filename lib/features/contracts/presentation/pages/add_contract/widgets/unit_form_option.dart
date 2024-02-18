@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/base_form_option.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/base_options_requester.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/widgets/base_options_display_widget.dart';
@@ -18,8 +19,8 @@ class UnitFormOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseFormOption<PropModel>(
-      hintText: 'الوحدة العقارية',
-      bottomSheetTitle: 'الوحدة العقارية',
+      hintText: Translate.s.real_estate_unit,
+      bottomSheetTitle: Translate.s.real_estate_unit,
       showSearch: true,
       showDecoration: true,
       isMultiple: false,

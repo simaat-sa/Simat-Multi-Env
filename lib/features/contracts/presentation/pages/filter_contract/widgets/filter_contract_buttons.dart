@@ -48,7 +48,7 @@ class FilterContractButtons extends StatelessWidget {
                   borderRadius: BorderRadius.circular(6),
                 ),
                 child: Text(
-                  'اعادة تعيين',
+                  Translate.s.reset,
                   style: AppTextStyle.s16_w400(color: context.colors.primary),
                 ),
               ),

@@ -21,11 +21,12 @@ class LoginController {
 
   /// to submit the login form
   Future<bool> onSubmit(BuildContext context) async {
+    var deviceId = await FirebaseMessaging.instance.getToken();
     if (_checkFormValidation(context)) {
-      LoginParams params = loginParams();
+      LoginParams params = loginParams(deviceId ?? '');
       var loginResponse = await getIt<AuthRepository>().login(params);
-     return _handleLoginResponse(context, loginResponse);
-    }else{
+      return _handleLoginResponse(context, loginResponse);
+    } else {
       return false;
     }
   }
@@ -52,15 +53,22 @@ class LoginController {
   }
 
   /// handle login params
-  LoginParams loginParams() {
+  LoginParams loginParams(String deviceId) {
     return LoginParams(
       logPassword: password.text,
       logUser: name.text,
+      deviceToken: deviceId,
     );
   }
 
+  QrLoginParams qrLoginParams(String deviceToken, String token) {
+    return QrLoginParams(deviceToken: deviceToken, token: token);
+  }
+
   Future<void> _loginWithQr(BuildContext context, String token) async {
-    var loginResponse = await getIt<AuthRepository>().loginWithQr(token);
+    var deviceId = await FirebaseMessaging.instance.getToken();
+    final params = qrLoginParams(deviceId??'', token);
+    var loginResponse = await getIt<AuthRepository>().loginWithQr(params);
     _handleLoginResponse(context, loginResponse);
   }
 
@@ -69,6 +77,7 @@ class LoginController {
   /// if yes authenticate with biometric
   /// if no check form validation and authenticate with biometric
   Future<void> loginWithBiometric(BuildContext context) async {
+    var deviceId = await FirebaseMessaging.instance.getToken();
     LoginParams? params = await UserHelperService.instance.getUserCredentials();
     if (params != null) {
       var authorize = await BiometricHelper.instance.authenticate(context);
@@ -83,7 +92,7 @@ class LoginController {
         if (authorize) {
           onSubmit(context).then((value) {
             if (value) {
-              UserHelperService.instance.saveUserCredentials(loginParams());
+              UserHelperService.instance.saveUserCredentials(loginParams(deviceId ?? ''));
             }
           });
         }
@@ -103,7 +112,7 @@ class LoginController {
         context, MaterialPageRoute(builder: (context) => const ScannerScreen()));
     if (scannedCode != null) {
       var token = scannedCode.split(",").first.split("<").last;
-      _loginWithQr(context, token);
+      _loginWithQr(context,token);
     }
   }
 }

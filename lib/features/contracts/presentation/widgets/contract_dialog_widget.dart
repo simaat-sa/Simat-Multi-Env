@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/features/contracts/data/models/tennat_model/contract_model.dart';
@@ -33,7 +34,7 @@ class ContractDialog extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'طلب صيانة',
+                      Translate.s.maintenance_request,
                       style: AppTextStyle.s28_w400(color: context.colors.darkTextColor),
                     ),
                     InkWell(
@@ -70,30 +71,31 @@ class ContractDialog extends StatelessWidget {
                   color: context.colors.backgroundLight,
                 ),
                 AlertDialogItemWidget(
-                    title: 'الوحدة العقارية',
+                    title: Translate.s.real_estate_unit,
                     value: model.unitName,
                     color: context.colors.bgLight,
                     image: Res.unitLogo),
-                AlertDialogItemWidget(title: 'العقار الرئيسي', value: model.createdDateTimeStamp, image: Res.unitLogo),
+                AlertDialogItemWidget(title: Translate.s.main_property, value: model.createdDateTimeStamp, image: Res.unitLogo),
                 AlertDialogItemWidget(
-                    title: 'تاريخ الطلب',
+                    title: Translate
+                    .s.date_of_request,
                     value: model.createdDate,
                     color: context.colors.bgLight,
                     image: Res.calendarIcon),
-                AlertDialogItemWidget(title: 'مقدم الطلب', value: model.createdBy, image: Res.userLogo),
+                AlertDialogItemWidget(title: Translate.s.applicant, value: model.createdBy, image: Res.userLogo),
                 Divider(
                   height: 10,
                   color: context.colors.backgroundLight,
                 ),
-                _buildPriceItem(context, title: 'تكلفة تقديرية', value: model.approxCost),
+                _buildPriceItem(context, title: Translate.s.estimated_cost, value: model.approxCost),
                 _buildPriceItem(context,
-                    title: 'تكلفة نهائية', value: model.actualCost, color: context.colors.bgLight),
+                    title: Translate.s.final_cost, value: model.actualCost, color: context.colors.bgLight),
                 Divider(
                   height: 30,
                   color: context.colors.backgroundLight,
                 ),
                 Text(
-                  "وصف الصيانة",
+                  Translate.s.description_of_maintenance,
                   style: AppTextStyle.s14_w500(color: context.colors.primaryText),
                 ),
                 Gaps.vGap12,

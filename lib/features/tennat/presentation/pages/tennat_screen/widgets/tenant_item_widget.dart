@@ -74,7 +74,7 @@ class TenantItemWidget extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      'مستحق ',
+                      Translate.s.worthy,
                       style: AppTextStyle.s14_w400(color: context.colors.primary),
                     ),
                     Text(

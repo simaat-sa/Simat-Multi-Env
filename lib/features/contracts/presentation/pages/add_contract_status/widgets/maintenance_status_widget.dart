@@ -17,7 +17,8 @@ class CompleteAddFormWidget extends StatelessWidget {
         ),
         Gaps.vGap32,
         Text(
-          isSuccess ? 'تم طلب الصيانة' : 'حدث خطأ ما',
+          textAlign: TextAlign.center,
+          isSuccess ? Translate.s.maintenance_has_been_requested : Translate.s.something_went_wrong,
           style: AppTextStyle.s30_w400(color: context.colors.green4),
         ),
         Padding(
@@ -37,7 +38,7 @@ class CompleteAddFormWidget extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
             child: Text(
-              isSuccess ? 'عودة لطلبات الصيانة' : 'ربما لاحقا، عودة الى الرئيسية',
+              isSuccess ? Translate.s.back_to_maintenance_requests : Translate.s.maybe_later_back_to_the_main_page,
               style: AppTextStyle.s14_w500(color: context.colors.secondary),
             ),
           ),
@@ -48,7 +49,7 @@ class CompleteAddFormWidget extends StatelessWidget {
 
   String _data(bool isSuccess) {
     return isSuccess
-        ? 'لقد قمنا بإرسال رسالة جوال تحتوي على رمز ضمان الجودة لطلبكم رقم ${model!.code}'
-        : "لم يتم طلب الصيانة لخطأ ما، برجاء اعادة المحاولة";
+        ? Translate.s.message_containing_code_for_your_order(model!.code)
+        : Translate.s.maintenance_request_failed_please_try_again;
   }
 }

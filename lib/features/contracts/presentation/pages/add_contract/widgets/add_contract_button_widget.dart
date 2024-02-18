@@ -14,7 +14,7 @@ class AddContractButtonWidget extends StatelessWidget {
         txtColor: context.colors.white,
         textSize: 14,
         maxHeight: 45,
-        text: 'طلب الصيانة',
+        text: Translate.s.maintenance_request,
       ),
     );
   }

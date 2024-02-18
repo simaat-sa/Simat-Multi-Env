@@ -12,7 +12,7 @@ class AddContractDescWidget extends StatelessWidget {
       fieldTypes: FieldTypes.rich,
       type: TextInputType.multiline,
       action: TextInputAction.newline,
-      hint: 'وصف الصيانة',
+      hint: Translate.s.description_of_maintenance,
       max: 6,
       validate: (value) => value?.validateEmpty(),
       fillColor: context.colors.white,
