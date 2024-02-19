@@ -26,7 +26,7 @@ mixin _$TenantModel {
   String? get code => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
   String get unitName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'cal_type', defaultValue: "")
+  @JsonKey(name: 'cal_type')
   DateTypes get dateType => throw _privateConstructorUsedError;
   @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
   String get dataTimeHj => throw _privateConstructorUsedError;
@@ -65,7 +65,7 @@ abstract class $TenantModelCopyWith<$Res> {
       {@JsonKey(name: 'prop_id', defaultValue: "") String propId,
       @JsonKey(name: 'tts_code') String? code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
-      @JsonKey(name: 'cal_type', defaultValue: "") DateTypes dateType,
+      @JsonKey(name: 'cal_type') DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "") String dataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") String dataTimeStamp,
       @JsonKey(name: 'amt_due', defaultValue: "0") String price,
@@ -179,7 +179,7 @@ abstract class _$$TenantModelImplCopyWith<$Res>
       {@JsonKey(name: 'prop_id', defaultValue: "") String propId,
       @JsonKey(name: 'tts_code') String? code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
-      @JsonKey(name: 'cal_type', defaultValue: "") DateTypes dateType,
+      @JsonKey(name: 'cal_type') DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "") String dataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") String dataTimeStamp,
       @JsonKey(name: 'amt_due', defaultValue: "0") String price,
@@ -287,7 +287,7 @@ class _$TenantModelImpl extends _TenantModel {
       {@JsonKey(name: 'prop_id', defaultValue: "") required this.propId,
       @JsonKey(name: 'tts_code') this.code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") required this.unitName,
-      @JsonKey(name: 'cal_type', defaultValue: "") required this.dateType,
+      @JsonKey(name: 'cal_type') required this.dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
       required this.dataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
@@ -315,7 +315,7 @@ class _$TenantModelImpl extends _TenantModel {
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
   final String unitName;
   @override
-  @JsonKey(name: 'cal_type', defaultValue: "")
+  @JsonKey(name: 'cal_type')
   final DateTypes dateType;
   @override
   @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
@@ -419,8 +419,7 @@ abstract class _TenantModel extends TenantModel {
       @JsonKey(name: 'tts_code') final String? code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "")
       required final String unitName,
-      @JsonKey(name: 'cal_type', defaultValue: "")
-      required final DateTypes dateType,
+      @JsonKey(name: 'cal_type') required final DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
       required final String dataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
@@ -452,7 +451,7 @@ abstract class _TenantModel extends TenantModel {
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
   String get unitName;
   @override
-  @JsonKey(name: 'cal_type', defaultValue: "")
+  @JsonKey(name: 'cal_type')
   DateTypes get dateType;
   @override
   @JsonKey(name: 'tts_end_date_hj', defaultValue: "")

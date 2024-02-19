@@ -11,7 +11,7 @@ _$TenantModelImpl _$$TenantModelImplFromJson(Map<String, dynamic> json) =>
       propId: json['prop_id'] as String? ?? '',
       code: json['tts_code'] as String?,
       unitName: json['are_desc_fo'] as String? ?? '',
-      dateType: $enumDecodeNullable(_$DateTypesEnumMap, json['cal_type']) ?? '',
+      dateType: $enumDecode(_$DateTypesEnumMap, json['cal_type']),
       dataTimeHj: json['tts_end_date_hj'] as String? ?? '',
       dataTimeStamp: json['tts_end_date_dgr'] as String? ?? '',
       price: json['amt_due'] as String? ?? '0',

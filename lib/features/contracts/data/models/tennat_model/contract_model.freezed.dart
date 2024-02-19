@@ -20,7 +20,7 @@ ContractModel _$ContractModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ContractModel {
-  @JsonKey(name: 'maint_id')
+  @JsonKey(name: 'maint_id', defaultValue: "")
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'contact_name', defaultValue: "")
   String get createdBy => throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$ContractModel {
   String get actualCost => throw _privateConstructorUsedError;
   @JsonKey(name: 'acl_status_code')
   ContractStatus get status => throw _privateConstructorUsedError;
-  @JsonKey(name: 'dt_created')
+  @JsonKey(name: 'dt_created', defaultValue: "")
   String get createdDateTimeStamp => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -52,7 +52,7 @@ abstract class $ContractModelCopyWith<$Res> {
       _$ContractModelCopyWithImpl<$Res, ContractModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'maint_id') String id,
+      {@JsonKey(name: 'maint_id', defaultValue: "") String id,
       @JsonKey(name: 'contact_name', defaultValue: "") String createdBy,
       @JsonKey(name: 'maint_desc', defaultValue: "") String desc,
       @JsonKey(name: 'maint_code') String code,
@@ -60,7 +60,8 @@ abstract class $ContractModelCopyWith<$Res> {
       @JsonKey(name: 'approx_cost', defaultValue: "0") String approxCost,
       @JsonKey(name: 'actual_cost', defaultValue: "0") String actualCost,
       @JsonKey(name: 'acl_status_code') ContractStatus status,
-      @JsonKey(name: 'dt_created') String createdDateTimeStamp});
+      @JsonKey(name: 'dt_created', defaultValue: "")
+      String createdDateTimeStamp});
 }
 
 /// @nodoc
@@ -136,7 +137,7 @@ abstract class _$$ContractModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'maint_id') String id,
+      {@JsonKey(name: 'maint_id', defaultValue: "") String id,
       @JsonKey(name: 'contact_name', defaultValue: "") String createdBy,
       @JsonKey(name: 'maint_desc', defaultValue: "") String desc,
       @JsonKey(name: 'maint_code') String code,
@@ -144,7 +145,8 @@ abstract class _$$ContractModelImplCopyWith<$Res>
       @JsonKey(name: 'approx_cost', defaultValue: "0") String approxCost,
       @JsonKey(name: 'actual_cost', defaultValue: "0") String actualCost,
       @JsonKey(name: 'acl_status_code') ContractStatus status,
-      @JsonKey(name: 'dt_created') String createdDateTimeStamp});
+      @JsonKey(name: 'dt_created', defaultValue: "")
+      String createdDateTimeStamp});
 }
 
 /// @nodoc
@@ -214,7 +216,7 @@ class __$$ContractModelImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$ContractModelImpl extends _ContractModel {
   _$ContractModelImpl(
-      {@JsonKey(name: 'maint_id') required this.id,
+      {@JsonKey(name: 'maint_id', defaultValue: "") required this.id,
       @JsonKey(name: 'contact_name', defaultValue: "") required this.createdBy,
       @JsonKey(name: 'maint_desc', defaultValue: "") required this.desc,
       @JsonKey(name: 'maint_code') required this.code,
@@ -222,14 +224,15 @@ class _$ContractModelImpl extends _ContractModel {
       @JsonKey(name: 'approx_cost', defaultValue: "0") required this.approxCost,
       @JsonKey(name: 'actual_cost', defaultValue: "0") required this.actualCost,
       @JsonKey(name: 'acl_status_code') required this.status,
-      @JsonKey(name: 'dt_created') required this.createdDateTimeStamp})
+      @JsonKey(name: 'dt_created', defaultValue: "")
+      required this.createdDateTimeStamp})
       : super._();
 
   factory _$ContractModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ContractModelImplFromJson(json);
 
   @override
-  @JsonKey(name: 'maint_id')
+  @JsonKey(name: 'maint_id', defaultValue: "")
   final String id;
   @override
   @JsonKey(name: 'contact_name', defaultValue: "")
@@ -253,7 +256,7 @@ class _$ContractModelImpl extends _ContractModel {
   @JsonKey(name: 'acl_status_code')
   final ContractStatus status;
   @override
-  @JsonKey(name: 'dt_created')
+  @JsonKey(name: 'dt_created', defaultValue: "")
   final String createdDateTimeStamp;
 
   @override
@@ -303,7 +306,7 @@ class _$ContractModelImpl extends _ContractModel {
 
 abstract class _ContractModel extends ContractModel {
   factory _ContractModel(
-      {@JsonKey(name: 'maint_id') required final String id,
+      {@JsonKey(name: 'maint_id', defaultValue: "") required final String id,
       @JsonKey(name: 'contact_name', defaultValue: "")
       required final String createdBy,
       @JsonKey(name: 'maint_desc', defaultValue: "") required final String desc,
@@ -315,7 +318,7 @@ abstract class _ContractModel extends ContractModel {
       @JsonKey(name: 'actual_cost', defaultValue: "0")
       required final String actualCost,
       @JsonKey(name: 'acl_status_code') required final ContractStatus status,
-      @JsonKey(name: 'dt_created')
+      @JsonKey(name: 'dt_created', defaultValue: "")
       required final String createdDateTimeStamp}) = _$ContractModelImpl;
   _ContractModel._() : super._();
 
@@ -323,7 +326,7 @@ abstract class _ContractModel extends ContractModel {
       _$ContractModelImpl.fromJson;
 
   @override
-  @JsonKey(name: 'maint_id')
+  @JsonKey(name: 'maint_id', defaultValue: "")
   String get id;
   @override
   @JsonKey(name: 'contact_name', defaultValue: "")
@@ -347,7 +350,7 @@ abstract class _ContractModel extends ContractModel {
   @JsonKey(name: 'acl_status_code')
   ContractStatus get status;
   @override
-  @JsonKey(name: 'dt_created')
+  @JsonKey(name: 'dt_created', defaultValue: "")
   String get createdDateTimeStamp;
   @override
   @JsonKey(ignore: true)

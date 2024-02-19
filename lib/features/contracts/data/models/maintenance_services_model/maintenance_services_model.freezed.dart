@@ -21,33 +21,33 @@ MaintenanceServicesModel _$MaintenanceServicesModelFromJson(
 
 /// @nodoc
 mixin _$MaintenanceServicesModel {
-  @JsonKey(name: 'list_id')
+  @JsonKey(name: 'list_id', defaultValue: "0")
   String get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'is_group')
+  @JsonKey(name: 'is_group', defaultValue: "")
   String get isGroup => throw _privateConstructorUsedError;
-  @JsonKey(name: 'list_parent')
+  @JsonKey(name: 'list_parent', defaultValue: "")
   String get parent => throw _privateConstructorUsedError;
-  @JsonKey(name: 'list_code')
+  @JsonKey(name: 'list_code', defaultValue: "0")
   String get code => throw _privateConstructorUsedError;
-  @JsonKey(name: 'list_val')
+  @JsonKey(name: 'list_val', defaultValue: "0")
   String get value => throw _privateConstructorUsedError;
-  @JsonKey(name: 'list_ar')
+  @JsonKey(name: 'list_ar', defaultValue: "")
   String get nameAr => throw _privateConstructorUsedError;
-  @JsonKey(name: 'list_en')
+  @JsonKey(name: 'list_en', defaultValue: "")
   String get nameEn => throw _privateConstructorUsedError;
-  @JsonKey(name: 'dt_created')
+  @JsonKey(name: 'dt_created', defaultValue: "")
   String get createdDateTimeStamp => throw _privateConstructorUsedError;
-  @JsonKey(name: 'dt_updated')
+  @JsonKey(name: 'dt_updated', defaultValue: "")
   String get updatedDateTimeStamp => throw _privateConstructorUsedError;
-  @JsonKey(name: 'sequence')
+  @JsonKey(name: 'sequence', defaultValue: "")
   String get sequence => throw _privateConstructorUsedError;
-  @JsonKey(name: 'create_by')
+  @JsonKey(name: 'create_by', defaultValue: "")
   String get createBy => throw _privateConstructorUsedError;
-  @JsonKey(name: 'update_by')
+  @JsonKey(name: 'update_by', defaultValue: "")
   String get updateBy => throw _privateConstructorUsedError;
-  @JsonKey(name: 'sys_pkg')
+  @JsonKey(name: 'sys_pkg', defaultValue: "")
   String get sysPkg => throw _privateConstructorUsedError;
-  @JsonKey(name: 'list_uuid')
+  @JsonKey(name: 'list_uuid', defaultValue: "0")
   String get uuid => throw _privateConstructorUsedError;
   String get active => throw _privateConstructorUsedError;
   String get icon => throw _privateConstructorUsedError;
@@ -65,20 +65,22 @@ abstract class $MaintenanceServicesModelCopyWith<$Res> {
       _$MaintenanceServicesModelCopyWithImpl<$Res, MaintenanceServicesModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'list_id') String id,
-      @JsonKey(name: 'is_group') String isGroup,
-      @JsonKey(name: 'list_parent') String parent,
-      @JsonKey(name: 'list_code') String code,
-      @JsonKey(name: 'list_val') String value,
-      @JsonKey(name: 'list_ar') String nameAr,
-      @JsonKey(name: 'list_en') String nameEn,
-      @JsonKey(name: 'dt_created') String createdDateTimeStamp,
-      @JsonKey(name: 'dt_updated') String updatedDateTimeStamp,
-      @JsonKey(name: 'sequence') String sequence,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'update_by') String updateBy,
-      @JsonKey(name: 'sys_pkg') String sysPkg,
-      @JsonKey(name: 'list_uuid') String uuid,
+      {@JsonKey(name: 'list_id', defaultValue: "0") String id,
+      @JsonKey(name: 'is_group', defaultValue: "") String isGroup,
+      @JsonKey(name: 'list_parent', defaultValue: "") String parent,
+      @JsonKey(name: 'list_code', defaultValue: "0") String code,
+      @JsonKey(name: 'list_val', defaultValue: "0") String value,
+      @JsonKey(name: 'list_ar', defaultValue: "") String nameAr,
+      @JsonKey(name: 'list_en', defaultValue: "") String nameEn,
+      @JsonKey(name: 'dt_created', defaultValue: "")
+      String createdDateTimeStamp,
+      @JsonKey(name: 'dt_updated', defaultValue: "")
+      String updatedDateTimeStamp,
+      @JsonKey(name: 'sequence', defaultValue: "") String sequence,
+      @JsonKey(name: 'create_by', defaultValue: "") String createBy,
+      @JsonKey(name: 'update_by', defaultValue: "") String updateBy,
+      @JsonKey(name: 'sys_pkg', defaultValue: "") String sysPkg,
+      @JsonKey(name: 'list_uuid', defaultValue: "0") String uuid,
       String active,
       String icon});
 }
@@ -193,20 +195,22 @@ abstract class _$$MaintenanceServicesModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'list_id') String id,
-      @JsonKey(name: 'is_group') String isGroup,
-      @JsonKey(name: 'list_parent') String parent,
-      @JsonKey(name: 'list_code') String code,
-      @JsonKey(name: 'list_val') String value,
-      @JsonKey(name: 'list_ar') String nameAr,
-      @JsonKey(name: 'list_en') String nameEn,
-      @JsonKey(name: 'dt_created') String createdDateTimeStamp,
-      @JsonKey(name: 'dt_updated') String updatedDateTimeStamp,
-      @JsonKey(name: 'sequence') String sequence,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'update_by') String updateBy,
-      @JsonKey(name: 'sys_pkg') String sysPkg,
-      @JsonKey(name: 'list_uuid') String uuid,
+      {@JsonKey(name: 'list_id', defaultValue: "0") String id,
+      @JsonKey(name: 'is_group', defaultValue: "") String isGroup,
+      @JsonKey(name: 'list_parent', defaultValue: "") String parent,
+      @JsonKey(name: 'list_code', defaultValue: "0") String code,
+      @JsonKey(name: 'list_val', defaultValue: "0") String value,
+      @JsonKey(name: 'list_ar', defaultValue: "") String nameAr,
+      @JsonKey(name: 'list_en', defaultValue: "") String nameEn,
+      @JsonKey(name: 'dt_created', defaultValue: "")
+      String createdDateTimeStamp,
+      @JsonKey(name: 'dt_updated', defaultValue: "")
+      String updatedDateTimeStamp,
+      @JsonKey(name: 'sequence', defaultValue: "") String sequence,
+      @JsonKey(name: 'create_by', defaultValue: "") String createBy,
+      @JsonKey(name: 'update_by', defaultValue: "") String updateBy,
+      @JsonKey(name: 'sys_pkg', defaultValue: "") String sysPkg,
+      @JsonKey(name: 'list_uuid', defaultValue: "0") String uuid,
       String active,
       String icon});
 }
@@ -315,20 +319,22 @@ class __$$MaintenanceServicesModelImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
   const _$MaintenanceServicesModelImpl(
-      {@JsonKey(name: 'list_id') required this.id,
-      @JsonKey(name: 'is_group') required this.isGroup,
-      @JsonKey(name: 'list_parent') required this.parent,
-      @JsonKey(name: 'list_code') required this.code,
-      @JsonKey(name: 'list_val') required this.value,
-      @JsonKey(name: 'list_ar') required this.nameAr,
-      @JsonKey(name: 'list_en') required this.nameEn,
-      @JsonKey(name: 'dt_created') required this.createdDateTimeStamp,
-      @JsonKey(name: 'dt_updated') required this.updatedDateTimeStamp,
-      @JsonKey(name: 'sequence') required this.sequence,
-      @JsonKey(name: 'create_by') required this.createBy,
-      @JsonKey(name: 'update_by') required this.updateBy,
-      @JsonKey(name: 'sys_pkg') required this.sysPkg,
-      @JsonKey(name: 'list_uuid') required this.uuid,
+      {@JsonKey(name: 'list_id', defaultValue: "0") required this.id,
+      @JsonKey(name: 'is_group', defaultValue: "") required this.isGroup,
+      @JsonKey(name: 'list_parent', defaultValue: "") required this.parent,
+      @JsonKey(name: 'list_code', defaultValue: "0") required this.code,
+      @JsonKey(name: 'list_val', defaultValue: "0") required this.value,
+      @JsonKey(name: 'list_ar', defaultValue: "") required this.nameAr,
+      @JsonKey(name: 'list_en', defaultValue: "") required this.nameEn,
+      @JsonKey(name: 'dt_created', defaultValue: "")
+      required this.createdDateTimeStamp,
+      @JsonKey(name: 'dt_updated', defaultValue: "")
+      required this.updatedDateTimeStamp,
+      @JsonKey(name: 'sequence', defaultValue: "") required this.sequence,
+      @JsonKey(name: 'create_by', defaultValue: "") required this.createBy,
+      @JsonKey(name: 'update_by', defaultValue: "") required this.updateBy,
+      @JsonKey(name: 'sys_pkg', defaultValue: "") required this.sysPkg,
+      @JsonKey(name: 'list_uuid', defaultValue: "0") required this.uuid,
       required this.active,
       required this.icon})
       : super._();
@@ -337,46 +343,46 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
       _$$MaintenanceServicesModelImplFromJson(json);
 
   @override
-  @JsonKey(name: 'list_id')
+  @JsonKey(name: 'list_id', defaultValue: "0")
   final String id;
   @override
-  @JsonKey(name: 'is_group')
+  @JsonKey(name: 'is_group', defaultValue: "")
   final String isGroup;
   @override
-  @JsonKey(name: 'list_parent')
+  @JsonKey(name: 'list_parent', defaultValue: "")
   final String parent;
   @override
-  @JsonKey(name: 'list_code')
+  @JsonKey(name: 'list_code', defaultValue: "0")
   final String code;
   @override
-  @JsonKey(name: 'list_val')
+  @JsonKey(name: 'list_val', defaultValue: "0")
   final String value;
   @override
-  @JsonKey(name: 'list_ar')
+  @JsonKey(name: 'list_ar', defaultValue: "")
   final String nameAr;
   @override
-  @JsonKey(name: 'list_en')
+  @JsonKey(name: 'list_en', defaultValue: "")
   final String nameEn;
   @override
-  @JsonKey(name: 'dt_created')
+  @JsonKey(name: 'dt_created', defaultValue: "")
   final String createdDateTimeStamp;
   @override
-  @JsonKey(name: 'dt_updated')
+  @JsonKey(name: 'dt_updated', defaultValue: "")
   final String updatedDateTimeStamp;
   @override
-  @JsonKey(name: 'sequence')
+  @JsonKey(name: 'sequence', defaultValue: "")
   final String sequence;
   @override
-  @JsonKey(name: 'create_by')
+  @JsonKey(name: 'create_by', defaultValue: "")
   final String createBy;
   @override
-  @JsonKey(name: 'update_by')
+  @JsonKey(name: 'update_by', defaultValue: "")
   final String updateBy;
   @override
-  @JsonKey(name: 'sys_pkg')
+  @JsonKey(name: 'sys_pkg', defaultValue: "")
   final String sysPkg;
   @override
-  @JsonKey(name: 'list_uuid')
+  @JsonKey(name: 'list_uuid', defaultValue: "0")
   final String uuid;
   @override
   final String active;
@@ -454,20 +460,27 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
 
 abstract class _MaintenanceServicesModel extends MaintenanceServicesModel {
   const factory _MaintenanceServicesModel(
-      {@JsonKey(name: 'list_id') required final String id,
-      @JsonKey(name: 'is_group') required final String isGroup,
-      @JsonKey(name: 'list_parent') required final String parent,
-      @JsonKey(name: 'list_code') required final String code,
-      @JsonKey(name: 'list_val') required final String value,
-      @JsonKey(name: 'list_ar') required final String nameAr,
-      @JsonKey(name: 'list_en') required final String nameEn,
-      @JsonKey(name: 'dt_created') required final String createdDateTimeStamp,
-      @JsonKey(name: 'dt_updated') required final String updatedDateTimeStamp,
-      @JsonKey(name: 'sequence') required final String sequence,
-      @JsonKey(name: 'create_by') required final String createBy,
-      @JsonKey(name: 'update_by') required final String updateBy,
-      @JsonKey(name: 'sys_pkg') required final String sysPkg,
-      @JsonKey(name: 'list_uuid') required final String uuid,
+      {@JsonKey(name: 'list_id', defaultValue: "0") required final String id,
+      @JsonKey(name: 'is_group', defaultValue: "")
+      required final String isGroup,
+      @JsonKey(name: 'list_parent', defaultValue: "")
+      required final String parent,
+      @JsonKey(name: 'list_code', defaultValue: "0") required final String code,
+      @JsonKey(name: 'list_val', defaultValue: "0") required final String value,
+      @JsonKey(name: 'list_ar', defaultValue: "") required final String nameAr,
+      @JsonKey(name: 'list_en', defaultValue: "") required final String nameEn,
+      @JsonKey(name: 'dt_created', defaultValue: "")
+      required final String createdDateTimeStamp,
+      @JsonKey(name: 'dt_updated', defaultValue: "")
+      required final String updatedDateTimeStamp,
+      @JsonKey(name: 'sequence', defaultValue: "")
+      required final String sequence,
+      @JsonKey(name: 'create_by', defaultValue: "")
+      required final String createBy,
+      @JsonKey(name: 'update_by', defaultValue: "")
+      required final String updateBy,
+      @JsonKey(name: 'sys_pkg', defaultValue: "") required final String sysPkg,
+      @JsonKey(name: 'list_uuid', defaultValue: "0") required final String uuid,
       required final String active,
       required final String icon}) = _$MaintenanceServicesModelImpl;
   const _MaintenanceServicesModel._() : super._();
@@ -476,46 +489,46 @@ abstract class _MaintenanceServicesModel extends MaintenanceServicesModel {
       _$MaintenanceServicesModelImpl.fromJson;
 
   @override
-  @JsonKey(name: 'list_id')
+  @JsonKey(name: 'list_id', defaultValue: "0")
   String get id;
   @override
-  @JsonKey(name: 'is_group')
+  @JsonKey(name: 'is_group', defaultValue: "")
   String get isGroup;
   @override
-  @JsonKey(name: 'list_parent')
+  @JsonKey(name: 'list_parent', defaultValue: "")
   String get parent;
   @override
-  @JsonKey(name: 'list_code')
+  @JsonKey(name: 'list_code', defaultValue: "0")
   String get code;
   @override
-  @JsonKey(name: 'list_val')
+  @JsonKey(name: 'list_val', defaultValue: "0")
   String get value;
   @override
-  @JsonKey(name: 'list_ar')
+  @JsonKey(name: 'list_ar', defaultValue: "")
   String get nameAr;
   @override
-  @JsonKey(name: 'list_en')
+  @JsonKey(name: 'list_en', defaultValue: "")
   String get nameEn;
   @override
-  @JsonKey(name: 'dt_created')
+  @JsonKey(name: 'dt_created', defaultValue: "")
   String get createdDateTimeStamp;
   @override
-  @JsonKey(name: 'dt_updated')
+  @JsonKey(name: 'dt_updated', defaultValue: "")
   String get updatedDateTimeStamp;
   @override
-  @JsonKey(name: 'sequence')
+  @JsonKey(name: 'sequence', defaultValue: "")
   String get sequence;
   @override
-  @JsonKey(name: 'create_by')
+  @JsonKey(name: 'create_by', defaultValue: "")
   String get createBy;
   @override
-  @JsonKey(name: 'update_by')
+  @JsonKey(name: 'update_by', defaultValue: "")
   String get updateBy;
   @override
-  @JsonKey(name: 'sys_pkg')
+  @JsonKey(name: 'sys_pkg', defaultValue: "")
   String get sysPkg;
   @override
-  @JsonKey(name: 'list_uuid')
+  @JsonKey(name: 'list_uuid', defaultValue: "0")
   String get uuid;
   @override
   String get active;

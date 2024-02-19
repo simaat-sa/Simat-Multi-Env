@@ -103,7 +103,8 @@
   "final_cost": "تكلفة نهائية",
   "contract_status": "حاله العقد",
   "contract_type": "نوع العقد",
-  "worthy": "مستحق"
+  "worthy": "مستحق",
+  "user_or_phone_hint": "هاتفك الجوال او اسم المستخدم"
 }
 
 

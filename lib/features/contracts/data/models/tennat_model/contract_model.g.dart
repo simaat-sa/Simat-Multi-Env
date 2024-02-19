@@ -8,7 +8,7 @@ part of 'contract_model.dart';
 
 _$ContractModelImpl _$$ContractModelImplFromJson(Map<String, dynamic> json) =>
     _$ContractModelImpl(
-      id: json['maint_id'] as String,
+      id: json['maint_id'] as String? ?? '',
       createdBy: json['contact_name'] as String? ?? '',
       desc: json['maint_desc'] as String? ?? '',
       code: json['maint_code'] as String,
@@ -16,7 +16,7 @@ _$ContractModelImpl _$$ContractModelImplFromJson(Map<String, dynamic> json) =>
       approxCost: json['approx_cost'] as String? ?? '0',
       actualCost: json['actual_cost'] as String? ?? '0',
       status: $enumDecode(_$ContractStatusEnumMap, json['acl_status_code']),
-      createdDateTimeStamp: json['dt_created'] as String,
+      createdDateTimeStamp: json['dt_created'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$ContractModelImplToJson(_$ContractModelImpl instance) =>

@@ -185,6 +185,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "supervisor_identifications":
             MessageLookupByLibrary.simpleMessage("هويات المشرف"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
+        "user_or_phone_hint": MessageLookupByLibrary.simpleMessage(
+            "هاتفك الجوال او اسم المستخدم"),
         "worthy": MessageLookupByLibrary.simpleMessage("مستحق")
       };
 }

@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tdd/core/constants/gaps.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 
@@ -8,15 +9,19 @@ class AuthAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final Function()? onBack;
   final bool showBack;
+  final List<Widget>? action;
 
   final Widget? leading;
-  const AuthAppBarWidget(
-      {super.key,
-        this.title,
-        this.onBack,
-        this.leading,
-        this.showBack = true,
-        this.scaffoldkey});
+
+  const AuthAppBarWidget({
+    super.key,
+    this.title,
+    this.onBack,
+    this.leading,
+    this.showBack = true,
+    this.scaffoldkey,
+    this.action,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -43,15 +48,16 @@ class AuthAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
         ),
-        actions: [
-          InkWell(
-              onTap: () =>
-                  scaffoldkey?.currentState?.openEndDrawer(),
-              child: Icon(
-                Icons.more_vert_outlined,
-                color: context.colors.black,
-                size: 25,
-              ))
+        actions:const [
+          Gaps.empty,
+          // InkWell(
+          //     onTap: () =>
+          //         scaffoldkey?.currentState?.openEndDrawer(),
+          //     child: Icon(
+          //       Icons.more_vert_outlined,
+          //       color: context.colors.black,
+          //       size: 25,
+          //     ))
         ],
       ),
     );

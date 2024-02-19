@@ -14,18 +14,25 @@ class SplashBottomItemWidget extends StatelessWidget {
         children: [
           Text(
               textAlign: TextAlign.center,
-              'Version 01.04.23 ',
+              'صنعت بشغف © منصة سمات العقارية ',
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),
           Gaps.vGap5,
           Text(
               textAlign: TextAlign.center,
-              '© 2023 by Simaat',
+              'برنامج إدارة الأملاك العقارية',
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),
-          Gaps.vGap15,
+          Gaps.vGap5,
+          Text(
+              textAlign: TextAlign.center,
+              'اصدار 35.1.2',
+              style: AppTextStyle.s12_w400(
+                color: context.colors.black,
+              )),
+          Gaps.vGap24,
           LinearPercentIndicator(
             barRadius: Radius.circular(50.r),
             lineHeight: 3.r,

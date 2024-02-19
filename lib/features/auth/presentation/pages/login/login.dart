@@ -25,9 +25,9 @@ class _LoginState extends State<Login> {
         top: true,
         child: AuthScaffoldWidget(
           scaffoldKey: controller.drawerKey,
-          appBar: AuthAppBarWidget(
+          appBar: const AuthAppBarWidget(
             showBack: false,
-            scaffoldkey: controller.drawerKey,
+            //scaffoldkey: controller.drawerKey,
           ),
           body: GestureDetector(
             onTap: FocusScope.of(context).unfocus,

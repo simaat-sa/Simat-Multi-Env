@@ -192,6 +192,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "supervisor_identifications":
             MessageLookupByLibrary.simpleMessage("supervisor Identifications"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN"),
+        "user_or_phone_hint":
+            MessageLookupByLibrary.simpleMessage("Mobile phone or Username"),
         "worthy": MessageLookupByLibrary.simpleMessage("Worthy")
       };
 }

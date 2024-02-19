@@ -103,6 +103,8 @@
   "final_cost": "Final Cost",
   "contract_status": "Contract status",
   "contract_type": "Contract Type",
-  "worthy": "Worthy"
+  "worthy": "Worthy",
+  "user_or_phone_hint": "Mobile phone or Username"
+
 
 }
