@@ -16,20 +16,20 @@ class TenantModel with _$TenantModel {
 
   @JsonSerializable(explicitToJson: true)
   factory TenantModel({
-    @JsonKey(name: 'prop_id')required String propId,
-    @JsonKey(name: 'tts_code')required String? code,
-    @JsonKey(name: 'are_desc_fo')required String unitName,
-    @JsonKey(name: 'cal_type')required DateTypes dateType,
-    @JsonKey(name: 'tts_end_date_hj')required String dataTimeHj,
-    @JsonKey(name: 'tts_end_date_dgr')required String dataTimeStamp,
+    @JsonKey(name: 'prop_id',defaultValue: "")required String propId,
+    @JsonKey(name: 'tts_code') String? code,
+    @JsonKey(name: 'are_desc_fo',defaultValue: "")required String unitName,
+    @JsonKey(name: 'cal_type',defaultValue: "")required DateTypes dateType,
+    @JsonKey(name: 'tts_end_date_hj',defaultValue: "")required String dataTimeHj,
+    @JsonKey(name: 'tts_end_date_dgr',defaultValue: "")required String dataTimeStamp,
     @JsonKey(name: 'amt_due', defaultValue: "0")required String price,
     @JsonKey(name: 'tts_validity')required TenantVisibility status,
     @JsonKey(name: 'contract_type')required ContractTypes type,
-    @JsonKey(name: 'prop_lat')required String propLat,
-    @JsonKey(name: 'prop_lng')required String propLng,
+    @JsonKey(name: 'prop_lat',defaultValue: "")required String propLat,
+    @JsonKey(name: 'prop_lng',defaultValue: "")required String propLng,
     @JsonKey(name: 'prop_img')String? propImg,
-    @JsonKey(name: 'prop_city')required String propCity,
-    @JsonKey(name: 'prop_region')required String propRegion,
+    @JsonKey(name: 'prop_city',defaultValue: "")required String propCity,
+    @JsonKey(name: 'prop_region',defaultValue: "")required String propRegion,
   }) = _TenantModel;
 
   factory TenantModel.fromJson(Map<String, dynamic> json) => _$TenantModelFromJson(json);

@@ -8,20 +8,20 @@ part of 'tennat_model.dart';
 
 _$TenantModelImpl _$$TenantModelImplFromJson(Map<String, dynamic> json) =>
     _$TenantModelImpl(
-      propId: json['prop_id'] as String,
+      propId: json['prop_id'] as String? ?? '',
       code: json['tts_code'] as String?,
-      unitName: json['are_desc_fo'] as String,
-      dateType: $enumDecode(_$DateTypesEnumMap, json['cal_type']),
-      dataTimeHj: json['tts_end_date_hj'] as String,
-      dataTimeStamp: json['tts_end_date_dgr'] as String,
+      unitName: json['are_desc_fo'] as String? ?? '',
+      dateType: $enumDecodeNullable(_$DateTypesEnumMap, json['cal_type']) ?? '',
+      dataTimeHj: json['tts_end_date_hj'] as String? ?? '',
+      dataTimeStamp: json['tts_end_date_dgr'] as String? ?? '',
       price: json['amt_due'] as String? ?? '0',
       status: $enumDecode(_$TenantVisibilityEnumMap, json['tts_validity']),
       type: $enumDecode(_$ContractTypesEnumMap, json['contract_type']),
-      propLat: json['prop_lat'] as String,
-      propLng: json['prop_lng'] as String,
+      propLat: json['prop_lat'] as String? ?? '',
+      propLng: json['prop_lng'] as String? ?? '',
       propImg: json['prop_img'] as String?,
-      propCity: json['prop_city'] as String,
-      propRegion: json['prop_region'] as String,
+      propCity: json['prop_city'] as String? ?? '',
+      propRegion: json['prop_region'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$TenantModelImplToJson(_$TenantModelImpl instance) =>
