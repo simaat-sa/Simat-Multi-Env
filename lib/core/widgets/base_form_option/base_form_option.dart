@@ -20,6 +20,7 @@ class BaseFormOption<T> extends StatefulWidget {
   final bool isRequired;
   final bool showDecoration;
   final bool isMultiple;
+  final bool useFirstAsDefaultIfOneItem;
   final VoidCallback onClearPressed;
   final void Function(List<T>? values, bool iMultiple) onSaveValue;
   final BaseOptionsRequester<T> optionsRequester;
@@ -54,6 +55,7 @@ class BaseFormOption<T> extends StatefulWidget {
     this.addNewOptionButtonText,
     this.onAddNewOptionPressed,
     this.isRequired = true,
+    this.useFirstAsDefaultIfOneItem = false,
   });
 
   @override
@@ -158,7 +160,14 @@ class _BaseFormOptionState<T> extends State<BaseFormOption<T>> {
       listener: (context, state) {
         state.whenOrNull(
           success: (data, isLoading) {
-            _reCalculateSelectedItems();
+            if (widget.useFirstAsDefaultIfOneItem &&
+                _optionController.tempValue.isNullOrEmpty &&
+                data.isNetherNullNorEmpty) {
+              _setDefaultIfItemsIsOne(data);
+
+            } else {
+              _reCalculateSelectedItems();
+            }
           },
         );
       },
@@ -186,9 +195,7 @@ class _BaseFormOptionState<T> extends State<BaseFormOption<T>> {
                 color: Colors.white,
               ));
             }
-            return IgnorePointer(
-                ignoring: true,
-                child: widget.selectedOptionBuilder(items));
+            return IgnorePointer(ignoring: true, child: widget.selectedOptionBuilder(items));
           },
           onSaveTextPressed: () {
             _optionController.selectedValue = _optionController.tempValue;
@@ -216,7 +223,14 @@ class _BaseFormOptionState<T> extends State<BaseFormOption<T>> {
     );
   }
 
+  void _setDefaultIfItemsIsOne(List<dynamic> data) {
+       if (data.length == 1) {
+      _optionController.tempValue = [data.first];
+      _optionController.selectedValue = _optionController.tempValue;
+      widget.onSaveValue(_optionController.selectedValue, widget.isMultiple);
+    }
 
+  }
 
   ListView _itemsBuilder(List<T> items) {
     return ListView.builder(

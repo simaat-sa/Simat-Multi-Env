@@ -28,8 +28,6 @@ class PropertyFormOption extends StatelessWidget {
       onClearPressed: () => controller.selectedProps = [],
       onSaveValue: (values, iMultiple) {
         controller.selectedProps = values ?? [];
-        controller.unitRequester.request();
-
       },
       optionsRequester: BaseOptionsRequester(
         isRemotelySearch: false,

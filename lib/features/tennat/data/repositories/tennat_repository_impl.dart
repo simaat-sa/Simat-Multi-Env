@@ -22,7 +22,7 @@ class TenantRepositoryImpl extends TenantRepository with ModelToDomainResult {
   }
 
   @override
-  Future<MyResult<List<PropModel>>> getPropsUnites(String params) async {
-    return await dataSource.getPropsUnites(params);
+  Future<MyResult<List<PropModel>>> getPropsUnites() async {
+    return await dataSource.getPropsUnites();
   }
 }

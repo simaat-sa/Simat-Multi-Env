@@ -70,7 +70,7 @@ class _SearchFormFieldState extends State<SearchFormField> {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 400),
       width: _isSearchFieldExpand ? _expandSearchFieldWidth : _collapsedSearchFieldWidth,
-      height: _isSearchFieldExpand ? 32.h : 28.h,
+      height: _isSearchFieldExpand ? 36.h : 32.h,
       padding: EdgeInsets.zero,
       child: TextField(
         focusNode: _focusNode,

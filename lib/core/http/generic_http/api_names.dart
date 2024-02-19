@@ -23,7 +23,7 @@ class ApiNames {
   static String getContracts = "${version1Part}maintenance/list";
 
   static String properties = "${version1Part}tenant/properties/list";
-  static String propUnits(String id) => "${version1Part}tenant/properties/units/list?prop_id==$id";
+  static String propUnits = "${version1Part}tenant/units";
   static String maintenanceServices = "${version1Part}maintenance/services";
   static String maintenanceAdd = "${version1Part}maintenance/add";
 }

@@ -30,11 +30,15 @@ mixin _$PropModel {
   String get areAreId => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_desc_fo')
   String get areDescFo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'parent_desc_ar')
+  String get parentDescAr => throw _privateConstructorUsedError;
+  @JsonKey(name: 'parent_desc_en')
+  String get parentDescEn => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_owner')
   String get areOwner => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_intermediate')
   String get areIntermediate => throw _privateConstructorUsedError;
-  @JsonKey(name: 'prop_img')
+  @JsonKey(name: 'prop_img', defaultValue: "")
   String get propImg => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_lat')
   String get propLat => throw _privateConstructorUsedError;
@@ -54,7 +58,7 @@ mixin _$PropModel {
   String get dtCreated => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_units')
   String get propUnits => throw _privateConstructorUsedError;
-  @JsonKey(name: 'water_meter')
+  @JsonKey(name: 'water_meter', defaultValue: "")
   String get waterMeter => throw _privateConstructorUsedError;
   @JsonKey(name: 'guard_name')
   String get guardName => throw _privateConstructorUsedError;
@@ -118,9 +122,11 @@ abstract class $PropModelCopyWith<$Res> {
       @JsonKey(name: 'are_code') String areCode,
       @JsonKey(name: 'are_are_id') String areAreId,
       @JsonKey(name: 'are_desc_fo') String areDescFo,
+      @JsonKey(name: 'parent_desc_ar') String parentDescAr,
+      @JsonKey(name: 'parent_desc_en') String parentDescEn,
       @JsonKey(name: 'are_owner') String areOwner,
       @JsonKey(name: 'are_intermediate') String areIntermediate,
-      @JsonKey(name: 'prop_img') String propImg,
+      @JsonKey(name: 'prop_img', defaultValue: "") String propImg,
       @JsonKey(name: 'prop_lat') String propLat,
       @JsonKey(name: 'prop_lng') String propLng,
       @JsonKey(name: 'prop_address') String propAddress,
@@ -130,7 +136,7 @@ abstract class $PropModelCopyWith<$Res> {
       @JsonKey(name: 'update_by') String updateBy,
       @JsonKey(name: 'dt_created') String dtCreated,
       @JsonKey(name: 'prop_units') String propUnits,
-      @JsonKey(name: 'water_meter') String waterMeter,
+      @JsonKey(name: 'water_meter', defaultValue: "") String waterMeter,
       @JsonKey(name: 'guard_name') String guardName,
       @JsonKey(name: 'acl_status_code') String aclStatusCode,
       @JsonKey(name: 'contact_mobile') String contactMobile,
@@ -173,6 +179,8 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
     Object? areCode = null,
     Object? areAreId = null,
     Object? areDescFo = null,
+    Object? parentDescAr = null,
+    Object? parentDescEn = null,
     Object? areOwner = null,
     Object? areIntermediate = null,
     Object? propImg = null,
@@ -229,6 +237,14 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
       areDescFo: null == areDescFo
           ? _value.areDescFo
           : areDescFo // ignore: cast_nullable_to_non_nullable
+              as String,
+      parentDescAr: null == parentDescAr
+          ? _value.parentDescAr
+          : parentDescAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      parentDescEn: null == parentDescEn
+          ? _value.parentDescEn
+          : parentDescEn // ignore: cast_nullable_to_non_nullable
               as String,
       areOwner: null == areOwner
           ? _value.areOwner
@@ -388,9 +404,11 @@ abstract class _$$PropModelImplCopyWith<$Res>
       @JsonKey(name: 'are_code') String areCode,
       @JsonKey(name: 'are_are_id') String areAreId,
       @JsonKey(name: 'are_desc_fo') String areDescFo,
+      @JsonKey(name: 'parent_desc_ar') String parentDescAr,
+      @JsonKey(name: 'parent_desc_en') String parentDescEn,
       @JsonKey(name: 'are_owner') String areOwner,
       @JsonKey(name: 'are_intermediate') String areIntermediate,
-      @JsonKey(name: 'prop_img') String propImg,
+      @JsonKey(name: 'prop_img', defaultValue: "") String propImg,
       @JsonKey(name: 'prop_lat') String propLat,
       @JsonKey(name: 'prop_lng') String propLng,
       @JsonKey(name: 'prop_address') String propAddress,
@@ -400,7 +418,7 @@ abstract class _$$PropModelImplCopyWith<$Res>
       @JsonKey(name: 'update_by') String updateBy,
       @JsonKey(name: 'dt_created') String dtCreated,
       @JsonKey(name: 'prop_units') String propUnits,
-      @JsonKey(name: 'water_meter') String waterMeter,
+      @JsonKey(name: 'water_meter', defaultValue: "") String waterMeter,
       @JsonKey(name: 'guard_name') String guardName,
       @JsonKey(name: 'acl_status_code') String aclStatusCode,
       @JsonKey(name: 'contact_mobile') String contactMobile,
@@ -441,6 +459,8 @@ class __$$PropModelImplCopyWithImpl<$Res>
     Object? areCode = null,
     Object? areAreId = null,
     Object? areDescFo = null,
+    Object? parentDescAr = null,
+    Object? parentDescEn = null,
     Object? areOwner = null,
     Object? areIntermediate = null,
     Object? propImg = null,
@@ -497,6 +517,14 @@ class __$$PropModelImplCopyWithImpl<$Res>
       areDescFo: null == areDescFo
           ? _value.areDescFo
           : areDescFo // ignore: cast_nullable_to_non_nullable
+              as String,
+      parentDescAr: null == parentDescAr
+          ? _value.parentDescAr
+          : parentDescAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      parentDescEn: null == parentDescEn
+          ? _value.parentDescEn
+          : parentDescEn // ignore: cast_nullable_to_non_nullable
               as String,
       areOwner: null == areOwner
           ? _value.areOwner
@@ -652,9 +680,11 @@ class _$PropModelImpl extends _PropModel {
       @JsonKey(name: 'are_code') required this.areCode,
       @JsonKey(name: 'are_are_id') required this.areAreId,
       @JsonKey(name: 'are_desc_fo') required this.areDescFo,
+      @JsonKey(name: 'parent_desc_ar') required this.parentDescAr,
+      @JsonKey(name: 'parent_desc_en') required this.parentDescEn,
       @JsonKey(name: 'are_owner') required this.areOwner,
       @JsonKey(name: 'are_intermediate') required this.areIntermediate,
-      @JsonKey(name: 'prop_img') required this.propImg,
+      @JsonKey(name: 'prop_img', defaultValue: "") required this.propImg,
       @JsonKey(name: 'prop_lat') required this.propLat,
       @JsonKey(name: 'prop_lng') required this.propLng,
       @JsonKey(name: 'prop_address') required this.propAddress,
@@ -664,7 +694,7 @@ class _$PropModelImpl extends _PropModel {
       @JsonKey(name: 'update_by') required this.updateBy,
       @JsonKey(name: 'dt_created') required this.dtCreated,
       @JsonKey(name: 'prop_units') required this.propUnits,
-      @JsonKey(name: 'water_meter') required this.waterMeter,
+      @JsonKey(name: 'water_meter', defaultValue: "") required this.waterMeter,
       @JsonKey(name: 'guard_name') required this.guardName,
       @JsonKey(name: 'acl_status_code') required this.aclStatusCode,
       @JsonKey(name: 'contact_mobile') required this.contactMobile,
@@ -708,13 +738,19 @@ class _$PropModelImpl extends _PropModel {
   @JsonKey(name: 'are_desc_fo')
   final String areDescFo;
   @override
+  @JsonKey(name: 'parent_desc_ar')
+  final String parentDescAr;
+  @override
+  @JsonKey(name: 'parent_desc_en')
+  final String parentDescEn;
+  @override
   @JsonKey(name: 'are_owner')
   final String areOwner;
   @override
   @JsonKey(name: 'are_intermediate')
   final String areIntermediate;
   @override
-  @JsonKey(name: 'prop_img')
+  @JsonKey(name: 'prop_img', defaultValue: "")
   final String propImg;
   @override
   @JsonKey(name: 'prop_lat')
@@ -744,7 +780,7 @@ class _$PropModelImpl extends _PropModel {
   @JsonKey(name: 'prop_units')
   final String propUnits;
   @override
-  @JsonKey(name: 'water_meter')
+  @JsonKey(name: 'water_meter', defaultValue: "")
   final String waterMeter;
   @override
   @JsonKey(name: 'guard_name')
@@ -815,7 +851,7 @@ class _$PropModelImpl extends _PropModel {
 
   @override
   String toString() {
-    return 'PropModel(propId: $propId, areId: $areId, areCode: $areCode, areAreId: $areAreId, areDescFo: $areDescFo, areOwner: $areOwner, areIntermediate: $areIntermediate, propImg: $propImg, propLat: $propLat, propLng: $propLng, propAddress: $propAddress, monthly: $monthly, isRentable: $isRentable, createBy: $createBy, updateBy: $updateBy, dtCreated: $dtCreated, propUnits: $propUnits, waterMeter: $waterMeter, guardName: $guardName, aclStatusCode: $aclStatusCode, contactMobile: $contactMobile, contactPhone: $contactPhone, propCost: $propCost, unitNo: $unitNo, floorNo: $floorNo, propDistrict: $propDistrict, propCity: $propCity, propRegion: $propRegion, country: $country, buildArea: $buildArea, landArea: $landArea, contactName: $contactName, collector: $collector, rooms: $rooms, propFloors: $propFloors, buildingNumber: $buildingNumber, contractType: $contractType, calType: $calType, streetName: $streetName, propNumber: $propNumber)';
+    return 'PropModel(propId: $propId, areId: $areId, areCode: $areCode, areAreId: $areAreId, areDescFo: $areDescFo, parentDescAr: $parentDescAr, parentDescEn: $parentDescEn, areOwner: $areOwner, areIntermediate: $areIntermediate, propImg: $propImg, propLat: $propLat, propLng: $propLng, propAddress: $propAddress, monthly: $monthly, isRentable: $isRentable, createBy: $createBy, updateBy: $updateBy, dtCreated: $dtCreated, propUnits: $propUnits, waterMeter: $waterMeter, guardName: $guardName, aclStatusCode: $aclStatusCode, contactMobile: $contactMobile, contactPhone: $contactPhone, propCost: $propCost, unitNo: $unitNo, floorNo: $floorNo, propDistrict: $propDistrict, propCity: $propCity, propRegion: $propRegion, country: $country, buildArea: $buildArea, landArea: $landArea, contactName: $contactName, collector: $collector, rooms: $rooms, propFloors: $propFloors, buildingNumber: $buildingNumber, contractType: $contractType, calType: $calType, streetName: $streetName, propNumber: $propNumber)';
   }
 
   @override
@@ -830,6 +866,10 @@ class _$PropModelImpl extends _PropModel {
                 other.areAreId == areAreId) &&
             (identical(other.areDescFo, areDescFo) ||
                 other.areDescFo == areDescFo) &&
+            (identical(other.parentDescAr, parentDescAr) ||
+                other.parentDescAr == parentDescAr) &&
+            (identical(other.parentDescEn, parentDescEn) ||
+                other.parentDescEn == parentDescEn) &&
             (identical(other.areOwner, areOwner) ||
                 other.areOwner == areOwner) &&
             (identical(other.areIntermediate, areIntermediate) ||
@@ -902,6 +942,8 @@ class _$PropModelImpl extends _PropModel {
         areCode,
         areAreId,
         areDescFo,
+        parentDescAr,
+        parentDescEn,
         areOwner,
         areIntermediate,
         propImg,
@@ -960,9 +1002,12 @@ abstract class _PropModel extends PropModel {
       @JsonKey(name: 'are_code') required final String areCode,
       @JsonKey(name: 'are_are_id') required final String areAreId,
       @JsonKey(name: 'are_desc_fo') required final String areDescFo,
+      @JsonKey(name: 'parent_desc_ar') required final String parentDescAr,
+      @JsonKey(name: 'parent_desc_en') required final String parentDescEn,
       @JsonKey(name: 'are_owner') required final String areOwner,
       @JsonKey(name: 'are_intermediate') required final String areIntermediate,
-      @JsonKey(name: 'prop_img') required final String propImg,
+      @JsonKey(name: 'prop_img', defaultValue: "")
+      required final String propImg,
       @JsonKey(name: 'prop_lat') required final String propLat,
       @JsonKey(name: 'prop_lng') required final String propLng,
       @JsonKey(name: 'prop_address') required final String propAddress,
@@ -972,7 +1017,8 @@ abstract class _PropModel extends PropModel {
       @JsonKey(name: 'update_by') required final String updateBy,
       @JsonKey(name: 'dt_created') required final String dtCreated,
       @JsonKey(name: 'prop_units') required final String propUnits,
-      @JsonKey(name: 'water_meter') required final String waterMeter,
+      @JsonKey(name: 'water_meter', defaultValue: "")
+      required final String waterMeter,
       @JsonKey(name: 'guard_name') required final String guardName,
       @JsonKey(name: 'acl_status_code') required final String aclStatusCode,
       @JsonKey(name: 'contact_mobile') required final String contactMobile,
@@ -1017,13 +1063,19 @@ abstract class _PropModel extends PropModel {
   @JsonKey(name: 'are_desc_fo')
   String get areDescFo;
   @override
+  @JsonKey(name: 'parent_desc_ar')
+  String get parentDescAr;
+  @override
+  @JsonKey(name: 'parent_desc_en')
+  String get parentDescEn;
+  @override
   @JsonKey(name: 'are_owner')
   String get areOwner;
   @override
   @JsonKey(name: 'are_intermediate')
   String get areIntermediate;
   @override
-  @JsonKey(name: 'prop_img')
+  @JsonKey(name: 'prop_img', defaultValue: "")
   String get propImg;
   @override
   @JsonKey(name: 'prop_lat')
@@ -1053,7 +1105,7 @@ abstract class _PropModel extends PropModel {
   @JsonKey(name: 'prop_units')
   String get propUnits;
   @override
-  @JsonKey(name: 'water_meter')
+  @JsonKey(name: 'water_meter', defaultValue: "")
   String get waterMeter;
   @override
   @JsonKey(name: 'guard_name')

@@ -9,7 +9,13 @@ class AddContract extends StatefulWidget {
 }
 
 class _AddContractState extends State<AddContract> {
-  final AddContractController controller = AddContractController();
+  late AddContractController controller;
+
+  @override
+  void initState() {
+    controller = AddContractController(context);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

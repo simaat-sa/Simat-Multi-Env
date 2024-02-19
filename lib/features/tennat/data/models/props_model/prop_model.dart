@@ -16,9 +16,11 @@ class PropModel with _$PropModel {
     @JsonKey(name: 'are_code') required String areCode,
     @JsonKey(name: 'are_are_id') required String areAreId,
     @JsonKey(name: 'are_desc_fo') required String areDescFo,
+    @JsonKey(name: 'parent_desc_ar') required String parentDescAr,
+    @JsonKey(name: 'parent_desc_en') required String parentDescEn,
     @JsonKey(name: 'are_owner') required String areOwner,
     @JsonKey(name: 'are_intermediate') required String areIntermediate,
-    @JsonKey(name: 'prop_img') required String propImg,
+    @JsonKey(name: 'prop_img', defaultValue: "") required String propImg,
     @JsonKey(name: 'prop_lat') required String propLat,
     @JsonKey(name: 'prop_lng') required String propLng,
     @JsonKey(name: 'prop_address') required String propAddress,
@@ -28,7 +30,7 @@ class PropModel with _$PropModel {
     @JsonKey(name: 'update_by') required String updateBy,
     @JsonKey(name: 'dt_created') required String dtCreated,
     @JsonKey(name: 'prop_units') required String propUnits,
-    @JsonKey(name: 'water_meter') required String waterMeter,
+    @JsonKey(name: 'water_meter', defaultValue: "") required String waterMeter,
     @JsonKey(name: 'guard_name') required String guardName,
     @JsonKey(name: 'acl_status_code') required String aclStatusCode,
     @JsonKey(name: 'contact_mobile') required String contactMobile,
@@ -59,5 +61,7 @@ class PropModel with _$PropModel {
   String get propName => "$areDescFo - $propCity";
 
   String get unitName => areDescFo;
+
+  String get unitFullName => "$parentDescAr - $areDescFo";
 
 }

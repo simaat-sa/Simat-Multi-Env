@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter_tdd/core/bloc/value_state_manager/value_state_manager_import.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
 import 'package:flutter_tdd/core/extensions/common_extension.dart';
@@ -10,6 +11,8 @@ import 'package:flutter_tdd/core/widgets/app_button.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/controller/option_controller.dart';
 import 'package:flutter_tdd/core/widgets/bottom_sheet_views/bottom_sheet_button_widget.dart';
 import 'package:flutter_tdd/core/widgets/search_form_field/search_form_field.dart';
+import 'package:flutter_tdd/res.dart';
+
 class OptionSheetContent<T> extends StatefulWidget {
   final String? bottomSheetTitle;
   final bool showSearch;
@@ -56,7 +59,7 @@ class _OptionSheetContentState<T> extends State<OptionSheetContent<T>> {
   @override
   Widget build(BuildContext context) {
     return PopScope(
-      onPopInvoked: (_)async {
+      onPopInvoked: (_) async {
         await _onWillPop(context);
       },
       child: Padding(
@@ -71,39 +74,44 @@ class _OptionSheetContentState<T> extends State<OptionSheetContent<T>> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (!widget.bottomSheetTitle.isNullEmptyOrWhitespace || widget.showSearch)
+                    if (!widget.bottomSheetTitle.isNullEmptyOrWhitespace)
                       Padding(
                         padding: const EdgeInsets.fromLTRB(24, 24, 24, 8),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             if (!widget.bottomSheetTitle.isNullEmptyOrWhitespace)
-                              ObsValueConsumer<bool>(
-                                observable: _titleObs,
-                                builder: (context, data) {
-                                  if (data) {
-                                    return Gaps.empty;
-                                  }
-                                  return Flexible(
-                                    flex: 2,
-                                    child: Text(
-                                      widget.bottomSheetTitle!,
-                                      style: AppTextStyle.s20_w500(
-                                        color: AppColors.of(context).darkTextColor,
-                                      ),
-                                    ),
-                                  );
-                                },
-                              ),
-                            if (widget.showSearch && !widget.isViewMode)
                               Flexible(
-                                child: SearchFormField(
-                                  onChange: widget.onSearch,
-                                  onSubmit: widget.onSearch,
-                                  onFocus: (val) => _titleObs.setValue(val),
+                                flex: 2,
+                                child: Text(
+                                  widget.bottomSheetTitle!,
+                                  style: AppTextStyle.s20_w500(
+                                    color: AppColors.of(context).darkTextColor,
+                                  ),
                                 ),
                               ),
+                            InkWell(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: SvgPicture.asset(
+                                Res.closeIcon,
+                                width: 24,
+                                height: 24,
+                              ),
+                            ),
                           ],
+                        ),
+                      ),
+                    if (widget.showSearch && !widget.isViewMode)
+                      Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(horizontal: 24),
+                        margin: const EdgeInsets.only(top: 8),
+                        child: SearchFormField(
+                          onChange: widget.onSearch,
+                          onSubmit: widget.onSearch,
+                          onFocus: (val) => _titleObs.setValue(val),
                         ),
                       ),
                     Expanded(

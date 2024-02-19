@@ -10,10 +10,6 @@ class AddContractFormWidget extends StatelessWidget {
     return Column(
       children: [
 
-        PropertyFormOption(controller: controller),
-
-        Gaps.vGap16,
-
         UnitFormOption(controller: controller),
 
         Gaps.vGap16,
@@ -21,6 +17,7 @@ class AddContractFormWidget extends StatelessWidget {
         MaintenanceServiceFormOption(controller: controller),
 
         GenericTextField(
+          controller: controller.phone,
           fillColor: context.colors.white,
           hint: Translate.s.customer_mobile,
           contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),

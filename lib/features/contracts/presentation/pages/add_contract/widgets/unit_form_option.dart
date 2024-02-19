@@ -24,24 +24,30 @@ class UnitFormOption extends StatelessWidget {
       showSearch: true,
       showDecoration: true,
       isMultiple: false,
+      useFirstAsDefaultIfOneItem: true,
       suffixIconPath: Res.unitLogo,
       onClearPressed: () => controller.selectedPropUnits = [],
       onSaveValue: (values, iMultiple) => controller.selectedPropUnits = values ?? [],
-      optionsRequester: controller.unitRequester,
+      optionsRequester: BaseOptionsRequester<PropModel>(
+        isRemotelySearch: false,
+        immediatelyRequestOptions: true,
+        valueMainTitleGetter: (value) => value?.unitFullName,
+        fetcher: (c) => getIt<TenantRepository>().getPropsUnites(),
+      ),
       selectedItems: controller.selectedPropUnits,
       valueIdGetter: (unit) => unit?.unitNo,
-      valueMainTitleGetter: (unit) => unit?.unitName,
+      valueMainTitleGetter: (unit) => unit?.unitFullName,
       selectedOptionBuilder: (list) {
         return BaseOptionsDisplayWidget<PropModel>(
           selectedOptions: list,
-          titleGetter: (value) => value.unitName,
+          titleGetter: (value) => value.unitFullName,
         );
       },
       optionItemBuilder: (item, isSelected) {
         return SelectableOptionItemWidget(
           isSelected: isSelected,
           optionItemWidget: OptionItemWidget(
-            title: item.unitName,
+            title: item.unitFullName,
           ),
         );
       },

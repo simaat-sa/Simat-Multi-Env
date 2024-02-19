@@ -8,7 +8,6 @@ class AddMaintenanceParams {
   final String maintDesc;
   final String dtCreated;
   final String createBy;
-  final String dtDue;
   final bool paymentByClient;
   final List<String> maintType;
   final String creatorPay;
@@ -21,7 +20,6 @@ class AddMaintenanceParams {
     required this.maintDesc,
     required this.dtCreated,
     required this.createBy,
-    required this.dtDue,
     required this.paymentByClient,
     required this.maintType,
     required this.creatorPay,
@@ -36,7 +34,6 @@ class AddMaintenanceParams {
       "maint_desc": maintDesc,
       "dt_created": dtCreated,
       "create_by": createBy,
-      "dt_due": dtDue,
       "payment_by": paymentByClient ? "client" : "",
       "creator_pay": creatorPay,
     };

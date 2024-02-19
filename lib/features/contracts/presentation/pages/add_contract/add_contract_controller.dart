@@ -4,31 +4,24 @@ class AddContractController {
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController desc = TextEditingController();
+  final TextEditingController phone = TextEditingController();
   final ObsValue<bool> switchObs = ObsValue.withInit(false);
-
-  late BaseOptionsRequester<PropModel> unitRequester;
 
   List<PropModel> selectedProps = [];
   List<PropModel> selectedPropUnits = [];
   List<MaintenanceServicesModel> selectedServices = [];
 
-  AddContractController() {
-    setUnitRequester();
+  AddContractController(BuildContext context) {
+    var user = context.read<UserCubit>().state.model!;
+    phone.text = user.userMobile;
   }
+
 
   void onChanged(bool value) {
     switchObs.setValue(value);
     switchObs.refresh();
   }
 
-  void setUnitRequester(){
-    unitRequester =  BaseOptionsRequester<PropModel>(
-      isRemotelySearch: false,
-      immediatelyRequestOptions: false,
-      valueMainTitleGetter: (value) => value?.unitName,
-      fetcher: (c) => getIt<TenantRepository>().getPropsUnites(selectedProps.first.areId),
-    );
-  }
 
   Future<void> addContract(BuildContext context) async {
     if (formKey.currentState!.validate()){
@@ -52,11 +45,10 @@ class AddContractController {
       areAreId: prop.areAreId,
       areId: prop.areId,
       contactName: prop.contactName,
-      contactMobile: prop.contactMobile,
+      contactMobile: phone.text,
       maintDesc: desc.text,
       dtCreated: DateTime.now().toFormattedEnString(),
       createBy:  user.userid,
-      dtDue: "2024-02-25",
       paymentByClient: switchObs.getValue(),
       maintType: selectedServices.map((e) => e.value).toList(),
       creatorPay: "1",
