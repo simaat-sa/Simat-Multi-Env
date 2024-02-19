@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -31,22 +30,28 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
         title,
         style: AppTextStyle.s18_w500(color: context.colors.black),
       ),
-      centerTitle: centerTitle??true,
-      systemOverlayStyle: const SystemUiOverlayStyle(
-        statusBarBrightness: Brightness.light
-      ),
+      centerTitle: centerTitle ?? true,
+      systemOverlayStyle: const SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
       backgroundColor: context.colors.background,
       elevation: 0,
       leadingWidth: showBack == true ? 55 : 10,
-      leading: leading ??
-          Visibility(
-            visible: showBack ?? true,
-            child: IconButton(
-              icon: const Icon(Icons.close),
-              onPressed: () => Navigator.of(context).pop(),
+      leading: leading,
+      automaticallyImplyLeading: leading != null,
+      actions: [
+        ...actions,
+        if(showBack == true)
+        InkWell(
+          onTap: ()=> Navigator.of(context).pop(),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Icon(
+              Icons.arrow_forward_ios_outlined,
+              color: context.colors.darkTextColor,
+              size: 23,
             ),
           ),
-      actions: actions,
+        ),
+      ],
     );
   }
 

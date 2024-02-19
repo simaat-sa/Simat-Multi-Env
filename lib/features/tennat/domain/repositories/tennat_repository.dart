@@ -9,4 +9,6 @@ abstract class TenantRepository{
 
   Future<MyResult<List<PropModel>>> getPropsUnites ();
 
+  Future<MyResult<TenantModel>> renewContract(String contractId);
+
 }

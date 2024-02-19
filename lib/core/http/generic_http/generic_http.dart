@@ -60,7 +60,8 @@ class GenericHttpImpl<T> extends GenericHttp<T> {
       response,
       model.responseType,
       model.toJsonFunc ?? (val) {},
-      model.responseKey,
+      model.responseKey ?? (val) {},
+      model.errorFunc ?? (val) {},
     );
     return customType;
   }

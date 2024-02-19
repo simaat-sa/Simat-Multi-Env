@@ -52,4 +52,18 @@ class TenantDataSourceImpl extends TenantDataSource {
     );
     return GenericHttpImpl<List<PropModel>>()(model);
   }
+
+  @override
+  Future<MyResult<TenantModel>> renewContract(String contractId) async {
+    HttpRequestModel model = HttpRequestModel(
+      url: ApiNames.renewContract(contractId),
+      responseType: ResType.model,
+      requestMethod: RequestMethod.post,
+      showLoader: true,
+      responseKey: (data) => data['data'],
+      errorFunc: (data) => data['data']["status"],
+      toJsonFunc: (data) => TenantModel.fromJson(data),
+    );
+    return GenericHttpImpl<TenantModel>()(model);
+  }
 }
