@@ -23,7 +23,7 @@ mixin _$TenantModel {
   @JsonKey(name: 'prop_id')
   String get propId => throw _privateConstructorUsedError;
   @JsonKey(name: 'tts_code')
-  String get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_desc_fo')
   String get unitName => throw _privateConstructorUsedError;
   @JsonKey(name: 'cal_type')
@@ -63,7 +63,7 @@ abstract class $TenantModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'prop_id') String propId,
-      @JsonKey(name: 'tts_code') String code,
+      @JsonKey(name: 'tts_code') String? code,
       @JsonKey(name: 'are_desc_fo') String unitName,
       @JsonKey(name: 'cal_type') DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj') String dataTimeHj,
@@ -92,7 +92,7 @@ class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
   @override
   $Res call({
     Object? propId = null,
-    Object? code = null,
+    Object? code = freezed,
     Object? unitName = null,
     Object? dateType = null,
     Object? dataTimeHj = null,
@@ -111,10 +111,10 @@ class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
           ? _value.propId
           : propId // ignore: cast_nullable_to_non_nullable
               as String,
-      code: null == code
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       unitName: null == unitName
           ? _value.unitName
           : unitName // ignore: cast_nullable_to_non_nullable
@@ -177,7 +177,7 @@ abstract class _$$TenantModelImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'prop_id') String propId,
-      @JsonKey(name: 'tts_code') String code,
+      @JsonKey(name: 'tts_code') String? code,
       @JsonKey(name: 'are_desc_fo') String unitName,
       @JsonKey(name: 'cal_type') DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj') String dataTimeHj,
@@ -204,7 +204,7 @@ class __$$TenantModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? propId = null,
-    Object? code = null,
+    Object? code = freezed,
     Object? unitName = null,
     Object? dateType = null,
     Object? dataTimeHj = null,
@@ -223,10 +223,10 @@ class __$$TenantModelImplCopyWithImpl<$Res>
           ? _value.propId
           : propId // ignore: cast_nullable_to_non_nullable
               as String,
-      code: null == code
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       unitName: null == unitName
           ? _value.unitName
           : unitName // ignore: cast_nullable_to_non_nullable
@@ -308,7 +308,7 @@ class _$TenantModelImpl extends _TenantModel {
   final String propId;
   @override
   @JsonKey(name: 'tts_code')
-  final String code;
+  final String? code;
   @override
   @JsonKey(name: 'are_desc_fo')
   final String unitName;
@@ -414,7 +414,7 @@ class _$TenantModelImpl extends _TenantModel {
 abstract class _TenantModel extends TenantModel {
   factory _TenantModel(
       {@JsonKey(name: 'prop_id') required final String propId,
-      @JsonKey(name: 'tts_code') required final String code,
+      @JsonKey(name: 'tts_code') required final String? code,
       @JsonKey(name: 'are_desc_fo') required final String unitName,
       @JsonKey(name: 'cal_type') required final DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj') required final String dataTimeHj,
@@ -438,7 +438,7 @@ abstract class _TenantModel extends TenantModel {
   String get propId;
   @override
   @JsonKey(name: 'tts_code')
-  String get code;
+  String? get code;
   @override
   @JsonKey(name: 'are_desc_fo')
   String get unitName;

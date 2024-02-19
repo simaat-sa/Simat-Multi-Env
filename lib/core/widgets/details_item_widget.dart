@@ -5,14 +5,14 @@ import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/res.dart';
 
-class AlertDialogItemWidget extends StatelessWidget {
+class DetailsItemWidget extends StatelessWidget {
   final String title;
   final Color? color;
   final String value;
   final String image;
   final TextStyle? valueStyle;
 
-  const AlertDialogItemWidget({super.key, required this.title, this.color, required this.value, required this.image, this.valueStyle});
+  const DetailsItemWidget({super.key, required this.title, this.color, required this.value, required this.image, this.valueStyle});
 
   @override
   Widget build(BuildContext context) {

@@ -17,7 +17,7 @@ class TenantModel with _$TenantModel {
   @JsonSerializable(explicitToJson: true)
   factory TenantModel({
     @JsonKey(name: 'prop_id')required String propId,
-    @JsonKey(name: 'tts_code')required String code,
+    @JsonKey(name: 'tts_code')required String? code,
     @JsonKey(name: 'are_desc_fo')required String unitName,
     @JsonKey(name: 'cal_type')required DateTypes dateType,
     @JsonKey(name: 'tts_end_date_hj')required String dataTimeHj,

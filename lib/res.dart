@@ -37,4 +37,8 @@ class Res {
   static const String detailsLogo = "assets/images/details_logo.svg";
   static const String successLogo = "assets/images/success_logo.svg";
   static const String failLogo = "assets/images/fail_logo.svg";
+  static const String unitLocationLogo = "assets/images/unit_location_logo.svg";
+  static const String paymentLogo = "assets/images/pay_logo.svg";
+  static const String maintLogo = "assets/images/maint_logo.svg";
+  static const String renewContractLogo = "assets/images/renew_contract_logo.svg";
 }

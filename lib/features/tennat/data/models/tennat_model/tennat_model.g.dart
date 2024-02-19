@@ -9,7 +9,7 @@ part of 'tennat_model.dart';
 _$TenantModelImpl _$$TenantModelImplFromJson(Map<String, dynamic> json) =>
     _$TenantModelImpl(
       propId: json['prop_id'] as String,
-      code: json['tts_code'] as String,
+      code: json['tts_code'] as String?,
       unitName: json['are_desc_fo'] as String,
       dateType: $enumDecode(_$DateTypesEnumMap, json['cal_type']),
       dataTimeHj: json['tts_end_date_hj'] as String,

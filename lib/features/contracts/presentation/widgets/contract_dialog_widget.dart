@@ -5,7 +5,7 @@ import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/features/contracts/data/models/tennat_model/contract_model.dart';
-import 'package:flutter_tdd/features/contracts/presentation/widgets/alert_dialog_item_widget.dart';
+import 'package:flutter_tdd/core/widgets/details_item_widget.dart';
 import 'package:flutter_tdd/res.dart';
 
 class ContractDialog extends StatelessWidget {
@@ -70,19 +70,19 @@ class ContractDialog extends StatelessWidget {
                   height: 30,
                   color: context.colors.backgroundLight,
                 ),
-                AlertDialogItemWidget(
+                DetailsItemWidget(
                     title: Translate.s.real_estate_unit,
                     value: model.unitName,
                     color: context.colors.bgLight,
                     image: Res.unitLogo),
-                AlertDialogItemWidget(title: Translate.s.main_property, value: model.createdDateTimeStamp, image: Res.unitLogo),
-                AlertDialogItemWidget(
+                DetailsItemWidget(title: Translate.s.main_property, value: model.createdDateTimeStamp, image: Res.unitLogo),
+                DetailsItemWidget(
                     title: Translate
                     .s.date_of_request,
                     value: model.createdDate,
                     color: context.colors.bgLight,
                     image: Res.calendarIcon),
-                AlertDialogItemWidget(title: Translate.s.applicant, value: model.createdBy, image: Res.userLogo),
+                DetailsItemWidget(title: Translate.s.applicant, value: model.createdBy, image: Res.userLogo),
                 Divider(
                   height: 10,
                   color: context.colors.backgroundLight,

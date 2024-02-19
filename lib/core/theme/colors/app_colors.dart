@@ -65,5 +65,7 @@ abstract class AppColors {
   Color get primaryText;
   Color get darkTextColor;
   Color get red;
+  Color get primaryGrey;
+  Color get errorColor;
 
 }
