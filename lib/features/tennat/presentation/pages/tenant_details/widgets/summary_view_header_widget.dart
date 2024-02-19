@@ -10,7 +10,7 @@ class SummaryViewHeaderWidget extends StatelessWidget {
       children: [
         Text(
           'عقد',
-          style: AppTextStyle.s16_w400(color: context.colors.darkTextColor),
+          style: AppTextStyle.s16_w400(color: context.colors.darkTextColor)
         ),
         Gaps.hGap12,
         Container(
@@ -24,7 +24,7 @@ class SummaryViewHeaderWidget extends StatelessWidget {
           ),
           child: Text(
             "#${model.code}",
-            style: AppTextStyle.s14_w400(color: context.colors.primary).copyWith(height: 2.2),
+            style: AppTextStyle.s14_w500(color: context.colors.primary).copyWith(height: 2),
           ),
         ),
         const Spacer(),

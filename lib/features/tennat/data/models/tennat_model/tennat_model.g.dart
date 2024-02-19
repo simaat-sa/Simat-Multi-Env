@@ -8,13 +8,15 @@ part of 'tennat_model.dart';
 
 _$TenantModelImpl _$$TenantModelImplFromJson(Map<String, dynamic> json) =>
     _$TenantModelImpl(
+      id: json['tts_id'] as String? ?? '',
       propId: json['prop_id'] as String? ?? '',
       code: json['tts_code'] as String?,
       unitName: json['are_desc_fo'] as String? ?? '',
-      dateType: $enumDecodeNullable(_$DateTypesEnumMap, json['cal_type']) ?? '',
-      dataTimeHj: json['tts_end_date_hj'] as String? ?? '',
-      dataTimeStamp: json['tts_end_date_dgr'] as String? ?? '',
+      dateType: $enumDecode(_$DateTypesEnumMap, json['cal_type']),
+      expireDataTimeHj: json['tts_end_date_hj'] as String? ?? '',
+      expireDataTimeStamp: json['tts_end_date_dgr'] as String? ?? '',
       price: json['amt_due'] as String? ?? '0',
+      priceWithoutTax: json['tts_amt'] as String? ?? '0',
       status: $enumDecode(_$TenantVisibilityEnumMap, json['tts_validity']),
       type: $enumDecode(_$ContractTypesEnumMap, json['contract_type']),
       propLat: json['prop_lat'] as String? ?? '',
@@ -26,13 +28,15 @@ _$TenantModelImpl _$$TenantModelImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$TenantModelImplToJson(_$TenantModelImpl instance) =>
     <String, dynamic>{
+      'tts_id': instance.id,
       'prop_id': instance.propId,
       'tts_code': instance.code,
       'are_desc_fo': instance.unitName,
       'cal_type': _$DateTypesEnumMap[instance.dateType]!,
-      'tts_end_date_hj': instance.dataTimeHj,
-      'tts_end_date_dgr': instance.dataTimeStamp,
+      'tts_end_date_hj': instance.expireDataTimeHj,
+      'tts_end_date_dgr': instance.expireDataTimeStamp,
       'amt_due': instance.price,
+      'tts_amt': instance.priceWithoutTax,
       'tts_validity': _$TenantVisibilityEnumMap[instance.status]!,
       'contract_type': _$ContractTypesEnumMap[instance.type]!,
       'prop_lat': instance.propLat,

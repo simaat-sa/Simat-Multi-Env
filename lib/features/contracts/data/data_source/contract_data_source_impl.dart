@@ -13,7 +13,7 @@ class ContractDataSourceImpl extends ContractDataSource {
   @override
   Future<MyResult<List<ContractModel>>> getContracts(bool params) async {
     HttpRequestModel model = HttpRequestModel(
-      url: ApiNames.getContracts,
+      url: ApiNames.maintenanceRequests,
       responseType: ResType.list,
       requestMethod: RequestMethod.get,
       refresh: params,

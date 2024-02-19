@@ -30,7 +30,7 @@ class TenantRequester extends Requester<List<TenantModel>> {
 
   void applyTenantFilter(TenantVisibility status, ContractTypes types, String searchText) {
     final list = _listTenant.where((element) {
-      final textSearch = element.code!.contains(searchText.trim()) || element.unitName.contains(searchText.trim());
+      final textSearch = (element.code?.contains(searchText.trim()) == true) || element.unitName.contains(searchText.trim());
       final statusCheck = status == TenantVisibility.non ? true : element.status == status;
       final typeCheck = types == ContractTypes.non ? true : element.type == types;
       return statusCheck && textSearch && typeCheck;

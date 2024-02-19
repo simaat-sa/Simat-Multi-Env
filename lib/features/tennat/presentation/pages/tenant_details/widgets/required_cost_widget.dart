@@ -61,7 +61,7 @@ class RequiredCostWidget extends StatelessWidget {
                   ),
                   Gaps.vGap8,
                   Text(
-                    model.date,
+                    model.dueDate,
                     style: AppTextStyle.s14_w400(color: context.colors.green3),
                   ),
                 ],

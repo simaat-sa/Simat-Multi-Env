@@ -25,4 +25,9 @@ class TenantRepositoryImpl extends TenantRepository with ModelToDomainResult {
   Future<MyResult<List<PropModel>>> getPropsUnites() async {
     return await dataSource.getPropsUnites();
   }
+
+  @override
+  Future<MyResult<TenantModel>> renewContract(String contractId)async {
+  return await dataSource.renewContract(contractId);
+  }
 }

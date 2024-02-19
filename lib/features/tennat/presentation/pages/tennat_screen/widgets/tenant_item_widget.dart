@@ -136,7 +136,7 @@ class TenantItemWidget extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    ' ينتهي${model.date}',
+                    ' ينتهي${model.expireDate}',
                     style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                   ),
                 ],

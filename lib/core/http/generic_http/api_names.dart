@@ -18,12 +18,15 @@ class ApiNames {
 
   /// tenant routes
   static String getTenant = "${version1Part}tenant/list";
+  static String renewContract(String id) => "${version1Part}contract/renew?tts_id=$id";
 
-  /// contracts routes
-  static String getContracts = "${version1Part}maintenance/list";
-
+  /// props and units routes
   static String properties = "${version1Part}tenant/properties/list";
   static String propUnits = "${version1Part}tenant/units";
+
+
+  /// maintenance routes
+  static String maintenanceRequests = "${version1Part}maintenance/list";
   static String maintenanceServices = "${version1Part}maintenance/services";
   static String maintenanceAdd = "${version1Part}maintenance/add";
 }

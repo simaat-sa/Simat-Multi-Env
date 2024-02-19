@@ -1,8 +1,8 @@
 part of 'tenant_details_widgets_imports.dart';
 
 class RenewContractItemWidget extends StatelessWidget {
-  final TenantModel model;
-  const RenewContractItemWidget({super.key, required this.model});
+  final TenantDetailsController controller;
+  const RenewContractItemWidget({super.key,required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -22,16 +22,19 @@ class RenewContractItemWidget extends StatelessWidget {
             color: context.colors.primary,
           ),
           Gaps.hGap12,
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('تجديد العقد',style: AppTextStyle.s14_w400(color: context.colors.primaryText),),
-              Gaps.vGap5,
-              Text('طلب تجديد العقد الحالي',style: AppTextStyle.s13_w400(color: context.colors.darkTextColor),),
-            ],
+          InkWell(
+            onTap: ()=> controller.renewContract(context),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('تجديد العقد',style: AppTextStyle.s14_w400(color: context.colors.primaryText),),
+                Gaps.vGap5,
+                Text('طلب تجديد العقد الحالي',style: AppTextStyle.s13_w400(color: context.colors.darkTextColor),),
+              ],
+            ),
           ),
           const Spacer(),
-          Text('ينتهي ${model.date}',style: AppTextStyle.s13_w400(color: context.colors.errorColor),),
+          Text('ينتهي ${controller.model.expireDate}',style: AppTextStyle.s13_w400(color: context.colors.errorColor),),
         ],
       ),
     );

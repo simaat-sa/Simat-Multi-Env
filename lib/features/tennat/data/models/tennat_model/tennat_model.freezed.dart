@@ -20,20 +20,24 @@ TenantModel _$TenantModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TenantModel {
+  @JsonKey(name: 'tts_id', defaultValue: "")
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_id', defaultValue: "")
   String get propId => throw _privateConstructorUsedError;
   @JsonKey(name: 'tts_code')
   String? get code => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
   String get unitName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'cal_type', defaultValue: "")
+  @JsonKey(name: 'cal_type')
   DateTypes get dateType => throw _privateConstructorUsedError;
   @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
-  String get dataTimeHj => throw _privateConstructorUsedError;
+  String get expireDataTimeHj => throw _privateConstructorUsedError;
   @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
-  String get dataTimeStamp => throw _privateConstructorUsedError;
+  String get expireDataTimeStamp => throw _privateConstructorUsedError;
   @JsonKey(name: 'amt_due', defaultValue: "0")
   String get price => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tts_amt', defaultValue: "0")
+  String get priceWithoutTax => throw _privateConstructorUsedError;
   @JsonKey(name: 'tts_validity')
   TenantVisibility get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'contract_type')
@@ -62,13 +66,17 @@ abstract class $TenantModelCopyWith<$Res> {
       _$TenantModelCopyWithImpl<$Res, TenantModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'prop_id', defaultValue: "") String propId,
+      {@JsonKey(name: 'tts_id', defaultValue: "") String id,
+      @JsonKey(name: 'prop_id', defaultValue: "") String propId,
       @JsonKey(name: 'tts_code') String? code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
-      @JsonKey(name: 'cal_type', defaultValue: "") DateTypes dateType,
-      @JsonKey(name: 'tts_end_date_hj', defaultValue: "") String dataTimeHj,
-      @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") String dataTimeStamp,
+      @JsonKey(name: 'cal_type') DateTypes dateType,
+      @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
+      String expireDataTimeHj,
+      @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
+      String expireDataTimeStamp,
       @JsonKey(name: 'amt_due', defaultValue: "0") String price,
+      @JsonKey(name: 'tts_amt', defaultValue: "0") String priceWithoutTax,
       @JsonKey(name: 'tts_validity') TenantVisibility status,
       @JsonKey(name: 'contract_type') ContractTypes type,
       @JsonKey(name: 'prop_lat', defaultValue: "") String propLat,
@@ -91,13 +99,15 @@ class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? propId = null,
     Object? code = freezed,
     Object? unitName = null,
     Object? dateType = null,
-    Object? dataTimeHj = null,
-    Object? dataTimeStamp = null,
+    Object? expireDataTimeHj = null,
+    Object? expireDataTimeStamp = null,
     Object? price = null,
+    Object? priceWithoutTax = null,
     Object? status = null,
     Object? type = null,
     Object? propLat = null,
@@ -107,6 +117,10 @@ class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
     Object? propRegion = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       propId: null == propId
           ? _value.propId
           : propId // ignore: cast_nullable_to_non_nullable
@@ -123,17 +137,21 @@ class _$TenantModelCopyWithImpl<$Res, $Val extends TenantModel>
           ? _value.dateType
           : dateType // ignore: cast_nullable_to_non_nullable
               as DateTypes,
-      dataTimeHj: null == dataTimeHj
-          ? _value.dataTimeHj
-          : dataTimeHj // ignore: cast_nullable_to_non_nullable
+      expireDataTimeHj: null == expireDataTimeHj
+          ? _value.expireDataTimeHj
+          : expireDataTimeHj // ignore: cast_nullable_to_non_nullable
               as String,
-      dataTimeStamp: null == dataTimeStamp
-          ? _value.dataTimeStamp
-          : dataTimeStamp // ignore: cast_nullable_to_non_nullable
+      expireDataTimeStamp: null == expireDataTimeStamp
+          ? _value.expireDataTimeStamp
+          : expireDataTimeStamp // ignore: cast_nullable_to_non_nullable
               as String,
       price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
+              as String,
+      priceWithoutTax: null == priceWithoutTax
+          ? _value.priceWithoutTax
+          : priceWithoutTax // ignore: cast_nullable_to_non_nullable
               as String,
       status: null == status
           ? _value.status
@@ -176,13 +194,17 @@ abstract class _$$TenantModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'prop_id', defaultValue: "") String propId,
+      {@JsonKey(name: 'tts_id', defaultValue: "") String id,
+      @JsonKey(name: 'prop_id', defaultValue: "") String propId,
       @JsonKey(name: 'tts_code') String? code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
-      @JsonKey(name: 'cal_type', defaultValue: "") DateTypes dateType,
-      @JsonKey(name: 'tts_end_date_hj', defaultValue: "") String dataTimeHj,
-      @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") String dataTimeStamp,
+      @JsonKey(name: 'cal_type') DateTypes dateType,
+      @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
+      String expireDataTimeHj,
+      @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
+      String expireDataTimeStamp,
       @JsonKey(name: 'amt_due', defaultValue: "0") String price,
+      @JsonKey(name: 'tts_amt', defaultValue: "0") String priceWithoutTax,
       @JsonKey(name: 'tts_validity') TenantVisibility status,
       @JsonKey(name: 'contract_type') ContractTypes type,
       @JsonKey(name: 'prop_lat', defaultValue: "") String propLat,
@@ -203,13 +225,15 @@ class __$$TenantModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? propId = null,
     Object? code = freezed,
     Object? unitName = null,
     Object? dateType = null,
-    Object? dataTimeHj = null,
-    Object? dataTimeStamp = null,
+    Object? expireDataTimeHj = null,
+    Object? expireDataTimeStamp = null,
     Object? price = null,
+    Object? priceWithoutTax = null,
     Object? status = null,
     Object? type = null,
     Object? propLat = null,
@@ -219,6 +243,10 @@ class __$$TenantModelImplCopyWithImpl<$Res>
     Object? propRegion = null,
   }) {
     return _then(_$TenantModelImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       propId: null == propId
           ? _value.propId
           : propId // ignore: cast_nullable_to_non_nullable
@@ -235,17 +263,21 @@ class __$$TenantModelImplCopyWithImpl<$Res>
           ? _value.dateType
           : dateType // ignore: cast_nullable_to_non_nullable
               as DateTypes,
-      dataTimeHj: null == dataTimeHj
-          ? _value.dataTimeHj
-          : dataTimeHj // ignore: cast_nullable_to_non_nullable
+      expireDataTimeHj: null == expireDataTimeHj
+          ? _value.expireDataTimeHj
+          : expireDataTimeHj // ignore: cast_nullable_to_non_nullable
               as String,
-      dataTimeStamp: null == dataTimeStamp
-          ? _value.dataTimeStamp
-          : dataTimeStamp // ignore: cast_nullable_to_non_nullable
+      expireDataTimeStamp: null == expireDataTimeStamp
+          ? _value.expireDataTimeStamp
+          : expireDataTimeStamp // ignore: cast_nullable_to_non_nullable
               as String,
       price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
+              as String,
+      priceWithoutTax: null == priceWithoutTax
+          ? _value.priceWithoutTax
+          : priceWithoutTax // ignore: cast_nullable_to_non_nullable
               as String,
       status: null == status
           ? _value.status
@@ -284,15 +316,18 @@ class __$$TenantModelImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$TenantModelImpl extends _TenantModel {
   _$TenantModelImpl(
-      {@JsonKey(name: 'prop_id', defaultValue: "") required this.propId,
+      {@JsonKey(name: 'tts_id', defaultValue: "") required this.id,
+      @JsonKey(name: 'prop_id', defaultValue: "") required this.propId,
       @JsonKey(name: 'tts_code') this.code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") required this.unitName,
-      @JsonKey(name: 'cal_type', defaultValue: "") required this.dateType,
+      @JsonKey(name: 'cal_type') required this.dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
-      required this.dataTimeHj,
+      required this.expireDataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
-      required this.dataTimeStamp,
+      required this.expireDataTimeStamp,
       @JsonKey(name: 'amt_due', defaultValue: "0") required this.price,
+      @JsonKey(name: 'tts_amt', defaultValue: "0")
+      required this.priceWithoutTax,
       @JsonKey(name: 'tts_validity') required this.status,
       @JsonKey(name: 'contract_type') required this.type,
       @JsonKey(name: 'prop_lat', defaultValue: "") required this.propLat,
@@ -306,6 +341,9 @@ class _$TenantModelImpl extends _TenantModel {
       _$$TenantModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'tts_id', defaultValue: "")
+  final String id;
+  @override
   @JsonKey(name: 'prop_id', defaultValue: "")
   final String propId;
   @override
@@ -315,17 +353,20 @@ class _$TenantModelImpl extends _TenantModel {
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
   final String unitName;
   @override
-  @JsonKey(name: 'cal_type', defaultValue: "")
+  @JsonKey(name: 'cal_type')
   final DateTypes dateType;
   @override
   @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
-  final String dataTimeHj;
+  final String expireDataTimeHj;
   @override
   @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
-  final String dataTimeStamp;
+  final String expireDataTimeStamp;
   @override
   @JsonKey(name: 'amt_due', defaultValue: "0")
   final String price;
+  @override
+  @JsonKey(name: 'tts_amt', defaultValue: "0")
+  final String priceWithoutTax;
   @override
   @JsonKey(name: 'tts_validity')
   final TenantVisibility status;
@@ -350,7 +391,7 @@ class _$TenantModelImpl extends _TenantModel {
 
   @override
   String toString() {
-    return 'TenantModel(propId: $propId, code: $code, unitName: $unitName, dateType: $dateType, dataTimeHj: $dataTimeHj, dataTimeStamp: $dataTimeStamp, price: $price, status: $status, type: $type, propLat: $propLat, propLng: $propLng, propImg: $propImg, propCity: $propCity, propRegion: $propRegion)';
+    return 'TenantModel(id: $id, propId: $propId, code: $code, unitName: $unitName, dateType: $dateType, expireDataTimeHj: $expireDataTimeHj, expireDataTimeStamp: $expireDataTimeStamp, price: $price, priceWithoutTax: $priceWithoutTax, status: $status, type: $type, propLat: $propLat, propLng: $propLng, propImg: $propImg, propCity: $propCity, propRegion: $propRegion)';
   }
 
   @override
@@ -358,17 +399,20 @@ class _$TenantModelImpl extends _TenantModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TenantModelImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.propId, propId) || other.propId == propId) &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.unitName, unitName) ||
                 other.unitName == unitName) &&
             (identical(other.dateType, dateType) ||
                 other.dateType == dateType) &&
-            (identical(other.dataTimeHj, dataTimeHj) ||
-                other.dataTimeHj == dataTimeHj) &&
-            (identical(other.dataTimeStamp, dataTimeStamp) ||
-                other.dataTimeStamp == dataTimeStamp) &&
+            (identical(other.expireDataTimeHj, expireDataTimeHj) ||
+                other.expireDataTimeHj == expireDataTimeHj) &&
+            (identical(other.expireDataTimeStamp, expireDataTimeStamp) ||
+                other.expireDataTimeStamp == expireDataTimeStamp) &&
             (identical(other.price, price) || other.price == price) &&
+            (identical(other.priceWithoutTax, priceWithoutTax) ||
+                other.priceWithoutTax == priceWithoutTax) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.propLat, propLat) || other.propLat == propLat) &&
@@ -384,13 +428,15 @@ class _$TenantModelImpl extends _TenantModel {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      id,
       propId,
       code,
       unitName,
       dateType,
-      dataTimeHj,
-      dataTimeStamp,
+      expireDataTimeHj,
+      expireDataTimeStamp,
       price,
+      priceWithoutTax,
       status,
       type,
       propLat,
@@ -415,17 +461,19 @@ class _$TenantModelImpl extends _TenantModel {
 
 abstract class _TenantModel extends TenantModel {
   factory _TenantModel(
-      {@JsonKey(name: 'prop_id', defaultValue: "") required final String propId,
+      {@JsonKey(name: 'tts_id', defaultValue: "") required final String id,
+      @JsonKey(name: 'prop_id', defaultValue: "") required final String propId,
       @JsonKey(name: 'tts_code') final String? code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "")
       required final String unitName,
-      @JsonKey(name: 'cal_type', defaultValue: "")
-      required final DateTypes dateType,
+      @JsonKey(name: 'cal_type') required final DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
-      required final String dataTimeHj,
+      required final String expireDataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
-      required final String dataTimeStamp,
+      required final String expireDataTimeStamp,
       @JsonKey(name: 'amt_due', defaultValue: "0") required final String price,
+      @JsonKey(name: 'tts_amt', defaultValue: "0")
+      required final String priceWithoutTax,
       @JsonKey(name: 'tts_validity') required final TenantVisibility status,
       @JsonKey(name: 'contract_type') required final ContractTypes type,
       @JsonKey(name: 'prop_lat', defaultValue: "")
@@ -443,6 +491,9 @@ abstract class _TenantModel extends TenantModel {
       _$TenantModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'tts_id', defaultValue: "")
+  String get id;
+  @override
   @JsonKey(name: 'prop_id', defaultValue: "")
   String get propId;
   @override
@@ -452,17 +503,20 @@ abstract class _TenantModel extends TenantModel {
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
   String get unitName;
   @override
-  @JsonKey(name: 'cal_type', defaultValue: "")
+  @JsonKey(name: 'cal_type')
   DateTypes get dateType;
   @override
   @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
-  String get dataTimeHj;
+  String get expireDataTimeHj;
   @override
   @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
-  String get dataTimeStamp;
+  String get expireDataTimeStamp;
   @override
   @JsonKey(name: 'amt_due', defaultValue: "0")
   String get price;
+  @override
+  @JsonKey(name: 'tts_amt', defaultValue: "0")
+  String get priceWithoutTax;
   @override
   @JsonKey(name: 'tts_validity')
   TenantVisibility get status;

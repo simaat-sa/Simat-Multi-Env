@@ -20,13 +20,13 @@ PropModel _$PropModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PropModel {
-  @JsonKey(name: 'prop_id', defaultValue: "")
+  @JsonKey(name: 'prop_id', defaultValue: "0")
   String get propId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'are_id', defaultValue: "")
+  @JsonKey(name: 'are_id', defaultValue: "0")
   String get areId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'are_code', defaultValue: "")
+  @JsonKey(name: 'are_code', defaultValue: "0")
   String get areCode => throw _privateConstructorUsedError;
-  @JsonKey(name: 'are_are_id', defaultValue: "")
+  @JsonKey(name: 'are_are_id', defaultValue: "0")
   String get areAreId => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
   String get areDescFo => throw _privateConstructorUsedError;
@@ -40,9 +40,9 @@ mixin _$PropModel {
   String get areIntermediate => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_img', defaultValue: "")
   String get propImg => throw _privateConstructorUsedError;
-  @JsonKey(name: 'prop_lat', defaultValue: "")
+  @JsonKey(name: 'prop_lat', defaultValue: "0")
   String get propLat => throw _privateConstructorUsedError;
-  @JsonKey(name: 'prop_lng', defaultValue: "")
+  @JsonKey(name: 'prop_lng', defaultValue: "0")
   String get propLng => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_address', defaultValue: "")
   String get propAddress => throw _privateConstructorUsedError;
@@ -62,7 +62,7 @@ mixin _$PropModel {
   String get waterMeter => throw _privateConstructorUsedError;
   @JsonKey(name: 'guard_name', defaultValue: "")
   String get guardName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'acl_status_code', defaultValue: "")
+  @JsonKey(name: 'acl_status_code', defaultValue: "0")
   String get aclStatusCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'contact_mobile', defaultValue: "")
   String get contactMobile => throw _privateConstructorUsedError;
@@ -117,10 +117,10 @@ abstract class $PropModelCopyWith<$Res> {
       _$PropModelCopyWithImpl<$Res, PropModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'prop_id', defaultValue: "") String propId,
-      @JsonKey(name: 'are_id', defaultValue: "") String areId,
-      @JsonKey(name: 'are_code', defaultValue: "") String areCode,
-      @JsonKey(name: 'are_are_id', defaultValue: "") String areAreId,
+      {@JsonKey(name: 'prop_id', defaultValue: "0") String propId,
+      @JsonKey(name: 'are_id', defaultValue: "0") String areId,
+      @JsonKey(name: 'are_code', defaultValue: "0") String areCode,
+      @JsonKey(name: 'are_are_id', defaultValue: "0") String areAreId,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") String areDescFo,
       @JsonKey(name: 'parent_desc_ar', defaultValue: "") String parentDescAr,
       @JsonKey(name: 'parent_desc_en', defaultValue: "") String parentDescEn,
@@ -128,8 +128,8 @@ abstract class $PropModelCopyWith<$Res> {
       @JsonKey(name: 'are_intermediate', defaultValue: "")
       String areIntermediate,
       @JsonKey(name: 'prop_img', defaultValue: "") String propImg,
-      @JsonKey(name: 'prop_lat', defaultValue: "") String propLat,
-      @JsonKey(name: 'prop_lng', defaultValue: "") String propLng,
+      @JsonKey(name: 'prop_lat', defaultValue: "0") String propLat,
+      @JsonKey(name: 'prop_lng', defaultValue: "0") String propLng,
       @JsonKey(name: 'prop_address', defaultValue: "") String propAddress,
       @JsonKey(name: 'monthly', defaultValue: "") String monthly,
       @JsonKey(name: 'is_rentable', defaultValue: "") String isRentable,
@@ -139,7 +139,7 @@ abstract class $PropModelCopyWith<$Res> {
       @JsonKey(name: 'prop_units', defaultValue: "") String propUnits,
       @JsonKey(name: 'water_meter', defaultValue: "") String waterMeter,
       @JsonKey(name: 'guard_name', defaultValue: "") String guardName,
-      @JsonKey(name: 'acl_status_code', defaultValue: "") String aclStatusCode,
+      @JsonKey(name: 'acl_status_code', defaultValue: "0") String aclStatusCode,
       @JsonKey(name: 'contact_mobile', defaultValue: "") String contactMobile,
       @JsonKey(name: 'contact_phone') String? contactPhone,
       @JsonKey(name: 'prop_cost', defaultValue: "") String propCost,
@@ -400,10 +400,10 @@ abstract class _$$PropModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'prop_id', defaultValue: "") String propId,
-      @JsonKey(name: 'are_id', defaultValue: "") String areId,
-      @JsonKey(name: 'are_code', defaultValue: "") String areCode,
-      @JsonKey(name: 'are_are_id', defaultValue: "") String areAreId,
+      {@JsonKey(name: 'prop_id', defaultValue: "0") String propId,
+      @JsonKey(name: 'are_id', defaultValue: "0") String areId,
+      @JsonKey(name: 'are_code', defaultValue: "0") String areCode,
+      @JsonKey(name: 'are_are_id', defaultValue: "0") String areAreId,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") String areDescFo,
       @JsonKey(name: 'parent_desc_ar', defaultValue: "") String parentDescAr,
       @JsonKey(name: 'parent_desc_en', defaultValue: "") String parentDescEn,
@@ -411,8 +411,8 @@ abstract class _$$PropModelImplCopyWith<$Res>
       @JsonKey(name: 'are_intermediate', defaultValue: "")
       String areIntermediate,
       @JsonKey(name: 'prop_img', defaultValue: "") String propImg,
-      @JsonKey(name: 'prop_lat', defaultValue: "") String propLat,
-      @JsonKey(name: 'prop_lng', defaultValue: "") String propLng,
+      @JsonKey(name: 'prop_lat', defaultValue: "0") String propLat,
+      @JsonKey(name: 'prop_lng', defaultValue: "0") String propLng,
       @JsonKey(name: 'prop_address', defaultValue: "") String propAddress,
       @JsonKey(name: 'monthly', defaultValue: "") String monthly,
       @JsonKey(name: 'is_rentable', defaultValue: "") String isRentable,
@@ -422,7 +422,7 @@ abstract class _$$PropModelImplCopyWith<$Res>
       @JsonKey(name: 'prop_units', defaultValue: "") String propUnits,
       @JsonKey(name: 'water_meter', defaultValue: "") String waterMeter,
       @JsonKey(name: 'guard_name', defaultValue: "") String guardName,
-      @JsonKey(name: 'acl_status_code', defaultValue: "") String aclStatusCode,
+      @JsonKey(name: 'acl_status_code', defaultValue: "0") String aclStatusCode,
       @JsonKey(name: 'contact_mobile', defaultValue: "") String contactMobile,
       @JsonKey(name: 'contact_phone') String? contactPhone,
       @JsonKey(name: 'prop_cost', defaultValue: "") String propCost,
@@ -677,10 +677,10 @@ class __$$PropModelImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$PropModelImpl extends _PropModel {
   const _$PropModelImpl(
-      {@JsonKey(name: 'prop_id', defaultValue: "") required this.propId,
-      @JsonKey(name: 'are_id', defaultValue: "") required this.areId,
-      @JsonKey(name: 'are_code', defaultValue: "") required this.areCode,
-      @JsonKey(name: 'are_are_id', defaultValue: "") required this.areAreId,
+      {@JsonKey(name: 'prop_id', defaultValue: "0") required this.propId,
+      @JsonKey(name: 'are_id', defaultValue: "0") required this.areId,
+      @JsonKey(name: 'are_code', defaultValue: "0") required this.areCode,
+      @JsonKey(name: 'are_are_id', defaultValue: "0") required this.areAreId,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") required this.areDescFo,
       @JsonKey(name: 'parent_desc_ar', defaultValue: "")
       required this.parentDescAr,
@@ -690,8 +690,8 @@ class _$PropModelImpl extends _PropModel {
       @JsonKey(name: 'are_intermediate', defaultValue: "")
       required this.areIntermediate,
       @JsonKey(name: 'prop_img', defaultValue: "") required this.propImg,
-      @JsonKey(name: 'prop_lat', defaultValue: "") required this.propLat,
-      @JsonKey(name: 'prop_lng', defaultValue: "") required this.propLng,
+      @JsonKey(name: 'prop_lat', defaultValue: "0") required this.propLat,
+      @JsonKey(name: 'prop_lng', defaultValue: "0") required this.propLng,
       @JsonKey(name: 'prop_address', defaultValue: "")
       required this.propAddress,
       @JsonKey(name: 'monthly', defaultValue: "") required this.monthly,
@@ -702,7 +702,7 @@ class _$PropModelImpl extends _PropModel {
       @JsonKey(name: 'prop_units', defaultValue: "") required this.propUnits,
       @JsonKey(name: 'water_meter', defaultValue: "") required this.waterMeter,
       @JsonKey(name: 'guard_name', defaultValue: "") required this.guardName,
-      @JsonKey(name: 'acl_status_code', defaultValue: "")
+      @JsonKey(name: 'acl_status_code', defaultValue: "0")
       required this.aclStatusCode,
       @JsonKey(name: 'contact_mobile', defaultValue: "")
       required this.contactMobile,
@@ -735,16 +735,16 @@ class _$PropModelImpl extends _PropModel {
       _$$PropModelImplFromJson(json);
 
   @override
-  @JsonKey(name: 'prop_id', defaultValue: "")
+  @JsonKey(name: 'prop_id', defaultValue: "0")
   final String propId;
   @override
-  @JsonKey(name: 'are_id', defaultValue: "")
+  @JsonKey(name: 'are_id', defaultValue: "0")
   final String areId;
   @override
-  @JsonKey(name: 'are_code', defaultValue: "")
+  @JsonKey(name: 'are_code', defaultValue: "0")
   final String areCode;
   @override
-  @JsonKey(name: 'are_are_id', defaultValue: "")
+  @JsonKey(name: 'are_are_id', defaultValue: "0")
   final String areAreId;
   @override
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
@@ -765,10 +765,10 @@ class _$PropModelImpl extends _PropModel {
   @JsonKey(name: 'prop_img', defaultValue: "")
   final String propImg;
   @override
-  @JsonKey(name: 'prop_lat', defaultValue: "")
+  @JsonKey(name: 'prop_lat', defaultValue: "0")
   final String propLat;
   @override
-  @JsonKey(name: 'prop_lng', defaultValue: "")
+  @JsonKey(name: 'prop_lng', defaultValue: "0")
   final String propLng;
   @override
   @JsonKey(name: 'prop_address', defaultValue: "")
@@ -798,7 +798,7 @@ class _$PropModelImpl extends _PropModel {
   @JsonKey(name: 'guard_name', defaultValue: "")
   final String guardName;
   @override
-  @JsonKey(name: 'acl_status_code', defaultValue: "")
+  @JsonKey(name: 'acl_status_code', defaultValue: "0")
   final String aclStatusCode;
   @override
   @JsonKey(name: 'contact_mobile', defaultValue: "")
@@ -1009,11 +1009,12 @@ class _$PropModelImpl extends _PropModel {
 
 abstract class _PropModel extends PropModel {
   const factory _PropModel(
-      {@JsonKey(name: 'prop_id', defaultValue: "") required final String propId,
-      @JsonKey(name: 'are_id', defaultValue: "") required final String areId,
-      @JsonKey(name: 'are_code', defaultValue: "")
+      {@JsonKey(name: 'prop_id', defaultValue: "0")
+      required final String propId,
+      @JsonKey(name: 'are_id', defaultValue: "0") required final String areId,
+      @JsonKey(name: 'are_code', defaultValue: "0")
       required final String areCode,
-      @JsonKey(name: 'are_are_id', defaultValue: "")
+      @JsonKey(name: 'are_are_id', defaultValue: "0")
       required final String areAreId,
       @JsonKey(name: 'are_desc_fo', defaultValue: "")
       required final String areDescFo,
@@ -1027,9 +1028,9 @@ abstract class _PropModel extends PropModel {
       required final String areIntermediate,
       @JsonKey(name: 'prop_img', defaultValue: "")
       required final String propImg,
-      @JsonKey(name: 'prop_lat', defaultValue: "")
+      @JsonKey(name: 'prop_lat', defaultValue: "0")
       required final String propLat,
-      @JsonKey(name: 'prop_lng', defaultValue: "")
+      @JsonKey(name: 'prop_lng', defaultValue: "0")
       required final String propLng,
       @JsonKey(name: 'prop_address', defaultValue: "")
       required final String propAddress,
@@ -1048,7 +1049,7 @@ abstract class _PropModel extends PropModel {
       required final String waterMeter,
       @JsonKey(name: 'guard_name', defaultValue: "")
       required final String guardName,
-      @JsonKey(name: 'acl_status_code', defaultValue: "")
+      @JsonKey(name: 'acl_status_code', defaultValue: "0")
       required final String aclStatusCode,
       @JsonKey(name: 'contact_mobile', defaultValue: "")
       required final String contactMobile,
@@ -1092,16 +1093,16 @@ abstract class _PropModel extends PropModel {
       _$PropModelImpl.fromJson;
 
   @override
-  @JsonKey(name: 'prop_id', defaultValue: "")
+  @JsonKey(name: 'prop_id', defaultValue: "0")
   String get propId;
   @override
-  @JsonKey(name: 'are_id', defaultValue: "")
+  @JsonKey(name: 'are_id', defaultValue: "0")
   String get areId;
   @override
-  @JsonKey(name: 'are_code', defaultValue: "")
+  @JsonKey(name: 'are_code', defaultValue: "0")
   String get areCode;
   @override
-  @JsonKey(name: 'are_are_id', defaultValue: "")
+  @JsonKey(name: 'are_are_id', defaultValue: "0")
   String get areAreId;
   @override
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
@@ -1122,10 +1123,10 @@ abstract class _PropModel extends PropModel {
   @JsonKey(name: 'prop_img', defaultValue: "")
   String get propImg;
   @override
-  @JsonKey(name: 'prop_lat', defaultValue: "")
+  @JsonKey(name: 'prop_lat', defaultValue: "0")
   String get propLat;
   @override
-  @JsonKey(name: 'prop_lng', defaultValue: "")
+  @JsonKey(name: 'prop_lng', defaultValue: "0")
   String get propLng;
   @override
   @JsonKey(name: 'prop_address', defaultValue: "")
@@ -1155,7 +1156,7 @@ abstract class _PropModel extends PropModel {
   @JsonKey(name: 'guard_name', defaultValue: "")
   String get guardName;
   @override
-  @JsonKey(name: 'acl_status_code', defaultValue: "")
+  @JsonKey(name: 'acl_status_code', defaultValue: "0")
   String get aclStatusCode;
   @override
   @JsonKey(name: 'contact_mobile', defaultValue: "")

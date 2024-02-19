@@ -10,7 +10,13 @@ class TenantDetails extends StatefulWidget {
 }
 
 class _TenantDetailsState extends State<TenantDetails> {
-  final TenantDetailsController controller = TenantDetailsController();
+  late TenantDetailsController controller;
+
+  @override
+  void initState() {
+    controller = TenantDetailsController(widget.model);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +27,7 @@ class _TenantDetailsState extends State<TenantDetails> {
         appBar: DefaultAppBar(
           centerTitle: false,
           title: widget.model.unitName,
-          showBack: false,
-          actions: [
-            Icon(
-              Icons.arrow_forward_ios_outlined,
-              color: context.colors.darkTextColor,
-              size: 23,
-            ),
-            Gaps.hGap13,
-          ],
+          showBack: true,
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 22),
@@ -49,8 +47,8 @@ class _TenantDetailsState extends State<TenantDetails> {
               Flexible(
                 child: TabBarView(
                   children: [
-                    SummaryViewWidget(model: widget.model,),
-                    Container(color: Colors.green,),
+                    SummaryViewWidget(controller: controller),
+                    Container(color: Colors.white,),
                   ],
                 ),
               ),

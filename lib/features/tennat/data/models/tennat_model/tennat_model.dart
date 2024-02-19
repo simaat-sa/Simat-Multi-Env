@@ -2,7 +2,6 @@ import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/enums/contract_types.dart';
 import 'package:flutter_tdd/core/enums/date_types.dart';
 import 'package:flutter_tdd/core/enums/tenant_visibility.dart';
-import 'package:flutter_tdd/core/extensions/date_format.dart';
 import 'package:flutter_tdd/core/extensions/string_helper_extension.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -16,13 +15,15 @@ class TenantModel with _$TenantModel {
 
   @JsonSerializable(explicitToJson: true)
   factory TenantModel({
+    @JsonKey(name: 'tts_id',defaultValue: "")required String id,
     @JsonKey(name: 'prop_id',defaultValue: "")required String propId,
     @JsonKey(name: 'tts_code') String? code,
     @JsonKey(name: 'are_desc_fo',defaultValue: "")required String unitName,
-    @JsonKey(name: 'cal_type',defaultValue: "")required DateTypes dateType,
-    @JsonKey(name: 'tts_end_date_hj',defaultValue: "")required String dataTimeHj,
-    @JsonKey(name: 'tts_end_date_dgr',defaultValue: "")required String dataTimeStamp,
+    @JsonKey(name: 'cal_type')required DateTypes dateType,
+    @JsonKey(name: 'tts_end_date_hj',defaultValue: "")required String expireDataTimeHj,
+    @JsonKey(name: 'tts_end_date_dgr',defaultValue: "")required String expireDataTimeStamp,
     @JsonKey(name: 'amt_due', defaultValue: "0")required String price,
+    @JsonKey(name: 'tts_amt', defaultValue: "0")required String priceWithoutTax,
     @JsonKey(name: 'tts_validity')required TenantVisibility status,
     @JsonKey(name: 'contract_type')required ContractTypes type,
     @JsonKey(name: 'prop_lat',defaultValue: "")required String propLat,
@@ -36,10 +37,18 @@ class TenantModel with _$TenantModel {
 
   String get unitImage => AppConfig.instance.baseUrl + (propImg??"");
 
-  String get date {
+  String get dueDate {
     if (dateType == DateTypes.hj) {
-      return dataTimeHj;
+      return expireDataTimeHj;
     }
-    return dataTimeStamp.formatTimeStampDate();
+    return expireDataTimeStamp.formatTimeStampDate();
   }
+
+  String get expireDate {
+    if (dateType == DateTypes.hj) {
+      return expireDataTimeHj;
+    }
+    return expireDataTimeStamp.formatTimeStampDate();
+  }
+
 }

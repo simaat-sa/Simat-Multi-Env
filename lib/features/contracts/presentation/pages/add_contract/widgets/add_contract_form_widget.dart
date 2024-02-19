@@ -24,7 +24,7 @@ class AddContractFormWidget extends StatelessWidget {
           fieldTypes: FieldTypes.normal,
           type: TextInputType.phone,
           action: TextInputAction.done,
-          validate: (value) => value?.validatePhone(),
+          validate: (value) => value?.validateEmpty(),
           margin: const EdgeInsets.symmetric(vertical: 16),
           radius: BorderRadius.circular(5),
           prefixIcon: Icon(
