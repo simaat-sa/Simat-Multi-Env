@@ -14,8 +14,8 @@ class AppRouter extends $AppRouter {
     AdaptiveRoute(page: Terms.page),
     AutoRoute(page: Home.page),
     ...baseRoute,
-    ...tenantRoutes,
     ...contractRoutes,
+    ...maintenanceRoutes,
     ...noticesRoutes,
   ];
 }

@@ -13,41 +13,41 @@ import 'package:flutter/material.dart' as _i17;
 import 'package:flutter_tdd/features/auth/presentation/pages/active_account/active_account_imports.dart'
     as _i1;
 import 'package:flutter_tdd/features/auth/presentation/pages/forget_password/forget_password_imports.dart'
-    as _i6;
+    as _i7;
 import 'package:flutter_tdd/features/auth/presentation/pages/login/login_imports.dart'
-    as _i8;
+    as _i9;
 import 'package:flutter_tdd/features/auth/presentation/pages/reset_password/reset_password_imports.dart'
-    as _i11;
-import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_imports.dart'
     as _i12;
+import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_imports.dart'
+    as _i13;
 import 'package:flutter_tdd/features/auth/presentation/pages/verify_otp/verify_otp_imports.dart'
     as _i15;
 import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart'
-    as _i7;
-import 'package:flutter_tdd/features/contracts/data/models/tennat_model/contract_model.dart'
-    as _i18;
-import 'package:flutter_tdd/features/contracts/presentation/pages/add_contract/add_contract_imports.dart'
-    as _i2;
-import 'package:flutter_tdd/features/contracts/presentation/pages/add_contract_status/add_contract_status_imports.dart'
-    as _i3;
-import 'package:flutter_tdd/features/contracts/presentation/pages/contract_screen/contract_screen_imports.dart'
+    as _i8;
+import 'package:flutter_tdd/features/contract/data/models/contract_model/contract_model.dart'
     as _i19;
-import 'package:flutter_tdd/features/contracts/presentation/pages/filter_contract/filter_contract_imports.dart'
+import 'package:flutter_tdd/features/contract/presentation/pages/contract_details/contract_details_imports.dart'
     as _i4;
+import 'package:flutter_tdd/features/contract/presentation/pages/contract_screen/contract_screen_imports.dart'
+    as _i20;
+import 'package:flutter_tdd/features/contract/presentation/pages/filter_contract/filter_contract_imports.dart'
+    as _i5;
+import 'package:flutter_tdd/features/contract/presentation/pages/renew_contract_status/renew_contract_status_imports.dart'
+    as _i11;
 import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart'
     as _i14;
-import 'package:flutter_tdd/features/notification/presentation/pages/notices_screen/notices_screen_imports.dart'
-    as _i9;
-import 'package:flutter_tdd/features/tennat/data/models/tennat_model/tennat_model.dart'
+import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart'
+    as _i18;
+import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance/add_maintenance_imports.dart'
+    as _i2;
+import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance_status/add_maintenance_status_imports.dart'
+    as _i3;
+import 'package:flutter_tdd/features/maintenance/presentation/pages/contract_screen/maintenance_screen_imports.dart'
     as _i21;
-import 'package:flutter_tdd/features/tennat/presentation/pages/filter_tenant/filter_tenant_imports.dart'
-    as _i5;
-import 'package:flutter_tdd/features/tennat/presentation/pages/renew_contract_status/renew_contract_status_imports.dart'
+import 'package:flutter_tdd/features/maintenance/presentation/pages/filter_contract/filter_maintenance_imports.dart'
+    as _i6;
+import 'package:flutter_tdd/features/notification/presentation/pages/notices_screen/notices_screen_imports.dart'
     as _i10;
-import 'package:flutter_tdd/features/tennat/presentation/pages/tenant_details/tenant_details_imports.dart'
-    as _i13;
-import 'package:flutter_tdd/features/tennat/presentation/pages/tennat_screen/tenant_screen_imports.dart'
-    as _i20;
 
 abstract class $AppRouter extends _i16.RootStackRouter {
   $AppRouter({super.navigatorKey});
@@ -60,18 +60,28 @@ abstract class $AppRouter extends _i16.RootStackRouter {
         child: const _i1.ActiveAccount(),
       );
     },
-    AddContractRoute.name: (routeData) {
+    AddMaintenanceRoute.name: (routeData) {
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.AddContract(),
+        child: const _i2.AddMaintenance(),
       );
     },
-    AddContractSuccessRoute.name: (routeData) {
-      final args = routeData.argsAs<AddContractSuccessRouteArgs>(
-          orElse: () => const AddContractSuccessRouteArgs());
+    CompleteAddMaintenanceRoute.name: (routeData) {
+      final args = routeData.argsAs<CompleteAddMaintenanceRouteArgs>(
+          orElse: () => const CompleteAddMaintenanceRouteArgs());
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i3.CompleteAddContract(
+        child: _i3.CompleteAddMaintenance(
+          key: args.key,
+          model: args.model,
+        ),
+      );
+    },
+    ContractDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<ContractDetailsRouteArgs>();
+      return _i16.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i4.ContractDetails(
           key: args.key,
           model: args.model,
         ),
@@ -81,17 +91,17 @@ abstract class $AppRouter extends _i16.RootStackRouter {
       final args = routeData.argsAs<FilterContractRouteArgs>();
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i4.FilterContract(
+        child: _i5.FilterContract(
           key: args.key,
           controller: args.controller,
         ),
       );
     },
-    FilterTenantRoute.name: (routeData) {
-      final args = routeData.argsAs<FilterTenantRouteArgs>();
+    FilterMaintenanceRoute.name: (routeData) {
+      final args = routeData.argsAs<FilterMaintenanceRouteArgs>();
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i5.FilterTenant(
+        child: _i6.FilterMaintenance(
           key: args.key,
           controller: args.controller,
         ),
@@ -100,14 +110,14 @@ abstract class $AppRouter extends _i16.RootStackRouter {
     ForgetPassword.name: (routeData) {
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.ForgetPassword(),
+        child: const _i7.ForgetPassword(),
       );
     },
     Home.name: (routeData) {
       final args = routeData.argsAs<HomeArgs>(orElse: () => const HomeArgs());
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i7.Home(
+        child: _i8.Home(
           key: args.key,
           index: args.index,
         ),
@@ -116,20 +126,20 @@ abstract class $AppRouter extends _i16.RootStackRouter {
     Login.name: (routeData) {
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.Login(),
+        child: const _i9.Login(),
       );
     },
     NoticesScreenRoute.name: (routeData) {
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.NoticesScreen(),
+        child: const _i10.NoticesScreen(),
       );
     },
     RenewContractStatusRoute.name: (routeData) {
       final args = routeData.argsAs<RenewContractStatusRouteArgs>();
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i10.RenewContractStatus(
+        child: _i11.RenewContractStatus(
           key: args.key,
           success: args.success,
         ),
@@ -138,23 +148,13 @@ abstract class $AppRouter extends _i16.RootStackRouter {
     ResetPassword.name: (routeData) {
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i11.ResetPassword(),
+        child: const _i12.ResetPassword(),
       );
     },
     Splash.name: (routeData) {
       return _i16.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i12.Splash(),
-      );
-    },
-    TenantDetailsRoute.name: (routeData) {
-      final args = routeData.argsAs<TenantDetailsRouteArgs>();
-      return _i16.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i13.TenantDetails(
-          key: args.key,
-          model: args.model,
-        ),
+        child: const _i13.Splash(),
       );
     },
     Terms.name: (routeData) {
@@ -187,64 +187,103 @@ class ActiveAccount extends _i16.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.AddContract]
-class AddContractRoute extends _i16.PageRouteInfo<void> {
-  const AddContractRoute({List<_i16.PageRouteInfo>? children})
+/// [_i2.AddMaintenance]
+class AddMaintenanceRoute extends _i16.PageRouteInfo<void> {
+  const AddMaintenanceRoute({List<_i16.PageRouteInfo>? children})
       : super(
-          AddContractRoute.name,
+          AddMaintenanceRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'AddContractRoute';
+  static const String name = 'AddMaintenanceRoute';
 
   static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.CompleteAddContract]
-class AddContractSuccessRoute
-    extends _i16.PageRouteInfo<AddContractSuccessRouteArgs> {
-  AddContractSuccessRoute({
+/// [_i3.CompleteAddMaintenance]
+class CompleteAddMaintenanceRoute
+    extends _i16.PageRouteInfo<CompleteAddMaintenanceRouteArgs> {
+  CompleteAddMaintenanceRoute({
     _i17.Key? key,
-    _i18.ContractModel? model,
+    _i18.MaintenanceModel? model,
     List<_i16.PageRouteInfo>? children,
   }) : super(
-          AddContractSuccessRoute.name,
-          args: AddContractSuccessRouteArgs(
+          CompleteAddMaintenanceRoute.name,
+          args: CompleteAddMaintenanceRouteArgs(
             key: key,
             model: model,
           ),
           initialChildren: children,
         );
 
-  static const String name = 'AddContractSuccessRoute';
+  static const String name = 'CompleteAddMaintenanceRoute';
 
-  static const _i16.PageInfo<AddContractSuccessRouteArgs> page =
-      _i16.PageInfo<AddContractSuccessRouteArgs>(name);
+  static const _i16.PageInfo<CompleteAddMaintenanceRouteArgs> page =
+      _i16.PageInfo<CompleteAddMaintenanceRouteArgs>(name);
 }
 
-class AddContractSuccessRouteArgs {
-  const AddContractSuccessRouteArgs({
+class CompleteAddMaintenanceRouteArgs {
+  const CompleteAddMaintenanceRouteArgs({
     this.key,
     this.model,
   });
 
   final _i17.Key? key;
 
-  final _i18.ContractModel? model;
+  final _i18.MaintenanceModel? model;
 
   @override
   String toString() {
-    return 'AddContractSuccessRouteArgs{key: $key, model: $model}';
+    return 'CompleteAddMaintenanceRouteArgs{key: $key, model: $model}';
   }
 }
 
 /// generated route for
-/// [_i4.FilterContract]
+/// [_i4.ContractDetails]
+class ContractDetailsRoute
+    extends _i16.PageRouteInfo<ContractDetailsRouteArgs> {
+  ContractDetailsRoute({
+    _i17.Key? key,
+    required _i19.ContractModel model,
+    List<_i16.PageRouteInfo>? children,
+  }) : super(
+          ContractDetailsRoute.name,
+          args: ContractDetailsRouteArgs(
+            key: key,
+            model: model,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'ContractDetailsRoute';
+
+  static const _i16.PageInfo<ContractDetailsRouteArgs> page =
+      _i16.PageInfo<ContractDetailsRouteArgs>(name);
+}
+
+class ContractDetailsRouteArgs {
+  const ContractDetailsRouteArgs({
+    this.key,
+    required this.model,
+  });
+
+  final _i17.Key? key;
+
+  final _i19.ContractModel model;
+
+  @override
+  String toString() {
+    return 'ContractDetailsRouteArgs{key: $key, model: $model}';
+  }
+}
+
+/// generated route for
+/// [_i5.FilterContract]
 class FilterContractRoute extends _i16.PageRouteInfo<FilterContractRouteArgs> {
   FilterContractRoute({
     _i17.Key? key,
-    required _i19.ContractController controller,
+    required _i20.ContractScreenController controller,
     List<_i16.PageRouteInfo>? children,
   }) : super(
           FilterContractRoute.name,
@@ -269,7 +308,7 @@ class FilterContractRouteArgs {
 
   final _i17.Key? key;
 
-  final _i19.ContractController controller;
+  final _i20.ContractScreenController controller;
 
   @override
   String toString() {
@@ -278,45 +317,46 @@ class FilterContractRouteArgs {
 }
 
 /// generated route for
-/// [_i5.FilterTenant]
-class FilterTenantRoute extends _i16.PageRouteInfo<FilterTenantRouteArgs> {
-  FilterTenantRoute({
+/// [_i6.FilterMaintenance]
+class FilterMaintenanceRoute
+    extends _i16.PageRouteInfo<FilterMaintenanceRouteArgs> {
+  FilterMaintenanceRoute({
     _i17.Key? key,
-    required _i20.TenantScreenController controller,
+    required _i21.MaintenanceController controller,
     List<_i16.PageRouteInfo>? children,
   }) : super(
-          FilterTenantRoute.name,
-          args: FilterTenantRouteArgs(
+          FilterMaintenanceRoute.name,
+          args: FilterMaintenanceRouteArgs(
             key: key,
             controller: controller,
           ),
           initialChildren: children,
         );
 
-  static const String name = 'FilterTenantRoute';
+  static const String name = 'FilterMaintenanceRoute';
 
-  static const _i16.PageInfo<FilterTenantRouteArgs> page =
-      _i16.PageInfo<FilterTenantRouteArgs>(name);
+  static const _i16.PageInfo<FilterMaintenanceRouteArgs> page =
+      _i16.PageInfo<FilterMaintenanceRouteArgs>(name);
 }
 
-class FilterTenantRouteArgs {
-  const FilterTenantRouteArgs({
+class FilterMaintenanceRouteArgs {
+  const FilterMaintenanceRouteArgs({
     this.key,
     required this.controller,
   });
 
   final _i17.Key? key;
 
-  final _i20.TenantScreenController controller;
+  final _i21.MaintenanceController controller;
 
   @override
   String toString() {
-    return 'FilterTenantRouteArgs{key: $key, controller: $controller}';
+    return 'FilterMaintenanceRouteArgs{key: $key, controller: $controller}';
   }
 }
 
 /// generated route for
-/// [_i6.ForgetPassword]
+/// [_i7.ForgetPassword]
 class ForgetPassword extends _i16.PageRouteInfo<void> {
   const ForgetPassword({List<_i16.PageRouteInfo>? children})
       : super(
@@ -330,7 +370,7 @@ class ForgetPassword extends _i16.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i7.Home]
+/// [_i8.Home]
 class Home extends _i16.PageRouteInfo<HomeArgs> {
   Home({
     _i17.Key? key,
@@ -367,7 +407,7 @@ class HomeArgs {
 }
 
 /// generated route for
-/// [_i8.Login]
+/// [_i9.Login]
 class Login extends _i16.PageRouteInfo<void> {
   const Login({List<_i16.PageRouteInfo>? children})
       : super(
@@ -381,7 +421,7 @@ class Login extends _i16.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i9.NoticesScreen]
+/// [_i10.NoticesScreen]
 class NoticesScreenRoute extends _i16.PageRouteInfo<void> {
   const NoticesScreenRoute({List<_i16.PageRouteInfo>? children})
       : super(
@@ -395,7 +435,7 @@ class NoticesScreenRoute extends _i16.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i10.RenewContractStatus]
+/// [_i11.RenewContractStatus]
 class RenewContractStatusRoute
     extends _i16.PageRouteInfo<RenewContractStatusRouteArgs> {
   RenewContractStatusRoute({
@@ -434,7 +474,7 @@ class RenewContractStatusRouteArgs {
 }
 
 /// generated route for
-/// [_i11.ResetPassword]
+/// [_i12.ResetPassword]
 class ResetPassword extends _i16.PageRouteInfo<void> {
   const ResetPassword({List<_i16.PageRouteInfo>? children})
       : super(
@@ -448,7 +488,7 @@ class ResetPassword extends _i16.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i12.Splash]
+/// [_i13.Splash]
 class Splash extends _i16.PageRouteInfo<void> {
   const Splash({List<_i16.PageRouteInfo>? children})
       : super(
@@ -459,44 +499,6 @@ class Splash extends _i16.PageRouteInfo<void> {
   static const String name = 'Splash';
 
   static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i13.TenantDetails]
-class TenantDetailsRoute extends _i16.PageRouteInfo<TenantDetailsRouteArgs> {
-  TenantDetailsRoute({
-    _i17.Key? key,
-    required _i21.TenantModel model,
-    List<_i16.PageRouteInfo>? children,
-  }) : super(
-          TenantDetailsRoute.name,
-          args: TenantDetailsRouteArgs(
-            key: key,
-            model: model,
-          ),
-          initialChildren: children,
-        );
-
-  static const String name = 'TenantDetailsRoute';
-
-  static const _i16.PageInfo<TenantDetailsRouteArgs> page =
-      _i16.PageInfo<TenantDetailsRouteArgs>(name);
-}
-
-class TenantDetailsRouteArgs {
-  const TenantDetailsRouteArgs({
-    this.key,
-    required this.model,
-  });
-
-  final _i17.Key? key;
-
-  final _i21.TenantModel model;
-
-  @override
-  String toString() {
-    return 'TenantDetailsRouteArgs{key: $key, model: $model}';
-  }
 }
 
 /// generated route for

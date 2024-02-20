@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/constants/enum_extension/enum_factory_extension.dart';
-import 'package:flutter_tdd/features/contracts/presentation/pages/contract_screen/contract_screen_imports.dart';
-import 'package:flutter_tdd/features/tennat/presentation/pages/tennat_screen/tenant_screen_imports.dart';
+import 'package:flutter_tdd/features/contract/presentation/pages/contract_screen/contract_screen_imports.dart';
+import 'package:flutter_tdd/features/maintenance/presentation/pages/contract_screen/maintenance_screen_imports.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 @JsonEnum(valueField: 'value')
@@ -204,9 +204,9 @@ enum AccessPages {
 
   Widget getPage() {
     if (this == AccessPages.SS_TENANT) {
-      return const TenantScreen();
-    } else if(this == AccessPages.PLT_MAINT){
       return const ContractScreen();
+    } else if(this == AccessPages.PLT_MAINT){
+      return const MaintenanceScreen();
     }
     return Container();
   }
