@@ -55,6 +55,7 @@ abstract class AppColors {
 
   Color get backgroundLight;
   Color get bgLight;
+  Color get noticesTextColor;
 
   Color get backgroundWhite;
 

@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
+import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/core/widgets/CachedImage.dart';
@@ -36,8 +38,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.all(6.0),
-                child: SvgPicture.asset(
-                  Res.noticesLogo,
+                child: InkWell(
+                  onTap: () => AutoRouter.of(context).push(const NoticesScreenRoute()),
+                  child: SvgPicture.asset(
+                    Res.noticesLogo,
+                  ),
                 ),
               ),
               PositionedDirectional(

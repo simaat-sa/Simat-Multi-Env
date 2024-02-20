@@ -75,4 +75,7 @@ class AppDarkColors extends AppColors {
 
   @override
   Color get errorColor => const Color(0xffFF6969) ;
+
+  @override
+  Color get noticesTextColor => const Color(0xff6b6b6c) ;
 }
