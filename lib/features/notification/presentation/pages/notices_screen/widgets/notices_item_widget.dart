@@ -28,12 +28,12 @@ class NoticesItemWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'طلب صيانة جديد',
+                  Translate.s.new_maintenance_request,
                   style: AppTextStyle.s16_w400(color: context.colors.primary),
                 ),
                 Gaps.vGap5,
                 Text(
-                  'لقد قمنا بإرسال رسالة جوال تحتوي على رمز ضمان الجودة لطلبكم رقم S00052',
+                  Translate.s.message_containing_code_for_your_order(02434),
                   style: AppTextStyle.s14_w400(color: context.colors.darkTextColor).copyWith(height: 1.5),
                 ),
               ],

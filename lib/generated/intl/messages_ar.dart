@@ -34,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "AddressValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل العنوان"),
+        "Error_renewal_request":
+            MessageLookupByLibrary.simpleMessage("خطأ في طلب التجديد"),
         "Invalid_login_data": MessageLookupByLibrary.simpleMessage(
             "من فضلك تاكد من بيانات تسجيل الدخول"),
         "Please_authenticate_to_login": MessageLookupByLibrary.simpleMessage(
@@ -45,22 +47,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "add_new_contact":
             MessageLookupByLibrary.simpleMessage("طلب صيانة جديد"),
         "add_new_item": MessageLookupByLibrary.simpleMessage("إضافة عنصر جديد"),
+        "additional_amounts":
+            MessageLookupByLibrary.simpleMessage("مبالغ إضافية"),
         "app_cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "app_confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "applicant": MessageLookupByLibrary.simpleMessage("مقدم الطلب"),
         "application_approval":
             MessageLookupByLibrary.simpleMessage("الموافقة على الطلب"),
         "attribution": MessageLookupByLibrary.simpleMessage("الإسناد"),
+        "back_to_contracts":
+            MessageLookupByLibrary.simpleMessage("عودة إلى العقود"),
+        "back_to_main_page":
+            MessageLookupByLibrary.simpleMessage("عودة الى الرئيسية"),
         "back_to_maintenance_requests":
             MessageLookupByLibrary.simpleMessage("عودة لطلبات الصيانة"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "canceled": MessageLookupByLibrary.simpleMessage("ألغيت"),
         "closed": MessageLookupByLibrary.simpleMessage("مغلق"),
+        "collector": MessageLookupByLibrary.simpleMessage("محصل"),
         "commercial": MessageLookupByLibrary.simpleMessage("تجاري"),
         "completed": MessageLookupByLibrary.simpleMessage("مكتمل"),
+        "conductor": MessageLookupByLibrary.simpleMessage("المحصل"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل كلمة المرورمتطابق"),
+        "contract": MessageLookupByLibrary.simpleMessage("عقد"),
+        "contract_end_date":
+            MessageLookupByLibrary.simpleMessage("تاريخ نهاية العقد"),
+        "contract_renewal": MessageLookupByLibrary.simpleMessage("تجديد العقد"),
         "contract_status": MessageLookupByLibrary.simpleMessage("حاله العقد"),
         "contract_type": MessageLookupByLibrary.simpleMessage("نوع العقد"),
         "contractsCount": m0,
@@ -70,9 +84,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "تكلفة الصيانة على نفقتي الخاصة\'"),
         "customer_mobile": MessageLookupByLibrary.simpleMessage("جوال العميل"),
         "date_of_request": MessageLookupByLibrary.simpleMessage("تاريخ الطلب"),
+        "days_remaining_and_allowed": MessageLookupByLibrary.simpleMessage(
+            "الايام المتبقيه على انتهاء العقد اكثر من الايام المسموحه للتجديد"),
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "description_of_maintenance":
             MessageLookupByLibrary.simpleMessage("وصف الصيانة"),
+        "district_region":
+            MessageLookupByLibrary.simpleMessage("الحي . المنطقة"),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("طلب غير صالح"),
@@ -109,6 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "كيف يمكنني الحصول علي الرمز؟"),
         "implemented": MessageLookupByLibrary.simpleMessage("مُنفّذ"),
         "inactive": MessageLookupByLibrary.simpleMessage("غير نشط"),
+        "insurance": MessageLookupByLibrary.simpleMessage("تأمين"),
         "internet_connected":
             MessageLookupByLibrary.simpleMessage("تم الاتصال بالانترنت"),
         "label_Login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
@@ -151,13 +170,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "message_containing_code_for_your_order": m2,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
+        "net_contract": MessageLookupByLibrary.simpleMessage("صافي العقد"),
         "new_code": MessageLookupByLibrary.simpleMessage("كود جديد"),
+        "new_maintenance_request":
+            MessageLookupByLibrary.simpleMessage("طلب صيانة جديد"),
+        "new_notices": MessageLookupByLibrary.simpleMessage("اشعارات جديدة"),
         "no_internet_connection":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالانترنت"),
+        "no_notices": MessageLookupByLibrary.simpleMessage("لا إشعارات"),
+        "no_notices_now": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد لديك إشعارات الآن، برجاء معاودة التحقق لاحقا"),
+        "order_has_received": MessageLookupByLibrary.simpleMessage(
+            "تم استلام الطلب، وسنقوم بتحديثك قريبًا"),
         "owner": MessageLookupByLibrary.simpleMessage("مالك"),
         "passValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل على الاقل 6 حروف او ارقام"),
         "paused": MessageLookupByLibrary.simpleMessage("متوقف مؤقتا"),
+        "pay_now": MessageLookupByLibrary.simpleMessage("الدفع الآن"),
+        "payments": MessageLookupByLibrary.simpleMessage("المدفوعات"),
         "phoneValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل الجوال صحيحا"),
         "pick": MessageLookupByLibrary.simpleMessage("اختيار"),
@@ -170,6 +200,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مرفوض من قبل المالك"),
         "rejected_by_the_supervisor":
             MessageLookupByLibrary.simpleMessage("مرفوض من المشرف"),
+        "request_to_renew_contract":
+            MessageLookupByLibrary.simpleMessage("طلب تجديد العقد الحالي"),
+        "requesting_maintenance": MessageLookupByLibrary.simpleMessage(
+            "طلب اجراء صيانة أو اصلاحات للوحدة"),
+        "required": MessageLookupByLibrary.simpleMessage("المطلوبً"),
         "reset": MessageLookupByLibrary.simpleMessage("اعادة تعيين"),
         "residential": MessageLookupByLibrary.simpleMessage("سكني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
@@ -180,11 +215,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "successfully_Logged_in":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
+        "summary": MessageLookupByLibrary.simpleMessage("الملخص"),
         "supervisor_approved":
             MessageLookupByLibrary.simpleMessage("تمت الموافقة من قبل المشرف"),
         "supervisor_identifications":
             MessageLookupByLibrary.simpleMessage("هويات المشرف"),
+        "total_contract": MessageLookupByLibrary.simpleMessage("إجمالي العقد"),
+        "total_due": MessageLookupByLibrary.simpleMessage("اجمالي المستحق"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
+        "unit_maintenance":
+            MessageLookupByLibrary.simpleMessage("صيانة الوحدة"),
         "user_or_phone_hint": MessageLookupByLibrary.simpleMessage(
             "هاتفك الجوال او اسم المستخدم"),
         "worthy": MessageLookupByLibrary.simpleMessage("مستحق")

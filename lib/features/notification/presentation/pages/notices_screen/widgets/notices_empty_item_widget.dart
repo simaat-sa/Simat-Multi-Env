@@ -16,20 +16,20 @@ class NoticesEmptyItemWidget extends StatelessWidget {
           ),
           Gaps.vGap32,
           Text(
-            'لا إشعارات',
+            Translate.s.no_notices,
             style: AppTextStyle.s30_w400(color: context.colors.primaryText),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 13),
             child: Text(
               textAlign: TextAlign.center,
-              'لا يوجد لديك إشعارات الآن، برجاء معاودة التحقق لاحقا',
+              Translate.s.no_notices_now,
               style: AppTextStyle.s16_w500(color: context.colors.primaryText),
             ),
           ),
           Text(
             textAlign: TextAlign.center,
-            'عودة الى الرئيسية',
+            Translate.s.back_to_main_page,
             style: AppTextStyle.s16_w500(color: context.colors.secondary),
           ),
         ],

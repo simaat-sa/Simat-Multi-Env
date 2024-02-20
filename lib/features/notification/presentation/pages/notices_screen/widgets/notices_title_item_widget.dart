@@ -11,7 +11,7 @@ class NoticesTitleItemWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(
-            'اشعارات جديدة',
+            Translate.s.new_notices,
             style: AppTextStyle.s16_w500(color: context.colors.noticesTextColor),
           ),
         ],

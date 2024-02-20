@@ -19,7 +19,7 @@ class ContractStatusWidget extends StatelessWidget {
         Gaps.vGap32,
         Text(
           textAlign: TextAlign.center,
-          isSuccess ? "تم طلب التجديد بنجاح ": "خطأ في طلب التجديد",
+          isSuccess ? Translate.s.renewal_request_completed: Translate.s.Error_renewal_request,
           style: AppTextStyle.s30_w400(color: context.colors.green4),
         ),
         Padding(
@@ -37,7 +37,7 @@ class ContractStatusWidget extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
             child: Text(
-              "عودة إلى العقود",
+              Translate.s.back_to_contracts,
               style: AppTextStyle.s14_w500(color: context.colors.secondary),
             ),
           ),
@@ -48,7 +48,7 @@ class ContractStatusWidget extends StatelessWidget {
 
   String _data(bool isSuccess) {
     return isSuccess
-        ? "تم استلام الطلب، وسنقوم بتحديثك قريبًا"
-        : "الايام المتبقيه على انتهاء العقد اكثر من الايام المسموحه للتجديد";
+        ? Translate.s.order_has_received
+        : Translate.s.days_remaining_and_allowed;
   }
 }

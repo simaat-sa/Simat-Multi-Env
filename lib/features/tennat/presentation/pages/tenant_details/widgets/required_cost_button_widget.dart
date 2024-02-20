@@ -17,21 +17,22 @@ class RequiredCostButtonWidget extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            'دفع المطلوب إلكترونياً',
+            Translate.s.required,
             style: AppTextStyle.s16_w500(color: context.colors.white),
           ),
+          Gaps.hGap5,
+          Text(
+            model.price,
+            style: AppTextStyle.s20_w500(color: context.colors.white),
+          ),
+          Text(
+            ' ر.س',
+            style: AppTextStyle.s14_w400(color: context.colors.white),
+          ),
           const Spacer(),
-          Row(
-            children: [
-              Text(
-                model.price,
-                style: AppTextStyle.s20_w500(color: context.colors.white),
-              ),
-              Text(
-                ' ر.س',
-                style: AppTextStyle.s14_w400(color: context.colors.white),
-              ),
-            ],
+          Text(
+            Translate.s.pay_now,
+            style: AppTextStyle.s16_w500(color: context.colors.white),
           ),
         ],
       ),

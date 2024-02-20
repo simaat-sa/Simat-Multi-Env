@@ -28,7 +28,7 @@ class RequiredCostWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'قسط أملاك',
+                    Translate.s.total_due,
                     style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                   ),
                   Gaps.vGap8,
@@ -56,13 +56,21 @@ class RequiredCostWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'تاريخ الاستحقاق',
+                    Translate.s.conductor,
                     style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                   ),
                   Gaps.vGap8,
-                  Text(
-                    model.date,
-                    style: AppTextStyle.s14_w400(color: context.colors.green3),
+                  Row(
+                    children: [
+                      Text(
+                        model.price,
+                        style: AppTextStyle.s18_w500(color: context.colors.green3),
+                      ),
+                      Text(
+                        " ر.س",
+                        style: AppTextStyle.s14_w400(color: context.colors.green3),
+                      ),
+                    ],
                   ),
                 ],
               ),

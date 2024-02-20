@@ -1099,6 +1099,286 @@ class S {
       args: [],
     );
   }
+
+  /// `Summary`
+  String get summary {
+    return Intl.message(
+      'Summary',
+      name: 'summary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `payments`
+  String get payments {
+    return Intl.message(
+      'payments',
+      name: 'payments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract`
+  String get contract {
+    return Intl.message(
+      'Contract',
+      name: 'contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `District . Region`
+  String get district_region {
+    return Intl.message(
+      'District . Region',
+      name: 'district_region',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract end date`
+  String get contract_end_date {
+    return Intl.message(
+      'Contract end date',
+      name: 'contract_end_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Contract`
+  String get total_contract {
+    return Intl.message(
+      'Total Contract',
+      name: 'total_contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Net contract`
+  String get net_contract {
+    return Intl.message(
+      'Net contract',
+      name: 'net_contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Insurance`
+  String get insurance {
+    return Intl.message(
+      'Insurance',
+      name: 'insurance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Additional amounts`
+  String get additional_amounts {
+    return Intl.message(
+      'Additional amounts',
+      name: 'additional_amounts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Collector`
+  String get collector {
+    return Intl.message(
+      'Collector',
+      name: 'collector',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total due`
+  String get total_due {
+    return Intl.message(
+      'Total due',
+      name: 'total_due',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Conductor`
+  String get conductor {
+    return Intl.message(
+      'Conductor',
+      name: 'conductor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Required`
+  String get required {
+    return Intl.message(
+      'Required',
+      name: 'required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay now`
+  String get pay_now {
+    return Intl.message(
+      'Pay now',
+      name: 'pay_now',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unit maintenance`
+  String get unit_maintenance {
+    return Intl.message(
+      'Unit maintenance',
+      name: 'unit_maintenance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Requesting maintenance or repairs to the unit`
+  String get requesting_maintenance {
+    return Intl.message(
+      'Requesting maintenance or repairs to the unit',
+      name: 'requesting_maintenance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract renewal`
+  String get contract_renewal {
+    return Intl.message(
+      'Contract renewal',
+      name: 'contract_renewal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request to renew the current contract`
+  String get request_to_renew_contract {
+    return Intl.message(
+      'Request to renew the current contract',
+      name: 'request_to_renew_contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Renewal request has been completed successfully`
+  String get renewal_request_completed {
+    return Intl.message(
+      'Renewal request has been completed successfully',
+      name: 'renewal_request_completed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error in renewal request`
+  String get Error_renewal_request {
+    return Intl.message(
+      'Error in renewal request',
+      name: 'Error_renewal_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back to contracts`
+  String get back_to_contracts {
+    return Intl.message(
+      'Back to contracts',
+      name: 'back_to_contracts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The order has been received, we will update you soon`
+  String get order_has_received {
+    return Intl.message(
+      'The order has been received, we will update you soon',
+      name: 'order_has_received',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The days remaining until the end of the contract are more than the days allowed for renewal`
+  String get days_remaining_and_allowed {
+    return Intl.message(
+      'The days remaining until the end of the contract are more than the days allowed for renewal',
+      name: 'days_remaining_and_allowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No notifications`
+  String get no_notices {
+    return Intl.message(
+      'No notifications',
+      name: 'no_notices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You don't have any notifications yet, please check back later`
+  String get no_notices_now {
+    return Intl.message(
+      'You don\'t have any notifications yet, please check back later',
+      name: 'no_notices_now',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back to main page`
+  String get back_to_main_page {
+    return Intl.message(
+      'Back to main page',
+      name: 'back_to_main_page',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New notifications`
+  String get new_notices {
+    return Intl.message(
+      'New notifications',
+      name: 'new_notices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New maintenance request`
+  String get new_maintenance_request {
+    return Intl.message(
+      'New maintenance request',
+      name: 'new_maintenance_request',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

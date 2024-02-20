@@ -23,7 +23,6 @@ class _NoticesScreenState extends State<NoticesScreen> {
             child: Flexible(
               child: ListView(
                 children: [
-                  const NoticesTitleItemWidget(),
                   Gaps.vGap12,
                   const NoticesListItemWidget(),
                 ],

@@ -40,9 +40,9 @@ class _TenantDetailsState extends State<TenantDetails> {
                   indicatorSize: TabBarIndicatorSize.tab,
                   labelPadding: const EdgeInsets.symmetric(vertical: 13),
                   labelStyle: AppTextStyle.s16_w500(color: context.colors.primary).copyWith( fontFamily: "Tajawal"),
-                  tabs: const [
-                    Text('الملخص'),
-                    Text('المدفوعات'),
+                  tabs:  [
+                    Text(Translate.s.summary),
+                    Text(Translate.s.payments),
                   ]),
               Flexible(
                 child: TabBarView(

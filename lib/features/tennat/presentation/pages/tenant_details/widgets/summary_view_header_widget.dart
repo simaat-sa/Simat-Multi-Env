@@ -9,7 +9,7 @@ class SummaryViewHeaderWidget extends StatelessWidget {
     return Row(
       children: [
         Text(
-          'عقد',
+          Translate.s.contract,
           style: AppTextStyle.s16_w400(color: context.colors.darkTextColor)
         ),
         Gaps.hGap12,
