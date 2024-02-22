@@ -13,9 +13,9 @@ import 'package:flutter_tdd/core/widgets/empty_list_item_widget.dart';
 import 'package:flutter_tdd/features/base/presentation/widgets/filter_input_widget.dart';
 import 'package:flutter_tdd/features/contract/domain/requesters/contract_requester.dart';
 import 'package:flutter_tdd/features/contract/presentation/pages/filter_contract/filter_contract_imports.dart';
+import 'package:flutter_tdd/features/contract/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter_tdd/features/contract/presentation/widgets/page_header_title_widget.dart';
 
-import '../../../../maintenance/presentation/widgets/custom_app_bar.dart';
 import '../../widgets/failure_item_widget.dart';
 import '../../widgets/unit_loading_list_widget.dart';
 import 'widgets/contract_screen_widgets_imports.dart';

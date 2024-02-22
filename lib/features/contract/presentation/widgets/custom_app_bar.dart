@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_tdd/core/constants/gaps.dart';
 import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
@@ -31,36 +30,36 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         style: AppTextStyle.s16_w400(color: context.colors.black),
       ),
       actions: [
-        Padding(
-          padding: const EdgeInsetsDirectional.only(end: 16),
-          child: Stack(
-            alignment: AlignmentDirectional.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(6.0),
-                child: InkWell(
-                  onTap: () => AutoRouter.of(context).push(const NoticesScreenRoute()),
+        GestureDetector(
+          onTap: () => AutoRouter.of(context).push(const NoticesScreenRoute()),
+          child: Padding(
+            padding: const EdgeInsetsDirectional.only(end: 16),
+            child: Stack(
+              alignment: AlignmentDirectional.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(6.0),
                   child: SvgPicture.asset(
                     Res.noticesLogo,
                   ),
                 ),
-              ),
-              PositionedDirectional(
-                top: 0,
-                end: 0,
-                child: Container(
-                  padding: const EdgeInsets.all(5),
-                  decoration: BoxDecoration(
-                    color: context.colors.red,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Text(
-                    '2',
-                    style: AppTextStyle.s9_w400(color: context.colors.white),
+                PositionedDirectional(
+                  top: 0,
+                  end: 0,
+                  child: Container(
+                    padding: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      color: context.colors.red,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Text(
+                      '2',
+                      style: AppTextStyle.s9_w400(color: context.colors.white),
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],

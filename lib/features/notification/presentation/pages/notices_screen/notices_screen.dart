@@ -9,6 +9,12 @@ class NoticesScreen extends StatefulWidget {
 }
 
 class _NoticesScreenState extends State<NoticesScreen> {
+  final NoticesScreenController controller = NoticesScreenController();
+  @override
+  void initState() {
+    controller.requestData();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     bool isNotEmpty = true;
@@ -17,17 +23,28 @@ class _NoticesScreenState extends State<NoticesScreen> {
       body: Column(
         children: [
           const NoticesAppBarWidget(),
-          Visibility(
-            visible: isNotEmpty,
-            replacement: const NoticesEmptyItemWidget(),
-            child: Flexible(
-              child: ListView(
-                children: [
-                  Gaps.vGap12,
-                  const NoticesListItemWidget(),
-                ],
-              ),
-            ),
+          RequesterConsumer(
+            requester: controller.requester,
+            successBuilder: (context, data) {
+              return Visibility(
+                visible: isNotEmpty,
+                replacement: const NoticesEmptyItemWidget(),
+                child: Flexible(
+                  child: ListView(
+                    children: [
+                      Gaps.vGap12,
+                      NoticesListItemWidget(list: data,),
+                    ],
+                  ),
+                ),
+              );
+            },
+            loadingBuilder: (context) {
+              return Container(color: Colors.red);
+            },
+            failureBuilder: (context, error, callback) {
+              return Container(color: Colors.red);
+            },
           ),
         ],
       ),

@@ -32,6 +32,7 @@ abstract class AppColors {
   Color get primary;
 
   Color get secondary;
+  Color get secondaryText;
 
   Color get textColor;
 

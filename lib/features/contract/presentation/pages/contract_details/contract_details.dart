@@ -48,7 +48,7 @@ class _ContractDetailsState extends State<ContractDetails> {
                 child: TabBarView(
                   children: [
                     SummaryViewWidget(controller: controller),
-                    Container(color: Colors.white,),
+                    Payment(model: widget.model, controller: controller),
                   ],
                 ),
               ),

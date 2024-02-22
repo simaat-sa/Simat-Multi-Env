@@ -18,7 +18,7 @@ class ContractModel with _$ContractModel {
   factory ContractModel({
     @JsonKey(name: 'prop_id',defaultValue: "")required String propId,
     @JsonKey(name: 'tts_code') String? code,
-    @JsonKey(name: 'are_desc_fo',defaultValue: "")required String unitName,
+    @JsonKey(name: '',defaultValue: "")required String unitName,
     @JsonKey(name: 'cal_type')required DateTypes dateType,
     @JsonKey(name: 'tts_end_date_hj',defaultValue: "")required String dataTimeHj,
     @JsonKey(name: 'tts_end_date_dgr',defaultValue: "")required String dataTimeStamp,

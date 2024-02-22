@@ -1,7 +1,8 @@
 part of 'notices_screen_widgets_imports.dart';
 
 class NoticesItemWidget extends StatelessWidget {
-  const NoticesItemWidget({super.key});
+  final NoticesModel model;
+  const NoticesItemWidget({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -28,19 +29,19 @@ class NoticesItemWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  Translate.s.new_maintenance_request,
+                  model.alertSubject,
                   style: AppTextStyle.s16_w400(color: context.colors.primary),
                 ),
                 Gaps.vGap5,
                 Text(
-                  Translate.s.message_containing_code_for_your_order(02434),
+                  model.alertBody,
                   style: AppTextStyle.s14_w400(color: context.colors.darkTextColor).copyWith(height: 1.5),
                 ),
               ],
             ),
           ),
           Text(
-            'أمس 11:33',
+            model.date,
             style: AppTextStyle.s16_w400(color: context.colors.primaryText),
           ),
         ],

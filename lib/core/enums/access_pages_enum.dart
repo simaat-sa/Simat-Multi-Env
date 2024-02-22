@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/constants/enum_extension/enum_factory_extension.dart';
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_screen/contract_screen_imports.dart';
-import 'package:flutter_tdd/features/maintenance/presentation/pages/contract_screen/maintenance_screen_imports.dart';
+import 'package:flutter_tdd/features/maintenance/presentation/pages/maintenance_screen/maintenance_screen_imports.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 @JsonEnum(valueField: 'value')

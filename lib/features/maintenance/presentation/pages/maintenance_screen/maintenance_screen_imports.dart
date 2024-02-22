@@ -9,6 +9,7 @@ import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/widgets/bottom_sheet_views/app_bottom_sheets.dart';
 import 'package:flutter_tdd/core/widgets/empty_list_item_widget.dart';
+import 'package:flutter_tdd/features/contract/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter_tdd/features/contract/presentation/widgets/page_header_title_widget.dart';
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart';
 import 'package:flutter_tdd/features/maintenance/domain/requesters/maintenance_requester.dart';
@@ -17,7 +18,6 @@ import 'package:flutter_tdd/features/maintenance/presentation/widgets/contract_d
 import 'package:flutter_tdd/features/base/presentation/widgets/filter_input_widget.dart';
 
 
-import '../../widgets/custom_app_bar.dart';
 import '../../widgets/failure_item_widget.dart';
 import '../../widgets/unit_loading_list_widget.dart';
 import 'widgets/maintenance_widgets_imports.dart';

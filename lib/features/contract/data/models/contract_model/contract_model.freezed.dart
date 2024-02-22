@@ -24,7 +24,7 @@ mixin _$ContractModel {
   String get propId => throw _privateConstructorUsedError;
   @JsonKey(name: 'tts_code')
   String? get code => throw _privateConstructorUsedError;
-  @JsonKey(name: 'are_desc_fo', defaultValue: "")
+  @JsonKey(name: '', defaultValue: "")
   String get unitName => throw _privateConstructorUsedError;
   @JsonKey(name: 'cal_type')
   DateTypes get dateType => throw _privateConstructorUsedError;
@@ -64,7 +64,7 @@ abstract class $ContractModelCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'prop_id', defaultValue: "") String propId,
       @JsonKey(name: 'tts_code') String? code,
-      @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
+      @JsonKey(name: '', defaultValue: "") String unitName,
       @JsonKey(name: 'cal_type') DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "") String dataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") String dataTimeStamp,
@@ -178,7 +178,7 @@ abstract class _$$ContractModelImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'prop_id', defaultValue: "") String propId,
       @JsonKey(name: 'tts_code') String? code,
-      @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
+      @JsonKey(name: '', defaultValue: "") String unitName,
       @JsonKey(name: 'cal_type') DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "") String dataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") String dataTimeStamp,
@@ -286,7 +286,7 @@ class _$ContractModelImpl extends _ContractModel {
   _$ContractModelImpl(
       {@JsonKey(name: 'prop_id', defaultValue: "") required this.propId,
       @JsonKey(name: 'tts_code') this.code,
-      @JsonKey(name: 'are_desc_fo', defaultValue: "") required this.unitName,
+      @JsonKey(name: '', defaultValue: "") required this.unitName,
       @JsonKey(name: 'cal_type') required this.dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
       required this.dataTimeHj,
@@ -312,7 +312,7 @@ class _$ContractModelImpl extends _ContractModel {
   @JsonKey(name: 'tts_code')
   final String? code;
   @override
-  @JsonKey(name: 'are_desc_fo', defaultValue: "")
+  @JsonKey(name: '', defaultValue: "")
   final String unitName;
   @override
   @JsonKey(name: 'cal_type')
@@ -417,8 +417,7 @@ abstract class _ContractModel extends ContractModel {
   factory _ContractModel(
       {@JsonKey(name: 'prop_id', defaultValue: "") required final String propId,
       @JsonKey(name: 'tts_code') final String? code,
-      @JsonKey(name: 'are_desc_fo', defaultValue: "")
-      required final String unitName,
+      @JsonKey(name: '', defaultValue: "") required final String unitName,
       @JsonKey(name: 'cal_type') required final DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
       required final String dataTimeHj,
@@ -448,7 +447,7 @@ abstract class _ContractModel extends ContractModel {
   @JsonKey(name: 'tts_code')
   String? get code;
   @override
-  @JsonKey(name: 'are_desc_fo', defaultValue: "")
+  @JsonKey(name: '', defaultValue: "")
   String get unitName;
   @override
   @JsonKey(name: 'cal_type')

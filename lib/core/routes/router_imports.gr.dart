@@ -42,10 +42,10 @@ import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintena
     as _i2;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance_status/add_maintenance_status_imports.dart'
     as _i3;
-import 'package:flutter_tdd/features/maintenance/presentation/pages/contract_screen/maintenance_screen_imports.dart'
-    as _i21;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/filter_contract/filter_maintenance_imports.dart'
     as _i6;
+import 'package:flutter_tdd/features/maintenance/presentation/pages/maintenance_screen/maintenance_screen_imports.dart'
+    as _i21;
 import 'package:flutter_tdd/features/notification/presentation/pages/notices_screen/notices_screen_imports.dart'
     as _i10;
 

@@ -15,15 +15,15 @@ import 'package:flutter_tdd/core/helpers/global_context.dart' as _i20;
 import 'package:flutter_tdd/core/helpers/global_notification.dart' as _i21;
 import 'package:flutter_tdd/core/helpers/loading_helper.dart' as _i27;
 import 'package:flutter_tdd/core/helpers/location_service.dart' as _i28;
-import 'package:flutter_tdd/core/helpers/psermission_services.dart' as _i35;
-import 'package:flutter_tdd/core/helpers/share_services.dart' as _i38;
-import 'package:flutter_tdd/core/helpers/shared_pref_service.dart' as _i39;
-import 'package:flutter_tdd/core/helpers/utilities.dart' as _i40;
+import 'package:flutter_tdd/core/helpers/psermission_services.dart' as _i39;
+import 'package:flutter_tdd/core/helpers/share_services.dart' as _i42;
+import 'package:flutter_tdd/core/helpers/shared_pref_service.dart' as _i43;
+import 'package:flutter_tdd/core/helpers/utilities.dart' as _i44;
 import 'package:flutter_tdd/core/http/dio_helper/actions/delete.dart' as _i14;
 import 'package:flutter_tdd/core/http/dio_helper/actions/get.dart' as _i19;
-import 'package:flutter_tdd/core/http/dio_helper/actions/patch.dart' as _i34;
-import 'package:flutter_tdd/core/http/dio_helper/actions/post.dart' as _i36;
-import 'package:flutter_tdd/core/http/dio_helper/actions/put.dart' as _i37;
+import 'package:flutter_tdd/core/http/dio_helper/actions/patch.dart' as _i38;
+import 'package:flutter_tdd/core/http/dio_helper/actions/post.dart' as _i40;
+import 'package:flutter_tdd/core/http/dio_helper/actions/put.dart' as _i41;
 import 'package:flutter_tdd/core/http/dio_helper/utils/dio_header.dart' as _i15;
 import 'package:flutter_tdd/core/http/dio_helper/utils/dio_options.dart'
     as _i16;
@@ -67,6 +67,14 @@ import 'package:flutter_tdd/features/maintenance/data/repositories/maintenance_r
     as _i32;
 import 'package:flutter_tdd/features/maintenance/domain/repositories/maintenance_repository.dart'
     as _i31;
+import 'package:flutter_tdd/features/notification/data/data_source/notices_data_source.dart'
+    as _i34;
+import 'package:flutter_tdd/features/notification/data/data_source/notices_data_source_impl.dart'
+    as _i35;
+import 'package:flutter_tdd/features/notification/data/repositories/notices_repository_impl.dart'
+    as _i37;
+import 'package:flutter_tdd/features/notification/domain/repositories/notices_repository.dart'
+    as _i36;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -109,13 +117,15 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i30.MaintenanceDataSourceImpl());
     gh.factory<_i31.MaintenanceRepository>(() => _i32.ContractRepositoryImpl());
     gh.lazySingleton<_i33.NetworkInfoImpl>(() => _i33.NetworkInfoImpl());
-    gh.lazySingleton<_i34.Patch>(() => _i34.Patch());
-    gh.factory<_i35.PermissionServices>(() => _i35.PermissionServices());
-    gh.lazySingleton<_i36.Post>(() => _i36.Post());
-    gh.lazySingleton<_i37.Put>(() => _i37.Put());
-    gh.factory<_i38.ShareServices>(() => _i38.ShareServices());
-    gh.lazySingleton<_i39.SharedPrefService>(() => _i39.SharedPrefService());
-    gh.lazySingleton<_i40.Utilities>(() => _i40.Utilities());
+    gh.factory<_i34.NoticesDataSource>(() => _i35.NoticesDataSourceImpl());
+    gh.factory<_i36.NoticesRepository>(() => _i37.NoticesRepositoryImpl());
+    gh.lazySingleton<_i38.Patch>(() => _i38.Patch());
+    gh.factory<_i39.PermissionServices>(() => _i39.PermissionServices());
+    gh.lazySingleton<_i40.Post>(() => _i40.Post());
+    gh.lazySingleton<_i41.Put>(() => _i41.Put());
+    gh.factory<_i42.ShareServices>(() => _i42.ShareServices());
+    gh.lazySingleton<_i43.SharedPrefService>(() => _i43.SharedPrefService());
+    gh.lazySingleton<_i44.Utilities>(() => _i44.Utilities());
     return this;
   }
 }

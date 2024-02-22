@@ -7,7 +7,7 @@ import 'package:flutter_tdd/core/enums/contract_status.dart';
 import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
-import 'package:flutter_tdd/features/maintenance/presentation/pages/contract_screen/maintenance_screen_imports.dart';
+import 'package:flutter_tdd/features/maintenance/presentation/pages/maintenance_screen/maintenance_screen_imports.dart';
 import 'package:flutter_tdd/res.dart';
 
 part 'filter_maintenance_title_header_widget.dart';

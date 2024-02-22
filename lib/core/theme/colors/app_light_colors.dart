@@ -78,4 +78,7 @@ class AppLightColors extends AppColors {
 
   @override
   Color get noticesTextColor => const Color(0xff6b6b6c) ;
+
+  @override
+  Color get secondaryText => const Color(0xff186669) ;
 }

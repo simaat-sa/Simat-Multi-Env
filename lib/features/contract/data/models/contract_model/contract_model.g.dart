@@ -10,7 +10,7 @@ _$ContractModelImpl _$$ContractModelImplFromJson(Map<String, dynamic> json) =>
     _$ContractModelImpl(
       propId: json['prop_id'] as String? ?? '',
       code: json['tts_code'] as String?,
-      unitName: json['are_desc_fo'] as String? ?? '',
+      unitName: json[''] as String? ?? '',
       dateType: $enumDecode(_$DateTypesEnumMap, json['cal_type']),
       dataTimeHj: json['tts_end_date_hj'] as String? ?? '',
       dataTimeStamp: json['tts_end_date_dgr'] as String? ?? '',
@@ -28,7 +28,7 @@ Map<String, dynamic> _$$ContractModelImplToJson(_$ContractModelImpl instance) =>
     <String, dynamic>{
       'prop_id': instance.propId,
       'tts_code': instance.code,
-      'are_desc_fo': instance.unitName,
+      '': instance.unitName,
       'cal_type': _$DateTypesEnumMap[instance.dateType]!,
       'tts_end_date_hj': instance.dataTimeHj,
       'tts_end_date_dgr': instance.dataTimeStamp,

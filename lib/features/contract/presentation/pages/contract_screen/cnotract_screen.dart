@@ -11,11 +11,6 @@ class _ContractScreenState extends State<ContractScreen> {
   final ContractScreenController controller = ContractScreenController();
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.colors.background,
