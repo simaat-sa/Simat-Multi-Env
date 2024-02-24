@@ -20,33 +20,33 @@ class _NoticesScreenState extends State<NoticesScreen> {
     bool isNotEmpty = true;
     return Scaffold(
       backgroundColor: context.colors.background,
-      body: Column(
-        children: [
-          const NoticesAppBarWidget(),
-          RequesterConsumer(
-            requester: controller.requester,
-            successBuilder: (context, data) {
-              return Visibility(
-                visible: isNotEmpty,
-                replacement: const NoticesEmptyItemWidget(),
-                child: Flexible(
-                  child: ListView(
-                    children: [
-                      Gaps.vGap12,
-                      NoticesListItemWidget(list: data,),
-                    ],
-                  ),
-                ),
-              );
-            },
-            loadingBuilder: (context) {
-              return Container(color: Colors.red);
-            },
-            failureBuilder: (context, error, callback) {
-              return Container(color: Colors.red);
-            },
-          ),
-        ],
+      appBar: const DefaultAppBar(
+        centerTitle: false,
+        title: 'الإشعارات',
+        showBack: true,
+      ),
+      body: RequesterConsumer(
+        requester: controller.requester,
+        successBuilder: (context, data) {
+          return Visibility(
+            visible: isNotEmpty,
+            replacement: const NoticesEmptyItemWidget(),
+            child: Flexible(
+              child: ListView(
+                children: [
+                  Gaps.vGap12,
+                  NoticesListItemWidget(list: data,),
+                ],
+              ),
+            ),
+          );
+        },
+        loadingBuilder: (context) {
+          return Container(color: Colors.red);
+        },
+        failureBuilder: (context, error, callback) {
+          return Container(color: Colors.red);
+        },
       ),
     );
   }

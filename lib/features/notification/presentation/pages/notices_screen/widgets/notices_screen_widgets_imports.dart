@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
@@ -12,4 +11,3 @@ part 'notices_title_item_widget.dart';
 part 'notices_item_widget.dart';
 part 'notices_list_item_widget.dart';
 part 'notices_empty_item_widget.dart';
-part 'notices_app_bar_widget.dart';

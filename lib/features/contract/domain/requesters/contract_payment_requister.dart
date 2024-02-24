@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/requester/requester.dart';
@@ -33,4 +32,11 @@ class ContractPaymentRequester extends Requester<List<PaymentModel>> {
       },
     );
   }
+
+
+  void onSelectedItem(PaymentModel item) {
+    item.selected = !(item.selected ?? false);
+    successState(data ?? []);
+  }
+
 }

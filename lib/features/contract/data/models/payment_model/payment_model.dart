@@ -88,4 +88,8 @@ class PaymentModel with _$PaymentModel {
   }) = _PaymentModel;
 
   factory PaymentModel.fromJson(Map<String, dynamic> json) => _$PaymentModelFromJson(json);
+
+
+  String get duePrice => amtDue;
+
 }

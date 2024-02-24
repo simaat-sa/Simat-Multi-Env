@@ -59,7 +59,7 @@ class PaymentItemWidget extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          model.amtBalance,
+                          model.duePrice,
                           style: AppTextStyle.s18_w500(color: context.colors.green3),
                         ),
                         Text(

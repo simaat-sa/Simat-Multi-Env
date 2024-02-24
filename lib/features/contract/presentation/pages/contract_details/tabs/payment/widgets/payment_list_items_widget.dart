@@ -13,7 +13,7 @@ class PaymentListItemsWidget extends StatelessWidget {
         final item = list[index];
         return PaymentItemWidget(
           model: item,
-          onTap: () => controller.onSelectedItem(item),
+          onTap: () => controller.requester.onSelectedItem(item),
         );
       }),
     );

@@ -43,21 +43,21 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     Res.noticesLogo,
                   ),
                 ),
-                PositionedDirectional(
-                  top: 0,
-                  end: 0,
-                  child: Container(
-                    padding: const EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                      color: context.colors.red,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Text(
-                      '2',
-                      style: AppTextStyle.s9_w400(color: context.colors.white),
-                    ),
-                  ),
-                ),
+                // PositionedDirectional(
+                //   top: 0,
+                //   end: 0,
+                //   child: Container(
+                //     padding: const EdgeInsets.all(5),
+                //     decoration: BoxDecoration(
+                //       color: context.colors.red,
+                //       shape: BoxShape.circle,
+                //     ),
+                //     child: Text(
+                //       '2',
+                //       style: AppTextStyle.s9_w400(color: context.colors.white),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),
