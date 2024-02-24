@@ -11,6 +11,9 @@ class NoticesRequester extends Requester<List<NoticesModel>>{
   }
   @override
   Future<void> request({bool fromRemote = true})async {
+    if (fromRemote) {
+      loadingState();
+    }
     var result = await getIt.get<NoticesRepository>().getNotices(fromRemote);
     result.when(
       isSuccess: (data) {
