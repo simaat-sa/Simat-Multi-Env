@@ -10,10 +10,8 @@ class SplashController {
       GlobalState.instance.set("token", user.userToken);
       context.read<UserCubit>().onUpdateUserData(user);
       AutoRouter.of(context).push(Home());
-    } else{
-      AutoRouter.of(context).push( const Login());
+    } else {
+      AutoRouter.of(context).push(const Login());
     }
-
   }
-
 }

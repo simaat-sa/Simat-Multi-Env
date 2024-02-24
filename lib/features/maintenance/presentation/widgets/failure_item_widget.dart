@@ -15,9 +15,15 @@ class FailureItemWidget extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.refresh,color: context.colors.greyWhite,),
+            Icon(
+              Icons.refresh,
+              color: context.colors.greyWhite,
+            ),
             Gaps.hGap10,
-            Text(Translate.s.retry,style: AppTextStyle.s14_w400(color: context.colors.greyWhite),),
+            Text(
+              Translate.s.retry,
+              style: AppTextStyle.s14_w400(color: context.colors.greyWhite),
+            ),
           ],
         ),
       ],

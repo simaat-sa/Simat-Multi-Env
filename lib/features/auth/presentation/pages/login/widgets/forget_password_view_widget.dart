@@ -10,8 +10,7 @@ class ForgetPasswordViewWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         InkWell(
-          onTap: () {
-          },
+          onTap: () {},
           // onTap: () => AutoRouter.of(context).push(const ForgetPassword()),
           child: Text(
             "Forget password?",

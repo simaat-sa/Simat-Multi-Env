@@ -6,6 +6,5 @@ import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 
 import 'package:flutter_tdd/core/widgets/default_app_bar.dart';
 
-
 part 'terms.dart';
 part 'terms_data.dart';

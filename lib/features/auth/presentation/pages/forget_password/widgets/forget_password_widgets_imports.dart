@@ -15,6 +15,5 @@ import 'package:flutter_tdd/core/helpers/validator.dart';
 
 import '../../../../../../core/theme/text/app_text_style.dart';
 
-
 part 'forget_password_form_widget.dart';
 part 'forget_password_button_widget.dart';

@@ -1,5 +1,4 @@
-part of'filter_maintenance_widgets_imports.dart';
-
+part of 'filter_maintenance_widgets_imports.dart';
 
 class FilterMaintenanceTitleHeaderWidget extends StatelessWidget {
   const FilterMaintenanceTitleHeaderWidget({super.key});

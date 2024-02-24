@@ -11,7 +11,6 @@ import '../utils/handle_errors.dart';
 
 @lazySingleton
 class Get extends DioHelper {
-
   @override
   Future<MyResult<Response>> call(RequestBodyModel params) async {
     try {

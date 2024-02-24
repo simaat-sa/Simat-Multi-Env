@@ -1,7 +1,6 @@
 import 'package:flutter_tdd/core/localization/translate.dart';
 
 extension Validator on String {
-
   String? noValidate() {
     return null;
   }
@@ -15,19 +14,17 @@ extension Validator on String {
 
   String? validateName({String? message}) {
     if (trim().isEmpty) {
-      return message ??  Translate.s.fillField;
-    }else if(length<8 || length>30){
-      return  message ??  Translate.s.nameValidation;
+      return message ?? Translate.s.fillField;
+    } else if (length < 8 || length > 30) {
+      return message ?? Translate.s.nameValidation;
     }
     return null;
   }
 
-
   String? validatePassword({String? message}) {
     if (trim().isEmpty) {
-      return message ??  Translate.s.fillField;
-    } else if (!RegExp(
-        r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$')
+      return message ?? Translate.s.fillField;
+    } else if (!RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$')
         .hasMatch(this)) {
       return message ?? Translate.s.passValidation;
     }
@@ -36,9 +33,8 @@ extension Validator on String {
 
   String? validateEmail({String? message}) {
     if (trim().isEmpty) {
-      return message ??  Translate.s.fillField;
-    } else if (!RegExp(
-        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+      return message ?? Translate.s.fillField;
+    } else if (!RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
         .hasMatch(this)) {
       return message ?? Translate.s.mailValidation;
     }
@@ -47,8 +43,7 @@ extension Validator on String {
 
   String? validateEmailORNull({String? message}) {
     if (trim().isNotEmpty) {
-      if (!RegExp(
-          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+      if (!RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
           .hasMatch(this)) {
         return message ?? Translate.s.mailValidation;
       }
@@ -58,12 +53,12 @@ extension Validator on String {
 
   String? validatePhone({String? message}) {
     if (trim().isEmpty) {
-      return message ??  Translate.s.fillField;
+      return message ?? Translate.s.fillField;
     } else if (!RegExp(
-        r'(^\+[0-9]{2}|^\+[0-9]{2}\(0\)|^\(\+[0-9]{2}\)\(0\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\-\s]{10}$)')
-        .hasMatch(this) ||
+                r'(^\+[0-9]{2}|^\+[0-9]{2}\(0\)|^\(\+[0-9]{2}\)\(0\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\-\s]{10}$)')
+            .hasMatch(this) ||
         length < 10) {
-      return message ??Translate.s.phoneValidation;
+      return message ?? Translate.s.phoneValidation;
     }
     return null;
   }
@@ -72,8 +67,8 @@ extension Validator on String {
     if (trim().isEmpty) {
       return null;
     } else if (!RegExp(
-        r'(^\+[0-9]{2}|^\+[0-9]{2}\(0\)|^\(\+[0-9]{2}\)\(0\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\-\s]{10}$)')
-        .hasMatch(this) ||
+                r'(^\+[0-9]{2}|^\+[0-9]{2}\(0\)|^\(\+[0-9]{2}\)\(0\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\-\s]{10}$)')
+            .hasMatch(this) ||
         length < 10) {
       return message ?? Translate.s.phoneValidation;
     }
@@ -82,7 +77,7 @@ extension Validator on String {
 
   String? validatePasswordConfirm({required String pass, String? message}) {
     if (trim().isEmpty) {
-      return message ??  Translate.s.fillField;
+      return message ?? Translate.s.fillField;
     } else if (this != pass) {
       return message ?? Translate.s.confirmValidation;
     }
@@ -90,9 +85,9 @@ extension Validator on String {
   }
 }
 
-String? validateDropDown( dynamic model,{String? message}) {
+String? validateDropDown(dynamic model, {String? message}) {
   if (model == null) {
-    return message ??  Translate.s.fillField;
+    return message ?? Translate.s.fillField;
   }
   return null;
 }

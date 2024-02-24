@@ -4,12 +4,12 @@ import 'package:flutter_tdd/features/contract/data/models/payment_model/payment_
 import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart';
 import 'package:flutter_tdd/features/contract/domain/entities/payment_entity.dart';
 
-abstract class ContractDataSource{
-  Future<MyResult<List<ContractModel>>> getTenant (bool params);
+abstract class ContractDataSource {
+  Future<MyResult<List<ContractModel>>> getTenant(bool params);
 
-  Future<MyResult<List<PropModel>>> getProps (bool params);
+  Future<MyResult<List<PropModel>>> getProps(bool params);
 
-  Future<MyResult<List<PropModel>>> getPropsUnites ();
+  Future<MyResult<List<PropModel>>> getPropsUnites();
 
   Future<MyResult<ContractModel>> renewContract(String contractId);
 

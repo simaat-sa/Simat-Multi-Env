@@ -1,5 +1,3 @@
-
-
 import 'app_env_type.dart';
 import 'i_environment_config_reader.dart';
 

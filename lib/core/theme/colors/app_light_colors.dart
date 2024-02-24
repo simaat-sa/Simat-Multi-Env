@@ -1,11 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/helpers/color_helper.dart';
 import 'package:flutter_tdd/core/theme/colors/app_colors.dart';
 
 class AppLightColors extends AppColors {
-
-
   @override
   Color get primary => ColorHelper.hexToColor(const String.fromEnvironment("PRIMARY_COLOR"));
 
@@ -14,10 +11,10 @@ class AppLightColors extends AppColors {
   @override
   Color get textColor => ColorHelper.hexToColor(const String.fromEnvironment("TEXT_COLOR"));
 
- @override
+  @override
   Color get filedColor => const Color(0xffD7EBEB);
 
-@override
+  @override
   Color get inputBorder => const Color(0xffE8E8E8);
 
   @override
@@ -26,8 +23,8 @@ class AppLightColors extends AppColors {
   @override
   Color get background => const Color(0xffF2F6F8);
 
- @override
-  Color get backgroundWhite => const  Color(0xffFFFFFC);
+  @override
+  Color get backgroundWhite => const Color(0xffFFFFFC);
 
   @override
   Color get black => Colors.black;
@@ -77,8 +74,8 @@ class AppLightColors extends AppColors {
   Color get errorColor => const Color(0xffFF6969);
 
   @override
-  Color get noticesTextColor => const Color(0xff6b6b6c) ;
+  Color get noticesTextColor => const Color(0xff6b6b6c);
 
   @override
-  Color get secondaryText => const Color(0xff186669) ;
+  Color get secondaryText => const Color(0xff186669);
 }

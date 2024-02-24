@@ -10,17 +10,17 @@ import 'package:injectable/injectable.dart';
 @lazySingleton
 class GlobalNotification {
   static final StreamController<Map<String, dynamic>> _onMessageStreamController =
-  StreamController.broadcast();
+      StreamController.broadcast();
 
   late FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin;
 
   static FirebaseMessaging messaging = FirebaseMessaging.instance;
 
- Future<void> setupNotification()async{
-    _flutterLocalNotificationsPlugin =FlutterLocalNotificationsPlugin();
+  Future<void> setupNotification() async {
+    _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
     const android = AndroidInitializationSettings("@mipmap/launcher_icon");
-    const ios =DarwinInitializationSettings();
-    const initSettings =InitializationSettings(android: android, iOS: ios);
+    const ios = DarwinInitializationSettings();
+    const initSettings = InitializationSettings(android: android, iOS: ios);
     _flutterLocalNotificationsPlugin.initialize(
       initSettings,
       // onDidReceiveBackgroundNotificationResponse:(details)=> flutterNotificationClick( details.payload),
@@ -28,7 +28,7 @@ class GlobalNotification {
     );
     await Firebase.initializeApp();
     final settings = await messaging.requestPermission(provisional: true);
-    if(settings.authorizationStatus==AuthorizationStatus.authorized){
+    if (settings.authorizationStatus == AuthorizationStatus.authorized) {
       messaging.getToken().then((token) {
         log("$token");
       });
@@ -38,7 +38,7 @@ class GlobalNotification {
         log("_____________________notification:${message.notification?.title}");
         _showLocalNotification(message);
         _onMessageStreamController.add(message.data);
-        if (int.parse(message.data["type"]??"0") == -1) {
+        if (int.parse(message.data["type"] ?? "0") == -1) {
           StorageHelper.instance.clearSavedData();
           // AutoRouter.of(context).push(const LoginRoute());
         }
@@ -49,7 +49,6 @@ class GlobalNotification {
       });
       FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     }
-
   }
 
   static Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
@@ -73,17 +72,12 @@ class GlobalNotification {
     );
     const ios = DarwinNotificationDetails();
     final platform = NotificationDetails(android: android, iOS: ios);
-    _flutterLocalNotificationsPlugin.show(
-        DateTime.now().microsecond, "${message.notification?.title}", "${message.notification?.body}", platform,
+    _flutterLocalNotificationsPlugin.show(DateTime.now().microsecond,
+        "${message.notification?.title}", "${message.notification?.body}", platform,
         payload: json.encode(message.data));
   }
 
-
-
   static Future flutterNotificationClick(String? details) async {
-
     // final _data = json.decode("$payload");
-
   }
-
 }

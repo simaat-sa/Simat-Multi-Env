@@ -11,24 +11,21 @@ class LoginFingerPrintWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ObsValueConsumer(
-      observable: controller.supportBiometricObs,
-      builder: (context, supportBiometric) {
-        if (supportBiometric) {
-          return Center(
-            child: GestureDetector(
-              onTap: () => controller.loginWithBiometric(context),
-              child: SvgPicture.asset(
-                Res.fingerprintIcon,
-                width: 65,
-                height: 65,
+        observable: controller.supportBiometricObs,
+        builder: (context, supportBiometric) {
+          if (supportBiometric) {
+            return Center(
+              child: GestureDetector(
+                onTap: () => controller.loginWithBiometric(context),
+                child: SvgPicture.asset(
+                  Res.fingerprintIcon,
+                  width: 65,
+                  height: 65,
+                ),
               ),
-            ),
-          );
-        }
-        return Gaps.empty;
-      }
-    );
+            );
+          }
+          return Gaps.empty;
+        });
   }
 }
-
-

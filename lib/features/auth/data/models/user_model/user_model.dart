@@ -8,7 +8,7 @@ part 'user_model.g.dart';
 
 @freezed
 @immutable
-class UserModel  with _$UserModel {
+class UserModel with _$UserModel {
   const UserModel._();
 
   @JsonSerializable(explicitToJson: true)
@@ -30,10 +30,7 @@ class UserModel  with _$UserModel {
     @JsonKey(name: "app_page_access", defaultValue: []) required List<UserAccessModel> userAccess,
   }) = _UserModel;
 
-  factory UserModel.fromJson(Map<String, dynamic> json) =>
-      _$UserModelFromJson(json);
-
+  factory UserModel.fromJson(Map<String, dynamic> json) => _$UserModelFromJson(json);
 
   String get userImage => AppConfig.instance.baseUrl + userAvatar;
-
 }

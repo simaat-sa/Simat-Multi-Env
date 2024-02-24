@@ -17,7 +17,7 @@ class AuthRepositoryImpl extends AuthRepository with ModelToDomainResult {
   }
 
   @override
-  Future<MyResult<UserModel>> loginWithQr(QrLoginParams param)async {
+  Future<MyResult<UserModel>> loginWithQr(QrLoginParams param) async {
     return await getIt.get<AuthDataSource>().loginWithQr(param);
   }
 }

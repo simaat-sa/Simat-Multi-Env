@@ -9,13 +9,9 @@ class AddMaintenanceFormWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
         UnitFormOption(controller: controller),
-
         Gaps.vGap16,
-
         MaintenanceServiceFormOption(controller: controller),
-
         GenericTextField(
           controller: controller.phone,
           fillColor: context.colors.white,

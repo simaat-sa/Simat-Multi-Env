@@ -76,7 +76,7 @@ class PaymentModel with _$PaymentModel {
     @JsonKey(name: "update_by", defaultValue: "") required String updateBy,
     @JsonKey(name: "dt_created", defaultValue: "") required String dtCreated,
     @JsonKey(name: "entry_type", defaultValue: "") required String entryType,
-    @JsonKey(name: "tts_validity")required TenantVisibility status,
+    @JsonKey(name: "tts_validity") required TenantVisibility status,
     @JsonKey(name: "cal_type", defaultValue: "") required String calType,
     @JsonKey(name: "day_cost", defaultValue: "") required String dayCost,
     @JsonKey(name: "due_aging", defaultValue: "") required String dueAging,
@@ -84,12 +84,10 @@ class PaymentModel with _$PaymentModel {
     @JsonKey(name: "ign_due", defaultValue: "") required String ignDue,
     @JsonKey(name: "evac_id", defaultValue: "") required String evacId,
     @JsonKey(name: "inc_vat", defaultValue: "") required String incVat,
-     bool? selected,
+    bool? selected,
   }) = _PaymentModel;
 
   factory PaymentModel.fromJson(Map<String, dynamic> json) => _$PaymentModelFromJson(json);
 
-
   String get duePrice => amtDue;
-
 }

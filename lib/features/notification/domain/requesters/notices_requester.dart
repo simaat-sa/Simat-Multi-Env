@@ -3,14 +3,13 @@ import 'package:flutter_tdd/core/requester/requester.dart';
 import 'package:flutter_tdd/features/notification/data/models/notices_model/notices_model.dart';
 import 'package:flutter_tdd/features/notification/domain/repositories/notices_repository.dart';
 
-class NoticesRequester extends Requester<List<NoticesModel>>{
-
-
+class NoticesRequester extends Requester<List<NoticesModel>> {
   void setLoadingState() {
     loadingState();
   }
+
   @override
-  Future<void> request({bool fromRemote = true})async {
+  Future<void> request({bool fromRemote = true}) async {
     if (fromRemote) {
       loadingState();
     }
@@ -26,5 +25,4 @@ class NoticesRequester extends Requester<List<NoticesModel>>{
       },
     );
   }
-
 }

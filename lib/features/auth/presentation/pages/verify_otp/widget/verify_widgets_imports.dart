@@ -8,9 +8,6 @@ import 'package:flutter_tdd/core/widgets/GenericTextField.dart';
 import 'package:flutter_tdd/features/auth/presentation/pages/verify_otp/verify_otp_imports.dart';
 import 'package:flutter_tdd/res.dart';
 
-
-
-
 part 'verify_header_widget.dart';
 
 part 'verify_form_widget.dart';

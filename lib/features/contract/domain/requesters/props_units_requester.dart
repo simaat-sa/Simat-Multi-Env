@@ -4,7 +4,6 @@ import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model
 import 'package:flutter_tdd/features/contract/domain/repositories/contract_repository.dart';
 
 class PropsRequester extends Requester<List<PropModel>> {
-
   void setLoadingState() {
     loadingState();
   }

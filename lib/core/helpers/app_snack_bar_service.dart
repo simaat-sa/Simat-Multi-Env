@@ -12,6 +12,7 @@ import 'package:flutter_tdd/res.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 enum ToastType { success, error, info }
+
 abstract class AppSnackBar {
   const AppSnackBar._();
 
@@ -63,12 +64,8 @@ abstract class AppSnackBar {
     });
   }
 
-
   static void showSimpleToast(
-      {required String msg,
-        Color? color,
-        Color? textColor,
-        ToastType type = ToastType.error}) {
+      {required String msg, Color? color, Color? textColor, ToastType type = ToastType.error}) {
     Fluttertoast.showToast(
         msg: msg,
         toastLength: Toast.LENGTH_SHORT,
@@ -91,7 +88,8 @@ class _CustomSnackBar extends SnackBar {
     required this.icon,
     required this.message,
     this.callback,
-    this.callbackMessage, Color? iconColor,
+    this.callbackMessage,
+    Color? iconColor,
   }) : super(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             backgroundColor: Colors.transparent,
@@ -120,7 +118,8 @@ class _SnackBarWidget extends StatelessWidget {
     required this.message,
     required this.color,
     this.callback,
-    this.callbackMessage, required this.iconColor,
+    this.callbackMessage,
+    required this.iconColor,
   });
 
   @override
@@ -150,8 +149,7 @@ class _SnackBarWidget extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(callbackMessage ?? Translate.s.retry,
-                      style: AppTextStyle.s14_w400(color: AppColors.fixedColors.white)
-                  ),
+                      style: AppTextStyle.s14_w400(color: AppColors.fixedColors.white)),
                   SizedBox(
                     width: callbackMessage!.length * 10,
                     child: Divider(

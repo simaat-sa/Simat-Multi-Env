@@ -12,8 +12,10 @@ class LocationService {
   Future<String> getAddress(LatLng latLng) async {
     GeoCode geoCode = GeoCode();
     try {
-      var address = await geoCode.reverseGeocoding(latitude: latLng.latitude, longitude: latLng.longitude);
-      var data = "${address.countryName??""}  ${address.city??""}  ${address.region??""}  ${address.streetAddress??""}";
+      var address =
+          await geoCode.reverseGeocoding(latitude: latLng.latitude, longitude: latLng.longitude);
+      var data =
+          "${address.countryName ?? ""}  ${address.city ?? ""}  ${address.region ?? ""}  ${address.streetAddress ?? ""}";
       return data;
     } catch (e) {
       return "";

@@ -164,7 +164,6 @@ class _BaseFormOptionState<T> extends State<BaseFormOption<T>> {
                 _optionController.tempValue.isNullOrEmpty &&
                 data.isNetherNullNorEmpty) {
               _setDefaultIfItemsIsOne(data);
-
             } else {
               _reCalculateSelectedItems();
             }
@@ -224,12 +223,11 @@ class _BaseFormOptionState<T> extends State<BaseFormOption<T>> {
   }
 
   void _setDefaultIfItemsIsOne(List<dynamic> data) {
-       if (data.length == 1) {
+    if (data.length == 1) {
       _optionController.tempValue = [data.first];
       _optionController.selectedValue = _optionController.tempValue;
       widget.onSaveValue(_optionController.selectedValue, widget.isMultiple);
     }
-
   }
 
   ListView _itemsBuilder(List<T> items) {

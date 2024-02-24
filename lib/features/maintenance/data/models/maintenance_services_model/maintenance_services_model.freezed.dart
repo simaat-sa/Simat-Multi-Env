@@ -14,8 +14,7 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-MaintenanceServicesModel _$MaintenanceServicesModelFromJson(
-    Map<String, dynamic> json) {
+MaintenanceServicesModel _$MaintenanceServicesModelFromJson(Map<String, dynamic> json) {
   return _MaintenanceServicesModel.fromJson(json);
 }
 
@@ -60,8 +59,8 @@ mixin _$MaintenanceServicesModel {
 
 /// @nodoc
 abstract class $MaintenanceServicesModelCopyWith<$Res> {
-  factory $MaintenanceServicesModelCopyWith(MaintenanceServicesModel value,
-          $Res Function(MaintenanceServicesModel) then) =
+  factory $MaintenanceServicesModelCopyWith(
+          MaintenanceServicesModel value, $Res Function(MaintenanceServicesModel) then) =
       _$MaintenanceServicesModelCopyWithImpl<$Res, MaintenanceServicesModel>;
   @useResult
   $Res call(
@@ -72,10 +71,8 @@ abstract class $MaintenanceServicesModelCopyWith<$Res> {
       @JsonKey(name: 'list_val', defaultValue: "0") String value,
       @JsonKey(name: 'list_ar', defaultValue: "") String nameAr,
       @JsonKey(name: 'list_en', defaultValue: "") String nameEn,
-      @JsonKey(name: 'dt_created', defaultValue: "")
-      String createdDateTimeStamp,
-      @JsonKey(name: 'dt_updated', defaultValue: "")
-      String updatedDateTimeStamp,
+      @JsonKey(name: 'dt_created', defaultValue: "") String createdDateTimeStamp,
+      @JsonKey(name: 'dt_updated', defaultValue: "") String updatedDateTimeStamp,
       @JsonKey(name: 'sequence', defaultValue: "") String sequence,
       @JsonKey(name: 'create_by', defaultValue: "") String createBy,
       @JsonKey(name: 'update_by', defaultValue: "") String updateBy,
@@ -86,8 +83,7 @@ abstract class $MaintenanceServicesModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MaintenanceServicesModelCopyWithImpl<$Res,
-        $Val extends MaintenanceServicesModel>
+class _$MaintenanceServicesModelCopyWithImpl<$Res, $Val extends MaintenanceServicesModel>
     implements $MaintenanceServicesModelCopyWith<$Res> {
   _$MaintenanceServicesModelCopyWithImpl(this._value, this._then);
 
@@ -188,8 +184,7 @@ class _$MaintenanceServicesModelCopyWithImpl<$Res,
 /// @nodoc
 abstract class _$$MaintenanceServicesModelImplCopyWith<$Res>
     implements $MaintenanceServicesModelCopyWith<$Res> {
-  factory _$$MaintenanceServicesModelImplCopyWith(
-          _$MaintenanceServicesModelImpl value,
+  factory _$$MaintenanceServicesModelImplCopyWith(_$MaintenanceServicesModelImpl value,
           $Res Function(_$MaintenanceServicesModelImpl) then) =
       __$$MaintenanceServicesModelImplCopyWithImpl<$Res>;
   @override
@@ -202,10 +197,8 @@ abstract class _$$MaintenanceServicesModelImplCopyWith<$Res>
       @JsonKey(name: 'list_val', defaultValue: "0") String value,
       @JsonKey(name: 'list_ar', defaultValue: "") String nameAr,
       @JsonKey(name: 'list_en', defaultValue: "") String nameEn,
-      @JsonKey(name: 'dt_created', defaultValue: "")
-      String createdDateTimeStamp,
-      @JsonKey(name: 'dt_updated', defaultValue: "")
-      String updatedDateTimeStamp,
+      @JsonKey(name: 'dt_created', defaultValue: "") String createdDateTimeStamp,
+      @JsonKey(name: 'dt_updated', defaultValue: "") String updatedDateTimeStamp,
       @JsonKey(name: 'sequence', defaultValue: "") String sequence,
       @JsonKey(name: 'create_by', defaultValue: "") String createBy,
       @JsonKey(name: 'update_by', defaultValue: "") String updateBy,
@@ -217,12 +210,10 @@ abstract class _$$MaintenanceServicesModelImplCopyWith<$Res>
 
 /// @nodoc
 class __$$MaintenanceServicesModelImplCopyWithImpl<$Res>
-    extends _$MaintenanceServicesModelCopyWithImpl<$Res,
-        _$MaintenanceServicesModelImpl>
+    extends _$MaintenanceServicesModelCopyWithImpl<$Res, _$MaintenanceServicesModelImpl>
     implements _$$MaintenanceServicesModelImplCopyWith<$Res> {
   __$$MaintenanceServicesModelImplCopyWithImpl(
-      _$MaintenanceServicesModelImpl _value,
-      $Res Function(_$MaintenanceServicesModelImpl) _then)
+      _$MaintenanceServicesModelImpl _value, $Res Function(_$MaintenanceServicesModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -326,10 +317,8 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
       @JsonKey(name: 'list_val', defaultValue: "0") required this.value,
       @JsonKey(name: 'list_ar', defaultValue: "") required this.nameAr,
       @JsonKey(name: 'list_en', defaultValue: "") required this.nameEn,
-      @JsonKey(name: 'dt_created', defaultValue: "")
-      required this.createdDateTimeStamp,
-      @JsonKey(name: 'dt_updated', defaultValue: "")
-      required this.updatedDateTimeStamp,
+      @JsonKey(name: 'dt_created', defaultValue: "") required this.createdDateTimeStamp,
+      @JsonKey(name: 'dt_updated', defaultValue: "") required this.updatedDateTimeStamp,
       @JsonKey(name: 'sequence', defaultValue: "") required this.sequence,
       @JsonKey(name: 'create_by', defaultValue: "") required this.createBy,
       @JsonKey(name: 'update_by', defaultValue: "") required this.updateBy,
@@ -410,12 +399,9 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
                 other.createdDateTimeStamp == createdDateTimeStamp) &&
             (identical(other.updatedDateTimeStamp, updatedDateTimeStamp) ||
                 other.updatedDateTimeStamp == updatedDateTimeStamp) &&
-            (identical(other.sequence, sequence) ||
-                other.sequence == sequence) &&
-            (identical(other.createBy, createBy) ||
-                other.createBy == createBy) &&
-            (identical(other.updateBy, updateBy) ||
-                other.updateBy == updateBy) &&
+            (identical(other.sequence, sequence) || other.sequence == sequence) &&
+            (identical(other.createBy, createBy) || other.createBy == createBy) &&
+            (identical(other.updateBy, updateBy) || other.updateBy == updateBy) &&
             (identical(other.sysPkg, sysPkg) || other.sysPkg == sysPkg) &&
             (identical(other.uuid, uuid) || other.uuid == uuid) &&
             (identical(other.active, active) || other.active == active) &&
@@ -446,9 +432,9 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$MaintenanceServicesModelImplCopyWith<_$MaintenanceServicesModelImpl>
-      get copyWith => __$$MaintenanceServicesModelImplCopyWithImpl<
-          _$MaintenanceServicesModelImpl>(this, _$identity);
+  _$$MaintenanceServicesModelImplCopyWith<_$MaintenanceServicesModelImpl> get copyWith =>
+      __$$MaintenanceServicesModelImplCopyWithImpl<_$MaintenanceServicesModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -461,24 +447,17 @@ class _$MaintenanceServicesModelImpl extends _MaintenanceServicesModel {
 abstract class _MaintenanceServicesModel extends MaintenanceServicesModel {
   const factory _MaintenanceServicesModel(
       {@JsonKey(name: 'list_id', defaultValue: "0") required final String id,
-      @JsonKey(name: 'is_group', defaultValue: "")
-      required final String isGroup,
-      @JsonKey(name: 'list_parent', defaultValue: "")
-      required final String parent,
+      @JsonKey(name: 'is_group', defaultValue: "") required final String isGroup,
+      @JsonKey(name: 'list_parent', defaultValue: "") required final String parent,
       @JsonKey(name: 'list_code', defaultValue: "0") required final String code,
       @JsonKey(name: 'list_val', defaultValue: "0") required final String value,
       @JsonKey(name: 'list_ar', defaultValue: "") required final String nameAr,
       @JsonKey(name: 'list_en', defaultValue: "") required final String nameEn,
-      @JsonKey(name: 'dt_created', defaultValue: "")
-      required final String createdDateTimeStamp,
-      @JsonKey(name: 'dt_updated', defaultValue: "")
-      required final String updatedDateTimeStamp,
-      @JsonKey(name: 'sequence', defaultValue: "")
-      required final String sequence,
-      @JsonKey(name: 'create_by', defaultValue: "")
-      required final String createBy,
-      @JsonKey(name: 'update_by', defaultValue: "")
-      required final String updateBy,
+      @JsonKey(name: 'dt_created', defaultValue: "") required final String createdDateTimeStamp,
+      @JsonKey(name: 'dt_updated', defaultValue: "") required final String updatedDateTimeStamp,
+      @JsonKey(name: 'sequence', defaultValue: "") required final String sequence,
+      @JsonKey(name: 'create_by', defaultValue: "") required final String createBy,
+      @JsonKey(name: 'update_by', defaultValue: "") required final String updateBy,
       @JsonKey(name: 'sys_pkg', defaultValue: "") required final String sysPkg,
       @JsonKey(name: 'list_uuid', defaultValue: "0") required final String uuid,
       required final String active,
@@ -536,6 +515,6 @@ abstract class _MaintenanceServicesModel extends MaintenanceServicesModel {
   String get icon;
   @override
   @JsonKey(ignore: true)
-  _$$MaintenanceServicesModelImplCopyWith<_$MaintenanceServicesModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$MaintenanceServicesModelImplCopyWith<_$MaintenanceServicesModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

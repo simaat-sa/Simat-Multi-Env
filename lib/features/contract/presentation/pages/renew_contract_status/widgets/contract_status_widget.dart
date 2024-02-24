@@ -1,6 +1,5 @@
 part of 'renew_contract_status_widgets_imports.dart';
 
-
 class ContractStatusWidget extends StatelessWidget {
   final bool success;
 
@@ -19,11 +18,11 @@ class ContractStatusWidget extends StatelessWidget {
         Gaps.vGap32,
         Text(
           textAlign: TextAlign.center,
-          isSuccess ? Translate.s.renewal_request_completed: Translate.s.Error_renewal_request,
+          isSuccess ? Translate.s.renewal_request_completed : Translate.s.Error_renewal_request,
           style: AppTextStyle.s30_w400(color: context.colors.green4),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 30),
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 30),
           child: Text(
             _data(isSuccess),
             textAlign: TextAlign.center,
@@ -47,8 +46,6 @@ class ContractStatusWidget extends StatelessWidget {
   }
 
   String _data(bool isSuccess) {
-    return isSuccess
-        ? Translate.s.order_has_received
-        : Translate.s.days_remaining_and_allowed;
+    return isSuccess ? Translate.s.order_has_received : Translate.s.days_remaining_and_allowed;
   }
 }

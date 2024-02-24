@@ -11,5 +11,4 @@ class QrLoginParams {
         '_token': token,
         'device_token': deviceToken,
       };
-
 }

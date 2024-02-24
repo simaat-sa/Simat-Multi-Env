@@ -161,7 +161,8 @@ class _OptionsButtonState<T> extends State<OptionsButton<T>> {
 
             /// Suffix
             widget.customSuffixIcon ??
-                Icon(Icons.keyboard_arrow_down_rounded, size: 24, color: context.colors.darkTextColor),
+                Icon(Icons.keyboard_arrow_down_rounded,
+                    size: 24, color: context.colors.darkTextColor),
           ],
         );
       },

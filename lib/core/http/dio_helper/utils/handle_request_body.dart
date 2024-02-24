@@ -4,11 +4,9 @@ import 'package:dio/dio.dart';
 import 'package:flutter_tdd/core/http/models/request_body_model.dart';
 import 'package:injectable/injectable.dart';
 
-
 @lazySingleton
 class HandleRequestBody {
-
-  FormData? call(RequestBodyModel params){
+  FormData? call(RequestBodyModel params) {
     var body = params.body;
     FormData formData = FormData.fromMap(body);
     bool haveFile = false;
@@ -18,8 +16,7 @@ class HandleRequestBody {
         //create multipart using filepath, string or bytes
         MapEntry<String, MultipartFile> pic = MapEntry(
           key,
-          MultipartFile.fromFileSync(value.path,
-              filename: value.path.split("/").last),
+          MultipartFile.fromFileSync(value.path, filename: value.path.split("/").last),
         );
         //add multipart to request
         formData.files.add(pic);
@@ -38,7 +35,6 @@ class HandleRequestBody {
         formData.files.addAll(files);
       }
     });
-    return (haveFile||params.isFormData)?formData:null;
+    return (haveFile || params.isFormData) ? formData : null;
   }
-
 }

@@ -44,7 +44,7 @@ class AppTextButton extends StatelessWidget {
   final double maxHeight;
 
   factory AppTextButton.minPrimary(
-      {Key? key,required String text, bool enabled = true, VoidCallback? onPressed}) {
+      {Key? key, required String text, bool enabled = true, VoidCallback? onPressed}) {
     return AppTextButton._(
       key: key,
       appTextButton: _AppTextButton.minPrimaryColor,
@@ -54,7 +54,7 @@ class AppTextButton extends StatelessWidget {
     );
   }
 
-  factory AppTextButton.minWhite({Key? key,required String text, VoidCallback? onPressed}) {
+  factory AppTextButton.minWhite({Key? key, required String text, VoidCallback? onPressed}) {
     return AppTextButton._(
       key: key,
       appTextButton: _AppTextButton.minWhiteColor,
@@ -65,7 +65,7 @@ class AppTextButton extends StatelessWidget {
   }
 
   factory AppTextButton.maxPrimary(
-      {Key? key,required String text, bool enabled = true, VoidCallback? onPressed}) {
+      {Key? key, required String text, bool enabled = true, VoidCallback? onPressed}) {
     return AppTextButton._(
       key: key,
       appTextButton: _AppTextButton.maxPrimaryColor,
@@ -75,7 +75,7 @@ class AppTextButton extends StatelessWidget {
     );
   }
 
-  factory AppTextButton.maxWhite({Key? key,required String text, VoidCallback? onPressed}) {
+  factory AppTextButton.maxWhite({Key? key, required String text, VoidCallback? onPressed}) {
     return AppTextButton._(
       key: key,
       appTextButton: _AppTextButton.maxWhiteColor,
@@ -141,7 +141,6 @@ class AppTextButton extends StatelessWidget {
             child: TextButton(
               style: Theme.of(context).textButtonTheme.style?.copyWith(
                     padding: MaterialStateProperty.all(EdgeInsets.zero),
-
                     foregroundColor: MaterialStateProperty.resolveWith(
                       (_) {
                         return AppColors.of(context).primary;
@@ -161,9 +160,8 @@ class AppTextButton extends StatelessWidget {
               child: Text(
                 text,
                 style: AppTextStyle.s14_w600(
-                  color: (enabled
-                      ? AppColors.fixedColors.white
-                      : AppColors.fixedColors.blackOpacity),
+                  color:
+                      (enabled ? AppColors.fixedColors.white : AppColors.fixedColors.blackOpacity),
                 ),
               ),
             ),
@@ -229,9 +227,8 @@ class AppTextButton extends StatelessWidget {
               child: Text(
                 text,
                 style: AppTextStyle.s16_w500(
-                  color: (enabled
-                      ? AppColors.fixedColors.white
-                      : AppColors.fixedColors.blackOpacity),
+                  color:
+                      (enabled ? AppColors.fixedColors.white : AppColors.fixedColors.blackOpacity),
                 ),
               ),
             ),
@@ -310,8 +307,9 @@ class AppTextButton extends StatelessWidget {
             enable: enabled && onPressed != null,
             child: TextButton(
               style: Theme.of(context).textButtonTheme.style?.copyWith(
-                shape: MaterialStateProperty.all(RoundedRectangleBorder( borderRadius: BorderRadius.circular(6) )),
-                padding: MaterialStateProperty.all(EdgeInsets.zero),
+                    shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(6))),
+                    padding: MaterialStateProperty.all(EdgeInsets.zero),
                     foregroundColor: MaterialStateProperty.resolveWith(
                       (_) {
                         return _bgColor;

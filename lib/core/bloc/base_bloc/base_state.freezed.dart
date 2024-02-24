@@ -70,8 +70,7 @@ mixin _$BaseState<T> {
 
 /// @nodoc
 abstract class $BaseStateCopyWith<T, $Res> {
-  factory $BaseStateCopyWith(
-          BaseState<T> value, $Res Function(BaseState<T>) then) =
+  factory $BaseStateCopyWith(BaseState<T> value, $Res Function(BaseState<T>) then) =
       _$BaseStateCopyWithImpl<T, $Res, BaseState<T>>;
 }
 
@@ -88,17 +87,14 @@ class _$BaseStateCopyWithImpl<T, $Res, $Val extends BaseState<T>>
 
 /// @nodoc
 abstract class _$$InitImplCopyWith<T, $Res> {
-  factory _$$InitImplCopyWith(
-          _$InitImpl<T> value, $Res Function(_$InitImpl<T>) then) =
+  factory _$$InitImplCopyWith(_$InitImpl<T> value, $Res Function(_$InitImpl<T>) then) =
       __$$InitImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$InitImplCopyWithImpl<T, $Res>
-    extends _$BaseStateCopyWithImpl<T, $Res, _$InitImpl<T>>
+class __$$InitImplCopyWithImpl<T, $Res> extends _$BaseStateCopyWithImpl<T, $Res, _$InitImpl<T>>
     implements _$$InitImplCopyWith<T, $Res> {
-  __$$InitImplCopyWithImpl(
-      _$InitImpl<T> _value, $Res Function(_$InitImpl<T>) _then)
+  __$$InitImplCopyWithImpl(_$InitImpl<T> _value, $Res Function(_$InitImpl<T>) _then)
       : super(_value, _then);
 }
 
@@ -193,8 +189,7 @@ abstract class _Init<T> implements BaseState<T> {
 
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+  factory _$$LoadingImplCopyWith(_$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
       __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
@@ -202,8 +197,7 @@ abstract class _$$LoadingImplCopyWith<T, $Res> {
 class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$BaseStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+  __$$LoadingImplCopyWithImpl(_$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
       : super(_value, _then);
 }
 
@@ -298,8 +292,7 @@ abstract class _Loading<T> implements BaseState<T> {
 
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+  factory _$$SuccessImplCopyWith(_$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
       __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({bool changed, T? model});
@@ -309,8 +302,7 @@ abstract class _$$SuccessImplCopyWith<T, $Res> {
 class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$BaseStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+  __$$SuccessImplCopyWithImpl(_$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -429,20 +421,17 @@ class _$SuccessImpl<T> implements _Success<T> {
 }
 
 abstract class _Success<T> implements BaseState<T> {
-  const factory _Success(final bool changed, [final T? model]) =
-      _$SuccessImpl<T>;
+  const factory _Success(final bool changed, [final T? model]) = _$SuccessImpl<T>;
 
   bool get changed;
   T? get model;
   @JsonKey(ignore: true)
-  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$FailureImplCopyWith<T, $Res> {
-  factory _$$FailureImplCopyWith(
-          _$FailureImpl<T> value, $Res Function(_$FailureImpl<T>) then) =
+  factory _$$FailureImplCopyWith(_$FailureImpl<T> value, $Res Function(_$FailureImpl<T>) then) =
       __$$FailureImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({BaseError error, VoidCallback callback});
@@ -452,8 +441,7 @@ abstract class _$$FailureImplCopyWith<T, $Res> {
 class __$$FailureImplCopyWithImpl<T, $Res>
     extends _$BaseStateCopyWithImpl<T, $Res, _$FailureImpl<T>>
     implements _$$FailureImplCopyWith<T, $Res> {
-  __$$FailureImplCopyWithImpl(
-      _$FailureImpl<T> _value, $Res Function(_$FailureImpl<T>) _then)
+  __$$FailureImplCopyWithImpl(_$FailureImpl<T> _value, $Res Function(_$FailureImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -572,12 +560,10 @@ class _$FailureImpl<T> implements _Failure<T> {
 }
 
 abstract class _Failure<T> implements BaseState<T> {
-  const factory _Failure(final BaseError error, final VoidCallback callback) =
-      _$FailureImpl<T>;
+  const factory _Failure(final BaseError error, final VoidCallback callback) = _$FailureImpl<T>;
 
   BaseError get error;
   VoidCallback get callback;
   @JsonKey(ignore: true)
-  _$$FailureImplCopyWith<T, _$FailureImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$FailureImplCopyWith<T, _$FailureImpl<T>> get copyWith => throw _privateConstructorUsedError;
 }

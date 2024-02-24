@@ -1,6 +1,3 @@
 part of 'terms_imports.dart';
 
-class TermsData {
-
-
-}
+class TermsData {}

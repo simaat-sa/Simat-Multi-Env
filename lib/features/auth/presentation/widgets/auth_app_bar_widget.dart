@@ -26,29 +26,30 @@ class AuthAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.only(start: 10,end: 20),
+      padding: const EdgeInsetsDirectional.only(start: 10, end: 20),
       child: AppBar(
         elevation: 0,
         centerTitle: true,
         title: title != null
             ? Text(
-          title ?? "",
-          style: AppTextStyle.s20_w600(color: context.colors.black),
-        )
+                title ?? "",
+                style: AppTextStyle.s20_w600(color: context.colors.black),
+              )
             : null,
         backgroundColor: Colors.transparent,
-        leading: leading??Offstage(
-          offstage: !showBack,
-          child: InkWell(
-            onTap: onBack ?? AutoRouter.of(context).pop,
-            child: Icon(
-              Icons.arrow_back_ios_new,
-              size: 22,
-              color: context.colors.black,
+        leading: leading ??
+            Offstage(
+              offstage: !showBack,
+              child: InkWell(
+                onTap: onBack ?? AutoRouter.of(context).pop,
+                child: Icon(
+                  Icons.arrow_back_ios_new,
+                  size: 22,
+                  color: context.colors.black,
+                ),
+              ),
             ),
-          ),
-        ),
-        actions:const [
+        actions: const [
           Gaps.empty,
           // InkWell(
           //     onTap: () =>

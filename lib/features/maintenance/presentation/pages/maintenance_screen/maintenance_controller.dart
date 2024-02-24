@@ -1,9 +1,8 @@
 part of 'maintenance_screen_imports.dart';
 
-
-
-class MaintenanceController{
-  ObsValue<ContractStatus> filterContractObs = ObsValue<ContractStatus>.withInit(ContractStatus.non);
+class MaintenanceController {
+  ObsValue<ContractStatus> filterContractObs =
+      ObsValue<ContractStatus>.withInit(ContractStatus.non);
   final MaintenanceRequester requester = MaintenanceRequester();
 
   String searchText = "";

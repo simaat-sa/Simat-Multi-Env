@@ -1,4 +1,3 @@
-
 import 'dart:ui';
 
 import 'package:flutter_tdd/core/constants/enum_extension/enum_factory_extension.dart';
@@ -7,7 +6,7 @@ import 'package:flutter_tdd/core/theme/colors/app_colors.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 @JsonEnum(valueField: 'value')
-enum ContractStatus{
+enum ContractStatus {
   canceled('37790'),
   paused('37780'),
   posted('37770'),
@@ -22,8 +21,8 @@ enum ContractStatus{
   supervisorIdentifications('37715'),
   newCode("37710"),
   non('0');
-  final String value;
 
+  final String value;
 
   const ContractStatus(this.value);
   factory ContractStatus.fromValue(String val) {
@@ -33,7 +32,7 @@ enum ContractStatus{
     return non;
   }
 
-  String getLocalizedName(){
+  String getLocalizedName() {
     switch (this) {
       case ContractStatus.applicationApproval:
         return Translate.s.application_approval;
@@ -66,8 +65,7 @@ enum ContractStatus{
     }
   }
 
-
-  Color getColor(){
+  Color getColor() {
     switch (this) {
       case ContractStatus.applicationApproval:
         return AppColors.fixedColors.primary;
@@ -97,6 +95,4 @@ enum ContractStatus{
         return AppColors.fixedColors.primary;
     }
   }
-
-
 }

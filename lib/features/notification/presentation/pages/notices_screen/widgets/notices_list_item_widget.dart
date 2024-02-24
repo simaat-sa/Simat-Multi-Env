@@ -1,5 +1,4 @@
-part of'notices_screen_widgets_imports.dart';
-
+part of 'notices_screen_widgets_imports.dart';
 
 class NoticesListItemWidget extends StatelessWidget {
   final List<NoticesModel> list;
@@ -8,8 +7,8 @@ class NoticesListItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:List.generate(list.length, (index) {
-        return NoticesItemWidget(model:list[index]);
+      children: List.generate(list.length, (index) {
+        return NoticesItemWidget(model: list[index]);
       }),
     );
   }

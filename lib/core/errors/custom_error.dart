@@ -2,7 +2,7 @@ import 'base_error.dart';
 
 class CustomError extends BaseError {
   final String msg;
-   CustomError({required this.msg}):super(msg);
+  CustomError({required this.msg}) : super(msg);
 
   @override
   bool operator ==(Object other) =>
@@ -11,6 +11,4 @@ class CustomError extends BaseError {
 
   @override
   int get hashCode => super.hashCode ^ msg.hashCode;
-
-
 }

@@ -6,8 +6,7 @@ part of 'maintenance_services_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MaintenanceServicesModelImpl _$$MaintenanceServicesModelImplFromJson(
-        Map<String, dynamic> json) =>
+_$MaintenanceServicesModelImpl _$$MaintenanceServicesModelImplFromJson(Map<String, dynamic> json) =>
     _$MaintenanceServicesModelImpl(
       id: json['list_id'] as String? ?? '0',
       isGroup: json['is_group'] as String? ?? '',

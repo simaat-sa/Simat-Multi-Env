@@ -3,7 +3,6 @@ import 'package:flutter_tdd/core/extensions/common_extension.dart';
 import 'package:flutter_tdd/core/widgets/app_text_span_with_seperator.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/widgets/option_item_widget.dart';
 
-
 /// Use to display Selected Options in BaseFormOption
 class BaseOptionsDisplayWidget<T> extends StatelessWidget {
   final List<T>? selectedOptions;
@@ -18,10 +17,6 @@ class BaseOptionsDisplayWidget<T> extends StatelessWidget {
     this.clickable = false,
   });
 
-
-
-
-
   @override
   Widget build(BuildContext context) {
     if (selectedOptions.isNullOrEmpty) return const SizedBox.shrink();
@@ -32,7 +27,7 @@ class BaseOptionsDisplayWidget<T> extends StatelessWidget {
     }
 
     /// MultiValue cases
-    return getOptionsWidgetDetailsCase(context: context,options: selectedOptions!);
+    return getOptionsWidgetDetailsCase(context: context, options: selectedOptions!);
   }
 
   Widget getSingleOptionItem(
@@ -61,7 +56,7 @@ class BaseOptionsDisplayWidget<T> extends StatelessWidget {
 
   /// if pictures list is null the value will displayed as text spans, else the main picture
   /// should appear beside the title.
-  Widget getOptionsWidgetDetailsCase({required BuildContext context,required List<T> options}) {
+  Widget getOptionsWidgetDetailsCase({required BuildContext context, required List<T> options}) {
     return getMultiOptionsTextSpan();
   }
 }

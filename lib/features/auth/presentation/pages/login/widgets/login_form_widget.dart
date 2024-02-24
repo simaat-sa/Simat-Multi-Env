@@ -59,9 +59,7 @@ class LoginFormWidget extends StatelessWidget {
                 suffixIcon: InkWell(
                   onTap: () => controller.visibleObs.setValue(!state),
                   child: Icon(
-                    state == true
-                        ? Icons.visibility_outlined
-                        : Icons.visibility_off_outlined,
+                    state == true ? Icons.visibility_outlined : Icons.visibility_off_outlined,
                     size: 20,
                     color: context.colors.textColor,
                   ),

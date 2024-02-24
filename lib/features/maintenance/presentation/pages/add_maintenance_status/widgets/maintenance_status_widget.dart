@@ -22,7 +22,7 @@ class CompleteAddFormWidget extends StatelessWidget {
           style: AppTextStyle.s30_w400(color: context.colors.green4),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 30),
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 30),
           child: Text(
             _data(isSuccess),
             textAlign: TextAlign.center,
@@ -38,7 +38,9 @@ class CompleteAddFormWidget extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
             child: Text(
-              isSuccess ? Translate.s.back_to_maintenance_requests : Translate.s.maybe_later_back_to_the_main_page,
+              isSuccess
+                  ? Translate.s.back_to_maintenance_requests
+                  : Translate.s.maybe_later_back_to_the_main_page,
               style: AppTextStyle.s14_w500(color: context.colors.secondary),
             ),
           ),

@@ -1,7 +1,7 @@
-part of'tenant_details_widgets_imports.dart';
+part of 'tenant_details_widgets_imports.dart';
 
 class SummaryViewWidget extends StatelessWidget {
-   final ContractDetailsController controller;
+  final ContractDetailsController controller;
   const SummaryViewWidget({super.key, required this.controller});
 
   @override

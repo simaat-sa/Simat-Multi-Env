@@ -16,13 +16,10 @@ import 'package:flutter_tdd/features/maintenance/domain/requesters/maintenance_r
 import 'package:flutter_tdd/features/maintenance/presentation/widgets/contract_dialog_widget.dart';
 import 'package:flutter_tdd/features/base/presentation/widgets/filter_input_widget.dart';
 
-
 import '../../widgets/failure_item_widget.dart';
 import '../../widgets/unit_loading_list_widget.dart';
 import '../filter_maintenance/filter_maintenance_imports.dart';
 import 'widgets/maintenance_widgets_imports.dart';
-
-
 
 part 'maintenance_controller.dart';
 part 'maintenance_screen.dart';

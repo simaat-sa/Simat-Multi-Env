@@ -5,12 +5,12 @@ import 'package:flutter_tdd/features/notification/data/data_source/notices_data_
 import 'package:flutter_tdd/features/notification/data/models/notices_model/notices_model.dart';
 import 'package:flutter_tdd/features/notification/domain/repositories/notices_repository.dart';
 import 'package:injectable/injectable.dart';
+
 @Injectable(as: NoticesRepository)
-class NoticesRepositoryImpl extends NoticesRepository with ModelToDomainResult{
+class NoticesRepositoryImpl extends NoticesRepository with ModelToDomainResult {
   var dataSource = getIt.get<NoticesDataSource>();
   @override
-  Future<MyResult<List<NoticesModel>>> getNotices(bool params)async {
+  Future<MyResult<List<NoticesModel>>> getNotices(bool params) async {
     return await dataSource.getNotices(params);
   }
-
 }

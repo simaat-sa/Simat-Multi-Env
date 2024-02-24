@@ -1,5 +1,3 @@
-
-
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,7 +8,6 @@ import 'package:flutter_tdd/core/theme/colors/app_dark_colors.dart';
 import 'package:flutter_tdd/core/theme/colors/app_light_colors.dart';
 
 abstract class AppColors {
-
   static final AppDarkColors _dark = AppDarkColors();
   static final AppLightColors _light = AppLightColors();
 
@@ -21,13 +18,13 @@ abstract class AppColors {
   static const Color snackBarYellowAlert = Color(0xfffea632);
 
   static AppColors get noContextInstance =>
-      getIt.get<GlobalContext>().context().read<DeviceCubit>().state.model.themeMode == AdaptiveThemeMode.dark
+      getIt.get<GlobalContext>().context().read<DeviceCubit>().state.model.themeMode ==
+              AdaptiveThemeMode.dark
           ? _dark
           : _light;
 
   static AppColors of(BuildContext context) =>
       context.read<DeviceCubit>().state.model.themeMode == AdaptiveThemeMode.dark ? _dark : _light;
-
 
   Color get primary;
 
@@ -69,5 +66,4 @@ abstract class AppColors {
   Color get red;
   Color get primaryGrey;
   Color get errorColor;
-
 }

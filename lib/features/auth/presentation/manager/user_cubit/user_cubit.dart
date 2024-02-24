@@ -7,8 +7,7 @@ part 'user_state.dart';
 class UserCubit extends Cubit<UserState> {
   UserCubit() : super(const UserInitial());
 
-  void onUpdateUserData(UserModel model){
+  void onUpdateUserData(UserModel model) {
     emit(UserUpdateState(model: model, changed: !state.changed));
   }
-
 }

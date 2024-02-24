@@ -9,21 +9,21 @@ import '../utils/cache_manager.dart';
 import '../utils/dio_header.dart';
 
 abstract class DioHelper {
-  Dio get dio =>
-      Dio(
+  Dio get dio => Dio(
         BaseOptions(
-            baseUrl: ApiNames.baseUrl,
+          baseUrl: ApiNames.baseUrl,
           headers: getIt<DioHeader>().call(),
         ),
       )
         ..interceptors.add(CacheManager()().interceptor)
         // ..interceptors.add(AuthInterceptor())
         ..interceptors.add(LogInterceptor(
-          responseBody: true,
-          requestBody: true,
-          responseHeader: true,
-          logPrint: (data) => log(data.toString(),
-          )));
+            responseBody: true,
+            requestBody: true,
+            responseHeader: true,
+            logPrint: (data) => log(
+                  data.toString(),
+                )));
 
   Future<MyResult<Response>> call(RequestBodyModel params);
 }

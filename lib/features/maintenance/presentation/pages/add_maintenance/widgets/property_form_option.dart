@@ -1,5 +1,4 @@
-
-part of'add_maintenance_widgets_imports.dart';
+part of 'add_maintenance_widgets_imports.dart';
 
 class PropertyFormOption extends StatelessWidget {
   final AddMaintenanceController controller;

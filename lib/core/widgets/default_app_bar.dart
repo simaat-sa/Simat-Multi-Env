@@ -39,18 +39,18 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
       automaticallyImplyLeading: leading != null,
       actions: [
         ...actions,
-        if(showBack == true)
-        InkWell(
-          onTap: ()=> Navigator.of(context).pop(),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Icon(
-              Icons.arrow_forward_ios_outlined,
-              color: context.colors.darkTextColor,
-              size: 24,
+        if (showBack == true)
+          InkWell(
+            onTap: () => Navigator.of(context).pop(),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Icon(
+                Icons.arrow_forward_ios_outlined,
+                color: context.colors.darkTextColor,
+                size: 24,
+              ),
             ),
           ),
-        ),
       ],
     );
   }

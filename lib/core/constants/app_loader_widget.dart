@@ -40,7 +40,6 @@ class _AppLoaderWidgetState extends State<AppLoaderWidget> with SingleTickerProv
   /// Bounce Curve
   late AnimationController _controller;
 
-
   @override
   void initState() {
     _controller = AnimationController(
@@ -50,7 +49,6 @@ class _AppLoaderWidgetState extends State<AppLoaderWidget> with SingleTickerProv
     _controller.repeat();
     super.initState();
   }
-
 
   @override
   void dispose() {

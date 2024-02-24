@@ -3,14 +3,10 @@ import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/m
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_services_model/maintenance_services_model.dart';
 import 'package:flutter_tdd/features/maintenance/domain/entity/add_maintenance_params.dart';
 
-
-
-abstract class MaintenanceRepository{
+abstract class MaintenanceRepository {
   Future<MyResult<List<MaintenanceModel>>> getContracts(bool params);
 
-  Future<MyResult<List<MaintenanceServicesModel>>> getMaintenanceServices (bool params);
+  Future<MyResult<List<MaintenanceServicesModel>>> getMaintenanceServices(bool params);
 
   Future<MyResult<MaintenanceModel>> addMaintenance(AddMaintenanceParams params);
-
-
 }

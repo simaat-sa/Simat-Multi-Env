@@ -28,7 +28,7 @@ class AuthDataSourceImpl extends AuthDataSource {
   }
 
   @override
-  Future<MyResult<UserModel>> loginWithQr(QrLoginParams param)async {
+  Future<MyResult<UserModel>> loginWithQr(QrLoginParams param) async {
     HttpRequestModel model = HttpRequestModel(
       url: ApiNames.login,
       requestMethod: RequestMethod.post,

@@ -6,8 +6,7 @@ part of 'prop_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PropModelImpl _$$PropModelImplFromJson(Map<String, dynamic> json) =>
-    _$PropModelImpl(
+_$PropModelImpl _$$PropModelImplFromJson(Map<String, dynamic> json) => _$PropModelImpl(
       propId: json['prop_id'] as String? ?? '0',
       areId: json['are_id'] as String? ?? '0',
       areCode: json['are_code'] as String? ?? '0',
@@ -52,8 +51,7 @@ _$PropModelImpl _$$PropModelImplFromJson(Map<String, dynamic> json) =>
       propNumber: json['prop_number'] as String?,
     );
 
-Map<String, dynamic> _$$PropModelImplToJson(_$PropModelImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$PropModelImplToJson(_$PropModelImpl instance) => <String, dynamic>{
       'prop_id': instance.propId,
       'are_id': instance.areId,
       'are_code': instance.areCode,

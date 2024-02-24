@@ -7,7 +7,8 @@ class ScrollableBodyFixedHeaderDraggableSheet extends StatelessWidget {
   final Widget header;
   final ScrollableWidgetBuilder bodyBuilder;
 
-  const ScrollableBodyFixedHeaderDraggableSheet({super.key, required this.header, required this.bodyBuilder});
+  const ScrollableBodyFixedHeaderDraggableSheet(
+      {super.key, required this.header, required this.bodyBuilder});
 
   @override
   Widget build(BuildContext context) {

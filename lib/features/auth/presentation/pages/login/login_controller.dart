@@ -67,7 +67,7 @@ class LoginController {
 
   Future<void> _loginWithQr(BuildContext context, String token) async {
     var deviceId = await FirebaseMessaging.instance.getToken();
-    final params = qrLoginParams(deviceId??'', token);
+    final params = qrLoginParams(deviceId ?? '', token);
     var loginResponse = await getIt<AuthRepository>().loginWithQr(params);
     _handleLoginResponse(context, loginResponse);
   }
@@ -112,7 +112,7 @@ class LoginController {
         context, MaterialPageRoute(builder: (context) => const ScannerScreen()));
     if (scannedCode != null) {
       var token = scannedCode.split(",").first.split("<").last;
-      _loginWithQr(context,token);
+      _loginWithQr(context, token);
     }
   }
 }

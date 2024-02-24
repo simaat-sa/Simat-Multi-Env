@@ -1,11 +1,9 @@
-part of'notices_screen_imports.dart';
+part of 'notices_screen_imports.dart';
 
-
-class NoticesScreenController{
+class NoticesScreenController {
   final NoticesRequester requester = NoticesRequester();
 
-
-  void requestData(){
+  void requestData() {
     requester.request(fromRemote: false);
     requester.request();
   }

@@ -15,6 +15,7 @@ class _NoticesScreenState extends State<NoticesScreen> {
     controller.requestData();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     bool isNotEmpty = true;
@@ -35,7 +36,9 @@ class _NoticesScreenState extends State<NoticesScreen> {
               child: ListView(
                 children: [
                   Gaps.vGap12,
-                  NoticesListItemWidget(list: data,),
+                  NoticesListItemWidget(
+                    list: data,
+                  ),
                 ],
               ),
             ),

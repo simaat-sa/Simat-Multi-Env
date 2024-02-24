@@ -2,7 +2,6 @@ import 'package:injectable/injectable.dart';
 
 @lazySingleton
 class Utilities {
-
   String convertDigitsToLatin(String s) {
     var sb = StringBuffer();
     for (int i = 0; i < s.length; i++) {

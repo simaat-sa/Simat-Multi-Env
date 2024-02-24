@@ -21,16 +21,16 @@ class _TermsState extends State<Terms> {
     return Scaffold(
       appBar: DefaultAppBar(title: ""),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Privacy Policy",style: AppTextStyle.s20_w500(color: context.colors.black)),
-             Gaps.vGap20,
+            Text("Privacy Policy", style: AppTextStyle.s20_w500(color: context.colors.black)),
+            Gaps.vGap20,
             Expanded(
               child: SingleChildScrollView(
                 child: Text(
-                 '''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas imperdiet consectetur tincidunt. Mauris id elit quis eros cursus aliquam. Quisque vitae est lorem. Fusce dictum nec magna in efficitur. Duis pretium placerat odio, sed eleifend tortor faucibus quis. Praesent blandit non leo at tempor. Morbi eget mattis quam. Sed dignissim mi sit amet dolor sodales elementum. Pellentesque rhoncus egestas eros vel semper. Curabitur non eleifend tellus. Sed viverra tempor est at ultricies.
+                  '''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas imperdiet consectetur tincidunt. Mauris id elit quis eros cursus aliquam. Quisque vitae est lorem. Fusce dictum nec magna in efficitur. Duis pretium placerat odio, sed eleifend tortor faucibus quis. Praesent blandit non leo at tempor. Morbi eget mattis quam. Sed dignissim mi sit amet dolor sodales elementum. Pellentesque rhoncus egestas eros vel semper. Curabitur non eleifend tellus. Sed viverra tempor est at ultricies.
 
 Fusce ultricies vehicula arcu sed mollis. Fusce molestie vitae quam pretium venenatis. Quisque quam massa, iaculis ut orci eu, finibus congue tellus. Sed et nisi vel nisi tempus feugiat sed sed turpis. Fusce interdum odio at purus efficitur euismod. Curabitur at venenatis enim. Nunc luctus augue lectus, vulputate cursus ligula mollis a. Donec hendrerit id mauris mattis convallis. Etiam rutrum aliquet tellus in iaculis.
 

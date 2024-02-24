@@ -19,6 +19,7 @@ import 'package:permission_handler/permission_handler.dart';
 class AppFileService {
   /// Max size in Bytes (default 8MB)
   static const int defaultMaxSize = 8000000;
+
   /// pick file from device with optional parameter 'allowMultiple' if true user can select multi files else can select one file
   /// 'allowAddAttachments' optional parameter contain max size for each file "by default _maxSize = '8000'", and what type of file
   /// should be selected by user 'allowedExtensions'
@@ -159,16 +160,14 @@ class AppFileService {
     );
   }
 
-
   void _showAllowedSizeExceededWarning({
     required List<String> fileHasHugeSize,
     required int maxSize,
   }) {
     if (fileHasHugeSize.isNotEmpty) {
       String filesName = fileHasHugeSize.join(", ");
-      AppSnackBar.showSimpleToast(msg: Translate.s.size_more_than_mg_error((maxSize) / pow(1024, 2), filesName));
+      AppSnackBar.showSimpleToast(
+          msg: Translate.s.size_more_than_mg_error((maxSize) / pow(1024, 2), filesName));
     }
   }
-
 }
-

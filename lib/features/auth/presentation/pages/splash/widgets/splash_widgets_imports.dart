@@ -10,4 +10,3 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 part 'splash_logo.dart';
 
 part 'splash_bottom_item_widget.dart';
-

@@ -1,5 +1,4 @@
-part of'tenant_details_widgets_imports.dart';
-
+part of 'tenant_details_widgets_imports.dart';
 
 class SummaryDetailsWidget extends StatelessWidget {
   final ContractModel model;
@@ -18,9 +17,13 @@ class SummaryDetailsWidget extends StatelessWidget {
             title: Translate.s.contract_end_date,
             value: model.date,
             color: context.colors.bgLight),
-        DetailsItemWidget(image: Res.coinLogo, title: Translate.s.total_contract, value: model.price),
         DetailsItemWidget(
-            image: Res.coinLogo, title: Translate.s.net_contract, value: model.price, color: context.colors.bgLight),
+            image: Res.coinLogo, title: Translate.s.total_contract, value: model.price),
+        DetailsItemWidget(
+            image: Res.coinLogo,
+            title: Translate.s.net_contract,
+            value: model.price,
+            color: context.colors.bgLight),
         DetailsItemWidget(image: Res.coinLogo, title: Translate.s.insurance, value: model.price),
         DetailsItemWidget(
             image: Res.coinLogo,
