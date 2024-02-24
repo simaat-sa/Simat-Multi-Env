@@ -7,8 +7,10 @@ class NoticesLoadingListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      itemCount: 5,
+      itemCount: 10,
       itemBuilder: (context, index) => const NoticesLoadingItem(),
       separatorBuilder: (context, index) => const SizedBox(height: 20),
     );

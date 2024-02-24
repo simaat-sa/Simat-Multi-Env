@@ -32,15 +32,13 @@ class _NoticesScreenState extends State<NoticesScreen> {
           return Visibility(
             visible: isNotEmpty,
             replacement: const NoticesEmptyItemWidget(),
-            child: Flexible(
-              child: ListView(
-                children: [
-                  Gaps.vGap12,
-                  NoticesListItemWidget(
-                    list: data,
-                  ),
-                ],
-              ),
+            child: ListView(
+              children: [
+                Gaps.vGap12,
+                NoticesListItemWidget(
+                  list: data,
+                ),
+              ],
             ),
           );
         },
