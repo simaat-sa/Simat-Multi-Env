@@ -21,7 +21,9 @@ class FilterMaintenanceSelectItemWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: Row(
           children: [
-            SvgPicture.asset(value==changeValue?Res.selectLogo:Res.unselectLogo,),
+            SvgPicture.asset(
+              value == changeValue ? Res.selectLogo : Res.unselectLogo,
+            ),
             Gaps.hGap10,
             Text(
               title,

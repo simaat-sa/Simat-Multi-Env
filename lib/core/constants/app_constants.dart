@@ -6,7 +6,6 @@ class ApplicationConstants {
   static const userSavedModel = 'user_model';
   static const maxFileCount = 500;
 
-
 // Languages
   static const langEN = 'en';
   static const langAR = 'ar';
@@ -17,5 +16,4 @@ class ApplicationConstants {
 
   static const logoVarName = 'icon_g';
   static String logoPathPng = "assets/images/${ApplicationConstants.logoVarName}.png";
-
 }

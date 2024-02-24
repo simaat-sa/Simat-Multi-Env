@@ -16,6 +16,4 @@ extension StringExtension on String? {
     var date = DateTime.fromMillisecondsSinceEpoch(int.parse(this!) * 1000);
     return date.toFormattedString();
   }
-
 }
-

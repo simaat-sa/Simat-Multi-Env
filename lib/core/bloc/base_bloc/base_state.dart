@@ -11,13 +11,13 @@ class BaseState<T> with _$BaseState<T> {
 
   const factory BaseState.loading() = _Loading;
 
-  const factory BaseState.success(bool changed,[T? model]) = _Success<T>;
+  const factory BaseState.success(bool changed, [T? model]) = _Success<T>;
 
   const factory BaseState.failure(BaseError error, VoidCallback callback) = _Failure;
 }
 
 extension BaseStateExt<T> on BaseState<T> {
-  bool get isSuccess => maybeWhen(success: (changed,_) => true, orElse: () => false);
+  bool get isSuccess => maybeWhen(success: (changed, _) => true, orElse: () => false);
   bool get isNotSuccess => !isSuccess;
 
   bool get isLoading => maybeWhen(loading: () => true, orElse: () => false);
@@ -26,11 +26,11 @@ extension BaseStateExt<T> on BaseState<T> {
 
   bool get isInit => maybeWhen(init: () => true, orElse: () => false);
 
-  bool get hasData => maybeWhen(success: (changed,data) => data != null, orElse: () => false);
+  bool get hasData => maybeWhen(success: (changed, data) => data != null, orElse: () => false);
 
   bool get hasNoData => !hasData;
 
-  T? get data => maybeWhen(success: (changed,data) => data, orElse: () => null);
+  T? get data => maybeWhen(success: (changed, data) => data, orElse: () => null);
 
   BaseError? get error => maybeWhen(failure: (error, _) => error, orElse: () => null);
 }

@@ -8,4 +8,3 @@ import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/res.dart';
 
 part 'contract_status_widget.dart';
-

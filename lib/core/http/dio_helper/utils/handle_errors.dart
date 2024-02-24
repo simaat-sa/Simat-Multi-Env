@@ -13,12 +13,9 @@ import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 @lazySingleton
 class HandleErrors {
-  void catchError(
-      {Response? response,
-      required Function(dynamic) errorFunc}) {
+  void catchError({Response? response, required Function(dynamic) errorFunc}) {
     if (response == null) {
       log("failed response Check Server");
       AppSnackBar.showSimpleToast(msg: "Check Server");
@@ -29,7 +26,7 @@ class HandleErrors {
       try {
         if (data is String) data = json.decode(response.data);
         String message = "";
-        if(response.statusCode!=422){
+        if (response.statusCode != 422) {
           message = errorFunc(data).toString();
         }
         switch (response.statusCode) {
@@ -71,11 +68,10 @@ class HandleErrors {
     }
   }
 
-  MyResult<Response> statusError(
-      Response response, Function(dynamic) errorFunc) {
+  MyResult<Response> statusError(Response response, Function(dynamic) errorFunc) {
     if (response.statusCode == 401) {
       return MyResult.isError(UnauthorizedError());
-    }else if (response.statusCode == 404) {
+    } else if (response.statusCode == 404) {
       return MyResult.isError(NotFoundError());
     }
     return MyResult.isSuccess(response);

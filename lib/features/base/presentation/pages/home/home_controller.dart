@@ -10,12 +10,13 @@ class HomeController {
   void initBottomNavigation(TickerProvider ticker, int index) {
     var context = getIt.get<GlobalContext>().context();
     var listAccessUser = context.watch<UserCubit>().state.model!.userAccess;
-    tabController = TabController(length: listAccessUser.take(5).length, vsync: ticker, initialIndex: index);
+    tabController =
+        TabController(length: listAccessUser.take(5).length, vsync: ticker, initialIndex: index);
     tabController.animateTo(index);
     navigationBarObs.setValue(index);
   }
 
-  void changeSelectPage(int index){
+  void changeSelectPage(int index) {
     tabController.animateTo(index);
     navigationBarObs.setValue(index);
   }

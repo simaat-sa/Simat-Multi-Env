@@ -22,19 +22,25 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     var listAccessUser = context.watch<UserCubit>().state.model!.userAccess.take(5).toList();
-    return DefaultTabController(
-      length: listAccessUser.length,
-      initialIndex: widget.index,
-      child: Scaffold(
-        backgroundColor: context.colors.background,
-        body: TabBarView(
-          physics: const NeverScrollableScrollPhysics(),
-          controller: controller.tabController,
-          children: List.generate(listAccessUser.length, (index) {
-            return listAccessUser[index].pageCode.getPage();
-          }),
+    return WillPopScope(
+      onWillPop: () async {
+        SystemNavigator.pop();
+        return true;
+      },
+      child: DefaultTabController(
+        length: listAccessUser.length,
+        initialIndex: widget.index,
+        child: Scaffold(
+          backgroundColor: context.colors.background,
+          body: TabBarView(
+            physics: const NeverScrollableScrollPhysics(),
+            controller: controller.tabController,
+            children: List.generate(listAccessUser.length, (index) {
+              return listAccessUser[index].pageCode.getPage();
+            }),
+          ),
+          bottomNavigationBar: BottomNavBarWidget(controller: controller),
         ),
-       bottomNavigationBar: BottomNavBarWidget(controller: controller),
       ),
     );
   }

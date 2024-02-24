@@ -5,6 +5,4 @@ import 'package:flutter_tdd/features/contract/presentation/manager/routes/contra
 import 'package:flutter_tdd/features/maintenance/presentation/manager/routes/maintenance_routes.dart';
 import 'package:flutter_tdd/features/notification/presentation/manager/routes/notices_routes.dart';
 
-
-
 part 'router.dart';

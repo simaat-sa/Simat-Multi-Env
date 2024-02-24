@@ -31,23 +31,22 @@ class AddMaintenanceSwitchCoastWidget extends StatelessWidget {
             ),
           ),
           ObsValueConsumer(
-            observable: controller. switchObs,
-            builder: (context,value) {
-              return FlutterSwitch(
-                inactiveColor: context.colors.disableGray,
-                activeColor: context.colors.primary,
-                toggleColor: context.colors.white,
-                inactiveToggleColor: context.colors.white,
-                activeSwitchBorder: Border.all(color: context.colors.greyWhite),
-                toggleSize: 22,
-                width: 40,
-                height: 23,
-                padding: 0,
-                value: value,
-                onToggle: (value) =>controller.onChanged(value),
-              );
-            }
-          ),
+              observable: controller.switchObs,
+              builder: (context, value) {
+                return FlutterSwitch(
+                  inactiveColor: context.colors.disableGray,
+                  activeColor: context.colors.primary,
+                  toggleColor: context.colors.white,
+                  inactiveToggleColor: context.colors.white,
+                  activeSwitchBorder: Border.all(color: context.colors.greyWhite),
+                  toggleSize: 22,
+                  width: 40,
+                  height: 23,
+                  padding: 0,
+                  value: value,
+                  onToggle: (value) => controller.onChanged(value),
+                );
+              }),
         ],
       ),
     );

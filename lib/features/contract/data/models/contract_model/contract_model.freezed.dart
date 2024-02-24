@@ -51,14 +51,12 @@ mixin _$ContractModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ContractModelCopyWith<ContractModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ContractModelCopyWith<ContractModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ContractModelCopyWith<$Res> {
-  factory $ContractModelCopyWith(
-          ContractModel value, $Res Function(ContractModel) then) =
+  factory $ContractModelCopyWith(ContractModel value, $Res Function(ContractModel) then) =
       _$ContractModelCopyWithImpl<$Res, ContractModel>;
   @useResult
   $Res call(
@@ -168,8 +166,7 @@ class _$ContractModelCopyWithImpl<$Res, $Val extends ContractModel>
 }
 
 /// @nodoc
-abstract class _$$ContractModelImplCopyWith<$Res>
-    implements $ContractModelCopyWith<$Res> {
+abstract class _$$ContractModelImplCopyWith<$Res> implements $ContractModelCopyWith<$Res> {
   factory _$$ContractModelImplCopyWith(
           _$ContractModelImpl value, $Res Function(_$ContractModelImpl) then) =
       __$$ContractModelImplCopyWithImpl<$Res>;
@@ -288,10 +285,8 @@ class _$ContractModelImpl extends _ContractModel {
       @JsonKey(name: 'tts_code') this.code,
       @JsonKey(name: '', defaultValue: "") required this.unitName,
       @JsonKey(name: 'cal_type') required this.dateType,
-      @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
-      required this.dataTimeHj,
-      @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
-      required this.dataTimeStamp,
+      @JsonKey(name: 'tts_end_date_hj', defaultValue: "") required this.dataTimeHj,
+      @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") required this.dataTimeStamp,
       @JsonKey(name: 'amt_due', defaultValue: "0") required this.price,
       @JsonKey(name: 'tts_validity') required this.status,
       @JsonKey(name: 'contract_type') required this.type,
@@ -360,12 +355,9 @@ class _$ContractModelImpl extends _ContractModel {
             other is _$ContractModelImpl &&
             (identical(other.propId, propId) || other.propId == propId) &&
             (identical(other.code, code) || other.code == code) &&
-            (identical(other.unitName, unitName) ||
-                other.unitName == unitName) &&
-            (identical(other.dateType, dateType) ||
-                other.dateType == dateType) &&
-            (identical(other.dataTimeHj, dataTimeHj) ||
-                other.dataTimeHj == dataTimeHj) &&
+            (identical(other.unitName, unitName) || other.unitName == unitName) &&
+            (identical(other.dateType, dateType) || other.dateType == dateType) &&
+            (identical(other.dataTimeHj, dataTimeHj) || other.dataTimeHj == dataTimeHj) &&
             (identical(other.dataTimeStamp, dataTimeStamp) ||
                 other.dataTimeStamp == dataTimeStamp) &&
             (identical(other.price, price) || other.price == price) &&
@@ -374,30 +366,14 @@ class _$ContractModelImpl extends _ContractModel {
             (identical(other.propLat, propLat) || other.propLat == propLat) &&
             (identical(other.propLng, propLng) || other.propLng == propLng) &&
             (identical(other.propImg, propImg) || other.propImg == propImg) &&
-            (identical(other.propCity, propCity) ||
-                other.propCity == propCity) &&
-            (identical(other.propRegion, propRegion) ||
-                other.propRegion == propRegion));
+            (identical(other.propCity, propCity) || other.propCity == propCity) &&
+            (identical(other.propRegion, propRegion) || other.propRegion == propRegion));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      propId,
-      code,
-      unitName,
-      dateType,
-      dataTimeHj,
-      dataTimeStamp,
-      price,
-      status,
-      type,
-      propLat,
-      propLng,
-      propImg,
-      propCity,
-      propRegion);
+  int get hashCode => Object.hash(runtimeType, propId, code, unitName, dateType, dataTimeHj,
+      dataTimeStamp, price, status, type, propLat, propLng, propImg, propCity, propRegion);
 
   @JsonKey(ignore: true)
   @override
@@ -415,30 +391,24 @@ class _$ContractModelImpl extends _ContractModel {
 
 abstract class _ContractModel extends ContractModel {
   factory _ContractModel(
-      {@JsonKey(name: 'prop_id', defaultValue: "") required final String propId,
-      @JsonKey(name: 'tts_code') final String? code,
-      @JsonKey(name: '', defaultValue: "") required final String unitName,
-      @JsonKey(name: 'cal_type') required final DateTypes dateType,
-      @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
-      required final String dataTimeHj,
-      @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
-      required final String dataTimeStamp,
-      @JsonKey(name: 'amt_due', defaultValue: "0") required final String price,
-      @JsonKey(name: 'tts_validity') required final TenantVisibility status,
-      @JsonKey(name: 'contract_type') required final ContractTypes type,
-      @JsonKey(name: 'prop_lat', defaultValue: "")
-      required final String propLat,
-      @JsonKey(name: 'prop_lng', defaultValue: "")
-      required final String propLng,
-      @JsonKey(name: 'prop_img') final String? propImg,
-      @JsonKey(name: 'prop_city', defaultValue: "")
-      required final String propCity,
-      @JsonKey(name: 'prop_region', defaultValue: "")
-      required final String propRegion}) = _$ContractModelImpl;
+          {@JsonKey(name: 'prop_id', defaultValue: "") required final String propId,
+          @JsonKey(name: 'tts_code') final String? code,
+          @JsonKey(name: '', defaultValue: "") required final String unitName,
+          @JsonKey(name: 'cal_type') required final DateTypes dateType,
+          @JsonKey(name: 'tts_end_date_hj', defaultValue: "") required final String dataTimeHj,
+          @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") required final String dataTimeStamp,
+          @JsonKey(name: 'amt_due', defaultValue: "0") required final String price,
+          @JsonKey(name: 'tts_validity') required final TenantVisibility status,
+          @JsonKey(name: 'contract_type') required final ContractTypes type,
+          @JsonKey(name: 'prop_lat', defaultValue: "") required final String propLat,
+          @JsonKey(name: 'prop_lng', defaultValue: "") required final String propLng,
+          @JsonKey(name: 'prop_img') final String? propImg,
+          @JsonKey(name: 'prop_city', defaultValue: "") required final String propCity,
+          @JsonKey(name: 'prop_region', defaultValue: "") required final String propRegion}) =
+      _$ContractModelImpl;
   _ContractModel._() : super._();
 
-  factory _ContractModel.fromJson(Map<String, dynamic> json) =
-      _$ContractModelImpl.fromJson;
+  factory _ContractModel.fromJson(Map<String, dynamic> json) = _$ContractModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'prop_id', defaultValue: "")

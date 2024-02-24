@@ -1,5 +1,4 @@
-part of'tenant_details_widgets_imports.dart';
-
+part of 'tenant_details_widgets_imports.dart';
 
 class SummaryCostTitleWidget extends StatelessWidget {
   const SummaryCostTitleWidget({super.key});
@@ -9,8 +8,14 @@ class SummaryCostTitleWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('المبلغ المستحق',style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),),
-        Text('عرض المدفوعات',style: AppTextStyle.s14_w400(color: context.colors.primaryText),),
+        Text(
+          'المبلغ المستحق',
+          style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
+        ),
+        Text(
+          'عرض المدفوعات',
+          style: AppTextStyle.s14_w400(color: context.colors.primaryText),
+        ),
       ],
     );
   }

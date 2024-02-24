@@ -7,7 +7,6 @@ import 'package:flutter_tdd/features/auth/data/models/user_model/user_model.dart
 import 'package:flutter_tdd/features/auth/domain/entity/login_params.dart';
 
 class UserHelperService {
-
   UserHelperService._();
 
   static UserHelperService instance = UserHelperService._();
@@ -20,7 +19,8 @@ class UserHelperService {
   }
 
   Future<UserModel?> getUserData() async {
-    String? userString = await getIt<SharedPrefService>().getString(ApplicationConstants.userSavedModel);
+    String? userString =
+        await getIt<SharedPrefService>().getString(ApplicationConstants.userSavedModel);
     if (userString != null) {
       return UserModel.fromJson(jsonDecode(userString));
     }
@@ -35,11 +35,11 @@ class UserHelperService {
   }
 
   Future<LoginParams?> getUserCredentials() async {
-    String? userString = await getIt<SharedPrefService>().getString(ApplicationConstants.userCredential);
+    String? userString =
+        await getIt<SharedPrefService>().getString(ApplicationConstants.userCredential);
     if (userString != null) {
       return LoginParams.fromJson(jsonDecode(userString));
     }
     return null;
   }
-
 }

@@ -5,7 +5,6 @@ import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/m
 import 'package:flutter_tdd/features/maintenance/domain/repositories/maintenance_repository.dart';
 
 class MaintenanceRequester extends Requester<List<MaintenanceModel>> {
-
   List<MaintenanceModel> _listContract = [];
 
   void setLoadingState() {
@@ -28,19 +27,17 @@ class MaintenanceRequester extends Requester<List<MaintenanceModel>> {
     );
   }
 
-
   void applyContractFilter(ContractStatus status, String searchText) {
     final list = _listContract.where((element) {
-      final textSearch = element.code.contains(searchText.trim()) || element.unitName.contains(searchText.trim());
+      final textSearch =
+          element.code.contains(searchText.trim()) || element.unitName.contains(searchText.trim());
       final statusCheck = status == ContractStatus.non ? true : element.status == status;
       return statusCheck && textSearch;
     }).toList();
     successState(list);
   }
 
-
   void resetFilter() {
     successState(_listContract);
   }
-
 }

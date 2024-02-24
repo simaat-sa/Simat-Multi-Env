@@ -31,39 +31,39 @@ class AppDropDownButton<T> extends StatefulWidget {
 class _AppDropDownButtonState<T> extends State<AppDropDownButton<T>> {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<OptionController<T>,OptionControllerState<T>>(
-      bloc: widget.controller,
-      builder: (context,state) {
-        return OptionButtonDecoration(
-          startPadding: 12,
-          child: DropdownButton<T>(
-            items: widget.items?.map((e) {
-                  return DropdownMenuItem<T>(
-                    value: e,
-                    onTap: () {
-                      widget.onChanged?.call(e);
-                    },
-                    child: widget.itemBuilder(context, e),
-                  );
-                }).toList() ??
-                [],
-            onChanged: _onChanged,
-            isExpanded: true,
-            borderRadius: Dimens.borderRadius5PX,
-            value: state.selectedValue,
-            underline: const SizedBox(),
-            hint: Text(
-              widget.hintText,
-              style: AppTextStyle.s12_w400(color: context.colors.blackOpacity),
+    return BlocBuilder<OptionController<T>, OptionControllerState<T>>(
+        bloc: widget.controller,
+        builder: (context, state) {
+          return OptionButtonDecoration(
+            startPadding: 12,
+            child: DropdownButton<T>(
+              items: widget.items?.map((e) {
+                    return DropdownMenuItem<T>(
+                      value: e,
+                      onTap: () {
+                        widget.onChanged?.call(e);
+                      },
+                      child: widget.itemBuilder(context, e),
+                    );
+                  }).toList() ??
+                  [],
+              onChanged: _onChanged,
+              isExpanded: true,
+              borderRadius: Dimens.borderRadius5PX,
+              value: state.selectedValue,
+              underline: const SizedBox(),
+              hint: Text(
+                widget.hintText,
+                style: AppTextStyle.s12_w400(color: context.colors.blackOpacity),
+              ),
+              icon: Icon(Icons.keyboard_arrow_down_rounded,
+                  size: 20, color: context.colors.secondary),
+              elevation: 1,
+              dropdownColor: context.colors.white,
+              selectedItemBuilder: widget.selectedItemBuilder,
             ),
-            icon: Icon(Icons.keyboard_arrow_down_rounded, size: 20, color: context.colors.secondary),
-            elevation: 1,
-            dropdownColor: context.colors.white,
-            selectedItemBuilder: widget.selectedItemBuilder,
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
   void _onChanged(T? value) {

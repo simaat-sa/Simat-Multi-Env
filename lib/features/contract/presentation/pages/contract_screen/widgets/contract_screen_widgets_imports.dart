@@ -11,5 +11,4 @@ import 'package:flutter_tdd/features/base/presentation/widgets/filter_input_widg
 import 'package:flutter_tdd/features/contract/data/models/contract_model/contract_model.dart';
 import 'package:flutter_tdd/res.dart';
 
-
 part 'contract_item_widget.dart';

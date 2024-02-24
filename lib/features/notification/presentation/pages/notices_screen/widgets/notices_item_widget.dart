@@ -10,19 +10,20 @@ class NoticesItemWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 12),
       decoration: BoxDecoration(
         color: context.colors.white,
-        border:Border(bottom: BorderSide(color: context.colors.background)),
+        border: Border(bottom: BorderSide(color: context.colors.background)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 8,
-            width: 8,
-            decoration: BoxDecoration(
-              color: context.colors.secondary,
-              shape: BoxShape.circle,
+          if (false)
+            Container(
+              height: 8,
+              width: 8,
+              decoration: BoxDecoration(
+                color: context.colors.secondary,
+                shape: BoxShape.circle,
+              ),
             ),
-          ),
           Gaps.hGap12,
           Expanded(
             child: Column(
@@ -35,7 +36,8 @@ class NoticesItemWidget extends StatelessWidget {
                 Gaps.vGap5,
                 Text(
                   model.alertBody,
-                  style: AppTextStyle.s14_w400(color: context.colors.darkTextColor).copyWith(height: 1.5),
+                  style: AppTextStyle.s14_w400(color: context.colors.darkTextColor)
+                      .copyWith(height: 1.5),
                 ),
               ],
             ),

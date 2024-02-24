@@ -59,7 +59,7 @@ class PaymentItemWidget extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          model.amtBalance,
+                          model.duePrice,
                           style: AppTextStyle.s18_w500(color: context.colors.green3),
                         ),
                         Text(
@@ -92,7 +92,8 @@ class PaymentItemWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                SvgPicture.asset(model.selected??false?Res.selectLogo:Res.unselectLogo, height: 21, width: 21),
+                SvgPicture.asset(model.selected ?? false ? Res.selectLogo : Res.unselectLogo,
+                    height: 21, width: 21),
               ],
             ),
           ],

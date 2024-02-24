@@ -11,8 +11,7 @@ class AuthDrawerWidget extends StatelessWidget {
   final Function()? onChangeLanguage;
   final ObsValue<bool>? showDropDawnCubit;
 
-  const AuthDrawerWidget(
-      {super.key, this.onChangeLanguage, this.showDropDawnCubit});
+  const AuthDrawerWidget({super.key, this.onChangeLanguage, this.showDropDawnCubit});
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +41,7 @@ class AuthDrawerWidget extends StatelessWidget {
             Flexible(
               child: ListView(
                 physics: const BouncingScrollPhysics(),
-                padding: EdgeInsetsDirectional.symmetric(
-                    horizontal: 20.r, vertical: 25.r),
+                padding: EdgeInsetsDirectional.symmetric(horizontal: 20.r, vertical: 25.r),
                 children: [
                   ObsValueConsumer(
                     observable: showDropDawnCubit!,
@@ -53,8 +51,7 @@ class AuthDrawerWidget extends StatelessWidget {
                         child: Column(
                           children: [
                             AuthDrawerItemWidget(
-                              padding: EdgeInsetsDirectional.only(
-                                  bottom: state ? 20 : 30),
+                              padding: EdgeInsetsDirectional.only(bottom: state ? 20 : 30),
                               icon: state
                                   ? Icons.keyboard_arrow_down
                                   : Icons.arrow_forward_ios_outlined,
@@ -70,8 +67,7 @@ class AuthDrawerWidget extends StatelessWidget {
                                     padding: const EdgeInsetsDirectional.only(
                                         start: 20, end: 20, bottom: 10),
                                     child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           'English',

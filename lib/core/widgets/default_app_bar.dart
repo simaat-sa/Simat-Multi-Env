@@ -28,7 +28,7 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(
         title,
-        style: AppTextStyle.s18_w500(color: context.colors.black),
+        style: AppTextStyle.s24_w500(color: context.colors.black),
       ),
       centerTitle: centerTitle ?? true,
       systemOverlayStyle: const SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
@@ -39,18 +39,18 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
       automaticallyImplyLeading: leading != null,
       actions: [
         ...actions,
-        if(showBack == true)
-        InkWell(
-          onTap: ()=> Navigator.of(context).pop(),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Icon(
-              Icons.arrow_forward_ios_outlined,
-              color: context.colors.darkTextColor,
-              size: 23,
+        if (showBack == true)
+          InkWell(
+            onTap: () => Navigator.of(context).pop(),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Icon(
+                Icons.arrow_forward_ios_outlined,
+                color: context.colors.darkTextColor,
+                size: 24,
+              ),
             ),
           ),
-        ),
       ],
     );
   }

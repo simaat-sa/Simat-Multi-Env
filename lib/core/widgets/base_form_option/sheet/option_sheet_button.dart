@@ -70,74 +70,75 @@ class OptionSheetButtonState<T> extends State<OptionSheetButton<T>> {
     return IgnorePointer(
       ignoring: widget.isViewMode,
       child: FormField<T>(
-        enabled: !widget.isRequired,
-        initialValue: widget.controller.selectedValue,
-        validator: (value) {
-          if (widget.isRequired && ((widget.controller.selectedValue as List? )?.isEmpty == true || widget.controller.selectedValue == null)) {
-            return Translate.of(context).fillField;
-          }
-          return null;
-        },
-        builder: (state) {
-          return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              OptionsButton<T>(
-                hintText: widget.hintText,
-                controller: widget.controller,
-                valueBuilder: widget.valueBuilder,
-                iconPath: widget.iconPath,
-                customSuffixIcon: widget.customSuffixIcon,
-                showDecoration: widget.showDecoration,
-                onClearPressed: widget.onClearPressed,
-                showClearIcon: true,
-                constraints: widget.constraints,
-                border: widget.border,
-                onPressed: () {
-                  if (!widget.disable) {
-                    if (widget.onSearch != null) {
-                      widget.onSearch!("");
+          enabled: !widget.isRequired,
+          initialValue: widget.controller.selectedValue,
+          validator: (value) {
+            if (widget.isRequired &&
+                ((widget.controller.selectedValue as List?)?.isEmpty == true ||
+                    widget.controller.selectedValue == null)) {
+              return Translate.of(context).fillField;
+            }
+            return null;
+          },
+          builder: (state) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                OptionsButton<T>(
+                  hintText: widget.hintText,
+                  controller: widget.controller,
+                  valueBuilder: widget.valueBuilder,
+                  iconPath: widget.iconPath,
+                  customSuffixIcon: widget.customSuffixIcon,
+                  showDecoration: widget.showDecoration,
+                  onClearPressed: widget.onClearPressed,
+                  showClearIcon: true,
+                  constraints: widget.constraints,
+                  border: widget.border,
+                  onPressed: () {
+                    if (!widget.disable) {
+                      if (widget.onSearch != null) {
+                        widget.onSearch!("");
+                      }
+                      if (widget.onTap != null) {
+                        widget.onTap!();
+                      }
+                      showOptionsSheet(context);
                     }
-                    if (widget.onTap != null) {
-                      widget.onTap!();
-                    }
-                    showOptionsSheet(context);
-                  }
-                },
-              ),
-              if (state.errorText != null)
-                Padding(
-                  padding: const EdgeInsetsDirectional.only(start: 20, top: 5),
-                  child: Text(
-                    state.errorText!,
-                    style: const AppTextStyle.s12_w400(
-                      color: AppColors.snackBarRedError,
+                  },
+                ),
+                if (state.errorText != null)
+                  Padding(
+                    padding: const EdgeInsetsDirectional.only(start: 20, top: 5),
+                    child: Text(
+                      state.errorText!,
+                      style: const AppTextStyle.s12_w400(
+                        color: AppColors.snackBarRedError,
+                      ),
                     ),
                   ),
-                ),
-            ],
-          );
-        }
-      ),
+              ],
+            );
+          }),
     );
   }
 
   void showOptionsSheet(BuildContext context) {
     AppBottomSheets.showOptionsBottomSheet(
-            bottomSheetTitle: widget.bottomSheetTitle,
-            showSearch: widget.showSearch,
-            onSaveTextPressed: () {
-              widget.onSaveTextPressed();
-            },
-            controller: widget.controller,
-            contentBuilder: widget.content,
-            customSaveText: widget.customSaveText,
-            onSearch: widget.onSearch,
-            height: widget.sheetHeight,
-            addNewOptionEnabledObs: widget.addNewOptionEnabledObs?? ObsValue.withInit(false),
-            addNewOptionButtonText: widget.addNewOptionButtonText,
-            onAddNewOptionPressed: widget.onAddNewOptionPressed,
-            isViewMode: widget.isViewMode,
-            context: context);
+        bottomSheetTitle: widget.bottomSheetTitle,
+        showSearch: widget.showSearch,
+        onSaveTextPressed: () {
+          widget.onSaveTextPressed();
+        },
+        controller: widget.controller,
+        contentBuilder: widget.content,
+        customSaveText: widget.customSaveText,
+        onSearch: widget.onSearch,
+        height: widget.sheetHeight,
+        addNewOptionEnabledObs: widget.addNewOptionEnabledObs ?? ObsValue.withInit(false),
+        addNewOptionButtonText: widget.addNewOptionButtonText,
+        onAddNewOptionPressed: widget.onAddNewOptionPressed,
+        isViewMode: widget.isViewMode,
+        context: context);
   }
 }

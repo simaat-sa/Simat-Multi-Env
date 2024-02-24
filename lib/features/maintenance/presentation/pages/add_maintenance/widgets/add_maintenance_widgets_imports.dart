@@ -22,8 +22,6 @@ import 'package:flutter_tdd/features/maintenance/domain/repositories/maintenance
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance/add_maintenance_imports.dart';
 import 'package:flutter_tdd/res.dart';
 
-
-
 part 'add_maintenance_form_widget.dart';
 part 'add_maintenance_switch_coast_widget.dart';
 part 'add_maintenance_desc_widget.dart';

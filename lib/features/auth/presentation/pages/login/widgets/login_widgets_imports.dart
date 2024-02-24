@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,7 +11,6 @@ import 'package:flutter_tdd/core/widgets/GenericTextField.dart';
 import 'package:flutter_tdd/core/widgets/app_button.dart';
 import 'package:flutter_tdd/res.dart';
 import '../login_imports.dart';
-
 
 part 'login_form_widget.dart';
 part 'login_button_widget.dart';

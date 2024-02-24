@@ -1,5 +1,4 @@
-part of'payment_widgets_imports.dart';
-
+part of 'payment_widgets_imports.dart';
 
 class PaymentHeaderWidget extends StatelessWidget {
   final ContractModel model;
@@ -9,10 +8,8 @@ class PaymentHeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
-            Translate.s.contract,
-            style: AppTextStyle.s16_w400(color: context.colors.darkTextColor)
-        ),
+        Text(Translate.s.contract,
+            style: AppTextStyle.s16_w400(color: context.colors.darkTextColor)),
         Gaps.hGap12,
         Container(
           alignment: Alignment.center,
@@ -21,8 +18,7 @@ class PaymentHeaderWidget extends StatelessWidget {
           decoration: BoxDecoration(
               color: Colors.transparent,
               borderRadius: BorderRadius.circular(5),
-              border: Border.all(color: context.colors.primary)
-          ),
+              border: Border.all(color: context.colors.primary)),
           child: Text(
             "#${model.code}",
             style: AppTextStyle.s14_w500(color: context.colors.primary).copyWith(height: 2),

@@ -5,8 +5,7 @@ import 'base_error.dart';
 class BadRequestError extends BaseError {
   final String? msg;
 
-   BadRequestError({this.msg}):super(msg??Translate.s.error_BadRequest_Error);
-
+  BadRequestError({this.msg}) : super(msg ?? Translate.s.error_BadRequest_Error);
 
   @override
   bool operator ==(Object other) =>

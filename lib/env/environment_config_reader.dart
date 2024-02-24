@@ -1,4 +1,3 @@
-
 import 'package:flutter_tdd/core/models/localized_name_model/localized_name_model.dart';
 
 import 'app_env_type.dart';

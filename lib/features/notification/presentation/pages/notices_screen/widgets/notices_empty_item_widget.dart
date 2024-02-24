@@ -6,7 +6,7 @@ class NoticesEmptyItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 50,vertical: 150),
+      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 150),
       child: Column(
         children: [
           SvgPicture.asset(

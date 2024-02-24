@@ -7,20 +7,21 @@ import '../../models/http_request_model.dart';
 
 @lazySingleton
 class HandleJsonResponse<T> {
-  Future<MyResult<T>> call(MyResult<Response> response,
-      ResType responseType,
-      ToJsonFunc toJsonFunc,
-      ResponseKeyFunc? dataKeyFun,
-      ResponseKeyFunc? errorFunc,
-      ) async {
+  Future<MyResult<T>> call(
+    MyResult<Response> response,
+    ResType responseType,
+    ToJsonFunc toJsonFunc,
+    ResponseKeyFunc? dataKeyFun,
+    ResponseKeyFunc? errorFunc,
+  ) async {
     try {
       return response.when(
         isSuccess: (successData) {
           var responseData = successData?.data;
           switch (responseType) {
             case ResType.type:
-              var data = dataKeyFun == null ? responseData : Function.apply(
-                  dataKeyFun, [responseData]);
+              var data =
+                  dataKeyFun == null ? responseData : Function.apply(dataKeyFun, [responseData]);
               return MyResult.isSuccess(data);
             case ResType.model:
               var data = Function.apply(toJsonFunc, [
@@ -39,8 +40,7 @@ class HandleJsonResponse<T> {
         },
       );
     } catch (e) {
-      var message = errorFunc == null ? e.toString() : Function.apply(
-          errorFunc, [response.data]);
+      var message = errorFunc == null ? e.toString() : Function.apply(errorFunc, [response.data]);
       return MyResult.isError(BaseError.unknown(msg: message.toString()));
     }
   }

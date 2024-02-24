@@ -18,7 +18,7 @@ class FilterItemWidget extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 15),
       child: Row(
         children: [
-           Expanded(
+          Expanded(
             child: SearchFormField(
               onChange: onChange,
               onSubmit: onSubmit,

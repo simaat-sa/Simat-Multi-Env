@@ -2,7 +2,7 @@ part of 'tenant_details_widgets_imports.dart';
 
 class RenewContractItemWidget extends StatelessWidget {
   final ContractDetailsController controller;
-  const RenewContractItemWidget({super.key,required this.controller});
+  const RenewContractItemWidget({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class RenewContractItemWidget extends StatelessWidget {
           Expanded(
             flex: 4,
             child: InkWell(
-              onTap: ()=> controller.renewContract(context),
+              onTap: () => controller.renewContract(context),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

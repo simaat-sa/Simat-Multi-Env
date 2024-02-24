@@ -11,15 +11,13 @@ import '../utils/handle_errors.dart';
 
 @lazySingleton
 class Delete extends DioHelper {
-
   @override
-  Future<MyResult<Response>> call(
-      RequestBodyModel params) async {
+  Future<MyResult<Response>> call(RequestBodyModel params) async {
     if (params.showLoader) getIt<LoadingHelper>().showLoadingDialog();
     try {
       var response = await dio.delete(params.url, data: params.body);
       if (params.showLoader) getIt<LoadingHelper>().dismissDialog();
-      return getIt<HandleErrors>().statusError(response,params.errorFunc);
+      return getIt<HandleErrors>().statusError(response, params.errorFunc);
     } on DioException catch (e) {
       if (params.showLoader) getIt<LoadingHelper>().dismissDialog();
       getIt<HandleErrors>().catchError(errorFunc: params.errorFunc, response: e.response);

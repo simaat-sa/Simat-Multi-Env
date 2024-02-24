@@ -6,6 +6,7 @@ import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 class AppTextSpanWithSeparator extends StatelessWidget {
   final List<TextSpanItem> textsItems;
   final TextStyle? style;
+
   ///to separate between texts
   final String? separator;
 

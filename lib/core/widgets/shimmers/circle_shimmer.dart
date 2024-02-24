@@ -13,7 +13,7 @@ class CircleShimmer extends StatelessWidget {
       child: Container(
         width: radius,
         height: radius,
-        decoration:  BoxDecoration(
+        decoration: BoxDecoration(
           color: context.colors.white,
           shape: BoxShape.circle,
         ),

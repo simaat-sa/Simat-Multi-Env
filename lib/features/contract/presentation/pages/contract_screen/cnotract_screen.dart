@@ -32,7 +32,8 @@ class _ContractScreenState extends State<ContractScreen> {
                     controller.searchText = value;
                     controller.onFilter();
                   },
-                  onTap: () => AutoRouter.of(context).push(FilterContractRoute(controller: controller)),
+                  onTap: () =>
+                      AutoRouter.of(context).push(FilterContractRoute(controller: controller)),
                 ),
                 PageHeaderTitleWidget(
                   title: Translate.of(context).contractsCount([data.length]),

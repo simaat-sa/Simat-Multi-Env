@@ -8,7 +8,6 @@ import 'package:flutter_tdd/core/widgets/base_form_option/controller/option_cont
 import 'package:flutter_tdd/core/widgets/base_form_option/sheet/option_sheet_content.dart';
 import 'package:get_it/get_it.dart';
 
-
 abstract class AppBottomSheets {
   const AppBottomSheets._();
 
@@ -102,7 +101,6 @@ abstract class AppBottomSheets {
       },
     );
   }
-
 }
 
 class SheetActionButton {

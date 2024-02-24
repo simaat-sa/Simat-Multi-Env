@@ -14,16 +14,13 @@ import 'package:flutter_tdd/features/auth/presentation/pages/active_account/acti
     as _i1;
 import 'package:flutter_tdd/features/auth/presentation/pages/forget_password/forget_password_imports.dart'
     as _i7;
-import 'package:flutter_tdd/features/auth/presentation/pages/login/login_imports.dart'
-    as _i9;
+import 'package:flutter_tdd/features/auth/presentation/pages/login/login_imports.dart' as _i9;
 import 'package:flutter_tdd/features/auth/presentation/pages/reset_password/reset_password_imports.dart'
     as _i12;
-import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_imports.dart'
-    as _i13;
+import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_imports.dart' as _i13;
 import 'package:flutter_tdd/features/auth/presentation/pages/verify_otp/verify_otp_imports.dart'
     as _i15;
-import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart'
-    as _i8;
+import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart' as _i8;
 import 'package:flutter_tdd/features/contract/data/models/contract_model/contract_model.dart'
     as _i19;
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_details/contract_details_imports.dart'
@@ -34,15 +31,14 @@ import 'package:flutter_tdd/features/contract/presentation/pages/filter_contract
     as _i5;
 import 'package:flutter_tdd/features/contract/presentation/pages/renew_contract_status/renew_contract_status_imports.dart'
     as _i11;
-import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart'
-    as _i14;
+import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart' as _i14;
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart'
     as _i18;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance/add_maintenance_imports.dart'
     as _i2;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance_status/add_maintenance_status_imports.dart'
     as _i3;
-import 'package:flutter_tdd/features/maintenance/presentation/pages/filter_contract/filter_maintenance_imports.dart'
+import 'package:flutter_tdd/features/maintenance/presentation/pages/filter_maintenance/filter_maintenance_imports.dart'
     as _i6;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/maintenance_screen/maintenance_screen_imports.dart'
     as _i21;
@@ -202,8 +198,7 @@ class AddMaintenanceRoute extends _i16.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.CompleteAddMaintenance]
-class CompleteAddMaintenanceRoute
-    extends _i16.PageRouteInfo<CompleteAddMaintenanceRouteArgs> {
+class CompleteAddMaintenanceRoute extends _i16.PageRouteInfo<CompleteAddMaintenanceRouteArgs> {
   CompleteAddMaintenanceRoute({
     _i17.Key? key,
     _i18.MaintenanceModel? model,
@@ -241,8 +236,7 @@ class CompleteAddMaintenanceRouteArgs {
 
 /// generated route for
 /// [_i4.ContractDetails]
-class ContractDetailsRoute
-    extends _i16.PageRouteInfo<ContractDetailsRouteArgs> {
+class ContractDetailsRoute extends _i16.PageRouteInfo<ContractDetailsRouteArgs> {
   ContractDetailsRoute({
     _i17.Key? key,
     required _i19.ContractModel model,
@@ -318,8 +312,7 @@ class FilterContractRouteArgs {
 
 /// generated route for
 /// [_i6.FilterMaintenance]
-class FilterMaintenanceRoute
-    extends _i16.PageRouteInfo<FilterMaintenanceRouteArgs> {
+class FilterMaintenanceRoute extends _i16.PageRouteInfo<FilterMaintenanceRouteArgs> {
   FilterMaintenanceRoute({
     _i17.Key? key,
     required _i21.MaintenanceController controller,
@@ -436,8 +429,7 @@ class NoticesScreenRoute extends _i16.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i11.RenewContractStatus]
-class RenewContractStatusRoute
-    extends _i16.PageRouteInfo<RenewContractStatusRouteArgs> {
+class RenewContractStatusRoute extends _i16.PageRouteInfo<RenewContractStatusRouteArgs> {
   RenewContractStatusRoute({
     _i17.Key? key,
     required bool success,

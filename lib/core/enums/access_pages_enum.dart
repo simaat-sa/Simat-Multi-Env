@@ -205,7 +205,7 @@ enum AccessPages {
   Widget getPage() {
     if (this == AccessPages.SS_TENANT) {
       return const ContractScreen();
-    } else if(this == AccessPages.PLT_MAINT){
+    } else if (this == AccessPages.PLT_MAINT) {
       return const MaintenanceScreen();
     }
     return Container();

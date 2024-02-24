@@ -75,9 +75,7 @@ class _SearchFormFieldState extends State<SearchFormField> {
       child: TextField(
         focusNode: _focusNode,
         controller: _searchController,
-        style: TextStyle(
-          color: context.colors.darkTextColor
-        ),
+        style: TextStyle(color: context.colors.darkTextColor),
         maxLines: 1,
         onChanged: widget.onChange,
         textInputAction: TextInputAction.search,
@@ -92,13 +90,13 @@ class _SearchFormFieldState extends State<SearchFormField> {
             ),
             suffixIcon: _isSearchFieldExpand
                 ? InkWell(
-              onTap: () {
-                _searchController.clear();
-                widget.onSubmit?.call(_searchController.text);
-                _unfocus(context);
-              },
-              child: Icon(Icons.clear, color: AppColors.of(context).darkTextColor, size: 20),
-            )
+                    onTap: () {
+                      _searchController.clear();
+                      widget.onSubmit?.call(_searchController.text);
+                      _unfocus(context);
+                    },
+                    child: Icon(Icons.clear, color: AppColors.of(context).darkTextColor, size: 20),
+                  )
                 : null,
             prefixIcon: InkWell(
               onTap: () {

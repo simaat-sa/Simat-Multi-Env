@@ -25,8 +25,7 @@ class FilterSelectStatusWidget extends StatelessWidget {
               );
             }),
           ]);
-      }
-    );
+        });
   }
 
   String title(TenantVisibility tenantVisibility) {

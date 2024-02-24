@@ -18,7 +18,6 @@ class LocalizedNameModel {
     return LocalizedNameModel(contentJson);
   }
 
-
   factory LocalizedNameModel.fromJson(json) {
     return LocalizedNameModel(json);
   }
@@ -38,6 +37,7 @@ class LocalizedNameModel {
     }
     return null;
   }
+
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -53,8 +53,6 @@ class LocalizedNameModel {
 
   @override
   int get hashCode => jsonValue.hashCode;
-
-
 }
 
 LocalizedNameModel localizedNameModelFromJson(dynamic json) {

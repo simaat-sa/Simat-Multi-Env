@@ -14,7 +14,8 @@ class ForgetPasswordButtonWidget extends StatelessWidget {
         bgColor: context.colors.secondary,
         txtColor: context.colors.white,
         textSize: 14,
-        maxHeight: 45, text: 'SEND OTP',
+        maxHeight: 45,
+        text: 'SEND OTP',
       ),
     );
   }

@@ -8,7 +8,7 @@ class PaymentPriceDetailsItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Visibility(
-      visible: controller.getTotalPrice()>0,
+      visible: controller.getTotalPrice() > 0,
       child: Column(
         children: [
           Gaps.vGap10,

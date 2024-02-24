@@ -14,14 +14,12 @@ class _VerifyOTPState extends State<VerifyOTP> {
   Widget build(BuildContext context) {
     return AuthScaffoldWidget(
       scaffoldKey: controller.drawerKey,
-      appBar: AuthAppBarWidget( scaffoldkey: controller.drawerKey,title: "Verify OTP"),
+      appBar: AuthAppBarWidget(scaffoldkey: controller.drawerKey, title: "Verify OTP"),
       body: GestureDetector(
         onTap: FocusScope.of(context).unfocus,
         child: ListView(
-          padding: const EdgeInsets.symmetric(
-              horizontal: 25,vertical: 20
-          ),
-          children:  [
+          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+          children: [
             const VerifyHeaderWidget(),
             Column(
               children: [

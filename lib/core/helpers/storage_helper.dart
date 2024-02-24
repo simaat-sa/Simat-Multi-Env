@@ -1,14 +1,11 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-
-
-class StorageHelper{
-
+class StorageHelper {
   StorageHelper._();
 
   static StorageHelper get instance => StorageHelper._();
 
-  void clearSavedData()async{
+  void clearSavedData() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     pref.clear();
   }
@@ -17,7 +14,7 @@ class StorageHelper{
     var sb = StringBuffer();
     for (int i = 0; i < text.length; i++) {
       switch (text[i]) {
-      //Arabic digits
+        //Arabic digits
         case '\u0660':
           sb.write('0');
           break;
@@ -55,5 +52,4 @@ class StorageHelper{
     }
     return sb.toString();
   }
-
 }

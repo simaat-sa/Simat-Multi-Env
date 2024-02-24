@@ -28,26 +28,20 @@ class ContractDetailsController {
     }
   }
 
-  void onSelectedItem(PaymentModel item) {
-    item.selected = !(item.selected ?? false);
-    requester.successState(requester.data!);
-  }
-
   Future<void> getContractPayment() async {
     await requester.request();
   }
 
-num getTax(){
-    final list = requester.data!.where((element) => element.selected==true).toList();
-    num value = list.fold(0, (previousValue, element) =>previousValue+num.parse(element.amtTax));
+  num getTax() {
+    final list = requester.data!.where((element) => element.selected == true).toList();
+    num value = list.fold(0, (previousValue, element) => previousValue + num.parse(element.amtTax));
     return value;
-}
+  }
 
-
-num getTotalPrice(){
-    final list = requester.data!.where((element) => element.selected==true).toList();
-    num value = list.fold(0, (previousValue, element) =>previousValue+num.parse(element.amtTot));
+  num getTotalPrice() {
+    final list = requester.data!.where((element) => element.selected == true).toList();
+    num value =
+        list.fold(0, (previousValue, element) => previousValue + num.parse(element.duePrice));
     return value;
-}
-
+  }
 }

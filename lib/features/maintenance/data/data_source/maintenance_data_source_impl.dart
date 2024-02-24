@@ -34,7 +34,8 @@ class MaintenanceDataSourceImpl extends MaintenanceDataSource {
       refresh: params,
       responseKey: (data) => data['data'],
       toJsonFunc: (data) {
-        return List<MaintenanceServicesModel>.from(data.map((e) => MaintenanceServicesModel.fromJson(e)));
+        return List<MaintenanceServicesModel>.from(
+            data.map((e) => MaintenanceServicesModel.fromJson(e)));
       },
     );
     return GenericHttpImpl<List<MaintenanceServicesModel>>()(model);

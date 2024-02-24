@@ -19,7 +19,7 @@ enum ContractTypes {
     return non;
   }
 
-  String getLocalizedName(){
+  String getLocalizedName() {
     switch (this) {
       case ContractTypes.residential:
         return Translate.s.residential;
@@ -29,5 +29,4 @@ enum ContractTypes {
         return "";
     }
   }
-
 }

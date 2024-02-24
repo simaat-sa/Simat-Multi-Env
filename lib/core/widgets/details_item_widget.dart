@@ -12,13 +12,19 @@ class DetailsItemWidget extends StatelessWidget {
   final String image;
   final TextStyle? valueStyle;
 
-  const DetailsItemWidget({super.key, required this.title, this.color, required this.value, required this.image, this.valueStyle});
+  const DetailsItemWidget(
+      {super.key,
+      required this.title,
+      this.color,
+      required this.value,
+      required this.image,
+      this.valueStyle});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 7),
-      color: color??context.colors.white,
+      color: color ?? context.colors.white,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -31,7 +37,7 @@ class DetailsItemWidget extends StatelessWidget {
           const Spacer(),
           Text(
             value,
-            style:valueStyle?? AppTextStyle.s14_w400(color: context.colors.primary),
+            style: valueStyle ?? AppTextStyle.s14_w400(color: context.colors.primary),
           ),
         ],
       ),

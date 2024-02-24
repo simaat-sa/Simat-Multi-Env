@@ -107,8 +107,7 @@ mixin _$PropModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PropModelCopyWith<PropModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PropModelCopyWith<PropModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -125,8 +124,7 @@ abstract class $PropModelCopyWith<$Res> {
       @JsonKey(name: 'parent_desc_ar', defaultValue: "") String parentDescAr,
       @JsonKey(name: 'parent_desc_en', defaultValue: "") String parentDescEn,
       @JsonKey(name: 'are_owner', defaultValue: "") String areOwner,
-      @JsonKey(name: 'are_intermediate', defaultValue: "")
-      String areIntermediate,
+      @JsonKey(name: 'are_intermediate', defaultValue: "") String areIntermediate,
       @JsonKey(name: 'prop_img', defaultValue: "") String propImg,
       @JsonKey(name: 'prop_lat', defaultValue: "0") String propLat,
       @JsonKey(name: 'prop_lng', defaultValue: "0") String propLng,
@@ -163,8 +161,7 @@ abstract class $PropModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
-    implements $PropModelCopyWith<$Res> {
+class _$PropModelCopyWithImpl<$Res, $Val extends PropModel> implements $PropModelCopyWith<$Res> {
   _$PropModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -392,10 +389,8 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
 }
 
 /// @nodoc
-abstract class _$$PropModelImplCopyWith<$Res>
-    implements $PropModelCopyWith<$Res> {
-  factory _$$PropModelImplCopyWith(
-          _$PropModelImpl value, $Res Function(_$PropModelImpl) then) =
+abstract class _$$PropModelImplCopyWith<$Res> implements $PropModelCopyWith<$Res> {
+  factory _$$PropModelImplCopyWith(_$PropModelImpl value, $Res Function(_$PropModelImpl) then) =
       __$$PropModelImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -408,8 +403,7 @@ abstract class _$$PropModelImplCopyWith<$Res>
       @JsonKey(name: 'parent_desc_ar', defaultValue: "") String parentDescAr,
       @JsonKey(name: 'parent_desc_en', defaultValue: "") String parentDescEn,
       @JsonKey(name: 'are_owner', defaultValue: "") String areOwner,
-      @JsonKey(name: 'are_intermediate', defaultValue: "")
-      String areIntermediate,
+      @JsonKey(name: 'are_intermediate', defaultValue: "") String areIntermediate,
       @JsonKey(name: 'prop_img', defaultValue: "") String propImg,
       @JsonKey(name: 'prop_lat', defaultValue: "0") String propLat,
       @JsonKey(name: 'prop_lng', defaultValue: "0") String propLng,
@@ -446,11 +440,9 @@ abstract class _$$PropModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PropModelImplCopyWithImpl<$Res>
-    extends _$PropModelCopyWithImpl<$Res, _$PropModelImpl>
+class __$$PropModelImplCopyWithImpl<$Res> extends _$PropModelCopyWithImpl<$Res, _$PropModelImpl>
     implements _$$PropModelImplCopyWith<$Res> {
-  __$$PropModelImplCopyWithImpl(
-      _$PropModelImpl _value, $Res Function(_$PropModelImpl) _then)
+  __$$PropModelImplCopyWithImpl(_$PropModelImpl _value, $Res Function(_$PropModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -682,18 +674,14 @@ class _$PropModelImpl extends _PropModel {
       @JsonKey(name: 'are_code', defaultValue: "0") required this.areCode,
       @JsonKey(name: 'are_are_id', defaultValue: "0") required this.areAreId,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") required this.areDescFo,
-      @JsonKey(name: 'parent_desc_ar', defaultValue: "")
-      required this.parentDescAr,
-      @JsonKey(name: 'parent_desc_en', defaultValue: "")
-      required this.parentDescEn,
+      @JsonKey(name: 'parent_desc_ar', defaultValue: "") required this.parentDescAr,
+      @JsonKey(name: 'parent_desc_en', defaultValue: "") required this.parentDescEn,
       @JsonKey(name: 'are_owner', defaultValue: "") required this.areOwner,
-      @JsonKey(name: 'are_intermediate', defaultValue: "")
-      required this.areIntermediate,
+      @JsonKey(name: 'are_intermediate', defaultValue: "") required this.areIntermediate,
       @JsonKey(name: 'prop_img', defaultValue: "") required this.propImg,
       @JsonKey(name: 'prop_lat', defaultValue: "0") required this.propLat,
       @JsonKey(name: 'prop_lng', defaultValue: "0") required this.propLng,
-      @JsonKey(name: 'prop_address', defaultValue: "")
-      required this.propAddress,
+      @JsonKey(name: 'prop_address', defaultValue: "") required this.propAddress,
       @JsonKey(name: 'monthly', defaultValue: "") required this.monthly,
       @JsonKey(name: 'is_rentable', defaultValue: "") required this.isRentable,
       @JsonKey(name: 'create_by', defaultValue: "") required this.createBy,
@@ -702,37 +690,30 @@ class _$PropModelImpl extends _PropModel {
       @JsonKey(name: 'prop_units', defaultValue: "") required this.propUnits,
       @JsonKey(name: 'water_meter', defaultValue: "") required this.waterMeter,
       @JsonKey(name: 'guard_name', defaultValue: "") required this.guardName,
-      @JsonKey(name: 'acl_status_code', defaultValue: "0")
-      required this.aclStatusCode,
-      @JsonKey(name: 'contact_mobile', defaultValue: "")
-      required this.contactMobile,
+      @JsonKey(name: 'acl_status_code', defaultValue: "0") required this.aclStatusCode,
+      @JsonKey(name: 'contact_mobile', defaultValue: "") required this.contactMobile,
       @JsonKey(name: 'contact_phone') required this.contactPhone,
       @JsonKey(name: 'prop_cost', defaultValue: "") required this.propCost,
       @JsonKey(name: 'unit_no') this.unitNo,
       @JsonKey(name: 'floor_no', defaultValue: "") required this.floorNo,
-      @JsonKey(name: 'prop_district', defaultValue: "")
-      required this.propDistrict,
+      @JsonKey(name: 'prop_district', defaultValue: "") required this.propDistrict,
       @JsonKey(name: 'prop_city', defaultValue: "") required this.propCity,
       @JsonKey(name: 'prop_region', defaultValue: "") required this.propRegion,
       @JsonKey(name: 'country', defaultValue: "") required this.country,
       @JsonKey(name: 'build_area', defaultValue: "") required this.buildArea,
       @JsonKey(name: 'land_area', defaultValue: "") required this.landArea,
-      @JsonKey(name: 'contact_name', defaultValue: "")
-      required this.contactName,
+      @JsonKey(name: 'contact_name', defaultValue: "") required this.contactName,
       @JsonKey(name: 'collector', defaultValue: "") required this.collector,
       @JsonKey(name: 'rooms') this.rooms,
       @JsonKey(name: 'prop_floors', defaultValue: "") required this.propFloors,
-      @JsonKey(name: 'building_number', defaultValue: "")
-      required this.buildingNumber,
-      @JsonKey(name: 'contract_type', defaultValue: "")
-      required this.contractType,
+      @JsonKey(name: 'building_number', defaultValue: "") required this.buildingNumber,
+      @JsonKey(name: 'contract_type', defaultValue: "") required this.contractType,
       @JsonKey(name: 'cal_type', defaultValue: "") required this.calType,
       @JsonKey(name: 'street_name', defaultValue: "") required this.streetName,
       @JsonKey(name: 'prop_number') this.propNumber})
       : super._();
 
-  factory _$PropModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PropModelImplFromJson(json);
+  factory _$PropModelImpl.fromJson(Map<String, dynamic> json) => _$$PropModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'prop_id', defaultValue: "0")
@@ -874,75 +855,49 @@ class _$PropModelImpl extends _PropModel {
             (identical(other.propId, propId) || other.propId == propId) &&
             (identical(other.areId, areId) || other.areId == areId) &&
             (identical(other.areCode, areCode) || other.areCode == areCode) &&
-            (identical(other.areAreId, areAreId) ||
-                other.areAreId == areAreId) &&
-            (identical(other.areDescFo, areDescFo) ||
-                other.areDescFo == areDescFo) &&
-            (identical(other.parentDescAr, parentDescAr) ||
-                other.parentDescAr == parentDescAr) &&
-            (identical(other.parentDescEn, parentDescEn) ||
-                other.parentDescEn == parentDescEn) &&
-            (identical(other.areOwner, areOwner) ||
-                other.areOwner == areOwner) &&
+            (identical(other.areAreId, areAreId) || other.areAreId == areAreId) &&
+            (identical(other.areDescFo, areDescFo) || other.areDescFo == areDescFo) &&
+            (identical(other.parentDescAr, parentDescAr) || other.parentDescAr == parentDescAr) &&
+            (identical(other.parentDescEn, parentDescEn) || other.parentDescEn == parentDescEn) &&
+            (identical(other.areOwner, areOwner) || other.areOwner == areOwner) &&
             (identical(other.areIntermediate, areIntermediate) ||
                 other.areIntermediate == areIntermediate) &&
             (identical(other.propImg, propImg) || other.propImg == propImg) &&
             (identical(other.propLat, propLat) || other.propLat == propLat) &&
             (identical(other.propLng, propLng) || other.propLng == propLng) &&
-            (identical(other.propAddress, propAddress) ||
-                other.propAddress == propAddress) &&
+            (identical(other.propAddress, propAddress) || other.propAddress == propAddress) &&
             (identical(other.monthly, monthly) || other.monthly == monthly) &&
-            (identical(other.isRentable, isRentable) ||
-                other.isRentable == isRentable) &&
-            (identical(other.createBy, createBy) ||
-                other.createBy == createBy) &&
-            (identical(other.updateBy, updateBy) ||
-                other.updateBy == updateBy) &&
-            (identical(other.dtCreated, dtCreated) ||
-                other.dtCreated == dtCreated) &&
-            (identical(other.propUnits, propUnits) ||
-                other.propUnits == propUnits) &&
-            (identical(other.waterMeter, waterMeter) ||
-                other.waterMeter == waterMeter) &&
-            (identical(other.guardName, guardName) ||
-                other.guardName == guardName) &&
+            (identical(other.isRentable, isRentable) || other.isRentable == isRentable) &&
+            (identical(other.createBy, createBy) || other.createBy == createBy) &&
+            (identical(other.updateBy, updateBy) || other.updateBy == updateBy) &&
+            (identical(other.dtCreated, dtCreated) || other.dtCreated == dtCreated) &&
+            (identical(other.propUnits, propUnits) || other.propUnits == propUnits) &&
+            (identical(other.waterMeter, waterMeter) || other.waterMeter == waterMeter) &&
+            (identical(other.guardName, guardName) || other.guardName == guardName) &&
             (identical(other.aclStatusCode, aclStatusCode) ||
                 other.aclStatusCode == aclStatusCode) &&
             (identical(other.contactMobile, contactMobile) ||
                 other.contactMobile == contactMobile) &&
-            (identical(other.contactPhone, contactPhone) ||
-                other.contactPhone == contactPhone) &&
-            (identical(other.propCost, propCost) ||
-                other.propCost == propCost) &&
+            (identical(other.contactPhone, contactPhone) || other.contactPhone == contactPhone) &&
+            (identical(other.propCost, propCost) || other.propCost == propCost) &&
             (identical(other.unitNo, unitNo) || other.unitNo == unitNo) &&
             (identical(other.floorNo, floorNo) || other.floorNo == floorNo) &&
-            (identical(other.propDistrict, propDistrict) ||
-                other.propDistrict == propDistrict) &&
-            (identical(other.propCity, propCity) ||
-                other.propCity == propCity) &&
-            (identical(other.propRegion, propRegion) ||
-                other.propRegion == propRegion) &&
+            (identical(other.propDistrict, propDistrict) || other.propDistrict == propDistrict) &&
+            (identical(other.propCity, propCity) || other.propCity == propCity) &&
+            (identical(other.propRegion, propRegion) || other.propRegion == propRegion) &&
             (identical(other.country, country) || other.country == country) &&
-            (identical(other.buildArea, buildArea) ||
-                other.buildArea == buildArea) &&
-            (identical(other.landArea, landArea) ||
-                other.landArea == landArea) &&
-            (identical(other.contactName, contactName) ||
-                other.contactName == contactName) &&
-            (identical(other.collector, collector) ||
-                other.collector == collector) &&
+            (identical(other.buildArea, buildArea) || other.buildArea == buildArea) &&
+            (identical(other.landArea, landArea) || other.landArea == landArea) &&
+            (identical(other.contactName, contactName) || other.contactName == contactName) &&
+            (identical(other.collector, collector) || other.collector == collector) &&
             (identical(other.rooms, rooms) || other.rooms == rooms) &&
-            (identical(other.propFloors, propFloors) ||
-                other.propFloors == propFloors) &&
+            (identical(other.propFloors, propFloors) || other.propFloors == propFloors) &&
             (identical(other.buildingNumber, buildingNumber) ||
                 other.buildingNumber == buildingNumber) &&
-            (identical(other.contractType, contractType) ||
-                other.contractType == contractType) &&
+            (identical(other.contractType, contractType) || other.contractType == contractType) &&
             (identical(other.calType, calType) || other.calType == calType) &&
-            (identical(other.streetName, streetName) ||
-                other.streetName == streetName) &&
-            (identical(other.propNumber, propNumber) ||
-                other.propNumber == propNumber));
+            (identical(other.streetName, streetName) || other.streetName == streetName) &&
+            (identical(other.propNumber, propNumber) || other.propNumber == propNumber));
   }
 
   @JsonKey(ignore: true)
@@ -1009,88 +964,51 @@ class _$PropModelImpl extends _PropModel {
 
 abstract class _PropModel extends PropModel {
   const factory _PropModel(
-      {@JsonKey(name: 'prop_id', defaultValue: "0")
-      required final String propId,
+      {@JsonKey(name: 'prop_id', defaultValue: "0") required final String propId,
       @JsonKey(name: 'are_id', defaultValue: "0") required final String areId,
-      @JsonKey(name: 'are_code', defaultValue: "0")
-      required final String areCode,
-      @JsonKey(name: 'are_are_id', defaultValue: "0")
-      required final String areAreId,
-      @JsonKey(name: 'are_desc_fo', defaultValue: "")
-      required final String areDescFo,
-      @JsonKey(name: 'parent_desc_ar', defaultValue: "")
-      required final String parentDescAr,
-      @JsonKey(name: 'parent_desc_en', defaultValue: "")
-      required final String parentDescEn,
-      @JsonKey(name: 'are_owner', defaultValue: "")
-      required final String areOwner,
-      @JsonKey(name: 'are_intermediate', defaultValue: "")
-      required final String areIntermediate,
-      @JsonKey(name: 'prop_img', defaultValue: "")
-      required final String propImg,
-      @JsonKey(name: 'prop_lat', defaultValue: "0")
-      required final String propLat,
-      @JsonKey(name: 'prop_lng', defaultValue: "0")
-      required final String propLng,
-      @JsonKey(name: 'prop_address', defaultValue: "")
-      required final String propAddress,
+      @JsonKey(name: 'are_code', defaultValue: "0") required final String areCode,
+      @JsonKey(name: 'are_are_id', defaultValue: "0") required final String areAreId,
+      @JsonKey(name: 'are_desc_fo', defaultValue: "") required final String areDescFo,
+      @JsonKey(name: 'parent_desc_ar', defaultValue: "") required final String parentDescAr,
+      @JsonKey(name: 'parent_desc_en', defaultValue: "") required final String parentDescEn,
+      @JsonKey(name: 'are_owner', defaultValue: "") required final String areOwner,
+      @JsonKey(name: 'are_intermediate', defaultValue: "") required final String areIntermediate,
+      @JsonKey(name: 'prop_img', defaultValue: "") required final String propImg,
+      @JsonKey(name: 'prop_lat', defaultValue: "0") required final String propLat,
+      @JsonKey(name: 'prop_lng', defaultValue: "0") required final String propLng,
+      @JsonKey(name: 'prop_address', defaultValue: "") required final String propAddress,
       @JsonKey(name: 'monthly', defaultValue: "") required final String monthly,
-      @JsonKey(name: 'is_rentable', defaultValue: "")
-      required final String isRentable,
-      @JsonKey(name: 'create_by', defaultValue: "")
-      required final String createBy,
-      @JsonKey(name: 'update_by', defaultValue: "")
-      required final String updateBy,
-      @JsonKey(name: 'dt_created', defaultValue: "")
-      required final String dtCreated,
-      @JsonKey(name: 'prop_units', defaultValue: "")
-      required final String propUnits,
-      @JsonKey(name: 'water_meter', defaultValue: "")
-      required final String waterMeter,
-      @JsonKey(name: 'guard_name', defaultValue: "")
-      required final String guardName,
-      @JsonKey(name: 'acl_status_code', defaultValue: "0")
-      required final String aclStatusCode,
-      @JsonKey(name: 'contact_mobile', defaultValue: "")
-      required final String contactMobile,
+      @JsonKey(name: 'is_rentable', defaultValue: "") required final String isRentable,
+      @JsonKey(name: 'create_by', defaultValue: "") required final String createBy,
+      @JsonKey(name: 'update_by', defaultValue: "") required final String updateBy,
+      @JsonKey(name: 'dt_created', defaultValue: "") required final String dtCreated,
+      @JsonKey(name: 'prop_units', defaultValue: "") required final String propUnits,
+      @JsonKey(name: 'water_meter', defaultValue: "") required final String waterMeter,
+      @JsonKey(name: 'guard_name', defaultValue: "") required final String guardName,
+      @JsonKey(name: 'acl_status_code', defaultValue: "0") required final String aclStatusCode,
+      @JsonKey(name: 'contact_mobile', defaultValue: "") required final String contactMobile,
       @JsonKey(name: 'contact_phone') required final String? contactPhone,
-      @JsonKey(name: 'prop_cost', defaultValue: "")
-      required final String propCost,
+      @JsonKey(name: 'prop_cost', defaultValue: "") required final String propCost,
       @JsonKey(name: 'unit_no') final String? unitNo,
-      @JsonKey(name: 'floor_no', defaultValue: "")
-      required final String floorNo,
-      @JsonKey(name: 'prop_district', defaultValue: "")
-      required final String propDistrict,
-      @JsonKey(name: 'prop_city', defaultValue: "")
-      required final String propCity,
-      @JsonKey(name: 'prop_region', defaultValue: "")
-      required final String propRegion,
+      @JsonKey(name: 'floor_no', defaultValue: "") required final String floorNo,
+      @JsonKey(name: 'prop_district', defaultValue: "") required final String propDistrict,
+      @JsonKey(name: 'prop_city', defaultValue: "") required final String propCity,
+      @JsonKey(name: 'prop_region', defaultValue: "") required final String propRegion,
       @JsonKey(name: 'country', defaultValue: "") required final String country,
-      @JsonKey(name: 'build_area', defaultValue: "")
-      required final String buildArea,
-      @JsonKey(name: 'land_area', defaultValue: "")
-      required final String landArea,
-      @JsonKey(name: 'contact_name', defaultValue: "")
-      required final String contactName,
-      @JsonKey(name: 'collector', defaultValue: "")
-      required final String collector,
+      @JsonKey(name: 'build_area', defaultValue: "") required final String buildArea,
+      @JsonKey(name: 'land_area', defaultValue: "") required final String landArea,
+      @JsonKey(name: 'contact_name', defaultValue: "") required final String contactName,
+      @JsonKey(name: 'collector', defaultValue: "") required final String collector,
       @JsonKey(name: 'rooms') final String? rooms,
-      @JsonKey(name: 'prop_floors', defaultValue: "")
-      required final String propFloors,
-      @JsonKey(name: 'building_number', defaultValue: "")
-      required final String buildingNumber,
-      @JsonKey(name: 'contract_type', defaultValue: "")
-      required final String contractType,
-      @JsonKey(name: 'cal_type', defaultValue: "")
-      required final String calType,
-      @JsonKey(name: 'street_name', defaultValue: "")
-      required final String streetName,
-      @JsonKey(name: 'prop_number')
-      final String? propNumber}) = _$PropModelImpl;
+      @JsonKey(name: 'prop_floors', defaultValue: "") required final String propFloors,
+      @JsonKey(name: 'building_number', defaultValue: "") required final String buildingNumber,
+      @JsonKey(name: 'contract_type', defaultValue: "") required final String contractType,
+      @JsonKey(name: 'cal_type', defaultValue: "") required final String calType,
+      @JsonKey(name: 'street_name', defaultValue: "") required final String streetName,
+      @JsonKey(name: 'prop_number') final String? propNumber}) = _$PropModelImpl;
   const _PropModel._() : super._();
 
-  factory _PropModel.fromJson(Map<String, dynamic> json) =
-      _$PropModelImpl.fromJson;
+  factory _PropModel.fromJson(Map<String, dynamic> json) = _$PropModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'prop_id', defaultValue: "0")
@@ -1220,6 +1138,5 @@ abstract class _PropModel extends PropModel {
   String? get propNumber;
   @override
   @JsonKey(ignore: true)
-  _$$PropModelImplCopyWith<_$PropModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PropModelImplCopyWith<_$PropModelImpl> get copyWith => throw _privateConstructorUsedError;
 }

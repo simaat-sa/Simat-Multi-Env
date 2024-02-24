@@ -317,14 +317,12 @@ mixin _$PaymentModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PaymentModelCopyWith<PaymentModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PaymentModelCopyWith<PaymentModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PaymentModelCopyWith<$Res> {
-  factory $PaymentModelCopyWith(
-          PaymentModel value, $Res Function(PaymentModel) then) =
+  factory $PaymentModelCopyWith(PaymentModel value, $Res Function(PaymentModel) then) =
       _$PaymentModelCopyWithImpl<$Res, PaymentModel>;
   @useResult
   $Res call(
@@ -794,8 +792,7 @@ class _$PaymentModelCopyWithImpl<$Res, $Val extends PaymentModel>
 }
 
 /// @nodoc
-abstract class _$$PaymentModelImplCopyWith<$Res>
-    implements $PaymentModelCopyWith<$Res> {
+abstract class _$$PaymentModelImplCopyWith<$Res> implements $PaymentModelCopyWith<$Res> {
   factory _$$PaymentModelImplCopyWith(
           _$PaymentModelImpl value, $Res Function(_$PaymentModelImpl) then) =
       __$$PaymentModelImplCopyWithImpl<$Res>;
@@ -1291,8 +1288,7 @@ class _$PaymentModelImpl extends _PaymentModel {
       @JsonKey(name: "day_tot", defaultValue: "") required this.dayTot,
       @JsonKey(name: "dt_due_hj", defaultValue: "") required this.dtDueHj,
       @JsonKey(name: "dt_due_day", defaultValue: "") required this.dtDueDay,
-      @JsonKey(name: "due_aging_group", defaultValue: "")
-      required this.dueAgingGroup,
+      @JsonKey(name: "due_aging_group", defaultValue: "") required this.dueAgingGroup,
       @JsonKey(name: "view_due", defaultValue: "") required this.viewDue,
       @JsonKey(name: "is_due", defaultValue: "") required this.isDue,
       @JsonKey(name: "dt_due", defaultValue: "") required this.dtDue,
@@ -1302,18 +1298,13 @@ class _$PaymentModelImpl extends _PaymentModel {
       @JsonKey(name: "qtr_due", defaultValue: "") required this.qtrDue,
       @JsonKey(name: "yr_due", defaultValue: "") required this.yrDue,
       @JsonKey(name: "srv_id", defaultValue: "") required this.srvId,
-      @JsonKey(name: "post_account", defaultValue: "")
-      required this.postAccount,
-      @JsonKey(name: "post_acc_code", defaultValue: "")
-      required this.postAccCode,
+      @JsonKey(name: "post_account", defaultValue: "") required this.postAccount,
+      @JsonKey(name: "post_acc_code", defaultValue: "") required this.postAccCode,
       @JsonKey(name: "dr_acc_code", defaultValue: "") required this.drAccCode,
-      @JsonKey(name: "post_tax_code", defaultValue: "")
-      required this.postTaxCode,
+      @JsonKey(name: "post_tax_code", defaultValue: "") required this.postTaxCode,
       @JsonKey(name: "dr_tax_code", defaultValue: "") required this.drTaxCode,
-      @JsonKey(name: "post_comm_acc", defaultValue: "")
-      required this.postCommAcc,
-      @JsonKey(name: "post_comm_tax", defaultValue: "")
-      required this.postCommTax,
+      @JsonKey(name: "post_comm_acc", defaultValue: "") required this.postCommAcc,
+      @JsonKey(name: "post_comm_tax", defaultValue: "") required this.postCommTax,
       @JsonKey(name: "tmt_ar", defaultValue: "") required this.tmtAr,
       @JsonKey(name: "tmt_en", defaultValue: "") required this.tmtEn,
       @JsonKey(name: "tmt_desc", defaultValue: "") required this.tmtDesc,
@@ -1325,8 +1316,7 @@ class _$PaymentModelImpl extends _PaymentModel {
       @JsonKey(name: "amt_tot", defaultValue: "") required this.amtTot,
       @JsonKey(name: "amt_collect", defaultValue: "") required this.amtCollect,
       @JsonKey(name: "amt_due", defaultValue: "") required this.amtDue,
-      @JsonKey(name: "amt_due_later", defaultValue: "")
-      required this.amtDueLater,
+      @JsonKey(name: "amt_due_later", defaultValue: "") required this.amtDueLater,
       @JsonKey(name: "amt_balance", defaultValue: "") required this.amtBalance,
       @JsonKey(name: "amt_payable", defaultValue: "") required this.amtPayable,
       @JsonKey(name: "inc_comm", defaultValue: "") required this.incComm,
@@ -1620,8 +1610,7 @@ abstract class _PaymentModel extends PaymentModel {
       @JsonKey(name: "day_tot", defaultValue: "") required String dayTot,
       @JsonKey(name: "dt_due_hj", defaultValue: "") required String dtDueHj,
       @JsonKey(name: "dt_due_day", defaultValue: "") required String dtDueDay,
-      @JsonKey(name: "due_aging_group", defaultValue: "")
-      required String dueAgingGroup,
+      @JsonKey(name: "due_aging_group", defaultValue: "") required String dueAgingGroup,
       @JsonKey(name: "view_due", defaultValue: "") required String viewDue,
       @JsonKey(name: "is_due", defaultValue: "") required String isDue,
       @JsonKey(name: "dt_due", defaultValue: "") required String dtDue,
@@ -1631,18 +1620,13 @@ abstract class _PaymentModel extends PaymentModel {
       @JsonKey(name: "qtr_due", defaultValue: "") required String qtrDue,
       @JsonKey(name: "yr_due", defaultValue: "") required String yrDue,
       @JsonKey(name: "srv_id", defaultValue: "") required String srvId,
-      @JsonKey(name: "post_account", defaultValue: "")
-      required String postAccount,
-      @JsonKey(name: "post_acc_code", defaultValue: "")
-      required String postAccCode,
+      @JsonKey(name: "post_account", defaultValue: "") required String postAccount,
+      @JsonKey(name: "post_acc_code", defaultValue: "") required String postAccCode,
       @JsonKey(name: "dr_acc_code", defaultValue: "") required String drAccCode,
-      @JsonKey(name: "post_tax_code", defaultValue: "")
-      required String postTaxCode,
+      @JsonKey(name: "post_tax_code", defaultValue: "") required String postTaxCode,
       @JsonKey(name: "dr_tax_code", defaultValue: "") required String drTaxCode,
-      @JsonKey(name: "post_comm_acc", defaultValue: "")
-      required String postCommAcc,
-      @JsonKey(name: "post_comm_tax", defaultValue: "")
-      required String postCommTax,
+      @JsonKey(name: "post_comm_acc", defaultValue: "") required String postCommAcc,
+      @JsonKey(name: "post_comm_tax", defaultValue: "") required String postCommTax,
       @JsonKey(name: "tmt_ar", defaultValue: "") required String tmtAr,
       @JsonKey(name: "tmt_en", defaultValue: "") required String tmtEn,
       @JsonKey(name: "tmt_desc", defaultValue: "") required String tmtDesc,
@@ -1652,25 +1636,18 @@ abstract class _PaymentModel extends PaymentModel {
       @JsonKey(name: "amt_untax", defaultValue: "") required String amtUntax,
       @JsonKey(name: "amt_tax", defaultValue: "") required String amtTax,
       @JsonKey(name: "amt_tot", defaultValue: "") required String amtTot,
-      @JsonKey(name: "amt_collect", defaultValue: "")
-      required String amtCollect,
+      @JsonKey(name: "amt_collect", defaultValue: "") required String amtCollect,
       @JsonKey(name: "amt_due", defaultValue: "") required String amtDue,
-      @JsonKey(name: "amt_due_later", defaultValue: "")
-      required String amtDueLater,
-      @JsonKey(name: "amt_balance", defaultValue: "")
-      required String amtBalance,
-      @JsonKey(name: "amt_payable", defaultValue: "")
-      required String amtPayable,
+      @JsonKey(name: "amt_due_later", defaultValue: "") required String amtDueLater,
+      @JsonKey(name: "amt_balance", defaultValue: "") required String amtBalance,
+      @JsonKey(name: "amt_payable", defaultValue: "") required String amtPayable,
       @JsonKey(name: "inc_comm", defaultValue: "") required String incComm,
       @JsonKey(name: "due_comm", defaultValue: "") required String dueComm,
       @JsonKey(name: "pct_comm", defaultValue: "") required String pctComm,
       @JsonKey(name: "amt_comm", defaultValue: "") required String amtComm,
-      @JsonKey(name: "pct_comm_tax", defaultValue: "")
-      required String pctCommTax,
-      @JsonKey(name: "amt_comm_tax", defaultValue: "")
-      required String amtCommTax,
-      @JsonKey(name: "amt_comm_tot", defaultValue: "")
-      required String amtCommTot,
+      @JsonKey(name: "pct_comm_tax", defaultValue: "") required String pctCommTax,
+      @JsonKey(name: "amt_comm_tax", defaultValue: "") required String amtCommTax,
+      @JsonKey(name: "amt_comm_tot", defaultValue: "") required String amtCommTot,
       @JsonKey(name: "dt_updated", defaultValue: "") required String dtUpdated,
       @JsonKey(name: "rel_update", defaultValue: "") required String relUpdate,
       @JsonKey(name: "create_by", defaultValue: "") required String createBy,
@@ -1688,8 +1665,7 @@ abstract class _PaymentModel extends PaymentModel {
       bool? selected}) = _$PaymentModelImpl;
   _PaymentModel._() : super._();
 
-  factory _PaymentModel.fromJson(Map<String, dynamic> json) =
-      _$PaymentModelImpl.fromJson;
+  factory _PaymentModel.fromJson(Map<String, dynamic> json) = _$PaymentModelImpl.fromJson;
 
   @override
   @JsonKey(name: "tmt_uid", defaultValue: "")

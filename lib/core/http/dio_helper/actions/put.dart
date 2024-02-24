@@ -13,7 +13,6 @@ import '../utils/handle_request_body.dart';
 
 @lazySingleton
 class Put extends DioHelper {
-
   @override
   Future<MyResult<Response>> call(RequestBodyModel params) async {
     if (params.showLoader) getIt<LoadingHelper>().showLoadingDialog();
@@ -21,8 +20,7 @@ class Put extends DioHelper {
     //create multipart request for POST or PATCH method
 
     try {
-      var response =
-          await dio.put(params.url, data: formData ?? json.encode(params.body));
+      var response = await dio.put(params.url, data: formData ?? json.encode(params.body));
       if (params.showLoader) getIt<LoadingHelper>().dismissDialog();
       return getIt<HandleErrors>().statusError(response, params.errorFunc);
     } on DioException catch (e) {

@@ -29,12 +29,12 @@ class ContractRepositoryImpl extends ContractRepository with ModelToDomainResult
   }
 
   @override
-  Future<MyResult<ContractModel>> renewContract(String contractId)async {
-  return await dataSource.renewContract(contractId);
+  Future<MyResult<ContractModel>> renewContract(String contractId) async {
+    return await dataSource.renewContract(contractId);
   }
 
   @override
-  Future<MyResult<List<PaymentModel>>> getContractPayment(PaymentEntity params)async {
-   return await dataSource.getContractPayment(params);
+  Future<MyResult<List<PaymentModel>>> getContractPayment(PaymentEntity params) async {
+    return await dataSource.getContractPayment(params);
   }
 }

@@ -75,21 +75,27 @@ class ContractDialog extends StatelessWidget {
                     value: model.unitName,
                     color: context.colors.bgLight,
                     image: Res.unitLogo),
-                DetailsItemWidget(title: Translate.s.main_property, value: model.createdDateTimeStamp, image: Res.unitLogo),
                 DetailsItemWidget(
-                    title: Translate
-                    .s.date_of_request,
+                    title: Translate.s.main_property,
+                    value: model.createdDateTimeStamp,
+                    image: Res.unitLogo),
+                DetailsItemWidget(
+                    title: Translate.s.date_of_request,
                     value: model.createdDate,
                     color: context.colors.bgLight,
                     image: Res.calendarIcon),
-                DetailsItemWidget(title: Translate.s.applicant, value: model.createdBy, image: Res.userLogo),
+                DetailsItemWidget(
+                    title: Translate.s.applicant, value: model.createdBy, image: Res.userLogo),
                 Divider(
                   height: 10,
                   color: context.colors.backgroundLight,
                 ),
-                _buildPriceItem(context, title: Translate.s.estimated_cost, value: model.approxCost),
                 _buildPriceItem(context,
-                    title: Translate.s.final_cost, value: model.actualCost, color: context.colors.bgLight),
+                    title: Translate.s.estimated_cost, value: model.approxCost),
+                _buildPriceItem(context,
+                    title: Translate.s.final_cost,
+                    value: model.actualCost,
+                    color: context.colors.bgLight),
                 Divider(
                   height: 30,
                   color: context.colors.backgroundLight,
@@ -101,8 +107,8 @@ class ContractDialog extends StatelessWidget {
                 Gaps.vGap12,
                 Text(
                   model.desc,
-                  style:
-                      AppTextStyle.s13_w400(color: context.colors.darkTextColor).copyWith(overflow: TextOverflow.clip),
+                  style: AppTextStyle.s13_w400(color: context.colors.darkTextColor)
+                      .copyWith(overflow: TextOverflow.clip),
                 ),
               ],
             ),

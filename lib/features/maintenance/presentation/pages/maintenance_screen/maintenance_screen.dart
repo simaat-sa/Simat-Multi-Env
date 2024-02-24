@@ -36,7 +36,8 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
                     controller.searchText = value;
                     controller.onFilter();
                   },
-                  onTap: () => AutoRouter.of(context).push(FilterMaintenanceRoute(controller: controller)),
+                  onTap: () =>
+                      AutoRouter.of(context).push(FilterMaintenanceRoute(controller: controller)),
                 ),
                 PageHeaderTitleWidget(
                   title: Translate.of(context).maintenanceCount([data.length]),
@@ -73,7 +74,7 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
-        onPressed: () =>AutoRouter.of(context).push(const AddMaintenanceRoute()),
+        onPressed: () => AutoRouter.of(context).push(const AddMaintenanceRoute()),
         child: Icon(
           Icons.add,
           color: context.colors.white,

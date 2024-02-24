@@ -36,7 +36,8 @@ class ContractItemWidget extends StatelessWidget {
                           height: 26,
                           padding: const EdgeInsets.symmetric(horizontal: 5),
                           decoration: BoxDecoration(
-                              color: context.colors.black.withOpacity(0.15), borderRadius: BorderRadius.circular(5)),
+                              color: context.colors.black.withOpacity(0.15),
+                              borderRadius: BorderRadius.circular(5)),
                           child: Row(
                             children: [
                               Icon(
@@ -56,10 +57,12 @@ class ContractItemWidget extends StatelessWidget {
                           height: 26,
                           padding: const EdgeInsets.symmetric(horizontal: 5),
                           decoration: BoxDecoration(
-                              color: context.colors.black.withOpacity(0.15), borderRadius: BorderRadius.circular(5)),
+                              color: context.colors.black.withOpacity(0.15),
+                              borderRadius: BorderRadius.circular(5)),
                           child: Text(
                             "#${model.code}",
-                            style: AppTextStyle.s14_w400(color: context.colors.white).copyWith(height: 2.2),
+                            style: AppTextStyle.s14_w400(color: context.colors.white)
+                                .copyWith(height: 2.2),
                           ),
                         ),
                       ],
@@ -110,9 +113,7 @@ class ContractItemWidget extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      SvgPicture.asset(
-                        Res.unitLogo
-                      ),
+                      SvgPicture.asset(Res.unitLogo),
                       Gaps.hGap5,
                       Row(
                         children: [
@@ -147,5 +148,4 @@ class ContractItemWidget extends StatelessWidget {
       ),
     );
   }
-
 }

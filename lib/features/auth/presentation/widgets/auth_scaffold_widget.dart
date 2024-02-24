@@ -8,8 +8,7 @@ class AuthScaffoldWidget extends StatefulWidget {
   final Widget body;
   final Key? scaffoldKey;
 
-  const AuthScaffoldWidget(
-      {super.key, required this.appBar, required this.body, this.scaffoldKey});
+  const AuthScaffoldWidget({super.key, required this.appBar, required this.body, this.scaffoldKey});
 
   @override
   State<AuthScaffoldWidget> createState() => _AuthScaffoldWidgetState();
@@ -24,8 +23,7 @@ class _AuthScaffoldWidgetState extends State<AuthScaffoldWidget> {
       backgroundColor: context.colors.background,
       key: widget.scaffoldKey,
       endDrawer: AuthDrawerWidget(
-        onChangeLanguage: () =>
-            showDropDawnCubit.setValue(!showDropDawnCubit.getValue()),
+        onChangeLanguage: () => showDropDawnCubit.setValue(!showDropDawnCubit.getValue()),
         showDropDawnCubit: showDropDawnCubit,
       ),
       appBar: widget.appBar,

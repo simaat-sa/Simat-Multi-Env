@@ -42,14 +42,12 @@ mixin _$UserAccessModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserAccessModelCopyWith<UserAccessModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $UserAccessModelCopyWith<UserAccessModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $UserAccessModelCopyWith<$Res> {
-  factory $UserAccessModelCopyWith(
-          UserAccessModel value, $Res Function(UserAccessModel) then) =
+  factory $UserAccessModelCopyWith(UserAccessModel value, $Res Function(UserAccessModel) then) =
       _$UserAccessModelCopyWithImpl<$Res, UserAccessModel>;
   @useResult
   $Res call(
@@ -135,10 +133,9 @@ class _$UserAccessModelCopyWithImpl<$Res, $Val extends UserAccessModel>
 }
 
 /// @nodoc
-abstract class _$$UserAccessModelImplCopyWith<$Res>
-    implements $UserAccessModelCopyWith<$Res> {
-  factory _$$UserAccessModelImplCopyWith(_$UserAccessModelImpl value,
-          $Res Function(_$UserAccessModelImpl) then) =
+abstract class _$$UserAccessModelImplCopyWith<$Res> implements $UserAccessModelCopyWith<$Res> {
+  factory _$$UserAccessModelImplCopyWith(
+          _$UserAccessModelImpl value, $Res Function(_$UserAccessModelImpl) then) =
       __$$UserAccessModelImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -283,33 +280,27 @@ class _$UserAccessModelImpl extends _UserAccessModel {
         (other.runtimeType == runtimeType &&
             other is _$UserAccessModelImpl &&
             (identical(other.pageid, pageid) || other.pageid == pageid) &&
-            (identical(other.pageCode, pageCode) ||
-                other.pageCode == pageCode) &&
+            (identical(other.pageCode, pageCode) || other.pageCode == pageCode) &&
             (identical(other.pageAr, pageAr) || other.pageAr == pageAr) &&
             (identical(other.pageEn, pageEn) || other.pageEn == pageEn) &&
             (identical(other.isRoot, isRoot) || other.isRoot == isRoot) &&
-            (identical(other.pageActive, pageActive) ||
-                other.pageActive == pageActive) &&
-            (identical(other.pageImage, pageImage) ||
-                other.pageImage == pageImage) &&
-            (identical(other.pageDesc, pageDesc) ||
-                other.pageDesc == pageDesc) &&
-            (identical(other.pageName, pageName) ||
-                other.pageName == pageName) &&
+            (identical(other.pageActive, pageActive) || other.pageActive == pageActive) &&
+            (identical(other.pageImage, pageImage) || other.pageImage == pageImage) &&
+            (identical(other.pageDesc, pageDesc) || other.pageDesc == pageDesc) &&
+            (identical(other.pageName, pageName) || other.pageName == pageName) &&
             (identical(other.iconSvg, iconSvg) || other.iconSvg == iconSvg));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, pageid, pageCode, pageAr, pageEn,
-      isRoot, pageActive, pageImage, pageDesc, pageName, iconSvg);
+  int get hashCode => Object.hash(runtimeType, pageid, pageCode, pageAr, pageEn, isRoot, pageActive,
+      pageImage, pageDesc, pageName, iconSvg);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UserAccessModelImplCopyWith<_$UserAccessModelImpl> get copyWith =>
-      __$$UserAccessModelImplCopyWithImpl<_$UserAccessModelImpl>(
-          this, _$identity);
+      __$$UserAccessModelImplCopyWithImpl<_$UserAccessModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -321,21 +312,19 @@ class _$UserAccessModelImpl extends _UserAccessModel {
 
 abstract class _UserAccessModel extends UserAccessModel {
   factory _UserAccessModel(
-          {required final String pageid,
-          @JsonKey(name: 'page_code') required final AccessPages pageCode,
-          @JsonKey(name: 'page_ar') required final String pageAr,
-          @JsonKey(name: 'page_en') required final String pageEn,
-          @JsonKey(name: 'is_root') required final String isRoot,
-          @JsonKey(name: 'page_active') required final String pageActive,
-          @JsonKey(name: 'page_image') required final String pageImage,
-          @JsonKey(name: 'page_desc') required final String pageDesc,
-          @JsonKey(name: 'page_name') required final String pageName,
-          @JsonKey(name: 'icon_svg') required final String iconSvg}) =
-      _$UserAccessModelImpl;
+      {required final String pageid,
+      @JsonKey(name: 'page_code') required final AccessPages pageCode,
+      @JsonKey(name: 'page_ar') required final String pageAr,
+      @JsonKey(name: 'page_en') required final String pageEn,
+      @JsonKey(name: 'is_root') required final String isRoot,
+      @JsonKey(name: 'page_active') required final String pageActive,
+      @JsonKey(name: 'page_image') required final String pageImage,
+      @JsonKey(name: 'page_desc') required final String pageDesc,
+      @JsonKey(name: 'page_name') required final String pageName,
+      @JsonKey(name: 'icon_svg') required final String iconSvg}) = _$UserAccessModelImpl;
   _UserAccessModel._() : super._();
 
-  factory _UserAccessModel.fromJson(Map<String, dynamic> json) =
-      _$UserAccessModelImpl.fromJson;
+  factory _UserAccessModel.fromJson(Map<String, dynamic> json) = _$UserAccessModelImpl.fromJson;
 
   @override
   String get pageid;

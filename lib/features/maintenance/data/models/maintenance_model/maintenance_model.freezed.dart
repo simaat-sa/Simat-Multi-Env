@@ -41,14 +41,12 @@ mixin _$MaintenanceModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MaintenanceModelCopyWith<MaintenanceModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $MaintenanceModelCopyWith<MaintenanceModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MaintenanceModelCopyWith<$Res> {
-  factory $MaintenanceModelCopyWith(
-          MaintenanceModel value, $Res Function(MaintenanceModel) then) =
+  factory $MaintenanceModelCopyWith(MaintenanceModel value, $Res Function(MaintenanceModel) then) =
       _$MaintenanceModelCopyWithImpl<$Res, MaintenanceModel>;
   @useResult
   $Res call(
@@ -60,8 +58,7 @@ abstract class $MaintenanceModelCopyWith<$Res> {
       @JsonKey(name: 'approx_cost', defaultValue: "0") String approxCost,
       @JsonKey(name: 'actual_cost', defaultValue: "0") String actualCost,
       @JsonKey(name: 'acl_status_code') ContractStatus status,
-      @JsonKey(name: 'dt_created', defaultValue: "")
-      String createdDateTimeStamp});
+      @JsonKey(name: 'dt_created', defaultValue: "") String createdDateTimeStamp});
 }
 
 /// @nodoc
@@ -129,10 +126,9 @@ class _$MaintenanceModelCopyWithImpl<$Res, $Val extends MaintenanceModel>
 }
 
 /// @nodoc
-abstract class _$$MaintenanceModelImplCopyWith<$Res>
-    implements $MaintenanceModelCopyWith<$Res> {
-  factory _$$MaintenanceModelImplCopyWith(_$MaintenanceModelImpl value,
-          $Res Function(_$MaintenanceModelImpl) then) =
+abstract class _$$MaintenanceModelImplCopyWith<$Res> implements $MaintenanceModelCopyWith<$Res> {
+  factory _$$MaintenanceModelImplCopyWith(
+          _$MaintenanceModelImpl value, $Res Function(_$MaintenanceModelImpl) then) =
       __$$MaintenanceModelImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -145,16 +141,15 @@ abstract class _$$MaintenanceModelImplCopyWith<$Res>
       @JsonKey(name: 'approx_cost', defaultValue: "0") String approxCost,
       @JsonKey(name: 'actual_cost', defaultValue: "0") String actualCost,
       @JsonKey(name: 'acl_status_code') ContractStatus status,
-      @JsonKey(name: 'dt_created', defaultValue: "")
-      String createdDateTimeStamp});
+      @JsonKey(name: 'dt_created', defaultValue: "") String createdDateTimeStamp});
 }
 
 /// @nodoc
 class __$$MaintenanceModelImplCopyWithImpl<$Res>
     extends _$MaintenanceModelCopyWithImpl<$Res, _$MaintenanceModelImpl>
     implements _$$MaintenanceModelImplCopyWith<$Res> {
-  __$$MaintenanceModelImplCopyWithImpl(_$MaintenanceModelImpl _value,
-      $Res Function(_$MaintenanceModelImpl) _then)
+  __$$MaintenanceModelImplCopyWithImpl(
+      _$MaintenanceModelImpl _value, $Res Function(_$MaintenanceModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -224,8 +219,7 @@ class _$MaintenanceModelImpl extends _MaintenanceModel {
       @JsonKey(name: 'approx_cost', defaultValue: "0") required this.approxCost,
       @JsonKey(name: 'actual_cost', defaultValue: "0") required this.actualCost,
       @JsonKey(name: 'acl_status_code') required this.status,
-      @JsonKey(name: 'dt_created', defaultValue: "")
-      required this.createdDateTimeStamp})
+      @JsonKey(name: 'dt_created', defaultValue: "") required this.createdDateTimeStamp})
       : super._();
 
   factory _$MaintenanceModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -270,16 +264,12 @@ class _$MaintenanceModelImpl extends _MaintenanceModel {
         (other.runtimeType == runtimeType &&
             other is _$MaintenanceModelImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.createdBy, createdBy) ||
-                other.createdBy == createdBy) &&
+            (identical(other.createdBy, createdBy) || other.createdBy == createdBy) &&
             (identical(other.desc, desc) || other.desc == desc) &&
             (identical(other.code, code) || other.code == code) &&
-            (identical(other.unitName, unitName) ||
-                other.unitName == unitName) &&
-            (identical(other.approxCost, approxCost) ||
-                other.approxCost == approxCost) &&
-            (identical(other.actualCost, actualCost) ||
-                other.actualCost == actualCost) &&
+            (identical(other.unitName, unitName) || other.unitName == unitName) &&
+            (identical(other.approxCost, approxCost) || other.approxCost == approxCost) &&
+            (identical(other.actualCost, actualCost) || other.actualCost == actualCost) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.createdDateTimeStamp, createdDateTimeStamp) ||
                 other.createdDateTimeStamp == createdDateTimeStamp));
@@ -287,15 +277,14 @@ class _$MaintenanceModelImpl extends _MaintenanceModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, createdBy, desc, code,
-      unitName, approxCost, actualCost, status, createdDateTimeStamp);
+  int get hashCode => Object.hash(runtimeType, id, createdBy, desc, code, unitName, approxCost,
+      actualCost, status, createdDateTimeStamp);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MaintenanceModelImplCopyWith<_$MaintenanceModelImpl> get copyWith =>
-      __$$MaintenanceModelImplCopyWithImpl<_$MaintenanceModelImpl>(
-          this, _$identity);
+      __$$MaintenanceModelImplCopyWithImpl<_$MaintenanceModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -308,23 +297,18 @@ class _$MaintenanceModelImpl extends _MaintenanceModel {
 abstract class _MaintenanceModel extends MaintenanceModel {
   factory _MaintenanceModel(
       {@JsonKey(name: 'maint_id', defaultValue: "") required final String id,
-      @JsonKey(name: 'contact_name', defaultValue: "")
-      required final String createdBy,
+      @JsonKey(name: 'contact_name', defaultValue: "") required final String createdBy,
       @JsonKey(name: 'maint_desc', defaultValue: "") required final String desc,
       @JsonKey(name: 'maint_code') required final String code,
-      @JsonKey(name: 'are_desc_fo', defaultValue: "")
-      required final String unitName,
-      @JsonKey(name: 'approx_cost', defaultValue: "0")
-      required final String approxCost,
-      @JsonKey(name: 'actual_cost', defaultValue: "0")
-      required final String actualCost,
+      @JsonKey(name: 'are_desc_fo', defaultValue: "") required final String unitName,
+      @JsonKey(name: 'approx_cost', defaultValue: "0") required final String approxCost,
+      @JsonKey(name: 'actual_cost', defaultValue: "0") required final String actualCost,
       @JsonKey(name: 'acl_status_code') required final ContractStatus status,
       @JsonKey(name: 'dt_created', defaultValue: "")
       required final String createdDateTimeStamp}) = _$MaintenanceModelImpl;
   _MaintenanceModel._() : super._();
 
-  factory _MaintenanceModel.fromJson(Map<String, dynamic> json) =
-      _$MaintenanceModelImpl.fromJson;
+  factory _MaintenanceModel.fromJson(Map<String, dynamic> json) = _$MaintenanceModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'maint_id', defaultValue: "")

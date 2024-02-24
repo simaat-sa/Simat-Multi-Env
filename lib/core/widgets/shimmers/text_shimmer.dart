@@ -25,8 +25,9 @@ class TextShimmer extends StatelessWidget {
             child: Container(
               width: 200 * lineWidthPercent,
               height: 14,
-              decoration:  BoxDecoration(
-                  color: context.colors.white, borderRadius: const BorderRadius.all(Radius.circular(8))),
+              decoration: BoxDecoration(
+                  color: context.colors.white,
+                  borderRadius: const BorderRadius.all(Radius.circular(8))),
             ),
           ),
         ],

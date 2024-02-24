@@ -20,6 +20,5 @@ import '../../widgets/failure_item_widget.dart';
 import '../../widgets/unit_loading_list_widget.dart';
 import 'widgets/contract_screen_widgets_imports.dart';
 
-
 part 'contract_screen_controller.dart';
 part 'cnotract_screen.dart';

@@ -6,7 +6,7 @@ class SplashBottomItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.only(bottom:30,start: 20,end: 20),
+      padding: const EdgeInsetsDirectional.only(bottom: 30, start: 20, end: 20),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,

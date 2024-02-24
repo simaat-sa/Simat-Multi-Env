@@ -36,11 +36,13 @@ class _ContractDetailsState extends State<ContractDetails> {
               TabBar(
                   dividerColor: context.colors.greyWhite,
                   unselectedLabelColor: context.colors.primaryGrey,
-                  unselectedLabelStyle: AppTextStyle.s16_w500(color: context.colors.primary).copyWith( fontFamily: "Tajawal"),
+                  unselectedLabelStyle: AppTextStyle.s16_w500(color: context.colors.primary)
+                      .copyWith(fontFamily: "Tajawal"),
                   indicatorSize: TabBarIndicatorSize.tab,
                   labelPadding: const EdgeInsets.symmetric(vertical: 13),
-                  labelStyle: AppTextStyle.s16_w500(color: context.colors.primary).copyWith( fontFamily: "Tajawal"),
-                  tabs:  [
+                  labelStyle: AppTextStyle.s16_w500(color: context.colors.primary)
+                      .copyWith(fontFamily: "Tajawal"),
+                  tabs: [
                     Text(Translate.s.summary),
                     Text(Translate.s.payments),
                   ]),
