@@ -40,12 +40,10 @@ class _NoticesScreenState extends State<NoticesScreen> {
               );
             },
             loadingBuilder: (context) {
-              return const NoticesLoadingListWidget();
+              return Container(color: Colors.red);
             },
             failureBuilder: (context, error, callback) {
-              callback.call();
-              error.message;
-              return Container();
+              return FailureViewWidget(onTap: () => callback.call());
             },
           ),
         ],

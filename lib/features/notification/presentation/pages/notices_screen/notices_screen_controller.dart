@@ -6,7 +6,8 @@ class NoticesScreenController{
 
 
   void requestData(){
-    requester.request(fromRemote: false);
     requester.request();
+    requester.request(fromRemote: false);
+
   }
 }
