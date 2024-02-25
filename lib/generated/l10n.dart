@@ -26,7 +26,9 @@ class S {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -1373,6 +1375,76 @@ class S {
     return Intl.message(
       'New maintenance request',
       name: 'new_maintenance_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get English {
+    return Intl.message(
+      'English',
+      name: 'English',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get Arabic {
+    return Intl.message(
+      'Arabic',
+      name: 'Arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share This App`
+  String get Share_the_app {
+    return Intl.message(
+      'Share This App',
+      name: 'Share_the_app',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy Policy`
+  String get Privacy_Policy {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'Privacy_Policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Technical support ticket`
+  String get Technical_support_ticket {
+    return Intl.message(
+      'Technical support ticket',
+      name: 'Technical_support_ticket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About Simat application`
+  String get About_Simat_application {
+    return Intl.message(
+      'About Simat application',
+      name: 'About_Simat_application',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What's New`
+  String get About_New_version {
+    return Intl.message(
+      'What\'s New',
+      name: 'About_New_version',
       desc: '',
       args: [],
     );

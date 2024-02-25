@@ -132,7 +132,14 @@
   "no_notices_now": "لا يوجد لديك إشعارات الآن، برجاء معاودة التحقق لاحقا",
   "back_to_main_page": "عودة الى الرئيسية",
   "new_notices": "اشعارات جديدة",
-  "new_maintenance_request": "طلب صيانة جديد"
+  "new_maintenance_request": "طلب صيانة جديد",
+  "English": "الانجليزية",
+  "Arabic": "العربية",
+  "Share_the_app": "مشاركة التطبيق",
+  "Privacy_Policy": "سياسة الخصوصية",
+  "Technical_support_ticket": "تذكرة دعم فني",
+  "About_Simat_application": "عن تطبيق سمات",
+  "About_New_version": "جديد الإصدار"
 }
 
 

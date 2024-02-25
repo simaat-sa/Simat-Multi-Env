@@ -1,8 +1,8 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_tdd/core/bloc/value_state_manager/value_state_manager_import.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/features/auth/presentation/widgets/auth_drawer_item_widget.dart';
@@ -18,14 +18,15 @@ class AuthDrawerWidget extends StatelessWidget {
     return SafeArea(
       top: true,
       child: Drawer(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
         width: 260.r,
         backgroundColor: context.colors.white,
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.only(top: 30.r, end: 20.r),
+              padding: EdgeInsetsDirectional.only(top: 30.r, end: 20.r, start: 20),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   InkWell(
                     onTap: () => Navigator.of(context).pop(),
@@ -52,40 +53,35 @@ class AuthDrawerWidget extends StatelessWidget {
                           children: [
                             AuthDrawerItemWidget(
                               padding: EdgeInsetsDirectional.only(bottom: state ? 20 : 30),
-                              icon: state
-                                  ? Icons.keyboard_arrow_down
-                                  : Icons.arrow_forward_ios_outlined,
+                              icon: state ? Icons.keyboard_arrow_down : Icons.arrow_forward_ios_outlined,
                               size: state ? 25 : 15,
-                              text: 'Language',
+                              text: Translate.s.label_app_language,
                             ),
                             Visibility(
                               visible: state,
                               child: Column(
                                 children: [
                                   Container(
-                                    alignment: Alignment.centerLeft,
-                                    padding: const EdgeInsetsDirectional.only(
-                                        start: 20, end: 20, bottom: 10),
+                                    alignment: AlignmentDirectional.centerStart,
+                                    padding: const EdgeInsetsDirectional.only(start: 20, end: 20, bottom: 10),
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'English',
-                                          style: AppTextStyle.s14_w400(
-                                              color: context.colors.secondary),
+                                          Translate.s.English,
+                                          style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                                         ),
                                         Gaps.vGap20,
                                         Text(
-                                          'العربية',
-                                          style: AppTextStyle.s14_w400(
-                                              color: context.colors.secondary),
+                                          Translate.s.Arabic,
+                                          style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                                         ),
                                       ],
                                     ),
                                   ),
                                   Divider(
-                                    color: context.colors.background,
-                                    thickness: 2,
+                                    color: context.colors.greyWhite,
+                                    thickness: 1.5,
                                   ),
                                   Gaps.vGap15,
                                 ],
@@ -96,38 +92,26 @@ class AuthDrawerWidget extends StatelessWidget {
                       );
                     },
                   ),
-                  InkWell(
+                  GestureDetector(
                     onTap: () {},
-                    child: const AuthDrawerItemWidget(
-                      text: 'App Guide',
+                    child: AuthDrawerItemWidget(
+                      text: Translate.s.Share_the_app,
                     ),
                   ),
-                  const AuthDrawerItemWidget(
-                    text: 'Send Feedback',
+                  AuthDrawerItemWidget(
+                    text: Translate.s.Privacy_Policy,
                   ),
-                  const AuthDrawerItemWidget(
-                    text: 'Share this App',
+                  AuthDrawerItemWidget(
+                    text: Translate.s.Technical_support_ticket,
                   ),
-                  InkWell(
+                  GestureDetector(
                     onTap: () {},
-                    child: const AuthDrawerItemWidget(
-                      text: 'Terms of Use',
+                    child: AuthDrawerItemWidget(
+                      text: Translate.s.About_Simat_application,
                     ),
                   ),
-                  InkWell(
-                    onTap: () {},
-                    child: const AuthDrawerItemWidget(
-                      text: 'Privacy Policy',
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: const AuthDrawerItemWidget(
-                      text: 'About SimTask',
-                    ),
-                  ),
-                  const AuthDrawerItemWidget(
-                    text: 'What’s New',
+                  AuthDrawerItemWidget(
+                    text: Translate.s.About_New_version,
                     subtext: 'v.01.04.23',
                   ),
                 ],
@@ -135,7 +119,7 @@ class AuthDrawerWidget extends StatelessWidget {
             ),
             Text(
               textAlign: TextAlign.center,
-              '© 2023 by Simaat',
+              '© 2024 by Simaat',
               style: AppTextStyle.s12_w400(color: context.colors.primary),
             ),
             Gaps.vGap32,

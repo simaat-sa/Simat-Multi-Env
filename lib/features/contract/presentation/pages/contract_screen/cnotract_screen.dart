@@ -20,42 +20,51 @@ class _ContractScreenState extends State<ContractScreen> {
         successBuilder: (context, data) {
           return RefreshIndicator(
             onRefresh: () => controller.requestData(),
-            child: ListView(
+            child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-              children: [
-                FilterItemWidget(
-                  onChange: (val) {
-                    controller.searchText = val;
-                    controller.onFilter();
-                  },
-                  onSubmit: (value) {
-                    controller.searchText = value;
-                    controller.onFilter();
-                  },
-                  onTap: () =>
-                      AutoRouter.of(context).push(FilterContractRoute(controller: controller)),
-                ),
-                PageHeaderTitleWidget(
-                  title: Translate.of(context).contractsCount([data.length]),
-                ),
-                Gaps.vGap10,
-                Visibility(
-                  visible: controller.requester.data!.isNotEmpty,
-                  replacement: const EmptyListItemWidget(),
-                  child: Column(
-                    children: [
-                      ...List.generate(
-                        data.length,
-                        (index) {
-                          return ContractItemWidget(
-                            model: data[index],
-                          );
-                        },
-                      ),
-                    ],
+              child: Column(
+                children: [
+                  FilterItemWidget(
+                    onChange: (val) {
+                      controller.searchText = val;
+                      controller.onFilter();
+                    },
+                    onSubmit: (value) {
+                      controller.searchText = value;
+                      controller.onFilter();
+                    },
+                    onTap: () => AutoRouter.of(context).push(
+                      FilterContractRoute(controller: controller),
+                    ),
                   ),
-                ),
-              ],
+                  PageHeaderTitleWidget(
+                    title: Translate.of(context).contractsCount([data.length]),
+                  ),
+                  Gaps.vGap10,
+                  Flexible(
+                    child: ListView(
+                      children: [
+                        Visibility(
+                          visible: controller.requester.data!.isNotEmpty,
+                          replacement: const EmptyListItemWidget(),
+                          child: Column(
+                            children: [
+                              ...List.generate(
+                                data.length,
+                                (index) {
+                                  return ContractItemWidget(
+                                    model: data[index],
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           );
         },
