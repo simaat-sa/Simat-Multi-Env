@@ -22,9 +22,9 @@ class _MenuTapState extends State<MenuTap> {
           Gaps.vGap10,
           NotifySwipeWidget(controller: controller),
           Gaps.vGap10,
-          AboutAppMenuWidget(),
+          AboutAppMenuWidget(controller: controller),
           Gaps.vGap10,
-          LogOutWidget(),
+          LogOutWidget(controller: controller,),
         ],
       ),
     );

@@ -4,7 +4,7 @@ part of 'router_imports.dart';
 class AppRouter extends $AppRouter {
   @override
   final List<AutoRoute> routes = [
-    AdaptiveRoute(page: Terms.page),
+    AdaptiveRoute(page: TermsRoute.page),
     AutoRoute(page: Home.page),
     ...baseRoute,
     ...authRoute,

@@ -1,6 +1,6 @@
 part of 'terms_imports.dart';
 
-@RoutePage()
+@RoutePage(name: 'TermsRoute')
 class Terms extends StatefulWidget {
   const Terms({super.key});
 
@@ -20,8 +20,7 @@ class _TermsState extends State<Terms> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      margin: const EdgeInsets.only(top: kToolbarHeight),
+      height: MediaQuery.of(context).size.height * .9,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Colors.white,

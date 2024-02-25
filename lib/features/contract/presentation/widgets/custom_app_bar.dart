@@ -33,7 +33,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         GestureDetector(
-          onTap: () => AutoRouter.of(context).push(const NoticesScreenRoute()),
+          onTap: () {
+            context.read<NotifyCubit>().onUpdateNotifyData(notifyCount);
+            AutoRouter.of(context).push(const NoticesScreenRoute());
+          },
           child: Padding(
             padding: const EdgeInsetsDirectional.only(end: 16),
             child: Stack(

@@ -1,7 +1,8 @@
 part of 'menu_widgets_imports.dart';
 
 class AboutAppMenuWidget extends StatelessWidget {
-  const AboutAppMenuWidget({super.key});
+  final MenuControllerTap controller;
+  const AboutAppMenuWidget({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class AboutAppMenuWidget extends StatelessWidget {
       child: Column(
         children: [
           GestureDetector(
-            onTap: () => AutoRouter.of(context).push(const Terms()),
+            onTap: () => controller.getTerms(context),
             child: AuthDrawerItemWidget(
               text: Translate.s.Privacy_Policy,
             ),

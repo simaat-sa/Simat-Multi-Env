@@ -19,7 +19,6 @@ class HomeController {
   }
 
   void requestNotifyCount(){
-    requesterNotify.request(fromRemote: false);
     requesterNotify.request();
   }
 

@@ -18,9 +18,14 @@ class UserHelperService {
     );
   }
 
+  Future<void> removeUserData(UserModel user) async {
+
+    await getIt<SharedPrefService>().removeString(ApplicationConstants.userSavedModel);
+
+  }
+
   Future<UserModel?> getUserData() async {
-    String? userString =
-        await getIt<SharedPrefService>().getString(ApplicationConstants.userSavedModel);
+    String? userString = await getIt<SharedPrefService>().getString(ApplicationConstants.userSavedModel);
     if (userString != null) {
       return UserModel.fromJson(jsonDecode(userString));
     }

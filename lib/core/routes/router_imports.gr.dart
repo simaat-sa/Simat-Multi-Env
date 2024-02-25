@@ -159,13 +159,13 @@ abstract class $AppRouter extends _i17.RootStackRouter {
         child: const _i13.ResetPassword(),
       );
     },
-    Splash.name: (routeData) {
+    SplashRoute.name: (routeData) {
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i14.Splash(),
       );
     },
-    Terms.name: (routeData) {
+    TermsRoute.name: (routeData) {
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i15.Terms(),
@@ -511,28 +511,28 @@ class ResetPassword extends _i17.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i14.Splash]
-class Splash extends _i17.PageRouteInfo<void> {
-  const Splash({List<_i17.PageRouteInfo>? children})
+class SplashRoute extends _i17.PageRouteInfo<void> {
+  const SplashRoute({List<_i17.PageRouteInfo>? children})
       : super(
-          Splash.name,
+          SplashRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'Splash';
+  static const String name = 'SplashRoute';
 
   static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i15.Terms]
-class Terms extends _i17.PageRouteInfo<void> {
-  const Terms({List<_i17.PageRouteInfo>? children})
+class TermsRoute extends _i17.PageRouteInfo<void> {
+  const TermsRoute({List<_i17.PageRouteInfo>? children})
       : super(
-          Terms.name,
+          TermsRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'Terms';
+  static const String name = 'TermsRoute';
 
   static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }

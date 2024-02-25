@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 
 var authRoute = [
-  AdaptiveRoute(page: Splash.page, initial: true),
+  AdaptiveRoute(page: SplashRoute.page, initial: true),
   AdaptiveRoute(page: Login.page),
   AdaptiveRoute(page: VerifyOTP.page),
   AdaptiveRoute(page: ActiveAccount.page),

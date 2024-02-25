@@ -6,6 +6,7 @@ class ApiNames {
 
   // auth routes
   static String login = "${version1Part}auth/login";
+  static String logOut = "${version1Part}auth/logout";
   static const String refreshToken = "auth";
   static const String savePublicKey = "users/";
   static const String updateUser = "users/";
