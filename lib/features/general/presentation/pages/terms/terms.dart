@@ -20,7 +20,8 @@ class _TermsState extends State<Terms> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * .9,
+      height: MediaQuery.of(context).size.height,
+      margin: const EdgeInsets.only(top: kToolbarHeight),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Colors.white,

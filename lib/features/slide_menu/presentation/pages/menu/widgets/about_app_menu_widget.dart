@@ -10,8 +10,11 @@ class AboutAppMenuWidget extends StatelessWidget {
       color: context.colors.white,
       child: Column(
         children: [
-          AuthDrawerItemWidget(
-            text: Translate.s.Privacy_Policy,
+          GestureDetector(
+            onTap: () => AutoRouter.of(context).push(const Terms()),
+            child: AuthDrawerItemWidget(
+              text: Translate.s.Privacy_Policy,
+            ),
           ),
           GestureDetector(
             onTap: () {},
