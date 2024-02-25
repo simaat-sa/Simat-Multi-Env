@@ -53,7 +53,8 @@ mixin _$UserModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserModelCopyWith<UserModel> get copyWith => throw _privateConstructorUsedError;
+  $UserModelCopyWith<UserModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -76,11 +77,13 @@ abstract class $UserModelCopyWith<$Res> {
       @JsonKey(name: "user_fullname_en") String userFullnameEn,
       @JsonKey(name: "active") String active,
       @JsonKey(name: "uuid") String uuid,
-      @JsonKey(name: "app_page_access", defaultValue: []) List<UserAccessModel> userAccess});
+      @JsonKey(name: "app_page_access", defaultValue: [])
+      List<UserAccessModel> userAccess});
 }
 
 /// @nodoc
-class _$UserModelCopyWithImpl<$Res, $Val extends UserModel> implements $UserModelCopyWith<$Res> {
+class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
+    implements $UserModelCopyWith<$Res> {
   _$UserModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -173,8 +176,10 @@ class _$UserModelCopyWithImpl<$Res, $Val extends UserModel> implements $UserMode
 }
 
 /// @nodoc
-abstract class _$$UserModelImplCopyWith<$Res> implements $UserModelCopyWith<$Res> {
-  factory _$$UserModelImplCopyWith(_$UserModelImpl value, $Res Function(_$UserModelImpl) then) =
+abstract class _$$UserModelImplCopyWith<$Res>
+    implements $UserModelCopyWith<$Res> {
+  factory _$$UserModelImplCopyWith(
+          _$UserModelImpl value, $Res Function(_$UserModelImpl) then) =
       __$$UserModelImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -193,13 +198,16 @@ abstract class _$$UserModelImplCopyWith<$Res> implements $UserModelCopyWith<$Res
       @JsonKey(name: "user_fullname_en") String userFullnameEn,
       @JsonKey(name: "active") String active,
       @JsonKey(name: "uuid") String uuid,
-      @JsonKey(name: "app_page_access", defaultValue: []) List<UserAccessModel> userAccess});
+      @JsonKey(name: "app_page_access", defaultValue: [])
+      List<UserAccessModel> userAccess});
 }
 
 /// @nodoc
-class __$$UserModelImplCopyWithImpl<$Res> extends _$UserModelCopyWithImpl<$Res, _$UserModelImpl>
+class __$$UserModelImplCopyWithImpl<$Res>
+    extends _$UserModelCopyWithImpl<$Res, _$UserModelImpl>
     implements _$$UserModelImplCopyWith<$Res> {
-  __$$UserModelImplCopyWithImpl(_$UserModelImpl _value, $Res Function(_$UserModelImpl) _then)
+  __$$UserModelImplCopyWithImpl(
+      _$UserModelImpl _value, $Res Function(_$UserModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -310,7 +318,8 @@ class _$UserModelImpl extends _UserModel {
       : _userAccess = userAccess,
         super._();
 
-  factory _$UserModelImpl.fromJson(Map<String, dynamic> json) => _$$UserModelImplFromJson(json);
+  factory _$UserModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserModelImplFromJson(json);
 
   @override
   @JsonKey(name: "user_type_code")
@@ -373,23 +382,33 @@ class _$UserModelImpl extends _UserModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UserModelImpl &&
-            (identical(other.userTypeCode, userTypeCode) || other.userTypeCode == userTypeCode) &&
+            (identical(other.userTypeCode, userTypeCode) ||
+                other.userTypeCode == userTypeCode) &&
             (identical(other.userid, userid) || other.userid == userid) &&
-            (identical(other.userToken, userToken) || other.userToken == userToken) &&
-            (identical(other.username, username) || other.username == username) &&
-            (identical(other.userAvatar, userAvatar) || other.userAvatar == userAvatar) &&
-            (identical(other.userMobile, userMobile) || other.userMobile == userMobile) &&
-            (identical(other.userEmail, userEmail) || other.userEmail == userEmail) &&
-            (identical(other.userActive, userActive) || other.userActive == userActive) &&
-            (identical(other.userLang, userLang) || other.userLang == userLang) &&
+            (identical(other.userToken, userToken) ||
+                other.userToken == userToken) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.userAvatar, userAvatar) ||
+                other.userAvatar == userAvatar) &&
+            (identical(other.userMobile, userMobile) ||
+                other.userMobile == userMobile) &&
+            (identical(other.userEmail, userEmail) ||
+                other.userEmail == userEmail) &&
+            (identical(other.userActive, userActive) ||
+                other.userActive == userActive) &&
+            (identical(other.userLang, userLang) ||
+                other.userLang == userLang) &&
             (identical(other.userLastOnline, userLastOnline) ||
                 other.userLastOnline == userLastOnline) &&
-            (identical(other.userFullname, userFullname) || other.userFullname == userFullname) &&
+            (identical(other.userFullname, userFullname) ||
+                other.userFullname == userFullname) &&
             (identical(other.userFullnameEn, userFullnameEn) ||
                 other.userFullnameEn == userFullnameEn) &&
             (identical(other.active, active) || other.active == active) &&
             (identical(other.uuid, uuid) || other.uuid == uuid) &&
-            const DeepCollectionEquality().equals(other._userAccess, _userAccess));
+            const DeepCollectionEquality()
+                .equals(other._userAccess, _userAccess));
   }
 
   @JsonKey(ignore: true)
@@ -432,7 +451,8 @@ abstract class _UserModel extends UserModel {
       @JsonKey(name: "userid") required final String userid,
       @JsonKey(name: "user_token") required final String userToken,
       @JsonKey(name: "username") required final String username,
-      @JsonKey(name: "user_avatar", defaultValue: "") required final String userAvatar,
+      @JsonKey(name: "user_avatar", defaultValue: "")
+      required final String userAvatar,
       @JsonKey(name: "usermobile") required final String userMobile,
       @JsonKey(name: "useremail") required final String userEmail,
       @JsonKey(name: "user_active") required final String userActive,
@@ -446,7 +466,8 @@ abstract class _UserModel extends UserModel {
       required final List<UserAccessModel> userAccess}) = _$UserModelImpl;
   const _UserModel._() : super._();
 
-  factory _UserModel.fromJson(Map<String, dynamic> json) = _$UserModelImpl.fromJson;
+  factory _UserModel.fromJson(Map<String, dynamic> json) =
+      _$UserModelImpl.fromJson;
 
   @override
   @JsonKey(name: "user_type_code")
@@ -495,5 +516,6 @@ abstract class _UserModel extends UserModel {
   List<UserAccessModel> get userAccess;
   @override
   @JsonKey(ignore: true)
-  _$$UserModelImplCopyWith<_$UserModelImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$UserModelImplCopyWith<_$UserModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

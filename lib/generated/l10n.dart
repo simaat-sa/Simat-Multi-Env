@@ -1449,6 +1449,46 @@ class S {
       args: [],
     );
   }
+
+  /// `How can I get the code?`
+  String get How_can_I_get_the_code {
+    return Intl.message(
+      'How can I get the code?',
+      name: 'How_can_I_get_the_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1. Login to your platform through the browser using your account`
+  String get Login_to_your_platform_through {
+    return Intl.message(
+      '1. Login to your platform through the browser using your account',
+      name: 'Login_to_your_platform_through',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2. At the top of the screen, “Download the Simat application now,” or from the user settings menu, choose “QR mobile application.”`
+  String get QR_mobile_application {
+    return Intl.message(
+      '2. At the top of the screen, “Download the Simat application now,” or from the user settings menu, choose “QR mobile application.”',
+      name: 'QR_mobile_application',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser`
+  String get using_the_QR_code_scan_the_QR_code_that_appears {
+    return Intl.message(
+      '3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser',
+      name: 'using_the_QR_code_scan_the_QR_code_that_appears',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

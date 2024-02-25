@@ -42,12 +42,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "English": MessageLookupByLibrary.simpleMessage("English"),
         "Error_renewal_request":
             MessageLookupByLibrary.simpleMessage("Error in renewal request"),
+        "How_can_I_get_the_code":
+            MessageLookupByLibrary.simpleMessage("How can I get the code?"),
         "Invalid_login_data": MessageLookupByLibrary.simpleMessage(
             "Please verify your login information"),
+        "Login_to_your_platform_through": MessageLookupByLibrary.simpleMessage(
+            "1. Login to your platform through the browser using your account"),
         "Please_authenticate_to_login": MessageLookupByLibrary.simpleMessage(
             "Please authenticate to login to your account"),
         "Privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "QR_mobile_application": MessageLookupByLibrary.simpleMessage(
+            "2. At the top of the screen, “Download the Simat application now,” or from the user settings menu, choose “QR mobile application.”"),
         "Share_the_app": MessageLookupByLibrary.simpleMessage("Share This App"),
         "Sign_In": MessageLookupByLibrary.simpleMessage("SIGN IN"),
         "Technical_support_ticket":
@@ -250,6 +256,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Unit maintenance"),
         "user_or_phone_hint":
             MessageLookupByLibrary.simpleMessage("Mobile phone or Username"),
+        "using_the_QR_code_scan_the_QR_code_that_appears":
+            MessageLookupByLibrary.simpleMessage(
+                "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser"),
         "worthy": MessageLookupByLibrary.simpleMessage("Worthy")
       };
 }

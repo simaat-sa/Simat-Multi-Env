@@ -6,7 +6,8 @@ part of 'contract_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ContractModelImpl _$$ContractModelImplFromJson(Map<String, dynamic> json) => _$ContractModelImpl(
+_$ContractModelImpl _$$ContractModelImplFromJson(Map<String, dynamic> json) =>
+    _$ContractModelImpl(
       propId: json['prop_id'] as String? ?? '',
       code: json['tts_code'] as String?,
       unitName: json[''] as String? ?? '',
@@ -23,7 +24,8 @@ _$ContractModelImpl _$$ContractModelImplFromJson(Map<String, dynamic> json) => _
       propRegion: json['prop_region'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$ContractModelImplToJson(_$ContractModelImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$$ContractModelImplToJson(_$ContractModelImpl instance) =>
+    <String, dynamic>{
       'prop_id': instance.propId,
       'tts_code': instance.code,
       '': instance.unitName,

@@ -23,7 +23,6 @@ abstract class AppBottomSheets {
         enableDrag: true,
         builder: builder);
   }
-
   static Future<T?> showScrollableBody<T>(
       {required BuildContext context,
       required WidgetBuilder builder,
@@ -33,7 +32,7 @@ abstract class AppBottomSheets {
       backgroundColor: context.colors.white,
       isDismissible: false,
       isScrollControlled: true,
-      enableDrag: false,
+      enableDrag: true,
       constraints: constraints,
       shape: const OutlineInputBorder(
         borderRadius: Dimens.sheetBorderRadius,
