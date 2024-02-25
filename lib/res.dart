@@ -42,4 +42,5 @@ class Res {
   static const String maintLogo = "assets/images/maint_logo.svg";
   static const String renewContractLogo = "assets/images/renew_contract_logo.svg";
   static const String noticesEmpty = "assets/images/notices_empty_logo.svg";
+  static const String moreBarLogo = "assets/images/more_bar_logo.svg";
 }

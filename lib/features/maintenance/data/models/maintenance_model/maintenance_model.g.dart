@@ -6,7 +6,8 @@ part of 'maintenance_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MaintenanceModelImpl _$$MaintenanceModelImplFromJson(Map<String, dynamic> json) =>
+_$MaintenanceModelImpl _$$MaintenanceModelImplFromJson(
+        Map<String, dynamic> json) =>
     _$MaintenanceModelImpl(
       id: json['maint_id'] as String? ?? '',
       createdBy: json['contact_name'] as String? ?? '',
@@ -19,7 +20,8 @@ _$MaintenanceModelImpl _$$MaintenanceModelImplFromJson(Map<String, dynamic> json
       createdDateTimeStamp: json['dt_created'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$MaintenanceModelImplToJson(_$MaintenanceModelImpl instance) =>
+Map<String, dynamic> _$$MaintenanceModelImplToJson(
+        _$MaintenanceModelImpl instance) =>
     <String, dynamic>{
       'maint_id': instance.id,
       'contact_name': instance.createdBy,

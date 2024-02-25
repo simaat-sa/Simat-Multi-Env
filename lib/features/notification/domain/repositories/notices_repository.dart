@@ -3,4 +3,5 @@ import 'package:flutter_tdd/features/notification/data/models/notices_model/noti
 
 abstract class NoticesRepository {
   Future<MyResult<List<NoticesModel>>> getNotices(bool params);
+  Future<MyResult<String>> getCountNotices(bool params);
 }

@@ -28,22 +28,27 @@ mixin _$NoticesModel {
   String get alertBody => throw _privateConstructorUsedError;
   @JsonKey(name: 'dt_created')
   String get dtCreated => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_read')
+  NotifyStatus get isRead => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $NoticesModelCopyWith<NoticesModel> get copyWith => throw _privateConstructorUsedError;
+  $NoticesModelCopyWith<NoticesModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NoticesModelCopyWith<$Res> {
-  factory $NoticesModelCopyWith(NoticesModel value, $Res Function(NoticesModel) then) =
+  factory $NoticesModelCopyWith(
+          NoticesModel value, $Res Function(NoticesModel) then) =
       _$NoticesModelCopyWithImpl<$Res, NoticesModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'alert_id') String alertId,
       @JsonKey(name: 'alert_subject') String alertSubject,
       @JsonKey(name: 'alert_body') String alertBody,
-      @JsonKey(name: 'dt_created') String dtCreated});
+      @JsonKey(name: 'dt_created') String dtCreated,
+      @JsonKey(name: 'is_read') NotifyStatus isRead});
 }
 
 /// @nodoc
@@ -63,6 +68,7 @@ class _$NoticesModelCopyWithImpl<$Res, $Val extends NoticesModel>
     Object? alertSubject = null,
     Object? alertBody = null,
     Object? dtCreated = null,
+    Object? isRead = null,
   }) {
     return _then(_value.copyWith(
       alertId: null == alertId
@@ -81,12 +87,17 @@ class _$NoticesModelCopyWithImpl<$Res, $Val extends NoticesModel>
           ? _value.dtCreated
           : dtCreated // ignore: cast_nullable_to_non_nullable
               as String,
+      isRead: null == isRead
+          ? _value.isRead
+          : isRead // ignore: cast_nullable_to_non_nullable
+              as NotifyStatus,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$NoticesModelImplCopyWith<$Res> implements $NoticesModelCopyWith<$Res> {
+abstract class _$$NoticesModelImplCopyWith<$Res>
+    implements $NoticesModelCopyWith<$Res> {
   factory _$$NoticesModelImplCopyWith(
           _$NoticesModelImpl value, $Res Function(_$NoticesModelImpl) then) =
       __$$NoticesModelImplCopyWithImpl<$Res>;
@@ -96,7 +107,8 @@ abstract class _$$NoticesModelImplCopyWith<$Res> implements $NoticesModelCopyWit
       {@JsonKey(name: 'alert_id') String alertId,
       @JsonKey(name: 'alert_subject') String alertSubject,
       @JsonKey(name: 'alert_body') String alertBody,
-      @JsonKey(name: 'dt_created') String dtCreated});
+      @JsonKey(name: 'dt_created') String dtCreated,
+      @JsonKey(name: 'is_read') NotifyStatus isRead});
 }
 
 /// @nodoc
@@ -114,6 +126,7 @@ class __$$NoticesModelImplCopyWithImpl<$Res>
     Object? alertSubject = null,
     Object? alertBody = null,
     Object? dtCreated = null,
+    Object? isRead = null,
   }) {
     return _then(_$NoticesModelImpl(
       alertId: null == alertId
@@ -132,6 +145,10 @@ class __$$NoticesModelImplCopyWithImpl<$Res>
           ? _value.dtCreated
           : dtCreated // ignore: cast_nullable_to_non_nullable
               as String,
+      isRead: null == isRead
+          ? _value.isRead
+          : isRead // ignore: cast_nullable_to_non_nullable
+              as NotifyStatus,
     ));
   }
 }
@@ -144,7 +161,8 @@ class _$NoticesModelImpl extends _NoticesModel {
       {@JsonKey(name: 'alert_id') required this.alertId,
       @JsonKey(name: 'alert_subject') required this.alertSubject,
       @JsonKey(name: 'alert_body') required this.alertBody,
-      @JsonKey(name: 'dt_created') required this.dtCreated})
+      @JsonKey(name: 'dt_created') required this.dtCreated,
+      @JsonKey(name: 'is_read') required this.isRead})
       : super._();
 
   factory _$NoticesModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -162,10 +180,13 @@ class _$NoticesModelImpl extends _NoticesModel {
   @override
   @JsonKey(name: 'dt_created')
   final String dtCreated;
+  @override
+  @JsonKey(name: 'is_read')
+  final NotifyStatus isRead;
 
   @override
   String toString() {
-    return 'NoticesModel(alertId: $alertId, alertSubject: $alertSubject, alertBody: $alertBody, dtCreated: $dtCreated)';
+    return 'NoticesModel(alertId: $alertId, alertSubject: $alertSubject, alertBody: $alertBody, dtCreated: $dtCreated, isRead: $isRead)';
   }
 
   @override
@@ -174,14 +195,19 @@ class _$NoticesModelImpl extends _NoticesModel {
         (other.runtimeType == runtimeType &&
             other is _$NoticesModelImpl &&
             (identical(other.alertId, alertId) || other.alertId == alertId) &&
-            (identical(other.alertSubject, alertSubject) || other.alertSubject == alertSubject) &&
-            (identical(other.alertBody, alertBody) || other.alertBody == alertBody) &&
-            (identical(other.dtCreated, dtCreated) || other.dtCreated == dtCreated));
+            (identical(other.alertSubject, alertSubject) ||
+                other.alertSubject == alertSubject) &&
+            (identical(other.alertBody, alertBody) ||
+                other.alertBody == alertBody) &&
+            (identical(other.dtCreated, dtCreated) ||
+                other.dtCreated == dtCreated) &&
+            (identical(other.isRead, isRead) || other.isRead == isRead));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, alertId, alertSubject, alertBody, dtCreated);
+  int get hashCode => Object.hash(
+      runtimeType, alertId, alertSubject, alertBody, dtCreated, isRead);
 
   @JsonKey(ignore: true)
   @override
@@ -199,13 +225,16 @@ class _$NoticesModelImpl extends _NoticesModel {
 
 abstract class _NoticesModel extends NoticesModel {
   factory _NoticesModel(
-      {@JsonKey(name: 'alert_id') required final String alertId,
-      @JsonKey(name: 'alert_subject') required final String alertSubject,
-      @JsonKey(name: 'alert_body') required final String alertBody,
-      @JsonKey(name: 'dt_created') required final String dtCreated}) = _$NoticesModelImpl;
+          {@JsonKey(name: 'alert_id') required final String alertId,
+          @JsonKey(name: 'alert_subject') required final String alertSubject,
+          @JsonKey(name: 'alert_body') required final String alertBody,
+          @JsonKey(name: 'dt_created') required final String dtCreated,
+          @JsonKey(name: 'is_read') required final NotifyStatus isRead}) =
+      _$NoticesModelImpl;
   _NoticesModel._() : super._();
 
-  factory _NoticesModel.fromJson(Map<String, dynamic> json) = _$NoticesModelImpl.fromJson;
+  factory _NoticesModel.fromJson(Map<String, dynamic> json) =
+      _$NoticesModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'alert_id')
@@ -219,6 +248,9 @@ abstract class _NoticesModel extends NoticesModel {
   @override
   @JsonKey(name: 'dt_created')
   String get dtCreated;
+  @override
+  @JsonKey(name: 'is_read')
+  NotifyStatus get isRead;
   @override
   @JsonKey(ignore: true)
   _$$NoticesModelImplCopyWith<_$NoticesModelImpl> get copyWith =>

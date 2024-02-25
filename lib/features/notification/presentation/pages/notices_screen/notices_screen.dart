@@ -12,7 +12,7 @@ class _NoticesScreenState extends State<NoticesScreen> {
   final NoticesScreenController controller = NoticesScreenController();
   @override
   void initState() {
-    controller.requestData();
+    controller.requestNotifyData();
     super.initState();
   }
   @override
@@ -20,9 +20,13 @@ class _NoticesScreenState extends State<NoticesScreen> {
     bool isNotEmpty = true;
     return Scaffold(
       backgroundColor: context.colors.background,
+      appBar: const DefaultAppBar(
+        centerTitle: false,
+        title: 'الإشعارات',
+        showBack: true,
+      ),
       body: Column(
         children: [
-          const NoticesAppBarWidget(),
           RequesterConsumer(
             requester: controller.requester,
             successBuilder: (context, data) {
@@ -43,9 +47,7 @@ class _NoticesScreenState extends State<NoticesScreen> {
               return const NoticesLoadingListWidget();
             },
             failureBuilder: (context, error, callback) {
-              callback.call();
-              error.message;
-              return Container();
+              return FailureViewWidget(onTap: () => callback.call());
             },
           ),
         ],

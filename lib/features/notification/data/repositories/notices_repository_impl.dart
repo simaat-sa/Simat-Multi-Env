@@ -13,4 +13,9 @@ class NoticesRepositoryImpl extends NoticesRepository with ModelToDomainResult {
   Future<MyResult<List<NoticesModel>>> getNotices(bool params) async {
     return await dataSource.getNotices(params);
   }
+
+  @override
+  Future<MyResult<String>> getCountNotices(bool params)async {
+    return await dataSource.getCountNotices(params);
+  }
 }

@@ -7,6 +7,7 @@ import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/core/widgets/CachedImage.dart';
 import 'package:flutter_tdd/features/auth/presentation/manager/user_cubit/user_cubit.dart';
+import 'package:flutter_tdd/features/notification/presentation/manager/notify_cubit/notify_cubit.dart';
 import 'package:flutter_tdd/res.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -20,6 +21,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     var userData = context.watch<UserCubit>().state.model;
+    var notifyCount = context.watch<NotifyCubit>().state.count;
     return AppBar(
       centerTitle: false,
       leadingWidth: 70,
@@ -43,21 +45,22 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     Res.noticesLogo,
                   ),
                 ),
-                // PositionedDirectional(
-                //   top: 0,
-                //   end: 0,
-                //   child: Container(
-                //     padding: const EdgeInsets.all(5),
-                //     decoration: BoxDecoration(
-                //       color: context.colors.red,
-                //       shape: BoxShape.circle,
-                //     ),
-                //     child: Text(
-                //       '2',
-                //       style: AppTextStyle.s9_w400(color: context.colors.white),
-                //     ),
-                //   ),
-                // ),
+                 if(notifyCount.isNotEmpty)
+                PositionedDirectional(
+                  top: 2,
+                  end: 3,
+                  child: Container(
+                    padding: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      color: context.colors.red,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Text(
+                      notifyCount,
+                      style: AppTextStyle.s9_w400(color: context.colors.white),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

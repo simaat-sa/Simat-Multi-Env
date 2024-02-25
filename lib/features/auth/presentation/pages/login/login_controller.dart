@@ -33,7 +33,8 @@ class LoginController {
 
   bool _handleLoginResponse(BuildContext context, MyResult<UserModel> response) {
     return response.when(isSuccess: (userModel) {
-      context.read<UserCubit>().onUpdateUserData(userModel!);
+      userModel!.userAccess.add(_menuTapModel());
+      context.read<UserCubit>().onUpdateUserData(userModel);
       GlobalState.instance.set("token", response.data?.userToken);
       UserHelperService.instance.saveUserData(userModel);
       AppSnackBar.showSimpleToast(
@@ -45,11 +46,27 @@ class LoginController {
       return true;
     }, isError: (error) {
       AppSnackBar.showSimpleToast(
-        msg: Translate.of(context).Invalid_login_data,
+        msg: Translate
+            .of(context)
+            .Invalid_login_data,
         type: ToastType.error,
       );
       return false;
     });
+  }
+
+  UserAccessModel _menuTapModel() {
+    return UserAccessModel(
+      pageid: "0",
+      pageCode: AccessPages.non,
+      pageAr: "القائمة",
+      pageEn: "Menu",
+      isRoot: "false",
+      pageActive: "",
+      pageImage: "",
+      pageDesc: "",
+      pageName: Translate.s.menu,
+      iconSvg: Res.moreBarLogo,);
   }
 
   /// handle login params

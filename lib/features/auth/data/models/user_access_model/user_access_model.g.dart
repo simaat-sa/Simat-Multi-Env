@@ -6,7 +6,8 @@ part of 'user_access_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserAccessModelImpl _$$UserAccessModelImplFromJson(Map<String, dynamic> json) =>
+_$UserAccessModelImpl _$$UserAccessModelImplFromJson(
+        Map<String, dynamic> json) =>
     _$UserAccessModelImpl(
       pageid: json['pageid'] as String,
       pageCode: $enumDecode(_$AccessPagesEnumMap, json['page_code']),
@@ -20,7 +21,8 @@ _$UserAccessModelImpl _$$UserAccessModelImplFromJson(Map<String, dynamic> json) 
       iconSvg: json['icon_svg'] as String,
     );
 
-Map<String, dynamic> _$$UserAccessModelImplToJson(_$UserAccessModelImpl instance) =>
+Map<String, dynamic> _$$UserAccessModelImplToJson(
+        _$UserAccessModelImpl instance) =>
     <String, dynamic>{
       'pageid': instance.pageid,
       'page_code': _$AccessPagesEnumMap[instance.pageCode]!,

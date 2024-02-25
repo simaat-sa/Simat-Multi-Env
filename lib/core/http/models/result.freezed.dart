@@ -58,7 +58,8 @@ mixin _$MyResult<T> {
 
 /// @nodoc
 abstract class $MyResultCopyWith<T, $Res> {
-  factory $MyResultCopyWith(MyResult<T> value, $Res Function(MyResult<T>) then) =
+  factory $MyResultCopyWith(
+          MyResult<T> value, $Res Function(MyResult<T>) then) =
       _$MyResultCopyWithImpl<T, $Res, MyResult<T>>;
 }
 
@@ -86,7 +87,8 @@ abstract class _$$IsSuccessImplCopyWith<T, $Res> {
 class __$$IsSuccessImplCopyWithImpl<T, $Res>
     extends _$MyResultCopyWithImpl<T, $Res, _$IsSuccessImpl<T>>
     implements _$$IsSuccessImplCopyWith<T, $Res> {
-  __$$IsSuccessImplCopyWithImpl(_$IsSuccessImpl<T> _value, $Res Function(_$IsSuccessImpl<T>) _then)
+  __$$IsSuccessImplCopyWithImpl(
+      _$IsSuccessImpl<T> _value, $Res Function(_$IsSuccessImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -125,7 +127,8 @@ class _$IsSuccessImpl<T> extends IsSuccess<T> {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
   @JsonKey(ignore: true)
   @override
@@ -208,16 +211,19 @@ abstract class IsSuccess<T> extends MyResult<T> {
 
 /// @nodoc
 abstract class _$$IsErrorImplCopyWith<T, $Res> {
-  factory _$$IsErrorImplCopyWith(_$IsErrorImpl<T> value, $Res Function(_$IsErrorImpl<T>) then) =
+  factory _$$IsErrorImplCopyWith(
+          _$IsErrorImpl<T> value, $Res Function(_$IsErrorImpl<T>) then) =
       __$$IsErrorImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({BaseError error});
 }
 
 /// @nodoc
-class __$$IsErrorImplCopyWithImpl<T, $Res> extends _$MyResultCopyWithImpl<T, $Res, _$IsErrorImpl<T>>
+class __$$IsErrorImplCopyWithImpl<T, $Res>
+    extends _$MyResultCopyWithImpl<T, $Res, _$IsErrorImpl<T>>
     implements _$$IsErrorImplCopyWith<T, $Res> {
-  __$$IsErrorImplCopyWithImpl(_$IsErrorImpl<T> _value, $Res Function(_$IsErrorImpl<T>) _then)
+  __$$IsErrorImplCopyWithImpl(
+      _$IsErrorImpl<T> _value, $Res Function(_$IsErrorImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -333,5 +339,6 @@ abstract class IsError<T> extends MyResult<T> {
 
   BaseError get error;
   @JsonKey(ignore: true)
-  _$$IsErrorImplCopyWith<T, _$IsErrorImpl<T>> get copyWith => throw _privateConstructorUsedError;
+  _$$IsErrorImplCopyWith<T, _$IsErrorImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

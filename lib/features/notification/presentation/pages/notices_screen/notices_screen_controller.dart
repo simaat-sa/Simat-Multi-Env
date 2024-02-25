@@ -5,7 +5,7 @@ class NoticesScreenController{
   final NoticesRequester requester = NoticesRequester();
 
 
-  void requestData(){
+  void requestNotifyData(){
     requester.request(fromRemote: false);
     requester.request();
   }

@@ -132,7 +132,8 @@
   "no_notices_now": "You don't have any notifications yet, please check back later",
   "back_to_main_page": "Back to main page",
   "new_notices": "New notifications",
-  "new_maintenance_request": "New maintenance request"
+  "new_maintenance_request": "New maintenance request",
+  "menu": "Menu"
 
 
 }

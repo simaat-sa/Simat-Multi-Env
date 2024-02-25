@@ -30,4 +30,5 @@ class ApiNames {
   static String maintenanceAdd = "${version1Part}maintenance/add";
   static String getNotices = "${version1Part}notification/list";
   static String contractPayment(String id) => "${version1Part}contract/payment/list?tts_id=$id";
+  static String noticesUnread= "${version1Part}notification/unread-count";
 }
