@@ -19,7 +19,7 @@ class AuthAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     this.onBack,
     this.leading,
     this.showBack = true,
-    this.scaffoldkey,
+     this.scaffoldkey,
     this.action,
   });
 
@@ -49,16 +49,15 @@ class AuthAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
             ),
-        actions: const [
+        actions: [
           Gaps.empty,
-          // InkWell(
-          //     onTap: () =>
-          //         scaffoldkey?.currentState?.openEndDrawer(),
-          //     child: Icon(
-          //       Icons.more_vert_outlined,
-          //       color: context.colors.black,
-          //       size: 25,
-          //     ))
+          InkWell(
+              onTap: () => scaffoldkey?.currentState!.openEndDrawer(),
+              child: Icon(
+                Icons.more_vert_outlined,
+                color: context.colors.black,
+                size: 25,
+              ))
         ],
       ),
     );

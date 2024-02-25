@@ -8,36 +8,38 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i16;
-import 'package:flutter/material.dart' as _i17;
+import 'package:auto_route/auto_route.dart' as _i17;
+import 'package:flutter/material.dart' as _i18;
 import 'package:flutter_tdd/features/auth/presentation/pages/active_account/active_account_imports.dart'
     as _i1;
 import 'package:flutter_tdd/features/auth/presentation/pages/forget_password/forget_password_imports.dart'
     as _i7;
-import 'package:flutter_tdd/features/auth/presentation/pages/login/login_imports.dart'
-    as _i9;
-import 'package:flutter_tdd/features/auth/presentation/pages/reset_password/reset_password_imports.dart'
-    as _i12;
-import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_imports.dart'
-    as _i13;
-import 'package:flutter_tdd/features/auth/presentation/pages/verify_otp/verify_otp_imports.dart'
-    as _i15;
-import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart'
+import 'package:flutter_tdd/features/auth/presentation/pages/get_code_info/get_code_info_imports.dart'
     as _i8;
+import 'package:flutter_tdd/features/auth/presentation/pages/login/login_imports.dart'
+    as _i10;
+import 'package:flutter_tdd/features/auth/presentation/pages/reset_password/reset_password_imports.dart'
+    as _i13;
+import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_imports.dart'
+    as _i14;
+import 'package:flutter_tdd/features/auth/presentation/pages/verify_otp/verify_otp_imports.dart'
+    as _i16;
+import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart'
+    as _i9;
 import 'package:flutter_tdd/features/contract/data/models/contract_model/contract_model.dart'
-    as _i19;
+    as _i20;
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_details/contract_details_imports.dart'
     as _i4;
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_screen/contract_screen_imports.dart'
-    as _i20;
+    as _i21;
 import 'package:flutter_tdd/features/contract/presentation/pages/filter_contract/filter_contract_imports.dart'
     as _i5;
 import 'package:flutter_tdd/features/contract/presentation/pages/renew_contract_status/renew_contract_status_imports.dart'
-    as _i11;
+    as _i12;
 import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart'
-    as _i14;
+    as _i15;
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart'
-    as _i18;
+    as _i19;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance/add_maintenance_imports.dart'
     as _i2;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance_status/add_maintenance_status_imports.dart'
@@ -45,23 +47,23 @@ import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintena
 import 'package:flutter_tdd/features/maintenance/presentation/pages/filter_maintenance/filter_maintenance_imports.dart'
     as _i6;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/maintenance_screen/maintenance_screen_imports.dart'
-    as _i21;
+    as _i22;
 import 'package:flutter_tdd/features/notification/presentation/pages/notices_screen/notices_screen_imports.dart'
-    as _i10;
+    as _i11;
 
-abstract class $AppRouter extends _i16.RootStackRouter {
+abstract class $AppRouter extends _i17.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i16.PageFactory> pagesMap = {
+  final Map<String, _i17.PageFactory> pagesMap = {
     ActiveAccount.name: (routeData) {
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.ActiveAccount(),
       );
     },
     AddMaintenanceRoute.name: (routeData) {
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i2.AddMaintenance(),
       );
@@ -69,7 +71,7 @@ abstract class $AppRouter extends _i16.RootStackRouter {
     CompleteAddMaintenanceRoute.name: (routeData) {
       final args = routeData.argsAs<CompleteAddMaintenanceRouteArgs>(
           orElse: () => const CompleteAddMaintenanceRouteArgs());
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i3.CompleteAddMaintenance(
           key: args.key,
@@ -79,7 +81,7 @@ abstract class $AppRouter extends _i16.RootStackRouter {
     },
     ContractDetailsRoute.name: (routeData) {
       final args = routeData.argsAs<ContractDetailsRouteArgs>();
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i4.ContractDetails(
           key: args.key,
@@ -89,7 +91,7 @@ abstract class $AppRouter extends _i16.RootStackRouter {
     },
     FilterContractRoute.name: (routeData) {
       final args = routeData.argsAs<FilterContractRouteArgs>();
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i5.FilterContract(
           key: args.key,
@@ -99,7 +101,7 @@ abstract class $AppRouter extends _i16.RootStackRouter {
     },
     FilterMaintenanceRoute.name: (routeData) {
       final args = routeData.argsAs<FilterMaintenanceRouteArgs>();
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i6.FilterMaintenance(
           key: args.key,
@@ -108,65 +110,71 @@ abstract class $AppRouter extends _i16.RootStackRouter {
       );
     },
     ForgetPassword.name: (routeData) {
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i7.ForgetPassword(),
       );
     },
+    GetCodeInfoRoute.name: (routeData) {
+      return _i17.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i8.GetCodeInfo(),
+      );
+    },
     Home.name: (routeData) {
       final args = routeData.argsAs<HomeArgs>(orElse: () => const HomeArgs());
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i8.Home(
+        child: _i9.Home(
           key: args.key,
           index: args.index,
         ),
       );
     },
     Login.name: (routeData) {
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.Login(),
+        child: const _i10.Login(),
       );
     },
     NoticesScreenRoute.name: (routeData) {
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.NoticesScreen(),
+        child: const _i11.NoticesScreen(),
       );
     },
     RenewContractStatusRoute.name: (routeData) {
       final args = routeData.argsAs<RenewContractStatusRouteArgs>();
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i11.RenewContractStatus(
+        child: _i12.RenewContractStatus(
           key: args.key,
           success: args.success,
         ),
       );
     },
     ResetPassword.name: (routeData) {
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i12.ResetPassword(),
+        child: const _i13.ResetPassword(),
       );
     },
     Splash.name: (routeData) {
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i13.Splash(),
+        child: const _i14.Splash(),
       );
     },
     Terms.name: (routeData) {
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i14.Terms(),
+        child: const _i15.Terms(),
       );
     },
     VerifyOTP.name: (routeData) {
-      return _i16.AutoRoutePage<dynamic>(
+      return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i15.VerifyOTP(),
+        child: const _i16.VerifyOTP(),
       );
     },
   };
@@ -174,8 +182,8 @@ abstract class $AppRouter extends _i16.RootStackRouter {
 
 /// generated route for
 /// [_i1.ActiveAccount]
-class ActiveAccount extends _i16.PageRouteInfo<void> {
-  const ActiveAccount({List<_i16.PageRouteInfo>? children})
+class ActiveAccount extends _i17.PageRouteInfo<void> {
+  const ActiveAccount({List<_i17.PageRouteInfo>? children})
       : super(
           ActiveAccount.name,
           initialChildren: children,
@@ -183,13 +191,13 @@ class ActiveAccount extends _i16.PageRouteInfo<void> {
 
   static const String name = 'ActiveAccount';
 
-  static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i2.AddMaintenance]
-class AddMaintenanceRoute extends _i16.PageRouteInfo<void> {
-  const AddMaintenanceRoute({List<_i16.PageRouteInfo>? children})
+class AddMaintenanceRoute extends _i17.PageRouteInfo<void> {
+  const AddMaintenanceRoute({List<_i17.PageRouteInfo>? children})
       : super(
           AddMaintenanceRoute.name,
           initialChildren: children,
@@ -197,17 +205,17 @@ class AddMaintenanceRoute extends _i16.PageRouteInfo<void> {
 
   static const String name = 'AddMaintenanceRoute';
 
-  static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.CompleteAddMaintenance]
 class CompleteAddMaintenanceRoute
-    extends _i16.PageRouteInfo<CompleteAddMaintenanceRouteArgs> {
+    extends _i17.PageRouteInfo<CompleteAddMaintenanceRouteArgs> {
   CompleteAddMaintenanceRoute({
-    _i17.Key? key,
-    _i18.MaintenanceModel? model,
-    List<_i16.PageRouteInfo>? children,
+    _i18.Key? key,
+    _i19.MaintenanceModel? model,
+    List<_i17.PageRouteInfo>? children,
   }) : super(
           CompleteAddMaintenanceRoute.name,
           args: CompleteAddMaintenanceRouteArgs(
@@ -219,8 +227,8 @@ class CompleteAddMaintenanceRoute
 
   static const String name = 'CompleteAddMaintenanceRoute';
 
-  static const _i16.PageInfo<CompleteAddMaintenanceRouteArgs> page =
-      _i16.PageInfo<CompleteAddMaintenanceRouteArgs>(name);
+  static const _i17.PageInfo<CompleteAddMaintenanceRouteArgs> page =
+      _i17.PageInfo<CompleteAddMaintenanceRouteArgs>(name);
 }
 
 class CompleteAddMaintenanceRouteArgs {
@@ -229,9 +237,9 @@ class CompleteAddMaintenanceRouteArgs {
     this.model,
   });
 
-  final _i17.Key? key;
+  final _i18.Key? key;
 
-  final _i18.MaintenanceModel? model;
+  final _i19.MaintenanceModel? model;
 
   @override
   String toString() {
@@ -242,11 +250,11 @@ class CompleteAddMaintenanceRouteArgs {
 /// generated route for
 /// [_i4.ContractDetails]
 class ContractDetailsRoute
-    extends _i16.PageRouteInfo<ContractDetailsRouteArgs> {
+    extends _i17.PageRouteInfo<ContractDetailsRouteArgs> {
   ContractDetailsRoute({
-    _i17.Key? key,
-    required _i19.ContractModel model,
-    List<_i16.PageRouteInfo>? children,
+    _i18.Key? key,
+    required _i20.ContractModel model,
+    List<_i17.PageRouteInfo>? children,
   }) : super(
           ContractDetailsRoute.name,
           args: ContractDetailsRouteArgs(
@@ -258,8 +266,8 @@ class ContractDetailsRoute
 
   static const String name = 'ContractDetailsRoute';
 
-  static const _i16.PageInfo<ContractDetailsRouteArgs> page =
-      _i16.PageInfo<ContractDetailsRouteArgs>(name);
+  static const _i17.PageInfo<ContractDetailsRouteArgs> page =
+      _i17.PageInfo<ContractDetailsRouteArgs>(name);
 }
 
 class ContractDetailsRouteArgs {
@@ -268,9 +276,9 @@ class ContractDetailsRouteArgs {
     required this.model,
   });
 
-  final _i17.Key? key;
+  final _i18.Key? key;
 
-  final _i19.ContractModel model;
+  final _i20.ContractModel model;
 
   @override
   String toString() {
@@ -280,11 +288,11 @@ class ContractDetailsRouteArgs {
 
 /// generated route for
 /// [_i5.FilterContract]
-class FilterContractRoute extends _i16.PageRouteInfo<FilterContractRouteArgs> {
+class FilterContractRoute extends _i17.PageRouteInfo<FilterContractRouteArgs> {
   FilterContractRoute({
-    _i17.Key? key,
-    required _i20.ContractScreenController controller,
-    List<_i16.PageRouteInfo>? children,
+    _i18.Key? key,
+    required _i21.ContractScreenController controller,
+    List<_i17.PageRouteInfo>? children,
   }) : super(
           FilterContractRoute.name,
           args: FilterContractRouteArgs(
@@ -296,8 +304,8 @@ class FilterContractRoute extends _i16.PageRouteInfo<FilterContractRouteArgs> {
 
   static const String name = 'FilterContractRoute';
 
-  static const _i16.PageInfo<FilterContractRouteArgs> page =
-      _i16.PageInfo<FilterContractRouteArgs>(name);
+  static const _i17.PageInfo<FilterContractRouteArgs> page =
+      _i17.PageInfo<FilterContractRouteArgs>(name);
 }
 
 class FilterContractRouteArgs {
@@ -306,9 +314,9 @@ class FilterContractRouteArgs {
     required this.controller,
   });
 
-  final _i17.Key? key;
+  final _i18.Key? key;
 
-  final _i20.ContractScreenController controller;
+  final _i21.ContractScreenController controller;
 
   @override
   String toString() {
@@ -319,11 +327,11 @@ class FilterContractRouteArgs {
 /// generated route for
 /// [_i6.FilterMaintenance]
 class FilterMaintenanceRoute
-    extends _i16.PageRouteInfo<FilterMaintenanceRouteArgs> {
+    extends _i17.PageRouteInfo<FilterMaintenanceRouteArgs> {
   FilterMaintenanceRoute({
-    _i17.Key? key,
-    required _i21.MaintenanceController controller,
-    List<_i16.PageRouteInfo>? children,
+    _i18.Key? key,
+    required _i22.MaintenanceController controller,
+    List<_i17.PageRouteInfo>? children,
   }) : super(
           FilterMaintenanceRoute.name,
           args: FilterMaintenanceRouteArgs(
@@ -335,8 +343,8 @@ class FilterMaintenanceRoute
 
   static const String name = 'FilterMaintenanceRoute';
 
-  static const _i16.PageInfo<FilterMaintenanceRouteArgs> page =
-      _i16.PageInfo<FilterMaintenanceRouteArgs>(name);
+  static const _i17.PageInfo<FilterMaintenanceRouteArgs> page =
+      _i17.PageInfo<FilterMaintenanceRouteArgs>(name);
 }
 
 class FilterMaintenanceRouteArgs {
@@ -345,9 +353,9 @@ class FilterMaintenanceRouteArgs {
     required this.controller,
   });
 
-  final _i17.Key? key;
+  final _i18.Key? key;
 
-  final _i21.MaintenanceController controller;
+  final _i22.MaintenanceController controller;
 
   @override
   String toString() {
@@ -357,8 +365,8 @@ class FilterMaintenanceRouteArgs {
 
 /// generated route for
 /// [_i7.ForgetPassword]
-class ForgetPassword extends _i16.PageRouteInfo<void> {
-  const ForgetPassword({List<_i16.PageRouteInfo>? children})
+class ForgetPassword extends _i17.PageRouteInfo<void> {
+  const ForgetPassword({List<_i17.PageRouteInfo>? children})
       : super(
           ForgetPassword.name,
           initialChildren: children,
@@ -366,16 +374,30 @@ class ForgetPassword extends _i16.PageRouteInfo<void> {
 
   static const String name = 'ForgetPassword';
 
-  static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i8.Home]
-class Home extends _i16.PageRouteInfo<HomeArgs> {
+/// [_i8.GetCodeInfo]
+class GetCodeInfoRoute extends _i17.PageRouteInfo<void> {
+  const GetCodeInfoRoute({List<_i17.PageRouteInfo>? children})
+      : super(
+          GetCodeInfoRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'GetCodeInfoRoute';
+
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i9.Home]
+class Home extends _i17.PageRouteInfo<HomeArgs> {
   Home({
-    _i17.Key? key,
+    _i18.Key? key,
     int index = 0,
-    List<_i16.PageRouteInfo>? children,
+    List<_i17.PageRouteInfo>? children,
   }) : super(
           Home.name,
           args: HomeArgs(
@@ -387,7 +409,7 @@ class Home extends _i16.PageRouteInfo<HomeArgs> {
 
   static const String name = 'Home';
 
-  static const _i16.PageInfo<HomeArgs> page = _i16.PageInfo<HomeArgs>(name);
+  static const _i17.PageInfo<HomeArgs> page = _i17.PageInfo<HomeArgs>(name);
 }
 
 class HomeArgs {
@@ -396,7 +418,7 @@ class HomeArgs {
     this.index = 0,
   });
 
-  final _i17.Key? key;
+  final _i18.Key? key;
 
   final int index;
 
@@ -407,9 +429,9 @@ class HomeArgs {
 }
 
 /// generated route for
-/// [_i9.Login]
-class Login extends _i16.PageRouteInfo<void> {
-  const Login({List<_i16.PageRouteInfo>? children})
+/// [_i10.Login]
+class Login extends _i17.PageRouteInfo<void> {
+  const Login({List<_i17.PageRouteInfo>? children})
       : super(
           Login.name,
           initialChildren: children,
@@ -417,13 +439,13 @@ class Login extends _i16.PageRouteInfo<void> {
 
   static const String name = 'Login';
 
-  static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i10.NoticesScreen]
-class NoticesScreenRoute extends _i16.PageRouteInfo<void> {
-  const NoticesScreenRoute({List<_i16.PageRouteInfo>? children})
+/// [_i11.NoticesScreen]
+class NoticesScreenRoute extends _i17.PageRouteInfo<void> {
+  const NoticesScreenRoute({List<_i17.PageRouteInfo>? children})
       : super(
           NoticesScreenRoute.name,
           initialChildren: children,
@@ -431,17 +453,17 @@ class NoticesScreenRoute extends _i16.PageRouteInfo<void> {
 
   static const String name = 'NoticesScreenRoute';
 
-  static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i11.RenewContractStatus]
+/// [_i12.RenewContractStatus]
 class RenewContractStatusRoute
-    extends _i16.PageRouteInfo<RenewContractStatusRouteArgs> {
+    extends _i17.PageRouteInfo<RenewContractStatusRouteArgs> {
   RenewContractStatusRoute({
-    _i17.Key? key,
+    _i18.Key? key,
     required bool success,
-    List<_i16.PageRouteInfo>? children,
+    List<_i17.PageRouteInfo>? children,
   }) : super(
           RenewContractStatusRoute.name,
           args: RenewContractStatusRouteArgs(
@@ -453,8 +475,8 @@ class RenewContractStatusRoute
 
   static const String name = 'RenewContractStatusRoute';
 
-  static const _i16.PageInfo<RenewContractStatusRouteArgs> page =
-      _i16.PageInfo<RenewContractStatusRouteArgs>(name);
+  static const _i17.PageInfo<RenewContractStatusRouteArgs> page =
+      _i17.PageInfo<RenewContractStatusRouteArgs>(name);
 }
 
 class RenewContractStatusRouteArgs {
@@ -463,7 +485,7 @@ class RenewContractStatusRouteArgs {
     required this.success,
   });
 
-  final _i17.Key? key;
+  final _i18.Key? key;
 
   final bool success;
 
@@ -474,9 +496,9 @@ class RenewContractStatusRouteArgs {
 }
 
 /// generated route for
-/// [_i12.ResetPassword]
-class ResetPassword extends _i16.PageRouteInfo<void> {
-  const ResetPassword({List<_i16.PageRouteInfo>? children})
+/// [_i13.ResetPassword]
+class ResetPassword extends _i17.PageRouteInfo<void> {
+  const ResetPassword({List<_i17.PageRouteInfo>? children})
       : super(
           ResetPassword.name,
           initialChildren: children,
@@ -484,13 +506,13 @@ class ResetPassword extends _i16.PageRouteInfo<void> {
 
   static const String name = 'ResetPassword';
 
-  static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i13.Splash]
-class Splash extends _i16.PageRouteInfo<void> {
-  const Splash({List<_i16.PageRouteInfo>? children})
+/// [_i14.Splash]
+class Splash extends _i17.PageRouteInfo<void> {
+  const Splash({List<_i17.PageRouteInfo>? children})
       : super(
           Splash.name,
           initialChildren: children,
@@ -498,13 +520,13 @@ class Splash extends _i16.PageRouteInfo<void> {
 
   static const String name = 'Splash';
 
-  static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i14.Terms]
-class Terms extends _i16.PageRouteInfo<void> {
-  const Terms({List<_i16.PageRouteInfo>? children})
+/// [_i15.Terms]
+class Terms extends _i17.PageRouteInfo<void> {
+  const Terms({List<_i17.PageRouteInfo>? children})
       : super(
           Terms.name,
           initialChildren: children,
@@ -512,13 +534,13 @@ class Terms extends _i16.PageRouteInfo<void> {
 
   static const String name = 'Terms';
 
-  static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i15.VerifyOTP]
-class VerifyOTP extends _i16.PageRouteInfo<void> {
-  const VerifyOTP({List<_i16.PageRouteInfo>? children})
+/// [_i16.VerifyOTP]
+class VerifyOTP extends _i17.PageRouteInfo<void> {
+  const VerifyOTP({List<_i17.PageRouteInfo>? children})
       : super(
           VerifyOTP.name,
           initialChildren: children,
@@ -526,5 +548,5 @@ class VerifyOTP extends _i16.PageRouteInfo<void> {
 
   static const String name = 'VerifyOTP';
 
-  static const _i16.PageInfo<void> page = _i16.PageInfo<void>(name);
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }

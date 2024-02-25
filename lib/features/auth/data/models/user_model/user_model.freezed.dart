@@ -22,65 +22,34 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) {
 mixin _$UserModel {
   @JsonKey(name: "user_type_code")
   String get userTypeCode => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_type_code")
-  set userTypeCode(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "userid")
   String get userid => throw _privateConstructorUsedError;
-  @JsonKey(name: "userid")
-  set userid(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "user_token")
   String get userToken => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_token")
-  set userToken(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "username")
   String get username => throw _privateConstructorUsedError;
-  @JsonKey(name: "username")
-  set username(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "user_avatar", defaultValue: "")
   String get userAvatar => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_avatar", defaultValue: "")
-  set userAvatar(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "usermobile")
   String get userMobile => throw _privateConstructorUsedError;
-  @JsonKey(name: "usermobile")
-  set userMobile(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "useremail")
   String get userEmail => throw _privateConstructorUsedError;
-  @JsonKey(name: "useremail")
-  set userEmail(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "user_active")
   String get userActive => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_active")
-  set userActive(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "user_lang")
   String get userLang => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_lang")
-  set userLang(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "user_lastonline")
   String get userLastOnline => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_lastonline")
-  set userLastOnline(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "user_fullname")
   String get userFullname => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_fullname")
-  set userFullname(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "user_fullname_en")
   String get userFullnameEn => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_fullname_en")
-  set userFullnameEn(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "active")
   String get active => throw _privateConstructorUsedError;
-  @JsonKey(name: "active")
-  set active(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "uuid")
   String get uuid => throw _privateConstructorUsedError;
-  @JsonKey(name: "uuid")
-  set uuid(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: "app_page_access", defaultValue: [])
   List<UserAccessModel> get userAccess => throw _privateConstructorUsedError;
-  @JsonKey(name: "app_page_access", defaultValue: [])
-  set userAccess(List<UserAccessModel> value) =>
-      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -318,7 +287,7 @@ class __$$UserModelImplCopyWithImpl<$Res>
           : uuid // ignore: cast_nullable_to_non_nullable
               as String,
       userAccess: null == userAccess
-          ? _value.userAccess
+          ? _value._userAccess
           : userAccess // ignore: cast_nullable_to_non_nullable
               as List<UserAccessModel>,
     ));
@@ -329,7 +298,7 @@ class __$$UserModelImplCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$UserModelImpl extends _UserModel {
-   _$UserModelImpl(
+  const _$UserModelImpl(
       {@JsonKey(name: "user_type_code") required this.userTypeCode,
       @JsonKey(name: "userid") required this.userid,
       @JsonKey(name: "user_token") required this.userToken,
@@ -345,62 +314,122 @@ class _$UserModelImpl extends _UserModel {
       @JsonKey(name: "active") required this.active,
       @JsonKey(name: "uuid") required this.uuid,
       @JsonKey(name: "app_page_access", defaultValue: [])
-      required this.userAccess})
-      : super._();
+      required final List<UserAccessModel> userAccess})
+      : _userAccess = userAccess,
+        super._();
 
   factory _$UserModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserModelImplFromJson(json);
 
   @override
   @JsonKey(name: "user_type_code")
-  String userTypeCode;
+  final String userTypeCode;
   @override
   @JsonKey(name: "userid")
-  String userid;
+  final String userid;
   @override
   @JsonKey(name: "user_token")
-  String userToken;
+  final String userToken;
   @override
   @JsonKey(name: "username")
-  String username;
+  final String username;
   @override
   @JsonKey(name: "user_avatar", defaultValue: "")
-  String userAvatar;
+  final String userAvatar;
   @override
   @JsonKey(name: "usermobile")
-  String userMobile;
+  final String userMobile;
   @override
   @JsonKey(name: "useremail")
-  String userEmail;
+  final String userEmail;
   @override
   @JsonKey(name: "user_active")
-  String userActive;
+  final String userActive;
   @override
   @JsonKey(name: "user_lang")
-  String userLang;
+  final String userLang;
   @override
   @JsonKey(name: "user_lastonline")
-  String userLastOnline;
+  final String userLastOnline;
   @override
   @JsonKey(name: "user_fullname")
-  String userFullname;
+  final String userFullname;
   @override
   @JsonKey(name: "user_fullname_en")
-  String userFullnameEn;
+  final String userFullnameEn;
   @override
   @JsonKey(name: "active")
-  String active;
+  final String active;
   @override
   @JsonKey(name: "uuid")
-  String uuid;
+  final String uuid;
+  final List<UserAccessModel> _userAccess;
   @override
   @JsonKey(name: "app_page_access", defaultValue: [])
-  List<UserAccessModel> userAccess;
+  List<UserAccessModel> get userAccess {
+    if (_userAccess is EqualUnmodifiableListView) return _userAccess;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_userAccess);
+  }
 
   @override
   String toString() {
     return 'UserModel(userTypeCode: $userTypeCode, userid: $userid, userToken: $userToken, username: $username, userAvatar: $userAvatar, userMobile: $userMobile, userEmail: $userEmail, userActive: $userActive, userLang: $userLang, userLastOnline: $userLastOnline, userFullname: $userFullname, userFullnameEn: $userFullnameEn, active: $active, uuid: $uuid, userAccess: $userAccess)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UserModelImpl &&
+            (identical(other.userTypeCode, userTypeCode) ||
+                other.userTypeCode == userTypeCode) &&
+            (identical(other.userid, userid) || other.userid == userid) &&
+            (identical(other.userToken, userToken) ||
+                other.userToken == userToken) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.userAvatar, userAvatar) ||
+                other.userAvatar == userAvatar) &&
+            (identical(other.userMobile, userMobile) ||
+                other.userMobile == userMobile) &&
+            (identical(other.userEmail, userEmail) ||
+                other.userEmail == userEmail) &&
+            (identical(other.userActive, userActive) ||
+                other.userActive == userActive) &&
+            (identical(other.userLang, userLang) ||
+                other.userLang == userLang) &&
+            (identical(other.userLastOnline, userLastOnline) ||
+                other.userLastOnline == userLastOnline) &&
+            (identical(other.userFullname, userFullname) ||
+                other.userFullname == userFullname) &&
+            (identical(other.userFullnameEn, userFullnameEn) ||
+                other.userFullnameEn == userFullnameEn) &&
+            (identical(other.active, active) || other.active == active) &&
+            (identical(other.uuid, uuid) || other.uuid == uuid) &&
+            const DeepCollectionEquality()
+                .equals(other._userAccess, _userAccess));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      userTypeCode,
+      userid,
+      userToken,
+      username,
+      userAvatar,
+      userMobile,
+      userEmail,
+      userActive,
+      userLang,
+      userLastOnline,
+      userFullname,
+      userFullnameEn,
+      active,
+      uuid,
+      const DeepCollectionEquality().hash(_userAccess));
 
   @JsonKey(ignore: true)
   @override
@@ -417,24 +446,24 @@ class _$UserModelImpl extends _UserModel {
 }
 
 abstract class _UserModel extends UserModel {
-   factory _UserModel(
-      {@JsonKey(name: "user_type_code") required String userTypeCode,
-      @JsonKey(name: "userid") required String userid,
-      @JsonKey(name: "user_token") required String userToken,
-      @JsonKey(name: "username") required String username,
+  const factory _UserModel(
+      {@JsonKey(name: "user_type_code") required final String userTypeCode,
+      @JsonKey(name: "userid") required final String userid,
+      @JsonKey(name: "user_token") required final String userToken,
+      @JsonKey(name: "username") required final String username,
       @JsonKey(name: "user_avatar", defaultValue: "")
-      required String userAvatar,
-      @JsonKey(name: "usermobile") required String userMobile,
-      @JsonKey(name: "useremail") required String userEmail,
-      @JsonKey(name: "user_active") required String userActive,
-      @JsonKey(name: "user_lang") required String userLang,
-      @JsonKey(name: "user_lastonline") required String userLastOnline,
-      @JsonKey(name: "user_fullname") required String userFullname,
-      @JsonKey(name: "user_fullname_en") required String userFullnameEn,
-      @JsonKey(name: "active") required String active,
-      @JsonKey(name: "uuid") required String uuid,
+      required final String userAvatar,
+      @JsonKey(name: "usermobile") required final String userMobile,
+      @JsonKey(name: "useremail") required final String userEmail,
+      @JsonKey(name: "user_active") required final String userActive,
+      @JsonKey(name: "user_lang") required final String userLang,
+      @JsonKey(name: "user_lastonline") required final String userLastOnline,
+      @JsonKey(name: "user_fullname") required final String userFullname,
+      @JsonKey(name: "user_fullname_en") required final String userFullnameEn,
+      @JsonKey(name: "active") required final String active,
+      @JsonKey(name: "uuid") required final String uuid,
       @JsonKey(name: "app_page_access", defaultValue: [])
-      required List<UserAccessModel> userAccess}) = _$UserModelImpl;
+      required final List<UserAccessModel> userAccess}) = _$UserModelImpl;
   const _UserModel._() : super._();
 
   factory _UserModel.fromJson(Map<String, dynamic> json) =
@@ -443,78 +472,48 @@ abstract class _UserModel extends UserModel {
   @override
   @JsonKey(name: "user_type_code")
   String get userTypeCode;
-  @JsonKey(name: "user_type_code")
-  set userTypeCode(String value);
   @override
   @JsonKey(name: "userid")
   String get userid;
-  @JsonKey(name: "userid")
-  set userid(String value);
   @override
   @JsonKey(name: "user_token")
   String get userToken;
-  @JsonKey(name: "user_token")
-  set userToken(String value);
   @override
   @JsonKey(name: "username")
   String get username;
-  @JsonKey(name: "username")
-  set username(String value);
   @override
   @JsonKey(name: "user_avatar", defaultValue: "")
   String get userAvatar;
-  @JsonKey(name: "user_avatar", defaultValue: "")
-  set userAvatar(String value);
   @override
   @JsonKey(name: "usermobile")
   String get userMobile;
-  @JsonKey(name: "usermobile")
-  set userMobile(String value);
   @override
   @JsonKey(name: "useremail")
   String get userEmail;
-  @JsonKey(name: "useremail")
-  set userEmail(String value);
   @override
   @JsonKey(name: "user_active")
   String get userActive;
-  @JsonKey(name: "user_active")
-  set userActive(String value);
   @override
   @JsonKey(name: "user_lang")
   String get userLang;
-  @JsonKey(name: "user_lang")
-  set userLang(String value);
   @override
   @JsonKey(name: "user_lastonline")
   String get userLastOnline;
-  @JsonKey(name: "user_lastonline")
-  set userLastOnline(String value);
   @override
   @JsonKey(name: "user_fullname")
   String get userFullname;
-  @JsonKey(name: "user_fullname")
-  set userFullname(String value);
   @override
   @JsonKey(name: "user_fullname_en")
   String get userFullnameEn;
-  @JsonKey(name: "user_fullname_en")
-  set userFullnameEn(String value);
   @override
   @JsonKey(name: "active")
   String get active;
-  @JsonKey(name: "active")
-  set active(String value);
   @override
   @JsonKey(name: "uuid")
   String get uuid;
-  @JsonKey(name: "uuid")
-  set uuid(String value);
   @override
   @JsonKey(name: "app_page_access", defaultValue: [])
   List<UserAccessModel> get userAccess;
-  @JsonKey(name: "app_page_access", defaultValue: [])
-  set userAccess(List<UserAccessModel> value);
   @override
   @JsonKey(ignore: true)
   _$$UserModelImplCopyWith<_$UserModelImpl> get copyWith =>

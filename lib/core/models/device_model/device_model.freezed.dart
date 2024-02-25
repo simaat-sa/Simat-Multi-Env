@@ -25,12 +25,14 @@ mixin _$DeviceModel {
   AdaptiveThemeMode get themeMode => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $DeviceModelCopyWith<DeviceModel> get copyWith => throw _privateConstructorUsedError;
+  $DeviceModelCopyWith<DeviceModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DeviceModelCopyWith<$Res> {
-  factory $DeviceModelCopyWith(DeviceModel value, $Res Function(DeviceModel) then) =
+  factory $DeviceModelCopyWith(
+          DeviceModel value, $Res Function(DeviceModel) then) =
       _$DeviceModelCopyWithImpl<$Res, DeviceModel>;
   @useResult
   $Res call(
@@ -98,7 +100,8 @@ class _$DeviceModelCopyWithImpl<$Res, $Val extends DeviceModel>
 }
 
 /// @nodoc
-abstract class _$$DeviceModelImplCopyWith<$Res> implements $DeviceModelCopyWith<$Res> {
+abstract class _$$DeviceModelImplCopyWith<$Res>
+    implements $DeviceModelCopyWith<$Res> {
   factory _$$DeviceModelImplCopyWith(
           _$DeviceModelImpl value, $Res Function(_$DeviceModelImpl) then) =
       __$$DeviceModelImplCopyWithImpl<$Res>;
@@ -118,7 +121,8 @@ abstract class _$$DeviceModelImplCopyWith<$Res> implements $DeviceModelCopyWith<
 class __$$DeviceModelImplCopyWithImpl<$Res>
     extends _$DeviceModelCopyWithImpl<$Res, _$DeviceModelImpl>
     implements _$$DeviceModelImplCopyWith<$Res> {
-  __$$DeviceModelImplCopyWithImpl(_$DeviceModelImpl _value, $Res Function(_$DeviceModelImpl) _then)
+  __$$DeviceModelImplCopyWithImpl(
+      _$DeviceModelImpl _value, $Res Function(_$DeviceModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -204,17 +208,21 @@ class _$DeviceModelImpl implements _DeviceModel {
             other is _$DeviceModelImpl &&
             (identical(other.locale, locale) || other.locale == locale) &&
             (identical(other.auth, auth) || other.auth == auth) &&
-            (identical(other.isBundle, isBundle) || other.isBundle == isBundle) &&
-            (identical(other.isTablet, isTablet) || other.isTablet == isTablet) &&
-            (identical(other.isSmallPhone, isSmallPhone) || other.isSmallPhone == isSmallPhone) &&
+            (identical(other.isBundle, isBundle) ||
+                other.isBundle == isBundle) &&
+            (identical(other.isTablet, isTablet) ||
+                other.isTablet == isTablet) &&
+            (identical(other.isSmallPhone, isSmallPhone) ||
+                other.isSmallPhone == isSmallPhone) &&
             (identical(other.isNetworkConnected, isNetworkConnected) ||
                 other.isNetworkConnected == isNetworkConnected) &&
-            (identical(other.themeMode, themeMode) || other.themeMode == themeMode));
+            (identical(other.themeMode, themeMode) ||
+                other.themeMode == themeMode));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, locale, auth, isBundle, isTablet, isSmallPhone, isNetworkConnected, themeMode);
+  int get hashCode => Object.hash(runtimeType, locale, auth, isBundle, isTablet,
+      isSmallPhone, isNetworkConnected, themeMode);
 
   @JsonKey(ignore: true)
   @override
@@ -249,5 +257,6 @@ abstract class _DeviceModel implements DeviceModel {
   AdaptiveThemeMode get themeMode;
   @override
   @JsonKey(ignore: true)
-  _$$DeviceModelImplCopyWith<_$DeviceModelImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$DeviceModelImplCopyWith<_$DeviceModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

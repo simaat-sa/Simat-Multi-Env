@@ -133,6 +133,17 @@
   "back_to_main_page": "عودة الى الرئيسية",
   "new_notices": "اشعارات جديدة",
   "new_maintenance_request": "طلب صيانة جديد",
+  "English": "الانجليزية",
+  "Arabic": "العربية",
+  "Share_the_app": "مشاركة التطبيق",
+  "Privacy_Policy": "سياسة الخصوصية",
+  "Technical_support_ticket": "تذكرة دعم فني",
+  "About_Simat_application": "عن تطبيق سمات",
+  "About_New_version": "جديد الإصدار",
+  "How_can_I_get_the_code": "كيف يمكن الحصول على الرمز؟",
+  "Login_to_your_platform_through": "1. تسجيل الدخول على منصتك من خلال المتصفح باستخدام حسابك",
+  "QR_mobile_application": "2.  في أعلى الشاشة “حمل الآن تطبيق سمات” أو من قائمة اعدادات المستخدم اختر “تطبيق الجوال QR",
+  "using_the_QR_code_scan_the_QR_code_that_appears": "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح",
   "menu": "القائمة"
 }
 

@@ -21,43 +21,24 @@ UserAccessModel _$UserAccessModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UserAccessModel {
   String get pageid => throw _privateConstructorUsedError;
-  set pageid(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'page_code')
   AccessPages get pageCode => throw _privateConstructorUsedError;
-  @JsonKey(name: 'page_code')
-  set pageCode(AccessPages value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'page_ar')
   String get pageAr => throw _privateConstructorUsedError;
-  @JsonKey(name: 'page_ar')
-  set pageAr(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'page_en')
   String get pageEn => throw _privateConstructorUsedError;
-  @JsonKey(name: 'page_en')
-  set pageEn(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_root')
   String get isRoot => throw _privateConstructorUsedError;
-  @JsonKey(name: 'is_root')
-  set isRoot(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'page_active')
   String get pageActive => throw _privateConstructorUsedError;
-  @JsonKey(name: 'page_active')
-  set pageActive(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'page_image')
   String get pageImage => throw _privateConstructorUsedError;
-  @JsonKey(name: 'page_image')
-  set pageImage(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'page_desc')
   String get pageDesc => throw _privateConstructorUsedError;
-  @JsonKey(name: 'page_desc')
-  set pageDesc(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'page_name')
   String get pageName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'page_name')
-  set pageName(String value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'icon_svg')
   String get iconSvg => throw _privateConstructorUsedError;
-  @JsonKey(name: 'icon_svg')
-  set iconSvg(String value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -262,39 +243,66 @@ class _$UserAccessModelImpl extends _UserAccessModel {
       _$$UserAccessModelImplFromJson(json);
 
   @override
-  String pageid;
+  final String pageid;
   @override
   @JsonKey(name: 'page_code')
-  AccessPages pageCode;
+  final AccessPages pageCode;
   @override
   @JsonKey(name: 'page_ar')
-  String pageAr;
+  final String pageAr;
   @override
   @JsonKey(name: 'page_en')
-  String pageEn;
+  final String pageEn;
   @override
   @JsonKey(name: 'is_root')
-  String isRoot;
+  final String isRoot;
   @override
   @JsonKey(name: 'page_active')
-  String pageActive;
+  final String pageActive;
   @override
   @JsonKey(name: 'page_image')
-  String pageImage;
+  final String pageImage;
   @override
   @JsonKey(name: 'page_desc')
-  String pageDesc;
+  final String pageDesc;
   @override
   @JsonKey(name: 'page_name')
-  String pageName;
+  final String pageName;
   @override
   @JsonKey(name: 'icon_svg')
-  String iconSvg;
+  final String iconSvg;
 
   @override
   String toString() {
     return 'UserAccessModel(pageid: $pageid, pageCode: $pageCode, pageAr: $pageAr, pageEn: $pageEn, isRoot: $isRoot, pageActive: $pageActive, pageImage: $pageImage, pageDesc: $pageDesc, pageName: $pageName, iconSvg: $iconSvg)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UserAccessModelImpl &&
+            (identical(other.pageid, pageid) || other.pageid == pageid) &&
+            (identical(other.pageCode, pageCode) ||
+                other.pageCode == pageCode) &&
+            (identical(other.pageAr, pageAr) || other.pageAr == pageAr) &&
+            (identical(other.pageEn, pageEn) || other.pageEn == pageEn) &&
+            (identical(other.isRoot, isRoot) || other.isRoot == isRoot) &&
+            (identical(other.pageActive, pageActive) ||
+                other.pageActive == pageActive) &&
+            (identical(other.pageImage, pageImage) ||
+                other.pageImage == pageImage) &&
+            (identical(other.pageDesc, pageDesc) ||
+                other.pageDesc == pageDesc) &&
+            (identical(other.pageName, pageName) ||
+                other.pageName == pageName) &&
+            (identical(other.iconSvg, iconSvg) || other.iconSvg == iconSvg));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, pageid, pageCode, pageAr, pageEn,
+      isRoot, pageActive, pageImage, pageDesc, pageName, iconSvg);
 
   @JsonKey(ignore: true)
   @override
@@ -313,16 +321,16 @@ class _$UserAccessModelImpl extends _UserAccessModel {
 
 abstract class _UserAccessModel extends UserAccessModel {
   factory _UserAccessModel(
-          {required String pageid,
-          @JsonKey(name: 'page_code') required AccessPages pageCode,
-          @JsonKey(name: 'page_ar') required String pageAr,
-          @JsonKey(name: 'page_en') required String pageEn,
-          @JsonKey(name: 'is_root') required String isRoot,
-          @JsonKey(name: 'page_active') required String pageActive,
-          @JsonKey(name: 'page_image') required String pageImage,
-          @JsonKey(name: 'page_desc') required String pageDesc,
-          @JsonKey(name: 'page_name') required String pageName,
-          @JsonKey(name: 'icon_svg') required String iconSvg}) =
+          {required final String pageid,
+          @JsonKey(name: 'page_code') required final AccessPages pageCode,
+          @JsonKey(name: 'page_ar') required final String pageAr,
+          @JsonKey(name: 'page_en') required final String pageEn,
+          @JsonKey(name: 'is_root') required final String isRoot,
+          @JsonKey(name: 'page_active') required final String pageActive,
+          @JsonKey(name: 'page_image') required final String pageImage,
+          @JsonKey(name: 'page_desc') required final String pageDesc,
+          @JsonKey(name: 'page_name') required final String pageName,
+          @JsonKey(name: 'icon_svg') required final String iconSvg}) =
       _$UserAccessModelImpl;
   _UserAccessModel._() : super._();
 
@@ -331,52 +339,33 @@ abstract class _UserAccessModel extends UserAccessModel {
 
   @override
   String get pageid;
-  set pageid(String value);
   @override
   @JsonKey(name: 'page_code')
   AccessPages get pageCode;
-  @JsonKey(name: 'page_code')
-  set pageCode(AccessPages value);
   @override
   @JsonKey(name: 'page_ar')
   String get pageAr;
-  @JsonKey(name: 'page_ar')
-  set pageAr(String value);
   @override
   @JsonKey(name: 'page_en')
   String get pageEn;
-  @JsonKey(name: 'page_en')
-  set pageEn(String value);
   @override
   @JsonKey(name: 'is_root')
   String get isRoot;
-  @JsonKey(name: 'is_root')
-  set isRoot(String value);
   @override
   @JsonKey(name: 'page_active')
   String get pageActive;
-  @JsonKey(name: 'page_active')
-  set pageActive(String value);
   @override
   @JsonKey(name: 'page_image')
   String get pageImage;
-  @JsonKey(name: 'page_image')
-  set pageImage(String value);
   @override
   @JsonKey(name: 'page_desc')
   String get pageDesc;
-  @JsonKey(name: 'page_desc')
-  set pageDesc(String value);
   @override
   @JsonKey(name: 'page_name')
   String get pageName;
-  @JsonKey(name: 'page_name')
-  set pageName(String value);
   @override
   @JsonKey(name: 'icon_svg')
   String get iconSvg;
-  @JsonKey(name: 'icon_svg')
-  set iconSvg(String value);
   @override
   @JsonKey(ignore: true)
   _$$UserAccessModelImplCopyWith<_$UserAccessModelImpl> get copyWith =>

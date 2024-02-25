@@ -24,43 +24,51 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
         successBuilder: (context, data) {
           return RefreshIndicator(
             onRefresh: () => controller.requestData(),
-            child: ListView(
+            child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-              children: [
-                FilterItemWidget(
-                  onChange: (value) {
-                    controller.searchText = value;
-                    controller.onFilter();
-                  },
-                  onSubmit: (value) {
-                    controller.searchText = value;
-                    controller.onFilter();
-                  },
-                  onTap: () =>
-                      AutoRouter.of(context).push(FilterMaintenanceRoute(controller: controller)),
-                ),
-                PageHeaderTitleWidget(
-                  title: Translate.of(context).maintenanceCount([data.length]),
-                ),
-                Gaps.vGap10,
-                Visibility(
-                  visible: controller.requester.data!.isNotEmpty,
-                  replacement: const EmptyListItemWidget(),
-                  child: Column(
-                    children: [
-                      ...List.generate(
-                        data.length,
-                        (index) {
-                          return MaintenanceItemWidget(
-                            model: data[index],
-                            controller: controller,
-                          );
-                        },
-                      )
-                    ],
+              child: Column(
+                children: [
+                  FilterItemWidget(
+                    onChange: (value) {
+                      controller.searchText = value;
+                      controller.onFilter();
+                    },
+                    onSubmit: (value) {
+                      controller.searchText = value;
+                      controller.onFilter();
+                    },
+                    onTap: () =>
+                        AutoRouter.of(context).push(FilterMaintenanceRoute(controller: controller)),
                   ),
-                ),
-              ],
+                  PageHeaderTitleWidget(
+                    title: Translate.of(context).maintenanceCount([data.length]),
+                  ),
+                  Gaps.vGap10,
+                  Flexible(
+                    child: ListView(
+                      children: [
+                        Visibility(
+                          visible: controller.requester.data!.isNotEmpty,
+                          replacement: const EmptyListItemWidget(),
+                          child: Column(
+                            children: [
+                              ...List.generate(
+                                data.length,
+                                (index) {
+                                  return MaintenanceItemWidget(
+                                    model: data[index],
+                                    controller: controller,
+                                  );
+                                },
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           );
         },

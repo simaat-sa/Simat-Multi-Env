@@ -32,15 +32,32 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "About_New_version":
+            MessageLookupByLibrary.simpleMessage("جديد الإصدار"),
+        "About_Simat_application":
+            MessageLookupByLibrary.simpleMessage("عن تطبيق سمات"),
         "AddressValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل العنوان"),
+        "Arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "English": MessageLookupByLibrary.simpleMessage("الانجليزية"),
         "Error_renewal_request":
             MessageLookupByLibrary.simpleMessage("خطأ في طلب التجديد"),
+        "How_can_I_get_the_code":
+            MessageLookupByLibrary.simpleMessage("كيف يمكن الحصول على الرمز؟"),
         "Invalid_login_data": MessageLookupByLibrary.simpleMessage(
             "من فضلك تاكد من بيانات تسجيل الدخول"),
+        "Login_to_your_platform_through": MessageLookupByLibrary.simpleMessage(
+            "1. تسجيل الدخول على منصتك من خلال المتصفح باستخدام حسابك"),
         "Please_authenticate_to_login": MessageLookupByLibrary.simpleMessage(
             "يرجى التسجيل لدخول إلى حسابك"),
+        "Privacy_Policy":
+            MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+        "QR_mobile_application": MessageLookupByLibrary.simpleMessage(
+            "2.  في أعلى الشاشة “حمل الآن تطبيق سمات” أو من قائمة اعدادات المستخدم اختر “تطبيق الجوال QR"),
+        "Share_the_app": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
         "Sign_In": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "Technical_support_ticket":
+            MessageLookupByLibrary.simpleMessage("تذكرة دعم فني"),
         "Welcome": MessageLookupByLibrary.simpleMessage("مرحبا بك"),
         "access_denied": MessageLookupByLibrary.simpleMessage("تم رفض الوصول"),
         "active": MessageLookupByLibrary.simpleMessage("فعال"),
@@ -167,7 +184,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "maybe_later_back_to_the_main_page":
             MessageLookupByLibrary.simpleMessage(
                 "ربما لاحقا، عودة الى الرئيسية"),
-        "menu": MessageLookupByLibrary.simpleMessage("القائمة"),
         "message_containing_code_for_your_order": m2,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
@@ -228,6 +244,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("صيانة الوحدة"),
         "user_or_phone_hint": MessageLookupByLibrary.simpleMessage(
             "هاتفك الجوال او اسم المستخدم"),
+        "using_the_QR_code_scan_the_QR_code_that_appears":
+            MessageLookupByLibrary.simpleMessage(
+                "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح"),
         "worthy": MessageLookupByLibrary.simpleMessage("مستحق")
       };
 }
