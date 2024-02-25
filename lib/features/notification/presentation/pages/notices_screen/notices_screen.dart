@@ -10,11 +10,13 @@ class NoticesScreen extends StatefulWidget {
 
 class _NoticesScreenState extends State<NoticesScreen> {
   final NoticesScreenController controller = NoticesScreenController();
+
   @override
   void initState() {
     controller.requestNotifyData();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     bool isNotEmpty = true;
@@ -25,32 +27,49 @@ class _NoticesScreenState extends State<NoticesScreen> {
         title: 'الإشعارات',
         showBack: true,
       ),
-      body: Column(
-        children: [
-          RequesterConsumer(
-            requester: controller.requester,
-            successBuilder: (context, data) {
-              return Visibility(
-                visible: isNotEmpty,
-                replacement: const NoticesEmptyItemWidget(),
-                child: Flexible(
+      body: RequesterConsumer(
+        requester: controller.requester,
+        successBuilder: (context, data) {
+          return Visibility(
+            visible: isNotEmpty,
+            replacement: const NoticesEmptyItemWidget(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Visibility(
+                  visible: controller.unReadListIds().isNotEmpty,
+                  child: Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(20,10,20,5),
+                    child: GestureDetector(
+                      onTap: () => controller.readAllNotifications(),
+                      child: Text(
+                        Translate.s.mark_all_read,
+                        style: AppTextStyle.s14_w400(color: context.colors.textColor),
+                      ),
+                    ),
+                  ),
+                ),
+                Flexible(
                   child: ListView(
+                    padding: EdgeInsets.zero,
                     children: [
-                      Gaps.vGap12,
-                      NoticesListItemWidget(list: data,),
+                      NoticesListItemWidget(
+                        list: data,
+                        controller: controller,
+                      ),
                     ],
                   ),
                 ),
-              );
-            },
-            loadingBuilder: (context) {
-              return const NoticesLoadingListWidget();
-            },
-            failureBuilder: (context, error, callback) {
-              return FailureViewWidget(onTap: () => callback.call());
-            },
-          ),
-        ],
+              ],
+            ),
+          );
+        },
+        loadingBuilder: (context) {
+          return const NoticesLoadingListWidget();
+        },
+        failureBuilder: (context, error, callback) {
+          return FailureViewWidget(onTap: () => callback.call());
+        },
       ),
     );
   }

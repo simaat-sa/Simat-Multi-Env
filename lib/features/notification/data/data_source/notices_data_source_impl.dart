@@ -3,6 +3,7 @@ import 'package:flutter_tdd/core/http/generic_http/generic_http.dart';
 import 'package:flutter_tdd/core/http/models/http_request_model.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:flutter_tdd/features/notification/data/models/notices_model/notices_model.dart';
+import 'package:flutter_tdd/features/notification/domain/entity/notification_params.dart';
 import 'package:injectable/injectable.dart';
 
 import 'notices_data_source.dart';
@@ -25,7 +26,7 @@ class NoticesDataSourceImpl extends NoticesDataSource {
   }
 
   @override
-  Future<MyResult<String>> getCountNotices(bool params)async {
+  Future<MyResult<String>> getCountNotices(bool params) async {
     HttpRequestModel model = HttpRequestModel(
       url: ApiNames.noticesUnread,
       responseType: ResType.type,
@@ -34,5 +35,19 @@ class NoticesDataSourceImpl extends NoticesDataSource {
       responseKey: (data) => data['data']['count'],
     );
     return await GenericHttpImpl<String>()(model);
+  }
+
+  @override
+  Future<MyResult<bool>> setMarksNotifications(NotificationsParams params) async {
+    HttpRequestModel model = HttpRequestModel(
+      url: ApiNames.noticesRead,
+      requestMethod: RequestMethod.post,
+      responseType: ResType.type,
+      isFormData: true,
+      requestBody: params.toJson(),
+      responseKey: (data) => data['status'] == "success",
+      showLoader: true,
+    );
+    return await GenericHttpImpl<bool>()(model);
   }
 }
