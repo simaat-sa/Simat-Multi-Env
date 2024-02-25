@@ -52,6 +52,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please authenticate to login to your account"),
         "Privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "Privacy_Policy_and_Confidentiality":
+            MessageLookupByLibrary.simpleMessage(
+                "Privacy Policy and Confidentiality Statement"),
         "QR_mobile_application": MessageLookupByLibrary.simpleMessage(
             "2. At the top of the screen, “Download the Simat application now,” or from the user settings menu, choose “QR mobile application.”"),
         "Share_the_app": MessageLookupByLibrary.simpleMessage("Share This App"),
@@ -85,6 +88,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "collector": MessageLookupByLibrary.simpleMessage("Collector"),
         "commercial": MessageLookupByLibrary.simpleMessage("Commercial"),
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
+        "concerns_and_concerns_about_the_privacy":
+            MessageLookupByLibrary.simpleMessage(
+                "We appreciate your concerns and concerns about the privacy of your data on the Internet. This policy has been prepared to help you understand the nature of the data we collect from you when you visit our website and how we deal with this personal data."),
         "conductor": MessageLookupByLibrary.simpleMessage("Conductor"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "Please enter the password identical"),

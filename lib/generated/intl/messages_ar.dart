@@ -52,6 +52,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "يرجى التسجيل لدخول إلى حسابك"),
         "Privacy_Policy":
             MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+        "Privacy_Policy_and_Confidentiality":
+            MessageLookupByLibrary.simpleMessage(
+                "سياسة الخصوصية وبيان سريّة المعلومات"),
         "QR_mobile_application": MessageLookupByLibrary.simpleMessage(
             "2.  في أعلى الشاشة “حمل الآن تطبيق سمات” أو من قائمة اعدادات المستخدم اختر “تطبيق الجوال QR"),
         "Share_the_app": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
@@ -85,6 +88,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "collector": MessageLookupByLibrary.simpleMessage("محصل"),
         "commercial": MessageLookupByLibrary.simpleMessage("تجاري"),
         "completed": MessageLookupByLibrary.simpleMessage("مكتمل"),
+        "concerns_and_concerns_about_the_privacy":
+            MessageLookupByLibrary.simpleMessage(
+                "نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على شبكة الإنترنت لقد تم إعداد هذه السياسة لمساعدتكم في تفهم طبيعة البيانات التي نقوم بتجميعها منكم عند زيارتكم لموقعنا على شبكة الانترنت وكيفية تعاملنا مع هذه البيانات الشخصية."),
         "conductor": MessageLookupByLibrary.simpleMessage("المحصل"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل كلمة المرورمتطابق"),

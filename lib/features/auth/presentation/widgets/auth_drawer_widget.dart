@@ -5,7 +5,9 @@ import 'package:flutter_tdd/core/constants/gaps.dart';
 import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
+import 'package:flutter_tdd/core/widgets/bottom_sheet_views/app_bottom_sheets.dart';
 import 'package:flutter_tdd/features/auth/presentation/widgets/auth_drawer_item_widget.dart';
+import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart';
 
 class AuthDrawerWidget extends StatelessWidget {
   final Function()? onChangeLanguage;
@@ -98,8 +100,11 @@ class AuthDrawerWidget extends StatelessWidget {
                       text: Translate.s.Share_the_app,
                     ),
                   ),
-                  AuthDrawerItemWidget(
-                    text: Translate.s.Privacy_Policy,
+                  GestureDetector(
+                    onTap: () => getTerms(context),
+                    child: AuthDrawerItemWidget(
+                      text: Translate.s.Privacy_Policy,
+                    ),
                   ),
                   AuthDrawerItemWidget(
                     text: Translate.s.Technical_support_ticket,
@@ -126,6 +131,12 @@ class AuthDrawerWidget extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+  void getTerms(BuildContext context) {
+    AppBottomSheets.showScrollableBody(
+      context: context,
+      builder: (context) => const Terms(),
     );
   }
 }

@@ -1450,11 +1450,31 @@ class S {
     );
   }
 
+  /// `Privacy Policy and Confidentiality Statement`
+  String get Privacy_Policy_and_Confidentiality {
+    return Intl.message(
+      'Privacy Policy and Confidentiality Statement',
+      name: 'Privacy_Policy_and_Confidentiality',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `How can I get the code?`
   String get How_can_I_get_the_code {
     return Intl.message(
       'How can I get the code?',
       name: 'How_can_I_get_the_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We appreciate your concerns and concerns about the privacy of your data on the Internet. This policy has been prepared to help you understand the nature of the data we collect from you when you visit our website and how we deal with this personal data.`
+  String get concerns_and_concerns_about_the_privacy {
+    return Intl.message(
+      'We appreciate your concerns and concerns about the privacy of your data on the Internet. This policy has been prepared to help you understand the nature of the data we collect from you when you visit our website and how we deal with this personal data.',
+      name: 'concerns_and_concerns_about_the_privacy',
       desc: '',
       args: [],
     );
