@@ -230,6 +230,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Maintenance request status"),
         "maintenance_type":
             MessageLookupByLibrary.simpleMessage("Maintenance Type"),
+        "mark_all_read": MessageLookupByLibrary.simpleMessage("marks all"),
         "maybe_later_back_to_the_main_page":
             MessageLookupByLibrary.simpleMessage(
                 "Maybe later, back to the main page"),

@@ -1480,6 +1480,16 @@ class S {
     );
   }
 
+  /// `marks all`
+  String get mark_all_read {
+    return Intl.message(
+      'marks all',
+      name: 'mark_all_read',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Your concerns and concerns regarding the confidentiality and privacy of data are extremely important to us. We hope that this will be achieved through this policy.`
   String get finally_desc {
     return Intl.message(
