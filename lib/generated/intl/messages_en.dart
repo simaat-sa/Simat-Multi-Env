@@ -38,16 +38,41 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("About Simat application"),
         "AddressValidation":
             MessageLookupByLibrary.simpleMessage("Please enter the address"),
+        "Amendments_to_information_confidentiality":
+            MessageLookupByLibrary.simpleMessage(
+                "Amendments to the information confidentiality and privacy policy"),
+        "Amendments_to_information_confidentiality_desc":
+            MessageLookupByLibrary.simpleMessage(
+                "We reserve the right to amend the terms and conditions of the confidentiality and information privacy policy if necessary and whenever appropriate. The amendments will be implemented here, and you will be continuously notified of the data we have obtained, how we will use it, and who we will provide this data to."),
         "Arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "Disclosure_of_information":
+            MessageLookupByLibrary.simpleMessage("Disclosure of information"),
+        "Disclosure_of_information_desc": MessageLookupByLibrary.simpleMessage(
+            "We will at all times maintain the privacy and confidentiality of all personal data we obtain. This information will not be disclosed unless this is required by any law or when we believe in good faith that such action will be required or desirable to comply with the law, or to defend or protect the property rights of this site or the parties benefiting from it. Data necessary to carry out the transactions requested by you When we need any data of your own, we will ask you to provide it of your own free will. This information will help us contact you and fulfill your requests wherever possible. The data provided by you will never be sold to any third party for the purpose of marketing it for its own benefit without obtaining your prior written consent unless this is done on the basis that it is part of collective data used for statistical purposes and research without including any data that can be used to identify you."),
+        "Disclosure_of_information_to_any_third_party":
+            MessageLookupByLibrary.simpleMessage(
+                "Disclosure of information to any third party"),
+        "Disclosure_of_information_to_any_third_party_desc":
+            MessageLookupByLibrary.simpleMessage(
+                "We will not sell, trade, rent, or disclose any information for the benefit of any third party outside this site, or its affiliated sites. The information will be disclosed only if an order to do so is issued by any judicial or regulatory authority."),
         "English": MessageLookupByLibrary.simpleMessage("English"),
         "Error_renewal_request":
             MessageLookupByLibrary.simpleMessage("Error in renewal request"),
         "How_can_I_get_the_code":
             MessageLookupByLibrary.simpleMessage("How can I get the code?"),
+        "Internet_Protocol_address": MessageLookupByLibrary.simpleMessage(
+            "Internet Protocol (IP) address"),
         "Invalid_login_data": MessageLookupByLibrary.simpleMessage(
             "Please verify your login information"),
+        "Links_to_other_sites_on_Internet":
+            MessageLookupByLibrary.simpleMessage(
+                "Links to other sites on the Internet"),
         "Login_to_your_platform_through": MessageLookupByLibrary.simpleMessage(
             "1. Login to your platform through the browser using your account"),
+        "Network_scans": MessageLookupByLibrary.simpleMessage("Network scans"),
+        "Our_site_may_include_links_to_other_sites":
+            MessageLookupByLibrary.simpleMessage(
+                "Our site may include links to other sites on the Internet. Or advertisements from other sites such as Google AdSense, and we are not responsible for the methods of data collection by those sites. You can view the privacy policies and contents of those sites that are accessed through any link within this site. We may use third-party advertising companies to serve ads when you visit our website. These companies may use information about your visits to this and other websites (except name, address, email address or telephone number) in order to provide advertisements about goods and services of interest to you."),
         "Please_authenticate_to_login": MessageLookupByLibrary.simpleMessage(
             "Please authenticate to login to your account"),
         "Privacy_Policy":
@@ -61,7 +86,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "Sign_In": MessageLookupByLibrary.simpleMessage("SIGN IN"),
         "Technical_support_ticket":
             MessageLookupByLibrary.simpleMessage("Technical support ticket"),
+        "The_surveys_that_we_conduct_directly_on_the_network":
+            MessageLookupByLibrary.simpleMessage(
+                "The surveys that we conduct directly on the network enable us to collect specific data, such as the data required from you regarding your view and feeling about our site. Your responses are of the utmost importance, and are appreciated by us as they enable us to improve the level of our site, and you have complete freedom and choice in providing data related to your name and the data. The other."),
         "Welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
+        "When_you_contact_us":
+            MessageLookupByLibrary.simpleMessage("When you contact us"),
+        "When_you_contact_us_desc": MessageLookupByLibrary.simpleMessage(
+            "All data provided by you will be treated as confidential. The forms that are submitted directly on the network require the submission of data that will help us improve our site. The data provided by you will be used to respond to all your inquiries, comments, or requests by this site or any of its affiliated sites."),
         "access_denied": MessageLookupByLibrary.simpleMessage("Access denied"),
         "active": MessageLookupByLibrary.simpleMessage("Active"),
         "add_new_contact":
@@ -153,6 +185,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter this field"),
         "filter": MessageLookupByLibrary.simpleMessage("Filter"),
         "final_cost": MessageLookupByLibrary.simpleMessage("Final Cost"),
+        "finally_desc": MessageLookupByLibrary.simpleMessage(
+            "Your concerns and concerns regarding the confidentiality and privacy of data are extremely important to us. We hope that this will be achieved through this policy."),
+        "finally_policy": MessageLookupByLibrary.simpleMessage("Finally"),
         "how_get_code":
             MessageLookupByLibrary.simpleMessage("How can I get the code?"),
         "implemented": MessageLookupByLibrary.simpleMessage("Implemented"),
@@ -198,6 +233,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "maybe_later_back_to_the_main_page":
             MessageLookupByLibrary.simpleMessage(
                 "Maybe later, back to the main page"),
+        "menu": MessageLookupByLibrary.simpleMessage("Menu"),
         "message_containing_code_for_your_order": m2,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "Should be more than 8 and less than 30"),
@@ -244,6 +280,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "server_visit_any_website": MessageLookupByLibrary.simpleMessage(
+            "Any time you visit any website, including this site, the hosting server will record your Internet Protocol (IP) address, the date and time of the visit, the type of Internet browser you use, and the URL of any Internet site that refers you to this site at the network."),
         "size_more_than_mg_error": m3,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),

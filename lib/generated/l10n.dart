@@ -1460,6 +1460,166 @@ class S {
     );
   }
 
+  /// `Network scans`
+  String get Network_scans {
+    return Intl.message(
+      'Network scans',
+      name: 'Network_scans',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Finally`
+  String get finally_policy {
+    return Intl.message(
+      'Finally',
+      name: 'finally_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your concerns and concerns regarding the confidentiality and privacy of data are extremely important to us. We hope that this will be achieved through this policy.`
+  String get finally_desc {
+    return Intl.message(
+      'Your concerns and concerns regarding the confidentiality and privacy of data are extremely important to us. We hope that this will be achieved through this policy.',
+      name: 'finally_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Amendments to the information confidentiality and privacy policy`
+  String get Amendments_to_information_confidentiality {
+    return Intl.message(
+      'Amendments to the information confidentiality and privacy policy',
+      name: 'Amendments_to_information_confidentiality',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We reserve the right to amend the terms and conditions of the confidentiality and information privacy policy if necessary and whenever appropriate. The amendments will be implemented here, and you will be continuously notified of the data we have obtained, how we will use it, and who we will provide this data to.`
+  String get Amendments_to_information_confidentiality_desc {
+    return Intl.message(
+      'We reserve the right to amend the terms and conditions of the confidentiality and information privacy policy if necessary and whenever appropriate. The amendments will be implemented here, and you will be continuously notified of the data we have obtained, how we will use it, and who we will provide this data to.',
+      name: 'Amendments_to_information_confidentiality_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Disclosure of information to any third party`
+  String get Disclosure_of_information_to_any_third_party {
+    return Intl.message(
+      'Disclosure of information to any third party',
+      name: 'Disclosure_of_information_to_any_third_party',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will not sell, trade, rent, or disclose any information for the benefit of any third party outside this site, or its affiliated sites. The information will be disclosed only if an order to do so is issued by any judicial or regulatory authority.`
+  String get Disclosure_of_information_to_any_third_party_desc {
+    return Intl.message(
+      'We will not sell, trade, rent, or disclose any information for the benefit of any third party outside this site, or its affiliated sites. The information will be disclosed only if an order to do so is issued by any judicial or regulatory authority.',
+      name: 'Disclosure_of_information_to_any_third_party_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All data provided by you will be treated as confidential. The forms that are submitted directly on the network require the submission of data that will help us improve our site. The data provided by you will be used to respond to all your inquiries, comments, or requests by this site or any of its affiliated sites.`
+  String get When_you_contact_us_desc {
+    return Intl.message(
+      'All data provided by you will be treated as confidential. The forms that are submitted directly on the network require the submission of data that will help us improve our site. The data provided by you will be used to respond to all your inquiries, comments, or requests by this site or any of its affiliated sites.',
+      name: 'When_you_contact_us_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When you contact us`
+  String get When_you_contact_us {
+    return Intl.message(
+      'When you contact us',
+      name: 'When_you_contact_us',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will at all times maintain the privacy and confidentiality of all personal data we obtain. This information will not be disclosed unless this is required by any law or when we believe in good faith that such action will be required or desirable to comply with the law, or to defend or protect the property rights of this site or the parties benefiting from it. Data necessary to carry out the transactions requested by you When we need any data of your own, we will ask you to provide it of your own free will. This information will help us contact you and fulfill your requests wherever possible. The data provided by you will never be sold to any third party for the purpose of marketing it for its own benefit without obtaining your prior written consent unless this is done on the basis that it is part of collective data used for statistical purposes and research without including any data that can be used to identify you.`
+  String get Disclosure_of_information_desc {
+    return Intl.message(
+      'We will at all times maintain the privacy and confidentiality of all personal data we obtain. This information will not be disclosed unless this is required by any law or when we believe in good faith that such action will be required or desirable to comply with the law, or to defend or protect the property rights of this site or the parties benefiting from it. Data necessary to carry out the transactions requested by you When we need any data of your own, we will ask you to provide it of your own free will. This information will help us contact you and fulfill your requests wherever possible. The data provided by you will never be sold to any third party for the purpose of marketing it for its own benefit without obtaining your prior written consent unless this is done on the basis that it is part of collective data used for statistical purposes and research without including any data that can be used to identify you.',
+      name: 'Disclosure_of_information_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Disclosure of information`
+  String get Disclosure_of_information {
+    return Intl.message(
+      'Disclosure of information',
+      name: 'Disclosure_of_information',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our site may include links to other sites on the Internet. Or advertisements from other sites such as Google AdSense, and we are not responsible for the methods of data collection by those sites. You can view the privacy policies and contents of those sites that are accessed through any link within this site. We may use third-party advertising companies to serve ads when you visit our website. These companies may use information about your visits to this and other websites (except name, address, email address or telephone number) in order to provide advertisements about goods and services of interest to you.`
+  String get Our_site_may_include_links_to_other_sites {
+    return Intl.message(
+      'Our site may include links to other sites on the Internet. Or advertisements from other sites such as Google AdSense, and we are not responsible for the methods of data collection by those sites. You can view the privacy policies and contents of those sites that are accessed through any link within this site. We may use third-party advertising companies to serve ads when you visit our website. These companies may use information about your visits to this and other websites (except name, address, email address or telephone number) in order to provide advertisements about goods and services of interest to you.',
+      name: 'Our_site_may_include_links_to_other_sites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Links to other sites on the Internet`
+  String get Links_to_other_sites_on_Internet {
+    return Intl.message(
+      'Links to other sites on the Internet',
+      name: 'Links_to_other_sites_on_Internet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The surveys that we conduct directly on the network enable us to collect specific data, such as the data required from you regarding your view and feeling about our site. Your responses are of the utmost importance, and are appreciated by us as they enable us to improve the level of our site, and you have complete freedom and choice in providing data related to your name and the data. The other.`
+  String get The_surveys_that_we_conduct_directly_on_the_network {
+    return Intl.message(
+      'The surveys that we conduct directly on the network enable us to collect specific data, such as the data required from you regarding your view and feeling about our site. Your responses are of the utmost importance, and are appreciated by us as they enable us to improve the level of our site, and you have complete freedom and choice in providing data related to your name and the data. The other.',
+      name: 'The_surveys_that_we_conduct_directly_on_the_network',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Any time you visit any website, including this site, the hosting server will record your Internet Protocol (IP) address, the date and time of the visit, the type of Internet browser you use, and the URL of any Internet site that refers you to this site at the network.`
+  String get server_visit_any_website {
+    return Intl.message(
+      'Any time you visit any website, including this site, the hosting server will record your Internet Protocol (IP) address, the date and time of the visit, the type of Internet browser you use, and the URL of any Internet site that refers you to this site at the network.',
+      name: 'server_visit_any_website',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Internet Protocol (IP) address`
+  String get Internet_Protocol_address {
+    return Intl.message(
+      'Internet Protocol (IP) address',
+      name: 'Internet_Protocol_address',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `We appreciate your concerns and concerns about the privacy of your data on the Internet. This policy has been prepared to help you understand the nature of the data we collect from you when you visit our website and how we deal with this personal data.`
   String get concerns_and_concerns_about_the_privacy {
     return Intl.message(

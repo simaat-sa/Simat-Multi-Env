@@ -44,7 +44,7 @@ class _TermsState extends State<Terms> {
               ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.only(end: 25.r, bottom: 15, top: 5),
+              padding: EdgeInsetsDirectional.only(end: 10.r, bottom: 15, top: 5),
               child: Text(
                 Translate.s.Privacy_Policy_and_Confidentiality,
                 style: AppTextStyle.s24_w400(color: context.colors.darkTextColor).copyWith(height: 1.2),

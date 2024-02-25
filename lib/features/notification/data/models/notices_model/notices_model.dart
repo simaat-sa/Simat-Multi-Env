@@ -5,7 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'notices_model.freezed.dart';
 part 'notices_model.g.dart';
 
-@freezed
+@unfreezed
 class NoticesModel with _$NoticesModel {
   const NoticesModel._();
   @JsonSerializable(explicitToJson: true)
