@@ -10,5 +10,7 @@ import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/features/auth/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:flutter_tdd/features/base/presentation/pages/home/widgets/home_widgets_imports.dart';
 
+import '../../../../notification/domain/requesters/notices_requester.dart';
+
 part 'home.dart';
 part 'home_controller.dart';

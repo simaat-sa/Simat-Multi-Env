@@ -1370,16 +1370,6 @@ class S {
     );
   }
 
-  /// `New maintenance request`
-  String get new_maintenance_request {
-    return Intl.message(
-      'New maintenance request',
-      name: 'new_maintenance_request',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `English`
   String get English {
     return Intl.message(
@@ -1505,6 +1495,26 @@ class S {
     return Intl.message(
       '3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser',
       name: 'using_the_QR_code_scan_the_QR_code_that_appears',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New maintenance request`
+  String get new_maintenance_request {
+    return Intl.message(
+      'New maintenance request',
+      name: 'new_maintenance_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Menu`
+  String get menu {
+    return Intl.message(
+      'Menu',
+      name: 'menu',
       desc: '',
       args: [],
     );

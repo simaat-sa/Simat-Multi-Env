@@ -12,10 +12,9 @@ class _NoticesScreenState extends State<NoticesScreen> {
   final NoticesScreenController controller = NoticesScreenController();
   @override
   void initState() {
-    controller.requestData();
+    controller.requestNotifyData();
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     bool isNotEmpty = true;
@@ -26,28 +25,32 @@ class _NoticesScreenState extends State<NoticesScreen> {
         title: 'الإشعارات',
         showBack: true,
       ),
-      body: RequesterConsumer(
-        requester: controller.requester,
-        successBuilder: (context, data) {
-          return Visibility(
-            visible: isNotEmpty,
-            replacement: const NoticesEmptyItemWidget(),
-            child: ListView(
-              children: [
-                Gaps.vGap12,
-                NoticesListItemWidget(
-                  list: data,
+      body: Column(
+        children: [
+          RequesterConsumer(
+            requester: controller.requester,
+            successBuilder: (context, data) {
+              return Visibility(
+                visible: isNotEmpty,
+                replacement: const NoticesEmptyItemWidget(),
+                child: Flexible(
+                  child: ListView(
+                    children: [
+                      Gaps.vGap12,
+                      NoticesListItemWidget(list: data,),
+                    ],
+                  ),
                 ),
-              ],
-            ),
-          );
-        },
-        loadingBuilder: (context) {
-          return const NoticesLoadingListWidget();
-        },
-        failureBuilder: (context, error, callback) {
-          return Container(color: Colors.red);
-        },
+              );
+            },
+            loadingBuilder: (context) {
+              return const NoticesLoadingListWidget();
+            },
+            failureBuilder: (context, error, callback) {
+              return FailureViewWidget(onTap: () => callback.call());
+            },
+          ),
+        ],
       ),
     );
   }

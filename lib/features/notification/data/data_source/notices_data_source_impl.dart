@@ -23,4 +23,16 @@ class NoticesDataSourceImpl extends NoticesDataSource {
     );
     return await GenericHttpImpl<List<NoticesModel>>()(model);
   }
+
+  @override
+  Future<MyResult<String>> getCountNotices(bool params)async {
+    HttpRequestModel model = HttpRequestModel(
+      url: ApiNames.noticesUnread,
+      responseType: ResType.type,
+      requestMethod: RequestMethod.get,
+      refresh: params,
+      responseKey: (data) => data['data']['count'],
+    );
+    return await GenericHttpImpl<String>()(model);
+  }
 }

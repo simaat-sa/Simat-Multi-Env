@@ -18,14 +18,19 @@ class TabsItemWidget extends StatelessWidget {
         children: [
           SizedBox(
             height: 24,
-            child: SvgPicture.network(
-              color: isActive ? context.colors.primary : context.colors.darkTextColor,
-              model.iconSvg,
-            ),
+            child: model.pageid == "0"
+                ? Icon(
+                    Icons.menu,
+                    color: isActive ? context.colors.primary : context.colors.darkTextColor,
+                  )
+                : SvgPicture.network(
+                    color: isActive ? context.colors.primary : context.colors.darkTextColor,
+                    model.iconSvg,
+                  ),
           ),
           Gaps.vGap4,
           Text(
-            model.pageName,
+            model.pageid == "0" ? Translate.s.menu : model.pageName,
             style: AppTextStyle.s14_w500(
               color: isActive ? context.colors.primary : context.colors.darkTextColor,
             ),

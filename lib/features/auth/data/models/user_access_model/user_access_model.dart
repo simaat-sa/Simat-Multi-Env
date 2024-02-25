@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'user_access_model.freezed.dart';
 part 'user_access_model.g.dart';
 
-@freezed
+@unfreezed
 class UserAccessModel with _$UserAccessModel {
   const UserAccessModel._();
   @JsonSerializable(explicitToJson: true)

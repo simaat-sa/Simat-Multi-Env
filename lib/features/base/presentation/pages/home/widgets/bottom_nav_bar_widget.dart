@@ -10,7 +10,7 @@ class BottomNavBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var listAccessUser = context.watch<UserCubit>().state.model!.userAccess.take(5).toList();
+    var listAccessUser = context.watch<UserCubit>().state.model!.userAccess.take(4).toList();
     return ObsValueConsumer(
       observable: controller.navigationBarObs,
       builder: (context, value) {

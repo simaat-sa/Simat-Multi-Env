@@ -7,13 +7,21 @@ class NoticesLoadingItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BaseShimmerWidget(
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: 80,
-        decoration: BoxDecoration(
-          color: context.colors.white,
-        ),
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+      child: Column(
+        children: [
+          BaseShimmerWidget(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: 78,
+              decoration: BoxDecoration(
+                color: context.colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
