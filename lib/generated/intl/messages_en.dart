@@ -192,6 +192,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "maybe_later_back_to_the_main_page":
             MessageLookupByLibrary.simpleMessage(
                 "Maybe later, back to the main page"),
+        "menu": MessageLookupByLibrary.simpleMessage("Menu"),
         "message_containing_code_for_your_order": m2,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "Should be more than 8 and less than 30"),

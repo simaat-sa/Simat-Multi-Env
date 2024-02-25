@@ -36,10 +36,10 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             physics: const NeverScrollableScrollPhysics(),
             controller: controller.tabController,
             children: [
-            ...List.generate(listAccessUser.length-1, (index) {
-            return listAccessUser[index].pageCode.getPage();
-          }),
-            Container(color: Colors.red,height: 10,width: 10,),
+              ...List.generate(listAccessUser.length - 1, (index) {
+                return listAccessUser[index].pageCode.getPage();
+              }),
+              const MenuTap(),
             ],
           ),
           bottomNavigationBar: BottomNavBarWidget(controller: controller),

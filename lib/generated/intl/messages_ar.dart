@@ -184,6 +184,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "maybe_later_back_to_the_main_page":
             MessageLookupByLibrary.simpleMessage(
                 "ربما لاحقا، عودة الى الرئيسية"),
+        "menu": MessageLookupByLibrary.simpleMessage("القائمة"),
         "message_containing_code_for_your_order": m2,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
