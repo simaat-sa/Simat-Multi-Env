@@ -10,4 +10,9 @@ class NotifyCubit extends Cubit<NotifyState> {
   void onUpdateNotifyData(String count ) {
     emit(NotifyUpdateState(count: count));
   }
+
+  void increaseNotifyCount() {
+    emit(NotifyUpdateState(count: (int.parse(state.count)+ 1).toString()));
+  }
+
 }

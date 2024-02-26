@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_tdd/core/bloc/value_state_manager/value_state_manager_import.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
+import 'package:flutter_tdd/core/helpers/di.dart';
+import 'package:flutter_tdd/core/helpers/services/current_version_helper.dart';
+import 'package:flutter_tdd/core/helpers/share_services.dart';
+import 'package:flutter_tdd/core/http/generic_http/api_names.dart';
 import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
@@ -49,75 +53,68 @@ class AuthDrawerWidget extends StatelessWidget {
                   ObsValueConsumer(
                     observable: showDropDawnCubit!,
                     builder: (context, state) {
-                      return GestureDetector(
-                        onTap: onChangeLanguage,
-                        child: Column(
-                          children: [
-                            AuthDrawerItemWidget(
-                              padding: EdgeInsetsDirectional.only(bottom: state ? 20 : 30),
-                              icon: state ? Icons.keyboard_arrow_down : Icons.arrow_forward_ios_outlined,
-                              size: state ? 25 : 15,
-                              text: Translate.s.label_app_language,
-                            ),
-                            Visibility(
-                              visible: state,
-                              child: Column(
-                                children: [
-                                  Container(
-                                    alignment: AlignmentDirectional.centerStart,
-                                    padding: const EdgeInsetsDirectional.only(start: 20, end: 20, bottom: 10),
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          Translate.s.English,
-                                          style: AppTextStyle.s14_w400(color: context.colors.primaryText),
-                                        ),
-                                        Gaps.vGap20,
-                                        Text(
-                                          Translate.s.Arabic,
-                                          style: AppTextStyle.s14_w400(color: context.colors.primaryText),
-                                        ),
-                                      ],
-                                    ),
+                      return Column(
+                        children: [
+                          AuthDrawerItemWidget(
+                            padding: EdgeInsetsDirectional.only(bottom: state ? 20 : 30),
+                            icon: state ? Icons.keyboard_arrow_down : Icons.arrow_forward_ios_outlined,
+                            size: state ? 25 : 15,
+                            text: Translate.s.label_app_language,
+                            onTap: onChangeLanguage,
+                          ),
+                          Visibility(
+                            visible: state,
+                            child: Column(
+                              children: [
+                                Container(
+                                  alignment: AlignmentDirectional.centerStart,
+                                  padding: const EdgeInsetsDirectional.only(start: 20, end: 20, bottom: 10),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        Translate.s.English,
+                                        style: AppTextStyle.s14_w400(color: context.colors.primaryText),
+                                      ),
+                                      Gaps.vGap20,
+                                      Text(
+                                        Translate.s.Arabic,
+                                        style: AppTextStyle.s14_w400(color: context.colors.primaryText),
+                                      ),
+                                    ],
                                   ),
-                                  Divider(
-                                    color: context.colors.greyWhite,
-                                    thickness: 1.5,
-                                  ),
-                                  Gaps.vGap15,
-                                ],
-                              ),
+                                ),
+                                Divider(
+                                  color: context.colors.greyWhite,
+                                  thickness: 1.5,
+                                ),
+                                Gaps.vGap15,
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       );
                     },
                   ),
-                  GestureDetector(
+                  AuthDrawerItemWidget(
+                    text: Translate.s.Share_the_app,
                     onTap: () {},
-                    child: AuthDrawerItemWidget(
-                      text: Translate.s.Share_the_app,
-                    ),
                   ),
-                  GestureDetector(
+                  AuthDrawerItemWidget(
+                    text: Translate.s.Privacy_Policy,
                     onTap: () => getTerms(context),
-                    child: AuthDrawerItemWidget(
-                      text: Translate.s.Privacy_Policy,
-                    ),
                   ),
                   AuthDrawerItemWidget(
                     text: Translate.s.Technical_support_ticket,
+                    onTap: () => getIt<ShareServices>().launchURL(url: ApiNames.supportLink),
                   ),
-                  GestureDetector(
+                  AuthDrawerItemWidget(
+                    text: Translate.s.About_Simat_application,
                     onTap: () {},
-                    child: AuthDrawerItemWidget(
-                      text: Translate.s.About_Simat_application,
-                    ),
                   ),
                   AuthDrawerItemWidget(
                     text: Translate.s.About_New_version,
-                    subtext: 'v.01.04.23',
+                    subtext: 'v.${CurrentVersionHelper.instance.currentVersion}',
                   ),
                 ],
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class AppConfig {
   AppConfig._();
@@ -8,6 +9,8 @@ class AppConfig {
 
   String get baseUrl => "https://${const String.fromEnvironment('APP_BASE_URL')}/";
 
+  String get imageBaseUrl => "https://cdn.thiqeel.com/apps/sharingpath/thiqeel/uploads/simaatApp/";
+
   String get baseAPIUrl =>
       "https://${const String.fromEnvironment('APP_BASE_URL')}${const String.fromEnvironment('APP_API')}";
 
@@ -16,4 +19,9 @@ class AppConfig {
 
   static BoxConstraints? fromHeight(double? height) =>
       height != null ? BoxConstraints(minHeight: height, maxHeight: height) : null;
+
+  static Future<String> currentVersion() async{
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    return packageInfo.version;
+  }
 }
