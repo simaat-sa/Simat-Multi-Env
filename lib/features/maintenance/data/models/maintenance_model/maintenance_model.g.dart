@@ -14,9 +14,12 @@ _$MaintenanceModelImpl _$$MaintenanceModelImplFromJson(
       desc: json['maint_desc'] as String? ?? '',
       code: json['maint_code'] as String,
       unitName: json['are_desc_fo'] as String? ?? '',
+      blockName: json['parent_desc_ar'] as String? ?? '',
       approxCost: json['approx_cost'] as String? ?? '0',
       actualCost: json['actual_cost'] as String? ?? '0',
-      status: $enumDecode(_$ContractStatusEnumMap, json['acl_status_code']),
+      status: $enumDecodeNullable(
+              _$ContractStatusEnumMap, json['acl_status_code']) ??
+          ContractStatus.non,
       createdDateTimeStamp: json['dt_created'] as String? ?? '',
     );
 
@@ -28,6 +31,7 @@ Map<String, dynamic> _$$MaintenanceModelImplToJson(
       'maint_desc': instance.desc,
       'maint_code': instance.code,
       'are_desc_fo': instance.unitName,
+      'parent_desc_ar': instance.blockName,
       'approx_cost': instance.approxCost,
       'actual_cost': instance.actualCost,
       'acl_status_code': _$ContractStatusEnumMap[instance.status]!,
@@ -35,6 +39,7 @@ Map<String, dynamic> _$$MaintenanceModelImplToJson(
     };
 
 const _$ContractStatusEnumMap = {
+  ContractStatus.newCode: '37710',
   ContractStatus.canceled: '37790',
   ContractStatus.paused: '37780',
   ContractStatus.posted: '37770',
@@ -47,6 +52,5 @@ const _$ContractStatusEnumMap = {
   ContractStatus.supervisorApproved: '37721',
   ContractStatus.applicationApproval: '37720',
   ContractStatus.supervisorIdentifications: '37715',
-  ContractStatus.newCode: '37710',
   ContractStatus.non: '0',
 };

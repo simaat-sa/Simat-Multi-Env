@@ -79,15 +79,18 @@ class ContractItemWidget extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        Translate.of(context).worthy,
+                        Translate.of(context).due,
                         style: AppTextStyle.s14_w400(color: context.colors.primary),
                       ),
-                      Text(
-                        model.price,
-                        style: AppTextStyle.s20_w600(color: context.colors.primary),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        child: Text(
+                          model.duePrice,
+                          style: AppTextStyle.s20_w600(color: context.colors.primary),
+                        ),
                       ),
                       Text(
-                        ' ر.س',
+                        Translate.of(context).sar,
                         style: AppTextStyle.s14_w400(color: context.colors.primary),
                       ),
                     ],
@@ -137,7 +140,7 @@ class ContractItemWidget extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    ' ينتهي${model.date}',
+                    '${Translate.of(context).expired} ${model.date}',
                     style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                   ),
                 ],
@@ -148,4 +151,5 @@ class ContractItemWidget extends StatelessWidget {
       ),
     );
   }
+
 }

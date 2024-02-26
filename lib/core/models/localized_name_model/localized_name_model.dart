@@ -53,7 +53,7 @@ class LocalizedNameModel {
   /// this function will return the correct localized based on device language
   String get getLocalizedString {
     var context = getIt<GlobalContext>().context();
-    var lang = context.read<DeviceCubit>().state.model.locale.languageCode;
+    var lang = context.watch<DeviceCubit>().state.model.locale.languageCode;
     try {
       if (jsonValue == null) return "";
       if (jsonValue is String) return jsonValue;

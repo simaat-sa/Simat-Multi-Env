@@ -26,7 +26,7 @@ class PaymentPriceDetailsItemWidget extends StatelessWidget {
                     style: AppTextStyle.s18_w400(color: context.colors.darkTextColor),
                   ),
                   Text(
-                    ' ر.س',
+                    Translate.of(context).sar,
                     style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
                   ),
                 ],
@@ -59,7 +59,7 @@ class PaymentPriceDetailsItemWidget extends StatelessWidget {
                     style: AppTextStyle.s20_w500(color: context.colors.darkTextColor),
                   ),
                   Text(
-                    ' ر.س',
+                    Translate.of(context).sar,
                     style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
                   ),
                 ],

@@ -24,10 +24,11 @@ class LanguageService {
     var context = getIt<GlobalContext>().context();
     await getIt<SharedPrefService>().getString(_langKey).then((langCode) {
       if (langCode == null) {
-        context.read<DeviceCubit>().updateLanguage(Languages.english.locale);
+        context.read<DeviceCubit>().updateLanguage(Languages.arabic.locale);
+      }else{
+        Languages lang = Languages.values.firstWhere((element) => element.code == langCode);
+        context.read<DeviceCubit>().updateLanguage(lang.locale);
       }
-      Languages lang = Languages.values.firstWhere((element) => element.code == langCode);
-      context.read<DeviceCubit>().updateLanguage(lang.locale);
     });
   }
 

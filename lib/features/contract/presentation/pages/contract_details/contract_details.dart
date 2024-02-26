@@ -26,7 +26,7 @@ class _ContractDetailsState extends State<ContractDetails> {
       child: Scaffold(
         appBar: DefaultAppBar(
           centerTitle: false,
-          title: widget.model.unitName,
+          title: "${widget.model.unitName} - ${widget.model.blocName}",
           showBack: true,
         ),
         body: Padding(
@@ -36,12 +36,10 @@ class _ContractDetailsState extends State<ContractDetails> {
               TabBar(
                   dividerColor: context.colors.greyWhite,
                   unselectedLabelColor: context.colors.primaryGrey,
-                  unselectedLabelStyle: AppTextStyle.s16_w500(color: context.colors.primary)
-                      .copyWith(fontFamily: "Tajawal"),
+                  unselectedLabelStyle: AppTextStyle.s16_w500(color: context.colors.primary),
                   indicatorSize: TabBarIndicatorSize.tab,
                   labelPadding: const EdgeInsets.symmetric(vertical: 13),
-                  labelStyle: AppTextStyle.s16_w500(color: context.colors.primary)
-                      .copyWith(fontFamily: "Tajawal"),
+                  labelStyle: AppTextStyle.s16_w500(color: context.colors.primary),
                   tabs: [
                     Text(Translate.of(context).summary),
                     Text(Translate.of(context).payments),

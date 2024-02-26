@@ -13,6 +13,7 @@ import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/features/auth/data/models/user_access_model/user_access_model.dart';
 import 'package:flutter_tdd/features/auth/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:flutter_tdd/features/base/presentation/pages/home/widgets/home_widgets_imports.dart';
+import 'package:flutter_tdd/features/notification/domain/requesters/notices_count_requester.dart';
 import 'package:flutter_tdd/features/slide_menu/presentation/pages/menu/menu_tap_imports.dart';
 
 import '../../../../notification/domain/requesters/notices_requester.dart';

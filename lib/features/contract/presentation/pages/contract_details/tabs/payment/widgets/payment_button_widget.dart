@@ -28,7 +28,7 @@ class PaymentButtonWidget extends StatelessWidget {
               style: AppTextStyle.s20_w500(color: context.colors.white),
             ),
             Text(
-              ' ر.س',
+              Translate.of(context).sar,
               style: AppTextStyle.s14_w400(color: context.colors.white),
             ),
             const Spacer(),

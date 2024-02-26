@@ -30,7 +30,7 @@ class PaymentItemWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  model.tmtAr,
+                  model.tmtLocalized,
                   style: AppTextStyle.s14_w500(color: context.colors.secondaryText),
                 ),
                 Text(
@@ -52,18 +52,21 @@ class PaymentItemWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      Translate.of(context).worthy,
+                      Translate.of(context).due,
                       style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                     ),
                     Gaps.vGap8,
                     Row(
                       children: [
-                        Text(
-                          model.duePrice,
-                          style: AppTextStyle.s18_w500(color: context.colors.green3),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 2),
+                          child: Text(
+                            model.duePrice,
+                            style: AppTextStyle.s18_w500(color: context.colors.green3),
+                          ),
                         ),
                         Text(
-                          " ر.س",
+                          Translate.of(context).sar,
                           style: AppTextStyle.s14_w400(color: context.colors.green3),
                         ),
                       ],
@@ -80,12 +83,15 @@ class PaymentItemWidget extends StatelessWidget {
                     Gaps.vGap8,
                     Row(
                       children: [
-                        Text(
-                          model.amtCollect,
-                          style: AppTextStyle.s18_w500(color: context.colors.green3),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 2),
+                          child: Text(
+                            model.amtCollect,
+                            style: AppTextStyle.s18_w500(color: context.colors.green3),
+                          ),
                         ),
                         Text(
-                          " ر.س",
+                          Translate.of(context).sar,
                           style: AppTextStyle.s14_w400(color: context.colors.green3),
                         ),
                       ],

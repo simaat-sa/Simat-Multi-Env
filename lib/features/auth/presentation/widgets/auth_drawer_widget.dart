@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_tdd/core/bloc/value_state_manager/value_state_manager_import.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/helpers/services/current_version_helper.dart';
@@ -10,14 +9,12 @@ import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/core/widgets/bottom_sheet_views/app_bottom_sheets.dart';
+import 'package:flutter_tdd/core/widgets/languages_widget/languages_widget.dart';
 import 'package:flutter_tdd/features/auth/presentation/widgets/auth_drawer_item_widget.dart';
 import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart';
 
 class AuthDrawerWidget extends StatelessWidget {
-  final Function()? onChangeLanguage;
-  final ObsValue<bool>? showDropDawnCubit;
-
-  const AuthDrawerWidget({super.key, this.onChangeLanguage, this.showDropDawnCubit});
+  const AuthDrawerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,52 +47,7 @@ class AuthDrawerWidget extends StatelessWidget {
                 physics: const BouncingScrollPhysics(),
                 padding: EdgeInsetsDirectional.symmetric(horizontal: 20.r, vertical: 25.r),
                 children: [
-                  ObsValueConsumer(
-                    observable: showDropDawnCubit!,
-                    builder: (context, state) {
-                      return Column(
-                        children: [
-                          AuthDrawerItemWidget(
-                            padding: EdgeInsetsDirectional.only(bottom: state ? 20 : 30),
-                            icon: state ? Icons.keyboard_arrow_down : Icons.arrow_forward_ios_outlined,
-                            size: state ? 25 : 15,
-                            text: Translate.of(context).label_app_language,
-                            onTap: onChangeLanguage,
-                          ),
-                          Visibility(
-                            visible: state,
-                            child: Column(
-                              children: [
-                                Container(
-                                  alignment: AlignmentDirectional.centerStart,
-                                  padding: const EdgeInsetsDirectional.only(start: 20, end: 20, bottom: 10),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        Translate.of(context).English,
-                                        style: AppTextStyle.s14_w400(color: context.colors.primaryText),
-                                      ),
-                                      Gaps.vGap20,
-                                      Text(
-                                        Translate.of(context).Arabic,
-                                        style: AppTextStyle.s14_w400(color: context.colors.primaryText),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Divider(
-                                  color: context.colors.greyWhite,
-                                  thickness: 1.5,
-                                ),
-                                Gaps.vGap15,
-                              ],
-                            ),
-                          ),
-                        ],
-                      );
-                    },
-                  ),
+                  const LanguagesWidget(),
                   AuthDrawerItemWidget(
                     text: Translate.of(context).Share_the_app,
                     onTap: () {},

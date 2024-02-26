@@ -30,7 +30,7 @@ class MaintenanceRequester extends Requester<List<MaintenanceModel>> {
   void applyContractFilter(ContractStatus status, String searchText) {
     final list = _listContract.where((element) {
       final textSearch =
-          element.code.contains(searchText.trim()) || element.unitName.contains(searchText.trim());
+          element.code.toLowerCase().contains(searchText.toLowerCase().trim()) || element.unitName.toLowerCase().contains(searchText.toLowerCase().trim());
       final statusCheck = status == ContractStatus.non ? true : element.status == status;
       return statusCheck && textSearch;
     }).toList();

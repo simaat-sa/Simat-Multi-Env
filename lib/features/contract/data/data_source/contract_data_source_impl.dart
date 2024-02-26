@@ -80,7 +80,6 @@ class ContractDataSourceImpl extends ContractDataSource {
       refresh: params.refresh,
       responseKey: (data) => data['data'],
       toJsonFunc: (json) {
-        log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>json>$json");
         return List<PaymentModel>.from(json.map((e) => PaymentModel.fromJson(e)));
       },
     );

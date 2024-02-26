@@ -35,12 +35,15 @@ class RequiredCostWidget extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        model.price,
+                        model.duePrice,
                         style: AppTextStyle.s18_w500(color: context.colors.green3),
                       ),
-                      Text(
-                        " ر.س",
-                        style: AppTextStyle.s14_w400(color: context.colors.green3),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        child: Text(
+                          Translate.of(context).sar,
+                          style: AppTextStyle.s14_w400(color: context.colors.green3),
+                        ),
                       ),
                     ],
                   ),
@@ -62,13 +65,16 @@ class RequiredCostWidget extends StatelessWidget {
                   Gaps.vGap8,
                   Row(
                     children: [
-                      Text(
-                        model.price,
-                        style: AppTextStyle.s18_w500(color: context.colors.green3),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        child: Text(
+                          model.collectPrice,
+                          style: AppTextStyle.s18_w500(color: context.colors.primary),
+                        ),
                       ),
                       Text(
-                        " ر.س",
-                        style: AppTextStyle.s14_w400(color: context.colors.green3),
+                        Translate.of(context).sar,
+                        style: AppTextStyle.s14_w400(color: context.colors.primary),
                       ),
                     ],
                   ),

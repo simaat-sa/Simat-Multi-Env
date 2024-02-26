@@ -1,10 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/helpers/global_context.dart';
-import 'package:rebirth/rebirth.dart';
+import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 
 class AppConfig {
   AppConfig._();
+
   static AppConfig instance = AppConfig._();
 
   String get defaultLanguage => 'ar';
@@ -22,8 +24,10 @@ class AppConfig {
   static BoxConstraints? fromHeight(double? height) =>
       height != null ? BoxConstraints(minHeight: height, maxHeight: height) : null;
 
-  Future<void> restartApp() async{
-    WidgetRebirth.createRebirth(context: getIt<GlobalContext>().context());
+  Future<void> restartApp() async {
+    AutoRouter.of(getIt<GlobalContext>().context()).pushAndPopUntil(
+      const SplashRoute(),
+      predicate: (_) => false,
+    );
   }
-
 }

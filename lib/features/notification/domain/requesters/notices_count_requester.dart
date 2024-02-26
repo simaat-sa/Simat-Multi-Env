@@ -5,7 +5,7 @@ import 'package:flutter_tdd/core/requester/requester.dart';
 import 'package:flutter_tdd/features/notification/domain/repositories/notices_repository.dart';
 import 'package:flutter_tdd/features/notification/presentation/manager/notify_cubit/notify_cubit.dart';
 
-class NoticesRequester extends Requester<String> {
+class NoticesCountRequester extends Requester<String> {
   void setLoadingState() {
     loadingState();
   }

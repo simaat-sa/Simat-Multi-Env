@@ -670,10 +670,10 @@ class S {
     );
   }
 
-  /// `Expired`
+  /// `Expired at`
   String get expired {
     return Intl.message(
-      'Expired',
+      'Expired at',
       name: 'expired',
       desc: '',
       args: [],
@@ -830,10 +830,10 @@ class S {
     );
   }
 
-  /// `New code`
+  /// `New`
   String get new_code {
     return Intl.message(
-      'New code',
+      'New',
       name: 'new_code',
       desc: '',
       args: [],
@@ -900,10 +900,10 @@ class S {
     );
   }
 
-  /// `Maintenance cost at my own expense'`
+  /// `Maintenance cost at my own expense`
   String get cost_at_my_own_expense {
     return Intl.message(
-      'Maintenance cost at my own expense\'',
+      'Maintenance cost at my own expense',
       name: 'cost_at_my_own_expense',
       desc: '',
       args: [],
@@ -1080,11 +1080,11 @@ class S {
     );
   }
 
-  /// `Worthy`
-  String get worthy {
+  /// `Due`
+  String get due {
     return Intl.message(
-      'Worthy',
-      name: 'worthy',
+      'Due',
+      name: 'due',
       desc: '',
       args: [],
     );
@@ -1795,6 +1795,36 @@ class S {
     return Intl.message(
       'Tax',
       name: 'tax',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply`
+  String get apply {
+    return Intl.message(
+      'Apply',
+      name: 'apply',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SAR`
+  String get sar {
+    return Intl.message(
+      'SAR',
+      name: 'sar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `!No Item Found`
+  String get no_items_found {
+    return Intl.message(
+      '!No Item Found',
+      name: 'no_items_found',
       desc: '',
       args: [],
     );

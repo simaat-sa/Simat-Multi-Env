@@ -15,7 +15,7 @@ class NoticesItemWidget extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (false)
+          if (model.isRead == NotifyStatus.unRead)
             Container(
               height: 8,
               width: 8,

@@ -17,6 +17,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   void initState() {
     controller.initPages(context);
     controller.initBottomNavigation(this, widget.index);
+    NoticesRequester().request();
     super.initState();
   }
 

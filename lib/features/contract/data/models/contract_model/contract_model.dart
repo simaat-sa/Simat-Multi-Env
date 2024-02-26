@@ -2,6 +2,7 @@ import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/enums/contract_types.dart';
 import 'package:flutter_tdd/core/enums/date_types.dart';
 import 'package:flutter_tdd/core/enums/tenant_visibility.dart';
+import 'package:flutter_tdd/core/extensions/price_format.dart';
 import 'package:flutter_tdd/core/extensions/string_helper_extension.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -15,20 +16,25 @@ class ContractModel with _$ContractModel {
 
   @JsonSerializable(explicitToJson: true)
   factory ContractModel({
-    @JsonKey(name: 'prop_id', defaultValue: "") required String propId,
-    @JsonKey(name: 'tts_code') String? code,
-    @JsonKey(name: '', defaultValue: "") required String unitName,
-    @JsonKey(name: 'cal_type') required DateTypes dateType,
-    @JsonKey(name: 'tts_end_date_hj', defaultValue: "") required String dataTimeHj,
-    @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") required String dataTimeStamp,
-    @JsonKey(name: 'amt_due', defaultValue: "0") required String price,
-    @JsonKey(name: 'tts_validity') required TenantVisibility status,
-    @JsonKey(name: 'contract_type') required ContractTypes type,
-    @JsonKey(name: 'prop_lat', defaultValue: "") required String propLat,
-    @JsonKey(name: 'prop_lng', defaultValue: "") required String propLng,
-    @JsonKey(name: 'prop_img') String? propImg,
-    @JsonKey(name: 'prop_city', defaultValue: "") required String propCity,
-    @JsonKey(name: 'prop_region', defaultValue: "") required String propRegion,
+    @JsonKey(name: 'prop_id',defaultValue: "")required String propId,
+    @JsonKey(name: 'tts_code',defaultValue: "")required String code,
+    @JsonKey(name: 'are_desc_fo',defaultValue: "")required String unitName,
+    @JsonKey(name: 'parent_desc_ar',defaultValue: "")required String blocName,
+    @JsonKey(name: 'cal_type')required DateTypes dateType,
+    @JsonKey(name: 'tts_end_date_hj',defaultValue: "")required String dataTimeHj,
+    @JsonKey(name: 'tts_end_date_dgr',defaultValue: "")required String dataTimeStamp,
+    @JsonKey(name: 'amt_due', defaultValue: "0")required String totalDuePrice,
+    @JsonKey(name: 'amt_collect', defaultValue: "0")required String contractCollectPrice,
+    @JsonKey(name: 'tts_contract_net_price_alc', defaultValue: "0")required String contractNetPrice,
+    @JsonKey(name: 'tts_tot_additional_item_alc', defaultValue: "0")required String contractAdditionalPrice,
+    @JsonKey(name: 'tts_insurance', defaultValue: "0")required String contractInsurancePrice,
+    @JsonKey(name: 'tts_validity')required TenantVisibility status,
+    @JsonKey(name: 'contract_type')required ContractTypes type,
+    @JsonKey(name: 'prop_lat',defaultValue: "")required String propLat,
+    @JsonKey(name: 'prop_lng',defaultValue: "")required String propLng,
+    @JsonKey(name: 'prop_img')String? propImg,
+    @JsonKey(name: 'prop_city',defaultValue: "")required String propCity,
+    @JsonKey(name: 'prop_region',defaultValue: "")required String propRegion,
   }) = _ContractModel;
 
   factory ContractModel.fromJson(Map<String, dynamic> json) => _$ContractModelFromJson(json);
@@ -41,4 +47,20 @@ class ContractModel with _$ContractModel {
     }
     return dataTimeStamp.formatTimeStampDate();
   }
+
+
+  // صافي العقد
+  String get netPrice => contractNetPrice.priceFormat;
+
+  // التامين
+  String get insurancePrice => contractInsurancePrice.priceFormat;
+
+  //المحصل
+  String get collectPrice => contractCollectPrice.priceFormat;
+
+  //الاضافي
+  String get additionalPrice => contractAdditionalPrice.priceFormat;
+
+  String get duePrice => totalDuePrice.priceFormat;
+
 }
