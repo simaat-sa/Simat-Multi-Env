@@ -8,14 +8,16 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter_tdd/core/helpers/services/file_service.dart' as _i3;
 import 'package:flutter_tdd/core/helpers/firebase_analytics_helper.dart'
     as _i17;
 import 'package:flutter_tdd/core/helpers/global_context.dart' as _i20;
 import 'package:flutter_tdd/core/helpers/global_notification.dart' as _i21;
 import 'package:flutter_tdd/core/helpers/loading_helper.dart' as _i27;
-import 'package:flutter_tdd/core/helpers/services/location_service.dart' as _i28;
-import 'package:flutter_tdd/core/helpers/services/psermission_services.dart' as _i39;
+import 'package:flutter_tdd/core/helpers/services/file_service.dart' as _i3;
+import 'package:flutter_tdd/core/helpers/services/location_service.dart'
+    as _i28;
+import 'package:flutter_tdd/core/helpers/services/psermission_services.dart'
+    as _i39;
 import 'package:flutter_tdd/core/helpers/share_services.dart' as _i42;
 import 'package:flutter_tdd/core/helpers/shared_pref_service.dart' as _i43;
 import 'package:flutter_tdd/core/helpers/utilities.dart' as _i48;
