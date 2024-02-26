@@ -16,7 +16,7 @@ class PaymentPriceDetailsItemWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'ضريبة',
+                Translate.s.tax,
                 style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
               ),
               Row(
@@ -49,7 +49,7 @@ class PaymentPriceDetailsItemWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'المطلوب',
+                Translate.s.required,
                 style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
               ),
               Row(

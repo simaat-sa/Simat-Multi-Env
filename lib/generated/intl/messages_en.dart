@@ -126,6 +126,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "conductor": MessageLookupByLibrary.simpleMessage("Conductor"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "Please enter the password identical"),
+        "confirm_payment":
+            MessageLookupByLibrary.simpleMessage("Confirm payment"),
         "contract": MessageLookupByLibrary.simpleMessage("Contract"),
         "contract_end_date":
             MessageLookupByLibrary.simpleMessage("Contract end date"),
@@ -148,9 +150,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "description_of_maintenance":
             MessageLookupByLibrary.simpleMessage("Description of maintenance"),
+        "deserved_amount":
+            MessageLookupByLibrary.simpleMessage("Deserved amount"),
         "district_region":
             MessageLookupByLibrary.simpleMessage("District . Region"),
         "done": MessageLookupByLibrary.simpleMessage("Done"),
+        "due_date": MessageLookupByLibrary.simpleMessage("due date"),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("BAD REQUEST"),
         "error_NotFound_Error":
@@ -212,6 +217,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "label_phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "label_register": MessageLookupByLibrary.simpleMessage("Register"),
         "loadingText": MessageLookupByLibrary.simpleMessage("Loading…"),
+        "log_out_failed": MessageLookupByLibrary.simpleMessage("Logout failed"),
+        "log_out_success":
+            MessageLookupByLibrary.simpleMessage("Logged out successfully"),
         "login_with_qr":
             MessageLookupByLibrary.simpleMessage("Scan the QR code to log in"),
         "mailValidation":
@@ -249,6 +257,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_notices": MessageLookupByLibrary.simpleMessage("No notifications"),
         "no_notices_now": MessageLookupByLibrary.simpleMessage(
             "You don\'t have any notifications yet, please check back later"),
+        "notify": MessageLookupByLibrary.simpleMessage("Notification"),
         "order_has_received": MessageLookupByLibrary.simpleMessage(
             "The order has been received, we will update you soon"),
         "owner": MessageLookupByLibrary.simpleMessage("Owner"),
@@ -286,6 +295,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "size_more_than_mg_error": m3,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
+        "splash_desc_title": MessageLookupByLibrary.simpleMessage(
+            "Real estate property management program"),
+        "splash_first_title": MessageLookupByLibrary.simpleMessage(
+            "Made with passion © Simat Real Estate Platform"),
         "successfully_Logged_in":
             MessageLookupByLibrary.simpleMessage("Successfully Logged in"),
         "summary": MessageLookupByLibrary.simpleMessage("Summary"),
@@ -293,6 +306,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("supervisor Approved"),
         "supervisor_identifications":
             MessageLookupByLibrary.simpleMessage("supervisor Identifications"),
+        "tax": MessageLookupByLibrary.simpleMessage("Tax"),
         "total_contract":
             MessageLookupByLibrary.simpleMessage("Total Contract"),
         "total_due": MessageLookupByLibrary.simpleMessage("Total due"),
@@ -304,6 +318,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser"),
+        "version_label": MessageLookupByLibrary.simpleMessage("Version 35.1.2"),
+        "view_payments": MessageLookupByLibrary.simpleMessage("View payments"),
         "worthy": MessageLookupByLibrary.simpleMessage("Worthy")
       };
 }

@@ -1689,6 +1689,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Notification`
+  String get notify {
+    return Intl.message(
+      'Notification',
+      name: 'notify',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logged out successfully`
+  String get log_out_success {
+    return Intl.message(
+      'Logged out successfully',
+      name: 'log_out_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout failed`
+  String get log_out_failed {
+    return Intl.message(
+      'Logout failed',
+      name: 'log_out_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Made with passion © Simat Real Estate Platform`
+  String get splash_first_title {
+    return Intl.message(
+      'Made with passion © Simat Real Estate Platform',
+      name: 'splash_first_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Real estate property management program`
+  String get splash_desc_title {
+    return Intl.message(
+      'Real estate property management program',
+      name: 'splash_desc_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version 35.1.2`
+  String get version_label {
+    return Intl.message(
+      'Version 35.1.2',
+      name: 'version_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Deserved amount`
+  String get deserved_amount {
+    return Intl.message(
+      'Deserved amount',
+      name: 'deserved_amount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View payments`
+  String get view_payments {
+    return Intl.message(
+      'View payments',
+      name: 'view_payments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm payment`
+  String get confirm_payment {
+    return Intl.message(
+      'Confirm payment',
+      name: 'confirm_payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `due date`
+  String get due_date {
+    return Intl.message(
+      'due date',
+      name: 'due_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tax`
+  String get tax {
+    return Intl.message(
+      'Tax',
+      name: 'tax',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

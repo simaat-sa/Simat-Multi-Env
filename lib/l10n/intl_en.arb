@@ -163,7 +163,18 @@
   "QR_mobile_application": "2. At the top of the screen, “Download the Simat application now,” or from the user settings menu, choose “QR mobile application.”",
   "using_the_QR_code_scan_the_QR_code_that_appears": "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser",
   "new_maintenance_request": "New maintenance request",
-  "menu": "Menu"
+  "menu": "Menu",
+  "notify": "Notification",
+  "log_out_success": "Logged out successfully",
+  "log_out_failed": "Logout failed",
+  "splash_first_title": "Made with passion © Simat Real Estate Platform",
+  "splash_desc_title": "Real estate property management program",
+  "version_label": "Version 35.1.2",
+  "deserved_amount": "Deserved amount",
+  "view_payments": "View payments",
+  "confirm_payment": "Confirm payment",
+  "due_date": "due date",
+  "tax": "Tax"
 
 
 }

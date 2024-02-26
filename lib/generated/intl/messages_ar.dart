@@ -127,6 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "conductor": MessageLookupByLibrary.simpleMessage("المحصل"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل كلمة المرورمتطابق"),
+        "confirm_payment": MessageLookupByLibrary.simpleMessage("تأكيد السداد"),
         "contract": MessageLookupByLibrary.simpleMessage("عقد"),
         "contract_end_date":
             MessageLookupByLibrary.simpleMessage("تاريخ نهاية العقد"),
@@ -145,9 +146,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "description_of_maintenance":
             MessageLookupByLibrary.simpleMessage("وصف الصيانة"),
+        "deserved_amount":
+            MessageLookupByLibrary.simpleMessage("المبلغ المستحق"),
         "district_region":
             MessageLookupByLibrary.simpleMessage("الحي . المنطقة"),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
+        "due_date": MessageLookupByLibrary.simpleMessage("تاريخ استحقاق "),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("طلب غير صالح"),
         "error_NotFound_Error":
@@ -207,6 +211,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "label_register":
             MessageLookupByLibrary.simpleMessage("تسجيل حساب جديد"),
         "loadingText": MessageLookupByLibrary.simpleMessage("تحميل…"),
+        "log_out_failed":
+            MessageLookupByLibrary.simpleMessage("فشل تسجيل الخروج"),
+        "log_out_success":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الخروج بنجاح"),
         "login_with_qr": MessageLookupByLibrary.simpleMessage(
             "مسح رمز الاستجابة لتسجيل الدخول"),
         "mailValidation":
@@ -242,6 +250,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_notices": MessageLookupByLibrary.simpleMessage("لا إشعارات"),
         "no_notices_now": MessageLookupByLibrary.simpleMessage(
             "لا يوجد لديك إشعارات الآن، برجاء معاودة التحقق لاحقا"),
+        "notify": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "order_has_received": MessageLookupByLibrary.simpleMessage(
             "تم استلام الطلب، وسنقوم بتحديثك قريبًا"),
         "owner": MessageLookupByLibrary.simpleMessage("مالك"),
@@ -275,6 +284,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "size_more_than_mg_error": m3,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
+        "splash_desc_title": MessageLookupByLibrary.simpleMessage(
+            "برنامج إدارة الأملاك العقارية"),
+        "splash_first_title": MessageLookupByLibrary.simpleMessage(
+            "صنعت بشغف © منصة سمات العقارية "),
         "successfully_Logged_in":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "summary": MessageLookupByLibrary.simpleMessage("الملخص"),
@@ -282,6 +295,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تمت الموافقة من قبل المشرف"),
         "supervisor_identifications":
             MessageLookupByLibrary.simpleMessage("هويات المشرف"),
+        "tax": MessageLookupByLibrary.simpleMessage("ضريبة"),
         "total_contract": MessageLookupByLibrary.simpleMessage("إجمالي العقد"),
         "total_due": MessageLookupByLibrary.simpleMessage("اجمالي المستحق"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
@@ -292,6 +306,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح"),
+        "version_label": MessageLookupByLibrary.simpleMessage("اصدار 35.1.2"),
+        "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات"),
         "worthy": MessageLookupByLibrary.simpleMessage("مستحق")
       };
 }

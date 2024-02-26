@@ -13,10 +13,17 @@ class MenuControllerTap {
       GlobalState.instance.set("token", null);
       AppSnackBar.showSimpleToast(
         color: context.colors.black,
-        msg: "Logged out successfully",
+        msg: Translate.s.log_out_success,
         type: ToastType.success,
       );
-      AutoRouter.of(context).pushAndPopUntil(SplashRoute(), predicate: (route) => false);
+      AutoRouter.of(context).pushAndPopUntil(const SplashRoute(), predicate: (route) => false);
+    }
+    else{
+      AppSnackBar.showSimpleToast(
+        color: context.colors.red,
+        msg: Translate.s.log_out_failed,
+        type: ToastType.error,
+      );
     }
   }
 

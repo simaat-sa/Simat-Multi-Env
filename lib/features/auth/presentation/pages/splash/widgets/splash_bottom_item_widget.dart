@@ -14,21 +14,21 @@ class SplashBottomItemWidget extends StatelessWidget {
         children: [
           Text(
               textAlign: TextAlign.center,
-              'صنعت بشغف © منصة سمات العقارية ',
+              Translate.s.splash_first_title,
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),
           Gaps.vGap5,
           Text(
               textAlign: TextAlign.center,
-              'برنامج إدارة الأملاك العقارية',
+              Translate.s.splash_desc_title,
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),
           Gaps.vGap5,
           Text(
               textAlign: TextAlign.center,
-              'اصدار 35.1.2',
+              Translate.s.version_label,
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),
