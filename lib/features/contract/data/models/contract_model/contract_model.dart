@@ -2,7 +2,6 @@ import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/enums/contract_types.dart';
 import 'package:flutter_tdd/core/enums/date_types.dart';
 import 'package:flutter_tdd/core/enums/tenant_visibility.dart';
-import 'package:flutter_tdd/core/extensions/date_format.dart';
 import 'package:flutter_tdd/core/extensions/string_helper_extension.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -34,7 +33,7 @@ class ContractModel with _$ContractModel {
 
   factory ContractModel.fromJson(Map<String, dynamic> json) => _$ContractModelFromJson(json);
 
-  String get unitImage => AppConfig.instance.baseUrl + (propImg ?? "");
+  String get unitImage => AppConfig.instance.imageBaseUrl + (propImg ?? "");
 
   String get date {
     if (dateType == DateTypes.hj) {
