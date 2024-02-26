@@ -34,7 +34,7 @@ class PaymentItemWidget extends StatelessWidget {
                   style: AppTextStyle.s14_w500(color: context.colors.secondaryText),
                 ),
                 Text(
-                  'تاريخ استحقاق ${model.dtUpdated}',
+                  '${Translate.s.due_date}${model.dtUpdated}',
                   style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                 ),
               ],
@@ -52,7 +52,7 @@ class PaymentItemWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "مستحق",
+                      Translate.s.worthy,
                       style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                     ),
                     Gaps.vGap8,
@@ -74,7 +74,7 @@ class PaymentItemWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "محصل",
+                      Translate.s.collector,
                       style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                     ),
                     Gaps.vGap8,

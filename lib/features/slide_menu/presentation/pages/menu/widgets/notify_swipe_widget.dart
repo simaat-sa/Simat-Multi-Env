@@ -21,7 +21,7 @@ class NotifySwipeWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Text(
-              "الإشعارات",
+              Translate.s.notify,
               style: AppTextStyle.s16_w400(color: context.colors.darkTextColor),
             ),
           ),
