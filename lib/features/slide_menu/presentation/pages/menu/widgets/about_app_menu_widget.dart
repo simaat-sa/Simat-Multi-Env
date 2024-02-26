@@ -26,7 +26,7 @@ class AboutAppMenuWidget extends StatelessWidget {
           AuthDrawerItemWidget(
             padding: const EdgeInsets.only(bottom: 0),
             text: Translate.s.About_New_version,
-            subtext: 'v.01.04.23',
+            subtext: 'v.${CurrentVersionHelper.instance.currentVersion}',
           ),
         ],
       ),

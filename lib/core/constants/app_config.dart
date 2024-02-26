@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class AppConfig {
   AppConfig._();
@@ -18,4 +19,9 @@ class AppConfig {
 
   static BoxConstraints? fromHeight(double? height) =>
       height != null ? BoxConstraints(minHeight: height, maxHeight: height) : null;
+
+  static Future<String> currentVersion() async{
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    return packageInfo.version;
+  }
 }
