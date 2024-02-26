@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
+import 'package:auto_route/auto_route.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,6 +9,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/helpers/global_context.dart';
 import 'package:flutter_tdd/core/helpers/storage_helper.dart';
+import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 import 'package:flutter_tdd/features/notification/presentation/manager/notify_cubit/notify_cubit.dart';
 import 'package:injectable/injectable.dart';
 
@@ -89,5 +91,7 @@ class GlobalNotification {
 
   static Future flutterNotificationClick(String? details) async {
     // final _data = json.decode("$payload");
+    var context = getIt<GlobalContext>().context();
+    AutoRouter.of(context).push(const NoticesScreenRoute());
   }
 }
