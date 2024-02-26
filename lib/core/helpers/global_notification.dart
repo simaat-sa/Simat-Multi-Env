@@ -3,8 +3,12 @@ import 'dart:convert';
 import 'dart:developer';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_tdd/core/helpers/di.dart';
+import 'package:flutter_tdd/core/helpers/global_context.dart';
 import 'package:flutter_tdd/core/helpers/storage_helper.dart';
+import 'package:flutter_tdd/features/notification/presentation/manager/notify_cubit/notify_cubit.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton
@@ -37,6 +41,7 @@ class GlobalNotification {
         log("_____________________Message data:${message.data}");
         log("_____________________notification:${message.notification?.title}");
         _showLocalNotification(message);
+        updateNotifyCubit();
         _onMessageStreamController.add(message.data);
         if (int.parse(message.data["type"] ?? "0") == -1) {
           StorageHelper.instance.clearSavedData();
@@ -59,6 +64,11 @@ class GlobalNotification {
 
   StreamController<Map<String, dynamic>> get notificationSubject {
     return _onMessageStreamController;
+  }
+
+  void updateNotifyCubit() {
+    var context = getIt<GlobalContext>().context();
+    context.read<NotifyCubit>().increaseNotifyCount();
   }
 
   Future<void> _showLocalNotification(RemoteMessage? message) async {
