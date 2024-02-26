@@ -18,7 +18,7 @@ class CompleteAddFormWidget extends StatelessWidget {
         Gaps.vGap32,
         Text(
           textAlign: TextAlign.center,
-          isSuccess ? Translate.s.maintenance_has_been_requested : Translate.s.something_went_wrong,
+          isSuccess ? Translate.of(context).maintenance_has_been_requested : Translate.of(context).something_went_wrong,
           style: AppTextStyle.s30_w400(color: context.colors.green4),
         ),
         Padding(
@@ -39,8 +39,8 @@ class CompleteAddFormWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
             child: Text(
               isSuccess
-                  ? Translate.s.back_to_maintenance_requests
-                  : Translate.s.maybe_later_back_to_the_main_page,
+                  ? Translate.of(context).back_to_maintenance_requests
+                  : Translate.of(context).maybe_later_back_to_the_main_page,
               style: AppTextStyle.s14_w500(color: context.colors.secondary),
             ),
           ),

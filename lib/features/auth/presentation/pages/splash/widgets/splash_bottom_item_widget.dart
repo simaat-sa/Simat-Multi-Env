@@ -14,21 +14,21 @@ class SplashBottomItemWidget extends StatelessWidget {
         children: [
           Text(
               textAlign: TextAlign.center,
-              Translate.s.splash_first_title,
+              Translate.of(context).splash_first_title,
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),
           Gaps.vGap5,
           Text(
               textAlign: TextAlign.center,
-              Translate.s.splash_desc_title,
+              Translate.of(context).splash_desc_title,
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),
           Gaps.vGap5,
           Text(
               textAlign: TextAlign.center,
-              'اصدار 35.1.2',
+              Translate.of(context).version_label(CurrentVersionHelper.instance.currentVersion),
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),

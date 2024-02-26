@@ -15,7 +15,7 @@ class AddMaintenanceFormWidget extends StatelessWidget {
         GenericTextField(
           controller: controller.phone,
           fillColor: context.colors.white,
-          hint: Translate.s.customer_mobile,
+          hint: Translate.of(context).customer_mobile,
           contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
           fieldTypes: FieldTypes.normal,
           type: TextInputType.phone,

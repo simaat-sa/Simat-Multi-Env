@@ -1740,13 +1740,13 @@ class S {
     );
   }
 
-  /// `Version 35.1.2`
-  String get version_label {
+  /// `Version {version}`
+  String version_label(Object version) {
     return Intl.message(
-      'Version 35.1.2',
+      'Version $version',
       name: 'version_label',
       desc: '',
-      args: [],
+      args: [version],
     );
   }
 

@@ -21,7 +21,7 @@ class FailureItemWidget extends StatelessWidget {
             ),
             Gaps.hGap10,
             Text(
-              Translate.s.retry,
+              Translate.of(context).retry,
               style: AppTextStyle.s14_w400(color: context.colors.greyWhite),
             ),
           ],

@@ -2,7 +2,6 @@ part of 'menu_tap_imports.dart';
 
 class MenuControllerTap {
 
-  final ObsValue<bool> langObs = ObsValue.withInit(false);
   final ObsValue<bool> switchObs = ObsValue.withInit(false);
 
   Future<void> onLogOut(BuildContext context) async {
@@ -13,7 +12,7 @@ class MenuControllerTap {
       GlobalState.instance.set("token", null);
       AppSnackBar.showSimpleToast(
         color: context.colors.black,
-        msg: Translate.s.log_out_success,
+        msg: Translate.of(context).log_out_success,
         type: ToastType.success,
       );
       AutoRouter.of(context).pushAndPopUntil(const SplashRoute(), predicate: (route) => false);
@@ -21,7 +20,7 @@ class MenuControllerTap {
     else{
       AppSnackBar.showSimpleToast(
         color: context.colors.red,
-        msg: Translate.s.log_out_failed,
+        msg: Translate.of(context).log_out_failed,
         type: ToastType.error,
       );
     }

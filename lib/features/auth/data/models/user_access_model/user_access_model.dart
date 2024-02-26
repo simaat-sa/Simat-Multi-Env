@@ -1,4 +1,5 @@
 import 'package:flutter_tdd/core/enums/access_pages_enum.dart';
+import 'package:flutter_tdd/core/models/localized_name_model/localized_name_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user_access_model.freezed.dart';
@@ -22,4 +23,8 @@ class UserAccessModel with _$UserAccessModel {
   }) = _UserAccessModel;
 
   factory UserAccessModel.fromJson(Map<String, dynamic> json) => _$UserAccessModelFromJson(json);
+
+
+  String get localizedName => LocalizedNameModel.fromStrings(ar: pageAr, en: pageEn).getLocalizedString;
+
 }

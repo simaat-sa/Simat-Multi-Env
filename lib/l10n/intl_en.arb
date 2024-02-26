@@ -169,7 +169,7 @@
   "log_out_failed": "Logout failed",
   "splash_first_title": "Made with passion © Simat Real Estate Platform",
   "splash_desc_title": "Real estate property management program",
-  "version_label": "Version 35.1.2",
+  "version_label": "Version {version}",
   "deserved_amount": "Deserved amount",
   "view_payments": "View payments",
   "confirm_payment": "Confirm payment",

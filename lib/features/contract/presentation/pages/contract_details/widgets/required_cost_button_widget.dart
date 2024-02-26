@@ -17,7 +17,7 @@ class RequiredCostButtonWidget extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            Translate.s.required,
+            Translate.of(context).required,
             style: AppTextStyle.s16_w500(color: context.colors.white),
           ),
           Gaps.hGap5,
@@ -31,7 +31,7 @@ class RequiredCostButtonWidget extends StatelessWidget {
           ),
           const Spacer(),
           Text(
-            Translate.s.pay_now,
+            Translate.of(context).pay_now,
             style: AppTextStyle.s16_w500(color: context.colors.white),
           ),
         ],

@@ -47,7 +47,7 @@ class FilterMaintenanceButtons extends StatelessWidget {
                   borderRadius: BorderRadius.circular(6),
                 ),
                 child: Text(
-                  Translate.s.reset,
+                  Translate.of(context).reset,
                   style: AppTextStyle.s16_w400(color: context.colors.primary),
                 ),
               ),

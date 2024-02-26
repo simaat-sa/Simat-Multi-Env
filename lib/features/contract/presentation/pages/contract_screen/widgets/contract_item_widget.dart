@@ -79,7 +79,7 @@ class ContractItemWidget extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        Translate.s.worthy,
+                        Translate.of(context).worthy,
                         style: AppTextStyle.s14_w400(color: context.colors.primary),
                       ),
                       Text(

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:package_info_plus/package_info_plus.dart';
+import 'package:flutter_tdd/core/helpers/di.dart';
+import 'package:flutter_tdd/core/helpers/global_context.dart';
+import 'package:rebirth/rebirth.dart';
 
 class AppConfig {
   AppConfig._();
   static AppConfig instance = AppConfig._();
 
-  String get defaultLanguage => 'en';
+  String get defaultLanguage => 'ar';
 
   String get baseUrl => "https://${const String.fromEnvironment('APP_BASE_URL')}/";
 
@@ -20,8 +22,8 @@ class AppConfig {
   static BoxConstraints? fromHeight(double? height) =>
       height != null ? BoxConstraints(minHeight: height, maxHeight: height) : null;
 
-  static Future<String> currentVersion() async{
-    PackageInfo packageInfo = await PackageInfo.fromPlatform();
-    return packageInfo.version;
+  Future<void> restartApp() async{
+    WidgetRebirth.createRebirth(context: getIt<GlobalContext>().context());
   }
+
 }

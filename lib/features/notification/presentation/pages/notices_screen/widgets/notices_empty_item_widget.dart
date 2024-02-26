@@ -16,20 +16,20 @@ class NoticesEmptyItemWidget extends StatelessWidget {
           ),
           Gaps.vGap32,
           Text(
-            Translate.s.no_notices,
+            Translate.of(context).no_notices,
             style: AppTextStyle.s30_w400(color: context.colors.primaryText),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 13),
             child: Text(
               textAlign: TextAlign.center,
-              Translate.s.no_notices_now,
+              Translate.of(context).no_notices_now,
               style: AppTextStyle.s16_w500(color: context.colors.primaryText),
             ),
           ),
           Text(
             textAlign: TextAlign.center,
-            Translate.s.back_to_main_page,
+            Translate.of(context).back_to_main_page,
             style: AppTextStyle.s16_w500(color: context.colors.secondary),
           ),
         ],

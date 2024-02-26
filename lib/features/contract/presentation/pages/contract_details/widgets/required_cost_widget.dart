@@ -28,7 +28,7 @@ class RequiredCostWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    Translate.s.total_due,
+                    Translate.of(context).total_due,
                     style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                   ),
                   Gaps.vGap8,
@@ -56,7 +56,7 @@ class RequiredCostWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    Translate.s.conductor,
+                    Translate.of(context).conductor,
                     style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                   ),
                   Gaps.vGap8,

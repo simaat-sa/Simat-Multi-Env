@@ -21,7 +21,7 @@ class _AddMaintenanceState extends State<AddMaintenance> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.colors.background,
-      appBar: SheetAppBar(title: Translate.s.add_new_contact),
+      appBar: SheetAppBar(title: Translate.of(context).add_new_contact),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: Form(

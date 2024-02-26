@@ -169,7 +169,7 @@
   "log_out_failed": "فشل تسجيل الخروج",
   "splash_first_title": "صنعت بشغف © منصة سمات العقارية ",
   "splash_desc_title": "برنامج إدارة الأملاك العقارية",
-  "version_label": "اصدار 35.1.2",
+  "version_label": "اصدار {version}",
   "deserved_amount": "المبلغ المستحق",
   "view_payments": "عرض المدفوعات",
   "confirm_payment": "تأكيد السداد",

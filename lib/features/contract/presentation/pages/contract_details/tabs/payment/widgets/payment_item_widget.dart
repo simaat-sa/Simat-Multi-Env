@@ -34,7 +34,7 @@ class PaymentItemWidget extends StatelessWidget {
                   style: AppTextStyle.s14_w500(color: context.colors.secondaryText),
                 ),
                 Text(
-                  '${Translate.s.due_date}${model.dtUpdated}',
+                  '${Translate.of(context).due_date}${model.dtUpdated}',
                   style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                 ),
               ],
@@ -52,7 +52,7 @@ class PaymentItemWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      Translate.s.worthy,
+                      Translate.of(context).worthy,
                       style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                     ),
                     Gaps.vGap8,
@@ -74,7 +74,7 @@ class PaymentItemWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      Translate.s.collector,
+                      Translate.of(context).collector,
                       style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                     ),
                     Gaps.vGap8,

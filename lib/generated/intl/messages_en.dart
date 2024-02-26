@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m3(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";
 
+  static String m4(version) => "Version ${version}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "About_New_version":
@@ -318,7 +320,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser"),
-        "version_label": MessageLookupByLibrary.simpleMessage("Version 35.1.2"),
+        "version_label": m4,
         "view_payments": MessageLookupByLibrary.simpleMessage("View payments"),
         "worthy": MessageLookupByLibrary.simpleMessage("Worthy")
       };

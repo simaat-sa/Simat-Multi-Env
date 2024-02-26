@@ -59,7 +59,7 @@ class AuthDrawerWidget extends StatelessWidget {
                             padding: EdgeInsetsDirectional.only(bottom: state ? 20 : 30),
                             icon: state ? Icons.keyboard_arrow_down : Icons.arrow_forward_ios_outlined,
                             size: state ? 25 : 15,
-                            text: Translate.s.label_app_language,
+                            text: Translate.of(context).label_app_language,
                             onTap: onChangeLanguage,
                           ),
                           Visibility(
@@ -73,12 +73,12 @@ class AuthDrawerWidget extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        Translate.s.English,
+                                        Translate.of(context).English,
                                         style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                                       ),
                                       Gaps.vGap20,
                                       Text(
-                                        Translate.s.Arabic,
+                                        Translate.of(context).Arabic,
                                         style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                                       ),
                                     ],
@@ -97,23 +97,23 @@ class AuthDrawerWidget extends StatelessWidget {
                     },
                   ),
                   AuthDrawerItemWidget(
-                    text: Translate.s.Share_the_app,
+                    text: Translate.of(context).Share_the_app,
                     onTap: () {},
                   ),
                   AuthDrawerItemWidget(
-                    text: Translate.s.Privacy_Policy,
+                    text: Translate.of(context).Privacy_Policy,
                     onTap: () => getTerms(context),
                   ),
                   AuthDrawerItemWidget(
-                    text: Translate.s.Technical_support_ticket,
+                    text: Translate.of(context).Technical_support_ticket,
                     onTap: () => getIt<ShareServices>().launchURL(url: ApiNames.supportLink),
                   ),
                   AuthDrawerItemWidget(
-                    text: Translate.s.About_Simat_application,
+                    text: Translate.of(context).About_Simat_application,
                     onTap: () {},
                   ),
                   AuthDrawerItemWidget(
-                    text: Translate.s.About_New_version,
+                    text: Translate.of(context).About_New_version,
                     subtext: 'v.${CurrentVersionHelper.instance.currentVersion}',
                   ),
                 ],

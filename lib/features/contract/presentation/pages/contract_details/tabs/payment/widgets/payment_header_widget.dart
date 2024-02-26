@@ -8,7 +8,7 @@ class PaymentHeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(Translate.s.contract,
+        Text(Translate.of(context).contract,
             style: AppTextStyle.s16_w400(color: context.colors.darkTextColor)),
         Gaps.hGap12,
         Container(

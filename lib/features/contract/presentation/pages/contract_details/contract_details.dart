@@ -43,8 +43,8 @@ class _ContractDetailsState extends State<ContractDetails> {
                   labelStyle: AppTextStyle.s16_w500(color: context.colors.primary)
                       .copyWith(fontFamily: "Tajawal"),
                   tabs: [
-                    Text(Translate.s.summary),
-                    Text(Translate.s.payments),
+                    Text(Translate.of(context).summary),
+                    Text(Translate.of(context).payments),
                   ]),
               Flexible(
                 child: TabBarView(

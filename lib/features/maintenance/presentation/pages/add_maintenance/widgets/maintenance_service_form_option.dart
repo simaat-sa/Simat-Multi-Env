@@ -7,8 +7,8 @@ class MaintenanceServiceFormOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseFormOption<MaintenanceServicesModel>(
-      hintText: Translate.s.maintenance_type,
-      bottomSheetTitle: Translate.s.maintenance_type,
+      hintText: Translate.of(context).maintenance_type,
+      bottomSheetTitle: Translate.of(context).maintenance_type,
       showSearch: true,
       showDecoration: true,
       isMultiple: true,

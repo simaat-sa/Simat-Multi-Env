@@ -9,11 +9,11 @@ class SummaryCostTitleWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          Translate.s.deserved_amount,
+          Translate.of(context).deserved_amount,
           style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
         ),
         Text(
-          Translate.s.view_payments,
+          Translate.of(context).view_payments,
           style: AppTextStyle.s14_w400(color: context.colors.primaryText),
         ),
       ],

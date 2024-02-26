@@ -51,7 +51,7 @@ class ShareServices {
     if (await canLaunchUrl(Uri.parse(whatsAppUrl))) {
       await launchUrl(Uri.parse(whatsAppUrl));
     } else {
-      AppSnackBar.showSimpleToast(msg: Translate.s.something_went_wrong);
+      AppSnackBar.showSimpleToast(msg: Translate.of(context).something_went_wrong);
     }
   }
 

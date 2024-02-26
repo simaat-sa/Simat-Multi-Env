@@ -32,12 +32,12 @@ class RenewContractItemWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    Translate.s.contract_renewal,
+                    Translate.of(context).contract_renewal,
                     style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                   ),
                   Gaps.vGap5,
                   Text(
-                    Translate.s.request_to_renew_contract,
+                    Translate.of(context).request_to_renew_contract,
                     style: AppTextStyle.s13_w400(color: context.colors.darkTextColor)
                         .copyWith(overflow: TextOverflow.ellipsis),
                   ),

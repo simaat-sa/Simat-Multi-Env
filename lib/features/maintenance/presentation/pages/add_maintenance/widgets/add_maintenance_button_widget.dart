@@ -14,7 +14,7 @@ class AddMaintenanceButtonWidget extends StatelessWidget {
         txtColor: context.colors.white,
         textSize: 14,
         maxHeight: 45,
-        text: Translate.s.maintenance_request,
+        text: Translate.of(context).maintenance_request,
       ),
     );
   }

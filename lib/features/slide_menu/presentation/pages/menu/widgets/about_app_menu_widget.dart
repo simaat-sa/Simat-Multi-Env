@@ -14,18 +14,18 @@ class AboutAppMenuWidget extends StatelessWidget {
           GestureDetector(
             onTap: () => controller.getTerms(context),
             child: AuthDrawerItemWidget(
-              text: Translate.s.Privacy_Policy,
+              text: Translate.of(context).Privacy_Policy,
             ),
           ),
           GestureDetector(
             onTap: () {},
             child: AuthDrawerItemWidget(
-              text: Translate.s.About_Simat_application,
+              text: Translate.of(context).About_Simat_application,
             ),
           ),
           AuthDrawerItemWidget(
             padding: const EdgeInsets.only(bottom: 0),
-            text: Translate.s.About_New_version,
+            text: Translate.of(context).About_New_version,
             subtext: 'v.${CurrentVersionHelper.instance.currentVersion}',
           ),
         ],

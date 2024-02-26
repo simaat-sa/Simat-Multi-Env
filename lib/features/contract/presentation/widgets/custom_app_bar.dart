@@ -28,7 +28,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       titleSpacing: 8,
       backgroundColor: Colors.transparent,
       title: Text(
-        userData!.userFullname,
+        userData?.userFullname??"",
         style: AppTextStyle.s16_w400(color: context.colors.black),
       ),
       actions: [
@@ -72,7 +72,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: Padding(
         padding: const EdgeInsetsDirectional.only(start: 20, top: 3, bottom: 3),
         child: CachedImage(
-          url: userData.userAvatar,
+          url: userData?.userAvatar??"",
           height: 50,
           width: 50,
           borderRadius: BorderRadius.circular(30),

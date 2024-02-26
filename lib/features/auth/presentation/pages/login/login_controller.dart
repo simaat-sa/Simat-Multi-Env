@@ -39,7 +39,7 @@ class LoginController {
       UserHelperService.instance.saveUserData(userModel);
       AppSnackBar.showSimpleToast(
         color: context.colors.black,
-        msg: Translate.of(context).successfully_Logged_in,
+        msg: Translate.s.successfully_Logged_in,
         type: ToastType.success,
       );
       AutoRouter.of(context).push(Home());
@@ -47,7 +47,7 @@ class LoginController {
     }, isError: (error) {
       AppSnackBar.showSimpleToast(
         msg: Translate
-            .of(context)
+            .s
             .Invalid_login_data,
         type: ToastType.error,
       );

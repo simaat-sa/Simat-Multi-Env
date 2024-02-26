@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:flutter_tdd/core/bloc/device_cubit/device_cubit.dart';
 import 'package:flutter_tdd/core/helpers/global_notification.dart';
 import 'package:flutter_tdd/core/helpers/services/current_version_helper.dart';
@@ -25,7 +24,7 @@ void main() async {
   runApp(
     BlocProvider(
       create: (BuildContext context) => DeviceCubit(),
-      child: Phoenix(child: const MyApp()),
+      child: const MyApp(),
     ),
   );
 }

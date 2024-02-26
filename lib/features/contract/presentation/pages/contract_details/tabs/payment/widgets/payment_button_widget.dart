@@ -19,7 +19,7 @@ class PaymentButtonWidget extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              Translate.s.required,
+              Translate.of(context).required,
               style: AppTextStyle.s16_w500(color: context.colors.white),
             ),
             Gaps.hGap5,
@@ -33,7 +33,7 @@ class PaymentButtonWidget extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              Translate.s.confirm_payment,
+              Translate.of(context).confirm_payment,
               style: AppTextStyle.s16_w500(color: context.colors.white),
             ),
           ],

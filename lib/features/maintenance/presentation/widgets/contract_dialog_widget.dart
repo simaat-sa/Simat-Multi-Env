@@ -34,7 +34,7 @@ class ContractDialog extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      Translate.s.maintenance_request,
+                      Translate.of(context).maintenance_request,
                       style: AppTextStyle.s28_w400(color: context.colors.darkTextColor),
                     ),
                     InkWell(
@@ -71,29 +71,29 @@ class ContractDialog extends StatelessWidget {
                   color: context.colors.backgroundLight,
                 ),
                 DetailsItemWidget(
-                    title: Translate.s.real_estate_unit,
+                    title: Translate.of(context).real_estate_unit,
                     value: model.unitName,
                     color: context.colors.bgLight,
                     image: Res.unitLogo),
                 DetailsItemWidget(
-                    title: Translate.s.main_property,
+                    title: Translate.of(context).main_property,
                     value: model.createdDateTimeStamp,
                     image: Res.unitLogo),
                 DetailsItemWidget(
-                    title: Translate.s.date_of_request,
+                    title: Translate.of(context).date_of_request,
                     value: model.createdDate,
                     color: context.colors.bgLight,
                     image: Res.calendarIcon),
                 DetailsItemWidget(
-                    title: Translate.s.applicant, value: model.createdBy, image: Res.userLogo),
+                    title: Translate.of(context).applicant, value: model.createdBy, image: Res.userLogo),
                 Divider(
                   height: 10,
                   color: context.colors.backgroundLight,
                 ),
                 _buildPriceItem(context,
-                    title: Translate.s.estimated_cost, value: model.approxCost),
+                    title: Translate.of(context).estimated_cost, value: model.approxCost),
                 _buildPriceItem(context,
-                    title: Translate.s.final_cost,
+                    title: Translate.of(context).final_cost,
                     value: model.actualCost,
                     color: context.colors.bgLight),
                 Divider(
@@ -101,7 +101,7 @@ class ContractDialog extends StatelessWidget {
                   color: context.colors.backgroundLight,
                 ),
                 Text(
-                  Translate.s.description_of_maintenance,
+                  Translate.of(context).description_of_maintenance,
                   style: AppTextStyle.s14_w500(color: context.colors.primaryText),
                 ),
                 Gaps.vGap12,

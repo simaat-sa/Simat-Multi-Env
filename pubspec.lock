@@ -635,14 +635,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_phoenix:
-    dependency: "direct main"
-    description:
-      name: flutter_phoenix
-      sha256: "39589dac934ea476d0e43fb60c1ddfba58f14960743640c8250dea11c4333378"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.1"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -1357,6 +1349,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.1"
+  rebirth:
+    dependency: "direct main"
+    description:
+      name: rebirth
+      sha256: "20979adb1a40da41d620f1cefb51ee90d53bfcec8a5284ea2b8ab97a673853b8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   recase:
     dependency: transitive
     description:

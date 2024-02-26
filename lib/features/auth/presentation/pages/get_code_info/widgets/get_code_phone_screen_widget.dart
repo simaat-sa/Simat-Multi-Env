@@ -9,7 +9,7 @@ class GetCodePhoneScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-         Translate.s.using_the_QR_code_scan_the_QR_code_that_appears,
+         Translate.of(context).using_the_QR_code_scan_the_QR_code_that_appears,
           style: AppTextStyle.s14_w400(color: context.colors.darkTextColor).copyWith(height: 1.2),
         ),
         Gaps.vGap20,

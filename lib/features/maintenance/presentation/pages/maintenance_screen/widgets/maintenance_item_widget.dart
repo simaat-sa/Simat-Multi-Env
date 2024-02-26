@@ -84,7 +84,7 @@ class MaintenanceItemWidget extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  Translate.s.description,
+                  Translate.of(context).description,
                   style: AppTextStyle.s14_w400(color: context.colors.textColor),
                 ),
                 const Spacer(),

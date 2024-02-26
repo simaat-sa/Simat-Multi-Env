@@ -10,27 +10,27 @@ class SummaryDetailsWidget extends StatelessWidget {
       children: [
         DetailsItemWidget(
             image: Res.unitLocationLogo,
-            title: Translate.s.district_region,
+            title: Translate.of(context).district_region,
             value: "${model.propRegion} . ${model.propCity}"),
         DetailsItemWidget(
             image: Res.calendarIcon,
-            title: Translate.s.contract_end_date,
+            title: Translate.of(context).contract_end_date,
             value: model.date,
             color: context.colors.bgLight),
         DetailsItemWidget(
-            image: Res.coinLogo, title: Translate.s.total_contract, value: model.price),
+            image: Res.coinLogo, title: Translate.of(context).total_contract, value: model.price),
         DetailsItemWidget(
             image: Res.coinLogo,
-            title: Translate.s.net_contract,
+            title: Translate.of(context).net_contract,
             value: model.price,
             color: context.colors.bgLight),
-        DetailsItemWidget(image: Res.coinLogo, title: Translate.s.insurance, value: model.price),
+        DetailsItemWidget(image: Res.coinLogo, title: Translate.of(context).insurance, value: model.price),
         DetailsItemWidget(
             image: Res.coinLogo,
-            title: Translate.s.additional_amounts,
+            title: Translate.of(context).additional_amounts,
             value: model.price,
             color: context.colors.bgLight),
-        DetailsItemWidget(image: Res.coinLogo, title: Translate.s.collector, value: model.price),
+        DetailsItemWidget(image: Res.coinLogo, title: Translate.of(context).collector, value: model.price),
       ],
     );
   }
