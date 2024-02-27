@@ -1,7 +1,7 @@
 part of 'home_imports.dart';
 
 class HomeController {
-  final ObsValue<bool> termsObs = ObsValue<bool>.withInit(false);
+  // final ObsValue<bool> termsObs = ObsValue<bool>.withInit(false);
   late TabController tabController;
   final ObsValue<int> navigationBarObs = ObsValue<int>.withInit(0);
   final NoticesRequester requesterNotify = NoticesRequester();

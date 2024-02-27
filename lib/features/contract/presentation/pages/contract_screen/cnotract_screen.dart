@@ -69,7 +69,7 @@ class _ContractScreenState extends State<ContractScreen> {
           );
         },
         failureBuilder: (context, error, callback) {
-          return const FailureItemWidget();
+          return FailureItemWidget(onTapRefresh: callback);
         },
         loadingBuilder: (context) {
           return const UnitLoadingListWidget();

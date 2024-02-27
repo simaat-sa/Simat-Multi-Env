@@ -39,7 +39,7 @@ class _NoticesScreenState extends State<NoticesScreen> {
                 Visibility(
                   visible: controller.unReadListIds().isNotEmpty,
                   child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(20,10,20,5),
+                    padding: const EdgeInsetsDirectional.fromSTEB(20, 10, 20, 5),
                     child: GestureDetector(
                       onTap: () => controller.readAllNotifications(),
                       child: Text(
@@ -68,7 +68,7 @@ class _NoticesScreenState extends State<NoticesScreen> {
           return const NoticesLoadingListWidget();
         },
         failureBuilder: (context, error, callback) {
-          return FailureViewWidget(onTap: () => callback.call());
+          return FailureViewWidget(onTap: callback);
         },
       ),
     );

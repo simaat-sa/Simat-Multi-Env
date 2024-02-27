@@ -23,7 +23,7 @@ class UnitFormOption extends StatelessWidget {
         fetcher: (c) => getIt<ContractRepository>().getPropsUnites(),
       ),
       selectedItems: controller.selectedPropUnits,
-      valueIdGetter: (unit) => unit?.unitNo,
+      valueIdGetter: (unit) => unit?.propId,
       valueMainTitleGetter: (unit) => unit?.unitFullName,
       selectedOptionBuilder: (list) {
         return BaseOptionsDisplayWidget<PropModel>(

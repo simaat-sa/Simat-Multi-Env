@@ -42,7 +42,7 @@ class _PaymentState extends State<Payment> {
         );
       },
       failureBuilder: (context, error, callback) {
-        return const FailureItemWidget();
+        return  FailureItemWidget(onTapRefresh: callback);
       },
       loadingBuilder: (context) {
         return const PaymentLoadingListWidget();

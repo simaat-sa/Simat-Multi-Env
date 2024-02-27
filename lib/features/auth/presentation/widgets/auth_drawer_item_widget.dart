@@ -24,7 +24,7 @@ class AuthDrawerItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: onTap,
       child: Padding(
         padding: padding ?? const EdgeInsetsDirectional.only(bottom: 30),

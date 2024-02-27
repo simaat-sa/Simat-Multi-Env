@@ -18,7 +18,7 @@ class UserHelperService {
     );
   }
 
-  Future<void> removeUserData(UserModel user) async {
+  Future<void> removeUserData() async {
 
     await getIt<SharedPrefService>().removeString(ApplicationConstants.userSavedModel);
 

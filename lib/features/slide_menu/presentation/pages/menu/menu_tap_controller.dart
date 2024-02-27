@@ -5,10 +5,9 @@ class MenuControllerTap {
   final ObsValue<bool> switchObs = ObsValue.withInit(false);
 
   Future<void> onLogOut(BuildContext context) async {
-    var userModel = context.read<UserCubit>().state.model;
     var logOutResponse = await getIt<SlideMenuRepository>().setLogOut(NoParams());
     if (logOutResponse.data == LogOutEnum.success.value) {
-      UserHelperService.instance.removeUserData(userModel!);
+      UserHelperService.instance.removeUserData();
       GlobalState.instance.set("token", null);
       AppSnackBar.showSimpleToast(
         color: context.colors.black,

@@ -73,7 +73,7 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
           );
         },
         failureBuilder: (context, error, callback) {
-          return const FailureItemWidget();
+          return  FailureItemWidget(onTapRefresh: callback);
         },
         loadingBuilder: (context) {
           return const UnitLoadingListWidget();
