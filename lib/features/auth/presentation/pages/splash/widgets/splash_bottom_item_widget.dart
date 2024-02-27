@@ -28,7 +28,7 @@ class SplashBottomItemWidget extends StatelessWidget {
           Gaps.vGap5,
           Text(
               textAlign: TextAlign.center,
-              'اصدار 35.1.2',
+              Translate.s.version_label,
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),
