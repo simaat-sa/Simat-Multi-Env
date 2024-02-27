@@ -1810,10 +1810,10 @@ class S {
     );
   }
 
-  /// `SAR`
+  /// ` SAR`
   String get sar {
     return Intl.message(
-      'SAR',
+      ' SAR',
       name: 'sar',
       desc: '',
       args: [],

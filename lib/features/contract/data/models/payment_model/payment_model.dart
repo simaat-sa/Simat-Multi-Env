@@ -1,4 +1,5 @@
 import 'package:flutter_tdd/core/enums/tenant_visibility.dart';
+import 'package:flutter_tdd/core/extensions/string_helper_extension.dart';
 import 'package:flutter_tdd/core/models/localized_name_model/localized_name_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -94,5 +95,10 @@ class PaymentModel with _$PaymentModel {
 
 
   String get tmtLocalized => LocalizedNameModel.fromStrings(ar: tmtAr, en: tmtEn).getLocalizedString;
+
+  String get dateUpdatedFormat{
+    return dtUpdated.formatTimeStampDate();
+  }
+
 
 }

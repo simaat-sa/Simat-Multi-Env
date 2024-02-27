@@ -45,4 +45,5 @@ class Res {
   static const String moreBarLogo = "assets/images/more_bar_logo.svg";
   static const String howToLoginQrCode = "assets/images/how-to-login-with-qr-code.png";
   static const String qrCodeView = "assets/images/qr-code_view.png";
+  static const String avatarLogo = "assets/images/avatar_logo.png";
 }

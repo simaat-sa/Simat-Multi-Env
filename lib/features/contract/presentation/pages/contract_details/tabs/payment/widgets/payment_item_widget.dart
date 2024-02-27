@@ -34,7 +34,7 @@ class PaymentItemWidget extends StatelessWidget {
                   style: AppTextStyle.s14_w500(color: context.colors.secondaryText),
                 ),
                 Text(
-                  '${Translate.of(context).due_date}${model.dtUpdated}',
+                  '${Translate.of(context).due_date}${model.dateUpdatedFormat}',
                   style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                 ),
               ],

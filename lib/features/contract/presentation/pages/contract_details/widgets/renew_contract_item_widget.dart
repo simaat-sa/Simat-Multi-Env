@@ -22,25 +22,25 @@ class RenewContractItemWidget extends StatelessWidget {
             color: context.colors.primary,
           ),
           Gaps.hGap12,
-          InkWell(
-            onTap: () => controller.renewContract(context),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  Translate.of(context).contract_renewal,
-                  style: AppTextStyle.s14_w400(color: context.colors.primaryText),
-                ),
-                Gaps.vGap5,
-                Text(
-                  Translate.of(context).request_to_renew_contract,
-                  style: AppTextStyle.s13_w400(color: context.colors.darkTextColor)
-                      .copyWith(overflow: TextOverflow.ellipsis),
-                ),
-              ],
+          Expanded(
+            child: InkWell(
+              onTap: () => controller.renewContract(context),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    Translate.of(context).contract_renewal,
+                    style: AppTextStyle.s14_w400(color: context.colors.primaryText),
+                  ),
+                  Gaps.vGap5,
+                  Text(
+                    Translate.of(context).request_to_renew_contract,
+                    style: AppTextStyle.s13_w400(color: context.colors.darkTextColor),
+                  ),
+                ],
+              ),
             ),
           ),
-          const Spacer(),
           Text(
             '${Translate.of(context).expired} ${controller.model.date}',
             style: AppTextStyle.s13_w400(color: context.colors.errorColor),

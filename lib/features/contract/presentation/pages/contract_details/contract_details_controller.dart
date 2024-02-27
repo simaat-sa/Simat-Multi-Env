@@ -17,14 +17,14 @@ class ContractDetailsController {
       var result = await getIt.get<ContractRepository>().renewContract(model.propId);
       result.when(
         isSuccess: (data) {
-          AutoRouter.of(context).popAndPush(RenewContractStatusRoute(success: true));
+          AutoRouter.of(context).push(RenewContractStatusRoute(success: true));
         },
         isError: (error) {
-          AutoRouter.of(context).popAndPush(RenewContractStatusRoute(success: false));
+          AutoRouter.of(context).push(RenewContractStatusRoute(success: false));
         },
       );
     } catch (e) {
-      AutoRouter.of(context).popAndPush(RenewContractStatusRoute(success: false));
+      AutoRouter.of(context).push(RenewContractStatusRoute(success: false));
     }
   }
 

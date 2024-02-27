@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,6 +23,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     var userData = context.watch<UserCubit>().state.model;
+    print("<<<<<<<<<<<<<<${userData?.userAvatar}");
     var notifyCount = context.watch<NotifyCubit>().state.count;
     return AppBar(
       centerTitle: false,
@@ -48,18 +51,18 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     Res.noticesLogo,
                   ),
                 ),
-                 if(notifyCount.isNotEmpty)
-                PositionedDirectional(
-                  top: 2,
-                  end: 3,
-                  child: Container(
-                    padding: const EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                      color: context.colors.red,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Text(
-                      notifyCount,
+                 if (notifyCount != "0")
+                  PositionedDirectional(
+                    top: 2,
+                    end: 3,
+                    child: Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: context.colors.red,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Text(
+                        notifyCount,
                       style: AppTextStyle.s9_w400(color: context.colors.white),
                     ),
                   ),
@@ -72,10 +75,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: Padding(
         padding: const EdgeInsetsDirectional.only(start: 20, top: 3, bottom: 3),
         child: CachedImage(
-          url: userData?.userAvatar??"",
+          url: userData?.userImage ?? "",
           height: 50,
           width: 50,
           borderRadius: BorderRadius.circular(30),
+          placeHolder: Image.asset(Res.avatarLogo),
+          borderWidth: 0,
         ),
       ),
     );

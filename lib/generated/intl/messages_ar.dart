@@ -284,7 +284,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "reset": MessageLookupByLibrary.simpleMessage("اعادة تعيين"),
         "residential": MessageLookupByLibrary.simpleMessage("سكني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
-        "sar": MessageLookupByLibrary.simpleMessage("ر.س"),
+        "sar": MessageLookupByLibrary.simpleMessage(" ر.س"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "size_more_than_mg_error": m3,
