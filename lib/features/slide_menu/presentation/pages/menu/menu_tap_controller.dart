@@ -16,13 +16,6 @@ class MenuControllerTap {
       );
       AutoRouter.of(context).pushAndPopUntil(const SplashRoute(), predicate: (route) => false);
     }
-    else{
-      AppSnackBar.showSimpleToast(
-        color: context.colors.red,
-        msg: Translate.of(context).log_out_failed,
-        type: ToastType.error,
-      );
-    }
   }
 
   void onChanged(bool value) {

@@ -21,7 +21,7 @@ class _AuthScaffoldWidgetState extends State<AuthScaffoldWidget> {
     return Scaffold(
       backgroundColor: context.colors.background,
       key: widget.scaffoldKey,
-      endDrawer: const AuthDrawerWidget(),
+      drawer:const AuthDrawerWidget(),
       appBar: widget.appBar,
       body: widget.body,
     );

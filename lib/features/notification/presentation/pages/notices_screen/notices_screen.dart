@@ -19,19 +19,18 @@ class _NoticesScreenState extends State<NoticesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    bool isNotEmpty = true;
     return Scaffold(
       backgroundColor: context.colors.background,
-      appBar: const DefaultAppBar(
+      appBar:  DefaultAppBar(
         centerTitle: false,
-        title: 'الإشعارات',
+        title: Translate.s.notify,
         showBack: true,
       ),
       body: RequesterConsumer(
         requester: controller.requester,
         successBuilder: (context, data) {
           return Visibility(
-            visible: isNotEmpty,
+            visible: data.isNotEmpty,
             replacement: const NoticesEmptyItemWidget(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,

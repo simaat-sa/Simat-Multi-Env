@@ -22,11 +22,6 @@ class HomeController {
         TabController(length: listAccessUser.take(4).length, vsync: ticker, initialIndex: index);
     tabController.animateTo(index);
     navigationBarObs.setValue(index);
-    requestNotifyCount();
-  }
-
-  void requestNotifyCount(){
-    requesterNotify.request();
   }
 
 

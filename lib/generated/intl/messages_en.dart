@@ -294,7 +294,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "residential": MessageLookupByLibrary.simpleMessage("Residential"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
-        "sar": MessageLookupByLibrary.simpleMessage("SAR"),
+        "sar": MessageLookupByLibrary.simpleMessage(" SAR"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "server_visit_any_website": MessageLookupByLibrary.simpleMessage(

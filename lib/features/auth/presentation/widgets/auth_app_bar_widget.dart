@@ -38,26 +38,26 @@ class AuthAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
             : null,
         backgroundColor: Colors.transparent,
         leading: leading ??
-            Offstage(
-              offstage: !showBack,
-              child: InkWell(
-                onTap: onBack ?? AutoRouter.of(context).pop,
+            InkWell(
+                onTap: () => scaffoldkey?.currentState!.openDrawer(),
                 child: Icon(
-                  Icons.arrow_back_ios_new,
-                  size: 22,
+                  Icons.more_vert_outlined,
                   color: context.colors.black,
-                ),
-              ),
-            ),
+                  size: 25,
+                )),
+            // Offstage(
+            //   offstage: !showBack,
+            //   child: InkWell(
+            //     onTap: onBack ?? AutoRouter.of(context).pop,
+            //     child: Icon(
+            //       Icons.arrow_back_ios_new,
+            //       size: 22,
+            //       color: context.colors.black,
+            //     ),
+            //   ),
+            // ),
         actions: [
           Gaps.empty,
-          InkWell(
-              onTap: () => scaffoldkey?.currentState!.openEndDrawer(),
-              child: Icon(
-                Icons.more_vert_outlined,
-                color: context.colors.black,
-                size: 25,
-              ))
         ],
       ),
     );

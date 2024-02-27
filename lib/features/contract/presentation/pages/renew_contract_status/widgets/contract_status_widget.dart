@@ -32,7 +32,7 @@ class ContractStatusWidget extends StatelessWidget {
           ),
         ),
         InkWell(
-          onTap: () => AutoRouter.of(context).pop(),
+          onTap: () => AutoRouter.of(context).popUntilRouteWithName(Home.name),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
             child: Text(
