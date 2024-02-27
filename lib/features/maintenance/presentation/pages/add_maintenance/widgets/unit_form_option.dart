@@ -7,8 +7,8 @@ class UnitFormOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseFormOption<PropModel>(
-      hintText: Translate.s.real_estate_unit,
-      bottomSheetTitle: Translate.s.real_estate_unit,
+      hintText: Translate.of(context).real_estate_unit,
+      bottomSheetTitle: Translate.of(context).real_estate_unit,
       showSearch: true,
       showDecoration: true,
       isMultiple: false,

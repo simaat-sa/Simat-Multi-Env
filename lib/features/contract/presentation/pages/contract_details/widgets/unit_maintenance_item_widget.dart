@@ -27,12 +27,12 @@ class UnitMaintenanceItemWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  Translate.s.unit_maintenance,
+                  Translate.of(context).unit_maintenance,
                   style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                 ),
                 Gaps.vGap5,
                 Text(
-                  Translate.s.requesting_maintenance,
+                  Translate.of(context).requesting_maintenance,
                   style: AppTextStyle.s13_w400(color: context.colors.darkTextColor),
                 ),
               ],

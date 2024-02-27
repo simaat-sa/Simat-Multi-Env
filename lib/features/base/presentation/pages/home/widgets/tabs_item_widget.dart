@@ -30,7 +30,7 @@ class TabsItemWidget extends StatelessWidget {
           ),
           Gaps.vGap4,
           Text(
-            model.pageid == "0" ? Translate.s.menu : model.pageName,
+            model.pageid == "0" ? Translate.of(context).menu : model.localizedName,
             style: AppTextStyle.s14_w500(
               color: isActive ? context.colors.primary : context.colors.darkTextColor,
             ),

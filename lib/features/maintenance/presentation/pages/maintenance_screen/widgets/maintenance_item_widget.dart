@@ -40,11 +40,14 @@ class MaintenanceItemWidget extends StatelessWidget {
                 const Spacer(),
                 Text(
                   model.price,
-                  style: AppTextStyle.s16_w500(color: context.colors.green3),
+                  style: AppTextStyle.s18_w500(color: context.colors.green3),
                 ),
-                Text(
-                  "ر.س",
-                  style: AppTextStyle.s16_w400(color: context.colors.green3),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  child: Text(
+                     Translate.of(context).sar,
+                    style: AppTextStyle.s16_w400(color: context.colors.green3),
+                  ),
                 ),
               ],
             ),
@@ -64,7 +67,7 @@ class MaintenanceItemWidget extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 4),
                     child: Text(
                       ".",
-                      style: AppTextStyle.s14_w500(color: context.colors.primary),
+                      style: AppTextStyle.s14_w500(color: context.colors.primary)
                     ),
                   ),
                 Text(
@@ -84,7 +87,7 @@ class MaintenanceItemWidget extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  Translate.s.description,
+                  Translate.of(context).description,
                   style: AppTextStyle.s14_w400(color: context.colors.textColor),
                 ),
                 const Spacer(),

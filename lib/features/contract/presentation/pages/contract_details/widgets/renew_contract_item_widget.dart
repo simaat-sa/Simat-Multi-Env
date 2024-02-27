@@ -15,43 +15,35 @@ class RenewContractItemWidget extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Expanded(
-            child: SvgPicture.asset(
-              Res.renewContractLogo,
-              height: 32,
-              width: 32,
-              color: context.colors.primary,
-            ),
+          SvgPicture.asset(
+            Res.renewContractLogo,
+            height: 32,
+            width: 32,
+            color: context.colors.primary,
           ),
           Gaps.hGap12,
-          Expanded(
-            flex: 4,
-            child: InkWell(
-              onTap: () => controller.renewContract(context),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    Translate.s.contract_renewal,
-                    style: AppTextStyle.s14_w400(color: context.colors.primaryText),
-                  ),
-                  Gaps.vGap5,
-                  Text(
-                    Translate.s.request_to_renew_contract,
-                    style: AppTextStyle.s13_w400(color: context.colors.darkTextColor)
-                        .copyWith(overflow: TextOverflow.ellipsis),
-                  ),
-                ],
-              ),
+          InkWell(
+            onTap: () => controller.renewContract(context),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  Translate.of(context).contract_renewal,
+                  style: AppTextStyle.s14_w400(color: context.colors.primaryText),
+                ),
+                Gaps.vGap5,
+                Text(
+                  Translate.of(context).request_to_renew_contract,
+                  style: AppTextStyle.s13_w400(color: context.colors.darkTextColor)
+                      .copyWith(overflow: TextOverflow.ellipsis),
+                ),
+              ],
             ),
           ),
           const Spacer(),
-          Expanded(
-            flex: 3,
-            child: Text(
-              'ينتهي ${controller.model.date}',
-              style: AppTextStyle.s13_w400(color: context.colors.errorColor),
-            ),
+          Text(
+            '${Translate.of(context).expired} ${controller.model.date}',
+            style: AppTextStyle.s13_w400(color: context.colors.errorColor),
           ),
         ],
       ),

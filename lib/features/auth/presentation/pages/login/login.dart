@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
                       LoginButtonWidget(controller: controller),
                       Gaps.vGap16,
                       LoginWithQrButtonWidget(controller: controller),
-                      Gaps.vGap10,
+                      Gaps.vGap16,
                        GetCodeTextWidget(controller: controller,),
                       // ForgetPasswordViewWidget(controller: controller,),
                       Gaps.vGap32,

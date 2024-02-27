@@ -7,6 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 @JsonEnum(valueField: 'value')
 enum ContractStatus {
+  newCode("37710"),
   canceled('37790'),
   paused('37780'),
   posted('37770'),
@@ -19,7 +20,6 @@ enum ContractStatus {
   supervisorApproved('37721'),
   applicationApproval('37720'),
   supervisorIdentifications('37715'),
-  newCode("37710"),
   non('0');
 
   final String value;

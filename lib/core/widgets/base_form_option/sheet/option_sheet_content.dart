@@ -151,7 +151,7 @@ class _OptionSheetContentState<T> extends State<OptionSheetContent<T>> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             AppTextButton.minPrimary(
-              text: Translate.s.done,
+              text: Translate.of(context).done,
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -170,7 +170,7 @@ class _OptionSheetContentState<T> extends State<OptionSheetContent<T>> {
                 onPressed: () {
                   widget.onAddNewOptionPressed?.call();
                 },
-                text: "+ ${widget.addNewOptionButtonText ?? Translate.s.add_new_item}",
+                text: "+ ${widget.addNewOptionButtonText ?? Translate.of(context).add_new_item}",
               ),
             ),
 

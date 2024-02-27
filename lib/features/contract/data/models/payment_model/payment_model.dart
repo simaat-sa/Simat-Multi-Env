@@ -1,4 +1,5 @@
 import 'package:flutter_tdd/core/enums/tenant_visibility.dart';
+import 'package:flutter_tdd/core/models/localized_name_model/localized_name_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'payment_model.freezed.dart';
@@ -90,4 +91,8 @@ class PaymentModel with _$PaymentModel {
   factory PaymentModel.fromJson(Map<String, dynamic> json) => _$PaymentModelFromJson(json);
 
   String get duePrice => amtDue;
+
+
+  String get tmtLocalized => LocalizedNameModel.fromStrings(ar: tmtAr, en: tmtEn).getLocalizedString;
+
 }

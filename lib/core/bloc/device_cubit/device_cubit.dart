@@ -2,6 +2,7 @@ import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/models/device_model/device_model.dart';
+import 'package:injectable/injectable.dart';
 
 part 'device_state.dart';
 

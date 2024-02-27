@@ -8,7 +8,7 @@ class SummaryViewHeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(Translate.s.contract,
+        Text(Translate.of(context).contract,
             style: AppTextStyle.s16_w400(color: context.colors.darkTextColor)),
         Gaps.hGap12,
         Container(
@@ -26,14 +26,14 @@ class SummaryViewHeaderWidget extends StatelessWidget {
         ),
         const Spacer(),
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           decoration: BoxDecoration(
             color: model.status.getColor(),
             borderRadius: BorderRadius.circular(5),
           ),
           child: Text(
             model.status.getLocalizedName(),
-            style: AppTextStyle.s12_w500(color: context.colors.white),
+            style: AppTextStyle.s13_w500(color: context.colors.white),
           ),
         ),
       ],

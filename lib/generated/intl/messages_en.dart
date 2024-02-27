@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m3(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";
 
+  static String m4(version) => "Version ${version}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "About_New_version":
@@ -106,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "applicant": MessageLookupByLibrary.simpleMessage("Applicant"),
         "application_approval":
             MessageLookupByLibrary.simpleMessage("Application Approval"),
+        "apply": MessageLookupByLibrary.simpleMessage("Apply"),
         "attribution": MessageLookupByLibrary.simpleMessage("Attribution"),
         "back_to_contracts":
             MessageLookupByLibrary.simpleMessage("Back to contracts"),
@@ -140,7 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "copied_successfully":
             MessageLookupByLibrary.simpleMessage("Copied successfully"),
         "cost_at_my_own_expense": MessageLookupByLibrary.simpleMessage(
-            "Maintenance cost at my own expense\'"),
+            "Maintenance cost at my own expense"),
         "customer_mobile":
             MessageLookupByLibrary.simpleMessage("Customer\'s mobile phone"),
         "date_of_request":
@@ -155,6 +158,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "district_region":
             MessageLookupByLibrary.simpleMessage("District . Region"),
         "done": MessageLookupByLibrary.simpleMessage("Done"),
+        "due": MessageLookupByLibrary.simpleMessage("Due"),
         "due_date": MessageLookupByLibrary.simpleMessage("due date"),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("BAD REQUEST"),
@@ -183,7 +187,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No internet connection"),
         "estimated_cost":
             MessageLookupByLibrary.simpleMessage("Estimated cost"),
-        "expired": MessageLookupByLibrary.simpleMessage("Expired"),
+        "expired": MessageLookupByLibrary.simpleMessage("Expired at"),
         "failureActions":
             MessageLookupByLibrary.simpleMessage("Failure Actions"),
         "fillField":
@@ -247,13 +251,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "Should be more than 8 and less than 30"),
         "net_contract": MessageLookupByLibrary.simpleMessage("Net contract"),
-        "new_code": MessageLookupByLibrary.simpleMessage("New code"),
+        "new_code": MessageLookupByLibrary.simpleMessage("New"),
         "new_maintenance_request":
             MessageLookupByLibrary.simpleMessage("New maintenance request"),
         "new_notices":
             MessageLookupByLibrary.simpleMessage("New notifications"),
         "no_internet_connection":
             MessageLookupByLibrary.simpleMessage("No internet connection"),
+        "no_items_found":
+            MessageLookupByLibrary.simpleMessage("!No Item Found"),
         "no_notices": MessageLookupByLibrary.simpleMessage("No notifications"),
         "no_notices_now": MessageLookupByLibrary.simpleMessage(
             "You don\'t have any notifications yet, please check back later"),
@@ -288,6 +294,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "residential": MessageLookupByLibrary.simpleMessage("Residential"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
+        "sar": MessageLookupByLibrary.simpleMessage("SAR"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "server_visit_any_website": MessageLookupByLibrary.simpleMessage(
@@ -318,8 +325,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser"),
-        "version_label": MessageLookupByLibrary.simpleMessage("Version 35.1.2"),
-        "view_payments": MessageLookupByLibrary.simpleMessage("View payments"),
-        "worthy": MessageLookupByLibrary.simpleMessage("Worthy")
+        "version_label": m4,
+        "view_payments": MessageLookupByLibrary.simpleMessage("View payments")
       };
 }

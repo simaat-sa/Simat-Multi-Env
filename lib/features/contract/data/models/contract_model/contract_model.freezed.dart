@@ -22,10 +22,12 @@ ContractModel _$ContractModelFromJson(Map<String, dynamic> json) {
 mixin _$ContractModel {
   @JsonKey(name: 'prop_id', defaultValue: "")
   String get propId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'tts_code')
-  String? get code => throw _privateConstructorUsedError;
-  @JsonKey(name: '', defaultValue: "")
+  @JsonKey(name: 'tts_code', defaultValue: "")
+  String get code => throw _privateConstructorUsedError;
+  @JsonKey(name: 'are_desc_fo', defaultValue: "")
   String get unitName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'parent_desc_ar', defaultValue: "")
+  String get blocName => throw _privateConstructorUsedError;
   @JsonKey(name: 'cal_type')
   DateTypes get dateType => throw _privateConstructorUsedError;
   @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
@@ -33,7 +35,15 @@ mixin _$ContractModel {
   @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
   String get dataTimeStamp => throw _privateConstructorUsedError;
   @JsonKey(name: 'amt_due', defaultValue: "0")
-  String get price => throw _privateConstructorUsedError;
+  String get totalDuePrice => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amt_collect', defaultValue: "0")
+  String get contractCollectPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tts_contract_net_price_alc', defaultValue: "0")
+  String get contractNetPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tts_tot_additional_item_alc', defaultValue: "0")
+  String get contractAdditionalPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tts_insurance', defaultValue: "0")
+  String get contractInsurancePrice => throw _privateConstructorUsedError;
   @JsonKey(name: 'tts_validity')
   TenantVisibility get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'contract_type')
@@ -63,12 +73,21 @@ abstract class $ContractModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'prop_id', defaultValue: "") String propId,
-      @JsonKey(name: 'tts_code') String? code,
-      @JsonKey(name: '', defaultValue: "") String unitName,
+      @JsonKey(name: 'tts_code', defaultValue: "") String code,
+      @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
+      @JsonKey(name: 'parent_desc_ar', defaultValue: "") String blocName,
       @JsonKey(name: 'cal_type') DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "") String dataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") String dataTimeStamp,
-      @JsonKey(name: 'amt_due', defaultValue: "0") String price,
+      @JsonKey(name: 'amt_due', defaultValue: "0") String totalDuePrice,
+      @JsonKey(name: 'amt_collect', defaultValue: "0")
+      String contractCollectPrice,
+      @JsonKey(name: 'tts_contract_net_price_alc', defaultValue: "0")
+      String contractNetPrice,
+      @JsonKey(name: 'tts_tot_additional_item_alc', defaultValue: "0")
+      String contractAdditionalPrice,
+      @JsonKey(name: 'tts_insurance', defaultValue: "0")
+      String contractInsurancePrice,
       @JsonKey(name: 'tts_validity') TenantVisibility status,
       @JsonKey(name: 'contract_type') ContractTypes type,
       @JsonKey(name: 'prop_lat', defaultValue: "") String propLat,
@@ -92,12 +111,17 @@ class _$ContractModelCopyWithImpl<$Res, $Val extends ContractModel>
   @override
   $Res call({
     Object? propId = null,
-    Object? code = freezed,
+    Object? code = null,
     Object? unitName = null,
+    Object? blocName = null,
     Object? dateType = null,
     Object? dataTimeHj = null,
     Object? dataTimeStamp = null,
-    Object? price = null,
+    Object? totalDuePrice = null,
+    Object? contractCollectPrice = null,
+    Object? contractNetPrice = null,
+    Object? contractAdditionalPrice = null,
+    Object? contractInsurancePrice = null,
     Object? status = null,
     Object? type = null,
     Object? propLat = null,
@@ -111,13 +135,17 @@ class _$ContractModelCopyWithImpl<$Res, $Val extends ContractModel>
           ? _value.propId
           : propId // ignore: cast_nullable_to_non_nullable
               as String,
-      code: freezed == code
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       unitName: null == unitName
           ? _value.unitName
           : unitName // ignore: cast_nullable_to_non_nullable
+              as String,
+      blocName: null == blocName
+          ? _value.blocName
+          : blocName // ignore: cast_nullable_to_non_nullable
               as String,
       dateType: null == dateType
           ? _value.dateType
@@ -131,9 +159,25 @@ class _$ContractModelCopyWithImpl<$Res, $Val extends ContractModel>
           ? _value.dataTimeStamp
           : dataTimeStamp // ignore: cast_nullable_to_non_nullable
               as String,
-      price: null == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
+      totalDuePrice: null == totalDuePrice
+          ? _value.totalDuePrice
+          : totalDuePrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      contractCollectPrice: null == contractCollectPrice
+          ? _value.contractCollectPrice
+          : contractCollectPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      contractNetPrice: null == contractNetPrice
+          ? _value.contractNetPrice
+          : contractNetPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      contractAdditionalPrice: null == contractAdditionalPrice
+          ? _value.contractAdditionalPrice
+          : contractAdditionalPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      contractInsurancePrice: null == contractInsurancePrice
+          ? _value.contractInsurancePrice
+          : contractInsurancePrice // ignore: cast_nullable_to_non_nullable
               as String,
       status: null == status
           ? _value.status
@@ -177,12 +221,21 @@ abstract class _$$ContractModelImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'prop_id', defaultValue: "") String propId,
-      @JsonKey(name: 'tts_code') String? code,
-      @JsonKey(name: '', defaultValue: "") String unitName,
+      @JsonKey(name: 'tts_code', defaultValue: "") String code,
+      @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
+      @JsonKey(name: 'parent_desc_ar', defaultValue: "") String blocName,
       @JsonKey(name: 'cal_type') DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "") String dataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "") String dataTimeStamp,
-      @JsonKey(name: 'amt_due', defaultValue: "0") String price,
+      @JsonKey(name: 'amt_due', defaultValue: "0") String totalDuePrice,
+      @JsonKey(name: 'amt_collect', defaultValue: "0")
+      String contractCollectPrice,
+      @JsonKey(name: 'tts_contract_net_price_alc', defaultValue: "0")
+      String contractNetPrice,
+      @JsonKey(name: 'tts_tot_additional_item_alc', defaultValue: "0")
+      String contractAdditionalPrice,
+      @JsonKey(name: 'tts_insurance', defaultValue: "0")
+      String contractInsurancePrice,
       @JsonKey(name: 'tts_validity') TenantVisibility status,
       @JsonKey(name: 'contract_type') ContractTypes type,
       @JsonKey(name: 'prop_lat', defaultValue: "") String propLat,
@@ -204,12 +257,17 @@ class __$$ContractModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? propId = null,
-    Object? code = freezed,
+    Object? code = null,
     Object? unitName = null,
+    Object? blocName = null,
     Object? dateType = null,
     Object? dataTimeHj = null,
     Object? dataTimeStamp = null,
-    Object? price = null,
+    Object? totalDuePrice = null,
+    Object? contractCollectPrice = null,
+    Object? contractNetPrice = null,
+    Object? contractAdditionalPrice = null,
+    Object? contractInsurancePrice = null,
     Object? status = null,
     Object? type = null,
     Object? propLat = null,
@@ -223,13 +281,17 @@ class __$$ContractModelImplCopyWithImpl<$Res>
           ? _value.propId
           : propId // ignore: cast_nullable_to_non_nullable
               as String,
-      code: freezed == code
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       unitName: null == unitName
           ? _value.unitName
           : unitName // ignore: cast_nullable_to_non_nullable
+              as String,
+      blocName: null == blocName
+          ? _value.blocName
+          : blocName // ignore: cast_nullable_to_non_nullable
               as String,
       dateType: null == dateType
           ? _value.dateType
@@ -243,9 +305,25 @@ class __$$ContractModelImplCopyWithImpl<$Res>
           ? _value.dataTimeStamp
           : dataTimeStamp // ignore: cast_nullable_to_non_nullable
               as String,
-      price: null == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
+      totalDuePrice: null == totalDuePrice
+          ? _value.totalDuePrice
+          : totalDuePrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      contractCollectPrice: null == contractCollectPrice
+          ? _value.contractCollectPrice
+          : contractCollectPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      contractNetPrice: null == contractNetPrice
+          ? _value.contractNetPrice
+          : contractNetPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      contractAdditionalPrice: null == contractAdditionalPrice
+          ? _value.contractAdditionalPrice
+          : contractAdditionalPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      contractInsurancePrice: null == contractInsurancePrice
+          ? _value.contractInsurancePrice
+          : contractInsurancePrice // ignore: cast_nullable_to_non_nullable
               as String,
       status: null == status
           ? _value.status
@@ -285,14 +363,23 @@ class __$$ContractModelImplCopyWithImpl<$Res>
 class _$ContractModelImpl extends _ContractModel {
   _$ContractModelImpl(
       {@JsonKey(name: 'prop_id', defaultValue: "") required this.propId,
-      @JsonKey(name: 'tts_code') this.code,
-      @JsonKey(name: '', defaultValue: "") required this.unitName,
+      @JsonKey(name: 'tts_code', defaultValue: "") required this.code,
+      @JsonKey(name: 'are_desc_fo', defaultValue: "") required this.unitName,
+      @JsonKey(name: 'parent_desc_ar', defaultValue: "") required this.blocName,
       @JsonKey(name: 'cal_type') required this.dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
       required this.dataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
       required this.dataTimeStamp,
-      @JsonKey(name: 'amt_due', defaultValue: "0") required this.price,
+      @JsonKey(name: 'amt_due', defaultValue: "0") required this.totalDuePrice,
+      @JsonKey(name: 'amt_collect', defaultValue: "0")
+      required this.contractCollectPrice,
+      @JsonKey(name: 'tts_contract_net_price_alc', defaultValue: "0")
+      required this.contractNetPrice,
+      @JsonKey(name: 'tts_tot_additional_item_alc', defaultValue: "0")
+      required this.contractAdditionalPrice,
+      @JsonKey(name: 'tts_insurance', defaultValue: "0")
+      required this.contractInsurancePrice,
       @JsonKey(name: 'tts_validity') required this.status,
       @JsonKey(name: 'contract_type') required this.type,
       @JsonKey(name: 'prop_lat', defaultValue: "") required this.propLat,
@@ -309,11 +396,14 @@ class _$ContractModelImpl extends _ContractModel {
   @JsonKey(name: 'prop_id', defaultValue: "")
   final String propId;
   @override
-  @JsonKey(name: 'tts_code')
-  final String? code;
+  @JsonKey(name: 'tts_code', defaultValue: "")
+  final String code;
   @override
-  @JsonKey(name: '', defaultValue: "")
+  @JsonKey(name: 'are_desc_fo', defaultValue: "")
   final String unitName;
+  @override
+  @JsonKey(name: 'parent_desc_ar', defaultValue: "")
+  final String blocName;
   @override
   @JsonKey(name: 'cal_type')
   final DateTypes dateType;
@@ -325,7 +415,19 @@ class _$ContractModelImpl extends _ContractModel {
   final String dataTimeStamp;
   @override
   @JsonKey(name: 'amt_due', defaultValue: "0")
-  final String price;
+  final String totalDuePrice;
+  @override
+  @JsonKey(name: 'amt_collect', defaultValue: "0")
+  final String contractCollectPrice;
+  @override
+  @JsonKey(name: 'tts_contract_net_price_alc', defaultValue: "0")
+  final String contractNetPrice;
+  @override
+  @JsonKey(name: 'tts_tot_additional_item_alc', defaultValue: "0")
+  final String contractAdditionalPrice;
+  @override
+  @JsonKey(name: 'tts_insurance', defaultValue: "0")
+  final String contractInsurancePrice;
   @override
   @JsonKey(name: 'tts_validity')
   final TenantVisibility status;
@@ -350,7 +452,7 @@ class _$ContractModelImpl extends _ContractModel {
 
   @override
   String toString() {
-    return 'ContractModel(propId: $propId, code: $code, unitName: $unitName, dateType: $dateType, dataTimeHj: $dataTimeHj, dataTimeStamp: $dataTimeStamp, price: $price, status: $status, type: $type, propLat: $propLat, propLng: $propLng, propImg: $propImg, propCity: $propCity, propRegion: $propRegion)';
+    return 'ContractModel(propId: $propId, code: $code, unitName: $unitName, blocName: $blocName, dateType: $dateType, dataTimeHj: $dataTimeHj, dataTimeStamp: $dataTimeStamp, totalDuePrice: $totalDuePrice, contractCollectPrice: $contractCollectPrice, contractNetPrice: $contractNetPrice, contractAdditionalPrice: $contractAdditionalPrice, contractInsurancePrice: $contractInsurancePrice, status: $status, type: $type, propLat: $propLat, propLng: $propLng, propImg: $propImg, propCity: $propCity, propRegion: $propRegion)';
   }
 
   @override
@@ -362,13 +464,25 @@ class _$ContractModelImpl extends _ContractModel {
             (identical(other.code, code) || other.code == code) &&
             (identical(other.unitName, unitName) ||
                 other.unitName == unitName) &&
+            (identical(other.blocName, blocName) ||
+                other.blocName == blocName) &&
             (identical(other.dateType, dateType) ||
                 other.dateType == dateType) &&
             (identical(other.dataTimeHj, dataTimeHj) ||
                 other.dataTimeHj == dataTimeHj) &&
             (identical(other.dataTimeStamp, dataTimeStamp) ||
                 other.dataTimeStamp == dataTimeStamp) &&
-            (identical(other.price, price) || other.price == price) &&
+            (identical(other.totalDuePrice, totalDuePrice) ||
+                other.totalDuePrice == totalDuePrice) &&
+            (identical(other.contractCollectPrice, contractCollectPrice) ||
+                other.contractCollectPrice == contractCollectPrice) &&
+            (identical(other.contractNetPrice, contractNetPrice) ||
+                other.contractNetPrice == contractNetPrice) &&
+            (identical(
+                    other.contractAdditionalPrice, contractAdditionalPrice) ||
+                other.contractAdditionalPrice == contractAdditionalPrice) &&
+            (identical(other.contractInsurancePrice, contractInsurancePrice) ||
+                other.contractInsurancePrice == contractInsurancePrice) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.propLat, propLat) || other.propLat == propLat) &&
@@ -382,22 +496,28 @@ class _$ContractModelImpl extends _ContractModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      propId,
-      code,
-      unitName,
-      dateType,
-      dataTimeHj,
-      dataTimeStamp,
-      price,
-      status,
-      type,
-      propLat,
-      propLng,
-      propImg,
-      propCity,
-      propRegion);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        propId,
+        code,
+        unitName,
+        blocName,
+        dateType,
+        dataTimeHj,
+        dataTimeStamp,
+        totalDuePrice,
+        contractCollectPrice,
+        contractNetPrice,
+        contractAdditionalPrice,
+        contractInsurancePrice,
+        status,
+        type,
+        propLat,
+        propLng,
+        propImg,
+        propCity,
+        propRegion
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -416,14 +536,26 @@ class _$ContractModelImpl extends _ContractModel {
 abstract class _ContractModel extends ContractModel {
   factory _ContractModel(
       {@JsonKey(name: 'prop_id', defaultValue: "") required final String propId,
-      @JsonKey(name: 'tts_code') final String? code,
-      @JsonKey(name: '', defaultValue: "") required final String unitName,
+      @JsonKey(name: 'tts_code', defaultValue: "") required final String code,
+      @JsonKey(name: 'are_desc_fo', defaultValue: "")
+      required final String unitName,
+      @JsonKey(name: 'parent_desc_ar', defaultValue: "")
+      required final String blocName,
       @JsonKey(name: 'cal_type') required final DateTypes dateType,
       @JsonKey(name: 'tts_end_date_hj', defaultValue: "")
       required final String dataTimeHj,
       @JsonKey(name: 'tts_end_date_dgr', defaultValue: "")
       required final String dataTimeStamp,
-      @JsonKey(name: 'amt_due', defaultValue: "0") required final String price,
+      @JsonKey(name: 'amt_due', defaultValue: "0")
+      required final String totalDuePrice,
+      @JsonKey(name: 'amt_collect', defaultValue: "0")
+      required final String contractCollectPrice,
+      @JsonKey(name: 'tts_contract_net_price_alc', defaultValue: "0")
+      required final String contractNetPrice,
+      @JsonKey(name: 'tts_tot_additional_item_alc', defaultValue: "0")
+      required final String contractAdditionalPrice,
+      @JsonKey(name: 'tts_insurance', defaultValue: "0")
+      required final String contractInsurancePrice,
       @JsonKey(name: 'tts_validity') required final TenantVisibility status,
       @JsonKey(name: 'contract_type') required final ContractTypes type,
       @JsonKey(name: 'prop_lat', defaultValue: "")
@@ -444,11 +576,14 @@ abstract class _ContractModel extends ContractModel {
   @JsonKey(name: 'prop_id', defaultValue: "")
   String get propId;
   @override
-  @JsonKey(name: 'tts_code')
-  String? get code;
+  @JsonKey(name: 'tts_code', defaultValue: "")
+  String get code;
   @override
-  @JsonKey(name: '', defaultValue: "")
+  @JsonKey(name: 'are_desc_fo', defaultValue: "")
   String get unitName;
+  @override
+  @JsonKey(name: 'parent_desc_ar', defaultValue: "")
+  String get blocName;
   @override
   @JsonKey(name: 'cal_type')
   DateTypes get dateType;
@@ -460,7 +595,19 @@ abstract class _ContractModel extends ContractModel {
   String get dataTimeStamp;
   @override
   @JsonKey(name: 'amt_due', defaultValue: "0")
-  String get price;
+  String get totalDuePrice;
+  @override
+  @JsonKey(name: 'amt_collect', defaultValue: "0")
+  String get contractCollectPrice;
+  @override
+  @JsonKey(name: 'tts_contract_net_price_alc', defaultValue: "0")
+  String get contractNetPrice;
+  @override
+  @JsonKey(name: 'tts_tot_additional_item_alc', defaultValue: "0")
+  String get contractAdditionalPrice;
+  @override
+  @JsonKey(name: 'tts_insurance', defaultValue: "0")
+  String get contractInsurancePrice;
   @override
   @JsonKey(name: 'tts_validity')
   TenantVisibility get status;

@@ -14,7 +14,7 @@ class LogOutWidget extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              Translate.s.label_logout,
+              Translate.of(context).label_logout,
               style: AppTextStyle.s16_w400(color: context.colors.errorColor),
             ),
           ],

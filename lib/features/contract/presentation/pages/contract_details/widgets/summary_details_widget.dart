@@ -2,6 +2,7 @@ part of 'tenant_details_widgets_imports.dart';
 
 class SummaryDetailsWidget extends StatelessWidget {
   final ContractModel model;
+
   const SummaryDetailsWidget({super.key, required this.model});
 
   @override
@@ -10,27 +11,41 @@ class SummaryDetailsWidget extends StatelessWidget {
       children: [
         DetailsItemWidget(
             image: Res.unitLocationLogo,
-            title: Translate.s.district_region,
+            title: Translate.of(context).district_region,
             value: "${model.propRegion} . ${model.propCity}"),
         DetailsItemWidget(
-            image: Res.calendarIcon,
-            title: Translate.s.contract_end_date,
-            value: model.date,
-            color: context.colors.bgLight),
+          image: Res.calendarIcon,
+          title: Translate.of(context).contract_end_date,
+          value: model.date,
+          color: context.colors.bgLight,
+        ),
         DetailsItemWidget(
-            image: Res.coinLogo, title: Translate.s.total_contract, value: model.price),
+          image: Res.coinLogo,
+          title: Translate.of(context).total_contract,
+          value: model.duePrice,
+        ),
         DetailsItemWidget(
-            image: Res.coinLogo,
-            title: Translate.s.net_contract,
-            value: model.price,
-            color: context.colors.bgLight),
-        DetailsItemWidget(image: Res.coinLogo, title: Translate.s.insurance, value: model.price),
+          image: Res.coinLogo,
+          title: Translate.of(context).net_contract,
+          value: model.netPrice,
+          color: context.colors.bgLight,
+        ),
         DetailsItemWidget(
-            image: Res.coinLogo,
-            title: Translate.s.additional_amounts,
-            value: model.price,
-            color: context.colors.bgLight),
-        DetailsItemWidget(image: Res.coinLogo, title: Translate.s.collector, value: model.price),
+          image: Res.coinLogo,
+          title: Translate.of(context).insurance,
+          value: model.insurancePrice,
+        ),
+        DetailsItemWidget(
+          image: Res.coinLogo,
+          title: Translate.of(context).additional_amounts,
+          value: model.additionalPrice,
+          color: context.colors.bgLight,
+        ),
+        DetailsItemWidget(
+          image: Res.coinLogo,
+          title: Translate.of(context).collector,
+          value: model.collectPrice,
+        ),
       ],
     );
   }

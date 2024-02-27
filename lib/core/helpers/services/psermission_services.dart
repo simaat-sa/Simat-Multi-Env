@@ -38,7 +38,7 @@ class PermissionServices {
       // The user opted to never again see the permission request dialog for this
       // app. The only way to change the permission's status now is to let the
       // user manually enable it in the system settings.
-      AppSnackBar.showSimpleToast(msg: Translate.s.access_denied);
+      AppSnackBar.showSimpleToast(msg: Translate.of(context).access_denied);
       Future.delayed(
         DurationConstants.longAnimationDuration,
         () {

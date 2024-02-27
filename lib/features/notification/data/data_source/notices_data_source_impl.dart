@@ -32,7 +32,7 @@ class NoticesDataSourceImpl extends NoticesDataSource {
       responseType: ResType.type,
       requestMethod: RequestMethod.get,
       refresh: params,
-      responseKey: (data) => data['data']['count'],
+      responseKey: (data) => data['data'][0]['count'],
     );
     return await GenericHttpImpl<String>()(model);
   }

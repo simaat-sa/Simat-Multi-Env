@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_tdd/features/auth/data/models/user_model/user_model.dart';
+import 'package:injectable/injectable.dart';
 
 part 'user_state.dart';
 

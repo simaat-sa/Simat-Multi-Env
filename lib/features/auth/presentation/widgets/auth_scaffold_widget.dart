@@ -15,17 +15,13 @@ class AuthScaffoldWidget extends StatefulWidget {
 }
 
 class _AuthScaffoldWidgetState extends State<AuthScaffoldWidget> {
-  final ObsValue<bool> showDropDawnCubit = ObsValue.withInit(false);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.colors.background,
       key: widget.scaffoldKey,
-      endDrawer: AuthDrawerWidget(
-        onChangeLanguage: () => showDropDawnCubit.setValue(!showDropDawnCubit.getValue()),
-        showDropDawnCubit: showDropDawnCubit,
-      ),
+      endDrawer: const AuthDrawerWidget(),
       appBar: widget.appBar,
       body: widget.body,
     );

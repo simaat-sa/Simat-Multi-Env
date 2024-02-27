@@ -17,58 +17,14 @@ class MenuSettingWidget extends StatelessWidget {
       color: context.colors.white,
       child: Column(
         children: [
-          ObsValueConsumer(
-              observable: controller.langObs,
-              builder: (context, state) {
-                return Column(
-                  children: [
-                    AuthDrawerItemWidget(
-                      padding: EdgeInsetsDirectional.only(bottom: state ? 20 : 30),
-                      icon: state ? Icons.keyboard_arrow_down : Icons.arrow_forward_ios_outlined,
-                      size: state ? 25 : 15,
-                      text: Translate.s.label_app_language,
-                      onTap: () => controller.langObs.setValue(!state),
-                    ),
-                    Visibility(
-                      visible: state,
-                      child: Column(
-                        children: [
-                          Container(
-                            alignment: AlignmentDirectional.centerStart,
-                            padding: const EdgeInsetsDirectional.only(start: 20, end: 20, bottom: 10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  Translate.s.English,
-                                  style: AppTextStyle.s14_w400(color: context.colors.primaryText),
-                                ),
-                                Gaps.vGap20,
-                                Text(
-                                  Translate.s.Arabic,
-                                  style: AppTextStyle.s14_w400(color: context.colors.primaryText),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Divider(
-                            color: context.colors.greyWhite,
-                            thickness: 1.5,
-                          ),
-                          Gaps.vGap15,
-                        ],
-                      ),
-                    ),
-                  ],
-                );
-              }),
+          const LanguagesWidget(),
           AuthDrawerItemWidget(
-            text: Translate.s.Share_the_app,
+            text: Translate.of(context).Share_the_app,
             onTap: () {},
           ),
           AuthDrawerItemWidget(
             padding: const EdgeInsets.only(bottom: 0),
-            text: Translate.s.Technical_support_ticket,
+            text: Translate.of(context).Technical_support_ticket,
             onTap: () => getIt<ShareServices>().launchURL(url: ApiNames.supportLink),
           ),
         ],

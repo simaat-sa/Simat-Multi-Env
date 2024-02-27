@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
+import 'package:flutter_tdd/core/extensions/price_format.dart';
 import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
@@ -34,7 +35,7 @@ class ContractDialog extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      Translate.s.maintenance_request,
+                      Translate.of(context).maintenance_request,
                       style: AppTextStyle.s28_w400(color: context.colors.darkTextColor),
                     ),
                     InkWell(
@@ -71,37 +72,44 @@ class ContractDialog extends StatelessWidget {
                   color: context.colors.backgroundLight,
                 ),
                 DetailsItemWidget(
-                    title: Translate.s.real_estate_unit,
+                    title: Translate.of(context).real_estate_unit,
                     value: model.unitName,
                     color: context.colors.bgLight,
                     image: Res.unitLogo),
+
                 DetailsItemWidget(
-                    title: Translate.s.main_property,
-                    value: model.createdDateTimeStamp,
-                    image: Res.unitLogo),
+                  title: Translate.of(context).main_property,
+                  value: model.blockName,
+                  image: Res.unitLogo,
+                ),
                 DetailsItemWidget(
-                    title: Translate.s.date_of_request,
+                    title: Translate.of(context).date_of_request,
                     value: model.createdDate,
                     color: context.colors.bgLight,
                     image: Res.calendarIcon),
                 DetailsItemWidget(
-                    title: Translate.s.applicant, value: model.createdBy, image: Res.userLogo),
+                    title: Translate.of(context).applicant,
+                    value: model.createdBy,
+                    image: Res.userLogo),
                 Divider(
                   height: 10,
                   color: context.colors.backgroundLight,
                 ),
+                _buildPriceItem(
+                  context,
+                  title: Translate.of(context).estimated_cost,
+                  value: model.approxCost.priceFormat,
+                ),
                 _buildPriceItem(context,
-                    title: Translate.s.estimated_cost, value: model.approxCost),
-                _buildPriceItem(context,
-                    title: Translate.s.final_cost,
-                    value: model.actualCost,
+                    title: Translate.of(context).final_cost,
+                    value: model.actualCost.priceFormat,
                     color: context.colors.bgLight),
                 Divider(
                   height: 30,
                   color: context.colors.backgroundLight,
                 ),
                 Text(
-                  Translate.s.description_of_maintenance,
+                  Translate.of(context).description_of_maintenance,
                   style: AppTextStyle.s14_w500(color: context.colors.primaryText),
                 ),
                 Gaps.vGap12,
@@ -137,12 +145,15 @@ class ContractDialog extends StatelessWidget {
             style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
           ),
           const Spacer(),
-          Text(
-            value,
-            style: AppTextStyle.s18_w500(color: context.colors.green3),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: Text(
+              value,
+              style: AppTextStyle.s18_w500(color: context.colors.green3),
+            ),
           ),
           Text(
-            " ر.س",
+            Translate.of(context).sar,
             style: AppTextStyle.s14_w400(color: context.colors.green3),
           ),
         ],

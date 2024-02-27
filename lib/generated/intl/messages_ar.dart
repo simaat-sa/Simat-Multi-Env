@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m3(MB, files) =>
       "يجب أن تكون حجم الملفات التالية أقل من ${MB} ميحابيت, ${files}";
 
+  static String m4(version) => "اصدار ${version}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "About_New_version":
@@ -107,6 +109,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "applicant": MessageLookupByLibrary.simpleMessage("مقدم الطلب"),
         "application_approval":
             MessageLookupByLibrary.simpleMessage("الموافقة على الطلب"),
+        "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
         "attribution": MessageLookupByLibrary.simpleMessage("الإسناد"),
         "back_to_contracts":
             MessageLookupByLibrary.simpleMessage("عودة إلى العقود"),
@@ -138,7 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "copied_successfully":
             MessageLookupByLibrary.simpleMessage("تم النسخ بنجاح"),
         "cost_at_my_own_expense": MessageLookupByLibrary.simpleMessage(
-            "تكلفة الصيانة على نفقتي الخاصة\'"),
+            "تكلفة الصيانة على نفقتي الخاصة"),
         "customer_mobile": MessageLookupByLibrary.simpleMessage("جوال العميل"),
         "date_of_request": MessageLookupByLibrary.simpleMessage("تاريخ الطلب"),
         "days_remaining_and_allowed": MessageLookupByLibrary.simpleMessage(
@@ -151,6 +154,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "district_region":
             MessageLookupByLibrary.simpleMessage("الحي . المنطقة"),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
+        "due": MessageLookupByLibrary.simpleMessage("مستحق"),
         "due_date": MessageLookupByLibrary.simpleMessage("تاريخ استحقاق "),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("طلب غير صالح"),
@@ -178,7 +182,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "error_socket":
             MessageLookupByLibrary.simpleMessage("تأكد من إتصالك بالانترنيت"),
         "estimated_cost": MessageLookupByLibrary.simpleMessage("تكلفة تقديرية"),
-        "expired": MessageLookupByLibrary.simpleMessage("منتهي"),
+        "expired": MessageLookupByLibrary.simpleMessage("الانتهاء في"),
         "failureActions": MessageLookupByLibrary.simpleMessage("إجراءات الفشل"),
         "fillField": MessageLookupByLibrary.simpleMessage("الرجاء ملء الحقل"),
         "filter": MessageLookupByLibrary.simpleMessage("تصفية"),
@@ -241,12 +245,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
         "net_contract": MessageLookupByLibrary.simpleMessage("صافي العقد"),
-        "new_code": MessageLookupByLibrary.simpleMessage("كود جديد"),
+        "new_code": MessageLookupByLibrary.simpleMessage("جديدة"),
         "new_maintenance_request":
             MessageLookupByLibrary.simpleMessage("طلب صيانة جديد"),
         "new_notices": MessageLookupByLibrary.simpleMessage("اشعارات جديدة"),
         "no_internet_connection":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالانترنت"),
+        "no_items_found": MessageLookupByLibrary.simpleMessage("لا يوجد نتائج"),
         "no_notices": MessageLookupByLibrary.simpleMessage("لا إشعارات"),
         "no_notices_now": MessageLookupByLibrary.simpleMessage(
             "لا يوجد لديك إشعارات الآن، برجاء معاودة التحقق لاحقا"),
@@ -257,7 +262,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "passValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل على الاقل 6 حروف او ارقام"),
         "paused": MessageLookupByLibrary.simpleMessage("متوقف مؤقتا"),
-        "pay_now": MessageLookupByLibrary.simpleMessage("الدفع الآن"),
+        "pay_now": MessageLookupByLibrary.simpleMessage("السداد"),
         "payments": MessageLookupByLibrary.simpleMessage("المدفوعات"),
         "phoneValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل الجوال صحيحا"),
@@ -275,10 +280,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("طلب تجديد العقد الحالي"),
         "requesting_maintenance": MessageLookupByLibrary.simpleMessage(
             "طلب اجراء صيانة أو اصلاحات للوحدة"),
-        "required": MessageLookupByLibrary.simpleMessage("المطلوبً"),
+        "required": MessageLookupByLibrary.simpleMessage("المطلوب"),
         "reset": MessageLookupByLibrary.simpleMessage("اعادة تعيين"),
         "residential": MessageLookupByLibrary.simpleMessage("سكني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
+        "sar": MessageLookupByLibrary.simpleMessage("ر.س"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "size_more_than_mg_error": m3,
@@ -294,7 +300,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "supervisor_approved":
             MessageLookupByLibrary.simpleMessage("تمت الموافقة من قبل المشرف"),
         "supervisor_identifications":
-            MessageLookupByLibrary.simpleMessage("هويات المشرف"),
+            MessageLookupByLibrary.simpleMessage("تحديد المشرف"),
         "tax": MessageLookupByLibrary.simpleMessage("ضريبة"),
         "total_contract": MessageLookupByLibrary.simpleMessage("إجمالي العقد"),
         "total_due": MessageLookupByLibrary.simpleMessage("اجمالي المستحق"),
@@ -306,8 +312,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح"),
-        "version_label": MessageLookupByLibrary.simpleMessage("اصدار 35.1.2"),
-        "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات"),
-        "worthy": MessageLookupByLibrary.simpleMessage("مستحق")
+        "version_label": m4,
+        "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات")
       };
 }

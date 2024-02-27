@@ -17,21 +17,23 @@ class RequiredCostButtonWidget extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            Translate.s.required,
+            Translate.of(context).required,
             style: AppTextStyle.s16_w500(color: context.colors.white),
           ),
-          Gaps.hGap5,
-          Text(
-            model.price,
-            style: AppTextStyle.s20_w500(color: context.colors.white),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: Text(
+              model.duePrice,
+              style: AppTextStyle.s20_w500(color: context.colors.white),
+            ),
           ),
           Text(
-            ' ر.س',
+            Translate.of(context).sar,
             style: AppTextStyle.s14_w400(color: context.colors.white),
           ),
           const Spacer(),
           Text(
-            Translate.s.pay_now,
+            Translate.of(context).pay_now,
             style: AppTextStyle.s16_w500(color: context.colors.white),
           ),
         ],

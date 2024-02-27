@@ -33,14 +33,14 @@ class AuthDrawerItemWidget extends StatelessWidget {
           children: [
             Text(
               text,
-              style: AppTextStyle.s14_w400(color: context.colors.black),
+              style: AppTextStyle.s16_w400(color: context.colors.black),
             ),
             Row(
               children: [
                 widget ??
                     Text(
                       subtext ?? '',
-                      style: AppTextStyle.s12_w400(color: context.colors.primary),
+                      style: AppTextStyle.s14_w400(color: context.colors.primary),
                     ),
                 Gaps.hGap10,
                 Icon(

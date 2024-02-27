@@ -12,7 +12,7 @@ class AddMaintenanceDescWidget extends StatelessWidget {
       fieldTypes: FieldTypes.rich,
       type: TextInputType.multiline,
       action: TextInputAction.newline,
-      hint: Translate.s.description_of_maintenance,
+      hint: Translate.of(context).description_of_maintenance,
       max: 6,
       validate: (value) => value?.validateEmpty(),
       fillColor: context.colors.white,

@@ -16,7 +16,7 @@ class FilterSelectMaintenanceWidget extends StatelessWidget {
                 child: FilterMaintenanceSelectItemWidget(
                   onTap: () => controller.filterContractObs.setValue(e),
                   changeValue: value.index,
-                  title: title(e),
+                  title: e.getLocalizedName(),
                   value: e.index,
                 ),
               );
@@ -25,34 +25,4 @@ class FilterSelectMaintenanceWidget extends StatelessWidget {
         });
   }
 
-  String title(ContractStatus contractTypes) {
-    switch (contractTypes) {
-      case ContractStatus.posted:
-        return Translate.s.posted;
-      case ContractStatus.paused:
-        return Translate.s.paused;
-      case ContractStatus.owner:
-        return Translate.s.owner;
-      case ContractStatus.implemented:
-        return Translate.s.implemented;
-      case ContractStatus.completed:
-        return Translate.s.completed;
-      case ContractStatus.canceled:
-        return Translate.s.canceled;
-      case ContractStatus.attribution:
-        return Translate.s.attribution;
-      case ContractStatus.supervisorIdentifications:
-        return Translate.s.supervisor_identifications;
-      case ContractStatus.supervisorApproved:
-        return Translate.s.supervisor_approved;
-      case ContractStatus.rejectedByTheSupervisor:
-        return Translate.s.rejected_by_the_supervisor;
-      case ContractStatus.rejectedByTheOwner:
-        return Translate.s.rejected_by_the_owner;
-      case ContractStatus.applicationApproval:
-        return Translate.s.application_approval;
-      default:
-        return "";
-    }
-  }
 }

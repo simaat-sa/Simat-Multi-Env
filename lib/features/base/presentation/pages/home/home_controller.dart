@@ -7,6 +7,13 @@ class HomeController {
   final NoticesRequester requesterNotify = NoticesRequester();
 
   final BaseBloc<String> bloc = BaseBloc<String>();
+  final BaseBloc<List<UserAccessModel>> pagesBloc = BaseBloc([]);
+
+
+  void initPages (BuildContext context){
+    var pages = context.read<UserCubit>().state.model!.userAccess;
+    pagesBloc.successState(pages.take(4).toList());
+  }
 
   void initBottomNavigation(TickerProvider ticker, int index) {
     var context = getIt.get<GlobalContext>().context();

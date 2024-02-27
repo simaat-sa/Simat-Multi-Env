@@ -30,11 +30,13 @@ mixin _$MaintenanceModel {
   String get code => throw _privateConstructorUsedError;
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
   String get unitName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'parent_desc_ar', defaultValue: "")
+  String get blockName => throw _privateConstructorUsedError;
   @JsonKey(name: 'approx_cost', defaultValue: "0")
   String get approxCost => throw _privateConstructorUsedError;
   @JsonKey(name: 'actual_cost', defaultValue: "0")
   String get actualCost => throw _privateConstructorUsedError;
-  @JsonKey(name: 'acl_status_code')
+  @JsonKey(name: 'acl_status_code', defaultValue: ContractStatus.non)
   ContractStatus get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'dt_created', defaultValue: "")
   String get createdDateTimeStamp => throw _privateConstructorUsedError;
@@ -57,9 +59,11 @@ abstract class $MaintenanceModelCopyWith<$Res> {
       @JsonKey(name: 'maint_desc', defaultValue: "") String desc,
       @JsonKey(name: 'maint_code') String code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
+      @JsonKey(name: 'parent_desc_ar', defaultValue: "") String blockName,
       @JsonKey(name: 'approx_cost', defaultValue: "0") String approxCost,
       @JsonKey(name: 'actual_cost', defaultValue: "0") String actualCost,
-      @JsonKey(name: 'acl_status_code') ContractStatus status,
+      @JsonKey(name: 'acl_status_code', defaultValue: ContractStatus.non)
+      ContractStatus status,
       @JsonKey(name: 'dt_created', defaultValue: "")
       String createdDateTimeStamp});
 }
@@ -82,6 +86,7 @@ class _$MaintenanceModelCopyWithImpl<$Res, $Val extends MaintenanceModel>
     Object? desc = null,
     Object? code = null,
     Object? unitName = null,
+    Object? blockName = null,
     Object? approxCost = null,
     Object? actualCost = null,
     Object? status = null,
@@ -107,6 +112,10 @@ class _$MaintenanceModelCopyWithImpl<$Res, $Val extends MaintenanceModel>
       unitName: null == unitName
           ? _value.unitName
           : unitName // ignore: cast_nullable_to_non_nullable
+              as String,
+      blockName: null == blockName
+          ? _value.blockName
+          : blockName // ignore: cast_nullable_to_non_nullable
               as String,
       approxCost: null == approxCost
           ? _value.approxCost
@@ -142,9 +151,11 @@ abstract class _$$MaintenanceModelImplCopyWith<$Res>
       @JsonKey(name: 'maint_desc', defaultValue: "") String desc,
       @JsonKey(name: 'maint_code') String code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
+      @JsonKey(name: 'parent_desc_ar', defaultValue: "") String blockName,
       @JsonKey(name: 'approx_cost', defaultValue: "0") String approxCost,
       @JsonKey(name: 'actual_cost', defaultValue: "0") String actualCost,
-      @JsonKey(name: 'acl_status_code') ContractStatus status,
+      @JsonKey(name: 'acl_status_code', defaultValue: ContractStatus.non)
+      ContractStatus status,
       @JsonKey(name: 'dt_created', defaultValue: "")
       String createdDateTimeStamp});
 }
@@ -165,6 +176,7 @@ class __$$MaintenanceModelImplCopyWithImpl<$Res>
     Object? desc = null,
     Object? code = null,
     Object? unitName = null,
+    Object? blockName = null,
     Object? approxCost = null,
     Object? actualCost = null,
     Object? status = null,
@@ -190,6 +202,10 @@ class __$$MaintenanceModelImplCopyWithImpl<$Res>
       unitName: null == unitName
           ? _value.unitName
           : unitName // ignore: cast_nullable_to_non_nullable
+              as String,
+      blockName: null == blockName
+          ? _value.blockName
+          : blockName // ignore: cast_nullable_to_non_nullable
               as String,
       approxCost: null == approxCost
           ? _value.approxCost
@@ -221,9 +237,12 @@ class _$MaintenanceModelImpl extends _MaintenanceModel {
       @JsonKey(name: 'maint_desc', defaultValue: "") required this.desc,
       @JsonKey(name: 'maint_code') required this.code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "") required this.unitName,
+      @JsonKey(name: 'parent_desc_ar', defaultValue: "")
+      required this.blockName,
       @JsonKey(name: 'approx_cost', defaultValue: "0") required this.approxCost,
       @JsonKey(name: 'actual_cost', defaultValue: "0") required this.actualCost,
-      @JsonKey(name: 'acl_status_code') required this.status,
+      @JsonKey(name: 'acl_status_code', defaultValue: ContractStatus.non)
+      required this.status,
       @JsonKey(name: 'dt_created', defaultValue: "")
       required this.createdDateTimeStamp})
       : super._();
@@ -247,13 +266,16 @@ class _$MaintenanceModelImpl extends _MaintenanceModel {
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
   final String unitName;
   @override
+  @JsonKey(name: 'parent_desc_ar', defaultValue: "")
+  final String blockName;
+  @override
   @JsonKey(name: 'approx_cost', defaultValue: "0")
   final String approxCost;
   @override
   @JsonKey(name: 'actual_cost', defaultValue: "0")
   final String actualCost;
   @override
-  @JsonKey(name: 'acl_status_code')
+  @JsonKey(name: 'acl_status_code', defaultValue: ContractStatus.non)
   final ContractStatus status;
   @override
   @JsonKey(name: 'dt_created', defaultValue: "")
@@ -261,7 +283,7 @@ class _$MaintenanceModelImpl extends _MaintenanceModel {
 
   @override
   String toString() {
-    return 'MaintenanceModel(id: $id, createdBy: $createdBy, desc: $desc, code: $code, unitName: $unitName, approxCost: $approxCost, actualCost: $actualCost, status: $status, createdDateTimeStamp: $createdDateTimeStamp)';
+    return 'MaintenanceModel(id: $id, createdBy: $createdBy, desc: $desc, code: $code, unitName: $unitName, blockName: $blockName, approxCost: $approxCost, actualCost: $actualCost, status: $status, createdDateTimeStamp: $createdDateTimeStamp)';
   }
 
   @override
@@ -276,6 +298,8 @@ class _$MaintenanceModelImpl extends _MaintenanceModel {
             (identical(other.code, code) || other.code == code) &&
             (identical(other.unitName, unitName) ||
                 other.unitName == unitName) &&
+            (identical(other.blockName, blockName) ||
+                other.blockName == blockName) &&
             (identical(other.approxCost, approxCost) ||
                 other.approxCost == approxCost) &&
             (identical(other.actualCost, actualCost) ||
@@ -287,8 +311,18 @@ class _$MaintenanceModelImpl extends _MaintenanceModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, createdBy, desc, code,
-      unitName, approxCost, actualCost, status, createdDateTimeStamp);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      createdBy,
+      desc,
+      code,
+      unitName,
+      blockName,
+      approxCost,
+      actualCost,
+      status,
+      createdDateTimeStamp);
 
   @JsonKey(ignore: true)
   @override
@@ -314,11 +348,14 @@ abstract class _MaintenanceModel extends MaintenanceModel {
       @JsonKey(name: 'maint_code') required final String code,
       @JsonKey(name: 'are_desc_fo', defaultValue: "")
       required final String unitName,
+      @JsonKey(name: 'parent_desc_ar', defaultValue: "")
+      required final String blockName,
       @JsonKey(name: 'approx_cost', defaultValue: "0")
       required final String approxCost,
       @JsonKey(name: 'actual_cost', defaultValue: "0")
       required final String actualCost,
-      @JsonKey(name: 'acl_status_code') required final ContractStatus status,
+      @JsonKey(name: 'acl_status_code', defaultValue: ContractStatus.non)
+      required final ContractStatus status,
       @JsonKey(name: 'dt_created', defaultValue: "")
       required final String createdDateTimeStamp}) = _$MaintenanceModelImpl;
   _MaintenanceModel._() : super._();
@@ -342,13 +379,16 @@ abstract class _MaintenanceModel extends MaintenanceModel {
   @JsonKey(name: 'are_desc_fo', defaultValue: "")
   String get unitName;
   @override
+  @JsonKey(name: 'parent_desc_ar', defaultValue: "")
+  String get blockName;
+  @override
   @JsonKey(name: 'approx_cost', defaultValue: "0")
   String get approxCost;
   @override
   @JsonKey(name: 'actual_cost', defaultValue: "0")
   String get actualCost;
   @override
-  @JsonKey(name: 'acl_status_code')
+  @JsonKey(name: 'acl_status_code', defaultValue: ContractStatus.non)
   ContractStatus get status;
   @override
   @JsonKey(name: 'dt_created', defaultValue: "")

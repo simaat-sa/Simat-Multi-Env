@@ -5,7 +5,8 @@ part of 'splash_imports.dart';
 class SplashController {
   void manipulateSaveData(BuildContext context) async {
     var user = await UserHelperService.instance.getUserData();
-    await Future.delayed(const Duration(seconds: 4));
+    await LanguageService.instance.initLanguage();
+    await Future.delayed(const Duration(seconds: 1));
     if (user != null) {
       GlobalState.instance.set("token", user.userToken);
       context.read<UserCubit>().onUpdateUserData(user);

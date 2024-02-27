@@ -8,13 +8,16 @@ class PageHeaderTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          title,
-          style: AppTextStyle.s14_w400(color: context.colors.blackOpacity),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 10),
+      child: Row(
+        children: [
+          Text(
+            title,
+            style: AppTextStyle.s16_w400(color: context.colors.blackOpacity),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -43,7 +43,7 @@ class _NoticesScreenState extends State<NoticesScreen> {
                     child: GestureDetector(
                       onTap: () => controller.readAllNotifications(),
                       child: Text(
-                        Translate.s.mark_all_read,
+                        Translate.of(context).mark_all_read,
                         style: AppTextStyle.s14_w400(color: context.colors.textColor),
                       ),
                     ),

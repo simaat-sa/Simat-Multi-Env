@@ -16,7 +16,7 @@ class PaymentPriceDetailsItemWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                Translate.s.tax,
+                Translate.of(context).tax,
                 style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
               ),
               Row(
@@ -26,7 +26,7 @@ class PaymentPriceDetailsItemWidget extends StatelessWidget {
                     style: AppTextStyle.s18_w400(color: context.colors.darkTextColor),
                   ),
                   Text(
-                    ' ر.س',
+                    Translate.of(context).sar,
                     style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
                   ),
                 ],
@@ -49,7 +49,7 @@ class PaymentPriceDetailsItemWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                Translate.s.required,
+                Translate.of(context).required,
                 style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
               ),
               Row(
@@ -59,7 +59,7 @@ class PaymentPriceDetailsItemWidget extends StatelessWidget {
                     style: AppTextStyle.s20_w500(color: context.colors.darkTextColor),
                   ),
                   Text(
-                    ' ر.س',
+                    Translate.of(context).sar,
                     style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
                   ),
                 ],

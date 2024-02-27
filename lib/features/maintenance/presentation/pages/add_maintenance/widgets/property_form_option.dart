@@ -7,8 +7,8 @@ class PropertyFormOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseFormOption<PropModel>(
-      hintText: Translate.s.main_property,
-      bottomSheetTitle: Translate.s.main_property,
+      hintText: Translate.of(context).main_property,
+      bottomSheetTitle: Translate.of(context).main_property,
       showSearch: true,
       showDecoration: true,
       isMultiple: false,

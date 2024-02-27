@@ -148,7 +148,7 @@ class _SnackBarWidget extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(callbackMessage ?? Translate.s.retry,
+                  Text(callbackMessage ?? Translate.of(context).retry,
                       style: AppTextStyle.s14_w400(color: AppColors.fixedColors.white)),
                   SizedBox(
                     width: callbackMessage!.length * 10,
