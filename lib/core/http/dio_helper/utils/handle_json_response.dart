@@ -14,6 +14,32 @@ class HandleJsonResponse<T> {
     ResponseKeyFunc? dataKeyFun,
     ResponseKeyFunc? errorFunc,
   ) async {
+
+    return response.when(
+      isSuccess: (successData) {
+        var responseData = successData?.data;
+        switch (responseType) {
+          case ResType.type:
+            var data =
+            dataKeyFun == null ? responseData : Function.apply(dataKeyFun, [responseData]);
+            return MyResult.isSuccess(data);
+          case ResType.model:
+            var data = Function.apply(toJsonFunc, [
+              dataKeyFun == null ? responseData : Function.apply(dataKeyFun, [responseData])
+            ]);
+            return MyResult.isSuccess(data);
+          case ResType.list:
+            var data = Function.apply(toJsonFunc, [
+              dataKeyFun == null ? responseData : Function.apply(dataKeyFun, [responseData])
+            ]);
+            return MyResult.isSuccess(data);
+        }
+      },
+      isError: (error) {
+        return MyResult.isError(error);
+      },
+    );
+
     try {
       return response.when(
         isSuccess: (successData) {

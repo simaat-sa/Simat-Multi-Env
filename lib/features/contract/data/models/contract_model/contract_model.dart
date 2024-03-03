@@ -34,7 +34,7 @@ class ContractModel with _$ContractModel {
     @JsonKey(name: 'tts_contract_net_price_alc', defaultValue: "0")required String contractNetPrice,
     @JsonKey(name: 'tts_tot_additional_item_alc', defaultValue: "0")required String contractAdditionalPrice,
     @JsonKey(name: 'tts_insurance', defaultValue: "0")required String contractInsurancePrice,
-    @JsonKey(name: 'tts_validity')required TenantVisibility status,
+    @JsonKey(name: 'tts_validity', defaultValue: TenantVisibility.non)required TenantVisibility status,
     @JsonKey(name: 'contract_type')required ContractTypes type,
     @JsonKey(name: 'prop_lat',defaultValue: "")required String propLat,
     @JsonKey(name: 'prop_lng',defaultValue: "")required String propLng,

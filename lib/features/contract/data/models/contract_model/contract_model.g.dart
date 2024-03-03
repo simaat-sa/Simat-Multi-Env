@@ -26,7 +26,9 @@ _$ContractModelImpl _$$ContractModelImplFromJson(Map<String, dynamic> json) =>
       contractAdditionalPrice:
           json['tts_tot_additional_item_alc'] as String? ?? '0',
       contractInsurancePrice: json['tts_insurance'] as String? ?? '0',
-      status: $enumDecode(_$TenantVisibilityEnumMap, json['tts_validity']),
+      status: $enumDecodeNullable(
+              _$TenantVisibilityEnumMap, json['tts_validity']) ??
+          TenantVisibility.non,
       type: $enumDecode(_$ContractTypesEnumMap, json['contract_type']),
       propLat: json['prop_lat'] as String? ?? '',
       propLng: json['prop_lng'] as String? ?? '',

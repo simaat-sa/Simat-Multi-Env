@@ -54,7 +54,7 @@ mixin _$ContractModel {
   String get contractAdditionalPrice => throw _privateConstructorUsedError;
   @JsonKey(name: 'tts_insurance', defaultValue: "0")
   String get contractInsurancePrice => throw _privateConstructorUsedError;
-  @JsonKey(name: 'tts_validity')
+  @JsonKey(name: 'tts_validity', defaultValue: TenantVisibility.non)
   TenantVisibility get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'contract_type')
   ContractTypes get type => throw _privateConstructorUsedError;
@@ -103,7 +103,8 @@ abstract class $ContractModelCopyWith<$Res> {
       String contractAdditionalPrice,
       @JsonKey(name: 'tts_insurance', defaultValue: "0")
       String contractInsurancePrice,
-      @JsonKey(name: 'tts_validity') TenantVisibility status,
+      @JsonKey(name: 'tts_validity', defaultValue: TenantVisibility.non)
+      TenantVisibility status,
       @JsonKey(name: 'contract_type') ContractTypes type,
       @JsonKey(name: 'prop_lat', defaultValue: "") String propLat,
       @JsonKey(name: 'prop_lng', defaultValue: "") String propLng,
@@ -281,7 +282,8 @@ abstract class _$$ContractModelImplCopyWith<$Res>
       String contractAdditionalPrice,
       @JsonKey(name: 'tts_insurance', defaultValue: "0")
       String contractInsurancePrice,
-      @JsonKey(name: 'tts_validity') TenantVisibility status,
+      @JsonKey(name: 'tts_validity', defaultValue: TenantVisibility.non)
+      TenantVisibility status,
       @JsonKey(name: 'contract_type') ContractTypes type,
       @JsonKey(name: 'prop_lat', defaultValue: "") String propLat,
       @JsonKey(name: 'prop_lng', defaultValue: "") String propLng,
@@ -458,7 +460,8 @@ class _$ContractModelImpl extends _ContractModel {
       required this.contractAdditionalPrice,
       @JsonKey(name: 'tts_insurance', defaultValue: "0")
       required this.contractInsurancePrice,
-      @JsonKey(name: 'tts_validity') required this.status,
+      @JsonKey(name: 'tts_validity', defaultValue: TenantVisibility.non)
+      required this.status,
       @JsonKey(name: 'contract_type') required this.type,
       @JsonKey(name: 'prop_lat', defaultValue: "") required this.propLat,
       @JsonKey(name: 'prop_lng', defaultValue: "") required this.propLng,
@@ -522,7 +525,7 @@ class _$ContractModelImpl extends _ContractModel {
   @JsonKey(name: 'tts_insurance', defaultValue: "0")
   final String contractInsurancePrice;
   @override
-  @JsonKey(name: 'tts_validity')
+  @JsonKey(name: 'tts_validity', defaultValue: TenantVisibility.non)
   final TenantVisibility status;
   @override
   @JsonKey(name: 'contract_type')
@@ -671,7 +674,8 @@ abstract class _ContractModel extends ContractModel {
       required final String contractAdditionalPrice,
       @JsonKey(name: 'tts_insurance', defaultValue: "0")
       required final String contractInsurancePrice,
-      @JsonKey(name: 'tts_validity') required final TenantVisibility status,
+      @JsonKey(name: 'tts_validity', defaultValue: TenantVisibility.non)
+      required final TenantVisibility status,
       @JsonKey(name: 'contract_type') required final ContractTypes type,
       @JsonKey(name: 'prop_lat', defaultValue: "")
       required final String propLat,
@@ -739,7 +743,7 @@ abstract class _ContractModel extends ContractModel {
   @JsonKey(name: 'tts_insurance', defaultValue: "0")
   String get contractInsurancePrice;
   @override
-  @JsonKey(name: 'tts_validity')
+  @JsonKey(name: 'tts_validity', defaultValue: TenantVisibility.non)
   TenantVisibility get status;
   @override
   @JsonKey(name: 'contract_type')

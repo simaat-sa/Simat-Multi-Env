@@ -23,7 +23,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     var userData = context.watch<UserCubit>().state.model;
-    print("<<<<<<<<<<<<<<${userData?.userAvatar}");
     var notifyCount = context.watch<NotifyCubit>().state.count;
     return AppBar(
       centerTitle: false,
@@ -79,7 +78,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           height: 50,
           width: 50,
           borderRadius: BorderRadius.circular(30),
-          placeHolder: Image.asset(Res.avatarLogo),
+          placeHolder: Image.asset(Res.avatarSolidLogo),
           borderWidth: 0,
         ),
       ),

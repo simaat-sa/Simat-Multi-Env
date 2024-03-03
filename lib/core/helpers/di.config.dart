@@ -18,14 +18,14 @@ import 'package:flutter_tdd/core/helpers/services/location_service.dart'
     as _i28;
 import 'package:flutter_tdd/core/helpers/services/psermission_services.dart'
     as _i39;
-import 'package:flutter_tdd/core/helpers/share_services.dart' as _i42;
-import 'package:flutter_tdd/core/helpers/shared_pref_service.dart' as _i43;
-import 'package:flutter_tdd/core/helpers/utilities.dart' as _i48;
+import 'package:flutter_tdd/core/helpers/share_services.dart' as _i46;
+import 'package:flutter_tdd/core/helpers/shared_pref_service.dart' as _i47;
+import 'package:flutter_tdd/core/helpers/utilities.dart' as _i52;
 import 'package:flutter_tdd/core/http/dio_helper/actions/delete.dart' as _i14;
 import 'package:flutter_tdd/core/http/dio_helper/actions/get.dart' as _i19;
 import 'package:flutter_tdd/core/http/dio_helper/actions/patch.dart' as _i38;
 import 'package:flutter_tdd/core/http/dio_helper/actions/post.dart' as _i40;
-import 'package:flutter_tdd/core/http/dio_helper/actions/put.dart' as _i41;
+import 'package:flutter_tdd/core/http/dio_helper/actions/put.dart' as _i45;
 import 'package:flutter_tdd/core/http/dio_helper/utils/dio_header.dart' as _i15;
 import 'package:flutter_tdd/core/http/dio_helper/utils/dio_options.dart'
     as _i16;
@@ -77,14 +77,22 @@ import 'package:flutter_tdd/features/notification/data/repositories/notices_repo
     as _i37;
 import 'package:flutter_tdd/features/notification/domain/repositories/notices_repository.dart'
     as _i36;
-import 'package:flutter_tdd/features/slide_menu/data/data_source/slide_menu_data_source.dart'
+import 'package:flutter_tdd/features/owner_properties/data/data_source/property_data_source.dart'
+    as _i41;
+import 'package:flutter_tdd/features/owner_properties/data/data_source/property_data_source_impl.dart'
+    as _i42;
+import 'package:flutter_tdd/features/owner_properties/data/repositories/property_repository_impl.dart'
     as _i44;
+import 'package:flutter_tdd/features/owner_properties/domain/repositories/property_repository.dart'
+    as _i43;
+import 'package:flutter_tdd/features/slide_menu/data/data_source/slide_menu_data_source.dart'
+    as _i48;
 import 'package:flutter_tdd/features/slide_menu/data/data_source/slide_menu_data_source_impl.dart'
-    as _i45;
+    as _i49;
 import 'package:flutter_tdd/features/slide_menu/data/repositories/slide_menu_repository_impl.dart'
-    as _i47;
+    as _i51;
 import 'package:flutter_tdd/features/slide_menu/domain/repositories/slide_menu_repository.dart'
-    as _i46;
+    as _i50;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -132,12 +140,14 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i38.Patch>(() => _i38.Patch());
     gh.factory<_i39.PermissionServices>(() => _i39.PermissionServices());
     gh.lazySingleton<_i40.Post>(() => _i40.Post());
-    gh.lazySingleton<_i41.Put>(() => _i41.Put());
-    gh.factory<_i42.ShareServices>(() => _i42.ShareServices());
-    gh.lazySingleton<_i43.SharedPrefService>(() => _i43.SharedPrefService());
-    gh.factory<_i44.SlideMenuDataSource>(() => _i45.SlidMenuDataSourceImpl());
-    gh.factory<_i46.SlideMenuRepository>(() => _i47.SlideMenuRepositoryImpl());
-    gh.lazySingleton<_i48.Utilities>(() => _i48.Utilities());
+    gh.factory<_i41.PropertyDataSource>(() => _i42.PropertyDataSourceImpl());
+    gh.factory<_i43.PropertyRepository>(() => _i44.PropertyRepositoryImpl());
+    gh.lazySingleton<_i45.Put>(() => _i45.Put());
+    gh.factory<_i46.ShareServices>(() => _i46.ShareServices());
+    gh.lazySingleton<_i47.SharedPrefService>(() => _i47.SharedPrefService());
+    gh.factory<_i48.SlideMenuDataSource>(() => _i49.SlidMenuDataSourceImpl());
+    gh.factory<_i50.SlideMenuRepository>(() => _i51.SlideMenuRepositoryImpl());
+    gh.lazySingleton<_i52.Utilities>(() => _i52.Utilities());
     return this;
   }
 }
