@@ -5,6 +5,8 @@ import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model
 import 'package:flutter_tdd/features/owner_properties/domain/repositories/property_repository.dart';
 
 class PropertyRequester extends Requester<List<PropModel>> {
+  List<PropModel> _listTenant = [];
+
   void setLoadingState() {
     loadingState();
   }
@@ -15,15 +17,23 @@ class PropertyRequester extends Requester<List<PropModel>> {
     print("<<<<<<<<<<<<${result.data?.length}");
     result.when(
       isSuccess: (data) {
-
         successState(data ?? []);
+        _listTenant = data??[];
       },
       isError: (error) {
-
         failedState(error, () {
           request(fromRemote: fromRemote);
         });
       },
     );
+  }
+
+  void propertyFilter(String searchText) {
+    final list = _listTenant.where((element) {
+      final textSearch = element.areCode.toLowerCase().contains(searchText.toLowerCase().trim()) ||
+          element.unitName.toLowerCase().contains(searchText.toLowerCase().trim());
+      return textSearch;
+    }).toList();
+    successState(list);
   }
 }

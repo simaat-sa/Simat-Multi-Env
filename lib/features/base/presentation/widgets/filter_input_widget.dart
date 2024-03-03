@@ -6,11 +6,18 @@ import 'package:flutter_tdd/core/widgets/search_form_field/search_form_field.dar
 import 'package:flutter_tdd/res.dart';
 
 class FilterItemWidget extends StatelessWidget {
-  final void Function() onTap;
+  final void Function()? onTap;
   final Function(String)? onSubmit;
   final Function(String)? onChange;
+  final bool showFilterIcon;
 
-  const FilterItemWidget({super.key, required this.onTap, this.onSubmit, this.onChange});
+  const FilterItemWidget({
+    super.key,
+    this.onTap,
+    this.onSubmit,
+    this.onChange,
+    this.showFilterIcon = true,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +32,19 @@ class FilterItemWidget extends StatelessWidget {
               fillColor: context.colors.white,
             ),
           ),
-          Gaps.hGap10,
-          InkWell(
-            onTap: onTap,
-            child: SvgPicture.asset(
-              Res.filterLogo,
-              height: 26,
-              width: 26,
-            ),
+          if(showFilterIcon)
+          Row(
+            children: [
+              Gaps.hGap10,
+              InkWell(
+                onTap: onTap,
+                child: SvgPicture.asset(
+                  Res.filterLogo,
+                  height: 26,
+                  width: 26,
+                ),
+              ),
+            ],
           ),
         ],
       ),

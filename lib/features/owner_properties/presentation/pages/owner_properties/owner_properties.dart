@@ -28,9 +28,15 @@ class _OwnerPropertiesState extends State<OwnerProperties> {
             child: Column(
               children: [
                 FilterItemWidget(
-                  onChange: (val) {},
-                  onSubmit: (value) {},
-                  onTap: () {},
+                  showFilterIcon: false,
+                  onChange: (val) {
+                    controller.searchText = val;
+                    controller.onFilter();
+                  },
+                  onSubmit: (value) {
+                    controller.searchText = value;
+                    controller.onFilter();
+                  },
                 ),
                 Gaps.vGap10,
                 Flexible(
