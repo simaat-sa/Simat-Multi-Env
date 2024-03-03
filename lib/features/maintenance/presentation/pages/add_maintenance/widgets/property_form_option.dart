@@ -13,30 +13,30 @@ class PropertyFormOption extends StatelessWidget {
       showDecoration: true,
       isMultiple: false,
       suffixIconPath: Res.propIcon,
-      onClearPressed: () => controller.selectedProps = [],
+      onClearPressed: () => [],
       onSaveValue: (values, iMultiple) {
-        controller.selectedProps = values ?? [];
+        // controller.selectedProps = values ?? [];
       },
       optionsRequester: BaseOptionsRequester(
         isRemotelySearch: false,
         immediatelyRequestOptions: true,
-        valueMainTitleGetter: (value) => value?.propName,
+        valueMainTitleGetter: (value) => value?.propTitle,
         fetcher: (c) => getIt<ContractRepository>().getProps(true),
       ),
-      selectedItems: controller.selectedProps,
+      selectedItems: [],
       valueIdGetter: (p0) => p0?.propId,
       valueMainTitleGetter: (p0) => p0?.areCode,
       selectedOptionBuilder: (list) {
         return BaseOptionsDisplayWidget<PropModel>(
           selectedOptions: list,
-          titleGetter: (value) => value.propName,
+          titleGetter: (value) => value.propTitle,
         );
       },
       optionItemBuilder: (item, isSelected) {
         return SelectableOptionItemWidget(
           isSelected: isSelected,
           optionItemWidget: OptionItemWidget(
-            title: item.propName,
+            title: item.propTitle,
           ),
         );
       },

@@ -25,7 +25,7 @@ class _CompleteAddMaintenanceState extends State<CompleteAddMaintenance> {
               child: Icon(
                 Icons.close,
                 color: context.colors.darkTextColor,
-                size: 30,
+                size: 35,
               ),
             ),
           )

@@ -82,7 +82,7 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
-        onPressed: () => AutoRouter.of(context).push(const AddMaintenanceRoute()),
+        onPressed: () => AutoRouter.of(context).push( AddMaintenanceRoute()),
         child: Icon(
           Icons.add,
           color: context.colors.white,

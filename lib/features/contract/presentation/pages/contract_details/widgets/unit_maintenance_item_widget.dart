@@ -1,12 +1,13 @@
 part of 'tenant_details_widgets_imports.dart';
 
 class UnitMaintenanceItemWidget extends StatelessWidget {
-  const UnitMaintenanceItemWidget({super.key});
+  final ContractModel contractModel;
+  const UnitMaintenanceItemWidget({super.key, required this.contractModel});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => AutoRouter.of(context).push(const AddMaintenanceRoute()),
+      onTap: () => AutoRouter.of(context).push( AddMaintenanceRoute(propModel: PropModel.fromContract(contractModel))),
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 12),
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),

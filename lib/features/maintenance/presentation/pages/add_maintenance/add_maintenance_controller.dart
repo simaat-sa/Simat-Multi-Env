@@ -6,13 +6,17 @@ class AddMaintenanceController {
   final TextEditingController phone = TextEditingController();
   final ObsValue<bool> switchObs = ObsValue.withInit(false);
 
-  List<PropModel> selectedProps = [];
+  // List<PropModel> selectedProps = [];
   List<PropModel> selectedPropUnits = [];
   List<MaintenanceServicesModel> selectedServices = [];
 
-  AddMaintenanceController(BuildContext context) {
+  AddMaintenanceController(BuildContext context, PropModel? propModel) {
     var user = context.read<UserCubit>().state.model!;
     phone.text = user.userMobile;
+    if (propModel != null) {
+      selectedPropUnits.add(propModel);
+
+    }
   }
 
   void onChanged(bool value) {

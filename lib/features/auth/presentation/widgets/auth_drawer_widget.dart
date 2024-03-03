@@ -36,7 +36,7 @@ class AuthDrawerWidget extends StatelessWidget {
                     child: Icon(
                       Icons.close,
                       color: context.colors.black,
-                      size: 24,
+                      size: 35,
                     ),
                   ),
                 ],

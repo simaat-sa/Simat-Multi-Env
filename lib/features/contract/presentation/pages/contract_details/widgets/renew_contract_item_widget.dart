@@ -42,7 +42,7 @@ class RenewContractItemWidget extends StatelessWidget {
             ),
           ),
           Text(
-            '${Translate.of(context).expired} ${controller.model.date}',
+            '${Translate.of(context).expireIn} ${controller.model.date}',
             style: AppTextStyle.s13_w400(color: context.colors.errorColor),
           ),
         ],

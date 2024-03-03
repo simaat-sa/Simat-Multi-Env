@@ -15,7 +15,7 @@ class SummaryViewWidget extends StatelessWidget {
           SummaryDetailsWidget(model: controller.model),
           Gaps.vGap20,
           RequiredCostWidget(model: controller.model),
-          const UnitMaintenanceItemWidget(),
+          UnitMaintenanceItemWidget(contractModel: controller.model),
           RenewContractItemWidget(controller: controller),
         ],
       ),

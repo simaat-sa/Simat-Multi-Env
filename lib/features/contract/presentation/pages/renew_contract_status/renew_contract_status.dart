@@ -25,7 +25,7 @@ class _RenewContractStatusState extends State<RenewContractStatus> {
               child: Icon(
                 Icons.close,
                 color: context.colors.darkTextColor,
-                size: 30,
+                size: 35,
               ),
             ),
           )

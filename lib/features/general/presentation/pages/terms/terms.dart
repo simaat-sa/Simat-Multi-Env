@@ -38,7 +38,7 @@ class _TermsState extends State<Terms> {
                   child: Icon(
                     Icons.close,
                     color: context.colors.black,
-                    size: 24,
+                    size: 35,
                   ),
                 ),
               ],

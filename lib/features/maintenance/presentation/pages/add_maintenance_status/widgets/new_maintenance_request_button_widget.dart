@@ -6,7 +6,7 @@ class NewMaintenanceRequestButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppTextButton.maxCustom(
-      onPressed: () => AutoRouter.of(context).popAndPush(const AddMaintenanceRoute()),
+      onPressed: () => AutoRouter.of(context).popAndPush( AddMaintenanceRoute()),
       bgColor: context.colors.primary,
       txtColor: context.colors.white,
       textSize: 14,

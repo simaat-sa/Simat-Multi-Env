@@ -182,7 +182,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "error_socket":
             MessageLookupByLibrary.simpleMessage("تأكد من إتصالك بالانترنيت"),
         "estimated_cost": MessageLookupByLibrary.simpleMessage("تكلفة تقديرية"),
-        "expired": MessageLookupByLibrary.simpleMessage("الانتهاء في"),
+        "expireIn": MessageLookupByLibrary.simpleMessage("ينتهي في"),
+        "expired": MessageLookupByLibrary.simpleMessage("منتهي"),
         "failureActions": MessageLookupByLibrary.simpleMessage("إجراءات الفشل"),
         "fillField": MessageLookupByLibrary.simpleMessage("الرجاء ملء الحقل"),
         "filter": MessageLookupByLibrary.simpleMessage("تصفية"),

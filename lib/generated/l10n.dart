@@ -670,11 +670,21 @@ class S {
     );
   }
 
-  /// `Expired at`
+  /// `Expired`
   String get expired {
     return Intl.message(
-      'Expired at',
+      'Expired',
       name: 'expired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expire in`
+  String get expireIn {
+    return Intl.message(
+      'Expire in',
+      name: 'expireIn',
       desc: '',
       args: [],
     );

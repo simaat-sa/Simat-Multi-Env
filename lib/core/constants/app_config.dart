@@ -1,7 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tdd/core/constants/app_constants.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/helpers/global_context.dart';
+import 'package:flutter_tdd/core/helpers/global_state.dart';
 import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 
 class AppConfig {
@@ -11,9 +13,11 @@ class AppConfig {
 
   String get defaultLanguage => 'ar';
 
+  String? get token => GlobalState.instance.get(ApplicationConstants.keyToken);
+
   String get baseUrl => "https://${const String.fromEnvironment('APP_BASE_URL')}/";
 
-  String get imageBaseUrl => "https://cdn.thiqeel.com/apps/sharingpath/thiqeel/uploads/simaatApp/";
+  String get imageBaseUrl => "$baseUrl$token/";
 
   String get baseAPIUrl =>
       "https://${const String.fromEnvironment('APP_BASE_URL')}${const String.fromEnvironment('APP_API')}";

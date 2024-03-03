@@ -27,11 +27,13 @@ import 'package:flutter_tdd/features/auth/presentation/pages/verify_otp/verify_o
 import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart'
     as _i9;
 import 'package:flutter_tdd/features/contract/data/models/contract_model/contract_model.dart'
-    as _i20;
+    as _i21;
+import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart'
+    as _i19;
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_details/contract_details_imports.dart'
     as _i4;
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_screen/contract_screen_imports.dart'
-    as _i21;
+    as _i22;
 import 'package:flutter_tdd/features/contract/presentation/pages/filter_contract/filter_contract_imports.dart'
     as _i5;
 import 'package:flutter_tdd/features/contract/presentation/pages/renew_contract_status/renew_contract_status_imports.dart'
@@ -39,7 +41,7 @@ import 'package:flutter_tdd/features/contract/presentation/pages/renew_contract_
 import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart'
     as _i15;
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart'
-    as _i19;
+    as _i20;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance/add_maintenance_imports.dart'
     as _i2;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance_status/add_maintenance_status_imports.dart'
@@ -47,7 +49,7 @@ import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintena
 import 'package:flutter_tdd/features/maintenance/presentation/pages/filter_maintenance/filter_maintenance_imports.dart'
     as _i6;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/maintenance_screen/maintenance_screen_imports.dart'
-    as _i22;
+    as _i23;
 import 'package:flutter_tdd/features/notification/presentation/pages/notices_screen/notices_screen_imports.dart'
     as _i11;
 
@@ -63,9 +65,14 @@ abstract class $AppRouter extends _i17.RootStackRouter {
       );
     },
     AddMaintenanceRoute.name: (routeData) {
+      final args = routeData.argsAs<AddMaintenanceRouteArgs>(
+          orElse: () => const AddMaintenanceRouteArgs());
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.AddMaintenance(),
+        child: _i2.AddMaintenance(
+          key: args.key,
+          propModel: args.propModel,
+        ),
       );
     },
     CompleteAddMaintenanceRoute.name: (routeData) {
@@ -196,16 +203,40 @@ class ActiveAccount extends _i17.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.AddMaintenance]
-class AddMaintenanceRoute extends _i17.PageRouteInfo<void> {
-  const AddMaintenanceRoute({List<_i17.PageRouteInfo>? children})
-      : super(
+class AddMaintenanceRoute extends _i17.PageRouteInfo<AddMaintenanceRouteArgs> {
+  AddMaintenanceRoute({
+    _i18.Key? key,
+    _i19.PropModel? propModel,
+    List<_i17.PageRouteInfo>? children,
+  }) : super(
           AddMaintenanceRoute.name,
+          args: AddMaintenanceRouteArgs(
+            key: key,
+            propModel: propModel,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'AddMaintenanceRoute';
 
-  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
+  static const _i17.PageInfo<AddMaintenanceRouteArgs> page =
+      _i17.PageInfo<AddMaintenanceRouteArgs>(name);
+}
+
+class AddMaintenanceRouteArgs {
+  const AddMaintenanceRouteArgs({
+    this.key,
+    this.propModel,
+  });
+
+  final _i18.Key? key;
+
+  final _i19.PropModel? propModel;
+
+  @override
+  String toString() {
+    return 'AddMaintenanceRouteArgs{key: $key, propModel: $propModel}';
+  }
 }
 
 /// generated route for
@@ -214,7 +245,7 @@ class CompleteAddMaintenanceRoute
     extends _i17.PageRouteInfo<CompleteAddMaintenanceRouteArgs> {
   CompleteAddMaintenanceRoute({
     _i18.Key? key,
-    _i19.MaintenanceModel? model,
+    _i20.MaintenanceModel? model,
     List<_i17.PageRouteInfo>? children,
   }) : super(
           CompleteAddMaintenanceRoute.name,
@@ -239,7 +270,7 @@ class CompleteAddMaintenanceRouteArgs {
 
   final _i18.Key? key;
 
-  final _i19.MaintenanceModel? model;
+  final _i20.MaintenanceModel? model;
 
   @override
   String toString() {
@@ -253,7 +284,7 @@ class ContractDetailsRoute
     extends _i17.PageRouteInfo<ContractDetailsRouteArgs> {
   ContractDetailsRoute({
     _i18.Key? key,
-    required _i20.ContractModel model,
+    required _i21.ContractModel model,
     List<_i17.PageRouteInfo>? children,
   }) : super(
           ContractDetailsRoute.name,
@@ -278,7 +309,7 @@ class ContractDetailsRouteArgs {
 
   final _i18.Key? key;
 
-  final _i20.ContractModel model;
+  final _i21.ContractModel model;
 
   @override
   String toString() {
@@ -291,7 +322,7 @@ class ContractDetailsRouteArgs {
 class FilterContractRoute extends _i17.PageRouteInfo<FilterContractRouteArgs> {
   FilterContractRoute({
     _i18.Key? key,
-    required _i21.ContractScreenController controller,
+    required _i22.ContractScreenController controller,
     List<_i17.PageRouteInfo>? children,
   }) : super(
           FilterContractRoute.name,
@@ -316,7 +347,7 @@ class FilterContractRouteArgs {
 
   final _i18.Key? key;
 
-  final _i21.ContractScreenController controller;
+  final _i22.ContractScreenController controller;
 
   @override
   String toString() {
@@ -330,7 +361,7 @@ class FilterMaintenanceRoute
     extends _i17.PageRouteInfo<FilterMaintenanceRouteArgs> {
   FilterMaintenanceRoute({
     _i18.Key? key,
-    required _i22.MaintenanceController controller,
+    required _i23.MaintenanceController controller,
     List<_i17.PageRouteInfo>? children,
   }) : super(
           FilterMaintenanceRoute.name,
@@ -355,7 +386,7 @@ class FilterMaintenanceRouteArgs {
 
   final _i18.Key? key;
 
-  final _i22.MaintenanceController controller;
+  final _i23.MaintenanceController controller;
 
   @override
   String toString() {

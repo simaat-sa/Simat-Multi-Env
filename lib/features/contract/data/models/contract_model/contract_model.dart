@@ -4,6 +4,7 @@ import 'package:flutter_tdd/core/enums/date_types.dart';
 import 'package:flutter_tdd/core/enums/tenant_visibility.dart';
 import 'package:flutter_tdd/core/extensions/price_format.dart';
 import 'package:flutter_tdd/core/extensions/string_helper_extension.dart';
+import 'package:flutter_tdd/core/models/localized_name_model/localized_name_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'contract_model.freezed.dart';
@@ -18,8 +19,13 @@ class ContractModel with _$ContractModel {
   factory ContractModel({
     @JsonKey(name: 'prop_id',defaultValue: "")required String propId,
     @JsonKey(name: 'tts_code',defaultValue: "")required String code,
+    @JsonKey(name: 'are_id', defaultValue: "0") required String areId,
+    @JsonKey(name: 'are_code', defaultValue: "0") required String areCode,
+    @JsonKey(name: 'are_are_id', defaultValue: "0") required String areAreId,
     @JsonKey(name: 'are_desc_fo',defaultValue: "")required String unitName,
-    @JsonKey(name: 'parent_desc_ar',defaultValue: "")required String blocName,
+    @JsonKey(name: 'parent_desc_ar',defaultValue: "")required String blocNameAr,
+    @JsonKey(name: 'parent_desc_en',defaultValue: "")required String blocNameEn,
+    @JsonKey(name: 'contact_name',defaultValue: "")required String contactName,
     @JsonKey(name: 'cal_type')required DateTypes dateType,
     @JsonKey(name: 'tts_end_date_hj',defaultValue: "")required String dataTimeHj,
     @JsonKey(name: 'tts_end_date_dgr',defaultValue: "")required String dataTimeStamp,
@@ -62,5 +68,7 @@ class ContractModel with _$ContractModel {
   String get additionalPrice => contractAdditionalPrice.priceFormat;
 
   String get duePrice => totalDuePrice.priceFormat;
+
+  String get blockName => LocalizedNameModel.fromStrings(ar: blocNameAr, en: blocNameEn).getLocalizedString;
 
 }

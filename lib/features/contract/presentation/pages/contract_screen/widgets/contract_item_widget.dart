@@ -2,6 +2,7 @@ part of 'contract_screen_widgets_imports.dart';
 
 class ContractItemWidget extends StatelessWidget {
   final ContractModel model;
+
   const ContractItemWidget({super.key, required this.model});
 
   @override
@@ -140,7 +141,7 @@ class ContractItemWidget extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    '${Translate.of(context).expired} ${model.date}',
+                    '${Translate.of(context).expireIn} ${model.date}',
                     style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                   ),
                 ],
@@ -151,5 +152,4 @@ class ContractItemWidget extends StatelessWidget {
       ),
     );
   }
-
 }

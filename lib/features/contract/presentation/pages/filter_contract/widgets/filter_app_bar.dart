@@ -20,6 +20,7 @@ class FilterAppBarWidget extends StatelessWidget {
             child: Icon(
               Icons.close,
               color: context.colors.darkTextColor,
+              size: 35,
             ),
           ),
         ],

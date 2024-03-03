@@ -2,7 +2,9 @@ part of 'add_maintenance_imports.dart';
 
 @RoutePage(name: 'AddMaintenanceRoute')
 class AddMaintenance extends StatefulWidget {
-  const AddMaintenance({super.key});
+
+  final PropModel? propModel;
+  const AddMaintenance({super.key, this.propModel});
 
   @override
   State<AddMaintenance> createState() => _AddMaintenanceState();
@@ -13,7 +15,7 @@ class _AddMaintenanceState extends State<AddMaintenance> {
 
   @override
   void initState() {
-    controller = AddMaintenanceController(context);
+    controller = AddMaintenanceController(context, widget.propModel);
     super.initState();
   }
 

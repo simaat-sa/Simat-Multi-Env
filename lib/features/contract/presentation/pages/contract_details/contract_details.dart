@@ -26,7 +26,7 @@ class _ContractDetailsState extends State<ContractDetails> {
       child: Scaffold(
         appBar: DefaultAppBar(
           centerTitle: false,
-          title: "${widget.model.unitName} - ${widget.model.blocName}",
+          title: "${widget.model.unitName} - ${widget.model.blockName}",
           showBack: true,
         ),
         body: Padding(

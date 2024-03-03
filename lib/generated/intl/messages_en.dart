@@ -187,7 +187,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No internet connection"),
         "estimated_cost":
             MessageLookupByLibrary.simpleMessage("Estimated cost"),
-        "expired": MessageLookupByLibrary.simpleMessage("Expired at"),
+        "expireIn": MessageLookupByLibrary.simpleMessage("Expire in"),
+        "expired": MessageLookupByLibrary.simpleMessage("Expired"),
         "failureActions":
             MessageLookupByLibrary.simpleMessage("Failure Actions"),
         "fillField":

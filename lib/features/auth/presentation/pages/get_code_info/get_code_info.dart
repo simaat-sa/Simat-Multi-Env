@@ -31,7 +31,7 @@ class _GetCodeInfoState extends State<GetCodeInfo> {
                   child: Icon(
                     Icons.close,
                     color: context.colors.black,
-                    size: 24,
+                    size: 35,
                   ),
                 ),
               ],
