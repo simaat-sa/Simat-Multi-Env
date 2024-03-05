@@ -13,19 +13,24 @@ class TabsItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10,bottom: 15),
+      padding: const EdgeInsets.only(top: 10, bottom: 15),
       child: Column(
         children: [
-           SizedBox(
-             height: 24,
-             child: SvgPicture.network(
-                color: isActive ? context.colors.primary : context.colors.darkTextColor,
-                model.iconSvg,
-              ),
-           ),
+          SizedBox(
+            height: 24,
+            child: model.pageid == "0"
+                ? Icon(
+                    Icons.menu,
+                    color: isActive ? context.colors.primary : context.colors.darkTextColor,
+                  )
+                : SvgPicture.network(
+                    color: isActive ? context.colors.primary : context.colors.darkTextColor,
+                    model.iconSvg,
+                  ),
+          ),
           Gaps.vGap4,
           Text(
-            model.pageName,
+            model.pageid == "0" ? Translate.of(context).menu : model.localizedName,
             style: AppTextStyle.s14_w500(
               color: isActive ? context.colors.primary : context.colors.darkTextColor,
             ),

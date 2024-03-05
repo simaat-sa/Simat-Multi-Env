@@ -8,7 +8,6 @@ import 'package:flutter_tdd/core/widgets/base_form_option/controller/option_cont
 import 'package:flutter_tdd/core/widgets/base_form_option/sheet/option_sheet_content.dart';
 import 'package:get_it/get_it.dart';
 
-
 abstract class AppBottomSheets {
   const AppBottomSheets._();
 
@@ -24,7 +23,6 @@ abstract class AppBottomSheets {
         enableDrag: true,
         builder: builder);
   }
-
   static Future<T?> showScrollableBody<T>(
       {required BuildContext context,
       required WidgetBuilder builder,
@@ -34,7 +32,7 @@ abstract class AppBottomSheets {
       backgroundColor: context.colors.white,
       isDismissible: false,
       isScrollControlled: true,
-      enableDrag: false,
+      enableDrag: true,
       constraints: constraints,
       shape: const OutlineInputBorder(
         borderRadius: Dimens.sheetBorderRadius,
@@ -102,7 +100,6 @@ abstract class AppBottomSheets {
       },
     );
   }
-
 }
 
 class SheetActionButton {

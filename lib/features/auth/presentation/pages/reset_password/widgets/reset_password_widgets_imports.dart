@@ -8,6 +8,5 @@ import 'package:flutter_tdd/features/auth/presentation/pages/reset_password/rese
 import 'package:flutter_tdd/res.dart';
 import 'package:flutter_tdd/core/helpers/validator.dart';
 
-
 part 'reset_password_form.dart';
 part 'reset_password_button.dart';

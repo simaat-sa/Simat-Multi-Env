@@ -6,7 +6,6 @@ class ActiveAccount extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() => _ActiveAccountState();
-
 }
 
 class _ActiveAccountState extends State<ActiveAccount> {
@@ -27,7 +26,8 @@ class _ActiveAccountState extends State<ActiveAccount> {
         children: [
           const AuthHeaderTitleWidget(
             title: "Enter your security code",
-            subTitle: "In order for us to be able to reset your password, please enter your phone number below.",
+            subTitle:
+                "In order for us to be able to reset your password, please enter your phone number below.",
           ),
           PinFieldWidget(
             onComplete: controller.onComplete,

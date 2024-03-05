@@ -2,23 +2,18 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_phoenix/flutter_phoenix.dart';
+import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/errors/custom_error.dart';
 import 'package:flutter_tdd/core/errors/not_found_error.dart';
 import 'package:flutter_tdd/core/errors/unauthorized_error.dart';
 import 'package:flutter_tdd/core/helpers/app_snack_bar_service.dart';
-import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 @lazySingleton
 class HandleErrors {
-  void catchError(
-      {Response? response,
-      required Function(dynamic) errorFunc}) {
+  void catchError({Response? response, required Function(dynamic) errorFunc}) {
     if (response == null) {
       log("failed response Check Server");
       AppSnackBar.showSimpleToast(msg: "Check Server");
@@ -29,7 +24,7 @@ class HandleErrors {
       try {
         if (data is String) data = json.decode(response.data);
         String message = "";
-        if(response.statusCode!=422){
+        if (response.statusCode != 422) {
           message = errorFunc(data).toString();
         }
         switch (response.statusCode) {
@@ -71,11 +66,10 @@ class HandleErrors {
     }
   }
 
-  MyResult<Response> statusError(
-      Response response, Function(dynamic) errorFunc) {
+  MyResult<Response> statusError(Response response, Function(dynamic) errorFunc) {
     if (response.statusCode == 401) {
       return MyResult.isError(UnauthorizedError());
-    }else if (response.statusCode == 404) {
+    } else if (response.statusCode == 404) {
       return MyResult.isError(NotFoundError());
     }
     return MyResult.isSuccess(response);
@@ -83,7 +77,7 @@ class HandleErrors {
 
   void _tokenExpired() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.remove("user");
-    Phoenix.rebirth(getIt<BuildContext>());
+    prefs.clear();
+    AppConfig.instance.restartApp();
   }
 }

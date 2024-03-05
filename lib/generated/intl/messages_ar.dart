@@ -24,39 +24,138 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m1(count) => "طلبات الصيانة ${count}";
 
-  static String m2(MB, files) =>
+  static String m2(code) =>
+      "لقد قمنا بإرسال رسالة جوال تحتوي على رمز ضمان الجودة لطلبكم رقم ${code}";
+
+  static String m3(MB, files) =>
       "يجب أن تكون حجم الملفات التالية أقل من ${MB} ميحابيت, ${files}";
+
+  static String m4(version) => "اصدار ${version}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "About_New_version":
+            MessageLookupByLibrary.simpleMessage("جديد الإصدار"),
+        "About_Simat_application":
+            MessageLookupByLibrary.simpleMessage("عن تطبيق سمات"),
         "AddressValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل العنوان"),
+        "Amendments_to_information_confidentiality":
+            MessageLookupByLibrary.simpleMessage(
+                "التعديلات على سياسة سرية وخصوصية المعلومات"),
+        "Amendments_to_information_confidentiality_desc":
+            MessageLookupByLibrary.simpleMessage(
+                "نحتفظ بالحق في تعديل بنود وشروط سياسة سرية وخصوصية المعلومات إن لزم الأمر ومتى كان ذلك ملائماً. سيتم تنفيذ التعديلات هنا وسيتم بصفة مستمرة إخطارك بالبيانات التي حصلنا عليها , وكيف سنستخدمها والجهة التي سنقوم بتزويدها بهذه البيانات."),
+        "Arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "Disclosure_of_information":
+            MessageLookupByLibrary.simpleMessage("إفشاء المعلومات"),
+        "Disclosure_of_information_desc": MessageLookupByLibrary.simpleMessage(
+            "سنحافظ في كافة الأوقات على خصوصية وسرية كافة البيانات الشخصية التي نتحصل عليها. ولن يتم إفشاء هذه المعلومات إلا إذا كان ذلك مطلوباً بموجب أي قانون أو عندما نعتقد بحسن نية أن مثل هذا الإجراء سيكون مطلوباً أو مرغوباً فيه للتمشي مع القانون , أو للدفاع عن أو حماية حقوق الملكية الخاصة بهذا الموقع أو الجهات المستفيدة منه. البيانات اللازمة لتنفيذ المعاملات المطلوبة من قبلك عندما نحتاج إلى أية بيانات خاصة بك , فإننا سنطلب منك تقديمها بمحض إرادتك. حيث ستساعدنا هذه المعلومات في الاتصال بك وتنفيذ طلباتك حيثما كان ذلك ممكنناً. لن يتم اطلاقاً بيع البيانات المقدمة من قبلك إلى أي طرف ثالث بغرض تسويقها لمصلحته الخاصة دون الحصول على موافقتك المسبقة والمكتوبة ما لم يتم ذلك على أساس أنها ضمن بيانات جماعية تستخدم للأغراض الإحصائية والأبحاث دون اشتمالها على أية بيانات من الممكن استخدامها للتعريف بك."),
+        "Disclosure_of_information_to_any_third_party":
+            MessageLookupByLibrary.simpleMessage(
+                "إفشاء المعلومات لأي طرف ثالث"),
+        "Disclosure_of_information_to_any_third_party_desc":
+            MessageLookupByLibrary.simpleMessage(
+                "لن نقوم ببيع , المتاجرة , تأجير , أو إفشاء أية معلومات لمصلحة أي طرف ثالث خارج هذا الموقع, أو المواقع التابعة له.وسيتم الكشف عن المعلومات فقط في حالة صدور أمر بذلك من قبل أي سلطة قضائية أو تنظيمية."),
+        "English": MessageLookupByLibrary.simpleMessage("الانجليزية"),
+        "Error_renewal_request":
+            MessageLookupByLibrary.simpleMessage("خطأ في طلب التجديد"),
+        "How_can_I_get_the_code":
+            MessageLookupByLibrary.simpleMessage("كيف يمكن الحصول على الرمز؟"),
+        "Internet_Protocol_address": MessageLookupByLibrary.simpleMessage(
+            "عنوان بروتوكول شبكة الإنترنت (IP)"),
         "Invalid_login_data": MessageLookupByLibrary.simpleMessage(
             "من فضلك تاكد من بيانات تسجيل الدخول"),
+        "Links_to_other_sites_on_Internet":
+            MessageLookupByLibrary.simpleMessage(
+                "الروابط بالمواقع الأخرى على شبكة الإنترنت"),
+        "Login_to_your_platform_through": MessageLookupByLibrary.simpleMessage(
+            "1. تسجيل الدخول على منصتك من خلال المتصفح باستخدام حسابك"),
+        "Network_scans":
+            MessageLookupByLibrary.simpleMessage("عمليات المسح على الشبكة"),
+        "Our_site_may_include_links_to_other_sites":
+            MessageLookupByLibrary.simpleMessage(
+                "قد يشتمل موقعنا على روابط بالمواقع الأخرى على شبكة الإنترنت. او علانات من مواقع اخرى مثل Google AdSense ولا نعتبر مسئولين عن أساليب تجميع البيانات من قبل تلك المواقع, يمكنك الاطلاع على سياسات السرية والمحتويات الخاصة بتلك المواقع التي يتم الدخول إليها من خلال أي رابط ضمن هذا الموقع. نحن قد نستعين بشركات إعلان لأطراف ثالثة لعرض الإعلانات عندما تزور موقعنا على الويب. يحق لهذه الشركات أن تستخدم معلومات حول زياراتك لهذا الموقع ولمواقع الويب الأخرى (باستثناء الاسم أو العنوان أو عنوان البريد الإلكتروني أو رقم الهاتف)، وذلك من أجل تقديم إعلانات حول البضائع والخدمات التي تهمك."),
         "Please_authenticate_to_login": MessageLookupByLibrary.simpleMessage(
             "يرجى التسجيل لدخول إلى حسابك"),
+        "Privacy_Policy":
+            MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+        "Privacy_Policy_and_Confidentiality":
+            MessageLookupByLibrary.simpleMessage(
+                "سياسة الخصوصية وبيان سريّة المعلومات"),
+        "QR_mobile_application": MessageLookupByLibrary.simpleMessage(
+            "2.  في أعلى الشاشة “حمل الآن تطبيق سمات” أو من قائمة اعدادات المستخدم اختر “تطبيق الجوال QR"),
+        "Share_the_app": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
         "Sign_In": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "Technical_support_ticket":
+            MessageLookupByLibrary.simpleMessage("تذكرة دعم فني"),
+        "The_surveys_that_we_conduct_directly_on_the_network":
+            MessageLookupByLibrary.simpleMessage(
+                "إن عمليات المسح التي نقوم بها مباشرة على الشبكة تمكننا من تجميع بيانات محددة مثل البيانات المطلوبة منك بخصوص نظرتك وشعورك تجاه موقعنا.تعتبر ردودك ذات أهمية قصوى , ومحل تقديرنا حيث أنها تمكننا من تحسين مستوى موقعنا, ولك كامل الحرية والإختيار في تقديم البيانات المتعلقة بإسمك والبيانات الأخرى."),
         "Welcome": MessageLookupByLibrary.simpleMessage("مرحبا بك"),
+        "When_you_contact_us":
+            MessageLookupByLibrary.simpleMessage("عند الاتصال بنا"),
+        "When_you_contact_us_desc": MessageLookupByLibrary.simpleMessage(
+            "سيتم التعامل مع كافة البيانات المقدمة من قبلك على أساس أنها سرية . تتطلب النماذج التي يتم تقديمها مباشرة على الشبكة تقديم البيانات التي ستساعدنا في تحسين موقعنا.سيتم استخدام البيانات التي يتم تقديمها من قبلك في الرد على كافة استفساراتك , ملاحظاتك , أو طلباتك من قبل هذا الموقع أو أيا من المواقع التابعة له ."),
         "access_denied": MessageLookupByLibrary.simpleMessage("تم رفض الوصول"),
         "active": MessageLookupByLibrary.simpleMessage("فعال"),
+        "add_new_contact":
+            MessageLookupByLibrary.simpleMessage("طلب صيانة جديد"),
         "add_new_item": MessageLookupByLibrary.simpleMessage("إضافة عنصر جديد"),
+        "additional_amounts":
+            MessageLookupByLibrary.simpleMessage("مبالغ إضافية"),
         "app_cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "app_confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "applicant": MessageLookupByLibrary.simpleMessage("مقدم الطلب"),
         "application_approval":
             MessageLookupByLibrary.simpleMessage("الموافقة على الطلب"),
+        "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
         "attribution": MessageLookupByLibrary.simpleMessage("الإسناد"),
+        "back_to_contracts":
+            MessageLookupByLibrary.simpleMessage("عودة إلى العقود"),
+        "back_to_main_page":
+            MessageLookupByLibrary.simpleMessage("عودة الى الرئيسية"),
+        "back_to_maintenance_requests":
+            MessageLookupByLibrary.simpleMessage("عودة لطلبات الصيانة"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "canceled": MessageLookupByLibrary.simpleMessage("ألغيت"),
         "closed": MessageLookupByLibrary.simpleMessage("مغلق"),
+        "collector": MessageLookupByLibrary.simpleMessage("محصل"),
         "commercial": MessageLookupByLibrary.simpleMessage("تجاري"),
         "completed": MessageLookupByLibrary.simpleMessage("مكتمل"),
+        "concerns_and_concerns_about_the_privacy":
+            MessageLookupByLibrary.simpleMessage(
+                "نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على شبكة الإنترنت لقد تم إعداد هذه السياسة لمساعدتكم في تفهم طبيعة البيانات التي نقوم بتجميعها منكم عند زيارتكم لموقعنا على شبكة الانترنت وكيفية تعاملنا مع هذه البيانات الشخصية."),
+        "conductor": MessageLookupByLibrary.simpleMessage("المحصل"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل كلمة المرورمتطابق"),
+        "confirm_payment": MessageLookupByLibrary.simpleMessage("تأكيد السداد"),
+        "contract": MessageLookupByLibrary.simpleMessage("عقد"),
+        "contract_end_date":
+            MessageLookupByLibrary.simpleMessage("تاريخ نهاية العقد"),
+        "contract_renewal": MessageLookupByLibrary.simpleMessage("تجديد العقد"),
+        "contract_status": MessageLookupByLibrary.simpleMessage("حاله العقد"),
+        "contract_type": MessageLookupByLibrary.simpleMessage("نوع العقد"),
         "contractsCount": m0,
         "copied_successfully":
             MessageLookupByLibrary.simpleMessage("تم النسخ بنجاح"),
+        "cost_at_my_own_expense": MessageLookupByLibrary.simpleMessage(
+            "تكلفة الصيانة على نفقتي الخاصة"),
+        "customer_mobile": MessageLookupByLibrary.simpleMessage("جوال العميل"),
+        "date_of_request": MessageLookupByLibrary.simpleMessage("تاريخ الطلب"),
+        "days_remaining_and_allowed": MessageLookupByLibrary.simpleMessage(
+            "الايام المتبقيه على انتهاء العقد اكثر من الايام المسموحه للتجديد"),
+        "description": MessageLookupByLibrary.simpleMessage("الوصف"),
+        "description_of_maintenance":
+            MessageLookupByLibrary.simpleMessage("وصف الصيانة"),
+        "deserved_amount":
+            MessageLookupByLibrary.simpleMessage("المبلغ المستحق"),
+        "district_region":
+            MessageLookupByLibrary.simpleMessage("الحي . المنطقة"),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
+        "due": MessageLookupByLibrary.simpleMessage("مستحق"),
+        "due_date": MessageLookupByLibrary.simpleMessage("تاريخ استحقاق "),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("طلب غير صالح"),
         "error_NotFound_Error":
@@ -82,13 +181,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("حصل خطأ في السيرفر"),
         "error_socket":
             MessageLookupByLibrary.simpleMessage("تأكد من إتصالك بالانترنيت"),
+        "estimated_cost": MessageLookupByLibrary.simpleMessage("تكلفة تقديرية"),
+        "expireIn": MessageLookupByLibrary.simpleMessage("ينتهي في"),
         "expired": MessageLookupByLibrary.simpleMessage("منتهي"),
         "failureActions": MessageLookupByLibrary.simpleMessage("إجراءات الفشل"),
         "fillField": MessageLookupByLibrary.simpleMessage("الرجاء ملء الحقل"),
+        "filter": MessageLookupByLibrary.simpleMessage("تصفية"),
+        "final_cost": MessageLookupByLibrary.simpleMessage("تكلفة نهائية"),
+        "finally_desc": MessageLookupByLibrary.simpleMessage(
+            "إن مخاوفك واهتمامك بشأن سرية وخصوصية البيانات تعتبر مسألة في غاية الأهمية بالنسبة لنا.نحن نأمل أن يتم تحقيق .ذلك من خلال هذه السياسة."),
+        "finally_policy": MessageLookupByLibrary.simpleMessage("اخيرا"),
         "how_get_code": MessageLookupByLibrary.simpleMessage(
             "كيف يمكنني الحصول علي الرمز؟"),
         "implemented": MessageLookupByLibrary.simpleMessage("مُنفّذ"),
         "inactive": MessageLookupByLibrary.simpleMessage("غير نشط"),
+        "insurance": MessageLookupByLibrary.simpleMessage("تأمين"),
         "internet_connected":
             MessageLookupByLibrary.simpleMessage("تم الاتصال بالانترنت"),
         "label_Login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
@@ -109,43 +216,104 @@ class MessageLookup extends MessageLookupByLibrary {
         "label_register":
             MessageLookupByLibrary.simpleMessage("تسجيل حساب جديد"),
         "loadingText": MessageLookupByLibrary.simpleMessage("تحميل…"),
+        "log_out_failed":
+            MessageLookupByLibrary.simpleMessage("فشل تسجيل الخروج"),
+        "log_out_success":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الخروج بنجاح"),
         "login_with_qr": MessageLookupByLibrary.simpleMessage(
             "مسح رمز الاستجابة لتسجيل الدخول"),
         "mailValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل البريد صحيحا"),
+        "main_property": MessageLookupByLibrary.simpleMessage("العقار الرئيسي"),
         "maintenanceCount": m1,
+        "maintenance_has_been_requested":
+            MessageLookupByLibrary.simpleMessage("تم طلب الصيانة"),
+        "maintenance_request":
+            MessageLookupByLibrary.simpleMessage("طلب الصيانة"),
+        "maintenance_request_failed_please_try_again":
+            MessageLookupByLibrary.simpleMessage(
+                "لم يتم طلب الصيانة لخطأ ما، برجاء اعادة المحاولة"),
+        "maintenance_request_status":
+            MessageLookupByLibrary.simpleMessage("حالة طلب الصيانة"),
+        "maintenance_type": MessageLookupByLibrary.simpleMessage("نوع الصيانة"),
+        "mark_all_read":
+            MessageLookupByLibrary.simpleMessage("تعليم الكل كمقروء"),
+        "maybe_later_back_to_the_main_page":
+            MessageLookupByLibrary.simpleMessage(
+                "ربما لاحقا، عودة الى الرئيسية"),
+        "menu": MessageLookupByLibrary.simpleMessage("القائمة"),
+        "message_containing_code_for_your_order": m2,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
-        "new_code": MessageLookupByLibrary.simpleMessage("كود جديد"),
+        "net_contract": MessageLookupByLibrary.simpleMessage("صافي العقد"),
+        "new_code": MessageLookupByLibrary.simpleMessage("جديدة"),
+        "new_maintenance_request":
+            MessageLookupByLibrary.simpleMessage("طلب صيانة جديد"),
+        "new_notices": MessageLookupByLibrary.simpleMessage("اشعارات جديدة"),
         "no_internet_connection":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالانترنت"),
+        "no_items_found": MessageLookupByLibrary.simpleMessage("لا يوجد نتائج"),
+        "no_notices": MessageLookupByLibrary.simpleMessage("لا إشعارات"),
+        "no_notices_now": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد لديك إشعارات الآن، برجاء معاودة التحقق لاحقا"),
+        "notify": MessageLookupByLibrary.simpleMessage("الإشعارات"),
+        "order_has_received": MessageLookupByLibrary.simpleMessage(
+            "تم استلام الطلب، وسنقوم بتحديثك قريبًا"),
         "owner": MessageLookupByLibrary.simpleMessage("مالك"),
         "passValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل على الاقل 6 حروف او ارقام"),
         "paused": MessageLookupByLibrary.simpleMessage("متوقف مؤقتا"),
+        "pay_now": MessageLookupByLibrary.simpleMessage("السداد"),
+        "payments": MessageLookupByLibrary.simpleMessage("المدفوعات"),
         "phoneValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل الجوال صحيحا"),
         "pick": MessageLookupByLibrary.simpleMessage("اختيار"),
         "please_fill_all_fields":
             MessageLookupByLibrary.simpleMessage("من فضلك املأ جميع الحقول"),
         "posted": MessageLookupByLibrary.simpleMessage("نشر"),
+        "real_estate_unit":
+            MessageLookupByLibrary.simpleMessage("الوحدة العقارية"),
         "rejected_by_the_owner":
             MessageLookupByLibrary.simpleMessage("مرفوض من قبل المالك"),
         "rejected_by_the_supervisor":
             MessageLookupByLibrary.simpleMessage("مرفوض من المشرف"),
+        "request_to_renew_contract":
+            MessageLookupByLibrary.simpleMessage("طلب تجديد العقد الحالي"),
+        "requesting_maintenance": MessageLookupByLibrary.simpleMessage(
+            "طلب اجراء صيانة أو اصلاحات للوحدة"),
+        "required": MessageLookupByLibrary.simpleMessage("المطلوب"),
+        "reset": MessageLookupByLibrary.simpleMessage("اعادة تعيين"),
         "residential": MessageLookupByLibrary.simpleMessage("سكني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
+        "sar": MessageLookupByLibrary.simpleMessage(" ر.س"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
-        "size_more_than_mg_error": m2,
+        "size_more_than_mg_error": m3,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
+        "splash_desc_title": MessageLookupByLibrary.simpleMessage(
+            "برنامج إدارة الأملاك العقارية"),
+        "splash_first_title": MessageLookupByLibrary.simpleMessage(
+            "صنعت بشغف © منصة سمات العقارية "),
         "successfully_Logged_in":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
+        "summary": MessageLookupByLibrary.simpleMessage("الملخص"),
         "supervisor_approved":
             MessageLookupByLibrary.simpleMessage("تمت الموافقة من قبل المشرف"),
         "supervisor_identifications":
-            MessageLookupByLibrary.simpleMessage("هويات المشرف"),
-        "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا")
+            MessageLookupByLibrary.simpleMessage("تحديد المشرف"),
+        "tax": MessageLookupByLibrary.simpleMessage("ضريبة"),
+        "total_contract": MessageLookupByLibrary.simpleMessage("إجمالي العقد"),
+        "total_due": MessageLookupByLibrary.simpleMessage("اجمالي المستحق"),
+        "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
+        "unit_maintenance":
+            MessageLookupByLibrary.simpleMessage("صيانة الوحدة"),
+        "user_or_phone_hint": MessageLookupByLibrary.simpleMessage(
+            "هاتفك الجوال او اسم المستخدم"),
+        "using_the_QR_code_scan_the_QR_code_that_appears":
+            MessageLookupByLibrary.simpleMessage(
+                "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح"),
+        "version_label": m4,
+        "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات")
       };
 }

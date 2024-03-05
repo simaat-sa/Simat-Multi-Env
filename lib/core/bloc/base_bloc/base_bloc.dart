@@ -5,7 +5,8 @@ import '../../errors/base_error.dart';
 import 'base_state.dart';
 
 class BaseBloc<T> extends Cubit<BaseState<T>> {
-  BaseBloc([T? data]) : super(data != null ? BaseState.success( true, data) : const BaseState.init());
+  BaseBloc([T? data])
+      : super(data != null ? BaseState.success(true, data) : const BaseState.init());
 
   T? _data;
   bool _dataChanged = true;
@@ -18,7 +19,7 @@ class BaseBloc<T> extends Cubit<BaseState<T>> {
 
   bool get hasNoData => data == null;
 
-  bool get isSuccess => state.whenOrNull(success: (changed,model) => true) ?? false;
+  bool get isSuccess => state.whenOrNull(success: (changed, model) => true) ?? false;
 
   bool get isFail => (state.whenOrNull(failure: (error, callback) => true) ?? false);
 

@@ -3,7 +3,6 @@ import 'package:flutter_tdd/core/helpers/color_helper.dart';
 import 'package:flutter_tdd/core/theme/colors/app_colors.dart';
 
 class AppDarkColors extends AppColors {
-
   @override
   Color get primary => ColorHelper.hexToColor(const String.fromEnvironment("PRIMARY_COLOR"));
 
@@ -19,7 +18,6 @@ class AppDarkColors extends AppColors {
   @override
   Color get white => Colors.black;
 
-
   @override
   Color get inputBorder => const Color(0xffE8E8E8);
 
@@ -29,7 +27,7 @@ class AppDarkColors extends AppColors {
   @override
   Color get background => const Color(0xffF2F6F8);
 
- @override
+  @override
   Color get backgroundWhite => Colors.black;
 
   @override
@@ -39,10 +37,10 @@ class AppDarkColors extends AppColors {
   Color get greyWhite => Colors.grey.withOpacity(.2);
 
   @override
-  Color get disableGray=> Colors.black38;
+  Color get disableGray => Colors.black38;
 
   @override
-  Color get green=>  Colors.green;
+  Color get green => Colors.green;
 
   @override
   Color get green2 => const Color(0xff239397);
@@ -69,4 +67,16 @@ class AppDarkColors extends AppColors {
 
   @override
   Color get bgLight => const Color(0xffF5F6F8);
+
+  @override
+  Color get primaryGrey => const Color(0xffA5AEAE);
+
+  @override
+  Color get errorColor => const Color(0xffFF6969);
+
+  @override
+  Color get noticesTextColor => const Color(0xff6b6b6c);
+
+  @override
+  Color get secondaryText => const Color(0xff186669);
 }

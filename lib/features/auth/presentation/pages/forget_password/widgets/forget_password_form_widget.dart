@@ -1,8 +1,8 @@
-part of'forget_password_widgets_imports.dart';
+part of 'forget_password_widgets_imports.dart';
 
 class ForgetPasswordFormWidget extends StatelessWidget {
   final ForgetPasswordController controller;
-  const ForgetPasswordFormWidget({super.key,required this.controller});
+  const ForgetPasswordFormWidget({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {

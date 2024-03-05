@@ -1,15 +1,16 @@
 import 'package:flutter_tdd/core/enums/access_pages_enum.dart';
+import 'package:flutter_tdd/core/models/localized_name_model/localized_name_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user_access_model.freezed.dart';
 part 'user_access_model.g.dart';
 
-@freezed
-class UserAccessModel with _$UserAccessModel{
+@unfreezed
+class UserAccessModel with _$UserAccessModel {
   const UserAccessModel._();
   @JsonSerializable(explicitToJson: true)
   factory UserAccessModel({
-     required String pageid,
+    required String pageid,
     @JsonKey(name: 'page_code') required AccessPages pageCode,
     @JsonKey(name: 'page_ar') required String pageAr,
     @JsonKey(name: 'page_en') required String pageEn,
@@ -21,7 +22,9 @@ class UserAccessModel with _$UserAccessModel{
     @JsonKey(name: 'icon_svg') required String iconSvg,
   }) = _UserAccessModel;
 
+  factory UserAccessModel.fromJson(Map<String, dynamic> json) => _$UserAccessModelFromJson(json);
 
-  factory UserAccessModel.fromJson(Map<String, dynamic> json) =>
-      _$UserAccessModelFromJson(json);
+
+  String get localizedName => LocalizedNameModel.fromStrings(ar: pageAr, en: pageEn).getLocalizedString;
+
 }

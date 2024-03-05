@@ -21,17 +21,17 @@ class NetworkLayerWidget extends StatefulWidget {
 }
 
 class _NetworkLayerWidgetState extends State<NetworkLayerWidget> {
-   final ObsValue<bool> _visibilityObs  = ObsValue<bool>.withInit(false);
+  final ObsValue<bool> _visibilityObs = ObsValue<bool>.withInit(false);
 
-   @override
+  @override
   void didUpdateWidget(covariant NetworkLayerWidget oldWidget) {
-     if (!widget.isNetworkConnected) {
-       _visibilityObs.setValue(true);
-     }else{
-       Future.delayed(const Duration(milliseconds: 1000), () {
-         _visibilityObs.setValue(false);
-       });
-     }
+    if (!widget.isNetworkConnected) {
+      _visibilityObs.setValue(true);
+    } else {
+      Future.delayed(const Duration(milliseconds: 1000), () {
+        _visibilityObs.setValue(false);
+      });
+    }
     super.didUpdateWidget(oldWidget);
   }
 
@@ -47,10 +47,10 @@ class _NetworkLayerWidgetState extends State<NetworkLayerWidget> {
                 return Visibility(
                   visible: visible,
                   child: Container(
-                    height: Platform.isIOS? 35 : 30,
+                    height: Platform.isIOS ? 35 : 30,
                     width: MediaQuery.of(context).size.width,
                     padding: const EdgeInsets.only(top: 6),
-                    color: widget.isNetworkConnected? context.colors.green : context.colors.black,
+                    color: widget.isNetworkConnected ? context.colors.green : context.colors.black,
                     child: Text(
                       Translate.of(context).no_internet_connection,
                       textAlign: TextAlign.center,
@@ -60,8 +60,7 @@ class _NetworkLayerWidgetState extends State<NetworkLayerWidget> {
                     ),
                   ),
                 );
-              }
-          ),
+              }),
         ],
       ),
     );

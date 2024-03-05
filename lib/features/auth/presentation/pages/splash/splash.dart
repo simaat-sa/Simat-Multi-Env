@@ -1,6 +1,6 @@
 part of 'splash_imports.dart';
 
-@RoutePage()
+@RoutePage(name: "SplashRoute")
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
 

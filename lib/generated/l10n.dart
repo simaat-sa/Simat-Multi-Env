@@ -680,6 +680,16 @@ class S {
     );
   }
 
+  /// `Expire in`
+  String get expireIn {
+    return Intl.message(
+      'Expire in',
+      name: 'expireIn',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Closed`
   String get closed {
     return Intl.message(
@@ -830,10 +840,10 @@ class S {
     );
   }
 
-  /// `New code`
+  /// `New`
   String get new_code {
     return Intl.message(
-      'New code',
+      'New',
       name: 'new_code',
       desc: '',
       args: [],
@@ -845,6 +855,986 @@ class S {
     return Intl.message(
       'Search',
       name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New maintenance request`
+  String get add_new_contact {
+    return Intl.message(
+      'New maintenance request',
+      name: 'add_new_contact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The main property`
+  String get main_property {
+    return Intl.message(
+      'The main property',
+      name: 'main_property',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Real estate unit`
+  String get real_estate_unit {
+    return Intl.message(
+      'Real estate unit',
+      name: 'real_estate_unit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maintenance Type`
+  String get maintenance_type {
+    return Intl.message(
+      'Maintenance Type',
+      name: 'maintenance_type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customer's mobile phone`
+  String get customer_mobile {
+    return Intl.message(
+      'Customer\'s mobile phone',
+      name: 'customer_mobile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maintenance cost at my own expense`
+  String get cost_at_my_own_expense {
+    return Intl.message(
+      'Maintenance cost at my own expense',
+      name: 'cost_at_my_own_expense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description of maintenance`
+  String get description_of_maintenance {
+    return Intl.message(
+      'Description of maintenance',
+      name: 'description_of_maintenance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maintenance request`
+  String get maintenance_request {
+    return Intl.message(
+      'Maintenance request',
+      name: 'maintenance_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maintenance has been requested`
+  String get maintenance_has_been_requested {
+    return Intl.message(
+      'Maintenance has been requested',
+      name: 'maintenance_has_been_requested',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back to maintenance requests`
+  String get back_to_maintenance_requests {
+    return Intl.message(
+      'Back to maintenance requests',
+      name: 'back_to_maintenance_requests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maybe later, back to the main page`
+  String get maybe_later_back_to_the_main_page {
+    return Intl.message(
+      'Maybe later, back to the main page',
+      name: 'maybe_later_back_to_the_main_page',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have sent a mobile message containing the quality assurance code for your order no{code}`
+  String message_containing_code_for_your_order(Object code) {
+    return Intl.message(
+      'We have sent a mobile message containing the quality assurance code for your order no$code',
+      name: 'message_containing_code_for_your_order',
+      desc: '',
+      args: [code],
+    );
+  }
+
+  /// `A maintenance request was not requested due to an error. Please try again`
+  String get maintenance_request_failed_please_try_again {
+    return Intl.message(
+      'A maintenance request was not requested due to an error. Please try again',
+      name: 'maintenance_request_failed_please_try_again',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Filter`
+  String get filter {
+    return Intl.message(
+      'Filter',
+      name: 'filter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maintenance request status`
+  String get maintenance_request_status {
+    return Intl.message(
+      'Maintenance request status',
+      name: 'maintenance_request_status',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset`
+  String get reset {
+    return Intl.message(
+      'Reset',
+      name: 'reset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date of request`
+  String get date_of_request {
+    return Intl.message(
+      'Date of request',
+      name: 'date_of_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Applicant`
+  String get applicant {
+    return Intl.message(
+      'Applicant',
+      name: 'applicant',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Estimated cost`
+  String get estimated_cost {
+    return Intl.message(
+      'Estimated cost',
+      name: 'estimated_cost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Final Cost`
+  String get final_cost {
+    return Intl.message(
+      'Final Cost',
+      name: 'final_cost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract status`
+  String get contract_status {
+    return Intl.message(
+      'Contract status',
+      name: 'contract_status',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract Type`
+  String get contract_type {
+    return Intl.message(
+      'Contract Type',
+      name: 'contract_type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Due`
+  String get due {
+    return Intl.message(
+      'Due',
+      name: 'due',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile phone or Username`
+  String get user_or_phone_hint {
+    return Intl.message(
+      'Mobile phone or Username',
+      name: 'user_or_phone_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Summary`
+  String get summary {
+    return Intl.message(
+      'Summary',
+      name: 'summary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `payments`
+  String get payments {
+    return Intl.message(
+      'payments',
+      name: 'payments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract`
+  String get contract {
+    return Intl.message(
+      'Contract',
+      name: 'contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `District . Region`
+  String get district_region {
+    return Intl.message(
+      'District . Region',
+      name: 'district_region',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract end date`
+  String get contract_end_date {
+    return Intl.message(
+      'Contract end date',
+      name: 'contract_end_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Contract`
+  String get total_contract {
+    return Intl.message(
+      'Total Contract',
+      name: 'total_contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Net contract`
+  String get net_contract {
+    return Intl.message(
+      'Net contract',
+      name: 'net_contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Insurance`
+  String get insurance {
+    return Intl.message(
+      'Insurance',
+      name: 'insurance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Additional amounts`
+  String get additional_amounts {
+    return Intl.message(
+      'Additional amounts',
+      name: 'additional_amounts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Collector`
+  String get collector {
+    return Intl.message(
+      'Collector',
+      name: 'collector',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total due`
+  String get total_due {
+    return Intl.message(
+      'Total due',
+      name: 'total_due',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Conductor`
+  String get conductor {
+    return Intl.message(
+      'Conductor',
+      name: 'conductor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Required`
+  String get required {
+    return Intl.message(
+      'Required',
+      name: 'required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay now`
+  String get pay_now {
+    return Intl.message(
+      'Pay now',
+      name: 'pay_now',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unit maintenance`
+  String get unit_maintenance {
+    return Intl.message(
+      'Unit maintenance',
+      name: 'unit_maintenance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Requesting maintenance or repairs to the unit`
+  String get requesting_maintenance {
+    return Intl.message(
+      'Requesting maintenance or repairs to the unit',
+      name: 'requesting_maintenance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contract renewal`
+  String get contract_renewal {
+    return Intl.message(
+      'Contract renewal',
+      name: 'contract_renewal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request to renew the current contract`
+  String get request_to_renew_contract {
+    return Intl.message(
+      'Request to renew the current contract',
+      name: 'request_to_renew_contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Renewal request has been completed successfully`
+  String get renewal_request_completed {
+    return Intl.message(
+      'Renewal request has been completed successfully',
+      name: 'renewal_request_completed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error in renewal request`
+  String get Error_renewal_request {
+    return Intl.message(
+      'Error in renewal request',
+      name: 'Error_renewal_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back to contracts`
+  String get back_to_contracts {
+    return Intl.message(
+      'Back to contracts',
+      name: 'back_to_contracts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The order has been received, we will update you soon`
+  String get order_has_received {
+    return Intl.message(
+      'The order has been received, we will update you soon',
+      name: 'order_has_received',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The days remaining until the end of the contract are more than the days allowed for renewal`
+  String get days_remaining_and_allowed {
+    return Intl.message(
+      'The days remaining until the end of the contract are more than the days allowed for renewal',
+      name: 'days_remaining_and_allowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No notifications`
+  String get no_notices {
+    return Intl.message(
+      'No notifications',
+      name: 'no_notices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You don't have any notifications yet, please check back later`
+  String get no_notices_now {
+    return Intl.message(
+      'You don\'t have any notifications yet, please check back later',
+      name: 'no_notices_now',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back to main page`
+  String get back_to_main_page {
+    return Intl.message(
+      'Back to main page',
+      name: 'back_to_main_page',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New notifications`
+  String get new_notices {
+    return Intl.message(
+      'New notifications',
+      name: 'new_notices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get English {
+    return Intl.message(
+      'English',
+      name: 'English',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get Arabic {
+    return Intl.message(
+      'Arabic',
+      name: 'Arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share This App`
+  String get Share_the_app {
+    return Intl.message(
+      'Share This App',
+      name: 'Share_the_app',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy Policy`
+  String get Privacy_Policy {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'Privacy_Policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Technical support ticket`
+  String get Technical_support_ticket {
+    return Intl.message(
+      'Technical support ticket',
+      name: 'Technical_support_ticket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About Simat application`
+  String get About_Simat_application {
+    return Intl.message(
+      'About Simat application',
+      name: 'About_Simat_application',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What's New`
+  String get About_New_version {
+    return Intl.message(
+      'What\'s New',
+      name: 'About_New_version',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy Policy and Confidentiality Statement`
+  String get Privacy_Policy_and_Confidentiality {
+    return Intl.message(
+      'Privacy Policy and Confidentiality Statement',
+      name: 'Privacy_Policy_and_Confidentiality',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How can I get the code?`
+  String get How_can_I_get_the_code {
+    return Intl.message(
+      'How can I get the code?',
+      name: 'How_can_I_get_the_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Network scans`
+  String get Network_scans {
+    return Intl.message(
+      'Network scans',
+      name: 'Network_scans',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Finally`
+  String get finally_policy {
+    return Intl.message(
+      'Finally',
+      name: 'finally_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `marks all`
+  String get mark_all_read {
+    return Intl.message(
+      'marks all',
+      name: 'mark_all_read',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your concerns and concerns regarding the confidentiality and privacy of data are extremely important to us. We hope that this will be achieved through this policy.`
+  String get finally_desc {
+    return Intl.message(
+      'Your concerns and concerns regarding the confidentiality and privacy of data are extremely important to us. We hope that this will be achieved through this policy.',
+      name: 'finally_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Amendments to the information confidentiality and privacy policy`
+  String get Amendments_to_information_confidentiality {
+    return Intl.message(
+      'Amendments to the information confidentiality and privacy policy',
+      name: 'Amendments_to_information_confidentiality',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We reserve the right to amend the terms and conditions of the confidentiality and information privacy policy if necessary and whenever appropriate. The amendments will be implemented here, and you will be continuously notified of the data we have obtained, how we will use it, and who we will provide this data to.`
+  String get Amendments_to_information_confidentiality_desc {
+    return Intl.message(
+      'We reserve the right to amend the terms and conditions of the confidentiality and information privacy policy if necessary and whenever appropriate. The amendments will be implemented here, and you will be continuously notified of the data we have obtained, how we will use it, and who we will provide this data to.',
+      name: 'Amendments_to_information_confidentiality_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Disclosure of information to any third party`
+  String get Disclosure_of_information_to_any_third_party {
+    return Intl.message(
+      'Disclosure of information to any third party',
+      name: 'Disclosure_of_information_to_any_third_party',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will not sell, trade, rent, or disclose any information for the benefit of any third party outside this site, or its affiliated sites. The information will be disclosed only if an order to do so is issued by any judicial or regulatory authority.`
+  String get Disclosure_of_information_to_any_third_party_desc {
+    return Intl.message(
+      'We will not sell, trade, rent, or disclose any information for the benefit of any third party outside this site, or its affiliated sites. The information will be disclosed only if an order to do so is issued by any judicial or regulatory authority.',
+      name: 'Disclosure_of_information_to_any_third_party_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All data provided by you will be treated as confidential. The forms that are submitted directly on the network require the submission of data that will help us improve our site. The data provided by you will be used to respond to all your inquiries, comments, or requests by this site or any of its affiliated sites.`
+  String get When_you_contact_us_desc {
+    return Intl.message(
+      'All data provided by you will be treated as confidential. The forms that are submitted directly on the network require the submission of data that will help us improve our site. The data provided by you will be used to respond to all your inquiries, comments, or requests by this site or any of its affiliated sites.',
+      name: 'When_you_contact_us_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When you contact us`
+  String get When_you_contact_us {
+    return Intl.message(
+      'When you contact us',
+      name: 'When_you_contact_us',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will at all times maintain the privacy and confidentiality of all personal data we obtain. This information will not be disclosed unless this is required by any law or when we believe in good faith that such action will be required or desirable to comply with the law, or to defend or protect the property rights of this site or the parties benefiting from it. Data necessary to carry out the transactions requested by you When we need any data of your own, we will ask you to provide it of your own free will. This information will help us contact you and fulfill your requests wherever possible. The data provided by you will never be sold to any third party for the purpose of marketing it for its own benefit without obtaining your prior written consent unless this is done on the basis that it is part of collective data used for statistical purposes and research without including any data that can be used to identify you.`
+  String get Disclosure_of_information_desc {
+    return Intl.message(
+      'We will at all times maintain the privacy and confidentiality of all personal data we obtain. This information will not be disclosed unless this is required by any law or when we believe in good faith that such action will be required or desirable to comply with the law, or to defend or protect the property rights of this site or the parties benefiting from it. Data necessary to carry out the transactions requested by you When we need any data of your own, we will ask you to provide it of your own free will. This information will help us contact you and fulfill your requests wherever possible. The data provided by you will never be sold to any third party for the purpose of marketing it for its own benefit without obtaining your prior written consent unless this is done on the basis that it is part of collective data used for statistical purposes and research without including any data that can be used to identify you.',
+      name: 'Disclosure_of_information_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Disclosure of information`
+  String get Disclosure_of_information {
+    return Intl.message(
+      'Disclosure of information',
+      name: 'Disclosure_of_information',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our site may include links to other sites on the Internet. Or advertisements from other sites such as Google AdSense, and we are not responsible for the methods of data collection by those sites. You can view the privacy policies and contents of those sites that are accessed through any link within this site. We may use third-party advertising companies to serve ads when you visit our website. These companies may use information about your visits to this and other websites (except name, address, email address or telephone number) in order to provide advertisements about goods and services of interest to you.`
+  String get Our_site_may_include_links_to_other_sites {
+    return Intl.message(
+      'Our site may include links to other sites on the Internet. Or advertisements from other sites such as Google AdSense, and we are not responsible for the methods of data collection by those sites. You can view the privacy policies and contents of those sites that are accessed through any link within this site. We may use third-party advertising companies to serve ads when you visit our website. These companies may use information about your visits to this and other websites (except name, address, email address or telephone number) in order to provide advertisements about goods and services of interest to you.',
+      name: 'Our_site_may_include_links_to_other_sites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Links to other sites on the Internet`
+  String get Links_to_other_sites_on_Internet {
+    return Intl.message(
+      'Links to other sites on the Internet',
+      name: 'Links_to_other_sites_on_Internet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The surveys that we conduct directly on the network enable us to collect specific data, such as the data required from you regarding your view and feeling about our site. Your responses are of the utmost importance, and are appreciated by us as they enable us to improve the level of our site, and you have complete freedom and choice in providing data related to your name and the data. The other.`
+  String get The_surveys_that_we_conduct_directly_on_the_network {
+    return Intl.message(
+      'The surveys that we conduct directly on the network enable us to collect specific data, such as the data required from you regarding your view and feeling about our site. Your responses are of the utmost importance, and are appreciated by us as they enable us to improve the level of our site, and you have complete freedom and choice in providing data related to your name and the data. The other.',
+      name: 'The_surveys_that_we_conduct_directly_on_the_network',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Any time you visit any website, including this site, the hosting server will record your Internet Protocol (IP) address, the date and time of the visit, the type of Internet browser you use, and the URL of any Internet site that refers you to this site at the network.`
+  String get server_visit_any_website {
+    return Intl.message(
+      'Any time you visit any website, including this site, the hosting server will record your Internet Protocol (IP) address, the date and time of the visit, the type of Internet browser you use, and the URL of any Internet site that refers you to this site at the network.',
+      name: 'server_visit_any_website',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Internet Protocol (IP) address`
+  String get Internet_Protocol_address {
+    return Intl.message(
+      'Internet Protocol (IP) address',
+      name: 'Internet_Protocol_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We appreciate your concerns and concerns about the privacy of your data on the Internet. This policy has been prepared to help you understand the nature of the data we collect from you when you visit our website and how we deal with this personal data.`
+  String get concerns_and_concerns_about_the_privacy {
+    return Intl.message(
+      'We appreciate your concerns and concerns about the privacy of your data on the Internet. This policy has been prepared to help you understand the nature of the data we collect from you when you visit our website and how we deal with this personal data.',
+      name: 'concerns_and_concerns_about_the_privacy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1. Login to your platform through the browser using your account`
+  String get Login_to_your_platform_through {
+    return Intl.message(
+      '1. Login to your platform through the browser using your account',
+      name: 'Login_to_your_platform_through',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2. At the top of the screen, “Download the Simat application now,” or from the user settings menu, choose “QR mobile application.”`
+  String get QR_mobile_application {
+    return Intl.message(
+      '2. At the top of the screen, “Download the Simat application now,” or from the user settings menu, choose “QR mobile application.”',
+      name: 'QR_mobile_application',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser`
+  String get using_the_QR_code_scan_the_QR_code_that_appears {
+    return Intl.message(
+      '3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser',
+      name: 'using_the_QR_code_scan_the_QR_code_that_appears',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New maintenance request`
+  String get new_maintenance_request {
+    return Intl.message(
+      'New maintenance request',
+      name: 'new_maintenance_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Menu`
+  String get menu {
+    return Intl.message(
+      'Menu',
+      name: 'menu',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notification`
+  String get notify {
+    return Intl.message(
+      'Notification',
+      name: 'notify',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logged out successfully`
+  String get log_out_success {
+    return Intl.message(
+      'Logged out successfully',
+      name: 'log_out_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout failed`
+  String get log_out_failed {
+    return Intl.message(
+      'Logout failed',
+      name: 'log_out_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Made with passion © Simat Real Estate Platform`
+  String get splash_first_title {
+    return Intl.message(
+      'Made with passion © Simat Real Estate Platform',
+      name: 'splash_first_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Real estate property management program`
+  String get splash_desc_title {
+    return Intl.message(
+      'Real estate property management program',
+      name: 'splash_desc_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version {version}`
+  String version_label(Object version) {
+    return Intl.message(
+      'Version $version',
+      name: 'version_label',
+      desc: '',
+      args: [version],
+    );
+  }
+
+  /// `Deserved amount`
+  String get deserved_amount {
+    return Intl.message(
+      'Deserved amount',
+      name: 'deserved_amount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View payments`
+  String get view_payments {
+    return Intl.message(
+      'View payments',
+      name: 'view_payments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm payment`
+  String get confirm_payment {
+    return Intl.message(
+      'Confirm payment',
+      name: 'confirm_payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `due date`
+  String get due_date {
+    return Intl.message(
+      'due date',
+      name: 'due_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tax`
+  String get tax {
+    return Intl.message(
+      'Tax',
+      name: 'tax',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply`
+  String get apply {
+    return Intl.message(
+      'Apply',
+      name: 'apply',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` SAR`
+  String get sar {
+    return Intl.message(
+      ' SAR',
+      name: 'sar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `!No Item Found`
+  String get no_items_found {
+    return Intl.message(
+      '!No Item Found',
+      name: 'no_items_found',
       desc: '',
       args: [],
     );

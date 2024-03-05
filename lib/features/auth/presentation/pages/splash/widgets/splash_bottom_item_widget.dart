@@ -6,7 +6,7 @@ class SplashBottomItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.only(bottom:30,start: 20,end: 20),
+      padding: const EdgeInsetsDirectional.only(bottom: 30, start: 20, end: 20),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -14,18 +14,25 @@ class SplashBottomItemWidget extends StatelessWidget {
         children: [
           Text(
               textAlign: TextAlign.center,
-              'Version 01.04.23 ',
+              Translate.s.splash_first_title,
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),
           Gaps.vGap5,
           Text(
               textAlign: TextAlign.center,
-              '© 2023 by Simaat',
+              Translate.s.splash_desc_title,
               style: AppTextStyle.s12_w400(
                 color: context.colors.black,
               )),
-          Gaps.vGap15,
+          Gaps.vGap5,
+          Text(
+              textAlign: TextAlign.center,
+              'اصدار 35.1.2',
+              style: AppTextStyle.s12_w400(
+                color: context.colors.black,
+              )),
+          Gaps.vGap24,
           LinearPercentIndicator(
             barRadius: Radius.circular(50.r),
             lineHeight: 3.r,

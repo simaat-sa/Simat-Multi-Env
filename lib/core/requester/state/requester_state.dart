@@ -40,7 +40,7 @@ class RequesterState<T> with _$RequesterState<T> {
 }
 
 extension RequesterStateExtension<T> on RequesterState<T> {
-  RequesterState<T> copy(){
+  RequesterState<T> copy() {
     return when(
       init: () => const RequesterState.init(),
       loading: () => const RequesterState.loading(),

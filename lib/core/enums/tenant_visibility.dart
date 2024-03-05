@@ -24,7 +24,7 @@ enum TenantVisibility {
     return non;
   }
 
-  String getLocalizedName(){
+  String getLocalizedName() {
     switch (this) {
       case TenantVisibility.active:
         return Translate.s.active;
@@ -39,7 +39,7 @@ enum TenantVisibility {
     }
   }
 
-  Color getColor(){
+  Color getColor() {
     switch (this) {
       case TenantVisibility.active:
         return AppColors.fixedColors.green3;
@@ -53,5 +53,4 @@ enum TenantVisibility {
         return AppColors.fixedColors.primary;
     }
   }
-
 }

@@ -21,17 +21,15 @@ class LoginFormWidget extends StatelessWidget {
             type: TextInputType.emailAddress,
             action: TextInputAction.next,
             validate: (value) => value?.validateEmpty(),
-            hint: Translate.of(context).label_email,
+            hint: Translate.of(context).user_or_phone_hint,
             textColor: context.colors.secondary,
             margin: const EdgeInsets.only(top: 40),
             prefixIcon: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: SvgPicture.asset(
-                Res.emailIcon,
-                height: 24,
-                width: 24,
-              ),
-            ),
+                padding: const EdgeInsets.all(12.0),
+                child: Icon(
+                  Icons.person_outline_outlined,
+                  color: context.colors.primaryText,
+                )),
           ),
           ObsValueConsumer(
             observable: controller.visibleObs,
@@ -61,9 +59,7 @@ class LoginFormWidget extends StatelessWidget {
                 suffixIcon: InkWell(
                   onTap: () => controller.visibleObs.setValue(!state),
                   child: Icon(
-                    state == true
-                        ? Icons.visibility_outlined
-                        : Icons.visibility_off_outlined,
+                    state == true ? Icons.visibility_outlined : Icons.visibility_off_outlined,
                     size: 20,
                     color: context.colors.textColor,
                   ),

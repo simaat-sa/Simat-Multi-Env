@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/theme/colors/app_colors.dart';
 
 class ColorHelper {
-
   static String colorToHex(Color color) {
     return color.value.toRadixString(16).substring(2);
   }
 
   static Color hexToColor(String? strColor) {
-    try{
+    try {
       var hexColor = strColor?.replaceAll("#", "");
       if (hexColor?.length == 6) {
         hexColor = "FF$hexColor";
@@ -17,13 +16,13 @@ class ColorHelper {
         return Color(int.parse("0x$hexColor"));
       }
       return AppColors.fixedColors.primary;
-    }catch(_){
+    } catch (_) {
       return AppColors.fixedColors.primary;
     }
   }
 
   static Color darken(Color color, [double amount = 1]) {
-    amount = amount /10.0;
+    amount = amount / 10.0;
     assert(amount >= 0 && amount <= 1);
 
     final hsl = HSLColor.fromColor(color);
@@ -33,7 +32,7 @@ class ColorHelper {
   }
 
   static Color lighten(Color color, [double amount = 1]) {
-    amount = amount /10.0;
+    amount = amount / 10.0;
     assert(amount >= 0 && amount <= 1);
 
     final hsl = HSLColor.fromColor(color);
@@ -41,5 +40,4 @@ class ColorHelper {
 
     return hslLight.toColor();
   }
-
 }

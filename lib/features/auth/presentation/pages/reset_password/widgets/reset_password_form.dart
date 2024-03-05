@@ -1,8 +1,8 @@
-part of'reset_password_widgets_imports.dart';
+part of 'reset_password_widgets_imports.dart';
 
 class ResetPasswordForm extends StatelessWidget {
   final ResetPasswordController controller;
-  const ResetPasswordForm({Key? key,required this.controller}) : super(key: key);
+  const ResetPasswordForm({Key? key, required this.controller}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,6 @@ class ResetPasswordForm extends StatelessWidget {
             child: SvgPicture.asset(Res.password),
           ),
         ),
-
       ],
     );
   }

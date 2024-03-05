@@ -23,10 +23,8 @@ class BaseOptionsRequester<T> extends Requester<List<T>> {
     }
   }
 
-
-
-  void emitLastData(){
-    successState(data??[]);
+  void emitLastData() {
+    successState(data ?? []);
   }
 
   Future<List<T>> get options async {
@@ -52,11 +50,11 @@ class BaseOptionsRequester<T> extends Requester<List<T>> {
       _searchTerm = null;
       successState(_initialOptions!);
     } else {
-        _searchTerm = searchTerm;
-        _requestDebounceTimer = Timer(const Duration(milliseconds: 600), () {
-          loadingState();
-          request();
-        });
+      _searchTerm = searchTerm;
+      _requestDebounceTimer = Timer(const Duration(milliseconds: 600), () {
+        loadingState();
+        request();
+      });
     }
   }
 
@@ -75,13 +73,13 @@ class BaseOptionsRequester<T> extends Requester<List<T>> {
     successState(searchedEntries);
   }
 
-  void addOptionLocally(T option){
+  void addOptionLocally(T option) {
     _initialOptions?.insert(0, option);
-    successState(_initialOptions??[]);
+    successState(_initialOptions ?? []);
   }
 
   @override
-  Future<void> request({bool fromRemote = true})async {
+  Future<void> request({bool fromRemote = true}) async {
     if (hasNoData) loadingState();
     final result = await fetcher(_searchTerm);
     result.when(isSuccess: (items) {

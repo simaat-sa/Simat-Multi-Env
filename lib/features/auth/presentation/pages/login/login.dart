@@ -25,9 +25,8 @@ class _LoginState extends State<Login> {
         top: true,
         child: AuthScaffoldWidget(
           scaffoldKey: controller.drawerKey,
-          appBar: AuthAppBarWidget(
-            showBack: false,
-            scaffoldkey: controller.drawerKey,
+          appBar:  AuthAppBarWidget(
+            showBack: false, scaffoldkey: controller.drawerKey,
           ),
           body: GestureDetector(
             onTap: FocusScope.of(context).unfocus,
@@ -45,8 +44,8 @@ class _LoginState extends State<Login> {
                       LoginButtonWidget(controller: controller),
                       Gaps.vGap16,
                       LoginWithQrButtonWidget(controller: controller),
-                      Gaps.vGap10,
-                      const GetCodeTextWidget(),
+                      Gaps.vGap16,
+                       GetCodeTextWidget(controller: controller,),
                       // ForgetPasswordViewWidget(controller: controller,),
                       Gaps.vGap32,
                       LoginFingerPrintWidget(

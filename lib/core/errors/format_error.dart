@@ -7,5 +7,4 @@ class FormatError extends BaseError {
   bool operator ==(Object other) =>
       identical(this, other) ||
       super == other && other is FormatError && runtimeType == other.runtimeType;
-
 }

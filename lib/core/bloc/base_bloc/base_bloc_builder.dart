@@ -31,7 +31,7 @@ class BaseBlocBuilder<T> extends StatelessWidget {
       builder: (_, state) {
         return state.maybeWhen(
           orElse: () => Gaps.empty,
-          success: (changed,data) {
+          success: (changed, data) {
             return onSuccessWidget(data as T);
           },
           loading: () => onLoadingWidget?.call(context) ?? const AppLoaderWidget.largeLogo(),

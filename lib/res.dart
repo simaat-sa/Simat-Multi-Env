@@ -37,4 +37,14 @@ class Res {
   static const String detailsLogo = "assets/images/details_logo.svg";
   static const String successLogo = "assets/images/success_logo.svg";
   static const String failLogo = "assets/images/fail_logo.svg";
+  static const String unitLocationLogo = "assets/images/unit_location_logo.svg";
+  static const String paymentLogo = "assets/images/pay_logo.svg";
+  static const String maintLogo = "assets/images/maint_logo.svg";
+  static const String renewContractLogo = "assets/images/renew_contract_logo.svg";
+  static const String noticesEmpty = "assets/images/notices_empty_logo.svg";
+  static const String moreBarLogo = "assets/images/more_bar_logo.svg";
+  static const String howToLoginQrCode = "assets/images/how-to-login-with-qr-code.png";
+  static const String qrCodeView = "assets/images/qr-code_view.png";
+  static const String avatarLogo = "assets/images/avatar_logo.png";
+  static const String avatarSolidLogo = "assets/images/avatar_solid_logo.png";
 }

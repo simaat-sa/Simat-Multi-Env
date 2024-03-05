@@ -1,4 +1,5 @@
 import 'package:flutter_tdd/core/constants/app_config.dart';
+import 'package:flutter_tdd/features/maintenance/domain/entity/maintenance_params.dart';
 
 class ApiNames {
   static String baseUrl = AppConfig.instance.baseAPIUrl;
@@ -6,6 +7,7 @@ class ApiNames {
 
   // auth routes
   static String login = "${version1Part}auth/login";
+  static String logOut = "${version1Part}auth/logout";
   static const String refreshToken = "auth";
   static const String savePublicKey = "users/";
   static const String updateUser = "users/";
@@ -18,12 +20,24 @@ class ApiNames {
 
   /// tenant routes
   static String getTenant = "${version1Part}tenant/list";
+  static String renewContract(String id) => "${version1Part}contract/renew?tts_id=$id";
 
-  /// contracts routes
-  static String getContracts = "${version1Part}maintenance/list";
-
+  /// props and units routes
   static String properties = "${version1Part}tenant/properties/list";
-  static String propUnits(String id) => "${version1Part}tenant/properties/units/list?prop_id==$id";
+  static String propUnits = "${version1Part}tenant/units";
+
+  /// maintenance routes
+  static String maintenanceRequests(int page) => "${version1Part}maintenance/list?page=$page";
   static String maintenanceServices = "${version1Part}maintenance/services";
   static String maintenanceAdd = "${version1Part}maintenance/add";
+  static String getNotices = "${version1Part}notification/list";
+  static String contractPayment(String id) => "${version1Part}contract/payment/list?tts_id=$id";
+  static String noticesUnread= "${version1Part}notification/unread-count";
+  static String noticesRead= "${version1Part}notification/read";
+  static String getProperties= "${version1Part}property/list";
+
+
+
+  /// General Links
+  static String supportLink = "https://simaat.sa/service/submitticket.php?step=2&deptid=1";
 }

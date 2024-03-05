@@ -25,7 +25,7 @@ class BottomSheetButtonWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           AppTextButton.minWhite(
-            text: Translate.s.cancel,
+            text: Translate.of(context).cancel,
             onPressed: () async {
               if (onCancelPressed != null) {
                 onCancelPressed!();
@@ -36,7 +36,7 @@ class BottomSheetButtonWidget extends StatelessWidget {
           ),
           Gaps.hGap8,
           AppTextButton.minPrimary(
-            text: customSaveText ?? Translate.s.save,
+            text: customSaveText ?? Translate.of(context).save,
             onPressed: onSaveTextPressed,
           ),
         ],

@@ -1,4 +1,3 @@
-
 import 'dart:developer';
 
 extension TextUtilsStringExtension on String? {

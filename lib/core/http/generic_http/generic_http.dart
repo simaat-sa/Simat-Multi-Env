@@ -1,4 +1,3 @@
-
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_tdd/core/bloc/device_cubit/device_cubit.dart';
@@ -23,7 +22,6 @@ abstract class GenericHttp<T> {
 
 @lazySingleton
 class GenericHttpImpl<T> extends GenericHttp<T> {
-
   @preResolve
   @override
   Future<MyResult<T>> call(HttpRequestModel model) async {
@@ -60,7 +58,8 @@ class GenericHttpImpl<T> extends GenericHttp<T> {
       response,
       model.responseType,
       model.toJsonFunc ?? (val) {},
-      model.responseKey,
+      model.responseKey ?? (val) {},
+      model.errorFunc ?? (val) {},
     );
     return customType;
   }
@@ -70,12 +69,10 @@ class GenericHttpImpl<T> extends GenericHttp<T> {
     await getIt<NetworkInfoImpl>().isConnected.then((connected) async {
       context.read<DeviceCubit>().setNetworkStatus(connected);
       if (!connected) {
-        await Future.delayed(const Duration(seconds: 5), ()async {
+        await Future.delayed(const Duration(seconds: 5), () async {
           await _checkInternetConnection();
         });
       }
     });
-
   }
-
 }

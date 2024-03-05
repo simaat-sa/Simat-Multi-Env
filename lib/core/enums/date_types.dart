@@ -17,6 +17,4 @@ enum DateTypes {
     } catch (_) {}
     return non;
   }
-
-
 }

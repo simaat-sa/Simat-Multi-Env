@@ -9,7 +9,6 @@ import 'home_remote_data_source.dart';
 
 @Injectable(as: HomeRemoteDataSource)
 class ImplHomeRemoteDataSource extends HomeRemoteDataSource {
-
   @override
   Future<MyResult<UserModel>> getUser(bool param) async {
     HttpRequestModel model = HttpRequestModel(
@@ -21,6 +20,4 @@ class ImplHomeRemoteDataSource extends HomeRemoteDataSource {
     );
     return await GenericHttpImpl<UserModel>()(model);
   }
-
-
 }

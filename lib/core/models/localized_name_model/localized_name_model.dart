@@ -1,5 +1,10 @@
 import 'package:collection/collection.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tdd/core/bloc/device_cubit/device_cubit.dart';
 import 'package:flutter_tdd/core/constants/app_config.dart';
+import 'package:flutter_tdd/core/helpers/di.dart';
+import 'package:flutter_tdd/core/helpers/global_context.dart';
+
 
 /// how to use ?
 /// @JsonKey(name: "name", ) required final LocalizedNameModel localizedName,
@@ -12,12 +17,15 @@ class LocalizedNameModel {
     return const LocalizedNameModel();
   }
 
+  factory LocalizedNameModel.fromStrings({required String ar, required String en}) {
+    return LocalizedNameModel.fromJson({'en': en, "ar": ar});
+  }
+
   factory LocalizedNameModel.fromString(String? str) {
     final contentJson = {AppConfig.instance.defaultLanguage: str};
     contentJson.putIfAbsent(AppConfig.instance.defaultLanguage, () => str);
     return LocalizedNameModel(contentJson);
   }
-
 
   factory LocalizedNameModel.fromJson(json) {
     return LocalizedNameModel(json);
@@ -38,6 +46,23 @@ class LocalizedNameModel {
     }
     return null;
   }
+
+  /// [LocalizedStringType] it comes from field model and it will be Map of String
+  /// [key] is the key of the language
+  /// [values] is the value of the language
+  /// this function will return the correct localized based on device language
+  String get getLocalizedString {
+    var context = getIt<GlobalContext>().context();
+    var lang = context.watch<DeviceCubit>().state.model.locale.languageCode;
+    try {
+      if (jsonValue == null) return "";
+      if (jsonValue is String) return jsonValue;
+      return (jsonValue as Map<String, String>)[lang]??"";
+    } catch (_) {
+      return '';
+    }
+  }
+
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -53,8 +78,6 @@ class LocalizedNameModel {
 
   @override
   int get hashCode => jsonValue.hashCode;
-
-
 }
 
 LocalizedNameModel localizedNameModelFromJson(dynamic json) {

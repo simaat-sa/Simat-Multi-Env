@@ -4,7 +4,6 @@ import 'package:flutter_tdd/core/constants/CustomButtonAnimation.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 
-
 class LoadingButton extends StatelessWidget {
   final GlobalKey<CustomButtonState> btnKey;
   final String title;
@@ -20,8 +19,8 @@ class LoadingButton extends StatelessWidget {
   final String? fontFamily;
   final FontWeight? fontWeight;
 
-
-  const LoadingButton({super.key, 
+  const LoadingButton({
+    super.key,
     required this.title,
     required this.onTap,
     this.color,
@@ -39,10 +38,9 @@ class LoadingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color border = color ??context.colors.primary;
+    Color border = color ?? context.colors.primary;
     return Container(
-      margin:
-          margin ?? const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      margin: margin ?? const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Column(
         children: [
           CustomButtonAnimation(
@@ -50,7 +48,7 @@ class LoadingButton extends StatelessWidget {
             onTap: onTap,
             width: width ?? MediaQuery.of(context).size.width,
             minWidth: 45,
-            height: height??45,
+            height: height ?? 45,
             color: color ?? context.colors.primary,
             borderRadius: borderRadius ?? 10,
             borderSide: BorderSide(color: borderColor ?? border, width: 1),
@@ -62,7 +60,7 @@ class LoadingButton extends StatelessWidget {
               ),
             ),
             child: Text(
-               title,
+              title,
               style: AppTextStyle.s12_w500(color: textColor ?? Colors.white).copyWith(
                 fontFamily: fontFamily,
                 fontWeight: fontWeight,

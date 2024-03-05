@@ -9,13 +9,13 @@ class OptionButtonDecoration extends StatelessWidget {
   final BoxConstraints? constraints;
   final Border? border;
 
-  const OptionButtonDecoration({super.key, required this.child, this.startPadding, this.constraints, this
-      .border});
+  const OptionButtonDecoration(
+      {super.key, required this.child, this.startPadding, this.constraints, this.border});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: constraints??AppConfig.textFieldConstrains,
+      constraints: constraints ?? AppConfig.textFieldConstrains,
       padding: EdgeInsetsDirectional.only(top: 10, bottom: 10, start: startPadding ?? 12, end: 12),
       width: double.maxFinite,
       decoration: BoxDecoration(

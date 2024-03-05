@@ -7,7 +7,5 @@ import 'package:flutter_tdd/features/auth/presentation/widgets/auth_app_bar_widg
 import 'package:flutter_tdd/features/auth/presentation/widgets/auth_header_title_widget.dart';
 import 'package:flutter_tdd/features/auth/presentation/widgets/auth_scaffold_widget.dart';
 
-
-
 part 'forget_password.dart';
 part 'forget_password_controller.dart';

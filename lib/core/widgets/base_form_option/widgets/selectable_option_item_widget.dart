@@ -5,6 +5,7 @@ import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/widgets/option_item_widget.dart';
 import 'package:flutter_tdd/res.dart';
+
 class SelectableOptionItemWidget extends StatelessWidget {
   final GestureTapCallback? onTap;
   final bool isSelected;
@@ -19,9 +20,8 @@ class SelectableOptionItemWidget extends StatelessWidget {
     this.selectedTextStyle,
   });
 
-
-  TextStyle  _selectedTextStyle(BuildContext context ) => selectedTextStyle??AppTextStyle
-      .s16_w400(color: context.colors.darkTextColor);
+  TextStyle _selectedTextStyle(BuildContext context) =>
+      selectedTextStyle ?? AppTextStyle.s16_w400(color: context.colors.darkTextColor);
 
   @override
   Widget build(BuildContext context) {
@@ -58,13 +58,13 @@ class SelectableOptionItemWidget extends StatelessWidget {
   }
 
   Widget _getPrefix() {
-    if(isSelected){
+    if (isSelected) {
       return SvgPicture.asset(
         Res.checkmark,
       );
     }
-   return SvgPicture.asset(
-    Res.checkmarkEmpty,
+    return SvgPicture.asset(
+      Res.checkmarkEmpty,
     );
   }
 }
