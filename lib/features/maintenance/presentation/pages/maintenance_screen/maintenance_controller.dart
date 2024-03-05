@@ -4,6 +4,8 @@ class MaintenanceController {
   ObsValue<ContractStatus> filterContractObs = ObsValue<ContractStatus>.withInit(ContractStatus.non);
   final PagingController<int, MaintenanceModel> pagingController = PagingController(firstPageKey: 1);
 
+  ObsValue<int> maintenanceCount = ObsValue<int>.withInit(0);
+
   String searchText = "";
 
   MaintenanceController() {
@@ -50,7 +52,8 @@ class MaintenanceController {
   Future<void> fetchPropertyData(BuildContext context, int pageIndex) async {
     var params = _maintenanceListParams(pageIndex);
     getIt<MaintenanceRepository>().getContracts(params).then((result) {
-      final data = result.data ?? [];
+      final data = result.data?.data ?? [];
+      maintenanceCount.setValue(result.data?.total ?? 0);
       final isLastPage = data.length < 10;
       if (pageIndex == 1) {
         pagingController.itemList = [];

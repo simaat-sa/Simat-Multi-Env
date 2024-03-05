@@ -35,8 +35,13 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
               },
               onTap: () => AutoRouter.of(context).push(FilterMaintenanceRoute(controller: controller)),
             ),
-            PageHeaderTitleWidget(
-              title: Translate.of(context).maintenanceCount("5"),
+            ObsValueConsumer(
+              observable: controller.maintenanceCount,
+              builder: (context, count) {
+                return PageHeaderTitleWidget(
+                  title: Translate.of(context).maintenanceCount("$count"),
+                );
+              }
             ),
             Gaps.vGap10,
             Flexible(
