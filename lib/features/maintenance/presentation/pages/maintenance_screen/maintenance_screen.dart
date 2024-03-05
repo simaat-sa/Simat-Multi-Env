@@ -27,11 +27,11 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
             FilterItemWidget(
               onChange: (value) {
                 controller.searchText = value;
-                controller.onFilter();
+                controller.onFilter(context);
               },
               onSubmit: (value) {
                 controller.searchText = value;
-                controller.onFilter();
+                controller.onFilter(context);
               },
               onTap: () => AutoRouter.of(context).push(FilterMaintenanceRoute(controller: controller)),
             ),

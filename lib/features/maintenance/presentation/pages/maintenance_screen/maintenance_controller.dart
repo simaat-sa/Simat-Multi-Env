@@ -4,7 +4,7 @@ class MaintenanceController {
   ObsValue<ContractStatus> filterContractObs = ObsValue<ContractStatus>.withInit(ContractStatus.non);
   final PagingController<int, MaintenanceModel> pagingController = PagingController(firstPageKey: 1);
 
-   String searchText = "";
+  String searchText = "";
 
   MaintenanceController() {
     // requestData();
@@ -30,10 +30,15 @@ class MaintenanceController {
     );
   }
 
-  void onFilter() {}
+  void onFilter(BuildContext context) {
+    pagingController.refresh();
+    fetchPropertyData(context, 1);
+  }
 
-  void onResetFilter() {
+  void onResetFilter(BuildContext context) {
+    pagingController.refresh();
     filterContractObs.setValue(ContractStatus.non);
+    fetchPropertyData(context, 1);
   }
 
   void initPaginationController(BuildContext context) {
@@ -62,8 +67,8 @@ class MaintenanceController {
   MaintenanceParams _maintenanceListParams(int pageCode) {
     return MaintenanceParams(
       page: pageCode,
-      filtersName: [filterContractObs.getValue().value],
-      search: "",
+      filter: filterContractObs.getValue().value,
+      search: searchText,
     );
   }
 }

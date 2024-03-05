@@ -14,7 +14,7 @@ class FilterMaintenanceButtons extends StatelessWidget {
           Expanded(
             child: InkWell(
               onTap: () {
-                controller.onFilter();
+                controller.onFilter(context);
                 AutoRouter.of(context).pop();
               },
               child: Container(
@@ -35,7 +35,7 @@ class FilterMaintenanceButtons extends StatelessWidget {
           Expanded(
             child: InkWell(
               onTap: () {
-                controller.onResetFilter();
+                controller.onResetFilter(context);
                 AutoRouter.of(context).pop();
               },
               child: Container(

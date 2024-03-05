@@ -14,7 +14,7 @@ class MaintenanceDataSourceImpl extends MaintenanceDataSource {
   @override
   Future<MyResult<List<MaintenanceModel>>> getContracts(MaintenanceParams params) async {
     HttpRequestModel model = HttpRequestModel(
-      url: ApiNames.maintenanceRequests(params.page),
+      url: ApiNames.maintenanceRequests(params.header()),
       responseType: ResType.list,
       requestMethod: RequestMethod.get,
       refresh: params.refresh,
@@ -35,8 +35,7 @@ class MaintenanceDataSourceImpl extends MaintenanceDataSource {
       refresh: params,
       responseKey: (data) => data['data'],
       toJsonFunc: (data) {
-        return List<MaintenanceServicesModel>.from(
-            data.map((e) => MaintenanceServicesModel.fromJson(e)));
+        return List<MaintenanceServicesModel>.from(data.map((e) => MaintenanceServicesModel.fromJson(e)));
       },
     );
     return GenericHttpImpl<List<MaintenanceServicesModel>>()(model);
