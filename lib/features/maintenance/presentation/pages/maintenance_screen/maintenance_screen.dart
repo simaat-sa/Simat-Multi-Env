@@ -13,76 +13,58 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
   @override
   void initState() {
     super.initState();
+    controller.initPaginationController(context);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(),
-      body: RequesterConsumer(
-        requester: controller.requester,
-        successBuilder: (context, data) {
-          return RefreshIndicator(
-            onRefresh: () => controller.requestData(),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-              child: Column(
-                children: [
-                  FilterItemWidget(
-                    onChange: (value) {
-                      controller.searchText = value;
-                      controller.onFilter();
-                    },
-                    onSubmit: (value) {
-                      controller.searchText = value;
-                      controller.onFilter();
-                    },
-                    onTap: () =>
-                        AutoRouter.of(context).push(FilterMaintenanceRoute(controller: controller)),
-                  ),
-                  PageHeaderTitleWidget(
-                    title: Translate.of(context).maintenanceCount([data.length]),
-                  ),
-                  Gaps.vGap10,
-                  Flexible(
-                    child: ListView(
-                      children: [
-                        Visibility(
-                          visible: controller.requester.data!.isNotEmpty,
-                          replacement: const EmptyListItemWidget(),
-                          child: Column(
-                            children: [
-                              ...List.generate(
-                                data.length,
-                                (index) {
-                                  return MaintenanceItemWidget(
-                                    model: data[index],
-                                    controller: controller,
-                                  );
-                                },
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+        child: Column(
+          children: [
+            FilterItemWidget(
+              onChange: (value) {
+                controller.searchText = value;
+                controller.onFilter();
+              },
+              onSubmit: (value) {
+                controller.searchText = value;
+                controller.onFilter();
+              },
+              onTap: () => AutoRouter.of(context).push(FilterMaintenanceRoute(controller: controller)),
+            ),
+            PageHeaderTitleWidget(
+              title: Translate.of(context).maintenanceCount("5"),
+            ),
+            Gaps.vGap10,
+            Flexible(
+              child: PagedListView(
+                pagingController: controller.pagingController,
+                builderDelegate: PagedChildBuilderDelegate<MaintenanceModel>(
+                  itemBuilder: (context, item, index) {
+                    return MaintenanceItemWidget(
+                      model: item,
+                      controller: controller,
+                    );
+                  },
+                  firstPageErrorIndicatorBuilder: (context) {
+                    return const UnitLoadingListWidget();
+                  },
+                  noItemsFoundIndicatorBuilder: (context) {
+                    return const EmptyListItemWidget();
+                  },
+                ),
               ),
             ),
-          );
-        },
-        failureBuilder: (context, error, callback) {
-          return  FailureItemWidget(onTapRefresh: callback);
-        },
-        loadingBuilder: (context) {
-          return const UnitLoadingListWidget();
-        },
+          ],
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
-        onPressed: () => AutoRouter.of(context).push( AddMaintenanceRoute()),
+        onPressed: () => AutoRouter.of(context).push(AddMaintenanceRoute()),
         child: Icon(
           Icons.add,
           color: context.colors.white,

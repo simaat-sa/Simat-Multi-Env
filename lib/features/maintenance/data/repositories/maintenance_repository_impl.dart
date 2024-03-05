@@ -5,6 +5,7 @@ import 'package:flutter_tdd/features/maintenance/data/data_source/maintenance_da
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart';
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_services_model/maintenance_services_model.dart';
 import 'package:flutter_tdd/features/maintenance/domain/entity/add_maintenance_params.dart';
+import 'package:flutter_tdd/features/maintenance/domain/entity/maintenance_params.dart';
 import 'package:flutter_tdd/features/maintenance/domain/repositories/maintenance_repository.dart';
 import 'package:injectable/injectable.dart';
 
@@ -13,7 +14,7 @@ class ContractRepositoryImpl extends MaintenanceRepository with ModelToDomainRes
   final dataSource = getIt.get<MaintenanceDataSource>();
 
   @override
-  Future<MyResult<List<MaintenanceModel>>> getContracts(bool params) async {
+  Future<MyResult<List<MaintenanceModel>>> getContracts(MaintenanceParams params) async {
     return await dataSource.getContracts(params);
   }
 

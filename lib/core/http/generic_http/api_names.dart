@@ -1,4 +1,5 @@
 import 'package:flutter_tdd/core/constants/app_config.dart';
+import 'package:flutter_tdd/features/maintenance/domain/entity/maintenance_params.dart';
 
 class ApiNames {
   static String baseUrl = AppConfig.instance.baseAPIUrl;
@@ -26,7 +27,7 @@ class ApiNames {
   static String propUnits = "${version1Part}tenant/units";
 
   /// maintenance routes
-  static String maintenanceRequests = "${version1Part}maintenance/list";
+  static String maintenanceRequests(int page) => "${version1Part}maintenance/list?page=$page";
   static String maintenanceServices = "${version1Part}maintenance/services";
   static String maintenanceAdd = "${version1Part}maintenance/add";
   static String getNotices = "${version1Part}notification/list";
