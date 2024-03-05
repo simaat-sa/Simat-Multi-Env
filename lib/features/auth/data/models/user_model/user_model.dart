@@ -32,5 +32,5 @@ class UserModel with _$UserModel {
 
   factory UserModel.fromJson(Map<String, dynamic> json) => _$UserModelFromJson(json);
 
-  String get userImage => AppConfig.instance.imageBaseUrl + userAvatar;
+  String get userImage => AppConfig.instance.imageBaseUrl(userAvatar);
 }

@@ -38,8 +38,8 @@ mixin _$PropModel {
   String get statusCode =>
       throw _privateConstructorUsedError; // @JsonKey(name: 'are_owner', defaultValue: "") required String areOwner,
 // @JsonKey(name: 'are_intermediate', defaultValue: "") required String areIntermediate,
-  @JsonKey(name: 'prop_img', defaultValue: "")
-  String get propImg =>
+  @JsonKey(name: 'prop_img')
+  String? get propImg =>
       throw _privateConstructorUsedError; // @JsonKey(name: 'prop_lat', defaultValue: "0") required String propLat,
 // @JsonKey(name: 'prop_lng', defaultValue: "0") required String propLng,
 // @JsonKey(name: 'prop_address', defaultValue: "") required String propAddress,
@@ -97,7 +97,7 @@ abstract class $PropModelCopyWith<$Res> {
       @JsonKey(name: 'parent_desc_ar', defaultValue: "") String blocNameAr,
       @JsonKey(name: 'parent_desc_en', defaultValue: "") String blocNameEn,
       @JsonKey(name: 'acl_status_code', defaultValue: "") String statusCode,
-      @JsonKey(name: 'prop_img', defaultValue: "") String propImg,
+      @JsonKey(name: 'prop_img') String? propImg,
       @JsonKey(name: 'prop_cost', defaultValue: "") String propCost,
       @JsonKey(name: 'prop_city', defaultValue: "") String propCity,
       @JsonKey(name: 'prop_region', defaultValue: "") String propRegion,
@@ -127,7 +127,7 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
     Object? blocNameAr = null,
     Object? blocNameEn = null,
     Object? statusCode = null,
-    Object? propImg = null,
+    Object? propImg = freezed,
     Object? propCost = null,
     Object? propCity = null,
     Object? propRegion = null,
@@ -168,10 +168,10 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
           ? _value.statusCode
           : statusCode // ignore: cast_nullable_to_non_nullable
               as String,
-      propImg: null == propImg
+      propImg: freezed == propImg
           ? _value.propImg
           : propImg // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       propCost: null == propCost
           ? _value.propCost
           : propCost // ignore: cast_nullable_to_non_nullable
@@ -217,7 +217,7 @@ abstract class _$$PropModelImplCopyWith<$Res>
       @JsonKey(name: 'parent_desc_ar', defaultValue: "") String blocNameAr,
       @JsonKey(name: 'parent_desc_en', defaultValue: "") String blocNameEn,
       @JsonKey(name: 'acl_status_code', defaultValue: "") String statusCode,
-      @JsonKey(name: 'prop_img', defaultValue: "") String propImg,
+      @JsonKey(name: 'prop_img') String? propImg,
       @JsonKey(name: 'prop_cost', defaultValue: "") String propCost,
       @JsonKey(name: 'prop_city', defaultValue: "") String propCity,
       @JsonKey(name: 'prop_region', defaultValue: "") String propRegion,
@@ -245,7 +245,7 @@ class __$$PropModelImplCopyWithImpl<$Res>
     Object? blocNameAr = null,
     Object? blocNameEn = null,
     Object? statusCode = null,
-    Object? propImg = null,
+    Object? propImg = freezed,
     Object? propCost = null,
     Object? propCity = null,
     Object? propRegion = null,
@@ -286,10 +286,10 @@ class __$$PropModelImplCopyWithImpl<$Res>
           ? _value.statusCode
           : statusCode // ignore: cast_nullable_to_non_nullable
               as String,
-      propImg: null == propImg
+      propImg: freezed == propImg
           ? _value.propImg
           : propImg // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       propCost: null == propCost
           ? _value.propCost
           : propCost // ignore: cast_nullable_to_non_nullable
@@ -334,7 +334,7 @@ class _$PropModelImpl extends _PropModel {
       required this.blocNameEn,
       @JsonKey(name: 'acl_status_code', defaultValue: "")
       required this.statusCode,
-      @JsonKey(name: 'prop_img', defaultValue: "") required this.propImg,
+      @JsonKey(name: 'prop_img') required this.propImg,
       @JsonKey(name: 'prop_cost', defaultValue: "") required this.propCost,
       @JsonKey(name: 'prop_city', defaultValue: "") required this.propCity,
       @JsonKey(name: 'prop_region', defaultValue: "") required this.propRegion,
@@ -374,8 +374,8 @@ class _$PropModelImpl extends _PropModel {
 // @JsonKey(name: 'are_owner', defaultValue: "") required String areOwner,
 // @JsonKey(name: 'are_intermediate', defaultValue: "") required String areIntermediate,
   @override
-  @JsonKey(name: 'prop_img', defaultValue: "")
-  final String propImg;
+  @JsonKey(name: 'prop_img')
+  final String? propImg;
 // @JsonKey(name: 'prop_lat', defaultValue: "0") required String propLat,
 // @JsonKey(name: 'prop_lng', defaultValue: "0") required String propLng,
 // @JsonKey(name: 'prop_address', defaultValue: "") required String propAddress,
@@ -507,8 +507,7 @@ abstract class _PropModel extends PropModel {
       required final String blocNameEn,
       @JsonKey(name: 'acl_status_code', defaultValue: "")
       required final String statusCode,
-      @JsonKey(name: 'prop_img', defaultValue: "")
-      required final String propImg,
+      @JsonKey(name: 'prop_img') required final String? propImg,
       @JsonKey(name: 'prop_cost', defaultValue: "")
       required final String propCost,
       @JsonKey(name: 'prop_city', defaultValue: "")
@@ -551,8 +550,8 @@ abstract class _PropModel extends PropModel {
   String get statusCode;
   @override // @JsonKey(name: 'are_owner', defaultValue: "") required String areOwner,
 // @JsonKey(name: 'are_intermediate', defaultValue: "") required String areIntermediate,
-  @JsonKey(name: 'prop_img', defaultValue: "")
-  String get propImg;
+  @JsonKey(name: 'prop_img')
+  String? get propImg;
   @override // @JsonKey(name: 'prop_lat', defaultValue: "0") required String propLat,
 // @JsonKey(name: 'prop_lng', defaultValue: "0") required String propLng,
 // @JsonKey(name: 'prop_address', defaultValue: "") required String propAddress,

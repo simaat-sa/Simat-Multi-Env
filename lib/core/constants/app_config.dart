@@ -17,7 +17,9 @@ class AppConfig {
 
   String get baseUrl => "https://${const String.fromEnvironment('APP_BASE_URL')}/";
 
-  String get imageBaseUrl => "$baseUrl$token/";
+  // String imageBaseUrl(String imagePath) => "$baseUrl$imagePath?token=$token";
+
+  String imageBaseUrl(String imagePath) => "https://cdn.thiqeel.com/apps/sharingpath/thiqeel/uploads/simaatApp/$imagePath";
 
   String get baseAPIUrl =>
       "https://${const String.fromEnvironment('APP_BASE_URL')}${const String.fromEnvironment('APP_API')}";

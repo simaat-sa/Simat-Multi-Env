@@ -16,7 +16,7 @@ _$PropModelImpl _$$PropModelImplFromJson(Map<String, dynamic> json) =>
       blocNameAr: json['parent_desc_ar'] as String? ?? '',
       blocNameEn: json['parent_desc_en'] as String? ?? '',
       statusCode: json['acl_status_code'] as String? ?? '',
-      propImg: json['prop_img'] as String? ?? '',
+      propImg: json['prop_img'] as String?,
       propCost: json['prop_cost'] as String? ?? '',
       propCity: json['prop_city'] as String? ?? '',
       propRegion: json['prop_region'] as String? ?? '',
