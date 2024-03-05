@@ -18,7 +18,7 @@ class PropertyItemWidget extends StatelessWidget {
           children: [
             CachedImage(
               alignment: Alignment.topCenter,
-              url: model.propImg??'',
+              url: model.unitImage,
               height: 150,
               borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(10),

@@ -45,7 +45,7 @@ class ContractModel with _$ContractModel {
 
   factory ContractModel.fromJson(Map<String, dynamic> json) => _$ContractModelFromJson(json);
 
-  String get unitImage => AppConfig.instance.imageBaseUrl + (propImg ?? "content/f084d073fe5d0dc7de6ef6772e69760e94cb1c3e.jpg");
+  String get unitImage => AppConfig.instance.imageBaseUrl(propImg ?? "content/f084d073fe5d0dc7de6ef6772e69760e94cb1c3e.jpg");
 
   String get date {
     if (dateType == DateTypes.hj) {
