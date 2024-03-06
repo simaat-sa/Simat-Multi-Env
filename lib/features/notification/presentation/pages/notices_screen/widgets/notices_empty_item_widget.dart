@@ -27,10 +27,13 @@ class NoticesEmptyItemWidget extends StatelessWidget {
               style: AppTextStyle.s16_w500(color: context.colors.primaryText),
             ),
           ),
-          Text(
-            textAlign: TextAlign.center,
-            Translate.of(context).back_to_main_page,
-            style: AppTextStyle.s16_w500(color: context.colors.secondary),
+          GestureDetector(
+            onTap: () => AutoRouter.of(context).pop(),
+            child: Text(
+              textAlign: TextAlign.center,
+              Translate.of(context).back_to_main_page,
+              style: AppTextStyle.s16_w500(color: context.colors.secondary),
+            ),
           ),
         ],
       ),
