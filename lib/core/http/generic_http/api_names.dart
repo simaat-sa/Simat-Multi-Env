@@ -38,6 +38,7 @@ class ApiNames {
   static String noticesUnread = "${version1Part}notification/unread-count";
   static String noticesRead = "${version1Part}notification/read";
   static String getProperties = "${version1Part}property/list";
+  static String getBoolean = "${version1Part}boolean";
 
   /// General Links
   static String supportLink = "https://simaat.sa/service/submitticket.php?step=2&deptid=1";

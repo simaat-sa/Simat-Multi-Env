@@ -12,7 +12,9 @@ class SplashController {
       context.read<UserCubit>().onUpdateUserData(user);
       AutoRouter.of(context).push(Home());
     } else {
-      AutoRouter.of(context).push(const Login());
+      await getIt<AuthRepository>().getBoolean(true).then((value) {
+        AutoRouter.of(context).push(Login(checkRegisterButton: value.data??false));
+      });
     }
   }
 }
