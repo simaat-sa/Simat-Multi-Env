@@ -9,4 +9,5 @@ var authRoute = [
   AdaptiveRoute(page: ResetPassword.page),
   AdaptiveRoute(page: ForgetPassword.page),
   AdaptiveRoute(page: GetCodeInfoRoute.page),
+  AdaptiveRoute(page: RegisterRoute.page),
 ];

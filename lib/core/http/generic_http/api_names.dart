@@ -26,7 +26,7 @@ class ApiNames {
   static String propUnits = "${version1Part}tenant/units";
 
   /// maintenance routes
-  static String maintenanceRequests = "${version1Part}maintenance/list";
+  static String maintenanceRequests(String header) => "${version1Part}maintenance/list?$header";
   static String maintenanceServices = "${version1Part}maintenance/services";
   static String maintenanceAdd = "${version1Part}maintenance/add";
   static String getNotices = "${version1Part}notification/list";

@@ -42,6 +42,7 @@ class _LoginState extends State<Login> {
                     children: [
                       LoginFormWidget(controller: controller),
                       LoginButtonWidget(controller: controller),
+                      const CreateAccountButtonWidget(),
                       Gaps.vGap16,
                       LoginWithQrButtonWidget(controller: controller),
                       Gaps.vGap16,
