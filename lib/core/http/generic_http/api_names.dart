@@ -1,5 +1,4 @@
 import 'package:flutter_tdd/core/constants/app_config.dart';
-import 'package:flutter_tdd/features/maintenance/domain/entity/maintenance_params.dart';
 
 class ApiNames {
   static String baseUrl = AppConfig.instance.baseAPIUrl;
@@ -20,6 +19,9 @@ class ApiNames {
 
   /// tenant routes
   static String getTenant = "${version1Part}tenant/list";
+
+  static String getContract(String header) => "${version1Part}contract/list?$header";
+
   static String renewContract(String id) => "${version1Part}contract/renew?tts_id=$id";
 
   /// props and units routes
@@ -31,12 +33,11 @@ class ApiNames {
   static String maintenanceServices = "${version1Part}maintenance/services";
   static String maintenanceAdd = "${version1Part}maintenance/add";
   static String getNotices = "${version1Part}notification/list";
+
   static String contractPayment(String id) => "${version1Part}contract/payment/list?tts_id=$id";
-  static String noticesUnread= "${version1Part}notification/unread-count";
-  static String noticesRead= "${version1Part}notification/read";
-  static String getProperties= "${version1Part}property/list";
-
-
+  static String noticesUnread = "${version1Part}notification/unread-count";
+  static String noticesRead = "${version1Part}notification/read";
+  static String getProperties = "${version1Part}property/list";
 
   /// General Links
   static String supportLink = "https://simaat.sa/service/submitticket.php?step=2&deptid=1";

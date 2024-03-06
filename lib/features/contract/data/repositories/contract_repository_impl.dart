@@ -1,10 +1,12 @@
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:flutter_tdd/core/models/model_to_domain/model_to_domain.dart';
+import 'package:flutter_tdd/core/models/paging_model/paging_model.dart';
 import 'package:flutter_tdd/features/contract/data/data_source/contract_data_source.dart';
 import 'package:flutter_tdd/features/contract/data/models/contract_model/contract_model.dart';
 import 'package:flutter_tdd/features/contract/data/models/payment_model/payment_model.dart';
 import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart';
+import 'package:flutter_tdd/features/contract/domain/entities/contract_params.dart';
 import 'package:flutter_tdd/features/contract/domain/entities/payment_entity.dart';
 import 'package:flutter_tdd/features/contract/domain/repositories/contract_repository.dart';
 import 'package:injectable/injectable.dart';
@@ -14,8 +16,8 @@ class ContractRepositoryImpl extends ContractRepository with ModelToDomainResult
   final dataSource = getIt.get<ContractDataSource>();
 
   @override
-  Future<MyResult<List<ContractModel>>> getTenant(bool params) async {
-    return await dataSource.getTenant(params);
+  Future<MyResult<PagingModel<ContractModel>>> getContract(ContractParams params) async {
+    return await dataSource.getContract(params);
   }
 
   @override
