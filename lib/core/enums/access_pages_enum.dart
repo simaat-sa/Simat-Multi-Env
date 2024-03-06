@@ -208,7 +208,7 @@ enum AccessPages {
       return const ContractScreen();
     } else if (this == AccessPages.PLT_MAINT) {
       return const MaintenanceScreen();
-    }else if(this == AccessPages.SS_OWNER){
+    } else if (this == AccessPages.SS_OWNER) {
       return const OwnerProperties();
     }
     return Container();
