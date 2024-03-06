@@ -2,15 +2,21 @@ part of 'contract_screen_imports.dart';
 
 class ContractScreenController {
   final ObsValue<ContractTypes> selectTypeObs = ObsValue<ContractTypes>.withInit(ContractTypes.non);
-  final ObsValue<TenantVisibility> selectStatusObs =
-      ObsValue<TenantVisibility>.withInit(TenantVisibility.non);
+  final ObsValue<TenantVisibility> selectStatusObs = ObsValue<TenantVisibility>.withInit(TenantVisibility.non);
+  final ObsValue<int> contractsCount = ObsValue<int>.withInit(0);
 
-  final ContractRequester requester = ContractRequester();
+  final PagingController<int, ContractModel> pagingController = PagingController(firstPageKey: 1);
+
   String searchText = '';
 
   ContractScreenController() {
-    requester.setLoadingState();
-    requestData();
+    initPaginationController();
+  }
+
+  void initPaginationController() {
+    pagingController.addPageRequestListener((pageKey) {
+      fetchContractData(pageKey);
+    });
   }
 
   void filterSheet(BuildContext context) {
@@ -22,17 +28,42 @@ class ContractScreenController {
     );
   }
 
-  Future<void> requestData() async {
-    await requester.request();
+  Future<void> fetchContractData(int pageIndex) async {
+    var params = _contractParams(pageIndex);
+    getIt<ContractRepository>().getContract(params).then((result) {
+      final data = result.data?.data ?? [];
+      contractsCount.setValue(result.data?.total ?? 0);
+      final isLastPage = data.length < 10;
+      if (pageIndex == 1) {
+        pagingController.itemList = [];
+      }
+      if (isLastPage) {
+        pagingController.appendLastPage(data);
+      } else {
+        final nextPageKey = pageIndex + 1;
+        pagingController.appendPage(data, nextPageKey);
+      }
+    });
+  }
+
+  ContractParams _contractParams(int pageIndex) {
+    return ContractParams(
+      page: pageIndex,
+      search: searchText,
+      statusFilter: selectStatusObs.getValue().value,
+      typeFilter: selectTypeObs.getValue().value,
+    );
   }
 
   void onFilter() {
-    requester.applyTenantFilter(selectStatusObs.getValue(), selectTypeObs.getValue(), searchText);
+    pagingController.refresh();
+    fetchContractData(1);
   }
 
   void onResetFilter() {
+    pagingController.refresh();
     selectStatusObs.setValue(TenantVisibility.non);
     selectTypeObs.setValue(ContractTypes.non);
-    requester.resetFilter();
+    fetchContractData(1);
   }
 }

@@ -15,65 +15,52 @@ class _ContractScreenState extends State<ContractScreen> {
     return Scaffold(
       backgroundColor: context.colors.background,
       appBar: const CustomAppBar(),
-      body: RequesterConsumer(
-        requester: controller.requester,
-        successBuilder: (context, data) {
-          return RefreshIndicator(
-            onRefresh: () => controller.requestData(),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-              child: Column(
-                children: [
-                  FilterItemWidget(
-                    onChange: (val) {
-                      controller.searchText = val;
-                      controller.onFilter();
-                    },
-                    onSubmit: (value) {
-                      controller.searchText = value;
-                      controller.onFilter();
-                    },
-                    onTap: () => AutoRouter.of(context).push(
-                      FilterContractRoute(controller: controller),
-                    ),
-                  ),
-                  PageHeaderTitleWidget(
-                    title: Translate.of(context).contractsCount([data.length]),
-                  ),
-                  Gaps.vGap10,
-                  Flexible(
-                    child: ListView(
-                      children: [
-                        Visibility(
-                          visible: controller.requester.data!.isNotEmpty,
-                          replacement: const EmptyListItemWidget(),
-                          child: Column(
-                            children: [
-                              ...List.generate(
-                                data.length,
-                                (index) {
-                                  return ContractItemWidget(
-                                    model: data[index],
-                                  );
-                                },
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+      body: RefreshIndicator(
+        onRefresh: () => controller.fetchContractData(1),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+          child: Column(
+            children: [
+              FilterItemWidget(
+                onChange: (val) {
+                  controller.searchText = val;
+                  controller.onFilter();
+                },
+                onSubmit: (value) {
+                  controller.searchText = value;
+                  controller.onFilter();
+                },
+                onTap: () => AutoRouter.of(context).push(
+                  FilterContractRoute(controller: controller),
+                ),
               ),
-            ),
-          );
-        },
-        failureBuilder: (context, error, callback) {
-          return FailureItemWidget(onTapRefresh: callback);
-        },
-        loadingBuilder: (context) {
-          return const UnitLoadingListWidget();
-        },
+              ObsValueConsumer(
+                  observable: controller.contractsCount,
+                  builder: (context, count) {
+                    return PageHeaderTitleWidget(
+                      title: Translate.of(context).contractsCount("$count"),
+                    );
+                  }),
+              Gaps.vGap10,
+              Flexible(
+                child: PagedListView(
+                  pagingController: controller.pagingController,
+                  builderDelegate: PagedChildBuilderDelegate<ContractModel>(
+                    itemBuilder: (context, item, index) {
+                      return ContractItemWidget(model: item);
+                    },
+                    firstPageErrorIndicatorBuilder: (context) {
+                      return const UnitLoadingListWidget();
+                    },
+                    noItemsFoundIndicatorBuilder: (context) {
+                      return const EmptyListItemWidget();
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

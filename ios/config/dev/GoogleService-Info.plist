@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_ID</key>
+	<string>493922740426-tk3ib9h8peirpaik4va1al2mr9p8kouj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.493922740426-tk3ib9h8peirpaik4va1al2mr9p8kouj</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCzNOLIB249KIYJmRvRfCEMD40TWR3VMNM</string>
 	<key>GCM_SENDER_ID</key>
@@ -9,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>simaat.dev</string>
+	<string>simaat.building.sa</string>
 	<key>PROJECT_ID</key>
 	<string>trace-7d493</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:493922740426:ios:9e7996117306323b81ac33</string>
+	<string>1:493922740426:ios:05bc0dc3677c9bdd81ac33</string>
 </dict>
 </plist>

@@ -12,8 +12,8 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
 
   @override
   void initState() {
-    controller.initPaginationController(context);
     super.initState();
+    controller.initPaginationController(context);
   }
 
   @override
@@ -35,12 +35,17 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
               },
               onTap: () => AutoRouter.of(context).push(FilterMaintenanceRoute(controller: controller)),
             ),
-            PageHeaderTitleWidget(
-              title: Translate.of(context).maintenanceCount('3'),
+            ObsValueConsumer(
+              observable: controller.maintenanceCount,
+              builder: (context, count) {
+                return PageHeaderTitleWidget(
+                  title: Translate.of(context).maintenanceCount("$count"),
+                );
+              }
             ),
             Gaps.vGap10,
             Flexible(
-              child: PagedListView<int,MaintenanceModel>(
+              child: PagedListView(
                 pagingController: controller.pagingController,
                 builderDelegate: PagedChildBuilderDelegate<MaintenanceModel>(
                   itemBuilder: (context, item, index) {
@@ -49,13 +54,12 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
                       controller: controller,
                     );
                   },
+                  firstPageErrorIndicatorBuilder: (context) {
+                    return const UnitLoadingListWidget();
+                  },
                   noItemsFoundIndicatorBuilder: (context) {
                     return const EmptyListItemWidget();
                   },
-                  firstPageProgressIndicatorBuilder: (context) {
-                    return const UnitLoadingListWidget();
-                  },
-
                 ),
               ),
             ),

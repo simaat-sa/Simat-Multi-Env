@@ -2,6 +2,7 @@ part of 'property_widgets_imports.dart';
 
 class PropertyItemWidget extends StatelessWidget {
   final PropModel model;
+
   const PropertyItemWidget({super.key, required this.model});
 
   @override
@@ -18,7 +19,7 @@ class PropertyItemWidget extends StatelessWidget {
           children: [
             CachedImage(
               alignment: Alignment.topCenter,
-              url: model.propImg??'',
+              url: model.unitImage,
               height: 150,
               borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(10),
@@ -36,8 +37,7 @@ class PropertyItemWidget extends StatelessWidget {
                           height: 26,
                           padding: const EdgeInsets.symmetric(horizontal: 5),
                           decoration: BoxDecoration(
-                              color: context.colors.black.withOpacity(0.15),
-                              borderRadius: BorderRadius.circular(5)),
+                              color: context.colors.black.withOpacity(0.15), borderRadius: BorderRadius.circular(5)),
                           child: Row(
                             children: [
                               Icon(
@@ -57,12 +57,10 @@ class PropertyItemWidget extends StatelessWidget {
                           height: 26,
                           padding: const EdgeInsets.symmetric(horizontal: 5),
                           decoration: BoxDecoration(
-                              color: context.colors.black.withOpacity(0.15),
-                              borderRadius: BorderRadius.circular(5)),
+                              color: context.colors.black.withOpacity(0.15), borderRadius: BorderRadius.circular(5)),
                           child: Text(
                             "#${model.areCode}",
-                            style: AppTextStyle.s14_w400(color: context.colors.white)
-                                .copyWith(height: 2.2),
+                            style: AppTextStyle.s14_w400(color: context.colors.white).copyWith(height: 2.2),
                           ),
                         ),
                       ],
@@ -112,32 +110,38 @@ class PropertyItemWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset(Res.unitLogo),
-                      Gaps.hGap5,
-                      Row(
-                        children: [
-                          Text(
-                            model.unitName,
-                            style: AppTextStyle.s16_w400(color: context.colors.brown),
+                  Expanded(
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(Res.unitLogo),
+                        Gaps.hGap5,
+                        Flexible(
+                          child: Row(
+                            children: [
+                              Flexible(
+                                child: Text(
+                                  model.unitName,
+                                  style: AppTextStyle.s16_w400(color: context.colors.brown)
+                                      .copyWith(overflow: TextOverflow.ellipsis),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 4),
+                                child: Text(
+                                  '.',
+                                  style: AppTextStyle.s16_w500(color: context.colors.primary),
+                                ),
+                              ),
+                              Text(
+                                model.propType.getLocalizedName(),
+                                style: AppTextStyle.s16_w400(color: context.colors.brown),
+                              ),
+                            ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 4),
-                            child: Text(
-                              '.',
-                              style: AppTextStyle.s16_w500(color: context.colors.primary),
-                            ),
-                          ),
-                          Text(
-                            model.propType.getLocalizedName(),
-                            style: AppTextStyle.s16_w400(color: context.colors.brown),
-                          ),
-                        ],
-                      ),
-                    ],
+                        ),
+                      ],
+                    ),
                   ),
                   Text(
                     '${Translate.of(context).expireIn} ${model.dateUpdatedFormat}',

@@ -1,3 +1,4 @@
+import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/enums/contract_types.dart';
 import 'package:flutter_tdd/core/extensions/string_helper_extension.dart';
 import 'package:flutter_tdd/core/models/localized_name_model/localized_name_model.dart';
@@ -24,7 +25,7 @@ class PropModel with _$PropModel {
     @JsonKey(name: 'acl_status_code', defaultValue: "") required String statusCode,
     // @JsonKey(name: 'are_owner', defaultValue: "") required String areOwner,
     // @JsonKey(name: 'are_intermediate', defaultValue: "") required String areIntermediate,
-    @JsonKey(name: 'prop_img', defaultValue: "") required String propImg,
+    @JsonKey(name: 'prop_img') required String? propImg,
     // @JsonKey(name: 'prop_lat', defaultValue: "0") required String propLat,
     // @JsonKey(name: 'prop_lng', defaultValue: "0") required String propLng,
     // @JsonKey(name: 'prop_address', defaultValue: "") required String propAddress,
@@ -71,6 +72,8 @@ class PropModel with _$PropModel {
   String get dateUpdatedFormat{
     return date.formatTimeStampDate();
   }
+
+  String get unitImage => AppConfig.instance.imageBaseUrl(propImg ?? "content/f084d073fe5d0dc7de6ef6772e69760e94cb1c3e.jpg");
 
 
   factory PropModel.fromContract(ContractModel contractModel) {

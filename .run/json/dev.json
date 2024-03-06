@@ -1,5 +1,5 @@
 {
-  "APP_ID": "simaat.dev",
+  "APP_ID": "simaat.building.sa",
   "APP_ENV_NAME": "dev",
   "APP_BASE_URL": "dev.simaat.sa",
   "APP_API": "/api/app/",

@@ -2,28 +2,33 @@ import 'package:flutter_tdd/core/http/generic_http/api_names.dart';
 import 'package:flutter_tdd/core/http/generic_http/generic_http.dart';
 import 'package:flutter_tdd/core/http/models/http_request_model.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
+import 'package:flutter_tdd/core/models/paging_model/paging_model.dart';
 import 'package:flutter_tdd/features/maintenance/data/data_source/maintenance_data_source.dart';
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart';
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_services_model/maintenance_services_model.dart';
-import 'package:flutter_tdd/features/maintenance/domain/entities/maintenance_params.dart';
 import 'package:flutter_tdd/features/maintenance/domain/entity/add_maintenance_params.dart';
+import 'package:flutter_tdd/features/maintenance/domain/entity/maintenance_params.dart';
 import 'package:injectable/injectable.dart';
 
 @Injectable(as: MaintenanceDataSource)
 class MaintenanceDataSourceImpl extends MaintenanceDataSource {
   @override
-  Future<MyResult<List<MaintenanceModel>>> getContracts(MaintenanceParams params) async {
+  Future<MyResult<PagingModel<MaintenanceModel>>> getContracts(
+      MaintenanceParams params) async {
     HttpRequestModel model = HttpRequestModel(
       url: ApiNames.maintenanceRequests(params.header()),
-      responseType: ResType.list,
+      responseType: ResType.model,
       requestMethod: RequestMethod.get,
       refresh: params.refresh,
-      responseKey: (data) => data['data'],
+      responseKey: (data) => data,
       toJsonFunc: (data) {
-        return List<MaintenanceModel>.from(data.map((e) => MaintenanceModel.fromJson(e)));
+        return PagingModel<MaintenanceModel>.fromJson(
+          data,
+          (obj) => MaintenanceModel.fromJson(obj),
+        );
       },
     );
-    return GenericHttpImpl<List<MaintenanceModel>>()(model);
+    return GenericHttpImpl<PagingModel<MaintenanceModel>>()(model);
   }
 
   @override
