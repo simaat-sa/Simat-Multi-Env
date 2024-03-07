@@ -1,3 +1,4 @@
+import 'package:flutter_tdd/core/enums/user_types.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:flutter_tdd/core/models/model_to_domain/model_to_domain.dart';
@@ -26,8 +27,8 @@ class ContractRepositoryImpl extends ContractRepository with ModelToDomainResult
   }
 
   @override
-  Future<MyResult<List<PropModel>>> getPropsUnites() async {
-    return await dataSource.getPropsUnites();
+  Future<MyResult<List<PropModel>>> getPropsUnites(UserTypes userType) async {
+    return await dataSource.getPropsUnites(userType);
   }
 
   @override

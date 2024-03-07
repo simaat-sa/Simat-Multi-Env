@@ -26,7 +26,8 @@ class ApiNames {
 
   /// props and units routes
   static String properties = "${version1Part}tenant/properties/list";
-  static String propUnits = "${version1Part}tenant/units";
+  static String tenantPropUnits = "${version1Part}tenant/units";
+  static String ownerPropUnits= "$version1Part/owner/properties/list";
 
   /// maintenance routes
   static String maintenanceRequests(String header) => "${version1Part}maintenance/list?$header";
@@ -35,7 +36,6 @@ class ApiNames {
   static String getNotices = "${version1Part}notification/list";
 
   static String contractPayment(String id) => "${version1Part}contract/payment/list?tts_id=$id";
-  static String getProperties= "$version1Part/owner/properties/list";
   static String noticesUnread = "${version1Part}notification/unread-count";
   static String noticesRead = "${version1Part}notification/read";
   static String getBoolean = "${version1Part}boolean";

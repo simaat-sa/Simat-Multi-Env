@@ -1,4 +1,5 @@
 import 'package:flutter_tdd/core/constants/app_config.dart';
+import 'package:flutter_tdd/core/enums/user_types.dart';
 import 'package:flutter_tdd/features/auth/data/models/user_access_model/user_access_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -13,7 +14,7 @@ class UserModel with _$UserModel {
 
   @JsonSerializable(explicitToJson: true)
    factory UserModel({
-    @JsonKey(name: "user_type_code") required String userTypeCode,
+    @JsonKey(name: "user_type_code", defaultValue: UserTypes.non) required UserTypes userType,
     @JsonKey(name: "userid") required String userid,
     @JsonKey(name: "user_token") required String userToken,
     @JsonKey(name: "username") required String username,

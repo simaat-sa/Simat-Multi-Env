@@ -12,7 +12,7 @@ class PropertyDataSourceImpl extends PropertyDataSource {
   @override
   Future<MyResult<List<PropModel>>> getProperties(bool params) async {
     HttpRequestModel model = HttpRequestModel(
-      url: ApiNames.getProperties,
+      url: ApiNames.ownerPropUnits,
       responseType: ResType.list,
       requestMethod: RequestMethod.get,
       refresh: params,

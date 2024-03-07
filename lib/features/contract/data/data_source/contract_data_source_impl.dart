@@ -1,3 +1,4 @@
+import 'package:flutter_tdd/core/enums/user_types.dart';
 import 'package:flutter_tdd/core/http/generic_http/api_names.dart';
 import 'package:flutter_tdd/core/http/generic_http/generic_http.dart';
 import 'package:flutter_tdd/core/http/models/http_request_model.dart';
@@ -47,9 +48,9 @@ class ContractDataSourceImpl extends ContractDataSource {
   }
 
   @override
-  Future<MyResult<List<PropModel>>> getPropsUnites() async {
+  Future<MyResult<List<PropModel>>> getPropsUnites(UserTypes userType) async {
     HttpRequestModel model = HttpRequestModel(
-      url: ApiNames.propUnits,
+      url: userType == UserTypes.owner? ApiNames.ownerPropUnits : ApiNames.tenantPropUnits,
       responseType: ResType.list,
       requestMethod: RequestMethod.get,
       responseKey: (data) => data['data'],

@@ -8,7 +8,9 @@ part of 'user_model.dart';
 
 _$UserModelImpl _$$UserModelImplFromJson(Map<String, dynamic> json) =>
     _$UserModelImpl(
-      userTypeCode: json['user_type_code'] as String,
+      userType:
+          $enumDecodeNullable(_$UserTypesEnumMap, json['user_type_code']) ??
+              UserTypes.non,
       userid: json['userid'] as String,
       userToken: json['user_token'] as String,
       username: json['username'] as String,
@@ -30,7 +32,7 @@ _$UserModelImpl _$$UserModelImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$UserModelImplToJson(_$UserModelImpl instance) =>
     <String, dynamic>{
-      'user_type_code': instance.userTypeCode,
+      'user_type_code': _$UserTypesEnumMap[instance.userType]!,
       'userid': instance.userid,
       'user_token': instance.userToken,
       'username': instance.username,
@@ -46,3 +48,9 @@ Map<String, dynamic> _$$UserModelImplToJson(_$UserModelImpl instance) =>
       'uuid': instance.uuid,
       'app_page_access': instance.userAccess.map((e) => e.toJson()).toList(),
     };
+
+const _$UserTypesEnumMap = {
+  UserTypes.owner: 'owner',
+  UserTypes.client: 'client',
+  UserTypes.non: '',
+};

@@ -20,10 +20,10 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$UserModel {
-  @JsonKey(name: "user_type_code")
-  String get userTypeCode => throw _privateConstructorUsedError;
-  @JsonKey(name: "user_type_code")
-  set userTypeCode(String value) => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_type_code", defaultValue: UserTypes.non)
+  UserTypes get userType => throw _privateConstructorUsedError;
+  @JsonKey(name: "user_type_code", defaultValue: UserTypes.non)
+  set userType(UserTypes value) => throw _privateConstructorUsedError;
   @JsonKey(name: "userid")
   String get userid => throw _privateConstructorUsedError;
   @JsonKey(name: "userid")
@@ -94,7 +94,8 @@ abstract class $UserModelCopyWith<$Res> {
       _$UserModelCopyWithImpl<$Res, UserModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: "user_type_code") String userTypeCode,
+      {@JsonKey(name: "user_type_code", defaultValue: UserTypes.non)
+      UserTypes userType,
       @JsonKey(name: "userid") String userid,
       @JsonKey(name: "user_token") String userToken,
       @JsonKey(name: "username") String username,
@@ -125,7 +126,7 @@ class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userTypeCode = null,
+    Object? userType = null,
     Object? userid = null,
     Object? userToken = null,
     Object? username = null,
@@ -142,10 +143,10 @@ class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
     Object? userAccess = null,
   }) {
     return _then(_value.copyWith(
-      userTypeCode: null == userTypeCode
-          ? _value.userTypeCode
-          : userTypeCode // ignore: cast_nullable_to_non_nullable
-              as String,
+      userType: null == userType
+          ? _value.userType
+          : userType // ignore: cast_nullable_to_non_nullable
+              as UserTypes,
       userid: null == userid
           ? _value.userid
           : userid // ignore: cast_nullable_to_non_nullable
@@ -215,7 +216,8 @@ abstract class _$$UserModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "user_type_code") String userTypeCode,
+      {@JsonKey(name: "user_type_code", defaultValue: UserTypes.non)
+      UserTypes userType,
       @JsonKey(name: "userid") String userid,
       @JsonKey(name: "user_token") String userToken,
       @JsonKey(name: "username") String username,
@@ -244,7 +246,7 @@ class __$$UserModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userTypeCode = null,
+    Object? userType = null,
     Object? userid = null,
     Object? userToken = null,
     Object? username = null,
@@ -261,10 +263,10 @@ class __$$UserModelImplCopyWithImpl<$Res>
     Object? userAccess = null,
   }) {
     return _then(_$UserModelImpl(
-      userTypeCode: null == userTypeCode
-          ? _value.userTypeCode
-          : userTypeCode // ignore: cast_nullable_to_non_nullable
-              as String,
+      userType: null == userType
+          ? _value.userType
+          : userType // ignore: cast_nullable_to_non_nullable
+              as UserTypes,
       userid: null == userid
           ? _value.userid
           : userid // ignore: cast_nullable_to_non_nullable
@@ -330,7 +332,8 @@ class __$$UserModelImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$UserModelImpl extends _UserModel {
   _$UserModelImpl(
-      {@JsonKey(name: "user_type_code") required this.userTypeCode,
+      {@JsonKey(name: "user_type_code", defaultValue: UserTypes.non)
+      required this.userType,
       @JsonKey(name: "userid") required this.userid,
       @JsonKey(name: "user_token") required this.userToken,
       @JsonKey(name: "username") required this.username,
@@ -352,8 +355,8 @@ class _$UserModelImpl extends _UserModel {
       _$$UserModelImplFromJson(json);
 
   @override
-  @JsonKey(name: "user_type_code")
-  String userTypeCode;
+  @JsonKey(name: "user_type_code", defaultValue: UserTypes.non)
+  UserTypes userType;
   @override
   @JsonKey(name: "userid")
   String userid;
@@ -399,7 +402,7 @@ class _$UserModelImpl extends _UserModel {
 
   @override
   String toString() {
-    return 'UserModel(userTypeCode: $userTypeCode, userid: $userid, userToken: $userToken, username: $username, userAvatar: $userAvatar, userMobile: $userMobile, userEmail: $userEmail, userActive: $userActive, userLang: $userLang, userLastOnline: $userLastOnline, userFullname: $userFullname, userFullnameEn: $userFullnameEn, active: $active, uuid: $uuid, userAccess: $userAccess)';
+    return 'UserModel(userType: $userType, userid: $userid, userToken: $userToken, username: $username, userAvatar: $userAvatar, userMobile: $userMobile, userEmail: $userEmail, userActive: $userActive, userLang: $userLang, userLastOnline: $userLastOnline, userFullname: $userFullname, userFullnameEn: $userFullnameEn, active: $active, uuid: $uuid, userAccess: $userAccess)';
   }
 
   @JsonKey(ignore: true)
@@ -418,7 +421,8 @@ class _$UserModelImpl extends _UserModel {
 
 abstract class _UserModel extends UserModel {
   factory _UserModel(
-      {@JsonKey(name: "user_type_code") required String userTypeCode,
+      {@JsonKey(name: "user_type_code", defaultValue: UserTypes.non)
+      required UserTypes userType,
       @JsonKey(name: "userid") required String userid,
       @JsonKey(name: "user_token") required String userToken,
       @JsonKey(name: "username") required String username,
@@ -441,10 +445,10 @@ abstract class _UserModel extends UserModel {
       _$UserModelImpl.fromJson;
 
   @override
-  @JsonKey(name: "user_type_code")
-  String get userTypeCode;
-  @JsonKey(name: "user_type_code")
-  set userTypeCode(String value);
+  @JsonKey(name: "user_type_code", defaultValue: UserTypes.non)
+  UserTypes get userType;
+  @JsonKey(name: "user_type_code", defaultValue: UserTypes.non)
+  set userType(UserTypes value);
   @override
   @JsonKey(name: "userid")
   String get userid;
