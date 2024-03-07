@@ -141,9 +141,13 @@ abstract class $AppRouter extends _i18.RootStackRouter {
       );
     },
     Login.name: (routeData) {
+      final args = routeData.argsAs<LoginArgs>();
       return _i18.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.Login(),
+        child: _i10.Login(
+          key: args.key,
+          checkRegisterButton: args.checkRegisterButton,
+        ),
       );
     },
     NoticesScreenRoute.name: (routeData) {
@@ -469,16 +473,39 @@ class HomeArgs {
 
 /// generated route for
 /// [_i10.Login]
-class Login extends _i18.PageRouteInfo<void> {
-  const Login({List<_i18.PageRouteInfo>? children})
-      : super(
+class Login extends _i18.PageRouteInfo<LoginArgs> {
+  Login({
+    _i19.Key? key,
+    required bool checkRegisterButton,
+    List<_i18.PageRouteInfo>? children,
+  }) : super(
           Login.name,
+          args: LoginArgs(
+            key: key,
+            checkRegisterButton: checkRegisterButton,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'Login';
 
-  static const _i18.PageInfo<void> page = _i18.PageInfo<void>(name);
+  static const _i18.PageInfo<LoginArgs> page = _i18.PageInfo<LoginArgs>(name);
+}
+
+class LoginArgs {
+  const LoginArgs({
+    this.key,
+    required this.checkRegisterButton,
+  });
+
+  final _i19.Key? key;
+
+  final bool checkRegisterButton;
+
+  @override
+  String toString() {
+    return 'LoginArgs{key: $key, checkRegisterButton: $checkRegisterButton}';
+  }
 }
 
 /// generated route for

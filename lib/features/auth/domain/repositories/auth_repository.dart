@@ -7,4 +7,5 @@ import 'package:flutter_tdd/features/auth/domain/entity/qr_login_params.dart';
 abstract class AuthRepository {
   Future<MyResult<UserModel>> login(LoginParams param);
   Future<MyResult<UserModel>> loginWithQr(QrLoginParams param);
+  Future<MyResult<bool>> getBoolean(bool param);
 }

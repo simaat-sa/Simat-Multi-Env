@@ -1,3 +1,4 @@
+import 'package:flutter_tdd/core/enums/user_types.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:flutter_tdd/core/models/paging_model/paging_model.dart';
 import 'package:flutter_tdd/features/contract/data/models/contract_model/contract_model.dart';
@@ -11,7 +12,7 @@ abstract class ContractDataSource {
 
   Future<MyResult<List<PropModel>>> getProps(bool params);
 
-  Future<MyResult<List<PropModel>>> getPropsUnites();
+  Future<MyResult<List<PropModel>>> getPropsUnites(UserTypes userType);
 
   Future<MyResult<ContractModel>> renewContract(String contractId);
 

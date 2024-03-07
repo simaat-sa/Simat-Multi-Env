@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:flutter_tdd/core/bloc/value_state_manager/value_state_manager_import.dart';
@@ -15,6 +16,7 @@ import 'package:flutter_tdd/core/widgets/base_form_option/base_options_requester
 import 'package:flutter_tdd/core/widgets/base_form_option/widgets/base_options_display_widget.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/widgets/option_item_widget.dart';
 import 'package:flutter_tdd/core/widgets/base_form_option/widgets/selectable_option_item_widget.dart';
+import 'package:flutter_tdd/features/auth/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart';
 import 'package:flutter_tdd/features/contract/domain/repositories/contract_repository.dart';
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_services_model/maintenance_services_model.dart';

@@ -41,4 +41,16 @@ class AuthDataSourceImpl extends AuthDataSource {
     );
     return await GenericHttpImpl<UserModel>()(model);
   }
+
+  @override
+  Future<MyResult<bool>> getBoolean(bool param) async {
+    HttpRequestModel model = HttpRequestModel(
+      url: ApiNames.getBoolean,
+      responseType: ResType.type,
+      requestMethod: RequestMethod.get,
+      responseKey: (data) => data['data'],
+      refresh: param,
+    );
+    return await GenericHttpImpl<bool>()(model);
+  }
 }

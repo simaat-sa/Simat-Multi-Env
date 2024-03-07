@@ -2,7 +2,9 @@ part of 'login_imports.dart';
 
 @RoutePage()
 class Login extends StatefulWidget {
-  const Login({super.key});
+  final bool checkRegisterButton;
+
+  const Login({super.key, required this.checkRegisterButton});
 
   @override
   State<StatefulWidget> createState() => _LoginState();
@@ -42,11 +44,16 @@ class _LoginState extends State<Login> {
                     children: [
                       LoginFormWidget(controller: controller),
                       LoginButtonWidget(controller: controller),
-                      const CreateAccountButtonWidget(),
+                      Visibility(
+                        visible:widget.checkRegisterButton ,
+                        child: const CreateAccountButtonWidget(),
+                      ),
                       Gaps.vGap16,
                       LoginWithQrButtonWidget(controller: controller),
                       Gaps.vGap16,
-                       GetCodeTextWidget(controller: controller,),
+                      GetCodeTextWidget(
+                        controller: controller,
+                      ),
                       // ForgetPasswordViewWidget(controller: controller,),
                       Gaps.vGap32,
                       LoginFingerPrintWidget(

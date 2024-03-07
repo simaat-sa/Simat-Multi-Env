@@ -6,6 +6,7 @@ class UnitFormOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var user = context.watch<UserCubit>().state.model!;
     return BaseFormOption<PropModel>(
       hintText: Translate.of(context).real_estate_unit,
       bottomSheetTitle: Translate.of(context).real_estate_unit,
@@ -20,7 +21,7 @@ class UnitFormOption extends StatelessWidget {
         isRemotelySearch: false,
         immediatelyRequestOptions: true,
         valueMainTitleGetter: (value) => value?.unitFullName,
-        fetcher: (c) => getIt<ContractRepository>().getPropsUnites(),
+        fetcher: (c) => getIt<ContractRepository>().getPropsUnites(user.userType),
       ),
       selectedItems: controller.selectedPropUnits,
       valueIdGetter: (unit) => unit?.propId,
