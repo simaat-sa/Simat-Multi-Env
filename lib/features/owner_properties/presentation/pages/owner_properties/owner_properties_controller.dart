@@ -2,7 +2,6 @@ part of 'owner_properties_imports.dart';
 
 class OwnerPropertyController {
   final PagingController<int, PropModel> pagingController = PagingController(firstPageKey: 1);
-  final ObsValue<int> maintenanceCount = ObsValue<int>.withInit(0);
   String searchText = '';
 
 
@@ -16,7 +15,6 @@ class OwnerPropertyController {
     var params = _ownerPropertiesParams(pageIndex);
     getIt<PropertyRepository>().getProperties(params).then((result) {
       final data = result.data?.data ?? [];
-      maintenanceCount.setValue(result.data?.total ?? 0);
       final isLastPage = data.length < 10;
       if (pageIndex == 1) {
         pagingController.itemList = [];
