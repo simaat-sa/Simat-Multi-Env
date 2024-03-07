@@ -1,15 +1,44 @@
 part of 'owner_properties_imports.dart';
 
 class OwnerPropertyController {
-  final PropertyRequester requester = PropertyRequester();
+  final PagingController<int, PropModel> pagingController = PagingController(firstPageKey: 1);
+  final ObsValue<int> maintenanceCount = ObsValue<int>.withInit(0);
   String searchText = '';
 
-  void requestPropertyData() {
-    requester.request(fromRemote: false);
-    requester.request();
+
+  void initPaginationController() {
+    pagingController.addPageRequestListener((pageKey) {
+      fetchPropertyData(pageKey);
+    });
+  }
+
+  Future<void> fetchPropertyData(int pageIndex) async {
+    var params = _ownerPropertiesParams(pageIndex);
+    getIt<PropertyRepository>().getProperties(params).then((result) {
+      final data = result.data?.data ?? [];
+      maintenanceCount.setValue(result.data?.total ?? 0);
+      final isLastPage = data.length < 10;
+      if (pageIndex == 1) {
+        pagingController.itemList = [];
+      }
+      if (isLastPage) {
+        pagingController.appendLastPage(data);
+      } else {
+        final nextPageKey = pageIndex + 1;
+        pagingController.appendPage(data, nextPageKey);
+      }
+    });
+  }
+
+  OwnerPropertiesParams _ownerPropertiesParams(int pageCode) {
+    return OwnerPropertiesParams(
+      page: pageCode,
+      search: searchText,
+    );
   }
 
   void onFilter() {
-    requester.propertyFilter(searchText);
+    pagingController.refresh();
+    fetchPropertyData(1);
   }
 }
