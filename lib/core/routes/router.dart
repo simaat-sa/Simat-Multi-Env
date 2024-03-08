@@ -11,5 +11,6 @@ class AppRouter extends $AppRouter {
     ...contractRoutes,
     ...maintenanceRoutes,
     ...noticesRoutes,
+    ...ownerRoutes,
   ];
 }

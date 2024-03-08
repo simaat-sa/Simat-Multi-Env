@@ -12,4 +12,13 @@ class OwnerPropertyController {
   void onFilter() {
     requester.propertyFilter(searchText);
   }
+
+  void filterSheet(BuildContext context) {
+    AppBottomSheets.showScrollableBody(
+      context: context,
+      builder: (context) {
+        return const FilterProperty();
+      },
+    );
+  }
 }

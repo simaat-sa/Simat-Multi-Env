@@ -5,5 +5,6 @@ import 'package:flutter_tdd/features/base/presentation/manager/routes/routes.dar
 import 'package:flutter_tdd/features/contract/presentation/manager/routes/contract_routes.dart';
 import 'package:flutter_tdd/features/maintenance/presentation/manager/routes/maintenance_routes.dart';
 import 'package:flutter_tdd/features/notification/presentation/manager/routes/notices_routes.dart';
+import 'package:flutter_tdd/features/owner_properties/presentation/manager/routes/owner_routes.dart';
 
 part 'router.dart';

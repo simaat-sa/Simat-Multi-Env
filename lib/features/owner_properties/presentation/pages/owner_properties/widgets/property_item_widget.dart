@@ -74,22 +74,47 @@ class PropertyItemWidget extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         Translate.of(context).due,
                         style: AppTextStyle.s14_w400(color: context.colors.primary),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 4),
-                        child: Text(
-                          model.propCost,
-                          style: AppTextStyle.s20_w600(color: context.colors.primary),
-                        ),
+                      Gaps.vGap5,
+                      Row(
+                        children: [
+                          Text(
+                            model.propCost,
+                            style: AppTextStyle.s20_w600(color: context.colors.primary),
+                          ),
+                          Text(
+                            Translate.of(context).sar,
+                            style: AppTextStyle.s14_w400(color: context.colors.primary),
+                          ),
+                        ],
                       ),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                       Text(
-                        Translate.of(context).sar,
+                        Translate.of(context).due,
                         style: AppTextStyle.s14_w400(color: context.colors.primary),
+                      ),
+                      Gaps.vGap5,
+                      Row(
+                        children: [
+                          Text(
+                            model.propCost,
+                            style: AppTextStyle.s20_w600(color: context.colors.primary),
+                          ),
+                          Text(
+                            Translate.of(context).sar,
+                            style: AppTextStyle.s14_w400(color: context.colors.primary),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -144,7 +169,7 @@ class PropertyItemWidget extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '${Translate.of(context).expireIn} ${model.dateUpdatedFormat}',
+                    'سكني/تجاري',
                     style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                   ),
                 ],
