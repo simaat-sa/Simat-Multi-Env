@@ -17,6 +17,9 @@ class DartEnvironmentConfigReader implements IEnvironmentConfigReader {
   String getLogoUrl() => getBaseUrl() + argsMap['APP_LOGO_URL'];
 
   @override
+  String getSplashLogo() => getBaseUrl() + argsMap['SPLASH_LOGO'];
+
+  @override
   String getAppNameAr() => argsMap['APP_APP_NAME_AR'];
 
   @override

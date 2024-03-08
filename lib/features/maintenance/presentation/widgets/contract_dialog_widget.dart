@@ -77,7 +77,6 @@ class ContractDialog extends StatelessWidget {
                     value: model.unitName,
                     color: context.colors.bgLight,
                     image: Res.unitLogo),
-
                 DetailsItemWidget(
                   title: Translate.of(context).main_property,
                   value: model.blockName,
@@ -139,7 +138,10 @@ class ContractDialog extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SvgPicture.asset(Res.coinLogo),
+          SvgPicture.asset(
+            Res.coinLogo,
+            color: context.colors.textColor,
+          ),
           Gaps.hGap5,
           Text(
             title,

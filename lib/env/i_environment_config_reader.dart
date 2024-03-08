@@ -7,6 +7,7 @@ abstract class IEnvironmentConfigReader {
   String getAppId();
 
   String getLogoUrl();
+  String getSplashLogo();
 
   String getAppNameAr();
 

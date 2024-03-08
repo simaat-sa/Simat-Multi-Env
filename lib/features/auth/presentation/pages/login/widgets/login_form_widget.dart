@@ -54,6 +54,7 @@ class LoginFormWidget extends StatelessWidget {
                     Res.passwordIcon,
                     height: 24,
                     width: 24,
+                    color: context.colors.textColor,
                   ),
                 ),
                 suffixIcon: InkWell(

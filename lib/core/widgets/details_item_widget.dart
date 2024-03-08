@@ -28,7 +28,10 @@ class DetailsItemWidget extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SvgPicture.asset(image),
+          SvgPicture.asset(
+            image,
+            color: context.colors.textColor,
+          ),
           Gaps.hGap5,
           Text(
             title,

@@ -1,0 +1,13 @@
+{
+  "APP_ID": "saedan.building.sa",
+  "APP_ENV_NAME": "dev",
+  "APP_BASE_URL": "dev.simaat.sa",
+  "APP_API": "/api/app/",
+  "APP_APP_NAME_EN": "saedan",
+  "APP_APP_NAME_AR": "سعيدان",
+  "APP_LOCAL_LOGO": "assets/images/saedan.png",
+  "SPLASH_LOGO": "assets/images/saedan_splash.svg",
+  "PRIMARY_COLOR": "#998763",
+  "SECONDARY_COLOR": "#766339",
+  "TEXT_COLOR": "#766339"
+}

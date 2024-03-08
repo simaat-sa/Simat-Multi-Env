@@ -48,6 +48,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   padding: const EdgeInsets.all(6.0),
                   child: SvgPicture.asset(
                     Res.noticesLogo,
+                    color: context.colors.textColor,
                   ),
                 ),
                  if (notifyCount != "0")

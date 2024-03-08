@@ -25,7 +25,7 @@ class AddMaintenanceFormWidget extends StatelessWidget {
           radius: BorderRadius.circular(5),
           prefixIcon: Icon(
             Icons.phone_android_outlined,
-            color: context.colors.primaryText,
+            color: context.colors.textColor,
           ),
         ),
       ],

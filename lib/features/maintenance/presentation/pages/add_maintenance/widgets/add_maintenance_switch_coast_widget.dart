@@ -20,13 +20,14 @@ class AddMaintenanceSwitchCoastWidget extends StatelessWidget {
             Res.coinLogo,
             height: 22,
             width: 22,
+            color: context.colors.textColor,
           ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Text(
                 Translate.of(context).cost_at_my_own_expense,
-                style: AppTextStyle.s16_w400(color: context.colors.primaryText),
+                style: AppTextStyle.s16_w400(color: context.colors.textColor),
               ),
             ),
           ),

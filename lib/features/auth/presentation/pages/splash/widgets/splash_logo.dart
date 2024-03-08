@@ -7,7 +7,7 @@ class SplashLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: SvgPicture.asset(
-        Res.splashLogo,
+        FlutterEnvironmentConfigReader.instance.getSplashLogo(),
         height: 65,
         width: 240,
       ),

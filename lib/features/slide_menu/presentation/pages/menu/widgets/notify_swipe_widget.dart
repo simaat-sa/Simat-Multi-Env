@@ -9,7 +9,7 @@ class NotifySwipeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        AppSettings.openAppSettings(type: AppSettingsType.notification);
+        // AppSettings.openAppSettings(type: AppSettingsType.notification);
       },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10),

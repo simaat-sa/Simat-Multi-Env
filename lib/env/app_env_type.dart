@@ -1,6 +1,7 @@
 enum AppEnvType {
   dev('.run/dev.run.xml', 'dev'),
   stage('.run/stage.run.xml', 'stage'),
+  sadn('.run/sadn.run.xml', 'sadn'),
   prod('.run/prod.run.xml', 'prod');
 
   final String path;

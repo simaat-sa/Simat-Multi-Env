@@ -136,6 +136,15 @@ android {
                 into '.'
             }
         }
+        sadn {
+            dimension "app"
+            applicationId dartEnvironmentVariables.APP_ID
+            copy {
+                from 'src/sadn/'
+                include '*.json'
+                into '.'
+            }
+        }
     }
 
 }

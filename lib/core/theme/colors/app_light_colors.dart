@@ -47,13 +47,15 @@ class AppLightColors extends AppColors {
   @override
   Color get green3 => const Color(0xff83AA54);
 
+  @override
   Color get green4 => const Color(0xff186669);
 
   @override
   Color get brown => const Color(0xff635048);
 
   @override
-  Color get primaryText => const Color(0xff2c979b);
+  // Color get primaryText => const Color(0xff2c979b);
+  Color get primaryText => ColorHelper.hexToColor(const String.fromEnvironment("TEXT_COLOR"));
 
   @override
   Color get darkTextColor => const Color(0xff3F3F3F);

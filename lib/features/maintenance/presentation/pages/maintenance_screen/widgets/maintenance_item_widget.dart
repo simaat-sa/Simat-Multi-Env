@@ -46,7 +46,7 @@ class MaintenanceItemWidget extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4),
                   child: Text(
-                     Translate.of(context).sar,
+                    Translate.of(context).sar,
                     style: AppTextStyle.s16_w400(color: context.colors.green3),
                   ),
                 ),
@@ -55,7 +55,10 @@ class MaintenanceItemWidget extends StatelessWidget {
             Gaps.vGap10,
             Row(
               children: [
-                SvgPicture.asset(Res.calendarIcon),
+                SvgPicture.asset(
+                  Res.calendarIcon,
+                  color: context.colors.textColor,
+                ),
                 Gaps.hGap5,
                 Text(
                   model.createdDate,
@@ -66,10 +69,7 @@ class MaintenanceItemWidget extends StatelessWidget {
                 if (model.createdBy.isNotEmpty)
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4),
-                    child: Text(
-                      ".",
-                      style: AppTextStyle.s14_w500(color: context.colors.primary)
-                    ),
+                    child: Text(".", style: AppTextStyle.s14_w500(color: context.colors.primary)),
                   ),
                 Text(
                   model.createdBy,

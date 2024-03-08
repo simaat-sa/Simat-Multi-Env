@@ -6,6 +6,7 @@
   "APP_APP_NAME_EN": "Prod Name",
   "APP_APP_NAME_AR": "برودكشن",
   "APP_LOCAL_LOGO": "assets/images/icon.png",
+  "SPLASH_LOGO": "assets/images/splash_logo.svg",
   "PRIMARY_COLOR": "#238FC0",
   "SECONDARY_COLOR": "#EAAC27",
   "TEXT_COLOR": "#239397"

@@ -42,6 +42,7 @@ class FilterItemWidget extends StatelessWidget {
                   Res.filterLogo,
                   height: 26,
                   width: 26,
+                  color: context.colors.textColor,
                 ),
               ),
             ],

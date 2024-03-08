@@ -21,6 +21,7 @@ class LoginFingerPrintWidget extends StatelessWidget {
                   Res.fingerprintIcon,
                   width: 65,
                   height: 65,
+                  color: context.colors.textColor,
                 ),
               ),
             );

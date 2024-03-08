@@ -19,11 +19,11 @@ class AddMaintenanceDescWidget extends StatelessWidget {
       prefixIcon: Container(
         height: 120,
         width: 30,
-        padding: const EdgeInsets.only(top: 10),
+        padding: const EdgeInsets.only(top: 4),
         alignment: Alignment.topCenter,
         child: SvgPicture.asset(
           Res.detailsLogo,
-          color: context.colors.primaryText,
+          color: context.colors.textColor,
           height: 30,
           width: 30,
         ),

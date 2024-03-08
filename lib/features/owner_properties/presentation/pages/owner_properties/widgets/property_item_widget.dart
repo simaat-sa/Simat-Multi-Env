@@ -37,7 +37,8 @@ class PropertyItemWidget extends StatelessWidget {
                           height: 26,
                           padding: const EdgeInsets.symmetric(horizontal: 5),
                           decoration: BoxDecoration(
-                              color: context.colors.black.withOpacity(0.15), borderRadius: BorderRadius.circular(5)),
+                              color: context.colors.black.withOpacity(0.15),
+                              borderRadius: BorderRadius.circular(5)),
                           child: Row(
                             children: [
                               Icon(
@@ -57,10 +58,12 @@ class PropertyItemWidget extends StatelessWidget {
                           height: 26,
                           padding: const EdgeInsets.symmetric(horizontal: 5),
                           decoration: BoxDecoration(
-                              color: context.colors.black.withOpacity(0.15), borderRadius: BorderRadius.circular(5)),
+                              color: context.colors.black.withOpacity(0.15),
+                              borderRadius: BorderRadius.circular(5)),
                           child: Text(
                             "#${model.areCode}",
-                            style: AppTextStyle.s14_w400(color: context.colors.white).copyWith(height: 2.2),
+                            style: AppTextStyle.s14_w400(color: context.colors.white)
+                                .copyWith(height: 2.2),
                           ),
                         ),
                       ],
@@ -114,7 +117,10 @@ class PropertyItemWidget extends StatelessWidget {
                   Expanded(
                     child: Row(
                       children: [
-                        SvgPicture.asset(Res.unitLogo),
+                        SvgPicture.asset(
+                          Res.unitLogo,
+                          color: context.colors.textColor,
+                        ),
                         Gaps.hGap5,
                         Flexible(
                           child: Row(

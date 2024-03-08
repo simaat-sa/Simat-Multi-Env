@@ -6,6 +6,7 @@ import 'package:flutter_tdd/core/helpers/services/current_version_helper.dart';
 import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
+import 'package:flutter_tdd/env/environment_config_reader.dart';
 import 'package:flutter_tdd/res.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
