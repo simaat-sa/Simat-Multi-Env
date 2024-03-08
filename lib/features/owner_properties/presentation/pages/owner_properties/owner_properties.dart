@@ -12,7 +12,7 @@ class _OwnerPropertiesState extends State<OwnerProperties> {
 
   @override
   void initState() {
-    controller.requestPropertyData();
+    controller.initPaginationController();
     super.initState();
   }
 
@@ -20,52 +20,42 @@ class _OwnerPropertiesState extends State<OwnerProperties> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(),
-      body: RequesterConsumer(
-        requester: controller.requester,
-        successBuilder: (context, data) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-            child: Column(
-              children: [
-                FilterItemWidget(
-                  showFilterIcon: true,
-                  onChange: (val) {
-                    controller.searchText = val;
-                    controller.onFilter();
-                  },
-                  onSubmit: (value) {
-                    controller.searchText = value;
-                    controller.onFilter();
-                  },
-                  onTap: () => controller.filterSheet(context),
-                ),
-                Gaps.vGap10,
-                Flexible(
-                  child: ListView(
-                    children: [
-                      Column(
-                        children: [
-                          ...List.generate(
-                            data.length,
-                            (index) {
-                              return PropertyItemWidget(model: data[index]);
-                            },
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        child: Column(
+          children: [
+            FilterItemWidget(
+              showFilterIcon: false,
+              onChange: (val) {
+                controller.searchText = val;
+                controller.onFilter();
+              },
+              onSubmit: (value) {
+                controller.searchText = value;
+                controller.onFilter();
+              },
             ),
-          );
-        },
-        failureBuilder: (context, error, callback) {
-          return FailureViewWidget(onTap: callback);
-        },
-        loadingBuilder: (context) {
-          return const PropertyLoadingListWidget();
-        },
+            Gaps.vGap10,
+            Flexible(
+              child: PagedListView(
+                pagingController: controller.pagingController,
+                builderDelegate: PagedChildBuilderDelegate<PropModel>(
+                  itemBuilder: (context, item, index) {
+                    return PropertyItemWidget(
+                      model: item,
+                    );
+                  },
+                  firstPageErrorIndicatorBuilder: (context) {
+                    return const PropertyLoadingListWidget();
+                  },
+                  noItemsFoundIndicatorBuilder: (context) {
+                    return const EmptyListItemWidget();
+                  },
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
