@@ -22,7 +22,7 @@ if (flutterVersionName == null) {
 }
 
 def dartEnvironmentVariables = [
-        APP_APP_NAME_EN: 'OSOS',
+        APP_APP_NAME_EN: 'SIMAT',
         APP_APP_NAME_AR: 'أسس',
         APP_ID         : 'system.dev',
 ]
@@ -99,7 +99,7 @@ android {
             signingConfig signingConfigs.release
             applicationVariants.all { variant ->
                 variant.outputs.all {
-                    def appName = "SIMAAT_V_"
+                    def appName = dartEnvironmentVariables.APP_APP_NAME_EN +  "_V_"
                     def newName = "${appName}${defaultConfig.versionName}_${defaultConfig.versionCode}.apk"
                     outputFileName = newName
                 }
@@ -136,7 +136,7 @@ android {
                 into '.'
             }
         }
-        sadn {
+        sdn {
             dimension "app"
             applicationId dartEnvironmentVariables.APP_ID
             copy {
