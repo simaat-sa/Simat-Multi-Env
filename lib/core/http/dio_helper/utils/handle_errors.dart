@@ -3,10 +3,13 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_tdd/core/constants/app_config.dart';
+import 'package:flutter_tdd/core/constants/app_constants.dart';
 import 'package:flutter_tdd/core/errors/custom_error.dart';
 import 'package:flutter_tdd/core/errors/not_found_error.dart';
 import 'package:flutter_tdd/core/errors/unauthorized_error.dart';
 import 'package:flutter_tdd/core/helpers/app_snack_bar_service.dart';
+import 'package:flutter_tdd/core/helpers/global_context.dart';
+import 'package:flutter_tdd/core/helpers/global_state.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -78,6 +81,8 @@ class HandleErrors {
   void _tokenExpired() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.clear();
-    AppConfig.instance.restartApp();
+    if (GlobalState.instance.get(ApplicationConstants.keyToken) != null) {
+      AppConfig.instance.restartApp();
+    }
   }
 }

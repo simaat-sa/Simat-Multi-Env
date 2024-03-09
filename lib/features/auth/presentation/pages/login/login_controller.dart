@@ -21,7 +21,7 @@ class LoginController {
 
   /// to submit the login form
   Future<bool> onSubmit(BuildContext context) async {
-    var deviceId = await FirebaseMessaging.instance.getToken();
+    String? deviceId = await _getFirebaseToken();
     if (_checkFormValidation(context)) {
       LoginParams params = loginParams(deviceId ?? '');
       var loginResponse = await getIt<AuthRepository>().login(params);
@@ -29,6 +29,16 @@ class LoginController {
     } else {
       return false;
     }
+  }
+
+  Future<String?> _getFirebaseToken() async {
+    var deviceId = await FirebaseMessaging.instance.getAPNSToken();
+    try {
+      deviceId = await FirebaseMessaging.instance.getAPNSToken();
+    } catch (e) {
+      deviceId = "";
+    }
+    return deviceId;
   }
 
   bool _handleLoginResponse(BuildContext context, MyResult<UserModel> response) {

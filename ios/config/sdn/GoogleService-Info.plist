@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>saedan.building.sa</string>
+	<string>saedan.building.com</string>
 	<key>PROJECT_ID</key>
 	<string>trace-7d493</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:493922740426:ios:1684f0a130f82a9e81ac33</string>
+	<string>1:493922740426:ios:ea1bec88d7a11d5581ac33</string>
 </dict>
 </plist>
