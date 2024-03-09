@@ -5,9 +5,19 @@ class SplashLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var logo = FlutterEnvironmentConfigReader.instance.getSplashLogo();
+    if (logo.contains(".svg")) {
+      return Center(
+        child: SvgPicture.asset(
+          logo,
+          height: 65,
+          width: 240,
+        ),
+      );
+    }
     return Center(
-      child: SvgPicture.asset(
-        FlutterEnvironmentConfigReader.instance.getSplashLogo(),
+      child: Image.asset(
+        logo,
         height: 65,
         width: 240,
       ),

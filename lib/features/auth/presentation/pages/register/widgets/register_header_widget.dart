@@ -5,8 +5,16 @@ class RegisterHeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(
-      FlutterEnvironmentConfigReader.instance.getSplashLogo(),
+    var logo = FlutterEnvironmentConfigReader.instance.getSplashLogo();
+    if (logo.contains(".svg")) {
+      return SvgPicture.asset(
+        logo,
+        height: 60,
+        width: 210,
+      );
+    }
+    return Image.asset(
+      logo,
       height: 60,
       width: 210,
     );
