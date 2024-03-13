@@ -58,6 +58,10 @@ mixin _$UserAccessModel {
   String get iconSvg => throw _privateConstructorUsedError;
   @JsonKey(name: 'icon_svg')
   set iconSvg(String value) => throw _privateConstructorUsedError;
+  @JsonKey(name: 'page_order')
+  String get pageOrder => throw _privateConstructorUsedError;
+  @JsonKey(name: 'page_order')
+  set pageOrder(String value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -81,7 +85,8 @@ abstract class $UserAccessModelCopyWith<$Res> {
       @JsonKey(name: 'page_image') String pageImage,
       @JsonKey(name: 'page_desc') String pageDesc,
       @JsonKey(name: 'page_name') String pageName,
-      @JsonKey(name: 'icon_svg') String iconSvg});
+      @JsonKey(name: 'icon_svg') String iconSvg,
+      @JsonKey(name: 'page_order') String pageOrder});
 }
 
 /// @nodoc
@@ -107,6 +112,7 @@ class _$UserAccessModelCopyWithImpl<$Res, $Val extends UserAccessModel>
     Object? pageDesc = null,
     Object? pageName = null,
     Object? iconSvg = null,
+    Object? pageOrder = null,
   }) {
     return _then(_value.copyWith(
       pageid: null == pageid
@@ -149,6 +155,10 @@ class _$UserAccessModelCopyWithImpl<$Res, $Val extends UserAccessModel>
           ? _value.iconSvg
           : iconSvg // ignore: cast_nullable_to_non_nullable
               as String,
+      pageOrder: null == pageOrder
+          ? _value.pageOrder
+          : pageOrder // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -171,7 +181,8 @@ abstract class _$$UserAccessModelImplCopyWith<$Res>
       @JsonKey(name: 'page_image') String pageImage,
       @JsonKey(name: 'page_desc') String pageDesc,
       @JsonKey(name: 'page_name') String pageName,
-      @JsonKey(name: 'icon_svg') String iconSvg});
+      @JsonKey(name: 'icon_svg') String iconSvg,
+      @JsonKey(name: 'page_order') String pageOrder});
 }
 
 /// @nodoc
@@ -195,6 +206,7 @@ class __$$UserAccessModelImplCopyWithImpl<$Res>
     Object? pageDesc = null,
     Object? pageName = null,
     Object? iconSvg = null,
+    Object? pageOrder = null,
   }) {
     return _then(_$UserAccessModelImpl(
       pageid: null == pageid
@@ -237,6 +249,10 @@ class __$$UserAccessModelImplCopyWithImpl<$Res>
           ? _value.iconSvg
           : iconSvg // ignore: cast_nullable_to_non_nullable
               as String,
+      pageOrder: null == pageOrder
+          ? _value.pageOrder
+          : pageOrder // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -255,7 +271,8 @@ class _$UserAccessModelImpl extends _UserAccessModel {
       @JsonKey(name: 'page_image') required this.pageImage,
       @JsonKey(name: 'page_desc') required this.pageDesc,
       @JsonKey(name: 'page_name') required this.pageName,
-      @JsonKey(name: 'icon_svg') required this.iconSvg})
+      @JsonKey(name: 'icon_svg') required this.iconSvg,
+      @JsonKey(name: 'page_order') required this.pageOrder})
       : super._();
 
   factory _$UserAccessModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -290,10 +307,13 @@ class _$UserAccessModelImpl extends _UserAccessModel {
   @override
   @JsonKey(name: 'icon_svg')
   String iconSvg;
+  @override
+  @JsonKey(name: 'page_order')
+  String pageOrder;
 
   @override
   String toString() {
-    return 'UserAccessModel(pageid: $pageid, pageCode: $pageCode, pageAr: $pageAr, pageEn: $pageEn, isRoot: $isRoot, pageActive: $pageActive, pageImage: $pageImage, pageDesc: $pageDesc, pageName: $pageName, iconSvg: $iconSvg)';
+    return 'UserAccessModel(pageid: $pageid, pageCode: $pageCode, pageAr: $pageAr, pageEn: $pageEn, isRoot: $isRoot, pageActive: $pageActive, pageImage: $pageImage, pageDesc: $pageDesc, pageName: $pageName, iconSvg: $iconSvg, pageOrder: $pageOrder)';
   }
 
   @JsonKey(ignore: true)
@@ -322,7 +342,8 @@ abstract class _UserAccessModel extends UserAccessModel {
           @JsonKey(name: 'page_image') required String pageImage,
           @JsonKey(name: 'page_desc') required String pageDesc,
           @JsonKey(name: 'page_name') required String pageName,
-          @JsonKey(name: 'icon_svg') required String iconSvg}) =
+          @JsonKey(name: 'icon_svg') required String iconSvg,
+          @JsonKey(name: 'page_order') required String pageOrder}) =
       _$UserAccessModelImpl;
   _UserAccessModel._() : super._();
 
@@ -377,6 +398,11 @@ abstract class _UserAccessModel extends UserAccessModel {
   String get iconSvg;
   @JsonKey(name: 'icon_svg')
   set iconSvg(String value);
+  @override
+  @JsonKey(name: 'page_order')
+  String get pageOrder;
+  @JsonKey(name: 'page_order')
+  set pageOrder(String value);
   @override
   @JsonKey(ignore: true)
   _$$UserAccessModelImplCopyWith<_$UserAccessModelImpl> get copyWith =>

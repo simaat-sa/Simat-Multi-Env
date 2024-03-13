@@ -175,7 +175,7 @@ class PropertyItemWidget extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'سكني/تجاري',
+                    model.propType.getLocalizedName(),
                     style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                   ),
                 ],

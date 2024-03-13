@@ -20,11 +20,15 @@ class UserAccessModel with _$UserAccessModel {
     @JsonKey(name: 'page_desc') required String pageDesc,
     @JsonKey(name: 'page_name') required String pageName,
     @JsonKey(name: 'icon_svg') required String iconSvg,
+    @JsonKey(name: 'page_order') required String pageOrder,
   }) = _UserAccessModel;
 
   factory UserAccessModel.fromJson(Map<String, dynamic> json) => _$UserAccessModelFromJson(json);
 
 
   String get localizedName => LocalizedNameModel.fromStrings(ar: pageAr, en: pageEn).getLocalizedString;
+
+
+  int get pageNumber => int.parse(pageOrder);
 
 }

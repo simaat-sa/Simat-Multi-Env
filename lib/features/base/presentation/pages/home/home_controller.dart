@@ -12,7 +12,8 @@ class HomeController {
 
   void initPages (BuildContext context){
     var pages = context.read<UserCubit>().state.model!.userAccess;
-    pagesBloc.successState(pages.take(4).toList());
+    pages.sort((a, b) => a.pageNumber.compareTo(b.pageNumber));
+    pagesBloc.successState(pages.take(5).toList());
   }
 
   void initBottomNavigation(TickerProvider ticker, int index) {

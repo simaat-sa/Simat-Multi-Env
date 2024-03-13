@@ -12,7 +12,7 @@ class NotifySwipeWidget extends StatelessWidget {
         AppSettings.openAppSettings(type: AppSettingsType.notification);
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         height: 45,
         decoration: BoxDecoration(
           border: Border.all(color: context.colors.greyWhite),
@@ -22,12 +22,9 @@ class NotifySwipeWidget extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Text(
-                Translate.of(context).notify,
-                style: AppTextStyle.s16_w400(color: context.colors.darkTextColor),
-              ),
+            Text(
+              Translate.of(context).notify,
+              style: AppTextStyle.s16_w400(color: context.colors.darkTextColor),
             ),
             Icon(
               Icons.arrow_forward_ios_outlined,

@@ -140,7 +140,7 @@ android {
             dimension "app"
             applicationId dartEnvironmentVariables.APP_ID
             copy {
-                from 'src/sadn/'
+                from 'src/sdn/'
                 include '*.json'
                 into '.'
             }

@@ -75,6 +75,7 @@ class LoginController {
       pageActive: "",
       pageImage: "",
       pageDesc: "",
+      pageOrder: "1000000000000000",
       pageName: Translate.s.menu,
       iconSvg: Res.moreBarLogo,);
   }

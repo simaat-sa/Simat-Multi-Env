@@ -35,45 +35,19 @@ mixin _$PropModel {
   @JsonKey(name: 'parent_desc_en', defaultValue: "")
   String get blocNameEn => throw _privateConstructorUsedError;
   @JsonKey(name: 'acl_status_code', defaultValue: "")
-  String get statusCode =>
-      throw _privateConstructorUsedError; // @JsonKey(name: 'are_owner', defaultValue: "") required String areOwner,
-// @JsonKey(name: 'are_intermediate', defaultValue: "") required String areIntermediate,
+  String get statusCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_img')
-  String? get propImg =>
-      throw _privateConstructorUsedError; // @JsonKey(name: 'prop_lat', defaultValue: "0") required String propLat,
-// @JsonKey(name: 'prop_lng', defaultValue: "0") required String propLng,
-// @JsonKey(name: 'prop_address', defaultValue: "") required String propAddress,
-// @JsonKey(name: 'monthly', defaultValue: "") required String monthly,
-// @JsonKey(name: 'is_rentable', defaultValue: "") required String isRentable,
-// @JsonKey(name: 'create_by', defaultValue: "") required String createBy,
-// @JsonKey(name: 'update_by', defaultValue: "") required String updateBy,
-// @JsonKey(name: 'dt_created', defaultValue: "") required String dtCreated,
-// @JsonKey(name: 'prop_units', defaultValue: "") required String propUnits,
-// @JsonKey(name: 'water_meter', defaultValue: "") required String waterMeter,
-// @JsonKey(name: 'guard_name', defaultValue: "") required String guardName,
-// @JsonKey(name: 'acl_status_code', defaultValue: "0") required String aclStatusCode,
-// @JsonKey(name: 'contact_mobile', defaultValue: "") required String contactMobile,
-// @JsonKey(name: 'contact_phone') required String? contactPhone,
+  String? get propImg => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_cost', defaultValue: "")
-  String get propCost =>
-      throw _privateConstructorUsedError; // @JsonKey(name: 'unit_no') String? unitNo,
-// @JsonKey(name: 'floor_no', defaultValue: "") required String floorNo,
-// @JsonKey(name: 'prop_district', defaultValue: "") required String propDistrict,
+  String get propCost => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_city', defaultValue: "")
   String get propCity => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_region', defaultValue: "")
-  String get propRegion =>
-      throw _privateConstructorUsedError; // @JsonKey(name: 'country', defaultValue: "") required String country,
-// @JsonKey(name: 'build_area', defaultValue: "") required String buildArea,
-// @JsonKey(name: 'land_area', defaultValue: "") required String landArea,
+  String get propRegion => throw _privateConstructorUsedError;
   @JsonKey(name: 'contact_name', defaultValue: "")
   String get contactName => throw _privateConstructorUsedError;
   @JsonKey(name: 'dt_updated', defaultValue: "")
-  String get date =>
-      throw _privateConstructorUsedError; // @JsonKey(name: 'collector', defaultValue: "") required String collector,
-// @JsonKey(name: 'rooms') String? rooms,
-// @JsonKey(name: 'prop_floors', defaultValue: "") required String propFloors,
-// @JsonKey(name: 'building_number', defaultValue: "") required String buildingNumber,
+  String get date => throw _privateConstructorUsedError;
   @JsonKey(name: 'contract_type')
   ContractTypes get propType => throw _privateConstructorUsedError;
 
@@ -371,50 +345,24 @@ class _$PropModelImpl extends _PropModel {
   @override
   @JsonKey(name: 'acl_status_code', defaultValue: "")
   final String statusCode;
-// @JsonKey(name: 'are_owner', defaultValue: "") required String areOwner,
-// @JsonKey(name: 'are_intermediate', defaultValue: "") required String areIntermediate,
   @override
   @JsonKey(name: 'prop_img')
   final String? propImg;
-// @JsonKey(name: 'prop_lat', defaultValue: "0") required String propLat,
-// @JsonKey(name: 'prop_lng', defaultValue: "0") required String propLng,
-// @JsonKey(name: 'prop_address', defaultValue: "") required String propAddress,
-// @JsonKey(name: 'monthly', defaultValue: "") required String monthly,
-// @JsonKey(name: 'is_rentable', defaultValue: "") required String isRentable,
-// @JsonKey(name: 'create_by', defaultValue: "") required String createBy,
-// @JsonKey(name: 'update_by', defaultValue: "") required String updateBy,
-// @JsonKey(name: 'dt_created', defaultValue: "") required String dtCreated,
-// @JsonKey(name: 'prop_units', defaultValue: "") required String propUnits,
-// @JsonKey(name: 'water_meter', defaultValue: "") required String waterMeter,
-// @JsonKey(name: 'guard_name', defaultValue: "") required String guardName,
-// @JsonKey(name: 'acl_status_code', defaultValue: "0") required String aclStatusCode,
-// @JsonKey(name: 'contact_mobile', defaultValue: "") required String contactMobile,
-// @JsonKey(name: 'contact_phone') required String? contactPhone,
   @override
   @JsonKey(name: 'prop_cost', defaultValue: "")
   final String propCost;
-// @JsonKey(name: 'unit_no') String? unitNo,
-// @JsonKey(name: 'floor_no', defaultValue: "") required String floorNo,
-// @JsonKey(name: 'prop_district', defaultValue: "") required String propDistrict,
   @override
   @JsonKey(name: 'prop_city', defaultValue: "")
   final String propCity;
   @override
   @JsonKey(name: 'prop_region', defaultValue: "")
   final String propRegion;
-// @JsonKey(name: 'country', defaultValue: "") required String country,
-// @JsonKey(name: 'build_area', defaultValue: "") required String buildArea,
-// @JsonKey(name: 'land_area', defaultValue: "") required String landArea,
   @override
   @JsonKey(name: 'contact_name', defaultValue: "")
   final String contactName;
   @override
   @JsonKey(name: 'dt_updated', defaultValue: "")
   final String date;
-// @JsonKey(name: 'collector', defaultValue: "") required String collector,
-// @JsonKey(name: 'rooms') String? rooms,
-// @JsonKey(name: 'prop_floors', defaultValue: "") required String propFloors,
-// @JsonKey(name: 'building_number', defaultValue: "") required String buildingNumber,
   @override
   @JsonKey(name: 'contract_type')
   final ContractTypes propType;
@@ -548,46 +496,25 @@ abstract class _PropModel extends PropModel {
   @override
   @JsonKey(name: 'acl_status_code', defaultValue: "")
   String get statusCode;
-  @override // @JsonKey(name: 'are_owner', defaultValue: "") required String areOwner,
-// @JsonKey(name: 'are_intermediate', defaultValue: "") required String areIntermediate,
+  @override
   @JsonKey(name: 'prop_img')
   String? get propImg;
-  @override // @JsonKey(name: 'prop_lat', defaultValue: "0") required String propLat,
-// @JsonKey(name: 'prop_lng', defaultValue: "0") required String propLng,
-// @JsonKey(name: 'prop_address', defaultValue: "") required String propAddress,
-// @JsonKey(name: 'monthly', defaultValue: "") required String monthly,
-// @JsonKey(name: 'is_rentable', defaultValue: "") required String isRentable,
-// @JsonKey(name: 'create_by', defaultValue: "") required String createBy,
-// @JsonKey(name: 'update_by', defaultValue: "") required String updateBy,
-// @JsonKey(name: 'dt_created', defaultValue: "") required String dtCreated,
-// @JsonKey(name: 'prop_units', defaultValue: "") required String propUnits,
-// @JsonKey(name: 'water_meter', defaultValue: "") required String waterMeter,
-// @JsonKey(name: 'guard_name', defaultValue: "") required String guardName,
-// @JsonKey(name: 'acl_status_code', defaultValue: "0") required String aclStatusCode,
-// @JsonKey(name: 'contact_mobile', defaultValue: "") required String contactMobile,
-// @JsonKey(name: 'contact_phone') required String? contactPhone,
+  @override
   @JsonKey(name: 'prop_cost', defaultValue: "")
   String get propCost;
-  @override // @JsonKey(name: 'unit_no') String? unitNo,
-// @JsonKey(name: 'floor_no', defaultValue: "") required String floorNo,
-// @JsonKey(name: 'prop_district', defaultValue: "") required String propDistrict,
+  @override
   @JsonKey(name: 'prop_city', defaultValue: "")
   String get propCity;
   @override
   @JsonKey(name: 'prop_region', defaultValue: "")
   String get propRegion;
-  @override // @JsonKey(name: 'country', defaultValue: "") required String country,
-// @JsonKey(name: 'build_area', defaultValue: "") required String buildArea,
-// @JsonKey(name: 'land_area', defaultValue: "") required String landArea,
+  @override
   @JsonKey(name: 'contact_name', defaultValue: "")
   String get contactName;
   @override
   @JsonKey(name: 'dt_updated', defaultValue: "")
   String get date;
-  @override // @JsonKey(name: 'collector', defaultValue: "") required String collector,
-// @JsonKey(name: 'rooms') String? rooms,
-// @JsonKey(name: 'prop_floors', defaultValue: "") required String propFloors,
-// @JsonKey(name: 'building_number', defaultValue: "") required String buildingNumber,
+  @override
   @JsonKey(name: 'contract_type')
   ContractTypes get propType;
   @override

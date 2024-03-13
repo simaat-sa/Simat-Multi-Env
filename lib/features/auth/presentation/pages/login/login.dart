@@ -45,7 +45,7 @@ class _LoginState extends State<Login> {
                       LoginFormWidget(controller: controller),
                       LoginButtonWidget(controller: controller),
                       Visibility(
-                        visible:widget.checkRegisterButton ,
+                        visible:widget.checkRegisterButton && Platform.isIOS,
                         child: const CreateAccountButtonWidget(),
                       ),
                       Gaps.vGap16,

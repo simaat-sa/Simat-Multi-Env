@@ -19,6 +19,7 @@ _$UserAccessModelImpl _$$UserAccessModelImplFromJson(
       pageDesc: json['page_desc'] as String,
       pageName: json['page_name'] as String,
       iconSvg: json['icon_svg'] as String,
+      pageOrder: json['page_order'] as String,
     );
 
 Map<String, dynamic> _$$UserAccessModelImplToJson(
@@ -34,6 +35,7 @@ Map<String, dynamic> _$$UserAccessModelImplToJson(
       'page_desc': instance.pageDesc,
       'page_name': instance.pageName,
       'icon_svg': instance.iconSvg,
+      'page_order': instance.pageOrder,
     };
 
 const _$AccessPagesEnumMap = {

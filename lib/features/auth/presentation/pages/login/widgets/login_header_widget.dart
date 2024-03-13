@@ -15,8 +15,8 @@ class LoginHeaderWidget extends StatelessWidget {
     }
     return Image.asset(
       logo,
-      height: 60,
-      width: 210,
+      height: 100,
+      width: 300,
     );
   }
 }
