@@ -29,8 +29,10 @@ import 'package:flutter_tdd/features/auth/presentation/manager/user_cubit/user_c
 import 'package:flutter_tdd/features/auth/presentation/pages/get_code_info/get_code_info_imports.dart';
 import 'package:flutter_tdd/features/auth/presentation/widgets/auth_app_bar_widget.dart';
 import 'package:flutter_tdd/features/auth/presentation/widgets/auth_scaffold_widget.dart';
+import 'package:flutter_tdd/features/general/presentation/pages/qr_screen/qr_screen.dart';
 import 'package:flutter_tdd/res.dart';
 
+import 'widgets/get_code_text_widget.dart';
 import 'widgets/login_widgets_imports.dart';
 
 part 'login.dart';

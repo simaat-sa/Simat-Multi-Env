@@ -136,17 +136,12 @@ class LoginController {
   /// scan the qr code and get the token
   /// then send the token to the server to get the user data
   void qrScan(BuildContext context) async {
-    String? scannedCode = await Navigator.push(context, MaterialPageRoute(builder: (context) => const ScannerScreen()));
+    String? scannedCode = await Navigator.push(context, MaterialPageRoute(builder: (context) => const QrScreen()));
     if (scannedCode != null) {
       var token = scannedCode.split(",").first.split("<").last;
       _loginWithQr(context, token);
     }
   }
 
-  void getCode(BuildContext context) {
-    AppBottomSheets.showScrollableBody(
-      context: context,
-      builder: (context) => const GetCodeInfo(),
-    );
-  }
+
 }

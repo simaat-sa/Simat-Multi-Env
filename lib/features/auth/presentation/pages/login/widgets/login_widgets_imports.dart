@@ -22,5 +22,4 @@ part 'build_login_social_media.dart';
 part 'login_finger_print_widget.dart';
 part 'login_header_widget.dart';
 part 'login_qr_button_widget.dart';
-part 'get_code_text_widget.dart';
 part 'create_account_button_widget.dart';

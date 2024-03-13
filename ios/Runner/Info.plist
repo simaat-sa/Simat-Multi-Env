@@ -60,6 +60,8 @@
 	<string>Add photo permissions are necessary if you want to save images</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Photo library permissions are necessary to select images</string>
+	<key>NSMicrophoneUsageDescription</key>
+    <string>required for qr scan</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UIBackgroundModes</key>

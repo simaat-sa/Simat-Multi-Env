@@ -103,6 +103,7 @@ dependencies:
   package_info_plus: ^5.0.1
   app_settings: ^5.1.1
   share_plus: ^7.2.2
+  qr_scanner_with_effect: ^1.0.5
 
 
 
