@@ -18,7 +18,6 @@ class BiometricHelper {
   Future<List<BiometricType>> getAvailableBiometricTypes() async {
     final List<BiometricType> availableBiometrics =
     await _auth.getAvailableBiometrics();
-    print("===========> $availableBiometrics");
     return availableBiometrics;
   }
 

@@ -43,6 +43,78 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:493922740426:android:b458ea22ec718d4f81ac33",
+        "android_client_info": {
+          "package_name": "saedan.building.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493922740426-du7b39o37uv3uc91qg5os4hiddo7n524.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ6ZdsH_Vo4_9vJzK1PpGREeKTIOsXWoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493922740426-du7b39o37uv3uc91qg5os4hiddo7n524.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "493922740426-tk3ib9h8peirpaik4va1al2mr9p8kouj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "simaat.building.sa"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493922740426:android:02f2621bd709470281ac33",
+        "android_client_info": {
+          "package_name": "simaat.building.sa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493922740426-du7b39o37uv3uc91qg5os4hiddo7n524.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ6ZdsH_Vo4_9vJzK1PpGREeKTIOsXWoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493922740426-du7b39o37uv3uc91qg5os4hiddo7n524.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "493922740426-tk3ib9h8peirpaik4va1al2mr9p8kouj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "simaat.building.sa"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:493922740426:android:9873b59ac9fb32ec81ac33",
         "android_client_info": {
           "package_name": "simaat.dev"
