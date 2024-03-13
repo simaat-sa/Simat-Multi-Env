@@ -24,4 +24,7 @@ abstract class IEnvironmentConfigReader {
   String getAnonymousGrantType();
 
   String? getLocalLogoAssetsPath();
+
+  String iosLink();
+  String androidLink();
 }

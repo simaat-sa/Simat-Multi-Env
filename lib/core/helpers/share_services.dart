@@ -1,9 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tdd/core/helpers/app_snack_bar_service.dart';
 import 'package:flutter_tdd/core/localization/translate.dart';
+import 'package:flutter_tdd/env/environment_config_reader.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 @injectable
@@ -71,7 +75,17 @@ class ShareServices {
     await launchUrl(emailLaunchUri);
   }
 
-  void onLink({required BuildContext context, required String link}) {
+  void onLink({required String link}) {
     launchURL(url: link);
   }
+
+
+  void shareApp() {
+    String appLink = FlutterEnvironmentConfigReader.instance.androidLink();
+    if (Platform.isIOS) {
+      appLink = FlutterEnvironmentConfigReader.instance.iosLink();
+    }
+    Share.share(appLink);
+  }
+
 }

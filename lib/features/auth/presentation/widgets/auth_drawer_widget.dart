@@ -50,7 +50,7 @@ class AuthDrawerWidget extends StatelessWidget {
                   const LanguagesWidget(),
                   AuthDrawerItemWidget(
                     text: Translate.of(context).Share_the_app,
-                    onTap: () {},
+                    onTap: () => getIt<ShareServices>().shareApp(),
                   ),
                   AuthDrawerItemWidget(
                     text: Translate.of(context).Privacy_Policy,

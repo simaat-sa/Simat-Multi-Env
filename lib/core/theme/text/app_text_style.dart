@@ -258,6 +258,15 @@ class AppTextStyle extends TextStyle {
         );
 
   // ignore: non_constant_identifier_names
+  const AppTextStyle.s20_w400({required Color color})
+      : super(
+    color: color,
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+    height: fontHeight,
+  );
+
+  // ignore: non_constant_identifier_names
   const AppTextStyle.s24_w500({required Color color})
       : super(
           color: color,

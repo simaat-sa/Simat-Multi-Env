@@ -63,4 +63,10 @@ class FlutterEnvironmentConfigReader implements IEnvironmentConfigReader {
 
   @override
   String getSplashLogo() => const String.fromEnvironment('SPLASH_LOGO');
+
+  @override
+  String androidLink() => const String.fromEnvironment('APP_ANDROID_LINK');
+
+  @override
+  String iosLink() => const String.fromEnvironment('APP_IOS_LINK');
 }

@@ -20,7 +20,7 @@ class MenuSettingWidget extends StatelessWidget {
           const LanguagesWidget(),
           AuthDrawerItemWidget(
             text: Translate.of(context).Share_the_app,
-            onTap: () {},
+            onTap: () => getIt<ShareServices>().shareApp(),
           ),
           AuthDrawerItemWidget(
             padding: const EdgeInsets.only(bottom: 0),

@@ -7,6 +7,8 @@
   "APP_APP_NAME_AR": "سعيدان",
   "APP_LOCAL_LOGO": "assets/images/saedan.png",
   "SPLASH_LOGO": "assets/images/saedan_splash.png",
+  "APP_ANDROID_LINK": "https://play.google.com/store/apps/details?id=du.base.clean",
+  "APP_IOS_LINK": "https://apps.apple.com/us/app/%D8%B3%D8%B9%D9%8A%D8%AF%D8%A7%D9%86/id6479244195",
   "PRIMARY_COLOR": "#998763",
   "SECONDARY_COLOR": "#766339",
   "TEXT_COLOR": "#766339"

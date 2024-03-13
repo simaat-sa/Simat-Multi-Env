@@ -28,6 +28,8 @@ class PropertyItemWidget extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -68,6 +70,25 @@ class PropertyItemWidget extends StatelessWidget {
                         ),
                       ],
                     ),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          height: 26,
+                          padding: const EdgeInsets.symmetric(horizontal: 5),
+                          decoration: BoxDecoration(
+                              color: context.colors.black.withOpacity(0.15),
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Text(
+                            "${model.rentUnitsPercent} . ${model.rentUnits}",
+                            style: AppTextStyle.s14_w400(color: context.colors.white)
+                                .copyWith(height: 2.2),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -81,15 +102,15 @@ class PropertyItemWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        Translate.of(context).due,
-                        style: AppTextStyle.s14_w400(color: context.colors.primary),
+                        Translate.of(context).collector,
+                        style: AppTextStyle.s14_w400(color: context.colors.textColor),
                       ),
                       Gaps.vGap5,
                       Row(
                         children: [
                           Text(
-                            model.propCost,
-                            style: AppTextStyle.s20_w600(color: context.colors.primary),
+                            model.collectPrice,
+                            style: AppTextStyle.s20_w400(color: context.colors.primary),
                           ),
                           Text(
                             Translate.of(context).sar,
@@ -104,18 +125,18 @@ class PropertyItemWidget extends StatelessWidget {
                     children: [
                       Text(
                         Translate.of(context).due,
-                        style: AppTextStyle.s14_w400(color: context.colors.primary),
+                        style: AppTextStyle.s14_w400(color: context.colors.textColor),
                       ),
                       Gaps.vGap5,
                       Row(
                         children: [
                           Text(
-                            model.propCost,
-                            style: AppTextStyle.s20_w600(color: context.colors.primary),
+                            model.duePrice,
+                            style: AppTextStyle.s20_w400(color: context.colors.green3),
                           ),
                           Text(
                             Translate.of(context).sar,
-                            style: AppTextStyle.s14_w400(color: context.colors.primary),
+                            style: AppTextStyle.s14_w400(color: context.colors.green3),
                           ),
                         ],
                       ),
@@ -176,7 +197,7 @@ class PropertyItemWidget extends StatelessWidget {
                   ),
                   Text(
                     model.propType.getLocalizedName(),
-                    style: AppTextStyle.s14_w400(color: context.colors.primaryText),
+                    style: AppTextStyle.s14_w400(color: context.colors.textColor),
                   ),
                 ],
               ),

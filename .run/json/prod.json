@@ -7,6 +7,8 @@
   "APP_APP_NAME_AR": "برودكشن",
   "APP_LOCAL_LOGO": "assets/images/icon.png",
   "SPLASH_LOGO": "assets/images/splash_logo.svg",
+  "APP_ANDROID_LINK": "https://play.google.com/store/apps/details?id=du.base.clean",
+  "APP_IOS_LINK": "https://apps.apple.com/us/app/%D8%B3%D9%85%D8%A7%D8%AA-%D8%B9%D9%82%D8%A7%D8%B1%D8%A7%D8%AA%D9%83-%D9%81%D9%8A-%D8%AC%D9%88%D8%A7%D9%84%D9%83/id6451408354",
   "PRIMARY_COLOR": "#238FC0",
   "SECONDARY_COLOR": "#EAAC27",
   "TEXT_COLOR": "#239397"

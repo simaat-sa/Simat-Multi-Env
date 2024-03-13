@@ -45,4 +45,10 @@ class DartEnvironmentConfigReader implements IEnvironmentConfigReader {
 
   @override
   String getAppId() => argsMap['APP_ID'];
+
+  @override
+  String androidLink() => argsMap['APP_ANDROID_LINK'];
+
+  @override
+  String iosLink() => argsMap['APP_IOS_LINK'];
 }
