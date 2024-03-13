@@ -14,7 +14,7 @@ class PropertyDataSourceImpl extends PropertyDataSource {
   @override
   Future<MyResult<PagingModel<PropModel>>> getProperties(OwnerPropertiesParams params) async {
     HttpRequestModel model = HttpRequestModel(
-      url: ApiNames.ownerPropUnits(params.header()),
+      url: ApiNames.ownerProps(params.header()),
       responseType: ResType.model,
       requestMethod: RequestMethod.get,
       refresh: params.refresh,

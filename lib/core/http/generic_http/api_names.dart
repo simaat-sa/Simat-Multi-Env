@@ -27,7 +27,8 @@ class ApiNames {
   /// props and units routes
   static String properties = "${version1Part}tenant/properties/list";
   static String tenantPropUnits = "${version1Part}tenant/units";
-  static String ownerPropUnits(String header)=> "$version1Part/owner/properties/list$header";
+  static String ownerPropUnits = "${version1Part}owner/units";
+  static String ownerProps(String header)=> "$version1Part/owner/properties/list$header";
 
   /// maintenance routes
   static String maintenanceRequests(String header) => "${version1Part}maintenance/list?$header";

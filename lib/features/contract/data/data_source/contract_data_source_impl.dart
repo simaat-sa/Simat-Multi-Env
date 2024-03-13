@@ -50,7 +50,7 @@ class ContractDataSourceImpl extends ContractDataSource {
   @override
   Future<MyResult<List<PropModel>>> getPropsUnites(UserTypes userType) async {
     HttpRequestModel model = HttpRequestModel(
-      url: userType == UserTypes.owner? ApiNames.ownerPropUnits("") : ApiNames.tenantPropUnits,
+      url: userType == UserTypes.owner? ApiNames.ownerPropUnits : ApiNames.tenantPropUnits,
       responseType: ResType.list,
       requestMethod: RequestMethod.get,
       responseKey: (data) => data['data'],

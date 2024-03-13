@@ -11,6 +11,7 @@ import 'package:flutter_tdd/features/auth/data/models/user_access_model/user_acc
 import 'package:flutter_tdd/features/auth/data/models/user_model/user_model.dart';
 import 'package:flutter_tdd/features/auth/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart';
+import 'package:flutter_tdd/res.dart';
 
 part 'tabs_item_widget.dart';
 part 'bottom_nav_bar_widget.dart';

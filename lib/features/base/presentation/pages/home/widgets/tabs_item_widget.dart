@@ -18,15 +18,7 @@ class TabsItemWidget extends StatelessWidget {
         children: [
           SizedBox(
             height: 24,
-            child: model.pageid == "0"
-                ? Icon(
-                    Icons.menu,
-                    color: isActive ? context.colors.primary : context.colors.darkTextColor,
-                  )
-                : SvgPicture.network(
-                    color: isActive ? context.colors.primary : context.colors.darkTextColor,
-                    model.iconSvg,
-                  ),
+            child: _getTabIcon(context),
           ),
           Gaps.vGap4,
           Text(
@@ -37,6 +29,24 @@ class TabsItemWidget extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  StatelessWidget _getTabIcon(BuildContext context) {
+    if (model.pageid == "0") {
+      return Icon(
+        Icons.menu,
+        color: isActive ? context.colors.primary : context.colors.darkTextColor,
+      );
+    } else if (model.iconSvg == "https://dev.simaat.sa/_layout/ws_icons/svg/service.svg") {
+      return SvgPicture.asset(
+        color: isActive ? context.colors.primary : context.colors.darkTextColor,
+        Res.maintenanceIcon,
+      );
+    }
+    return SvgPicture.network(
+      color: isActive ? context.colors.primary : context.colors.darkTextColor,
+      model.iconSvg,
     );
   }
 }
