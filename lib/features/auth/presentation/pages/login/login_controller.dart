@@ -4,7 +4,7 @@ part of 'login_imports.dart';
 
 class LoginController {
   ObsValue<bool> visibleObs = ObsValue.withInit(false);
-  ObsValue<bool> supportBiometricObs = ObsValue.withInit(false);
+  ObsValue<BiometricType?> supportBiometricObs = ObsValue.withInit(null);
 
   final GlobalKey<FormState> formKey = GlobalKey();
 
@@ -15,8 +15,12 @@ class LoginController {
 
   /// to check if the device support biometric or not [finger print or face id]
   Future<void> checkBiometric() async {
-    bool isSupport = await BiometricHelper.instance.supportBiometric();
-    supportBiometricObs.setValue(isSupport);
+    var availableBiometrics = await BiometricHelper.instance.getAvailableBiometricTypes();
+    if (availableBiometrics.contains(BiometricType.fingerprint)) {
+      supportBiometricObs.setValue(BiometricType.fingerprint);
+    }else if (availableBiometrics.contains(BiometricType.face)) {
+      supportBiometricObs.setValue(BiometricType.face);
+    }
   }
 
   /// to submit the login form

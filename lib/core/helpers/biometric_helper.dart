@@ -15,6 +15,13 @@ class BiometricHelper {
     return canAuthenticate;
   }
 
+  Future<List<BiometricType>> getAvailableBiometricTypes() async {
+    final List<BiometricType> availableBiometrics =
+    await _auth.getAvailableBiometrics();
+    print("===========> $availableBiometrics");
+    return availableBiometrics;
+  }
+
   Future<bool> authenticate(BuildContext context) async {
     try {
       final bool didAuthenticate = await _auth.authenticate(
