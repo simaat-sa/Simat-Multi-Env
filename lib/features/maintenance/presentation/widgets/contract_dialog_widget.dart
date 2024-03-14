@@ -80,7 +80,7 @@ class ContractDialog extends StatelessWidget {
                 DetailsItemWidget(
                   title: Translate.of(context).main_property,
                   value: model.blockName,
-                  image: Res.unitLogo,
+                  image: Res.propIcon,
                 ),
                 DetailsItemWidget(
                     title: Translate.of(context).date_of_request,

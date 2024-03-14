@@ -10,10 +10,18 @@ class PropertyItemWidget extends StatelessWidget {
     return InkWell(
       onTap: () {},
       child: Container(
-        margin: const EdgeInsets.only(top: 10),
+        margin: const EdgeInsets.only(top: 16),
         decoration: BoxDecoration(
           color: context.colors.white,
           borderRadius: BorderRadius.circular(10),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.2),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: const Offset(0, 3),
+            ),
+          ],
         ),
         child: Column(
           children: [
