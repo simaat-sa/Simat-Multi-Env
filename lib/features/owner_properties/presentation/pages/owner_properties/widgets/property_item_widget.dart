@@ -8,7 +8,7 @@ class PropertyItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () => AutoRouter.of(context).push(PropertyDetailsRoute(model: model)),
       child: Container(
         margin: const EdgeInsets.only(top: 16),
         decoration: BoxDecoration(

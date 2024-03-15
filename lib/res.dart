@@ -48,4 +48,5 @@ class Res {
   static const String qrCodeView = "assets/images/qr-code_view.png";
   static const String avatarLogo = "assets/images/avatar_logo.png";
   static const String avatarSolidLogo = "assets/images/avatar_solid_logo.png";
+  static const String balanceLogo = "assets/images/balance_icon.svg";
 }
