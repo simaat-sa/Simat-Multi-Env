@@ -22,26 +22,15 @@ class _PropertyDetailsState extends State<PropertyDetails> {
           centerTitle: false,
           title: "${widget.model.unitName} - ${widget.model.propType.getLocalizedName()}",
           showBack: true,
+          backgroundColor: context.colors.white,
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 22),
-          child: Column(
-            children: [
-              TabBar(
-                  dividerColor: context.colors.greyWhite,
-                  unselectedLabelColor: context.colors.primaryGrey,
-                  unselectedLabelStyle: AppTextStyle.s16_w500(color: context.colors.primary),
-                  indicatorSize: TabBarIndicatorSize.tab,
-                  labelPadding: const EdgeInsets.symmetric(vertical: 13),
-                  labelStyle: AppTextStyle.s16_w500(color: context.colors.primary),
-                  tabs: [
-                    Text(Translate.of(context).summary),
-                    const Text("وحدات [10]"),
-                    const Text("صيانة [7]"),
-                    const Text("مصروفات [5]"),
-                  ]),
-              Gaps.vGap16,
-              Flexible(
+        body: Column(
+          children: [
+            const PropertyTabBarWidget(),
+            Gaps.vGap16,
+            Flexible(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TabBarView(
                   children: [
                     PropertySummaryView(model: widget.model),
@@ -51,8 +40,8 @@ class _PropertyDetailsState extends State<PropertyDetails> {
                   ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

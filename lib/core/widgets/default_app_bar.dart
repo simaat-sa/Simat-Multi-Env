@@ -12,6 +12,7 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double? size;
   final bool? showBack;
   final bool? centerTitle;
+  final Color? backgroundColor;
 
   const DefaultAppBar({
     super.key,
@@ -19,6 +20,7 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.actions = const [],
     this.leading,
     this.size,
+    this.backgroundColor,
     this.showBack = true,
     this.centerTitle,
   });
@@ -32,7 +34,7 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       centerTitle: centerTitle ?? true,
       systemOverlayStyle: const SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
-      backgroundColor: context.colors.background,
+      backgroundColor: backgroundColor ?? context.colors.background,
       elevation: 0,
       leadingWidth: showBack == true ? 55 : 10,
       leading: leading,

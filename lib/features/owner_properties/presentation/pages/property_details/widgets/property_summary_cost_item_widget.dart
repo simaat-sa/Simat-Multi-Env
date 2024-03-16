@@ -37,7 +37,7 @@ class PropertySummaryCostItemWidget extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            "23123123213",
+                            "2312312",
                             style: AppTextStyle.s18_w500(color: context.colors.green3),
                           ),
                           Padding(
