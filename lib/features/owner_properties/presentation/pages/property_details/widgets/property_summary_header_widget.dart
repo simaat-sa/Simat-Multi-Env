@@ -54,10 +54,13 @@ class PropertySummaryHeaderWidget extends StatelessWidget {
               color: context.colors.primaryText,
             ),
             Gaps.hGap8,
-            Text(
-              '${model.propId} ${model.propRegion}.${model.areId}.${model.propRegion}.${model.propCity}',
-              style: AppTextStyle.s14_w400(
-                color: context.colors.primaryText,
+            Expanded(
+              child: Text(
+                '${model.propId} ${model.propRegion}.${model.areId}.${model.propRegion}.${model.propCity}',
+                style: AppTextStyle.s14_w400(
+                  color: context.colors.primaryText,
+                ),
+                overflow: TextOverflow.ellipsis,
               ),
             )
           ],
