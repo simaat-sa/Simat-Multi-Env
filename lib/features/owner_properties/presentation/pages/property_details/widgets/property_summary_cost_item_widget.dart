@@ -59,27 +59,29 @@ class PropertySummaryCostItemWidget extends StatelessWidget {
                 Gaps.hGap10,
                 SvgPicture.asset(Res.paymentLogo, height: 32, width: 32),
                 Gaps.hGap10,
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('المستحق', style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
-                    Gaps.vGap5,
-                    Row(
-                      children: [
-                        Text(
-                          model.duePrice,
-                          style: AppTextStyle.s18_w500(color: context.colors.green3),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 4),
-                          child: Text(
-                            Translate.of(context).sar,
-                            style: AppTextStyle.s14_w400(color: context.colors.green3),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('المستحق', style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
+                      Gaps.vGap5,
+                      Row(
+                        children: [
+                          Text(
+                            model.duePrice,
+                            style: AppTextStyle.s18_w500(color: context.colors.green3),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 4),
+                            child: Text(
+                              Translate.of(context).sar,
+                              style: AppTextStyle.s14_w400(color: context.colors.green3),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

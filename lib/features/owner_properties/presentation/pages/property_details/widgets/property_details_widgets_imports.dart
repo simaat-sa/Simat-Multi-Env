@@ -15,3 +15,4 @@ part 'property_summary_view.dart';
 part 'cost_item_widget.dart';
 part 'cost_items_list_widget.dart';
 part 'property_summary_add_request_widget.dart';
+part 'property_tab_bar_widget.dart';
