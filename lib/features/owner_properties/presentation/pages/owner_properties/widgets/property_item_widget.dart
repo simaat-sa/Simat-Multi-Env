@@ -194,7 +194,7 @@ class PropertyItemWidget extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                model.propType.getLocalizedName(),
+                                model.propType,
                                 style: AppTextStyle.s16_w400(color: context.colors.brown),
                               ),
                             ],
@@ -204,7 +204,7 @@ class PropertyItemWidget extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    model.propType.getLocalizedName(),
+                    model.contractType.getLocalizedName(),
                     style: AppTextStyle.s14_w400(color: context.colors.textColor),
                   ),
                 ],

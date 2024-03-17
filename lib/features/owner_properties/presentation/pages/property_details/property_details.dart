@@ -20,7 +20,7 @@ class _PropertyDetailsState extends State<PropertyDetails> {
         backgroundColor: context.colors.background,
         appBar: DefaultAppBar(
           centerTitle: false,
-          title: "${widget.model.unitName} - ${widget.model.propType.getLocalizedName()}",
+          title: "${widget.model.unitName} - ${widget.model.contractType.getLocalizedName()}",
           showBack: true,
           backgroundColor: context.colors.white,
         ),

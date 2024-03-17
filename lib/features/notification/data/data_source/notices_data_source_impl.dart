@@ -19,7 +19,7 @@ class NoticesDataSourceImpl extends NoticesDataSource {
       refresh: params,
       responseKey: (data) => data['data'],
       toJsonFunc: (data) {
-        return List<NoticesModel>.from(data.map((e) => NoticesModel.fromJson(e)));
+        return List<NoticesModel>.from((data??[]).map((e) => NoticesModel.fromJson(e)));
       },
     );
     return await GenericHttpImpl<List<NoticesModel>>()(model);

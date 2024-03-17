@@ -7,16 +7,19 @@ class LoginHeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     var logo = FlutterEnvironmentConfigReader.instance.getSplashLogo();
     if (logo.contains(".svg")) {
-      return SvgPicture.asset(
-        logo,
-        height: 60,
-        width: 210,
+      return Padding(
+        padding: const EdgeInsets.only(top: 50),
+        child: SvgPicture.asset(
+          logo,
+          height: 60,
+          width: 210,
+        ),
       );
     }
     return Image.asset(
       logo,
-      height: 100,
-      width: 300,
+      height: 150,
+      width: 320,
     );
   }
 }

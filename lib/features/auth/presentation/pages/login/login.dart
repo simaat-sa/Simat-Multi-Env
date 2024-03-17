@@ -35,7 +35,6 @@ class _LoginState extends State<Login> {
             onTap: FocusScope.of(context).unfocus,
             child: Column(
               children: [
-                const SizedBox(height: 50),
                 const LoginHeaderWidget(),
                 Flexible(
                   child: ListView(

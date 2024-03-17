@@ -25,7 +25,6 @@ class _OwnerPropertiesState extends State<OwnerProperties> {
         child: Column(
           children: [
             FilterItemWidget(
-              showFilterIcon: false,
               onChange: (val) {
                 controller.searchText = val;
                 controller.onFilter();

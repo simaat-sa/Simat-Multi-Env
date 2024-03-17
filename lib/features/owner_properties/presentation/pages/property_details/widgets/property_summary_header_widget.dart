@@ -38,7 +38,7 @@ class PropertySummaryHeaderWidget extends StatelessWidget {
               ),
             ),
             Text(
-              model.propType.getLocalizedName(),
+              model.contractType.getLocalizedName(),
               style: AppTextStyle.s16_w400(color: context.colors.brown),
             ),
           ],

@@ -23,6 +23,8 @@ class PropModel with _$PropModel {
     @JsonKey(name: 'are_desc_fo', defaultValue: "") required String unitName,
     @JsonKey(name: 'parent_desc_ar', defaultValue: "") required String blocNameAr,
     @JsonKey(name: 'parent_desc_en', defaultValue: "") required String blocNameEn,
+    @JsonKey(name: 'myo_ar', defaultValue: "") required String typeAr,
+    @JsonKey(name: 'myo_en', defaultValue: "") required String typeEn,
     @JsonKey(name: 'acl_status_code', defaultValue: "") required String statusCode,
     @JsonKey(name: 'prop_img') required String? propImg,
     @JsonKey(name: 'prop_cost', defaultValue: "") required String propCost,
@@ -30,7 +32,7 @@ class PropModel with _$PropModel {
     @JsonKey(name: 'prop_region', defaultValue: "") required String propRegion,
     @JsonKey(name: 'contact_name', defaultValue: "") required String contactName,
     @JsonKey(name: 'dt_updated', defaultValue: "") required String date,
-    @JsonKey(name: 'contract_type') required ContractTypes propType,
+    @JsonKey(name: 'contract_type') required ContractTypes contractType,
     @JsonKey(name: 'amt_collect', defaultValue: "0")required String contractCollectPrice,
     @JsonKey(name: 'amt_due', defaultValue: "0")required String totalDuePrice,
     @JsonKey(name: 'prop_child_tot', defaultValue: "0")required String propChildTot,
@@ -44,6 +46,8 @@ class PropModel with _$PropModel {
   String get unitFullName => "$blockName - $unitName";
 
   String get blockName => LocalizedNameModel.fromStrings(ar: blocNameAr, en: blocNameEn).getLocalizedString;
+
+  String get propType => LocalizedNameModel.fromStrings(ar: typeAr, en: typeEn).getLocalizedString;
 
   String get dateUpdatedFormat{
     return date.formatTimeStampDate();
@@ -81,11 +85,13 @@ class PropModel with _$PropModel {
       propRegion: contractModel.propRegion,
       propCost: contractModel.netPrice,
       date: contractModel.date,
-      propType: contractModel.type,
+      contractType: contractModel.type,
       contractCollectPrice: contractModel.collectPrice,
       totalDuePrice: contractModel.duePrice,
       propChildTot: '0',
       propChildOcc: '0',
+      typeAr: "",
+      typeEn: "",
     );
   }
 }

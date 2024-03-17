@@ -17,7 +17,7 @@ class MaintenanceParams {
       header += "&search=$search";
     }
     if (filter != null && filter != "0") {
-      header += "&filters[maint_code]=$filter";
+      header += "&filters[acl_status_code]=$filter";
     }
     return header;
   }

@@ -34,6 +34,10 @@ mixin _$PropModel {
   String get blocNameAr => throw _privateConstructorUsedError;
   @JsonKey(name: 'parent_desc_en', defaultValue: "")
   String get blocNameEn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'myo_ar', defaultValue: "")
+  String get typeAr => throw _privateConstructorUsedError;
+  @JsonKey(name: 'myo_en', defaultValue: "")
+  String get typeEn => throw _privateConstructorUsedError;
   @JsonKey(name: 'acl_status_code', defaultValue: "")
   String get statusCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_img')
@@ -49,7 +53,7 @@ mixin _$PropModel {
   @JsonKey(name: 'dt_updated', defaultValue: "")
   String get date => throw _privateConstructorUsedError;
   @JsonKey(name: 'contract_type')
-  ContractTypes get propType => throw _privateConstructorUsedError;
+  ContractTypes get contractType => throw _privateConstructorUsedError;
   @JsonKey(name: 'amt_collect', defaultValue: "0")
   String get contractCollectPrice => throw _privateConstructorUsedError;
   @JsonKey(name: 'amt_due', defaultValue: "0")
@@ -78,6 +82,8 @@ abstract class $PropModelCopyWith<$Res> {
       @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
       @JsonKey(name: 'parent_desc_ar', defaultValue: "") String blocNameAr,
       @JsonKey(name: 'parent_desc_en', defaultValue: "") String blocNameEn,
+      @JsonKey(name: 'myo_ar', defaultValue: "") String typeAr,
+      @JsonKey(name: 'myo_en', defaultValue: "") String typeEn,
       @JsonKey(name: 'acl_status_code', defaultValue: "") String statusCode,
       @JsonKey(name: 'prop_img') String? propImg,
       @JsonKey(name: 'prop_cost', defaultValue: "") String propCost,
@@ -85,7 +91,7 @@ abstract class $PropModelCopyWith<$Res> {
       @JsonKey(name: 'prop_region', defaultValue: "") String propRegion,
       @JsonKey(name: 'contact_name', defaultValue: "") String contactName,
       @JsonKey(name: 'dt_updated', defaultValue: "") String date,
-      @JsonKey(name: 'contract_type') ContractTypes propType,
+      @JsonKey(name: 'contract_type') ContractTypes contractType,
       @JsonKey(name: 'amt_collect', defaultValue: "0")
       String contractCollectPrice,
       @JsonKey(name: 'amt_due', defaultValue: "0") String totalDuePrice,
@@ -113,6 +119,8 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
     Object? unitName = null,
     Object? blocNameAr = null,
     Object? blocNameEn = null,
+    Object? typeAr = null,
+    Object? typeEn = null,
     Object? statusCode = null,
     Object? propImg = freezed,
     Object? propCost = null,
@@ -120,7 +128,7 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
     Object? propRegion = null,
     Object? contactName = null,
     Object? date = null,
-    Object? propType = null,
+    Object? contractType = null,
     Object? contractCollectPrice = null,
     Object? totalDuePrice = null,
     Object? propChildTot = null,
@@ -155,6 +163,14 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
           ? _value.blocNameEn
           : blocNameEn // ignore: cast_nullable_to_non_nullable
               as String,
+      typeAr: null == typeAr
+          ? _value.typeAr
+          : typeAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      typeEn: null == typeEn
+          ? _value.typeEn
+          : typeEn // ignore: cast_nullable_to_non_nullable
+              as String,
       statusCode: null == statusCode
           ? _value.statusCode
           : statusCode // ignore: cast_nullable_to_non_nullable
@@ -183,9 +199,9 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String,
-      propType: null == propType
-          ? _value.propType
-          : propType // ignore: cast_nullable_to_non_nullable
+      contractType: null == contractType
+          ? _value.contractType
+          : contractType // ignore: cast_nullable_to_non_nullable
               as ContractTypes,
       contractCollectPrice: null == contractCollectPrice
           ? _value.contractCollectPrice
@@ -223,6 +239,8 @@ abstract class _$$PropModelImplCopyWith<$Res>
       @JsonKey(name: 'are_desc_fo', defaultValue: "") String unitName,
       @JsonKey(name: 'parent_desc_ar', defaultValue: "") String blocNameAr,
       @JsonKey(name: 'parent_desc_en', defaultValue: "") String blocNameEn,
+      @JsonKey(name: 'myo_ar', defaultValue: "") String typeAr,
+      @JsonKey(name: 'myo_en', defaultValue: "") String typeEn,
       @JsonKey(name: 'acl_status_code', defaultValue: "") String statusCode,
       @JsonKey(name: 'prop_img') String? propImg,
       @JsonKey(name: 'prop_cost', defaultValue: "") String propCost,
@@ -230,7 +248,7 @@ abstract class _$$PropModelImplCopyWith<$Res>
       @JsonKey(name: 'prop_region', defaultValue: "") String propRegion,
       @JsonKey(name: 'contact_name', defaultValue: "") String contactName,
       @JsonKey(name: 'dt_updated', defaultValue: "") String date,
-      @JsonKey(name: 'contract_type') ContractTypes propType,
+      @JsonKey(name: 'contract_type') ContractTypes contractType,
       @JsonKey(name: 'amt_collect', defaultValue: "0")
       String contractCollectPrice,
       @JsonKey(name: 'amt_due', defaultValue: "0") String totalDuePrice,
@@ -256,6 +274,8 @@ class __$$PropModelImplCopyWithImpl<$Res>
     Object? unitName = null,
     Object? blocNameAr = null,
     Object? blocNameEn = null,
+    Object? typeAr = null,
+    Object? typeEn = null,
     Object? statusCode = null,
     Object? propImg = freezed,
     Object? propCost = null,
@@ -263,7 +283,7 @@ class __$$PropModelImplCopyWithImpl<$Res>
     Object? propRegion = null,
     Object? contactName = null,
     Object? date = null,
-    Object? propType = null,
+    Object? contractType = null,
     Object? contractCollectPrice = null,
     Object? totalDuePrice = null,
     Object? propChildTot = null,
@@ -298,6 +318,14 @@ class __$$PropModelImplCopyWithImpl<$Res>
           ? _value.blocNameEn
           : blocNameEn // ignore: cast_nullable_to_non_nullable
               as String,
+      typeAr: null == typeAr
+          ? _value.typeAr
+          : typeAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      typeEn: null == typeEn
+          ? _value.typeEn
+          : typeEn // ignore: cast_nullable_to_non_nullable
+              as String,
       statusCode: null == statusCode
           ? _value.statusCode
           : statusCode // ignore: cast_nullable_to_non_nullable
@@ -326,9 +354,9 @@ class __$$PropModelImplCopyWithImpl<$Res>
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String,
-      propType: null == propType
-          ? _value.propType
-          : propType // ignore: cast_nullable_to_non_nullable
+      contractType: null == contractType
+          ? _value.contractType
+          : contractType // ignore: cast_nullable_to_non_nullable
               as ContractTypes,
       contractCollectPrice: null == contractCollectPrice
           ? _value.contractCollectPrice
@@ -364,6 +392,8 @@ class _$PropModelImpl extends _PropModel {
       required this.blocNameAr,
       @JsonKey(name: 'parent_desc_en', defaultValue: "")
       required this.blocNameEn,
+      @JsonKey(name: 'myo_ar', defaultValue: "") required this.typeAr,
+      @JsonKey(name: 'myo_en', defaultValue: "") required this.typeEn,
       @JsonKey(name: 'acl_status_code', defaultValue: "")
       required this.statusCode,
       @JsonKey(name: 'prop_img') required this.propImg,
@@ -373,7 +403,7 @@ class _$PropModelImpl extends _PropModel {
       @JsonKey(name: 'contact_name', defaultValue: "")
       required this.contactName,
       @JsonKey(name: 'dt_updated', defaultValue: "") required this.date,
-      @JsonKey(name: 'contract_type') required this.propType,
+      @JsonKey(name: 'contract_type') required this.contractType,
       @JsonKey(name: 'amt_collect', defaultValue: "0")
       required this.contractCollectPrice,
       @JsonKey(name: 'amt_due', defaultValue: "0") required this.totalDuePrice,
@@ -408,6 +438,12 @@ class _$PropModelImpl extends _PropModel {
   @JsonKey(name: 'parent_desc_en', defaultValue: "")
   final String blocNameEn;
   @override
+  @JsonKey(name: 'myo_ar', defaultValue: "")
+  final String typeAr;
+  @override
+  @JsonKey(name: 'myo_en', defaultValue: "")
+  final String typeEn;
+  @override
   @JsonKey(name: 'acl_status_code', defaultValue: "")
   final String statusCode;
   @override
@@ -430,7 +466,7 @@ class _$PropModelImpl extends _PropModel {
   final String date;
   @override
   @JsonKey(name: 'contract_type')
-  final ContractTypes propType;
+  final ContractTypes contractType;
   @override
   @JsonKey(name: 'amt_collect', defaultValue: "0")
   final String contractCollectPrice;
@@ -446,7 +482,7 @@ class _$PropModelImpl extends _PropModel {
 
   @override
   String toString() {
-    return 'PropModel(propId: $propId, areId: $areId, areCode: $areCode, areAreId: $areAreId, unitName: $unitName, blocNameAr: $blocNameAr, blocNameEn: $blocNameEn, statusCode: $statusCode, propImg: $propImg, propCost: $propCost, propCity: $propCity, propRegion: $propRegion, contactName: $contactName, date: $date, propType: $propType, contractCollectPrice: $contractCollectPrice, totalDuePrice: $totalDuePrice, propChildTot: $propChildTot, propChildOcc: $propChildOcc)';
+    return 'PropModel(propId: $propId, areId: $areId, areCode: $areCode, areAreId: $areAreId, unitName: $unitName, blocNameAr: $blocNameAr, blocNameEn: $blocNameEn, typeAr: $typeAr, typeEn: $typeEn, statusCode: $statusCode, propImg: $propImg, propCost: $propCost, propCity: $propCity, propRegion: $propRegion, contactName: $contactName, date: $date, contractType: $contractType, contractCollectPrice: $contractCollectPrice, totalDuePrice: $totalDuePrice, propChildTot: $propChildTot, propChildOcc: $propChildOcc)';
   }
 
   @override
@@ -465,6 +501,8 @@ class _$PropModelImpl extends _PropModel {
                 other.blocNameAr == blocNameAr) &&
             (identical(other.blocNameEn, blocNameEn) ||
                 other.blocNameEn == blocNameEn) &&
+            (identical(other.typeAr, typeAr) || other.typeAr == typeAr) &&
+            (identical(other.typeEn, typeEn) || other.typeEn == typeEn) &&
             (identical(other.statusCode, statusCode) ||
                 other.statusCode == statusCode) &&
             (identical(other.propImg, propImg) || other.propImg == propImg) &&
@@ -477,8 +515,8 @@ class _$PropModelImpl extends _PropModel {
             (identical(other.contactName, contactName) ||
                 other.contactName == contactName) &&
             (identical(other.date, date) || other.date == date) &&
-            (identical(other.propType, propType) ||
-                other.propType == propType) &&
+            (identical(other.contractType, contractType) ||
+                other.contractType == contractType) &&
             (identical(other.contractCollectPrice, contractCollectPrice) ||
                 other.contractCollectPrice == contractCollectPrice) &&
             (identical(other.totalDuePrice, totalDuePrice) ||
@@ -500,6 +538,8 @@ class _$PropModelImpl extends _PropModel {
         unitName,
         blocNameAr,
         blocNameEn,
+        typeAr,
+        typeEn,
         statusCode,
         propImg,
         propCost,
@@ -507,7 +547,7 @@ class _$PropModelImpl extends _PropModel {
         propRegion,
         contactName,
         date,
-        propType,
+        contractType,
         contractCollectPrice,
         totalDuePrice,
         propChildTot,
@@ -543,6 +583,8 @@ abstract class _PropModel extends PropModel {
       required final String blocNameAr,
       @JsonKey(name: 'parent_desc_en', defaultValue: "")
       required final String blocNameEn,
+      @JsonKey(name: 'myo_ar', defaultValue: "") required final String typeAr,
+      @JsonKey(name: 'myo_en', defaultValue: "") required final String typeEn,
       @JsonKey(name: 'acl_status_code', defaultValue: "")
       required final String statusCode,
       @JsonKey(name: 'prop_img') required final String? propImg,
@@ -555,7 +597,7 @@ abstract class _PropModel extends PropModel {
       @JsonKey(name: 'contact_name', defaultValue: "")
       required final String contactName,
       @JsonKey(name: 'dt_updated', defaultValue: "") required final String date,
-      @JsonKey(name: 'contract_type') required final ContractTypes propType,
+      @JsonKey(name: 'contract_type') required final ContractTypes contractType,
       @JsonKey(name: 'amt_collect', defaultValue: "0")
       required final String contractCollectPrice,
       @JsonKey(name: 'amt_due', defaultValue: "0")
@@ -591,6 +633,12 @@ abstract class _PropModel extends PropModel {
   @JsonKey(name: 'parent_desc_en', defaultValue: "")
   String get blocNameEn;
   @override
+  @JsonKey(name: 'myo_ar', defaultValue: "")
+  String get typeAr;
+  @override
+  @JsonKey(name: 'myo_en', defaultValue: "")
+  String get typeEn;
+  @override
   @JsonKey(name: 'acl_status_code', defaultValue: "")
   String get statusCode;
   @override
@@ -613,7 +661,7 @@ abstract class _PropModel extends PropModel {
   String get date;
   @override
   @JsonKey(name: 'contract_type')
-  ContractTypes get propType;
+  ContractTypes get contractType;
   @override
   @JsonKey(name: 'amt_collect', defaultValue: "0")
   String get contractCollectPrice;
