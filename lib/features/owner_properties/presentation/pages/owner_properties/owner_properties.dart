@@ -25,7 +25,7 @@ class _OwnerPropertiesState extends State<OwnerProperties> {
         child: Column(
           children: [
             FilterItemWidget(
-              showFilterIcon: false,
+              filterApply: controller.filterAppliedObs,
               onChange: (val) {
                 controller.searchText = val;
                 controller.onFilter();
@@ -34,6 +34,7 @@ class _OwnerPropertiesState extends State<OwnerProperties> {
                 controller.searchText = value;
                 controller.onFilter();
               },
+              onTap: () => AutoRouter.of(context).push(const FilterPropertyRoute()),
             ),
             Gaps.vGap10,
             Flexible(

@@ -2,6 +2,7 @@ part of 'contract_screen_imports.dart';
 
 class ContractScreenController {
   final ObsValue<ContractTypes> selectTypeObs = ObsValue<ContractTypes>.withInit(ContractTypes.non);
+  ObsValue<bool> filterAppliedObs = ObsValue<bool>.withInit(false);
   final ObsValue<TenantVisibility> selectStatusObs = ObsValue<TenantVisibility>.withInit(TenantVisibility.non);
   final ObsValue<int> contractsCount = ObsValue<int>.withInit(0);
 
@@ -56,8 +57,11 @@ class ContractScreenController {
   }
 
   void onFilter() {
-    pagingController.refresh();
-    fetchContractData(1);
+    if (selectTypeObs.getValue() != ContractTypes.non && selectStatusObs.getValue() != TenantVisibility.non) {
+      pagingController.refresh();
+      fetchContractData(1);
+      filterAppliedObs.setValue(true);
+    }
   }
 
   void onResetFilter() {
@@ -65,5 +69,6 @@ class ContractScreenController {
     selectStatusObs.setValue(TenantVisibility.non);
     selectTypeObs.setValue(ContractTypes.non);
     fetchContractData(1);
+    filterAppliedObs.setValue(false);
   }
 }

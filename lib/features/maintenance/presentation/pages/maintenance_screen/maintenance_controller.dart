@@ -2,6 +2,7 @@ part of 'maintenance_screen_imports.dart';
 
 class MaintenanceController {
   ObsValue<ContractStatus> filterContractObs = ObsValue<ContractStatus>.withInit(ContractStatus.non);
+  ObsValue<bool> filterAppliedObs = ObsValue<bool>.withInit(false);
   final PagingController<int, MaintenanceModel> pagingController = PagingController(firstPageKey: 1);
 
   ObsValue<int> maintenanceCount = ObsValue<int>.withInit(0);
@@ -33,14 +34,19 @@ class MaintenanceController {
   }
 
   void onFilter(BuildContext context) {
-    pagingController.refresh();
-    fetchPropertyData(context, 1);
+    if(filterContractObs.getValue()!=ContractStatus.non){
+      pagingController.refresh();
+      fetchPropertyData(context, 1);
+      filterAppliedObs.setValue(true);
+    }
+
   }
 
   void onResetFilter(BuildContext context) {
     pagingController.refresh();
     filterContractObs.setValue(ContractStatus.non);
     fetchPropertyData(context, 1);
+    filterAppliedObs.setValue(false);
   }
 
   void initPaginationController(BuildContext context) {

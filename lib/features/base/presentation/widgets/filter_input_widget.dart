@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_tdd/core/bloc/value_state_manager/value_state_manager_import.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/widgets/search_form_field/search_form_field.dart';
@@ -10,6 +11,7 @@ class FilterItemWidget extends StatelessWidget {
   final Function(String)? onSubmit;
   final Function(String)? onChange;
   final bool showFilterIcon;
+  final ObsValue<bool> filterApply;
 
   const FilterItemWidget({
     super.key,
@@ -17,6 +19,7 @@ class FilterItemWidget extends StatelessWidget {
     this.onSubmit,
     this.onChange,
     this.showFilterIcon = true,
+    required this.filterApply,
   });
 
   @override
@@ -35,17 +38,41 @@ class FilterItemWidget extends StatelessWidget {
           if(showFilterIcon)
           Row(
             children: [
-              Gaps.hGap10,
-              InkWell(
-                onTap: onTap,
-                child: SvgPicture.asset(
-                  Res.filterLogo,
-                  height: 26,
-                  width: 26,
-                  color: context.colors.textColor,
+                Gaps.hGap10,
+                Stack(
+                  children: [
+                    InkWell(
+                      onTap: onTap,
+                      child: SvgPicture.asset(
+                        Res.filterLogo,
+                        height: 26,
+                        width: 26,
+                        color: context.colors.textColor,
+                      ),
+                    ),
+                    ObsValueConsumer<bool>(
+                      observable: filterApply,
+                      builder: (context, value) {
+                        return Visibility(
+                          visible: value,
+                          child: PositionedDirectional(
+                            end: 1,
+                            child: Container(
+                              height: 10,
+                              width: 8,
+                              padding: const EdgeInsets.all(5),
+                              decoration: BoxDecoration(
+                                color: context.colors.secondary,
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ],
                 ),
-              ),
-            ],
+              ],
           ),
         ],
       ),
