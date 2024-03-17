@@ -34,6 +34,7 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
                 controller.onFilter(context);
               },
               onTap: () => AutoRouter.of(context).push(FilterMaintenanceRoute(controller: controller)),
+              filterApply: controller.filterAppliedObs,
             ),
             ObsValueConsumer(
               observable: controller.maintenanceCount,

@@ -2,6 +2,7 @@ part of 'owner_properties_imports.dart';
 
 class OwnerPropertyController {
   final PagingController<int, PropModel> pagingController = PagingController(firstPageKey: 1);
+  ObsValue<bool> filterAppliedObs = ObsValue<bool>.withInit(false);
   String searchText = '';
 
 
@@ -32,12 +33,14 @@ class OwnerPropertyController {
     return OwnerPropertiesParams(
       page: pageCode,
       search: searchText,
+      selectedFilter: "",
     );
   }
 
   void onFilter() {
     pagingController.refresh();
     fetchPropertyData(1);
+    filterAppliedObs.setValue(true);
   }
 
   void filterSheet(BuildContext context) {

@@ -28,29 +28,27 @@ class PropertySummaryCostItemWidget extends StatelessWidget {
               children: [
                 SvgPicture.asset(Res.balanceLogo, height: 32, width: 32),
                 Gaps.hGap10,
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('الرصيد', style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
-                      Gaps.vGap5,
-                      Row(
-                        children: [
-                          Text(
-                            "2312312",
-                            style: AppTextStyle.s18_w500(color: context.colors.green3),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('الرصيد', style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
+                    Gaps.vGap5,
+                    Row(
+                      children: [
+                        Text(
+                          model.propChildTot,
+                          style: AppTextStyle.s18_w500(color: context.colors.green3),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 4),
+                          child: Text(
+                            Translate.of(context).sar,
+                            style: AppTextStyle.s14_w400(color: context.colors.green3),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 4),
-                            child: Text(
-                              Translate.of(context).sar,
-                              style: AppTextStyle.s14_w400(color: context.colors.green3),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
                 Gaps.hGap26,
                 Container(
