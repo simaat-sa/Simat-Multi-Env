@@ -35,6 +35,7 @@ _$ContractModelImpl _$$ContractModelImplFromJson(Map<String, dynamic> json) =>
       propImg: json['prop_img'] as String?,
       propCity: json['prop_city'] as String? ?? '',
       propRegion: json['prop_region'] as String? ?? '',
+      startDt: json['tts_start_date_dgr'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$ContractModelImplToJson(_$ContractModelImpl instance) =>
@@ -63,6 +64,7 @@ Map<String, dynamic> _$$ContractModelImplToJson(_$ContractModelImpl instance) =>
       'prop_img': instance.propImg,
       'prop_city': instance.propCity,
       'prop_region': instance.propRegion,
+      'tts_start_date_dgr': instance.startDt,
     };
 
 const _$DateTypesEnumMap = {

@@ -34,7 +34,7 @@ class _PropertyDetailsState extends State<PropertyDetails> {
         ),
         body: Column(
           children: [
-            const PropertyTabBarWidget(),
+            PropertyTabBarWidget(controller: controller),
             Gaps.vGap16,
             Flexible(
               child: Padding(
@@ -42,8 +42,8 @@ class _PropertyDetailsState extends State<PropertyDetails> {
                 child: TabBarView(
                   children: [
                     PropertySummaryView(propModel: widget.model, controller: controller),
-                    const Units(),
-                    const MaintenanceTab(),
+                    Units(model: widget.model),
+                    MaintenanceTab(areaId: widget.model.areId),
                      PaymentTab(),
                   ],
                 ),

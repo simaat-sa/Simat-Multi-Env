@@ -39,9 +39,11 @@ class PropertySummaryCostItemWidget extends StatelessWidget {
                             Gaps.vGap5,
                             Row(
                               children: [
-                                Text(
-                                  model.amtBalance,
-                                  style: AppTextStyle.s18_w500(color: context.colors.green3),
+                                Flexible(
+                                  child: Text(
+                                    model.amtBalancePrice,
+                                    style: AppTextStyle.s18_w500(color: context.colors.green3),
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 4),
@@ -77,9 +79,9 @@ class PropertySummaryCostItemWidget extends StatelessWidget {
                             Gaps.vGap5,
                             Row(
                               children: [
-                                Expanded(
+                                Flexible(
                                   child: Text(
-                                    model.amtDue,
+                                    model.amtDuePrice,
                                     style: AppTextStyle.s18_w500(color: context.colors.green3),
                                   ),
                                 ),

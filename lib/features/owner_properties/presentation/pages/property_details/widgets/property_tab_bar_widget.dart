@@ -1,7 +1,8 @@
 part of 'property_details_widgets_imports.dart';
 
 class PropertyTabBarWidget extends StatelessWidget {
-  const PropertyTabBarWidget({super.key});
+  final PropertyDetailsController controller;
+  const PropertyTabBarWidget({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +17,9 @@ class PropertyTabBarWidget extends StatelessWidget {
           labelStyle: AppTextStyle.s16_w500(color: context.colors.primary),
           tabs: [
             Text(Translate.of(context).summary),
-            const Text("وحدات (10)"),
-            const Text("صيانة (7)"),
-            const Text("مصروفات (5)"),
+             Text("وحدات"),
+            Text("صيانة"),
+            const Text("مصروفات [5]"),
           ]),
     );
   }

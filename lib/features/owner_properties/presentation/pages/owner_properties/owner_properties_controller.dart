@@ -4,8 +4,8 @@ class OwnerPropertyController {
   final PagingController<int, PropModel> pagingController = PagingController(firstPageKey: 1);
   ObsValue<bool> filterAppliedObs = ObsValue<bool>.withInit(false);
   String searchText = '';
-  String categoryFilter = '';
-  String typeFilter = '';
+  String? categoryFilter;
+  String? typeFilter;
 
 
   void initPaginationController() {
@@ -35,7 +35,8 @@ class OwnerPropertyController {
     return OwnerPropertiesParams(
       page: pageCode,
       search: searchText,
-      selectedFilter: "",
+      type: typeFilter,
+      category: categoryFilter,
     );
   }
 

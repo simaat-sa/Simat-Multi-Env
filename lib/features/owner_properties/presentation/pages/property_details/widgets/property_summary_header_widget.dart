@@ -28,7 +28,7 @@ class PropertySummaryHeaderWidget extends StatelessWidget {
             ),
             Gaps.hGap8,
             Text(
-              propModel.unitName,
+              propModel.propType,
               style: AppTextStyle.s16_w400(color: context.colors.brown).copyWith(overflow: TextOverflow.ellipsis),
             ),
             Padding(
@@ -57,7 +57,7 @@ class PropertySummaryHeaderWidget extends StatelessWidget {
             Gaps.hGap8,
             Expanded(
               child: Text(
-                '${propModel.areCode} ${propModel.propTitle}.${propModel.areId}.${propModel.propRegion}.${propModel.propCity}.${propModel.statusCode}',
+                propModel.propAddress,
                 style: AppTextStyle.s14_w400(
                   color: context.colors.primaryText,
                 ),

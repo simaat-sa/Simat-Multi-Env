@@ -2,13 +2,15 @@ class OwnerPropertiesParams{
   int page;
   String? search;
   bool refresh;
-  String? selectedFilter;
+  String? category;
+  String? type;
 
   OwnerPropertiesParams({
     required this.page,
     this.search,
     this.refresh = true,
-    this.selectedFilter,
+    this.category,
+    this.type,
   });
 
   String header({bool noHeader = true}) {
@@ -16,8 +18,11 @@ class OwnerPropertiesParams{
     if (search != null && search!.isNotEmpty) {
       header += "&search=$search";
     }
-    if (selectedFilter != null && selectedFilter!.isNotEmpty) {
-      header += "&filters[$selectedFilter]=manage";
+    if (category != null && category!.isNotEmpty) {
+      header += "&filters[ree_code]=$category";
+    }
+    if (type != null && type!.isNotEmpty) {
+      header += "&filters[myo_code]=$type";
     }
     return header;
   }

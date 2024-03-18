@@ -2,7 +2,8 @@ part of'maintenance_tab_widgets_imports.dart';
 
 
 class MaintenanceTabItemWidget extends StatelessWidget {
-  const MaintenanceTabItemWidget({super.key});
+  final MaintenanceModel model;
+  const MaintenanceTabItemWidget({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class MaintenanceTabItemWidget extends StatelessWidget {
           Row(
             children: [
               Text(
-                "S00042",
+                model.code,
                 style: AppTextStyle.s16_w400(color: context.colors.darkTextColor),
               ),
               Text(
@@ -27,12 +28,12 @@ class MaintenanceTabItemWidget extends StatelessWidget {
                 style: AppTextStyle.s16_w500(color: context.colors.primary),
               ),
               Text(
-                "شقة 1",
+                model.unitName,
                 style: AppTextStyle.s16_w400(color: context.colors.darkTextColor),
               ),
               const Spacer(),
               Text(
-                "250",
+                model.price,
                 style: AppTextStyle.s18_w500(color: context.colors.green3),
               ),
               Padding(
@@ -53,17 +54,18 @@ class MaintenanceTabItemWidget extends StatelessWidget {
               ),
               Gaps.hGap5,
               Text(
-                "PM أمس 11:54",
+                model.createdDate,
                 style: AppTextStyle.s16_w400(color: context.colors.textColor).copyWith(
                   height: 2,
                 ),
               ),
+              if (model.createdBy.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4),
                   child: Text(".", style: AppTextStyle.s14_w500(color: context.colors.primary)),
                 ),
               Text(
-                "عبدالله",
+                model.createdBy,
                 style: AppTextStyle.s14_w400(color: context.colors.textColor),
               ),
             ],
@@ -85,12 +87,12 @@ class MaintenanceTabItemWidget extends StatelessWidget {
               const Spacer(),
               Container(
                 decoration: BoxDecoration(
-                  color: context.colors.green3,
+                  color:model.statusColor,
                   borderRadius: BorderRadius.circular(5),
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 child: Text(
-                  "مرحل",
+                  model.statusName,
                   style: AppTextStyle.s14_w400(color: context.colors.white),
                 ),
               ),
@@ -98,7 +100,7 @@ class MaintenanceTabItemWidget extends StatelessWidget {
           ),
           Gaps.vGap10,
           Text(
-            "عمل الصيانة المحددة وعمل فحص لمحتويات الوحدة ..",
+            model.desc,
             style: AppTextStyle.s14_w400(color: context.colors.darkTextColor),
             overflow: TextOverflow.ellipsis,
           ),

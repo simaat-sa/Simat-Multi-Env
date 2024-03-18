@@ -1,15 +1,53 @@
 part of 'units_imports.dart';
 
-class Units extends StatelessWidget {
-  const Units({super.key});
+class Units extends StatefulWidget {
+  final PropModel model;
+
+
+  const Units({
+    super.key,
+    required this.model
+  });
+
+  @override
+  State<Units> createState() => _UnitsState();
+}
+
+class _UnitsState extends State<Units> {
+  late UnitController controller;
+
+  @override
+  void initState() {
+    controller = UnitController(widget.model);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children:  [
-        const UnitItemsWidget(),
-        Gaps.vGap12,
-      ],
+    return RequesterConsumer(
+      requester: controller.requester,
+      successBuilder: (context, data) {
+        return Visibility(
+          visible: data.isNotEmpty,
+          replacement: const EmptyListItemWidget(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('الوحدات[${data.length}]',style: AppTextStyle.s16_w400(color: context.colors.blackOpacity),),
+              Gaps.vGap12,
+              UnitItemsWidget(
+                listContract: data,
+              ),
+            ],
+          ),
+        );
+      },
+      failureBuilder: (context, error, callback) {
+        return FailureViewWidget(onTap: callback);
+      },
+      loadingBuilder: (context) {
+        return const UnitLoadingListWidget();
+      },
     );
   }
 }

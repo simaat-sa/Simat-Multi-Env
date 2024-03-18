@@ -3,6 +3,7 @@ import 'package:flutter_tdd/core/http/generic_http/generic_http.dart';
 import 'package:flutter_tdd/core/http/models/http_request_model.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:flutter_tdd/core/models/paging_model/paging_model.dart';
+import 'package:flutter_tdd/features/contract/data/models/contract_model/contract_model.dart';
 import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart';
 import 'package:flutter_tdd/features/owner_properties/data/models/filter_property_model/filter_property_model.dart';
 import 'package:flutter_tdd/features/owner_properties/data/models/prop_details_model.dart';
@@ -59,5 +60,20 @@ class PropertyDataSourceImpl extends PropertyDataSource {
       },
     );
     return await GenericHttpImpl<PropDetailsModel>()(model);
+  }
+
+  @override
+  Future<MyResult<List<ContractModel>>> getPropDetailsUnit(PropertyDetailsParams param) async {
+    HttpRequestModel model = HttpRequestModel(
+      url: ApiNames.propDetailsUnit(param.propId),
+      responseType: ResType.list,
+      requestMethod: RequestMethod.get,
+      refresh: param.refresh,
+      responseKey: (data) => data['data'],
+      toJsonFunc: (data) {
+        return List<ContractModel>.from(data.map((e) => ContractModel.fromJson(e)));
+      },
+    );
+    return await GenericHttpImpl<List<ContractModel>>()(model);
   }
 }
