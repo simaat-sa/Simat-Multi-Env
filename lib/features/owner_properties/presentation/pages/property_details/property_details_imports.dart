@@ -12,6 +12,7 @@ import 'package:flutter_tdd/features/contract/presentation/pages/contract_detail
 import 'package:flutter_tdd/features/owner_properties/domain/entity/property_details_params.dart';
 import 'package:flutter_tdd/features/owner_properties/domain/requesters/prop_details_requester.dart';
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/property_details/property_details_imports.dart';
+import 'package:flutter_tdd/features/owner_properties/presentation/pages/property_details/tabs/payment_tab/payment_tab_imports.dart';
 import 'package:flutter_tdd/features/owner_properties/presentation/widgets/prop_details_loading_widget.dart';
 
 import 'property_details_imports.dart';

@@ -19,6 +19,7 @@ class FilterPropertyController {
     if (_canApplyFilter()) {
       ownerController.pagingController.refresh();
       ownerController.fetchPropertyData(1);
+      // ownerController.initPaginationController();
     }
   }
 

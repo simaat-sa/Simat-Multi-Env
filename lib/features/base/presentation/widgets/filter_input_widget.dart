@@ -4,6 +4,7 @@ import 'package:flutter_tdd/core/bloc/value_state_manager/value_state_manager_im
 import 'package:flutter_tdd/core/constants/gaps.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/widgets/search_form_field/search_form_field.dart';
+import 'package:flutter_tdd/features/base/presentation/widgets/filter_icon_widget.dart';
 import 'package:flutter_tdd/res.dart';
 
 class FilterItemWidget extends StatelessWidget {
@@ -27,6 +28,7 @@ class FilterItemWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
             child: SearchFormField(
@@ -39,39 +41,7 @@ class FilterItemWidget extends StatelessWidget {
           Row(
             children: [
                 Gaps.hGap10,
-                Stack(
-                  children: [
-                    InkWell(
-                      onTap: onTap,
-                      child: SvgPicture.asset(
-                        Res.filterLogo,
-                        height: 26,
-                        width: 26,
-                        color: context.colors.textColor,
-                      ),
-                    ),
-                    ObsValueConsumer<bool>(
-                      observable: filterApply,
-                      builder: (context, value) {
-                        return Visibility(
-                          visible: value,
-                          child: PositionedDirectional(
-                            end: 1,
-                            child: Container(
-                              height: 10,
-                              width: 8,
-                              padding: const EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                color: context.colors.secondary,
-                                shape: BoxShape.circle,
-                              ),
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                  ],
-                ),
+                FilterIconWidget(filterApply: filterApply,onTap: onTap,)
               ],
           ),
         ],
