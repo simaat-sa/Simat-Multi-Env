@@ -34,7 +34,7 @@ class _OwnerPropertiesState extends State<OwnerProperties> {
                 controller.searchText = value;
                 controller.onFilter();
               },
-              onTap: () => AutoRouter.of(context).push(const FilterPropertyRoute()),
+              onTap: () => AutoRouter.of(context).push( FilterPropertyRoute(ownerController:controller)),
             ),
             Gaps.vGap10,
             Flexible(

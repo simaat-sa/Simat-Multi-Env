@@ -56,6 +56,8 @@ import 'package:flutter_tdd/features/notification/presentation/pages/notices_scr
     as _i12;
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/filter_property/filter_property_imports.dart'
     as _i7;
+import 'package:flutter_tdd/features/owner_properties/presentation/pages/owner_properties/owner_properties_imports.dart'
+    as _i27;
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/property_details/property_details_imports.dart'
     as _i13;
 
@@ -123,9 +125,13 @@ abstract class $AppRouter extends _i20.RootStackRouter {
       );
     },
     FilterPropertyRoute.name: (routeData) {
+      final args = routeData.argsAs<FilterPropertyRouteArgs>();
       return _i20.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i7.FilterProperty(),
+        child: _i7.FilterProperty(
+          key: args.key,
+          ownerController: args.ownerController,
+        ),
       );
     },
     ForgetPassword.name: (routeData) {
@@ -428,16 +434,40 @@ class FilterMaintenanceRouteArgs {
 
 /// generated route for
 /// [_i7.FilterProperty]
-class FilterPropertyRoute extends _i20.PageRouteInfo<void> {
-  const FilterPropertyRoute({List<_i20.PageRouteInfo>? children})
-      : super(
+class FilterPropertyRoute extends _i20.PageRouteInfo<FilterPropertyRouteArgs> {
+  FilterPropertyRoute({
+    _i21.Key? key,
+    required _i27.OwnerPropertyController ownerController,
+    List<_i20.PageRouteInfo>? children,
+  }) : super(
           FilterPropertyRoute.name,
+          args: FilterPropertyRouteArgs(
+            key: key,
+            ownerController: ownerController,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'FilterPropertyRoute';
 
-  static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
+  static const _i20.PageInfo<FilterPropertyRouteArgs> page =
+      _i20.PageInfo<FilterPropertyRouteArgs>(name);
+}
+
+class FilterPropertyRouteArgs {
+  const FilterPropertyRouteArgs({
+    this.key,
+    required this.ownerController,
+  });
+
+  final _i21.Key? key;
+
+  final _i27.OwnerPropertyController ownerController;
+
+  @override
+  String toString() {
+    return 'FilterPropertyRouteArgs{key: $key, ownerController: $ownerController}';
+  }
 }
 
 /// generated route for

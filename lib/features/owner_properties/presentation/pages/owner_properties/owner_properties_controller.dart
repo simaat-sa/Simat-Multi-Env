@@ -4,6 +4,8 @@ class OwnerPropertyController {
   final PagingController<int, PropModel> pagingController = PagingController(firstPageKey: 1);
   ObsValue<bool> filterAppliedObs = ObsValue<bool>.withInit(false);
   String searchText = '';
+  String categoryFilter = '';
+  String typeFilter = '';
 
 
   void initPaginationController() {
@@ -43,12 +45,4 @@ class OwnerPropertyController {
     filterAppliedObs.setValue(true);
   }
 
-  void filterSheet(BuildContext context) {
-    AppBottomSheets.showScrollableBody(
-      context: context,
-      builder: (context) {
-        return const FilterProperty();
-      },
-    );
-  }
 }

@@ -13,14 +13,6 @@ class MaintenanceController {
     // requestData();
   }
 
-  void filterSheet(BuildContext context) {
-    AppBottomSheets.showScrollableBody(
-      context: context,
-      builder: (context) {
-        return FilterMaintenance(controller: this);
-      },
-    );
-  }
 
   void contractDialog(BuildContext context, MaintenanceModel model) {
     showDialog(

@@ -1,8 +1,9 @@
-part of'filter_property_widgets_imports.dart';
-
+part of 'filter_property_widgets_imports.dart';
 
 class FilterPropertyButtonsWidget extends StatelessWidget {
-  const FilterPropertyButtonsWidget({super.key});
+  final FilterPropertyController controller;
+
+  const FilterPropertyButtonsWidget({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,7 @@ class FilterPropertyButtonsWidget extends StatelessWidget {
           Expanded(
             child: InkWell(
               onTap: () {
+                controller.onFilter();
                 AutoRouter.of(context).pop();
               },
               child: Container(
@@ -33,6 +35,7 @@ class FilterPropertyButtonsWidget extends StatelessWidget {
           Expanded(
             child: InkWell(
               onTap: () {
+                controller.onReset();
                 AutoRouter.of(context).pop();
               },
               child: Container(

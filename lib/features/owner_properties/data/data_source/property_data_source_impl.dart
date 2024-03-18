@@ -4,6 +4,7 @@ import 'package:flutter_tdd/core/http/models/http_request_model.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:flutter_tdd/core/models/paging_model/paging_model.dart';
 import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart';
+import 'package:flutter_tdd/features/owner_properties/data/models/filter_property_model/filter_property_model.dart';
 import 'package:flutter_tdd/features/owner_properties/domain/entity/owner_properties_params.dart';
 import 'package:injectable/injectable.dart';
 
@@ -28,5 +29,18 @@ class PropertyDataSourceImpl extends PropertyDataSource {
     );
     var result = await GenericHttpImpl<PagingModel<PropModel>>()(model);
     return result;
+  }
+
+  @override
+  Future<MyResult<FilterPropertyModel>> getFilterProperties(bool params) async{
+    HttpRequestModel model = HttpRequestModel(
+        url: ApiNames.ownerPropFilter,
+        responseType: ResType.model,
+        requestMethod: RequestMethod.get,
+        responseKey: (data) => data['data'],
+      toJsonFunc: (data) => FilterPropertyModel.fromJson(data),
+      refresh: params
+    );
+    return await GenericHttpImpl<FilterPropertyModel>()(model);
   }
 }

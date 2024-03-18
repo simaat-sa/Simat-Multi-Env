@@ -2,18 +2,20 @@ part of'filter_property_widgets_imports.dart';
 
 class FilterPropertySelectItemWidget extends StatelessWidget {
   final String title;
-  const FilterPropertySelectItemWidget({super.key, required this.title});
+  final String iconPath;
+  final Function()onTap;
+  const FilterPropertySelectItemWidget({super.key, required this.title, required this.onTap, required this.iconPath});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){},
+      onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: Row(
           children: [
             SvgPicture.asset(
-              Res.unselectLogo,
+              iconPath
             ),
             Gaps.hGap10,
             Text(
