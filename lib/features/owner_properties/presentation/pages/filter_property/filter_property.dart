@@ -2,20 +2,21 @@ part of 'filter_property_imports.dart';
 
 @RoutePage(name: 'FilterPropertyRoute')
 class FilterProperty extends StatefulWidget {
-  final OwnerPropertyController ownerController;
+  final FilterPropertyController filterController;
 
-  const FilterProperty({super.key, required this.ownerController});
+  const FilterProperty({super.key, required this.filterController});
 
   @override
   State<FilterProperty> createState() => _FilterPropertyState();
 }
 
 class _FilterPropertyState extends State<FilterProperty> {
+
   late FilterPropertyController controller;
 
   @override
   void initState() {
-    controller = FilterPropertyController(widget.ownerController);
+    controller = widget.filterController;
     super.initState();
   }
 

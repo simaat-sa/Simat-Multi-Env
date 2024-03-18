@@ -21,7 +21,7 @@ class MaintenanceParams {
     if (filter != null && filter != "0") {
       header += "&filters[acl_status_code]=$filter";
     }   if (areaId != null) {
-      header += "&filters[are_code]=$areaId";
+      header += "&filters[are_id]=$areaId";
     }
     return header;
   }

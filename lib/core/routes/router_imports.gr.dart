@@ -8,8 +8,8 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i20;
-import 'package:flutter/material.dart' as _i21;
+import 'package:auto_route/auto_route.dart' as _i21;
+import 'package:flutter/material.dart' as _i22;
 import 'package:flutter_tdd/features/auth/presentation/pages/active_account/active_account_imports.dart'
     as _i1;
 import 'package:flutter_tdd/features/auth/presentation/pages/forget_password/forget_password_imports.dart'
@@ -19,31 +19,31 @@ import 'package:flutter_tdd/features/auth/presentation/pages/get_code_info/get_c
 import 'package:flutter_tdd/features/auth/presentation/pages/login/login_imports.dart'
     as _i11;
 import 'package:flutter_tdd/features/auth/presentation/pages/register/register_imports.dart'
-    as _i14;
+    as _i15;
 import 'package:flutter_tdd/features/auth/presentation/pages/reset_password/reset_password_imports.dart'
-    as _i16;
-import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_imports.dart'
     as _i17;
+import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_imports.dart'
+    as _i18;
 import 'package:flutter_tdd/features/auth/presentation/pages/verify_otp/verify_otp_imports.dart'
-    as _i19;
+    as _i20;
 import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart'
     as _i10;
 import 'package:flutter_tdd/features/contract/data/models/contract_model/contract_model.dart'
-    as _i24;
+    as _i25;
 import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart'
-    as _i22;
+    as _i23;
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_details/contract_details_imports.dart'
     as _i4;
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_screen/contract_screen_imports.dart'
-    as _i25;
+    as _i26;
 import 'package:flutter_tdd/features/contract/presentation/pages/filter_contract/filter_contract_imports.dart'
     as _i5;
 import 'package:flutter_tdd/features/contract/presentation/pages/renew_contract_status/renew_contract_status_imports.dart'
-    as _i15;
+    as _i16;
 import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart'
-    as _i18;
+    as _i19;
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart'
-    as _i23;
+    as _i24;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance/add_maintenance_imports.dart'
     as _i2;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance_status/add_maintenance_status_imports.dart'
@@ -51,23 +51,23 @@ import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintena
 import 'package:flutter_tdd/features/maintenance/presentation/pages/filter_maintenance/filter_maintenance_imports.dart'
     as _i6;
 import 'package:flutter_tdd/features/maintenance/presentation/pages/maintenance_screen/maintenance_screen_imports.dart'
-    as _i26;
+    as _i27;
 import 'package:flutter_tdd/features/notification/presentation/pages/notices_screen/notices_screen_imports.dart'
     as _i12;
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/filter_property/filter_property_imports.dart'
     as _i7;
-import 'package:flutter_tdd/features/owner_properties/presentation/pages/owner_properties/owner_properties_imports.dart'
-    as _i27;
-import 'package:flutter_tdd/features/owner_properties/presentation/pages/property_details/property_details_imports.dart'
+import 'package:flutter_tdd/features/owner_properties/presentation/pages/paymen_filter/paymen_filter_imports.dart'
     as _i13;
+import 'package:flutter_tdd/features/owner_properties/presentation/pages/property_details/property_details_imports.dart'
+    as _i14;
 
-abstract class $AppRouter extends _i20.RootStackRouter {
+abstract class $AppRouter extends _i21.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i20.PageFactory> pagesMap = {
+  final Map<String, _i21.PageFactory> pagesMap = {
     ActiveAccount.name: (routeData) {
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.ActiveAccount(),
       );
@@ -75,7 +75,7 @@ abstract class $AppRouter extends _i20.RootStackRouter {
     AddMaintenanceRoute.name: (routeData) {
       final args = routeData.argsAs<AddMaintenanceRouteArgs>(
           orElse: () => const AddMaintenanceRouteArgs());
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i2.AddMaintenance(
           key: args.key,
@@ -86,7 +86,7 @@ abstract class $AppRouter extends _i20.RootStackRouter {
     CompleteAddMaintenanceRoute.name: (routeData) {
       final args = routeData.argsAs<CompleteAddMaintenanceRouteArgs>(
           orElse: () => const CompleteAddMaintenanceRouteArgs());
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i3.CompleteAddMaintenance(
           key: args.key,
@@ -96,7 +96,7 @@ abstract class $AppRouter extends _i20.RootStackRouter {
     },
     ContractDetailsRoute.name: (routeData) {
       final args = routeData.argsAs<ContractDetailsRouteArgs>();
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i4.ContractDetails(
           key: args.key,
@@ -106,7 +106,7 @@ abstract class $AppRouter extends _i20.RootStackRouter {
     },
     FilterContractRoute.name: (routeData) {
       final args = routeData.argsAs<FilterContractRouteArgs>();
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i5.FilterContract(
           key: args.key,
@@ -116,7 +116,7 @@ abstract class $AppRouter extends _i20.RootStackRouter {
     },
     FilterMaintenanceRoute.name: (routeData) {
       final args = routeData.argsAs<FilterMaintenanceRouteArgs>();
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i6.FilterMaintenance(
           key: args.key,
@@ -126,29 +126,29 @@ abstract class $AppRouter extends _i20.RootStackRouter {
     },
     FilterPropertyRoute.name: (routeData) {
       final args = routeData.argsAs<FilterPropertyRouteArgs>();
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i7.FilterProperty(
           key: args.key,
-          ownerController: args.ownerController,
+          filterController: args.filterController,
         ),
       );
     },
     ForgetPassword.name: (routeData) {
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i8.ForgetPassword(),
       );
     },
     GetCodeInfoRoute.name: (routeData) {
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i9.GetCodeInfo(),
       );
     },
     Home.name: (routeData) {
       final args = routeData.argsAs<HomeArgs>(orElse: () => const HomeArgs());
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i10.Home(
           key: args.key,
@@ -158,7 +158,7 @@ abstract class $AppRouter extends _i20.RootStackRouter {
     },
     Login.name: (routeData) {
       final args = routeData.argsAs<LoginArgs>();
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i11.Login(
           key: args.key,
@@ -167,59 +167,65 @@ abstract class $AppRouter extends _i20.RootStackRouter {
       );
     },
     NoticesScreenRoute.name: (routeData) {
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i12.NoticesScreen(),
       );
     },
+    PaymentFilterRoute.name: (routeData) {
+      return _i21.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i13.PaymentFilter(),
+      );
+    },
     PropertyDetailsRoute.name: (routeData) {
       final args = routeData.argsAs<PropertyDetailsRouteArgs>();
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i13.PropertyDetails(
+        child: _i14.PropertyDetails(
           key: args.key,
           model: args.model,
         ),
       );
     },
     RegisterRoute.name: (routeData) {
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i14.Register(),
+        child: const _i15.Register(),
       );
     },
     RenewContractStatusRoute.name: (routeData) {
       final args = routeData.argsAs<RenewContractStatusRouteArgs>();
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i15.RenewContractStatus(
+        child: _i16.RenewContractStatus(
           key: args.key,
           success: args.success,
         ),
       );
     },
     ResetPassword.name: (routeData) {
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i16.ResetPassword(),
+        child: const _i17.ResetPassword(),
       );
     },
     SplashRoute.name: (routeData) {
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i17.Splash(),
+        child: const _i18.Splash(),
       );
     },
     TermsRoute.name: (routeData) {
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i18.Terms(),
+        child: const _i19.Terms(),
       );
     },
     VerifyOTP.name: (routeData) {
-      return _i20.AutoRoutePage<dynamic>(
+      return _i21.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i19.VerifyOTP(),
+        child: const _i20.VerifyOTP(),
       );
     },
   };
@@ -227,8 +233,8 @@ abstract class $AppRouter extends _i20.RootStackRouter {
 
 /// generated route for
 /// [_i1.ActiveAccount]
-class ActiveAccount extends _i20.PageRouteInfo<void> {
-  const ActiveAccount({List<_i20.PageRouteInfo>? children})
+class ActiveAccount extends _i21.PageRouteInfo<void> {
+  const ActiveAccount({List<_i21.PageRouteInfo>? children})
       : super(
           ActiveAccount.name,
           initialChildren: children,
@@ -236,16 +242,16 @@ class ActiveAccount extends _i20.PageRouteInfo<void> {
 
   static const String name = 'ActiveAccount';
 
-  static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
+  static const _i21.PageInfo<void> page = _i21.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i2.AddMaintenance]
-class AddMaintenanceRoute extends _i20.PageRouteInfo<AddMaintenanceRouteArgs> {
+class AddMaintenanceRoute extends _i21.PageRouteInfo<AddMaintenanceRouteArgs> {
   AddMaintenanceRoute({
-    _i21.Key? key,
-    _i22.PropModel? propModel,
-    List<_i20.PageRouteInfo>? children,
+    _i22.Key? key,
+    _i23.PropModel? propModel,
+    List<_i21.PageRouteInfo>? children,
   }) : super(
           AddMaintenanceRoute.name,
           args: AddMaintenanceRouteArgs(
@@ -257,8 +263,8 @@ class AddMaintenanceRoute extends _i20.PageRouteInfo<AddMaintenanceRouteArgs> {
 
   static const String name = 'AddMaintenanceRoute';
 
-  static const _i20.PageInfo<AddMaintenanceRouteArgs> page =
-      _i20.PageInfo<AddMaintenanceRouteArgs>(name);
+  static const _i21.PageInfo<AddMaintenanceRouteArgs> page =
+      _i21.PageInfo<AddMaintenanceRouteArgs>(name);
 }
 
 class AddMaintenanceRouteArgs {
@@ -267,9 +273,9 @@ class AddMaintenanceRouteArgs {
     this.propModel,
   });
 
-  final _i21.Key? key;
+  final _i22.Key? key;
 
-  final _i22.PropModel? propModel;
+  final _i23.PropModel? propModel;
 
   @override
   String toString() {
@@ -280,11 +286,11 @@ class AddMaintenanceRouteArgs {
 /// generated route for
 /// [_i3.CompleteAddMaintenance]
 class CompleteAddMaintenanceRoute
-    extends _i20.PageRouteInfo<CompleteAddMaintenanceRouteArgs> {
+    extends _i21.PageRouteInfo<CompleteAddMaintenanceRouteArgs> {
   CompleteAddMaintenanceRoute({
-    _i21.Key? key,
-    _i23.MaintenanceModel? model,
-    List<_i20.PageRouteInfo>? children,
+    _i22.Key? key,
+    _i24.MaintenanceModel? model,
+    List<_i21.PageRouteInfo>? children,
   }) : super(
           CompleteAddMaintenanceRoute.name,
           args: CompleteAddMaintenanceRouteArgs(
@@ -296,8 +302,8 @@ class CompleteAddMaintenanceRoute
 
   static const String name = 'CompleteAddMaintenanceRoute';
 
-  static const _i20.PageInfo<CompleteAddMaintenanceRouteArgs> page =
-      _i20.PageInfo<CompleteAddMaintenanceRouteArgs>(name);
+  static const _i21.PageInfo<CompleteAddMaintenanceRouteArgs> page =
+      _i21.PageInfo<CompleteAddMaintenanceRouteArgs>(name);
 }
 
 class CompleteAddMaintenanceRouteArgs {
@@ -306,9 +312,9 @@ class CompleteAddMaintenanceRouteArgs {
     this.model,
   });
 
-  final _i21.Key? key;
+  final _i22.Key? key;
 
-  final _i23.MaintenanceModel? model;
+  final _i24.MaintenanceModel? model;
 
   @override
   String toString() {
@@ -319,11 +325,11 @@ class CompleteAddMaintenanceRouteArgs {
 /// generated route for
 /// [_i4.ContractDetails]
 class ContractDetailsRoute
-    extends _i20.PageRouteInfo<ContractDetailsRouteArgs> {
+    extends _i21.PageRouteInfo<ContractDetailsRouteArgs> {
   ContractDetailsRoute({
-    _i21.Key? key,
-    required _i24.ContractModel model,
-    List<_i20.PageRouteInfo>? children,
+    _i22.Key? key,
+    required _i25.ContractModel model,
+    List<_i21.PageRouteInfo>? children,
   }) : super(
           ContractDetailsRoute.name,
           args: ContractDetailsRouteArgs(
@@ -335,8 +341,8 @@ class ContractDetailsRoute
 
   static const String name = 'ContractDetailsRoute';
 
-  static const _i20.PageInfo<ContractDetailsRouteArgs> page =
-      _i20.PageInfo<ContractDetailsRouteArgs>(name);
+  static const _i21.PageInfo<ContractDetailsRouteArgs> page =
+      _i21.PageInfo<ContractDetailsRouteArgs>(name);
 }
 
 class ContractDetailsRouteArgs {
@@ -345,9 +351,9 @@ class ContractDetailsRouteArgs {
     required this.model,
   });
 
-  final _i21.Key? key;
+  final _i22.Key? key;
 
-  final _i24.ContractModel model;
+  final _i25.ContractModel model;
 
   @override
   String toString() {
@@ -357,11 +363,11 @@ class ContractDetailsRouteArgs {
 
 /// generated route for
 /// [_i5.FilterContract]
-class FilterContractRoute extends _i20.PageRouteInfo<FilterContractRouteArgs> {
+class FilterContractRoute extends _i21.PageRouteInfo<FilterContractRouteArgs> {
   FilterContractRoute({
-    _i21.Key? key,
-    required _i25.ContractScreenController controller,
-    List<_i20.PageRouteInfo>? children,
+    _i22.Key? key,
+    required _i26.ContractScreenController controller,
+    List<_i21.PageRouteInfo>? children,
   }) : super(
           FilterContractRoute.name,
           args: FilterContractRouteArgs(
@@ -373,8 +379,8 @@ class FilterContractRoute extends _i20.PageRouteInfo<FilterContractRouteArgs> {
 
   static const String name = 'FilterContractRoute';
 
-  static const _i20.PageInfo<FilterContractRouteArgs> page =
-      _i20.PageInfo<FilterContractRouteArgs>(name);
+  static const _i21.PageInfo<FilterContractRouteArgs> page =
+      _i21.PageInfo<FilterContractRouteArgs>(name);
 }
 
 class FilterContractRouteArgs {
@@ -383,9 +389,9 @@ class FilterContractRouteArgs {
     required this.controller,
   });
 
-  final _i21.Key? key;
+  final _i22.Key? key;
 
-  final _i25.ContractScreenController controller;
+  final _i26.ContractScreenController controller;
 
   @override
   String toString() {
@@ -396,11 +402,11 @@ class FilterContractRouteArgs {
 /// generated route for
 /// [_i6.FilterMaintenance]
 class FilterMaintenanceRoute
-    extends _i20.PageRouteInfo<FilterMaintenanceRouteArgs> {
+    extends _i21.PageRouteInfo<FilterMaintenanceRouteArgs> {
   FilterMaintenanceRoute({
-    _i21.Key? key,
-    required _i26.MaintenanceController controller,
-    List<_i20.PageRouteInfo>? children,
+    _i22.Key? key,
+    required _i27.MaintenanceController controller,
+    List<_i21.PageRouteInfo>? children,
   }) : super(
           FilterMaintenanceRoute.name,
           args: FilterMaintenanceRouteArgs(
@@ -412,8 +418,8 @@ class FilterMaintenanceRoute
 
   static const String name = 'FilterMaintenanceRoute';
 
-  static const _i20.PageInfo<FilterMaintenanceRouteArgs> page =
-      _i20.PageInfo<FilterMaintenanceRouteArgs>(name);
+  static const _i21.PageInfo<FilterMaintenanceRouteArgs> page =
+      _i21.PageInfo<FilterMaintenanceRouteArgs>(name);
 }
 
 class FilterMaintenanceRouteArgs {
@@ -422,9 +428,9 @@ class FilterMaintenanceRouteArgs {
     required this.controller,
   });
 
-  final _i21.Key? key;
+  final _i22.Key? key;
 
-  final _i26.MaintenanceController controller;
+  final _i27.MaintenanceController controller;
 
   @override
   String toString() {
@@ -434,46 +440,46 @@ class FilterMaintenanceRouteArgs {
 
 /// generated route for
 /// [_i7.FilterProperty]
-class FilterPropertyRoute extends _i20.PageRouteInfo<FilterPropertyRouteArgs> {
+class FilterPropertyRoute extends _i21.PageRouteInfo<FilterPropertyRouteArgs> {
   FilterPropertyRoute({
-    _i21.Key? key,
-    required _i27.OwnerPropertyController ownerController,
-    List<_i20.PageRouteInfo>? children,
+    _i22.Key? key,
+    required _i7.FilterPropertyController filterController,
+    List<_i21.PageRouteInfo>? children,
   }) : super(
           FilterPropertyRoute.name,
           args: FilterPropertyRouteArgs(
             key: key,
-            ownerController: ownerController,
+            filterController: filterController,
           ),
           initialChildren: children,
         );
 
   static const String name = 'FilterPropertyRoute';
 
-  static const _i20.PageInfo<FilterPropertyRouteArgs> page =
-      _i20.PageInfo<FilterPropertyRouteArgs>(name);
+  static const _i21.PageInfo<FilterPropertyRouteArgs> page =
+      _i21.PageInfo<FilterPropertyRouteArgs>(name);
 }
 
 class FilterPropertyRouteArgs {
   const FilterPropertyRouteArgs({
     this.key,
-    required this.ownerController,
+    required this.filterController,
   });
 
-  final _i21.Key? key;
+  final _i22.Key? key;
 
-  final _i27.OwnerPropertyController ownerController;
+  final _i7.FilterPropertyController filterController;
 
   @override
   String toString() {
-    return 'FilterPropertyRouteArgs{key: $key, ownerController: $ownerController}';
+    return 'FilterPropertyRouteArgs{key: $key, filterController: $filterController}';
   }
 }
 
 /// generated route for
 /// [_i8.ForgetPassword]
-class ForgetPassword extends _i20.PageRouteInfo<void> {
-  const ForgetPassword({List<_i20.PageRouteInfo>? children})
+class ForgetPassword extends _i21.PageRouteInfo<void> {
+  const ForgetPassword({List<_i21.PageRouteInfo>? children})
       : super(
           ForgetPassword.name,
           initialChildren: children,
@@ -481,13 +487,13 @@ class ForgetPassword extends _i20.PageRouteInfo<void> {
 
   static const String name = 'ForgetPassword';
 
-  static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
+  static const _i21.PageInfo<void> page = _i21.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i9.GetCodeInfo]
-class GetCodeInfoRoute extends _i20.PageRouteInfo<void> {
-  const GetCodeInfoRoute({List<_i20.PageRouteInfo>? children})
+class GetCodeInfoRoute extends _i21.PageRouteInfo<void> {
+  const GetCodeInfoRoute({List<_i21.PageRouteInfo>? children})
       : super(
           GetCodeInfoRoute.name,
           initialChildren: children,
@@ -495,16 +501,16 @@ class GetCodeInfoRoute extends _i20.PageRouteInfo<void> {
 
   static const String name = 'GetCodeInfoRoute';
 
-  static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
+  static const _i21.PageInfo<void> page = _i21.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i10.Home]
-class Home extends _i20.PageRouteInfo<HomeArgs> {
+class Home extends _i21.PageRouteInfo<HomeArgs> {
   Home({
-    _i21.Key? key,
+    _i22.Key? key,
     int index = 0,
-    List<_i20.PageRouteInfo>? children,
+    List<_i21.PageRouteInfo>? children,
   }) : super(
           Home.name,
           args: HomeArgs(
@@ -516,7 +522,7 @@ class Home extends _i20.PageRouteInfo<HomeArgs> {
 
   static const String name = 'Home';
 
-  static const _i20.PageInfo<HomeArgs> page = _i20.PageInfo<HomeArgs>(name);
+  static const _i21.PageInfo<HomeArgs> page = _i21.PageInfo<HomeArgs>(name);
 }
 
 class HomeArgs {
@@ -525,7 +531,7 @@ class HomeArgs {
     this.index = 0,
   });
 
-  final _i21.Key? key;
+  final _i22.Key? key;
 
   final int index;
 
@@ -537,11 +543,11 @@ class HomeArgs {
 
 /// generated route for
 /// [_i11.Login]
-class Login extends _i20.PageRouteInfo<LoginArgs> {
+class Login extends _i21.PageRouteInfo<LoginArgs> {
   Login({
-    _i21.Key? key,
+    _i22.Key? key,
     required bool checkRegisterButton,
-    List<_i20.PageRouteInfo>? children,
+    List<_i21.PageRouteInfo>? children,
   }) : super(
           Login.name,
           args: LoginArgs(
@@ -553,7 +559,7 @@ class Login extends _i20.PageRouteInfo<LoginArgs> {
 
   static const String name = 'Login';
 
-  static const _i20.PageInfo<LoginArgs> page = _i20.PageInfo<LoginArgs>(name);
+  static const _i21.PageInfo<LoginArgs> page = _i21.PageInfo<LoginArgs>(name);
 }
 
 class LoginArgs {
@@ -562,7 +568,7 @@ class LoginArgs {
     required this.checkRegisterButton,
   });
 
-  final _i21.Key? key;
+  final _i22.Key? key;
 
   final bool checkRegisterButton;
 
@@ -574,8 +580,8 @@ class LoginArgs {
 
 /// generated route for
 /// [_i12.NoticesScreen]
-class NoticesScreenRoute extends _i20.PageRouteInfo<void> {
-  const NoticesScreenRoute({List<_i20.PageRouteInfo>? children})
+class NoticesScreenRoute extends _i21.PageRouteInfo<void> {
+  const NoticesScreenRoute({List<_i21.PageRouteInfo>? children})
       : super(
           NoticesScreenRoute.name,
           initialChildren: children,
@@ -583,17 +589,31 @@ class NoticesScreenRoute extends _i20.PageRouteInfo<void> {
 
   static const String name = 'NoticesScreenRoute';
 
-  static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
+  static const _i21.PageInfo<void> page = _i21.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i13.PropertyDetails]
+/// [_i13.PaymentFilter]
+class PaymentFilterRoute extends _i21.PageRouteInfo<void> {
+  const PaymentFilterRoute({List<_i21.PageRouteInfo>? children})
+      : super(
+          PaymentFilterRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PaymentFilterRoute';
+
+  static const _i21.PageInfo<void> page = _i21.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i14.PropertyDetails]
 class PropertyDetailsRoute
-    extends _i20.PageRouteInfo<PropertyDetailsRouteArgs> {
+    extends _i21.PageRouteInfo<PropertyDetailsRouteArgs> {
   PropertyDetailsRoute({
-    _i21.Key? key,
-    required _i22.PropModel model,
-    List<_i20.PageRouteInfo>? children,
+    _i22.Key? key,
+    required _i23.PropModel model,
+    List<_i21.PageRouteInfo>? children,
   }) : super(
           PropertyDetailsRoute.name,
           args: PropertyDetailsRouteArgs(
@@ -605,8 +625,8 @@ class PropertyDetailsRoute
 
   static const String name = 'PropertyDetailsRoute';
 
-  static const _i20.PageInfo<PropertyDetailsRouteArgs> page =
-      _i20.PageInfo<PropertyDetailsRouteArgs>(name);
+  static const _i21.PageInfo<PropertyDetailsRouteArgs> page =
+      _i21.PageInfo<PropertyDetailsRouteArgs>(name);
 }
 
 class PropertyDetailsRouteArgs {
@@ -615,9 +635,9 @@ class PropertyDetailsRouteArgs {
     required this.model,
   });
 
-  final _i21.Key? key;
+  final _i22.Key? key;
 
-  final _i22.PropModel model;
+  final _i23.PropModel model;
 
   @override
   String toString() {
@@ -626,9 +646,9 @@ class PropertyDetailsRouteArgs {
 }
 
 /// generated route for
-/// [_i14.Register]
-class RegisterRoute extends _i20.PageRouteInfo<void> {
-  const RegisterRoute({List<_i20.PageRouteInfo>? children})
+/// [_i15.Register]
+class RegisterRoute extends _i21.PageRouteInfo<void> {
+  const RegisterRoute({List<_i21.PageRouteInfo>? children})
       : super(
           RegisterRoute.name,
           initialChildren: children,
@@ -636,17 +656,17 @@ class RegisterRoute extends _i20.PageRouteInfo<void> {
 
   static const String name = 'RegisterRoute';
 
-  static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
+  static const _i21.PageInfo<void> page = _i21.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i15.RenewContractStatus]
+/// [_i16.RenewContractStatus]
 class RenewContractStatusRoute
-    extends _i20.PageRouteInfo<RenewContractStatusRouteArgs> {
+    extends _i21.PageRouteInfo<RenewContractStatusRouteArgs> {
   RenewContractStatusRoute({
-    _i21.Key? key,
+    _i22.Key? key,
     required bool success,
-    List<_i20.PageRouteInfo>? children,
+    List<_i21.PageRouteInfo>? children,
   }) : super(
           RenewContractStatusRoute.name,
           args: RenewContractStatusRouteArgs(
@@ -658,8 +678,8 @@ class RenewContractStatusRoute
 
   static const String name = 'RenewContractStatusRoute';
 
-  static const _i20.PageInfo<RenewContractStatusRouteArgs> page =
-      _i20.PageInfo<RenewContractStatusRouteArgs>(name);
+  static const _i21.PageInfo<RenewContractStatusRouteArgs> page =
+      _i21.PageInfo<RenewContractStatusRouteArgs>(name);
 }
 
 class RenewContractStatusRouteArgs {
@@ -668,7 +688,7 @@ class RenewContractStatusRouteArgs {
     required this.success,
   });
 
-  final _i21.Key? key;
+  final _i22.Key? key;
 
   final bool success;
 
@@ -679,9 +699,9 @@ class RenewContractStatusRouteArgs {
 }
 
 /// generated route for
-/// [_i16.ResetPassword]
-class ResetPassword extends _i20.PageRouteInfo<void> {
-  const ResetPassword({List<_i20.PageRouteInfo>? children})
+/// [_i17.ResetPassword]
+class ResetPassword extends _i21.PageRouteInfo<void> {
+  const ResetPassword({List<_i21.PageRouteInfo>? children})
       : super(
           ResetPassword.name,
           initialChildren: children,
@@ -689,13 +709,13 @@ class ResetPassword extends _i20.PageRouteInfo<void> {
 
   static const String name = 'ResetPassword';
 
-  static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
+  static const _i21.PageInfo<void> page = _i21.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i17.Splash]
-class SplashRoute extends _i20.PageRouteInfo<void> {
-  const SplashRoute({List<_i20.PageRouteInfo>? children})
+/// [_i18.Splash]
+class SplashRoute extends _i21.PageRouteInfo<void> {
+  const SplashRoute({List<_i21.PageRouteInfo>? children})
       : super(
           SplashRoute.name,
           initialChildren: children,
@@ -703,13 +723,13 @@ class SplashRoute extends _i20.PageRouteInfo<void> {
 
   static const String name = 'SplashRoute';
 
-  static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
+  static const _i21.PageInfo<void> page = _i21.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i18.Terms]
-class TermsRoute extends _i20.PageRouteInfo<void> {
-  const TermsRoute({List<_i20.PageRouteInfo>? children})
+/// [_i19.Terms]
+class TermsRoute extends _i21.PageRouteInfo<void> {
+  const TermsRoute({List<_i21.PageRouteInfo>? children})
       : super(
           TermsRoute.name,
           initialChildren: children,
@@ -717,13 +737,13 @@ class TermsRoute extends _i20.PageRouteInfo<void> {
 
   static const String name = 'TermsRoute';
 
-  static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
+  static const _i21.PageInfo<void> page = _i21.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i19.VerifyOTP]
-class VerifyOTP extends _i20.PageRouteInfo<void> {
-  const VerifyOTP({List<_i20.PageRouteInfo>? children})
+/// [_i20.VerifyOTP]
+class VerifyOTP extends _i21.PageRouteInfo<void> {
+  const VerifyOTP({List<_i21.PageRouteInfo>? children})
       : super(
           VerifyOTP.name,
           initialChildren: children,
@@ -731,5 +751,5 @@ class VerifyOTP extends _i20.PageRouteInfo<void> {
 
   static const String name = 'VerifyOTP';
 
-  static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
+  static const _i21.PageInfo<void> page = _i21.PageInfo<void>(name);
 }
