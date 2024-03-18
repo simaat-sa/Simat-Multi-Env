@@ -16,7 +16,7 @@ import 'package:flutter_tdd/features/contract/presentation/widgets/page_header_t
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart';
 import 'package:flutter_tdd/features/maintenance/domain/entity/maintenance_params.dart';
 import 'package:flutter_tdd/features/maintenance/domain/repositories/maintenance_repository.dart';
-import 'package:flutter_tdd/features/maintenance/presentation/widgets/contract_dialog_widget.dart';
+import 'package:flutter_tdd/features/maintenance/presentation/widgets/maintenance_dialog_widget.dart';
 import 'package:flutter_tdd/features/base/presentation/widgets/filter_input_widget.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 

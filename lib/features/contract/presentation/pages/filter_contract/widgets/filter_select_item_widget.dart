@@ -1,4 +1,4 @@
-part of 'filter_widgets_imports.dart';
+part of'filter_widgets_imports.dart';
 
 class FilterSelectItemWidget extends StatelessWidget {
   final String title;

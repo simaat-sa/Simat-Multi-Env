@@ -7,6 +7,7 @@ import 'package:flutter_tdd/core/requester/consumer/requester_consumer.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/core/widgets/bottom_sheet_views/app_bottom_sheets.dart';
+import 'package:flutter_tdd/core/widgets/filter_app_bar.dart';
 import 'package:flutter_tdd/features/owner_properties/domain/requesters/filter_property_request.dart';
 import 'package:flutter_tdd/features/owner_properties/data/models/filter_property_model/filter_property_model.dart';
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/owner_properties/owner_properties_imports.dart';

@@ -14,6 +14,18 @@ class MaintenanceTabController {
     });
   }
 
+  void maintenanceDialog(BuildContext context, MaintenanceModel model) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return MaintenanceDialog(
+          model: model,
+        );
+      },
+    );
+  }
+
+
 
   Future<void> fetchPropertyData( int pageIndex) async {
     var params = _maintenanceListParams(pageIndex);

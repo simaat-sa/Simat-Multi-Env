@@ -9,10 +9,10 @@ import 'package:flutter_tdd/core/widgets/details_item_widget.dart';
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart';
 import 'package:flutter_tdd/res.dart';
 
-class ContractDialog extends StatelessWidget {
+class MaintenanceDialog extends StatelessWidget {
   final MaintenanceModel model;
 
-  const ContractDialog({super.key, required this.model});
+  const MaintenanceDialog({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {

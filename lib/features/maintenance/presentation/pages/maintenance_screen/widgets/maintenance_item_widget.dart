@@ -13,7 +13,7 @@ class MaintenanceItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => controller.contractDialog(context, model),
+      onTap: () => controller.maintenanceDialog(context, model),
       child: Container(
         margin: const EdgeInsets.only(top: 10),
         padding: const EdgeInsets.all(10),

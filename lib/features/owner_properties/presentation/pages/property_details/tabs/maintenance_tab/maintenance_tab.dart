@@ -26,6 +26,7 @@ class _MaintenanceTabState extends State<MaintenanceTab> {
         itemBuilder: (context, item, index) {
           return MaintenanceTabItemWidget(
             model: item,
+            controller: controller,
           );
         },
         firstPageErrorIndicatorBuilder: (context) {

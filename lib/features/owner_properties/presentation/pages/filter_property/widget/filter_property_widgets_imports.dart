@@ -11,7 +11,6 @@ import 'package:flutter_tdd/features/owner_properties/presentation/pages/filter_
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/owner_properties/owner_properties_imports.dart';
 import 'package:flutter_tdd/res.dart';
 
-part 'filter_property_app_bar.dart';
 part 'filter_property_select_item.dart';
 part 'filter_property_buttons_widget.dart';
 part 'filter_property_title_item_widget.dart';
