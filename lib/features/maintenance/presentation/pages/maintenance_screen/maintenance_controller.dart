@@ -9,9 +9,6 @@ class MaintenanceController {
 
   String searchText = "";
 
-  MaintenanceController() {
-    // requestData();
-  }
 
 
   void contractDialog(BuildContext context, MaintenanceModel model) {
@@ -26,9 +23,9 @@ class MaintenanceController {
   }
 
   void onFilter(BuildContext context) {
+    pagingController.refresh();
+    fetchPropertyData(context, 1);
     if(filterContractObs.getValue()!=ContractStatus.non){
-      pagingController.refresh();
-      fetchPropertyData(context, 1);
       filterAppliedObs.setValue(true);
     }
 

@@ -1,6 +1,7 @@
 class MaintenanceParams {
   final int page;
   final String? filter;
+  final String? areaId;
   final String? search;
   final bool refresh;
 
@@ -8,6 +9,7 @@ class MaintenanceParams {
     required this.page,
     this.search,
     this.filter,
+    this.areaId,
     this.refresh = true,
   });
 
@@ -18,6 +20,8 @@ class MaintenanceParams {
     }
     if (filter != null && filter != "0") {
       header += "&filters[acl_status_code]=$filter";
+    }   if (areaId != null) {
+      header += "&filters[are_code]=$areaId";
     }
     return header;
   }

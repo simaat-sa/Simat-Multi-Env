@@ -4,8 +4,6 @@ class PropertyDetailsController {
   late  PropDetailsRequester requester;
   final  PropModel  model;
 
-
-
   PropertyDetailsController(this.model){
     requester = PropDetailsRequester(_propEntity());
     getPropDetails();

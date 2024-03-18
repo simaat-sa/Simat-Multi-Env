@@ -2,144 +2,91 @@ part of'units_widgets_imports.dart';
 
 
 class UnitItemWidget extends StatelessWidget {
-  const UnitItemWidget({super.key,});
+  final ContractModel model;
+
+  const UnitItemWidget({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       margin: const EdgeInsets.only(top: 10),
       decoration: BoxDecoration(
         color: context.colors.white,
         borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: const Offset(0, 3),
+          ),
+        ],
       ),
       child: Column(
         children: [
-          CachedImage(
-            alignment: Alignment.topCenter,
-            url: "",
-            height: 150,
-            borderRadius: const BorderRadius.only(
-              topRight: Radius.circular(10),
-              topLeft: Radius.circular(10),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(8),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        height: 26,
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
-                        decoration: BoxDecoration(
-                            color: context.colors.black.withOpacity(0.15),
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            SvgPicture.asset(Res.unitLocationLogo,color: context.colors.white),
-                            Text(
-                              "السليمانية . الرياض",
-                              style: AppTextStyle.s14_w400(color: context.colors.white),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        alignment: Alignment.center,
-                        height: 26,
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
-                        decoration: BoxDecoration(
-                            color: context.colors.black.withOpacity(0.15),
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Text(
-                          "#1002",
-                          style: AppTextStyle.s14_w400(color: context.colors.white)
-                              .copyWith(height: 2.2),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            padding: const EdgeInsetsDirectional.only(start: 10, end: 10, top: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      Translate.of(context).due,
-                      style: AppTextStyle.s14_w400(color: context.colors.primary),
+                      model.unitName,
+                      style: AppTextStyle.s16_w400(color: context.colors.darkTextColor),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 4),
-                      child: Text(
-                        "20.000",
-                        style: AppTextStyle.s20_w600(color: context.colors.primary),
-                      ),
-                    ),
+                    Gaps.vGap5,
                     Text(
-                      Translate.of(context).sar,
-                      style: AppTextStyle.s14_w400(color: context.colors.primary),
+                      "${model.blockName} . ${model.type.getLocalizedName()}",
+                      style: AppTextStyle.s16_w400(color: context.colors.darkTextColor),
                     ),
                   ],
                 ),
+                if(model.status.getLocalizedName()!="")
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                  height: 22,
                   decoration: BoxDecoration(
-                    color: context.colors.primary,
+                    color: model.status.getColor(),
                     borderRadius: BorderRadius.circular(5),
                   ),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
                   child: Text(
-                    "فعال",
-                    style: AppTextStyle.s12_w500(color: context.colors.white),
+                    model.status.getLocalizedName(),
+                    style: AppTextStyle.s14_w400(color: context.colors.white),
                   ),
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    SvgPicture.asset(Res.unitLogo),
-                    Gaps.hGap5,
-                    Row(
-                      children: [
-                        Text(
-                          "مكتب 1",
-                          style: AppTextStyle.s16_w400(color: context.colors.brown),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 4),
-                          child: Text(
-                            '.',
-                            style: AppTextStyle.s16_w500(color: context.colors.primary),
-                          ),
-                        ),
-                        Text(
-                          "تجاري",
-                          style: AppTextStyle.s16_w400(color: context.colors.brown),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Text(
-                  '${Translate.of(context).expireIn} 9-2-2025',
-                  style: AppTextStyle.s14_w400(color: context.colors.primaryText),
-                ),
-              ],
-            ),
+          Gaps.vGap15,
+          CostItemWidget(
+            title: 'الرصيد',
+            value: model.duePrice,
+            color: context.colors.bgLight,
+          ),
+          CostItemWidget(
+            title: 'مطلوب',
+            value: model.netPrice,
+          ),
+          CostItemWidget(
+              title: 'بداية العقد',
+              value: model.startDate,
+              color: context.colors.bgLight,
+              image: Res.calendarIcon,
+              costOrNot: false),
+          CostItemWidget(
+            title: 'نهاية العقد',
+            value: model.date,
+            image: Res.calendarIcon,
+            costOrNot: false,
+          ),
+          CostItemWidget(
+            title: 'المستأجر',
+            value: model.contactName,
+            image: Res.tenantLogo,
+            color: context.colors.bgLight,
+            costOrNot: false,
           ),
         ],
       ),
