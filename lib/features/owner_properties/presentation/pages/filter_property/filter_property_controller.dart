@@ -14,21 +14,18 @@ class FilterPropertyController {
   void onFilter() {
     final selectedCat = requester.data?.categories.firstWhereOrNull((e) => e.selected == true);
     final selectedType = requester.data?.types.firstWhereOrNull((e) => e.selected == true);
-    ownerController.categoryFilter = selectedCat?.code ?? "";
-    ownerController.typeFilter = selectedType?.code ?? "";
-    if (_canApplyFilter()) {
-      ownerController.pagingController.refresh();
-      ownerController.fetchPropertyData(1);
-    }
+    ownerController.categoryFilter = selectedCat?.code;
+    ownerController.typeFilter = selectedType?.code;
+    ownerController.pagingController.refresh();
+    ownerController.fetchPropertyData(1);
   }
 
-  bool _canApplyFilter() => ownerController.typeFilter.isNotEmpty && ownerController.categoryFilter.isNotEmpty;
 
   void onReset() {
     requester.data?.categories.map((e) => e.selected = false).toList();
     requester.data?.types.map((e) => e.selected = false).toList();
-    ownerController.categoryFilter = "";
-    ownerController.typeFilter = "";
+    ownerController.categoryFilter = null;
+    ownerController.typeFilter = null;
     ownerController.pagingController.refresh();
     ownerController.fetchPropertyData(1);
     refresh.refresh();
