@@ -2,6 +2,7 @@ part of 'maintenance_tab_imports.dart';
 
 class MaintenanceTabController {
   final PagingController<int, MaintenanceModel> pagingController = PagingController(firstPageKey: 1);
+  final ObsValue<int> maintenanceCount = ObsValue<int>.withInit(0);
   late String areaId;
 
   MaintenanceTabController(this.areaId){
@@ -31,6 +32,7 @@ class MaintenanceTabController {
     var params = _maintenanceListParams(pageIndex);
     getIt<MaintenanceRepository>().getContracts(params).then((result) {
       final data = result.data?.data ?? [];
+      maintenanceCount.setValue(result.data?.total??0);
       final isLastPage = data.length < 10;
       if (pageIndex == 1) {
         pagingController.itemList = [];

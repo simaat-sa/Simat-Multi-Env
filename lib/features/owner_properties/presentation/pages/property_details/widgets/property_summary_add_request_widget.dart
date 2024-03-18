@@ -2,12 +2,13 @@ part of'property_details_widgets_imports.dart';
 
 
 class PropertySummaryAddRequestWidget extends StatelessWidget {
-  const PropertySummaryAddRequestWidget({super.key});
+  final PropModel model;
+  const PropertySummaryAddRequestWidget({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => AutoRouter.of(context).push( AddMaintenanceRoute()),
+      onTap: () => AutoRouter.of(context).push( AddMaintenanceRoute(propModel: model)),
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
         decoration: BoxDecoration(

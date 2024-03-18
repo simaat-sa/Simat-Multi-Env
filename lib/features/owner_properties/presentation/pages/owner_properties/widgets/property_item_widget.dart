@@ -8,7 +8,7 @@ class PropertyItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => AutoRouter.of(context).push(PropertyDetailsRoute(model: model)),
+      onTap: () => _onRoute(context),
       child: Container(
         margin: const EdgeInsets.only(top: 16),
         decoration: BoxDecoration(
@@ -213,6 +213,16 @@ class PropertyItemWidget extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  void _onRoute(BuildContext context) {
+    FocusScope.of(context).unfocus();
+    Future.delayed(
+      const Duration(milliseconds: 100),
+      () {
+        AutoRouter.of(context).push(PropertyDetailsRoute(model: model));
+      },
     );
   }
 }

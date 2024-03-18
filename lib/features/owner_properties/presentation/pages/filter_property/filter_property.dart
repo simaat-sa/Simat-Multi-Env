@@ -30,7 +30,7 @@ class _FilterPropertyState extends State<FilterProperty> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const FilterPropertyAppBar(),
+            const FilterAppBarWidget(),
             RequesterConsumer<FilterPropertyModel>(
               requester: controller.requester,
               successBuilder: (context, data) {
