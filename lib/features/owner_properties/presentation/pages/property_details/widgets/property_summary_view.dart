@@ -27,7 +27,6 @@ class PropertySummaryView extends StatelessWidget {
         return FailureViewWidget(onTap: callback);
       },
       loadingBuilder: (context) {
-        print("<<<<<<<<<<<<<<<<<<<Ahmed");
         return const PropDetailsLoadingWidget();
       },
     );

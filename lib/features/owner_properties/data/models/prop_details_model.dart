@@ -35,17 +35,17 @@ class PropDetailsModel with _$PropDetailsModel{
       _$PropDetailsModelFromJson(json);
 
   // مدفوعات
-  String get amtPaid => amtPaid.priceFormat;
+  String get amtPaidPrice => amtPaid.priceFormat;
   // عمولات
-  String get amtCommTot => amtCommTot.priceFormat;
+  String get amtCommTotPrice => amtCommTot.priceFormat;
   // محصل
-  String get amtCollect => amtCollect.priceFormat;
+  String get amtCollectPrice => amtCollect.priceFormat;
   //الرصيد
-  String get amtBalance => amtBalance.priceFormat;
+  String get amtBalancePrice => amtBalance.priceFormat;
   // مستحق
-  String get amtDue => amtDue.priceFormat;
+  String get amtDuePrice => amtDue.priceFormat;
   // مطلوب
-  String get amtPayable => amtPayable.priceFormat;
+  String get amtPayablePrice => amtPayable.priceFormat;
   // تأمينات
-  String get amtInsur => amtInsur.priceFormat;
+  String get amtInsurPrice => amtInsur.priceFormat;
 }

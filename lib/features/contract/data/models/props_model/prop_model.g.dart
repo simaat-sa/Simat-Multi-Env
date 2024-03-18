@@ -29,6 +29,7 @@ _$PropModelImpl _$$PropModelImplFromJson(Map<String, dynamic> json) =>
       totalDuePrice: json['amt_due'] as String? ?? '0',
       propChildTot: json['prop_child_tot'] as String? ?? '0',
       propChildOcc: json['prop_child_occ'] as String? ?? '0',
+      propAddress: json['prop_address'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$PropModelImplToJson(_$PropModelImpl instance) =>
@@ -54,6 +55,7 @@ Map<String, dynamic> _$$PropModelImplToJson(_$PropModelImpl instance) =>
       'amt_due': instance.totalDuePrice,
       'prop_child_tot': instance.propChildTot,
       'prop_child_occ': instance.propChildOcc,
+      'prop_address': instance.propAddress,
     };
 
 const _$ContractTypesEnumMap = {

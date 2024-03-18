@@ -62,6 +62,8 @@ mixin _$PropModel {
   String get propChildTot => throw _privateConstructorUsedError;
   @JsonKey(name: 'prop_child_occ', defaultValue: "0")
   String get propChildOcc => throw _privateConstructorUsedError;
+  @JsonKey(name: 'prop_address', defaultValue: "")
+  String get propAddress => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -96,7 +98,8 @@ abstract class $PropModelCopyWith<$Res> {
       String contractCollectPrice,
       @JsonKey(name: 'amt_due', defaultValue: "0") String totalDuePrice,
       @JsonKey(name: 'prop_child_tot', defaultValue: "0") String propChildTot,
-      @JsonKey(name: 'prop_child_occ', defaultValue: "0") String propChildOcc});
+      @JsonKey(name: 'prop_child_occ', defaultValue: "0") String propChildOcc,
+      @JsonKey(name: 'prop_address', defaultValue: "") String propAddress});
 }
 
 /// @nodoc
@@ -133,6 +136,7 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
     Object? totalDuePrice = null,
     Object? propChildTot = null,
     Object? propChildOcc = null,
+    Object? propAddress = null,
   }) {
     return _then(_value.copyWith(
       propId: null == propId
@@ -219,6 +223,10 @@ class _$PropModelCopyWithImpl<$Res, $Val extends PropModel>
           ? _value.propChildOcc
           : propChildOcc // ignore: cast_nullable_to_non_nullable
               as String,
+      propAddress: null == propAddress
+          ? _value.propAddress
+          : propAddress // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -253,7 +261,8 @@ abstract class _$$PropModelImplCopyWith<$Res>
       String contractCollectPrice,
       @JsonKey(name: 'amt_due', defaultValue: "0") String totalDuePrice,
       @JsonKey(name: 'prop_child_tot', defaultValue: "0") String propChildTot,
-      @JsonKey(name: 'prop_child_occ', defaultValue: "0") String propChildOcc});
+      @JsonKey(name: 'prop_child_occ', defaultValue: "0") String propChildOcc,
+      @JsonKey(name: 'prop_address', defaultValue: "") String propAddress});
 }
 
 /// @nodoc
@@ -288,6 +297,7 @@ class __$$PropModelImplCopyWithImpl<$Res>
     Object? totalDuePrice = null,
     Object? propChildTot = null,
     Object? propChildOcc = null,
+    Object? propAddress = null,
   }) {
     return _then(_$PropModelImpl(
       propId: null == propId
@@ -374,6 +384,10 @@ class __$$PropModelImplCopyWithImpl<$Res>
           ? _value.propChildOcc
           : propChildOcc // ignore: cast_nullable_to_non_nullable
               as String,
+      propAddress: null == propAddress
+          ? _value.propAddress
+          : propAddress // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -410,7 +424,9 @@ class _$PropModelImpl extends _PropModel {
       @JsonKey(name: 'prop_child_tot', defaultValue: "0")
       required this.propChildTot,
       @JsonKey(name: 'prop_child_occ', defaultValue: "0")
-      required this.propChildOcc})
+      required this.propChildOcc,
+      @JsonKey(name: 'prop_address', defaultValue: "")
+      required this.propAddress})
       : super._();
 
   factory _$PropModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -479,10 +495,13 @@ class _$PropModelImpl extends _PropModel {
   @override
   @JsonKey(name: 'prop_child_occ', defaultValue: "0")
   final String propChildOcc;
+  @override
+  @JsonKey(name: 'prop_address', defaultValue: "")
+  final String propAddress;
 
   @override
   String toString() {
-    return 'PropModel(propId: $propId, areId: $areId, areCode: $areCode, areAreId: $areAreId, unitName: $unitName, blocNameAr: $blocNameAr, blocNameEn: $blocNameEn, typeAr: $typeAr, typeEn: $typeEn, statusCode: $statusCode, propImg: $propImg, propCost: $propCost, propCity: $propCity, propRegion: $propRegion, contactName: $contactName, date: $date, contractType: $contractType, contractCollectPrice: $contractCollectPrice, totalDuePrice: $totalDuePrice, propChildTot: $propChildTot, propChildOcc: $propChildOcc)';
+    return 'PropModel(propId: $propId, areId: $areId, areCode: $areCode, areAreId: $areAreId, unitName: $unitName, blocNameAr: $blocNameAr, blocNameEn: $blocNameEn, typeAr: $typeAr, typeEn: $typeEn, statusCode: $statusCode, propImg: $propImg, propCost: $propCost, propCity: $propCity, propRegion: $propRegion, contactName: $contactName, date: $date, contractType: $contractType, contractCollectPrice: $contractCollectPrice, totalDuePrice: $totalDuePrice, propChildTot: $propChildTot, propChildOcc: $propChildOcc, propAddress: $propAddress)';
   }
 
   @override
@@ -524,7 +543,9 @@ class _$PropModelImpl extends _PropModel {
             (identical(other.propChildTot, propChildTot) ||
                 other.propChildTot == propChildTot) &&
             (identical(other.propChildOcc, propChildOcc) ||
-                other.propChildOcc == propChildOcc));
+                other.propChildOcc == propChildOcc) &&
+            (identical(other.propAddress, propAddress) ||
+                other.propAddress == propAddress));
   }
 
   @JsonKey(ignore: true)
@@ -551,7 +572,8 @@ class _$PropModelImpl extends _PropModel {
         contractCollectPrice,
         totalDuePrice,
         propChildTot,
-        propChildOcc
+        propChildOcc,
+        propAddress
       ]);
 
   @JsonKey(ignore: true)
@@ -605,7 +627,9 @@ abstract class _PropModel extends PropModel {
       @JsonKey(name: 'prop_child_tot', defaultValue: "0")
       required final String propChildTot,
       @JsonKey(name: 'prop_child_occ', defaultValue: "0")
-      required final String propChildOcc}) = _$PropModelImpl;
+      required final String propChildOcc,
+      @JsonKey(name: 'prop_address', defaultValue: "")
+      required final String propAddress}) = _$PropModelImpl;
   const _PropModel._() : super._();
 
   factory _PropModel.fromJson(Map<String, dynamic> json) =
@@ -674,6 +698,9 @@ abstract class _PropModel extends PropModel {
   @override
   @JsonKey(name: 'prop_child_occ', defaultValue: "0")
   String get propChildOcc;
+  @override
+  @JsonKey(name: 'prop_address', defaultValue: "")
+  String get propAddress;
   @override
   @JsonKey(ignore: true)
   _$$PropModelImplCopyWith<_$PropModelImpl> get copyWith =>
