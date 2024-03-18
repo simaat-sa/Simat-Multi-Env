@@ -2,7 +2,7 @@ part of'units_widgets_imports.dart';
 
 
 class UnitItemWidget extends StatelessWidget {
-  const UnitItemWidget({super.key});
+  const UnitItemWidget({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class UnitItemWidget extends StatelessWidget {
                           children: [
                             SvgPicture.asset(Res.unitLocationLogo,color: context.colors.white),
                             Text(
-                              "  السليمانية . الرياض",
+                              "السليمانية . الرياض",
                               style: AppTextStyle.s14_w400(color: context.colors.white),
                             ),
                           ],
@@ -80,7 +80,7 @@ class UnitItemWidget extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 4),
                       child: Text(
-                        "20,000",
+                        "20.000",
                         style: AppTextStyle.s20_w600(color: context.colors.primary),
                       ),
                     ),

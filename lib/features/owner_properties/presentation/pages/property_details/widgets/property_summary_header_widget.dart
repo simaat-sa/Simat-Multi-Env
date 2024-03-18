@@ -1,9 +1,10 @@
 part of 'property_details_widgets_imports.dart';
 
 class PropertySummaryHeaderWidget extends StatelessWidget {
-  final PropModel model;
+  final PropDetailsModel model;
+  final PropModel propModel;
 
-  const PropertySummaryHeaderWidget({super.key, required this.model});
+  const PropertySummaryHeaderWidget({super.key, required this.model, required this.propModel});
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +22,13 @@ class PropertySummaryHeaderWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(color: context.colors.primary)),
               child: Text(
-                "#${model.statusCode}",
+                "#${propModel.statusCode}",
                 style: AppTextStyle.s14_w500(color: context.colors.primary).copyWith(height: 2),
               ),
             ),
             Gaps.hGap8,
             Text(
-              model.unitName,
+              propModel.unitName,
               style: AppTextStyle.s16_w400(color: context.colors.brown).copyWith(overflow: TextOverflow.ellipsis),
             ),
             Padding(
@@ -38,7 +39,7 @@ class PropertySummaryHeaderWidget extends StatelessWidget {
               ),
             ),
             Text(
-              model.contractType.getLocalizedName(),
+              propModel.contractType.getLocalizedName(),
               style: AppTextStyle.s16_w400(color: context.colors.brown),
             ),
           ],
@@ -56,7 +57,7 @@ class PropertySummaryHeaderWidget extends StatelessWidget {
             Gaps.hGap8,
             Expanded(
               child: Text(
-                '${model.propId} ${model.propRegion}.${model.areId}.${model.propRegion}.${model.propCity}',
+                '${propModel.areCode} ${propModel.propTitle}.${propModel.areId}.${propModel.propRegion}.${propModel.propCity}.${propModel.statusCode}',
                 style: AppTextStyle.s14_w400(
                   color: context.colors.primaryText,
                 ),
