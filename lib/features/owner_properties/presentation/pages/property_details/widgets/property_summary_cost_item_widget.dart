@@ -1,7 +1,7 @@
 part of 'property_details_widgets_imports.dart';
 
 class PropertySummaryCostItemWidget extends StatelessWidget {
-  final PropModel model;
+  final PropDetailsModel model;
   const PropertySummaryCostItemWidget({super.key, required this.model});
 
   @override
@@ -26,59 +26,74 @@ class PropertySummaryCostItemWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Row(
               children: [
-                SvgPicture.asset(Res.balanceLogo, height: 32, width: 32),
-                Gaps.hGap10,
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('الرصيد', style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
-                    Gaps.vGap5,
-                    Row(
-                      children: [
-                        Text(
-                          model.propChildTot,
-                          style: AppTextStyle.s18_w500(color: context.colors.green3),
+                Expanded(
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(Res.balanceLogo, height: 32, width: 32),
+                      Gaps.hGap10,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('الرصيد', style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
+                            Gaps.vGap5,
+                            Row(
+                              children: [
+                                Text(
+                                  model.amtBalance,
+                                  style: AppTextStyle.s18_w500(color: context.colors.green3),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                                  child: Text(
+                                    Translate.of(context).sar,
+                                    style: AppTextStyle.s14_w400(color: context.colors.green3),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 4),
-                          child: Text(
-                            Translate.of(context).sar,
-                            style: AppTextStyle.s14_w400(color: context.colors.green3),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
-                Gaps.hGap26,
                 Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 8),
                   height: 38,
                   width: 2,
                   color: context.colors.background,
                 ),
-                Gaps.hGap10,
-                SvgPicture.asset(Res.paymentLogo, height: 32, width: 32),
-                Gaps.hGap10,
                 Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Row(
                     children: [
-                      Text('المستحق', style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
-                      Gaps.vGap5,
-                      Row(
-                        children: [
-                          Text(
-                            model.duePrice,
-                            style: AppTextStyle.s18_w500(color: context.colors.green3),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 4),
-                            child: Text(
-                              Translate.of(context).sar,
-                              style: AppTextStyle.s14_w400(color: context.colors.green3),
+                      SvgPicture.asset(Res.paymentLogo, height: 32, width: 32),
+                      Gaps.hGap10,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('المستحق', style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
+                            Gaps.vGap5,
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    model.amtDue,
+                                    style: AppTextStyle.s18_w500(color: context.colors.green3),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                                  child: Text(
+                                    Translate.of(context).sar,
+                                    style: AppTextStyle.s14_w400(color: context.colors.green3),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   ),

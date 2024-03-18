@@ -1,14 +1,19 @@
 part of 'property_details_widgets_imports.dart';
 
 class PropertySummaryWorksItemWidget extends StatelessWidget {
-  final PropModel model;
+  final PropDetailsModel model;
   final String title;
   final bool visiblePercent;
+  final String allRented;
+  final String allProp;
 
   const PropertySummaryWorksItemWidget({
     super.key,
     required this.model,
-    required this.title, this.visiblePercent=false,
+    required this.title,
+    this.visiblePercent = false,
+    required this.allRented,
+    required this.allProp,
   });
 
   @override
@@ -38,13 +43,14 @@ class PropertySummaryWorksItemWidget extends StatelessWidget {
               Visibility(
                 visible: visiblePercent,
                 child: Text(
-                  model.rentUnitsPercent,
+                  model.propRate,
                   style: AppTextStyle.s16_w500(color: context.colors.secondary),
                 ),
               ),
               const Spacer(),
-              Text('4/', style: AppTextStyle.s16_w400(color: context.colors.primaryText)),
-              Text('2', style: AppTextStyle.s24_w400(color: context.colors.darkTextColor)),
+              Text(allProp, style: AppTextStyle.s16_w400(color: context.colors.primaryText)),
+              Text('/', style: AppTextStyle.s16_w400(color: context.colors.primaryText)),
+              Text(allRented, style: AppTextStyle.s24_w400(color: context.colors.darkTextColor)),
             ],
           ),
           Gaps.vGap12,

@@ -11,6 +11,14 @@ class PropertyDetails extends StatefulWidget {
 }
 
 class _PropertyDetailsState extends State<PropertyDetails> {
+  late PropertyDetailsController controller;
+
+  @override
+  void initState() {
+    controller = PropertyDetailsController(widget.model);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -33,7 +41,7 @@ class _PropertyDetailsState extends State<PropertyDetails> {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TabBarView(
                   children: [
-                    PropertySummaryView(model: widget.model),
+                    PropertySummaryView(propModel: widget.model, controller: controller),
                     const Units(),
                     const MaintenanceTab(),
                     const PaymentTabItemWidget(),

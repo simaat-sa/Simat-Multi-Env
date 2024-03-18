@@ -2,7 +2,8 @@ part of'property_details_widgets_imports.dart';
 
 
 class PropertySummaryWorksLisItemsWidget extends StatelessWidget {
-  final PropModel model;
+  final PropDetailsModel model;
+
   const PropertySummaryWorksLisItemsWidget({super.key, required this.model});
 
   @override
@@ -10,9 +11,25 @@ class PropertySummaryWorksLisItemsWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        PropertySummaryWorksItemWidget(model: model,title: 'الإشغال',visiblePercent: true),
-        PropertySummaryWorksItemWidget(model: model,title: 'تجاري مؤجر'),
-        PropertySummaryWorksItemWidget(model: model,title: 'سكني مؤجر'),
+        PropertySummaryWorksItemWidget(
+          model: model,
+          title: 'الإشغال',
+          visiblePercent: true,
+          allRented: model.propChildOcc,
+          allProp: model.propChildTot,
+        ),
+        PropertySummaryWorksItemWidget(
+          model: model,
+          title: 'تجاري مؤجر',
+          allRented: model.commercialRented,
+          allProp: model.commercialRentedTotal,
+        ),
+        PropertySummaryWorksItemWidget(
+          model: model,
+          title: 'سكني مؤجر',
+          allRented: model.residentialRented,
+          allProp: model.residentialRentedTotal,
+        ),
       ],
     );
   }
