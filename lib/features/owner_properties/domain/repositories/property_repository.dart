@@ -11,5 +11,5 @@ abstract class PropertyRepository{
   Future<MyResult<PagingModel<PropModel>>> getProperties(OwnerPropertiesParams params);
   Future<MyResult<FilterPropertyModel>> getFilterProperties(bool params);
   Future<MyResult<PropDetailsModel>> getPropDetailsModel(PropertyDetailsParams params);
-  Future<MyResult<List<ContractModel>>> getPropDetailsUnit(PropertyDetailsParams params);
+  Future<MyResult<List<ContractModel>>> getPropDetailsUnits(PropertyDetailsParams params);
 }

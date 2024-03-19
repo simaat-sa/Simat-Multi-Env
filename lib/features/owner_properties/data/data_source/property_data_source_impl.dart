@@ -63,9 +63,9 @@ class PropertyDataSourceImpl extends PropertyDataSource {
   }
 
   @override
-  Future<MyResult<List<ContractModel>>> getPropDetailsUnit(PropertyDetailsParams param) async {
+  Future<MyResult<List<ContractModel>>> getPropDetailsUnits(PropertyDetailsParams param) async {
     HttpRequestModel model = HttpRequestModel(
-      url: ApiNames.propDetailsUnit(param.propId),
+      url: ApiNames.propDetailsUnit(param.header()),
       responseType: ResType.list,
       requestMethod: RequestMethod.get,
       refresh: param.refresh,

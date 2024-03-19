@@ -24,7 +24,16 @@ class FilterMaintenance extends StatelessWidget {
                 FilterSelectMaintenanceWidget(controller: controller),
               ]),
             ),
-            FilterMaintenanceButtons(controller: controller),
+            FilterButtonsWidget(
+              onFilterTap: () {
+                controller.onFilter(context);
+                Navigator.pop(context);
+              },
+              onResetTap: () {
+                controller.onResetFilter(context);
+                Navigator.pop(context);
+              },
+            ),
           ],
         ),
       ),

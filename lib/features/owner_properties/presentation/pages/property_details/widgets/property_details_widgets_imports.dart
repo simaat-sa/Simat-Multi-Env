@@ -13,6 +13,7 @@ import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_details/widgets/tenant_details_widgets_imports.dart';
 import 'package:flutter_tdd/features/maintenance/presentation/pages/add_maintenance/add_maintenance_imports.dart';
 import 'package:flutter_tdd/features/owner_properties/data/models/prop_details_model.dart';
+import 'package:flutter_tdd/features/owner_properties/domain/models/property_count.dart';
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/property_details/property_details_imports.dart';
 import 'package:flutter_tdd/features/owner_properties/presentation/widgets/cost_item_widget.dart';
 import 'package:flutter_tdd/features/owner_properties/presentation/widgets/prop_details_loading_widget.dart';

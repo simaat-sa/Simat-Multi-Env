@@ -28,6 +28,8 @@ class PropDetailsModel with _$PropDetailsModel{
     @JsonKey(name: 'amt_paid',defaultValue: "")required String amtPaid,
     @JsonKey(name: 'amt_balance',defaultValue: "")required String amtBalance,
     @JsonKey(name: 'amt_insur',defaultValue: "")required String amtInsur,
+    @JsonKey(name: 'expenses_count',defaultValue: "")required String paymentCount,
+    @JsonKey(name: 'maint_count',defaultValue: "")required String maintenanceCount,
   }) = _PropDetailsModel;
 
 

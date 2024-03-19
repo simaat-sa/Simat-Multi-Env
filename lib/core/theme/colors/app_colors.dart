@@ -66,4 +66,5 @@ abstract class AppColors {
   Color get red;
   Color get primaryGrey;
   Color get errorColor;
+  Color get vacantBgColor;
 }

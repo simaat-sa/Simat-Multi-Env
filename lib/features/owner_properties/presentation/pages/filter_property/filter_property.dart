@@ -73,7 +73,16 @@ class _FilterPropertyState extends State<FilterProperty> {
                 return const CircularProgressIndicator();
               },
             ),
-            FilterPropertyButtonsWidget(controller: controller),
+            FilterButtonsWidget(
+              onFilterTap: () {
+                controller.onFilter();
+                Navigator.pop(context);
+              },
+              onResetTap: () {
+                controller.onReset();
+                Navigator.pop(context);
+              },
+            ),
           ],
         ),
       ),

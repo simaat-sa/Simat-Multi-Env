@@ -13,5 +13,4 @@ import 'package:flutter_tdd/res.dart';
 
 part 'filter_maintenance_title_header_widget.dart';
 part 'filter_select_maintenance_widget.dart';
-part 'filter_maintnance_buttons.dart';
 part 'filter_maintenance_select_item_widget.dart';

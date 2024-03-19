@@ -36,7 +36,7 @@ class PropertyRepositoryImpl extends PropertyRepository
   }
 
   @override
-  Future<MyResult<List<ContractModel>>> getPropDetailsUnit(PropertyDetailsParams params)async {
-    return await dataSource.getPropDetailsUnit(params);
+  Future<MyResult<List<ContractModel>>> getPropDetailsUnits(PropertyDetailsParams params)async {
+    return await dataSource.getPropDetailsUnits(params);
   }
 }

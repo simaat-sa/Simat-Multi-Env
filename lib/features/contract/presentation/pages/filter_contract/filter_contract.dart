@@ -32,7 +32,16 @@ class FilterContract extends StatelessWidget {
                 ],
               ),
             ),
-            FilterButtonsWidget(controller: controller),
+            FilterButtonsWidget(
+              onFilterTap: () {
+                controller.onFilter();
+                Navigator.pop(context);
+              },
+              onResetTap: () {
+                controller.onResetFilter();
+                Navigator.pop(context);
+              },
+            ),
           ],
         ),
       ),

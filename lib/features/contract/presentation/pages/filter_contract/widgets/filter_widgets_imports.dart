@@ -18,5 +18,4 @@ import 'package:flutter_tdd/res.dart';
 part 'filter_header_title.dart';
 part 'filter_select_status_widget.dart';
 part 'filter_select_type_widget.dart';
-part 'filter_buttons_widget.dart';
 part 'filter_select_item_widget.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/enums/contract_types.dart';
 import 'package:flutter_tdd/core/enums/date_types.dart';
+import 'package:flutter_tdd/core/enums/prop_details_status.dart';
 import 'package:flutter_tdd/core/enums/tenant_visibility.dart';
 import 'package:flutter_tdd/core/extensions/price_format.dart';
 import 'package:flutter_tdd/core/extensions/string_helper_extension.dart';
@@ -41,6 +42,7 @@ class ContractModel with _$ContractModel {
     @JsonKey(name: 'prop_city', defaultValue: "") required String propCity,
     @JsonKey(name: 'prop_region', defaultValue: "") required String propRegion,
     @JsonKey(name: 'tts_start_date_dgr', defaultValue: "") required String startDt,
+    @JsonKey(name: 'acl_status_code') required PropDetailsStatus propDetailsStatus,
   }) = _ContractModel;
 
   factory ContractModel.fromJson(Map<String, dynamic> json) => _$ContractModelFromJson(json);

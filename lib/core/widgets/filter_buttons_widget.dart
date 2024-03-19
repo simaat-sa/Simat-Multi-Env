@@ -1,9 +1,19 @@
-part of 'filter_maintenance_widgets_imports.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_tdd/core/constants/gaps.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
+import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
+import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 
-class FilterMaintenanceButtons extends StatelessWidget {
-  final MaintenanceController controller;
 
-  const FilterMaintenanceButtons({super.key, required this.controller});
+class FilterButtonsWidget extends StatelessWidget {
+  final void Function() onFilterTap;
+  final void Function() onResetTap;
+
+  const FilterButtonsWidget({
+    super.key,
+    required this.onFilterTap,
+    required this.onResetTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +23,7 @@ class FilterMaintenanceButtons extends StatelessWidget {
         children: [
           Expanded(
             child: InkWell(
-              onTap: () {
-                controller.onFilter(context);
-                AutoRouter.of(context).pop();
-              },
+              onTap: onFilterTap,
               child: Container(
                 alignment: Alignment.center,
                 height: 40,
@@ -25,7 +32,7 @@ class FilterMaintenanceButtons extends StatelessWidget {
                   borderRadius: BorderRadius.circular(6),
                 ),
                 child: Text(
-                  Translate.of(context).apply,
+                  'تطبيق',
                   style: AppTextStyle.s16_w400(color: context.colors.white),
                 ),
               ),
@@ -34,10 +41,7 @@ class FilterMaintenanceButtons extends StatelessWidget {
           Gaps.hGap10,
           Expanded(
             child: InkWell(
-              onTap: () {
-                controller.onResetFilter(context);
-                AutoRouter.of(context).pop();
-              },
+              onTap: onResetTap,
               child: Container(
                 alignment: Alignment.center,
                 height: 40,

@@ -221,6 +221,7 @@ class PropertyItemWidget extends StatelessWidget {
     Future.delayed(
       const Duration(milliseconds: 100),
       () {
+        print(">>>>>>>>>>>>>>>>>>${model.areAreId}");
         AutoRouter.of(context).push(PropertyDetailsRoute(model: model));
       },
     );

@@ -11,6 +11,7 @@ import 'package:flutter_tdd/core/widgets/failure_view_widget.dart';
 import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart';
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_details/widgets/tenant_details_widgets_imports.dart';
 import 'package:flutter_tdd/features/owner_properties/domain/entity/property_details_params.dart';
+import 'package:flutter_tdd/features/owner_properties/domain/models/property_count.dart';
 import 'package:flutter_tdd/features/owner_properties/domain/requesters/prop_details_requester.dart';
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/property_details/property_details_imports.dart';
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/property_details/tabs/payment_tab/payment_tab_imports.dart';

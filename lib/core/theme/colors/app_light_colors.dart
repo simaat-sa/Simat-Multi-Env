@@ -80,4 +80,7 @@ class AppLightColors extends AppColors {
 
   @override
   Color get secondaryText => const Color(0xff186669);
+
+  @override
+  Color get vacantBgColor => const Color(0xffC3D5D6);
 }

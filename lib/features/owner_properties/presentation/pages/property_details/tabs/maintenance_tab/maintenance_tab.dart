@@ -23,14 +23,7 @@ class _MaintenanceTabState extends State<MaintenanceTab> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        ObsValueConsumer(
-            observable: controller.maintenanceCount,
-            builder: (context, val) {
-              return Text(
-                'طلبات الصيانة [$val]',
-                style: AppTextStyle.s16_w400(color: context.colors.blackOpacity),
-              );
-            }),
+        MaintenanceTabHeaderWidget(controller: controller),
         Flexible(
           child: PagedListView(
             pagingController: controller.pagingController,

@@ -12,7 +12,6 @@ import 'package:flutter_tdd/features/owner_properties/presentation/pages/owner_p
 import 'package:flutter_tdd/res.dart';
 
 part 'filter_property_select_item.dart';
-part 'filter_property_buttons_widget.dart';
 part 'filter_property_title_item_widget.dart';
 part'realty_type_widget.dart';
 part'realty_category_widget.dart';

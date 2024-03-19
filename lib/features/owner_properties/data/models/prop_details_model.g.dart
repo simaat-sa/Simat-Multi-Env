@@ -28,6 +28,8 @@ _$PropDetailsModelImpl _$$PropDetailsModelImplFromJson(
       amtPaid: json['amt_paid'] as String? ?? '',
       amtBalance: json['amt_balance'] as String? ?? '',
       amtInsur: json['amt_insur'] as String? ?? '',
+      paymentCount: json['expenses_count'] as String? ?? '',
+      maintenanceCount: json['maint_count'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$PropDetailsModelImplToJson(
@@ -52,4 +54,6 @@ Map<String, dynamic> _$$PropDetailsModelImplToJson(
       'amt_paid': instance.amtPaid,
       'amt_balance': instance.amtBalance,
       'amt_insur': instance.amtInsur,
+      'expenses_count': instance.paymentCount,
+      'maint_count': instance.maintenanceCount,
     };

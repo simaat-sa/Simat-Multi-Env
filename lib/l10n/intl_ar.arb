@@ -178,7 +178,10 @@
   "tax": "ضريبة",
   "apply": "تطبيق",
   "sar": " ر.س",
-  "no_items_found":"لا يوجد نتائج"
+  "no_items_found":"لا يوجد نتائج",
+  "vacant": "شاغر",
+  "rented": "مؤجر",
+  "reserved": "محجوز"
 }
 
 
