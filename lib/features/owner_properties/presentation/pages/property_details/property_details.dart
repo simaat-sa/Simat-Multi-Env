@@ -44,7 +44,7 @@ class _PropertyDetailsState extends State<PropertyDetails> {
                     PropertySummaryView(propModel: widget.model, controller: controller),
                     Units(model: widget.model),
                     MaintenanceTab(areaId: widget.model.areId),
-                     PaymentTab(),
+                     const PaymentTab(),
                   ],
                 ),
               ),

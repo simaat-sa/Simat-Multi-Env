@@ -9,6 +9,8 @@ enum PropDetailsStatus {
   vacant("41920"),
   rented("41930"),
   reserved("41940"),
+  ///Todo: check this value with backend
+  newStatus("41910"),
   non("0");
 
   final String value;
@@ -29,6 +31,7 @@ enum PropDetailsStatus {
       case PropDetailsStatus.reserved:
         return Translate.s.reserved;
       case PropDetailsStatus.vacant:
+      case PropDetailsStatus.newStatus:
         return Translate.s.vacant;
       default:
         return "";

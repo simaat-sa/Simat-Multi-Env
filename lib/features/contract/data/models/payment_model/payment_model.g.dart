@@ -167,5 +167,6 @@ const _$TenantVisibilityEnumMap = {
   TenantVisibility.inactive: 'inactive',
   TenantVisibility.closed: 'closed',
   TenantVisibility.expired: 'expired',
+  TenantVisibility.registered: 'registered',
   TenantVisibility.non: '',
 };
