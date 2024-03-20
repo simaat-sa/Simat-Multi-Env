@@ -22,15 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(count) => "Contracts ${count}";
 
-  static String m1(count) => "Maintenance Orders ${count}";
+  static String m1(number) => "Expenses[${number}]";
 
-  static String m2(code) =>
+  static String m2(number) => "Maintenance[${number}]";
+
+  static String m3(count) => "Maintenance Orders ${count}";
+
+  static String m4(code) =>
       "We have sent a mobile message containing the quality assurance code for your order no${code}";
 
-  static String m3(MB, files) =>
+  static String m5(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";
 
-  static String m4(version) => "Version ${version}";
+  static String m6(number) => "Unit[${number}]";
+
+  static String m7(version) => "Version ${version}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -187,6 +193,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No internet connection"),
         "estimated_cost":
             MessageLookupByLibrary.simpleMessage("Estimated cost"),
+        "expenses_number": m1,
         "expireIn": MessageLookupByLibrary.simpleMessage("Expire in"),
         "expired": MessageLookupByLibrary.simpleMessage("Expired"),
         "failureActions":
@@ -229,9 +236,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Scan the QR code to log in"),
         "mailValidation":
             MessageLookupByLibrary.simpleMessage("Please enter a valid email"),
+        "main_number": m2,
         "main_property":
             MessageLookupByLibrary.simpleMessage("The main property"),
-        "maintenanceCount": m1,
+        "maintenanceCount": m3,
         "maintenance_has_been_requested": MessageLookupByLibrary.simpleMessage(
             "Maintenance has been requested"),
         "maintenance_request":
@@ -248,7 +256,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Maybe later, back to the main page"),
         "menu": MessageLookupByLibrary.simpleMessage("Menu"),
-        "message_containing_code_for_your_order": m2,
+        "message_containing_code_for_your_order": m4,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "Should be more than 8 and less than 30"),
         "net_contract": MessageLookupByLibrary.simpleMessage("Net contract"),
@@ -302,7 +310,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "server_visit_any_website": MessageLookupByLibrary.simpleMessage(
             "Any time you visit any website, including this site, the hosting server will record your Internet Protocol (IP) address, the date and time of the visit, the type of Internet browser you use, and the URL of any Internet site that refers you to this site at the network."),
-        "size_more_than_mg_error": m3,
+        "size_more_than_mg_error": m5,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "splash_desc_title": MessageLookupByLibrary.simpleMessage(
@@ -323,13 +331,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "tryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN"),
         "unit_maintenance":
             MessageLookupByLibrary.simpleMessage("Unit maintenance"),
+        "unit_number": m6,
         "user_or_phone_hint":
             MessageLookupByLibrary.simpleMessage("Mobile phone or Username"),
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser"),
         "vacant": MessageLookupByLibrary.simpleMessage("Vacant"),
-        "version_label": m4,
+        "version_label": m7,
         "view_payments": MessageLookupByLibrary.simpleMessage("View payments")
       };
 }

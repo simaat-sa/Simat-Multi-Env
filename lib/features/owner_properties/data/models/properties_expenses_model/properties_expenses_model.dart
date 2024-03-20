@@ -1,4 +1,6 @@
+import 'package:flutter_tdd/core/extensions/price_format.dart';
 import 'package:flutter_tdd/core/extensions/string_helper_extension.dart';
+import 'package:flutter_tdd/core/models/localized_name_model/localized_name_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'properties_expenses_model.freezed.dart';
@@ -20,14 +22,22 @@ class PropertiesExpensesModel with _$PropertiesExpensesModel {
     @JsonKey(name: "amt_tot", defaultValue: "") required String totalAmount,
     @JsonKey(name: "acl_status_code", defaultValue: "") required String actualStatusCode ,
     @JsonKey(name: "dt_created", defaultValue: "") required String createdDate ,
-    @JsonKey(name: "are_desc_fo", defaultValue: "") required String area,
+    @JsonKey(name: "are_desc_fo", defaultValue: "") required String areaAr,
     @JsonKey(name: "are_desc_en", defaultValue: "") required String areaEn,
   }) = _PropertiesExpensesModel;
 
   factory PropertiesExpensesModel.fromJson(Map<String, dynamic> json) => _$PropertiesExpensesModelFromJson(json);
 
   String get getDate{
-    return createdDate.formatTimeStampDate();
+    return createdDate.formatDateTimeStampDate();
   }
+
+  String get totalAmountPrice => totalAmount.priceFormat;
+
+  String get type => LocalizedNameModel.fromStrings(ar: expensesTypeAr, en: expensesTypeEn).getLocalizedString;
+
+  String get area => LocalizedNameModel.fromStrings(ar: areaAr, en: areaEn).getLocalizedString;
+
+
 }
 

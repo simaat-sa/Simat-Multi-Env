@@ -1869,6 +1869,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Unit[{number}]`
+  String unit_number(Object number) {
+    return Intl.message(
+      'Unit[$number]',
+      name: 'unit_number',
+      desc: '',
+      args: [number],
+    );
+  }
+
+  /// `Maintenance[{number}]`
+  String main_number(Object number) {
+    return Intl.message(
+      'Maintenance[$number]',
+      name: 'main_number',
+      desc: '',
+      args: [number],
+    );
+  }
+
+  /// `Expenses[{number}]`
+  String expenses_number(Object number) {
+    return Intl.message(
+      'Expenses[$number]',
+      name: 'expenses_number',
+      desc: '',
+      args: [number],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

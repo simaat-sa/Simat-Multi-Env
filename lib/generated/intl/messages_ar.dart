@@ -22,15 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(count) => "العقود ${count}";
 
-  static String m1(count) => "طلبات الصيانة ${count}";
+  static String m1(number) => "مصروفات[${number}]";
 
-  static String m2(code) =>
+  static String m2(number) => "صيانة[${number}]";
+
+  static String m3(count) => "طلبات الصيانة ${count}";
+
+  static String m4(code) =>
       "لقد قمنا بإرسال رسالة جوال تحتوي على رمز ضمان الجودة لطلبكم رقم ${code}";
 
-  static String m3(MB, files) =>
+  static String m5(MB, files) =>
       "يجب أن تكون حجم الملفات التالية أقل من ${MB} ميحابيت, ${files}";
 
-  static String m4(version) => "اصدار ${version}";
+  static String m6(number) => "وحدات[${number}]";
+
+  static String m7(version) => "اصدار ${version}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -182,6 +188,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "error_socket":
             MessageLookupByLibrary.simpleMessage("تأكد من إتصالك بالانترنيت"),
         "estimated_cost": MessageLookupByLibrary.simpleMessage("تكلفة تقديرية"),
+        "expenses_number": m1,
         "expireIn": MessageLookupByLibrary.simpleMessage("ينتهي في"),
         "expired": MessageLookupByLibrary.simpleMessage("منتهي"),
         "failureActions": MessageLookupByLibrary.simpleMessage("إجراءات الفشل"),
@@ -224,8 +231,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "مسح رمز الاستجابة لتسجيل الدخول"),
         "mailValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل البريد صحيحا"),
+        "main_number": m2,
         "main_property": MessageLookupByLibrary.simpleMessage("العقار الرئيسي"),
-        "maintenanceCount": m1,
+        "maintenanceCount": m3,
         "maintenance_has_been_requested":
             MessageLookupByLibrary.simpleMessage("تم طلب الصيانة"),
         "maintenance_request":
@@ -242,7 +250,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "ربما لاحقا، عودة الى الرئيسية"),
         "menu": MessageLookupByLibrary.simpleMessage("القائمة"),
-        "message_containing_code_for_your_order": m2,
+        "message_containing_code_for_your_order": m4,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون أكثر من ٨ احرف واقل من ٣٠"),
         "net_contract": MessageLookupByLibrary.simpleMessage("صافي العقد"),
@@ -290,7 +298,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sar": MessageLookupByLibrary.simpleMessage(" ر.س"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
-        "size_more_than_mg_error": m3,
+        "size_more_than_mg_error": m5,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "splash_desc_title": MessageLookupByLibrary.simpleMessage(
@@ -310,13 +318,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
         "unit_maintenance":
             MessageLookupByLibrary.simpleMessage("صيانة الوحدة"),
+        "unit_number": m6,
         "user_or_phone_hint": MessageLookupByLibrary.simpleMessage(
             "هاتفك الجوال او اسم المستخدم"),
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح"),
         "vacant": MessageLookupByLibrary.simpleMessage("شاغر"),
-        "version_label": m4,
+        "version_label": m7,
         "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات")
       };
 }

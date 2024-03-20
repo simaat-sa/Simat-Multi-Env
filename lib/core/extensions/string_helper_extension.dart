@@ -16,4 +16,11 @@ extension StringExtension on String? {
     var date = DateTime.fromMillisecondsSinceEpoch(int.parse(this!) * 1000);
     return date.toFormattedString();
   }
+
+  String formatDateTimeStampDate() {
+    if (this == null) return '';
+    var date = DateTime.fromMillisecondsSinceEpoch(int.parse(this!) * 1000);
+    return date.toFormattedDateTimeString();
+  }
+
 }

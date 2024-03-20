@@ -181,7 +181,10 @@
   "no_items_found":"لا يوجد نتائج",
   "vacant": "شاغر",
   "rented": "مؤجر",
-  "reserved": "محجوز"
+  "reserved": "محجوز",
+  "unit_number" : "وحدات[{number}]",
+  "main_number" : "صيانة[{number}]",
+  "expenses_number" : "مصروفات[{number}]"
 }
 
 

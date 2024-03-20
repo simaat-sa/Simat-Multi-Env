@@ -38,7 +38,7 @@ mixin _$PropertiesExpensesModel {
   @JsonKey(name: "dt_created", defaultValue: "")
   String get createdDate => throw _privateConstructorUsedError;
   @JsonKey(name: "are_desc_fo", defaultValue: "")
-  String get area => throw _privateConstructorUsedError;
+  String get areaAr => throw _privateConstructorUsedError;
   @JsonKey(name: "are_desc_en", defaultValue: "")
   String get areaEn => throw _privateConstructorUsedError;
 
@@ -64,7 +64,7 @@ abstract class $PropertiesExpensesModelCopyWith<$Res> {
       @JsonKey(name: "acl_status_code", defaultValue: "")
       String actualStatusCode,
       @JsonKey(name: "dt_created", defaultValue: "") String createdDate,
-      @JsonKey(name: "are_desc_fo", defaultValue: "") String area,
+      @JsonKey(name: "are_desc_fo", defaultValue: "") String areaAr,
       @JsonKey(name: "are_desc_en", defaultValue: "") String areaEn});
 }
 
@@ -90,7 +90,7 @@ class _$PropertiesExpensesModelCopyWithImpl<$Res,
     Object? totalAmount = null,
     Object? actualStatusCode = null,
     Object? createdDate = null,
-    Object? area = null,
+    Object? areaAr = null,
     Object? areaEn = null,
   }) {
     return _then(_value.copyWith(
@@ -126,9 +126,9 @@ class _$PropertiesExpensesModelCopyWithImpl<$Res,
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as String,
-      area: null == area
-          ? _value.area
-          : area // ignore: cast_nullable_to_non_nullable
+      areaAr: null == areaAr
+          ? _value.areaAr
+          : areaAr // ignore: cast_nullable_to_non_nullable
               as String,
       areaEn: null == areaEn
           ? _value.areaEn
@@ -157,7 +157,7 @@ abstract class _$$PropertiesExpensesModelImplCopyWith<$Res>
       @JsonKey(name: "acl_status_code", defaultValue: "")
       String actualStatusCode,
       @JsonKey(name: "dt_created", defaultValue: "") String createdDate,
-      @JsonKey(name: "are_desc_fo", defaultValue: "") String area,
+      @JsonKey(name: "are_desc_fo", defaultValue: "") String areaAr,
       @JsonKey(name: "are_desc_en", defaultValue: "") String areaEn});
 }
 
@@ -182,7 +182,7 @@ class __$$PropertiesExpensesModelImplCopyWithImpl<$Res>
     Object? totalAmount = null,
     Object? actualStatusCode = null,
     Object? createdDate = null,
-    Object? area = null,
+    Object? areaAr = null,
     Object? areaEn = null,
   }) {
     return _then(_$PropertiesExpensesModelImpl(
@@ -218,9 +218,9 @@ class __$$PropertiesExpensesModelImplCopyWithImpl<$Res>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as String,
-      area: null == area
-          ? _value.area
-          : area // ignore: cast_nullable_to_non_nullable
+      areaAr: null == areaAr
+          ? _value.areaAr
+          : areaAr // ignore: cast_nullable_to_non_nullable
               as String,
       areaEn: null == areaEn
           ? _value.areaEn
@@ -244,7 +244,7 @@ class _$PropertiesExpensesModelImpl extends _PropertiesExpensesModel {
       @JsonKey(name: "acl_status_code", defaultValue: "")
       required this.actualStatusCode,
       @JsonKey(name: "dt_created", defaultValue: "") required this.createdDate,
-      @JsonKey(name: "are_desc_fo", defaultValue: "") required this.area,
+      @JsonKey(name: "are_desc_fo", defaultValue: "") required this.areaAr,
       @JsonKey(name: "are_desc_en", defaultValue: "") required this.areaEn})
       : super._();
 
@@ -277,14 +277,14 @@ class _$PropertiesExpensesModelImpl extends _PropertiesExpensesModel {
   final String createdDate;
   @override
   @JsonKey(name: "are_desc_fo", defaultValue: "")
-  final String area;
+  final String areaAr;
   @override
   @JsonKey(name: "are_desc_en", defaultValue: "")
   final String areaEn;
 
   @override
   String toString() {
-    return 'PropertiesExpensesModel(expId: $expId, areId: $areId, areAreId: $areAreId, expensesTypeAr: $expensesTypeAr, expensesTypeEn: $expensesTypeEn, totalAmount: $totalAmount, actualStatusCode: $actualStatusCode, createdDate: $createdDate, area: $area, areaEn: $areaEn)';
+    return 'PropertiesExpensesModel(expId: $expId, areId: $areId, areAreId: $areAreId, expensesTypeAr: $expensesTypeAr, expensesTypeEn: $expensesTypeEn, totalAmount: $totalAmount, actualStatusCode: $actualStatusCode, createdDate: $createdDate, areaAr: $areaAr, areaEn: $areaEn)';
   }
 
   @override
@@ -306,7 +306,7 @@ class _$PropertiesExpensesModelImpl extends _PropertiesExpensesModel {
                 other.actualStatusCode == actualStatusCode) &&
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
-            (identical(other.area, area) || other.area == area) &&
+            (identical(other.areaAr, areaAr) || other.areaAr == areaAr) &&
             (identical(other.areaEn, areaEn) || other.areaEn == areaEn));
   }
 
@@ -322,7 +322,7 @@ class _$PropertiesExpensesModelImpl extends _PropertiesExpensesModel {
       totalAmount,
       actualStatusCode,
       createdDate,
-      area,
+      areaAr,
       areaEn);
 
   @JsonKey(ignore: true)
@@ -357,7 +357,7 @@ abstract class _PropertiesExpensesModel extends PropertiesExpensesModel {
       @JsonKey(name: "dt_created", defaultValue: "")
       required final String createdDate,
       @JsonKey(name: "are_desc_fo", defaultValue: "")
-      required final String area,
+      required final String areaAr,
       @JsonKey(name: "are_desc_en", defaultValue: "")
       required final String areaEn}) = _$PropertiesExpensesModelImpl;
   const _PropertiesExpensesModel._() : super._();
@@ -391,7 +391,7 @@ abstract class _PropertiesExpensesModel extends PropertiesExpensesModel {
   String get createdDate;
   @override
   @JsonKey(name: "are_desc_fo", defaultValue: "")
-  String get area;
+  String get areaAr;
   @override
   @JsonKey(name: "are_desc_en", defaultValue: "")
   String get areaEn;

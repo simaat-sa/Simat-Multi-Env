@@ -178,8 +178,11 @@
   "tax": "Tax",
   "apply": "Apply",
   "sar": " SAR",
-  "no_items_found":"!No Item Found",
+  "no_items_found": "!No Item Found",
   "vacant": "Vacant",
   "rented": "Rented",
-  "reserved": "Reserved"
+  "reserved": "Reserved",
+  "unit_number": "Unit[{number}]",
+  "main_number": "Maintenance[{number}]",
+  "expenses_number": "Expenses[{number}]"
 }

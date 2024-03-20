@@ -16,9 +16,9 @@ class PaymentTabItemWidget extends StatelessWidget {
       child:  Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          PaymentTypeWidget(model:model ,),
+          PaymentTypeWidget(model:model),
           Gaps.vGap10,
-          PaymentDateAndCostWidget(model: model,),
+          PaymentDateAndCostWidget(model: model),
           Gaps.vGap8,
           /// if there describe return in Api show widgets below..else..hide them
           // Divider(color: context.colors.greyWhite,),
