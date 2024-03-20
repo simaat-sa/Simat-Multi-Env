@@ -46,4 +46,6 @@ class PropertyRepositoryImpl extends PropertyRepository
   Future<MyResult<PagingModel<PropertiesExpensesModel>>> getPropertiesExpenses(PropertiesExpensesParams params) async{
     return await dataSource.getPropertiesExpenses(params);
   }
+
+
 }
