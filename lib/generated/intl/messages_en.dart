@@ -22,9 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(count) => "Contracts ${count}";
 
-  static String m1(number) => "Expenses[${number}]";
+  static String m1(number) => "Expenses (${number})";
 
-  static String m2(number) => "Maintenance[${number}]";
+  static String m2(number) => "Maintenance (${number})";
 
   static String m3(count) => "Maintenance Orders ${count}";
 
@@ -34,7 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m5(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";
 
-  static String m6(number) => "Unit[${number}]";
+  static String m6(number) => "Unit (${number})";
 
   static String m7(version) => "Version ${version}";
 

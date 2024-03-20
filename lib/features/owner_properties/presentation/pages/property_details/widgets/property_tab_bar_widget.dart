@@ -2,6 +2,7 @@ part of 'property_details_widgets_imports.dart';
 
 class PropertyTabBarWidget extends StatelessWidget {
   final PropertyDetailsController controller;
+
   const PropertyTabBarWidget({super.key, required this.controller});
 
   @override
@@ -13,10 +14,16 @@ class PropertyTabBarWidget extends StatelessWidget {
           child: TabBar(
               dividerColor: context.colors.greyWhite,
               unselectedLabelColor: context.colors.primaryGrey,
-              unselectedLabelStyle: AppTextStyle.s16_w500(color: context.colors.primaryGrey),
+              unselectedLabelStyle: AppTextStyle.s16_w500(
+                color: context.colors.primaryGrey,
+              ).copyWith(
+                fontFamily: AppTheme.fontFamily,
+              ),
               indicatorSize: TabBarIndicatorSize.label,
               labelPadding: const EdgeInsets.symmetric(vertical: 13),
-              labelStyle: AppTextStyle.s16_w500(color: context.colors.primary),
+              labelStyle: AppTextStyle.s16_w500(color: context.colors.primary).copyWith(
+                fontFamily: AppTheme.fontFamily,
+              ),
               tabs: [
                 Text(Translate.of(context).summary),
                 Text(Translate.of(context).unit_number(value.unitCount)),

@@ -65,12 +65,12 @@ class UnitItemWidget extends StatelessWidget {
           Gaps.vGap15,
           CostItemWidget(
             title: 'الرصيد',
-            value: model.duePrice,
+            value: model.netPrice,
             color: context.colors.bgLight,
           ),
           CostItemWidget(
             title: 'مطلوب',
-            value: model.netPrice,
+            value: model.duePrice,
           ),
           CostItemWidget(
               title: 'بداية العقد',

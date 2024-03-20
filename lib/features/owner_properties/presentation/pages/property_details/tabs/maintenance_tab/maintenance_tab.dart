@@ -20,30 +20,42 @@ class _MaintenanceTabState extends State<MaintenanceTab> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        MaintenanceTabHeaderWidget(controller: controller),
-        Flexible(
-          child: PagedListView(
-            pagingController: controller.pagingController,
-            builderDelegate: PagedChildBuilderDelegate<MaintenanceModel>(
-              itemBuilder: (context, item, index) {
-                return MaintenanceTabItemWidget(
-                  model: item,
-                  controller: controller,
-                );
-              },
-              firstPageErrorIndicatorBuilder: (context) {
-                return const UnitLoadingListWidget();
-              },
-              noItemsFoundIndicatorBuilder: (context) {
-                return const EmptyListItemWidget();
-              },
+    return Scaffold(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          MaintenanceTabHeaderWidget(controller: controller),
+          Flexible(
+            child: PagedListView(
+              pagingController: controller.pagingController,
+              builderDelegate: PagedChildBuilderDelegate<MaintenanceModel>(
+                itemBuilder: (context, item, index) {
+                  return MaintenanceTabItemWidget(
+                    model: item,
+                    controller: controller,
+                  );
+                },
+                firstPageErrorIndicatorBuilder: (context) {
+                  return const UnitLoadingListWidget();
+                },
+                noItemsFoundIndicatorBuilder: (context) {
+                  return const EmptyListItemWidget();
+                },
+              ),
             ),
           ),
+        ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      floatingActionButton: FloatingActionButton(
+        shape: const CircleBorder(),
+        onPressed: () => AutoRouter.of(context).push(AddMaintenanceRoute()),
+        child: Icon(
+          Icons.add,
+          color: context.colors.white,
+          size: 40,
         ),
-      ],
+      ),
     );
   }
 }
