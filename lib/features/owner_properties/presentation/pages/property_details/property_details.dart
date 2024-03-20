@@ -45,7 +45,7 @@ class _PropertyDetailsState extends State<PropertyDetails> {
                     Units(model: widget.model),
                     MaintenanceTab(
                       areaId: widget.model.areId,
-                      maintCount: controller.tabsCountObs.getValue().maintenanceCount,
+                      maintenanceCount: controller.tabsCountObs.getValue().maintenanceCount,
                     ),
                     PaymentTab(
                       propId: widget.model.areId,

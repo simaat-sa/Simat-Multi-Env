@@ -53,6 +53,7 @@ class MaintenanceTabController {
         pagingController.appendPage(data, nextPageKey);
       }
     });
+    maintenanceCount.refresh();
   }
 
   void onFilter(BuildContext context) {
