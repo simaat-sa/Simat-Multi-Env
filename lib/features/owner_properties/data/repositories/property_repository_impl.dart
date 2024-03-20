@@ -7,7 +7,9 @@ import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model
 import 'package:flutter_tdd/features/owner_properties/data/data_source/property_data_source.dart';
 import 'package:flutter_tdd/features/owner_properties/data/models/filter_property_model/filter_property_model.dart';
 import 'package:flutter_tdd/features/owner_properties/data/models/prop_details_model.dart';
+import 'package:flutter_tdd/features/owner_properties/data/models/properties_expenses_model/properties_expenses_model.dart';
 import 'package:flutter_tdd/features/owner_properties/domain/entity/owner_properties_params.dart';
+import 'package:flutter_tdd/features/owner_properties/domain/entity/properties_expenses_params.dart';
 import 'package:flutter_tdd/features/owner_properties/domain/entity/property_details_params.dart';
 import 'package:flutter_tdd/features/owner_properties/domain/repositories/property_repository.dart';
 import 'package:injectable/injectable.dart';
@@ -38,5 +40,10 @@ class PropertyRepositoryImpl extends PropertyRepository
   @override
   Future<MyResult<List<ContractModel>>> getPropDetailsUnit(PropertyDetailsParams params)async {
     return await dataSource.getPropDetailsUnit(params);
+  }
+
+  @override
+  Future<MyResult<PagingModel<PropertiesExpensesModel>>> getPropertiesExpenses(PropertiesExpensesParams params) async{
+    return await dataSource.getPropertiesExpenses(params);
   }
 }

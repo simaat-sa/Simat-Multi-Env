@@ -7,15 +7,20 @@ class PaymentTabHeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text("مصروفات [5]",
-            style: AppTextStyle.s16_w400(color: context.colors.darkTextColor)),
-         FilterIconWidget(filterApply: controller.applyFilterObs,
-         onTap: ()=>AutoRouter.of(context).push(const PaymentFilterRoute()),
-         )
-      ],
+    return ObsValueConsumer(
+      observable: controller.expensesCount,
+      builder: (context,value) {
+        return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text("مصروفات [$value]",
+                style: AppTextStyle.s16_w400(color: context.colors.darkTextColor)),
+             FilterIconWidget(filterApply: controller.applyFilterObs,
+             onTap: ()=>AutoRouter.of(context).push(const PaymentFilterRoute()),
+             )
+          ],
+        );
+      }
     );
   }
 }
