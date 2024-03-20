@@ -1,7 +1,8 @@
 part of 'payment_tab_widgets_imports.dart';
 
 class PaymentTabItemWidget extends StatelessWidget {
-  const PaymentTabItemWidget({super.key, });
+  final PropertiesExpensesModel model;
+  const PaymentTabItemWidget({super.key, required this.model, });
 
   @override
   Widget build(BuildContext context) {
@@ -15,19 +16,19 @@ class PaymentTabItemWidget extends StatelessWidget {
       child:  Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const PaymentTypeWidget(),
+          PaymentTypeWidget(model:model ,),
           Gaps.vGap10,
-          const PaymentDateAndCostWidget(),
+          PaymentDateAndCostWidget(model: model,),
           Gaps.vGap8,
-          Divider(color: context.colors.greyWhite,),
-          Gaps.vGap13,
-          /// if there describe return in Api show texts below..else..hide them
-          Text("تفاصيل",style: AppTextStyle.s14_w500(color: context.colors.primary),),
-          Gaps.vGap12,
-          Text("عمل الصيانة المحددة وعمل فحص لمحتويات الوحدة ..عمل الصيانة المحددة وعمل فحص لمحتوياتعمل الصيانة المحددة وعمل فحص لمحتويات الوحدة .. الوحدة ..",
-            style: AppTextStyle.s13_w400(color: context.colors.darkTextColor),
-            overflow: TextOverflow.ellipsis,
-          )
+          /// if there describe return in Api show widgets below..else..hide them
+          // Divider(color: context.colors.greyWhite,),
+          // Gaps.vGap13,
+          // Text("تفاصيل",style: AppTextStyle.s14_w500(color: context.colors.primary),),
+          // Gaps.vGap12,
+          // Text("عمل الصيانة المحددة وعمل فحص لمحتويات الوحدة ..عمل الصيانة المحددة وعمل فحص لمحتوياتعمل الصيانة المحددة وعمل فحص لمحتويات الوحدة .. الوحدة ..",
+          //   style: AppTextStyle.s13_w400(color: context.colors.darkTextColor),
+          //   overflow: TextOverflow.ellipsis,
+          // )
         ],
       ),
     );

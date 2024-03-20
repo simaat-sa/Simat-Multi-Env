@@ -7,7 +7,9 @@ import 'package:flutter_tdd/features/contract/data/models/contract_model/contrac
 import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart';
 import 'package:flutter_tdd/features/owner_properties/data/models/filter_property_model/filter_property_model.dart';
 import 'package:flutter_tdd/features/owner_properties/data/models/prop_details_model.dart';
+import 'package:flutter_tdd/features/owner_properties/data/models/properties_expenses_model/properties_expenses_model.dart';
 import 'package:flutter_tdd/features/owner_properties/domain/entity/owner_properties_params.dart';
+import 'package:flutter_tdd/features/owner_properties/domain/entity/properties_expenses_params.dart';
 import 'package:flutter_tdd/features/owner_properties/domain/entity/property_details_params.dart';
 import 'package:injectable/injectable.dart';
 
@@ -63,7 +65,8 @@ class PropertyDataSourceImpl extends PropertyDataSource {
   }
 
   @override
-  Future<MyResult<List<ContractModel>>> getPropDetailsUnits(PropertyDetailsParams param) async {
+  Future<MyResult<List<ContractModel>>> getPropDetailsUnits(
+      PropertyDetailsParams param) async {
     HttpRequestModel model = HttpRequestModel(
       url: ApiNames.propDetailsUnit(param.header()),
       responseType: ResType.list,
@@ -71,9 +74,28 @@ class PropertyDataSourceImpl extends PropertyDataSource {
       refresh: param.refresh,
       responseKey: (data) => data['data'],
       toJsonFunc: (data) {
-        return List<ContractModel>.from(data.map((e) => ContractModel.fromJson(e)));
+        return List<ContractModel>.from(
+            data.map((e) => ContractModel.fromJson(e)));
       },
     );
     return await GenericHttpImpl<List<ContractModel>>()(model);
   }
+
+  @override
+  Future<MyResult<PagingModel<PropertiesExpensesModel>>> getPropertiesExpenses(
+      PropertiesExpensesParams params) async{
+    HttpRequestModel model = HttpRequestModel(
+        url: ApiNames.propExpenses(params.propId),
+        responseType: ResType.model,
+        requestMethod: RequestMethod.get,
+        responseKey: (data) => data,
+        refresh: params.refresh??false,
+       toJsonFunc: (data) {
+          return PagingModel<PropertiesExpensesModel>.fromJson(data, (model) => PropertiesExpensesModel.fromJson(model));
+       },
+    );
+    return await GenericHttpImpl<PagingModel<PropertiesExpensesModel>>()(model);
+  }
+
+
 }

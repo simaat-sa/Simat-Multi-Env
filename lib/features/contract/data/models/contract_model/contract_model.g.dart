@@ -82,6 +82,7 @@ const _$TenantVisibilityEnumMap = {
   TenantVisibility.inactive: 'inactive',
   TenantVisibility.closed: 'closed',
   TenantVisibility.expired: 'expired',
+  TenantVisibility.registered: 'registered',
   TenantVisibility.non: '',
 };
 
@@ -95,6 +96,5 @@ const _$PropDetailsStatusEnumMap = {
   PropDetailsStatus.vacant: '41920',
   PropDetailsStatus.rented: '41930',
   PropDetailsStatus.reserved: '41940',
-  PropDetailsStatus.newType: '41910',
   PropDetailsStatus.non: '0',
 };
