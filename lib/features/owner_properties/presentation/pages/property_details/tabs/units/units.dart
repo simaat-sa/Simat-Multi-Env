@@ -33,7 +33,11 @@ class _UnitsState extends State<Units> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              UnitFilterHeaderWidget(controller: controller, listModel: data),
+              UnitFilterHeaderWidget(
+                controller: controller,
+                listModel: data,
+                model: widget.model,
+              ),
               Gaps.vGap12,
               UnitItemsWidget(
                 listContract: data,

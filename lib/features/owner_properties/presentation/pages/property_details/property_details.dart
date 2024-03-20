@@ -43,8 +43,14 @@ class _PropertyDetailsState extends State<PropertyDetails> {
                   children: [
                     PropertySummaryView(propModel: widget.model, controller: controller),
                     Units(model: widget.model),
-                    MaintenanceTab(areaId: widget.model.areId),
-                    PaymentTab(propId: widget.model.areId),
+                    MaintenanceTab(
+                      areaId: widget.model.areId,
+                      maintCount: controller.tabsCountObs.getValue().maintenanceCount,
+                    ),
+                    PaymentTab(
+                      propId: widget.model.areId,
+                      paymentCount: controller.tabsCountObs.getValue().paymentCount,
+                    ),
                   ],
                 ),
               ),

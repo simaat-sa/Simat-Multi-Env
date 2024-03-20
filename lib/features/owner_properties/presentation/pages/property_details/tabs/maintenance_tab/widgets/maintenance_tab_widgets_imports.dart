@@ -10,6 +10,7 @@ import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 import 'package:flutter_tdd/core/widgets/filter_app_bar.dart';
 import 'package:flutter_tdd/core/widgets/filter_buttons_widget.dart';
 import 'package:flutter_tdd/features/base/presentation/widgets/filter_icon_widget.dart';
+import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart';
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart';
 import 'package:flutter_tdd/features/maintenance/presentation/pages/filter_maintenance/widgets/filter_maintenance_widgets_imports.dart';
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/property_details/tabs/maintenance_tab/maintenance_tab_imports.dart';

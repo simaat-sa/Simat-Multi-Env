@@ -2130,30 +2130,30 @@ class S {
     );
   }
 
-  /// `Unit[{number}]`
+  /// `Unit({number})`
   String unit_number(Object number) {
     return Intl.message(
-      'Unit[$number]',
+      'Unit($number)',
       name: 'unit_number',
       desc: '',
       args: [number],
     );
   }
 
-  /// `Maintenance[{number}]`
+  /// `Maintenance({number})`
   String main_number(Object number) {
     return Intl.message(
-      'Maintenance[$number]',
+      'Maintenance($number)',
       name: 'main_number',
       desc: '',
       args: [number],
     );
   }
 
-  /// `Expenses[{number}]`
+  /// `Expenses({number})`
   String expenses_number(Object number) {
     return Intl.message(
-      'Expenses[$number]',
+      'Expenses($number)',
       name: 'expenses_number',
       desc: '',
       args: [number],
