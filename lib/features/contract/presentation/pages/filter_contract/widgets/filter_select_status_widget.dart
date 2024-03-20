@@ -19,27 +19,12 @@ class FilterSelectStatusWidget extends StatelessWidget {
                 child: FilterSelectItemWidget(
                   changeValue: value.index,
                   onTap: () => controller.selectStatusObs.setValue(e),
-                  title: title(e),
+                  title: e.getLocalizedName(),
                   value: e.index,
                 ),
               );
             }),
           ]);
         });
-  }
-
-  String title(TenantVisibility tenantVisibility) {
-    switch (tenantVisibility) {
-      case TenantVisibility.active:
-        return Translate.s.active;
-      case TenantVisibility.inactive:
-        return Translate.s.inactive;
-      case TenantVisibility.closed:
-        return Translate.s.closed;
-      case TenantVisibility.expired:
-        return Translate.s.expired;
-      default:
-        return "";
-    }
   }
 }

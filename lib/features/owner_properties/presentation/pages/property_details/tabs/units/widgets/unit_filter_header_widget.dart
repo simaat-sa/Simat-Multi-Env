@@ -12,7 +12,7 @@ class UnitFilterHeaderWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'الوحدات(${listModel.length})',
+          Translate.s.the_units(listModel.length),
           style: AppTextStyle.s16_w400(color: context.colors.blackOpacity),
         ),
         FilterIconWidget(

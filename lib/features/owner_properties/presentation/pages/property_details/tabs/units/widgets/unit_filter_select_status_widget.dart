@@ -12,19 +12,18 @@ class UnitFilterSelectStatusWidget extends StatelessWidget {
       builder: (context,value) {
         return Column(
           children: [
-            const FilterHeaderTitle(title: 'حالة العقار'),
-            ...PropDetailsStatus.values.map((e) {
-              return Visibility(
-                visible: e != PropDetailsStatus.non,
-                child: FilterSelectItemWidget(
-                  changeValue: value.index,
-                  onTap: () {
-                    print(">>>>>>>>>>>>>>>>>>>>>${e.value}");
-                    controller.selectStatusObs.setValue(e);
-                  },
-                  title: e.getLocalizedName(),
-                  value: e.index,
-                ),
+              FilterHeaderTitle(title: Translate.s.property_status),
+              ...PropDetailsStatus.values.map((e) {
+                return Visibility(
+                  visible: e != PropDetailsStatus.non,
+                  child: FilterSelectItemWidget(
+                    changeValue: value.index,
+                    onTap: () {
+                      controller.selectStatusObs.setValue(e);
+                    },
+                    title: e.getLocalizedName(),
+                    value: e.index,
+                  ),
               );
             }),
           ],

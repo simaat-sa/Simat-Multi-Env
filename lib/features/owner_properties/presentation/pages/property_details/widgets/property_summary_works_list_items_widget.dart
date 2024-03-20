@@ -13,20 +13,20 @@ class PropertySummaryWorksLisItemsWidget extends StatelessWidget {
       children: [
         PropertySummaryWorksItemWidget(
           model: model,
-          title: 'الإشغال',
+          title: Translate.s.occupancy,
           visiblePercent: true,
           allRented: model.propChildOcc,
           allProp: model.propChildTot,
         ),
         PropertySummaryWorksItemWidget(
           model: model,
-          title: 'تجاري مؤجر',
+          title: Translate.s.commercial_leased,
           allRented: model.commercialRented,
           allProp: model.commercialRentedTotal,
         ),
         PropertySummaryWorksItemWidget(
           model: model,
-          title: 'سكني مؤجر',
+          title: Translate.s.rented_residential,
           allRented: model.residentialRented,
           allProp: model.residentialRentedTotal,
         ),

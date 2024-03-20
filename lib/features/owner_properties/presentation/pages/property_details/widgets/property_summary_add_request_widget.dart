@@ -36,7 +36,7 @@ class PropertySummaryAddRequestWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "إضافة طلب صيانة",
+                  Translate.s.add_maintenance_request,
                   style: AppTextStyle.s14_w400(color: context.colors.primaryText),
                 ),
                 Gaps.vGap5,

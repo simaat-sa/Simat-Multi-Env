@@ -22,9 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(count) => "العقود ${count}";
 
-  static String m1(number) => "مصروفات (${number})";
+  static String m1(number) => "مصروفات[${number}]";
 
-  static String m2(number) => "صيانة (${number})";
+  static String m2(number) => "صيانة[${number}]";
 
   static String m3(count) => "طلبات الصيانة ${count}";
 
@@ -34,9 +34,11 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m5(MB, files) =>
       "يجب أن تكون حجم الملفات التالية أقل من ${MB} ميحابيت, ${files}";
 
-  static String m6(number) => "وحدات (${number})";
+  static String m6(length) => "الوحدات [${length}]";
 
-  static String m7(version) => "اصدار ${version}";
+  static String m7(number) => "وحدات[${number}]";
+
+  static String m8(version) => "اصدار ${version}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -105,6 +107,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "سيتم التعامل مع كافة البيانات المقدمة من قبلك على أساس أنها سرية . تتطلب النماذج التي يتم تقديمها مباشرة على الشبكة تقديم البيانات التي ستساعدنا في تحسين موقعنا.سيتم استخدام البيانات التي يتم تقديمها من قبلك في الرد على كافة استفساراتك , ملاحظاتك , أو طلباتك من قبل هذا الموقع أو أيا من المواقع التابعة له ."),
         "access_denied": MessageLookupByLibrary.simpleMessage("تم رفض الوصول"),
         "active": MessageLookupByLibrary.simpleMessage("فعال"),
+        "add_maintenance_request":
+            MessageLookupByLibrary.simpleMessage("إضافة طلب صيانة"),
         "add_new_contact":
             MessageLookupByLibrary.simpleMessage("طلب صيانة جديد"),
         "add_new_item": MessageLookupByLibrary.simpleMessage("إضافة عنصر جديد"),
@@ -123,12 +127,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("عودة الى الرئيسية"),
         "back_to_maintenance_requests":
             MessageLookupByLibrary.simpleMessage("عودة لطلبات الصيانة"),
+        "balance": MessageLookupByLibrary.simpleMessage("الرصيد"),
+        "beginning_of_the_contract":
+            MessageLookupByLibrary.simpleMessage("بداية العقد"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "canceled": MessageLookupByLibrary.simpleMessage("ألغيت"),
         "closed": MessageLookupByLibrary.simpleMessage("مغلق"),
         "collector": MessageLookupByLibrary.simpleMessage("محصل"),
         "commercial": MessageLookupByLibrary.simpleMessage("تجاري"),
+        "commercial_leased": MessageLookupByLibrary.simpleMessage("تجاري مؤجر"),
+        "commissions": MessageLookupByLibrary.simpleMessage("عمولات"),
         "completed": MessageLookupByLibrary.simpleMessage("مكتمل"),
         "concerns_and_concerns_about_the_privacy":
             MessageLookupByLibrary.simpleMessage(
@@ -162,6 +171,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "done": MessageLookupByLibrary.simpleMessage("تم"),
         "due": MessageLookupByLibrary.simpleMessage("مستحق"),
         "due_date": MessageLookupByLibrary.simpleMessage("تاريخ استحقاق "),
+        "electricity_for_vacant_apartments":
+            MessageLookupByLibrary.simpleMessage("كهرباء الشقق الخالية"),
+        "electricity_services":
+            MessageLookupByLibrary.simpleMessage("كهرباء الخدمات"),
+        "elevator_maintenance":
+            MessageLookupByLibrary.simpleMessage("صيانة مصاعد"),
+        "end_of_the_contract":
+            MessageLookupByLibrary.simpleMessage("نهاية العقد"),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("طلب غير صالح"),
         "error_NotFound_Error":
@@ -198,11 +215,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "finally_desc": MessageLookupByLibrary.simpleMessage(
             "إن مخاوفك واهتمامك بشأن سرية وخصوصية البيانات تعتبر مسألة في غاية الأهمية بالنسبة لنا.نحن نأمل أن يتم تحقيق .ذلك من خلال هذه السياسة."),
         "finally_policy": MessageLookupByLibrary.simpleMessage("اخيرا"),
+        "general_maint": MessageLookupByLibrary.simpleMessage("صيانة عامة"),
+        "general_repairs": MessageLookupByLibrary.simpleMessage("اصلاحات عامة"),
+        "guards": MessageLookupByLibrary.simpleMessage("حراسات"),
         "how_get_code": MessageLookupByLibrary.simpleMessage(
             "كيف يمكنني الحصول علي الرمز؟"),
         "implemented": MessageLookupByLibrary.simpleMessage("مُنفّذ"),
         "inactive": MessageLookupByLibrary.simpleMessage("غير نشط"),
         "insurance": MessageLookupByLibrary.simpleMessage("تأمين"),
+        "insurances": MessageLookupByLibrary.simpleMessage("تأمينات"),
         "internet_connected":
             MessageLookupByLibrary.simpleMessage("تم الاتصال بالانترنت"),
         "label_Login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
@@ -265,6 +286,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_notices_now": MessageLookupByLibrary.simpleMessage(
             "لا يوجد لديك إشعارات الآن، برجاء معاودة التحقق لاحقا"),
         "notify": MessageLookupByLibrary.simpleMessage("الإشعارات"),
+        "occupancy": MessageLookupByLibrary.simpleMessage("الإشغال"),
+        "office_expenses":
+            MessageLookupByLibrary.simpleMessage("مصروفات مكتبية"),
         "order_has_received": MessageLookupByLibrary.simpleMessage(
             "تم استلام الطلب، وسنقوم بتحديثك قريبًا"),
         "owner": MessageLookupByLibrary.simpleMessage("مالك"),
@@ -279,13 +303,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_fill_all_fields":
             MessageLookupByLibrary.simpleMessage("من فضلك املأ جميع الحقول"),
         "posted": MessageLookupByLibrary.simpleMessage("نشر"),
+        "prop_category": MessageLookupByLibrary.simpleMessage("فئة العقار"),
+        "prop_type": MessageLookupByLibrary.simpleMessage("نوع العقار"),
+        "property_status": MessageLookupByLibrary.simpleMessage("حالة العقار"),
         "real_estate_unit":
             MessageLookupByLibrary.simpleMessage("الوحدة العقارية"),
+        "registered": MessageLookupByLibrary.simpleMessage("مسجل"),
         "rejected_by_the_owner":
             MessageLookupByLibrary.simpleMessage("مرفوض من قبل المالك"),
         "rejected_by_the_supervisor":
             MessageLookupByLibrary.simpleMessage("مرفوض من المشرف"),
         "rented": MessageLookupByLibrary.simpleMessage("مؤجر"),
+        "rented_residential": MessageLookupByLibrary.simpleMessage("سكني مؤجر"),
         "request_to_renew_contract":
             MessageLookupByLibrary.simpleMessage("طلب تجديد العقد الحالي"),
         "requesting_maintenance": MessageLookupByLibrary.simpleMessage(
@@ -295,6 +324,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "reset": MessageLookupByLibrary.simpleMessage("اعادة تعيين"),
         "residential": MessageLookupByLibrary.simpleMessage("سكني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
+        "safety_equipment_maintenance":
+            MessageLookupByLibrary.simpleMessage("صيانة معدات سلامة"),
         "sar": MessageLookupByLibrary.simpleMessage(" ر.س"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
@@ -313,19 +344,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "supervisor_identifications":
             MessageLookupByLibrary.simpleMessage("تحديد المشرف"),
         "tax": MessageLookupByLibrary.simpleMessage("ضريبة"),
+        "tenant": MessageLookupByLibrary.simpleMessage("المستأجر"),
+        "the_due": MessageLookupByLibrary.simpleMessage("المستحق"),
+        "the_units": m6,
         "total_contract": MessageLookupByLibrary.simpleMessage("إجمالي العقد"),
         "total_due": MessageLookupByLibrary.simpleMessage("اجمالي المستحق"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
+        "type_of_expense": MessageLookupByLibrary.simpleMessage("نوع المصروف"),
         "unit_maintenance":
             MessageLookupByLibrary.simpleMessage("صيانة الوحدة"),
-        "unit_number": m6,
+        "unit_number": m7,
         "user_or_phone_hint": MessageLookupByLibrary.simpleMessage(
             "هاتفك الجوال او اسم المستخدم"),
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح"),
         "vacant": MessageLookupByLibrary.simpleMessage("شاغر"),
-        "version_label": m7,
-        "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات")
+        "version_label": m8,
+        "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات"),
+        "waste_transportation":
+            MessageLookupByLibrary.simpleMessage("نقل مخلفات"),
+        "water_consumption": MessageLookupByLibrary.simpleMessage("استهلاك ماء")
       };
 }

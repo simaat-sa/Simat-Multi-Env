@@ -12,7 +12,6 @@ class PropUnitsRequester extends Requester<List<ContractModel>> {
   }
 
   PropUnitsRequester(this.params) {
-    request(fromRemote: false);
     request();
   }
 

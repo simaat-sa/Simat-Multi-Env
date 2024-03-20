@@ -35,7 +35,7 @@ late PaymentTabController controller;
                 return Center(child: Text("حدث خطأ",style:AppTextStyle.s14_w400(color: context.colors.darkTextColor) ,));
               },
               noItemsFoundIndicatorBuilder: (context) {
-                return Center(child: Text("لا يوجد نتائج",style: AppTextStyle.s14_w500(color: context.colors.darkTextColor),));
+                return const EmptyListItemWidget();
               },
             ),
           ),

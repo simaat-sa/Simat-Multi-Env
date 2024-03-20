@@ -9,11 +9,11 @@ class CostItemsListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CostItemWidget(title: 'محصل', value: model.amtCollectPrice, color: context.colors.bgLight),
-        CostItemWidget(title: 'مطلوب', value: model.amtPayablePrice),
-        CostItemWidget(title: 'عمولات', value: model.amtCommTotPrice, color: context.colors.bgLight),
-        CostItemWidget(title: 'مدفوعات', value: model.amtPaidPrice),
-        CostItemWidget(title: 'تأمينات', value: model.amtInsurPrice, color: context.colors.bgLight),
+        CostItemWidget(title: Translate.s.collector, value: model.amtCollectPrice, color: context.colors.bgLight),
+        CostItemWidget(title: Translate.s.required, value: model.amtPayablePrice),
+        CostItemWidget(title: Translate.s.commissions, value: model.amtCommTotPrice, color: context.colors.bgLight),
+        CostItemWidget(title: Translate.s.payments, value: model.amtPaidPrice),
+        CostItemWidget(title: Translate.s.insurances, value: model.amtInsurPrice, color: context.colors.bgLight),
       ],
     );
   }

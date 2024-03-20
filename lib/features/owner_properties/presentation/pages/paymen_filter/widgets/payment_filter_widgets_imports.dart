@@ -11,4 +11,3 @@ import 'package:flutter_tdd/res.dart';
 
 part'payment_filter_item_widget.dart';
 part'payment_filter_app_bar.dart';
-part'footer_buttons_widget.dart';

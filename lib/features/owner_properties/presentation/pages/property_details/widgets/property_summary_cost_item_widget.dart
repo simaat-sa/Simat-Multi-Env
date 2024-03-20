@@ -35,7 +35,7 @@ class PropertySummaryCostItemWidget extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('الرصيد', style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
+                            Text(Translate.s.balance, style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
                             Gaps.vGap5,
                             Row(
                               children: [
@@ -75,7 +75,7 @@ class PropertySummaryCostItemWidget extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('المستحق', style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
+                            Text(Translate.s.the_due, style: AppTextStyle.s14_w400(color: context.colors.primaryText)),
                             Gaps.vGap5,
                             Row(
                               children: [
