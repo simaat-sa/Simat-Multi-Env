@@ -206,14 +206,10 @@
   "occupancy": "Occupancy",
   "commercial_leased": "Commercial leased",
   "rented_residential": "Rented residential",
-  "the_units": "The Units [{length}]",
+  "the_units": "The Units ({length})",
   "property_status": "Property Status",
   "beginning_of_the_contract": "Beginning of the decade",
   "end_of_the_contract": "End of the contract",
   "tenant": "Tenant",
-  "reserved": "Reserved",
-  "unit_number": "Unit[{number}]",
-  "main_number": "Maintenance[{number}]",
-  "expenses_number": "Expenses[{number}]",
   "registered": "Registered"
 }

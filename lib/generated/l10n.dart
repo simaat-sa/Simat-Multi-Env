@@ -1870,6 +1870,36 @@ class S {
     );
   }
 
+  /// `Unit ({number})`
+  String unit_number(Object number) {
+    return Intl.message(
+      'Unit ($number)',
+      name: 'unit_number',
+      desc: '',
+      args: [number],
+    );
+  }
+
+  /// `Maintenance ({number})`
+  String main_number(Object number) {
+    return Intl.message(
+      'Maintenance ($number)',
+      name: 'main_number',
+      desc: '',
+      args: [number],
+    );
+  }
+
+  /// `Expenses ({number})`
+  String expenses_number(Object number) {
+    return Intl.message(
+      'Expenses ($number)',
+      name: 'expenses_number',
+      desc: '',
+      args: [number],
+    );
+  }
+
   /// `Property Type`
   String get prop_type {
     return Intl.message(
@@ -2080,10 +2110,10 @@ class S {
     );
   }
 
-  /// `The Units [{length}]`
+  /// `The Units ({length})`
   String the_units(Object length) {
     return Intl.message(
-      'The Units [$length]',
+      'The Units ($length)',
       name: 'the_units',
       desc: '',
       args: [length],
@@ -2127,36 +2157,6 @@ class S {
       name: 'tenant',
       desc: '',
       args: [],
-    );
-  }
-
-  /// `Unit[{number}]`
-  String unit_number(Object number) {
-    return Intl.message(
-      'Unit[$number]',
-      name: 'unit_number',
-      desc: '',
-      args: [number],
-    );
-  }
-
-  /// `Maintenance[{number}]`
-  String main_number(Object number) {
-    return Intl.message(
-      'Maintenance[$number]',
-      name: 'main_number',
-      desc: '',
-      args: [number],
-    );
-  }
-
-  /// `Expenses[{number}]`
-  String expenses_number(Object number) {
-    return Intl.message(
-      'Expenses[$number]',
-      name: 'expenses_number',
-      desc: '',
-      args: [number],
     );
   }
 
