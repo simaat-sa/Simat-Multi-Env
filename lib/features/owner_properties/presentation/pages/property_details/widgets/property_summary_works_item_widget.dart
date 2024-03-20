@@ -59,6 +59,7 @@ class PropertySummaryWorksItemWidget extends StatelessWidget {
             style: AppTextStyle.s14_w400(
               color: context.colors.darkTextColor,
             ),
+            overflow: TextOverflow.ellipsis,
           ),
         ],
       ),

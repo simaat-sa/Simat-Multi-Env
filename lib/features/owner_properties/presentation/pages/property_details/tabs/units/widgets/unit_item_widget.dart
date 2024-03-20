@@ -64,28 +64,28 @@ class UnitItemWidget extends StatelessWidget {
           ),
           Gaps.vGap15,
           CostItemWidget(
-            title: 'الرصيد',
+            title: Translate.s.balance,
             value: model.duePrice,
             color: context.colors.bgLight,
           ),
           CostItemWidget(
-            title: 'مطلوب',
+            title: Translate.s.required,
             value: model.netPrice,
           ),
           CostItemWidget(
-              title: 'بداية العقد',
+              title: Translate.of(context).beginning_of_the_contract,
               value: model.startDate,
               color: context.colors.bgLight,
               image: Res.calendarIcon,
               costOrNot: false),
           CostItemWidget(
-            title: 'نهاية العقد',
+            title: Translate.s.end_of_the_contract,
             value: model.date,
             image: Res.calendarIcon,
             costOrNot: false,
           ),
           CostItemWidget(
-            title: 'المستأجر',
+            title: Translate.s.tenant,
             value: model.contactName,
             image: Res.tenantLogo,
             color: context.colors.bgLight,

@@ -38,7 +38,7 @@ class _FilterPropertyState extends State<FilterProperty> {
                   child: ListView(
                     padding: EdgeInsets.zero,
                     children: [
-                      const FilterPropertyTitleItemWidget(title: 'نوع العقار'),
+                      FilterPropertyTitleItemWidget(title: Translate.s.prop_type),
                       RealtyTypeWidget(
                         types: data.types,
                         controller: controller,
@@ -48,7 +48,7 @@ class _FilterPropertyState extends State<FilterProperty> {
                         height: 30,
                         color: context.colors.backgroundLight,
                       ),
-                      const FilterPropertyTitleItemWidget(title: 'فئة العقار'),
+                      FilterPropertyTitleItemWidget(title: Translate.s.prop_category),
                       RealtyCategoryWidget(
                         categories: data.categories,
                         controller: controller,
@@ -62,7 +62,7 @@ class _FilterPropertyState extends State<FilterProperty> {
                 return ElevatedButton(
                   onPressed: () => controller.requester.request(),
                   child: Text(
-                    "حدث خطأ المحاولة مرة اخرى",
+                    Translate.s.retry,
                     style: AppTextStyle.s14_w500(
                       color: context.colors.blackOpacity,
                     ),

@@ -22,15 +22,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(count) => "Contracts ${count}";
 
-  static String m1(count) => "Maintenance Orders ${count}";
+  static String m1(count) => "Expenses [${count}]";
 
-  static String m2(code) =>
+  static String m2(count) => "Maintenance [${count}]";
+
+  static String m3(count) => "Maintenance Orders ${count}";
+
+  static String m4(code) =>
       "We have sent a mobile message containing the quality assurance code for your order no${code}";
 
-  static String m3(MB, files) =>
+  static String m5(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";
 
-  static String m4(version) => "Version ${version}";
+  static String m6(length) => "The Units [${length}]";
+
+  static String m7(count) => "Units [${count}]";
+
+  static String m8(version) => "Version ${version}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -98,6 +106,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "All data provided by you will be treated as confidential. The forms that are submitted directly on the network require the submission of data that will help us improve our site. The data provided by you will be used to respond to all your inquiries, comments, or requests by this site or any of its affiliated sites."),
         "access_denied": MessageLookupByLibrary.simpleMessage("Access denied"),
         "active": MessageLookupByLibrary.simpleMessage("Active"),
+        "add_maintenance_request":
+            MessageLookupByLibrary.simpleMessage("Add a maintenance request"),
         "add_new_contact":
             MessageLookupByLibrary.simpleMessage("New maintenance request"),
         "add_new_item": MessageLookupByLibrary.simpleMessage("Add new item"),
@@ -116,12 +126,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Back to main page"),
         "back_to_maintenance_requests": MessageLookupByLibrary.simpleMessage(
             "Back to maintenance requests"),
+        "balance": MessageLookupByLibrary.simpleMessage("Balance"),
+        "beginning_of_the_contract":
+            MessageLookupByLibrary.simpleMessage("Beginning of the decade"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "canceled": MessageLookupByLibrary.simpleMessage("Canceled"),
         "closed": MessageLookupByLibrary.simpleMessage("Closed"),
         "collector": MessageLookupByLibrary.simpleMessage("Collector"),
         "commercial": MessageLookupByLibrary.simpleMessage("Commercial"),
+        "commercial_leased":
+            MessageLookupByLibrary.simpleMessage("Commercial leased"),
+        "commissions": MessageLookupByLibrary.simpleMessage("Commissions"),
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
         "concerns_and_concerns_about_the_privacy":
             MessageLookupByLibrary.simpleMessage(
@@ -160,6 +176,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "done": MessageLookupByLibrary.simpleMessage("Done"),
         "due": MessageLookupByLibrary.simpleMessage("Due"),
         "due_date": MessageLookupByLibrary.simpleMessage("due date"),
+        "electricity_for_vacant_apartments":
+            MessageLookupByLibrary.simpleMessage(
+                "Electricity for vacant apartments"),
+        "electricity_services":
+            MessageLookupByLibrary.simpleMessage("Electricity services"),
+        "elevator_maintenance":
+            MessageLookupByLibrary.simpleMessage("Elevator maintenance"),
+        "end_of_the_contract":
+            MessageLookupByLibrary.simpleMessage("End of the contract"),
         "error_BadRequest_Error":
             MessageLookupByLibrary.simpleMessage("BAD REQUEST"),
         "error_NotFound_Error":
@@ -187,6 +212,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No internet connection"),
         "estimated_cost":
             MessageLookupByLibrary.simpleMessage("Estimated cost"),
+        "expenses": m1,
         "expireIn": MessageLookupByLibrary.simpleMessage("Expire in"),
         "expired": MessageLookupByLibrary.simpleMessage("Expired"),
         "failureActions":
@@ -198,11 +224,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "finally_desc": MessageLookupByLibrary.simpleMessage(
             "Your concerns and concerns regarding the confidentiality and privacy of data are extremely important to us. We hope that this will be achieved through this policy."),
         "finally_policy": MessageLookupByLibrary.simpleMessage("Finally"),
+        "general_maint":
+            MessageLookupByLibrary.simpleMessage("General Maintenance"),
+        "general_repairs":
+            MessageLookupByLibrary.simpleMessage("General repairs"),
+        "guards": MessageLookupByLibrary.simpleMessage("Guards"),
         "how_get_code":
             MessageLookupByLibrary.simpleMessage("How can I get the code?"),
         "implemented": MessageLookupByLibrary.simpleMessage("Implemented"),
         "inactive": MessageLookupByLibrary.simpleMessage("Inactive"),
         "insurance": MessageLookupByLibrary.simpleMessage("Insurance"),
+        "insurances": MessageLookupByLibrary.simpleMessage("Insurances"),
         "internet_connected":
             MessageLookupByLibrary.simpleMessage("Internet connected"),
         "label_Login": MessageLookupByLibrary.simpleMessage("Login"),
@@ -231,7 +263,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter a valid email"),
         "main_property":
             MessageLookupByLibrary.simpleMessage("The main property"),
-        "maintenanceCount": m1,
+        "maintenance": m2,
+        "maintenanceCount": m3,
         "maintenance_has_been_requested": MessageLookupByLibrary.simpleMessage(
             "Maintenance has been requested"),
         "maintenance_request":
@@ -248,7 +281,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Maybe later, back to the main page"),
         "menu": MessageLookupByLibrary.simpleMessage("Menu"),
-        "message_containing_code_for_your_order": m2,
+        "message_containing_code_for_your_order": m4,
         "nameValidation": MessageLookupByLibrary.simpleMessage(
             "Should be more than 8 and less than 30"),
         "net_contract": MessageLookupByLibrary.simpleMessage("Net contract"),
@@ -265,6 +298,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_notices_now": MessageLookupByLibrary.simpleMessage(
             "You don\'t have any notifications yet, please check back later"),
         "notify": MessageLookupByLibrary.simpleMessage("Notification"),
+        "occupancy": MessageLookupByLibrary.simpleMessage("Occupancy"),
+        "office_expenses":
+            MessageLookupByLibrary.simpleMessage("Office expenses"),
         "order_has_received": MessageLookupByLibrary.simpleMessage(
             "The order has been received, we will update you soon"),
         "owner": MessageLookupByLibrary.simpleMessage("Owner"),
@@ -279,6 +315,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_fill_all_fields":
             MessageLookupByLibrary.simpleMessage("Please fill all fields"),
         "posted": MessageLookupByLibrary.simpleMessage("Posted"),
+        "prop_category":
+            MessageLookupByLibrary.simpleMessage("Property Category"),
+        "prop_type": MessageLookupByLibrary.simpleMessage("Property Type"),
+        "property_status":
+            MessageLookupByLibrary.simpleMessage("Property Status"),
         "real_estate_unit":
             MessageLookupByLibrary.simpleMessage("Real estate unit"),
         "rejected_by_the_owner":
@@ -288,6 +329,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "renewal_request_completed": MessageLookupByLibrary.simpleMessage(
             "Renewal request has been completed successfully"),
         "rented": MessageLookupByLibrary.simpleMessage("Rented"),
+        "rented_residential":
+            MessageLookupByLibrary.simpleMessage("Rented residential"),
         "request_to_renew_contract": MessageLookupByLibrary.simpleMessage(
             "Request to renew the current contract"),
         "requesting_maintenance": MessageLookupByLibrary.simpleMessage(
@@ -297,12 +340,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "residential": MessageLookupByLibrary.simpleMessage("Residential"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
+        "safety_equipment_maintenance": MessageLookupByLibrary.simpleMessage(
+            "Safety equipment maintenance"),
         "sar": MessageLookupByLibrary.simpleMessage(" SAR"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "server_visit_any_website": MessageLookupByLibrary.simpleMessage(
             "Any time you visit any website, including this site, the hosting server will record your Internet Protocol (IP) address, the date and time of the visit, the type of Internet browser you use, and the URL of any Internet site that refers you to this site at the network."),
-        "size_more_than_mg_error": m3,
+        "size_more_than_mg_error": m5,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "splash_desc_title": MessageLookupByLibrary.simpleMessage(
@@ -317,19 +362,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "supervisor_identifications":
             MessageLookupByLibrary.simpleMessage("supervisor Identifications"),
         "tax": MessageLookupByLibrary.simpleMessage("Tax"),
+        "tenant": MessageLookupByLibrary.simpleMessage("Tenant"),
+        "the_due": MessageLookupByLibrary.simpleMessage("The due"),
+        "the_units": m6,
         "total_contract":
             MessageLookupByLibrary.simpleMessage("Total Contract"),
         "total_due": MessageLookupByLibrary.simpleMessage("Total due"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN"),
+        "type_of_expense":
+            MessageLookupByLibrary.simpleMessage("Type of expense"),
         "unit_maintenance":
             MessageLookupByLibrary.simpleMessage("Unit maintenance"),
+        "units": m7,
         "user_or_phone_hint":
             MessageLookupByLibrary.simpleMessage("Mobile phone or Username"),
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser"),
         "vacant": MessageLookupByLibrary.simpleMessage("Vacant"),
-        "version_label": m4,
-        "view_payments": MessageLookupByLibrary.simpleMessage("View payments")
+        "version_label": m8,
+        "view_payments": MessageLookupByLibrary.simpleMessage("View payments"),
+        "waste_transportation":
+            MessageLookupByLibrary.simpleMessage("Waste transportation"),
+        "water_consumption":
+            MessageLookupByLibrary.simpleMessage("Water consumption")
       };
 }

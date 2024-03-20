@@ -19,9 +19,9 @@ class PropertyTabBarWidget extends StatelessWidget {
               labelStyle: AppTextStyle.s16_w500(color: context.colors.primary),
               tabs: [
                 Text(Translate.of(context).summary),
-                Text("وحدات"),
-                Text("صيانة"),
-                Text("مصروفات "),
+                Text(Translate.s.units('')),
+                Text(Translate.s.maintenance('')),
+                Text(Translate.s.expenses('')),
               ]),
         );
       },

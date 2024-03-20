@@ -20,7 +20,7 @@ class PaymentDateAndCostWidget extends StatelessWidget {
         const Spacer(),
         Text(model.totalAmount,style: AppTextStyle.s18_w400(color: context.colors.green3),),
         Gaps.hGap4,
-        Text("ر.س",style: AppTextStyle.s14_w400(color: context.colors.green3),)
+        Text(Translate.s.sar,style: AppTextStyle.s14_w400(color: context.colors.green3),)
       ],
     );
   }
