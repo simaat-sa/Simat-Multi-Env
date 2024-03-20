@@ -8,6 +8,7 @@ import 'package:flutter_tdd/core/requester/consumer/requester_consumer.dart';
 import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
 import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
+import 'package:flutter_tdd/core/theme/themes/app_theme.dart';
 import 'package:flutter_tdd/core/widgets/failure_view_widget.dart';
 import 'package:flutter_tdd/features/contract/data/models/props_model/prop_model.dart';
 import 'package:flutter_tdd/features/contract/presentation/pages/contract_details/widgets/tenant_details_widgets_imports.dart';

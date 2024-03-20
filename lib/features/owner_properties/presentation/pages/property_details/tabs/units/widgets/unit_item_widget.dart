@@ -65,12 +65,12 @@ class UnitItemWidget extends StatelessWidget {
           Gaps.vGap15,
           CostItemWidget(
             title: Translate.s.balance,
-            value: model.duePrice,
+            value: model.netPrice,
             color: context.colors.bgLight,
           ),
           CostItemWidget(
             title: Translate.s.required,
-            value: model.netPrice,
+            value: model.duePrice,
           ),
           CostItemWidget(
               title: Translate.of(context).beginning_of_the_contract,

@@ -22,9 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(count) => "العقود ${count}";
 
-  static String m1(number) => "مصروفات(${number})";
+  static String m1(number) => "مصروفات (${number})";
 
-  static String m2(number) => "صيانة(${number})";
+  static String m2(number) => "صيانة (${number})";
 
   static String m3(count) => "طلبات الصيانة ${count}";
 
@@ -36,7 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m6(length) => "الوحدات [${length}]";
 
-  static String m7(number) => "وحدات(${number})";
+  static String m7(number) => "وحدات (${number})";
 
   static String m8(version) => "اصدار ${version}";
 
