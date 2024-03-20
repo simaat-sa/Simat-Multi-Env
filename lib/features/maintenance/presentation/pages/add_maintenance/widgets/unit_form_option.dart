@@ -20,7 +20,7 @@ class UnitFormOption extends StatelessWidget {
       optionsRequester: BaseOptionsRequester<PropModel>(
         isRemotelySearch: false,
         immediatelyRequestOptions: true,
-        valueMainTitleGetter: (value) => value?.unitFullName,
+        valueMainTitleGetter: (value) => value!.unitFullName,
         fetcher: (c) => getIt<ContractRepository>().getPropsUnites(user.userType),
       ),
       selectedItems: controller.selectedPropUnits,

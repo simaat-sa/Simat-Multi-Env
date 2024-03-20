@@ -19,7 +19,7 @@ class ContractParams {
       header += "&search=$search";
     }
     if (typeFilter != null && typeFilter != "") {
-      header += "&filters[ree_code]=$typeFilter";
+      header += "&filters[contract_type_view]=$typeFilter";
     }
     if (statusFilter != null && statusFilter != "") {
       header += "&filters[tts_validity]=$statusFilter";

@@ -13,9 +13,9 @@ class AddMaintenanceController {
   AddMaintenanceController(BuildContext context, PropModel? propModel) {
     var user = context.read<UserCubit>().state.model!;
     phone.text = user.userMobile;
+    print(">>>>>>>>>>>${propModel?.unitFullName}");
     if (propModel != null) {
       selectedPropUnits.add(propModel);
-
     }
   }
 

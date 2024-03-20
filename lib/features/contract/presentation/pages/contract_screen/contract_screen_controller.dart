@@ -57,7 +57,7 @@ class ContractScreenController {
   }
 
   void onFilter() {
-    if (selectTypeObs.getValue() != ContractTypes.non && selectStatusObs.getValue() != TenantVisibility.non) {
+    if (selectTypeObs.getValue() != ContractTypes.non || selectStatusObs.getValue() != TenantVisibility.non) {
       pagingController.refresh();
       fetchContractData(1);
       filterAppliedObs.setValue(true);
@@ -65,9 +65,9 @@ class ContractScreenController {
   }
 
   void onResetFilter() {
-    pagingController.refresh();
     selectStatusObs.setValue(TenantVisibility.non);
     selectTypeObs.setValue(ContractTypes.non);
+    pagingController.refresh();
     fetchContractData(1);
     filterAppliedObs.setValue(false);
   }

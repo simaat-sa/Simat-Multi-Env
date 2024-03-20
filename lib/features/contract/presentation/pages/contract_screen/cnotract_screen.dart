@@ -22,6 +22,7 @@ class _ContractScreenState extends State<ContractScreen> {
           child: Column(
             children: [
               FilterItemWidget(
+                showFilterIcon: true,
                 filterApply: controller.filterAppliedObs,
                 onChange: (val) {
                   controller.searchText = val;
