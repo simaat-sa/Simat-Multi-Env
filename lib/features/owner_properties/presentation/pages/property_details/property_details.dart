@@ -37,23 +37,27 @@ class _PropertyDetailsState extends State<PropertyDetails> {
             PropertyTabBarWidget(controller: controller),
             Gaps.vGap16,
             Flexible(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: TabBarView(
-                  children: [
-                    PropertySummaryView(propModel: widget.model, controller: controller),
-                    Units(model: widget.model),
-                    MaintenanceTab(
-                      areaId: widget.model.areId,
-                      maintCount: controller.tabsCountObs.getValue().maintenanceCount,
-                    ),
-                    PaymentTab(
-                      propId: widget.model.areId,
-                      paymentCount: controller.tabsCountObs.getValue().paymentCount,
-                    ),
-                  ],
-                ),
-              ),
+              child: ObsValueConsumer<PropDetailsTabsCount>(
+                  observable: controller.tabsCountObs,
+                  builder: (context, value) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: TabBarView(
+                        children: [
+                          PropertySummaryView(propModel: widget.model, controller: controller),
+                          Units(model: widget.model),
+                          MaintenanceTab(
+                            areaId: widget.model.areId,
+                            maintCount: value.maintenanceCount,
+                          ),
+                          PaymentTab(
+                            propId: widget.model.areId,
+                            paymentCount: value.paymentCount,
+                          ),
+                        ],
+                      ),
+                    );
+                  }),
             ),
           ],
         ),

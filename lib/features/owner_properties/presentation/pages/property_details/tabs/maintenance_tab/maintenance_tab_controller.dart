@@ -64,8 +64,8 @@ class MaintenanceTabController {
   }
 
   void onResetFilter(BuildContext context) {
-    pagingController.refresh();
     filterContractObs.setValue(ContractStatus.non);
+    pagingController.refresh();
     fetchPropertyData(1);
     applyFilterObs.setValue(false);
   }
