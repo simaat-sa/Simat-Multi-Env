@@ -19,8 +19,10 @@ class PropertyTabBarWidget extends StatelessWidget {
               ).copyWith(
                 fontFamily: AppTheme.fontFamily,
               ),
+              isScrollable: true,
+              tabAlignment: TabAlignment.center,
               indicatorSize: TabBarIndicatorSize.label,
-              labelPadding: const EdgeInsets.symmetric(vertical: 13),
+              labelPadding: const EdgeInsets.symmetric(vertical: 13,horizontal: 10),
               labelStyle: AppTextStyle.s16_w500(color: context.colors.primary).copyWith(
                 fontFamily: AppTheme.fontFamily,
               ),
