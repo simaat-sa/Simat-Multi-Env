@@ -182,6 +182,10 @@
   "vacant": "شاغر",
   "rented": "مؤجر",
   "reserved": "محجوز",
+  "unit_number" : "وحدات[{number}]",
+  "main_number" : "صيانة[{number}]",
+  "expenses_number" : "مصروفات[{number}]"
+  "reserved": "محجوز",
   "prop_type": "نوع العقار",
   "prop_category": "فئة العقار",
   "type_of_expense": "نوع المصروف",

@@ -178,7 +178,7 @@
   "tax": "Tax",
   "apply": "Apply",
   "sar": " SAR",
-  "no_items_found":"!No Item Found",
+  "no_items_found": "!No Item Found",
   "vacant": "Vacant",
   "rented": "Rented",
   "reserved": "Reserved",
@@ -203,12 +203,13 @@
   "occupancy": "Occupancy",
   "commercial_leased": "Commercial leased",
   "rented_residential": "Rented residential",
-  "units": "Units [{count}]",
-  "maintenance": "Maintenance [{count}]",
-  "expenses": "Expenses [{count}]",
   "the_units": "The Units [{length}]",
   "property_status": "Property Status",
   "beginning_of_the_contract": "Beginning of the decade",
   "end_of_the_contract": "End of the contract",
-  "tenant": "Tenant"
+  "tenant": "Tenant",
+  "reserved": "Reserved",
+  "unit_number": "Unit[{number}]",
+  "main_number": "Maintenance[{number}]",
+  "expenses_number": "Expenses[{number}]"
 }

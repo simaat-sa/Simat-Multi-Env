@@ -17,7 +17,7 @@ _$PropertiesExpensesModelImpl _$$PropertiesExpensesModelImplFromJson(
       totalAmount: json['amt_tot'] as String? ?? '',
       actualStatusCode: json['acl_status_code'] as String? ?? '',
       createdDate: json['dt_created'] as String? ?? '',
-      area: json['are_desc_fo'] as String? ?? '',
+      areaAr: json['are_desc_fo'] as String? ?? '',
       areaEn: json['are_desc_en'] as String? ?? '',
     );
 
@@ -32,6 +32,6 @@ Map<String, dynamic> _$$PropertiesExpensesModelImplToJson(
       'amt_tot': instance.totalAmount,
       'acl_status_code': instance.actualStatusCode,
       'dt_created': instance.createdDate,
-      'are_desc_fo': instance.area,
+      'are_desc_fo': instance.areaAr,
       'are_desc_en': instance.areaEn,
     };

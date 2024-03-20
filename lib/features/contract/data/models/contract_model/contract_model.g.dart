@@ -96,5 +96,6 @@ const _$PropDetailsStatusEnumMap = {
   PropDetailsStatus.vacant: '41920',
   PropDetailsStatus.rented: '41930',
   PropDetailsStatus.reserved: '41940',
+  PropDetailsStatus.newStatus: '41910',
   PropDetailsStatus.non: '0',
 };
