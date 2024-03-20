@@ -14,7 +14,7 @@ class MaintenanceTabHeaderWidget extends StatelessWidget {
             observable: controller.maintenanceCount,
             builder: (context, val) {
               return Text(
-                Translate.s.maintenance(val),
+                Translate.s.maintenanceCount(val),
                 style: AppTextStyle.s16_w400(color: context.colors.blackOpacity),
               );
             }),

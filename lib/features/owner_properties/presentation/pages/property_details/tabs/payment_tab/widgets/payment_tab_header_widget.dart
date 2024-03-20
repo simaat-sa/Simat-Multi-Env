@@ -13,7 +13,7 @@ class PaymentTabHeaderWidget extends StatelessWidget {
         return Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(Translate.s.expenses(value),
+            Text(Translate.s.expenses_number(value),
                 style: AppTextStyle.s16_w400(color: context.colors.darkTextColor)),
              FilterIconWidget(filterApply: controller.applyFilterObs,
              onTap: ()=>AutoRouter.of(context).push(const PaymentFilterRoute()),

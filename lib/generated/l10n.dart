@@ -1870,6 +1870,266 @@ class S {
     );
   }
 
+  /// `Property Type`
+  String get prop_type {
+    return Intl.message(
+      'Property Type',
+      name: 'prop_type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Property Category`
+  String get prop_category {
+    return Intl.message(
+      'Property Category',
+      name: 'prop_category',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type of expense`
+  String get type_of_expense {
+    return Intl.message(
+      'Type of expense',
+      name: 'type_of_expense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `General Maintenance`
+  String get general_maint {
+    return Intl.message(
+      'General Maintenance',
+      name: 'general_maint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Electricity services`
+  String get electricity_services {
+    return Intl.message(
+      'Electricity services',
+      name: 'electricity_services',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Electricity for vacant apartments`
+  String get electricity_for_vacant_apartments {
+    return Intl.message(
+      'Electricity for vacant apartments',
+      name: 'electricity_for_vacant_apartments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Water consumption`
+  String get water_consumption {
+    return Intl.message(
+      'Water consumption',
+      name: 'water_consumption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Elevator maintenance`
+  String get elevator_maintenance {
+    return Intl.message(
+      'Elevator maintenance',
+      name: 'elevator_maintenance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Safety equipment maintenance`
+  String get safety_equipment_maintenance {
+    return Intl.message(
+      'Safety equipment maintenance',
+      name: 'safety_equipment_maintenance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guards`
+  String get guards {
+    return Intl.message(
+      'Guards',
+      name: 'guards',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Waste transportation`
+  String get waste_transportation {
+    return Intl.message(
+      'Waste transportation',
+      name: 'waste_transportation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `General repairs`
+  String get general_repairs {
+    return Intl.message(
+      'General repairs',
+      name: 'general_repairs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Office expenses`
+  String get office_expenses {
+    return Intl.message(
+      'Office expenses',
+      name: 'office_expenses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commissions`
+  String get commissions {
+    return Intl.message(
+      'Commissions',
+      name: 'commissions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Insurances`
+  String get insurances {
+    return Intl.message(
+      'Insurances',
+      name: 'insurances',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add a maintenance request`
+  String get add_maintenance_request {
+    return Intl.message(
+      'Add a maintenance request',
+      name: 'add_maintenance_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Balance`
+  String get balance {
+    return Intl.message(
+      'Balance',
+      name: 'balance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The due`
+  String get the_due {
+    return Intl.message(
+      'The due',
+      name: 'the_due',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Occupancy`
+  String get occupancy {
+    return Intl.message(
+      'Occupancy',
+      name: 'occupancy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commercial leased`
+  String get commercial_leased {
+    return Intl.message(
+      'Commercial leased',
+      name: 'commercial_leased',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rented residential`
+  String get rented_residential {
+    return Intl.message(
+      'Rented residential',
+      name: 'rented_residential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The Units [{length}]`
+  String the_units(Object length) {
+    return Intl.message(
+      'The Units [$length]',
+      name: 'the_units',
+      desc: '',
+      args: [length],
+    );
+  }
+
+  /// `Property Status`
+  String get property_status {
+    return Intl.message(
+      'Property Status',
+      name: 'property_status',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Beginning of the decade`
+  String get beginning_of_the_contract {
+    return Intl.message(
+      'Beginning of the decade',
+      name: 'beginning_of_the_contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End of the contract`
+  String get end_of_the_contract {
+    return Intl.message(
+      'End of the contract',
+      name: 'end_of_the_contract',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tenant`
+  String get tenant {
+    return Intl.message(
+      'Tenant',
+      name: 'tenant',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Unit[{number}]`
   String unit_number(Object number) {
     return Intl.message(
@@ -1897,6 +2157,16 @@ class S {
       name: 'expenses_number',
       desc: '',
       args: [number],
+    );
+  }
+
+  /// `Registered`
+  String get registered {
+    return Intl.message(
+      'Registered',
+      name: 'registered',
+      desc: '',
+      args: [],
     );
   }
 }

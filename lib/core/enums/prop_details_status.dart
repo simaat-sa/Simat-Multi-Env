@@ -32,6 +32,8 @@ enum PropDetailsStatus {
         return Translate.s.reserved;
       case PropDetailsStatus.vacant:
         return Translate.s.vacant;
+      case PropDetailsStatus.newStatus:
+        return Translate.s.new_code;
       default:
         return "";
     }

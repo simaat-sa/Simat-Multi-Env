@@ -211,5 +211,6 @@
   "reserved": "Reserved",
   "unit_number": "Unit[{number}]",
   "main_number": "Maintenance[{number}]",
-  "expenses_number": "Expenses[{number}]"
+  "expenses_number": "Expenses[{number}]",
+  "registered": "Registered"
 }

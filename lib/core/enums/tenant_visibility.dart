@@ -35,6 +35,8 @@ enum TenantVisibility {
         return Translate.s.closed;
       case TenantVisibility.expired:
         return Translate.s.expired;
+      case TenantVisibility.registered:
+        return Translate.s.registered;
       default:
         return "";
     }
@@ -50,6 +52,8 @@ enum TenantVisibility {
         return AppColors.fixedColors.red;
       case TenantVisibility.expired:
         return AppColors.fixedColors.red;
+      case TenantVisibility.registered:
+        return AppColors.fixedColors.green3;
       default:
         return AppColors.fixedColors.primary;
     }

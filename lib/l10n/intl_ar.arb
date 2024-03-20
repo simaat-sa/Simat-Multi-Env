@@ -184,8 +184,7 @@
   "reserved": "محجوز",
   "unit_number" : "وحدات[{number}]",
   "main_number" : "صيانة[{number}]",
-  "expenses_number" : "مصروفات[{number}]"
-  "reserved": "محجوز",
+  "expenses_number" : "مصروفات[{number}]",
   "prop_type": "نوع العقار",
   "prop_category": "فئة العقار",
   "type_of_expense": "نوع المصروف",
@@ -207,14 +206,12 @@
   "occupancy": "الإشغال",
   "commercial_leased": "تجاري مؤجر",
   "rented_residential": "سكني مؤجر",
-  "units": "وحدات [{count}]",
-  "maintenance": "صيانة [{count}]",
-  "expenses": "مصروفات [{count}]",
   "the_units": "الوحدات [{length}]",
   "property_status": "حالة العقار",
   "beginning_of_the_contract": "بداية العقد",
   "end_of_the_contract": "نهاية العقد",
-  "tenant": "المستأجر"
+  "tenant": "المستأجر",
+  "registered": "مسجل"
 }
 
 

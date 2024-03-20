@@ -8,7 +8,7 @@ class PropDetailsRequester extends Requester<PropDetailsModel?> {
   late PropertyDetailsParams params;
 
   PropDetailsRequester(this.params){
-    request();
+    request(fromRemote: false);
     request();
   }
 
