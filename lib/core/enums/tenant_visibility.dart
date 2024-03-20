@@ -11,6 +11,7 @@ enum TenantVisibility {
   inactive("inactive"),
   closed("closed"),
   expired("expired"),
+  registered("registered"),
   non("");
 
   final String value;

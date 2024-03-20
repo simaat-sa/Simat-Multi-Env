@@ -1,6 +1,8 @@
 part of 'owner_properties_imports.dart';
 
 class OwnerPropertyController {
+
+  late FilterPropertyController filterController;
   final PagingController<int, PropModel> pagingController = PagingController(firstPageKey: 1);
   ObsValue<bool> filterAppliedObs = ObsValue<bool>.withInit(false);
   String searchText = '';
@@ -43,7 +45,12 @@ class OwnerPropertyController {
   void onFilter() {
     pagingController.refresh();
     fetchPropertyData(1);
-    filterAppliedObs.setValue(true);
+    handleFilterApplied();
+  }
+
+  void handleFilterApplied() {
+    bool isFilterApplied = typeFilter != null || categoryFilter != null || searchText.isNotEmpty;
+    filterAppliedObs.setValue(isFilterApplied);
   }
 
 }

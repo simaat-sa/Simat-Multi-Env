@@ -43,19 +43,22 @@ class UnitItemWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                if(model.status.getLocalizedName()!="")
-                Container(
-                  height: 22,
-                  decoration: BoxDecoration(
-                    color: model.status.getColor(),
-                    borderRadius: BorderRadius.circular(5),
+                if (model.propDetailsStatus.getLocalizedName() != "")
+                  Container(
+                    height: 22,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: model.propDetailsStatus.getBgColor(),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      model.propDetailsStatus.getLocalizedName(),
+                      style: AppTextStyle.s14_w400(
+                        color: model.propDetailsStatus.getTextColor(),
+                      ),
+                    ),
                   ),
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
-                  child: Text(
-                    model.status.getLocalizedName(),
-                    style: AppTextStyle.s14_w400(color: context.colors.white),
-                  ),
-                ),
               ],
             ),
           ),

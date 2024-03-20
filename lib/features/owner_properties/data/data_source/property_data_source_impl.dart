@@ -18,8 +18,7 @@ import 'property_data_source.dart';
 @Injectable(as: PropertyDataSource)
 class PropertyDataSourceImpl extends PropertyDataSource {
   @override
-  Future<MyResult<PagingModel<PropModel>>> getProperties(
-      OwnerPropertiesParams params) async {
+  Future<MyResult<PagingModel<PropModel>>> getProperties(OwnerPropertiesParams params) async {
     HttpRequestModel model = HttpRequestModel(
       url: ApiNames.ownerProps(params.header()),
       responseType: ResType.model,
@@ -29,7 +28,7 @@ class PropertyDataSourceImpl extends PropertyDataSource {
       toJsonFunc: (json) {
         return PagingModel<PropModel>.fromJson(
           json,
-              (obj) => PropModel.fromJson(obj),
+          (obj) => PropModel.fromJson(obj),
         );
       },
     );
@@ -38,21 +37,20 @@ class PropertyDataSourceImpl extends PropertyDataSource {
   }
 
   @override
-  Future<MyResult<FilterPropertyModel>> getFilterProperties(bool params) async {
+  Future<MyResult<FilterPropertyModel>> getFilterProperties(bool params) async{
     HttpRequestModel model = HttpRequestModel(
         url: ApiNames.ownerPropFilter,
         responseType: ResType.model,
         requestMethod: RequestMethod.get,
         responseKey: (data) => data['data'],
-        toJsonFunc: (data) => FilterPropertyModel.fromJson(data),
-        refresh: params
+      toJsonFunc: (data) => FilterPropertyModel.fromJson(data),
+      refresh: params
     );
     return await GenericHttpImpl<FilterPropertyModel>()(model);
   }
 
   @override
-  Future<MyResult<PropDetailsModel>> getPropDetails(
-      PropertyDetailsParams param) async {
+  Future<MyResult<PropDetailsModel>> getPropDetails(PropertyDetailsParams param) async {
     HttpRequestModel model = HttpRequestModel(
       url: ApiNames.propDetails(param.propId),
       responseType: ResType.model,
@@ -67,10 +65,9 @@ class PropertyDataSourceImpl extends PropertyDataSource {
   }
 
   @override
-  Future<MyResult<List<ContractModel>>> getPropDetailsUnit(
-      PropertyDetailsParams param) async {
+  Future<MyResult<List<ContractModel>>> getPropDetailsUnits(PropertyDetailsParams param) async {
     HttpRequestModel model = HttpRequestModel(
-      url: ApiNames.propDetailsUnit(param.propId),
+      url: ApiNames.propDetailsUnit(param.header()),
       responseType: ResType.list,
       requestMethod: RequestMethod.get,
       refresh: param.refresh,

@@ -58,6 +58,10 @@ mixin _$PropDetailsModel {
   String get amtBalance => throw _privateConstructorUsedError;
   @JsonKey(name: 'amt_insur', defaultValue: "")
   String get amtInsur => throw _privateConstructorUsedError;
+  @JsonKey(name: 'expenses_count', defaultValue: "")
+  String get paymentCount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'maint_count', defaultValue: "")
+  String get maintenanceCount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -96,7 +100,9 @@ abstract class $PropDetailsModelCopyWith<$Res> {
       @JsonKey(name: 'amt_comm_tot', defaultValue: "") String amtCommTot,
       @JsonKey(name: 'amt_paid', defaultValue: "") String amtPaid,
       @JsonKey(name: 'amt_balance', defaultValue: "") String amtBalance,
-      @JsonKey(name: 'amt_insur', defaultValue: "") String amtInsur});
+      @JsonKey(name: 'amt_insur', defaultValue: "") String amtInsur,
+      @JsonKey(name: 'expenses_count', defaultValue: "") String paymentCount,
+      @JsonKey(name: 'maint_count', defaultValue: "") String maintenanceCount});
 }
 
 /// @nodoc
@@ -131,6 +137,8 @@ class _$PropDetailsModelCopyWithImpl<$Res, $Val extends PropDetailsModel>
     Object? amtPaid = null,
     Object? amtBalance = null,
     Object? amtInsur = null,
+    Object? paymentCount = null,
+    Object? maintenanceCount = null,
   }) {
     return _then(_value.copyWith(
       propRate: null == propRate
@@ -209,6 +217,14 @@ class _$PropDetailsModelCopyWithImpl<$Res, $Val extends PropDetailsModel>
           ? _value.amtInsur
           : amtInsur // ignore: cast_nullable_to_non_nullable
               as String,
+      paymentCount: null == paymentCount
+          ? _value.paymentCount
+          : paymentCount // ignore: cast_nullable_to_non_nullable
+              as String,
+      maintenanceCount: null == maintenanceCount
+          ? _value.maintenanceCount
+          : maintenanceCount // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -246,7 +262,9 @@ abstract class _$$PropDetailsModelImplCopyWith<$Res>
       @JsonKey(name: 'amt_comm_tot', defaultValue: "") String amtCommTot,
       @JsonKey(name: 'amt_paid', defaultValue: "") String amtPaid,
       @JsonKey(name: 'amt_balance', defaultValue: "") String amtBalance,
-      @JsonKey(name: 'amt_insur', defaultValue: "") String amtInsur});
+      @JsonKey(name: 'amt_insur', defaultValue: "") String amtInsur,
+      @JsonKey(name: 'expenses_count', defaultValue: "") String paymentCount,
+      @JsonKey(name: 'maint_count', defaultValue: "") String maintenanceCount});
 }
 
 /// @nodoc
@@ -279,6 +297,8 @@ class __$$PropDetailsModelImplCopyWithImpl<$Res>
     Object? amtPaid = null,
     Object? amtBalance = null,
     Object? amtInsur = null,
+    Object? paymentCount = null,
+    Object? maintenanceCount = null,
   }) {
     return _then(_$PropDetailsModelImpl(
       propRate: null == propRate
@@ -357,6 +377,14 @@ class __$$PropDetailsModelImplCopyWithImpl<$Res>
           ? _value.amtInsur
           : amtInsur // ignore: cast_nullable_to_non_nullable
               as String,
+      paymentCount: null == paymentCount
+          ? _value.paymentCount
+          : paymentCount // ignore: cast_nullable_to_non_nullable
+              as String,
+      maintenanceCount: null == maintenanceCount
+          ? _value.maintenanceCount
+          : maintenanceCount // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -393,7 +421,11 @@ class _$PropDetailsModelImpl extends _PropDetailsModel {
       @JsonKey(name: 'amt_comm_tot', defaultValue: "") required this.amtCommTot,
       @JsonKey(name: 'amt_paid', defaultValue: "") required this.amtPaid,
       @JsonKey(name: 'amt_balance', defaultValue: "") required this.amtBalance,
-      @JsonKey(name: 'amt_insur', defaultValue: "") required this.amtInsur})
+      @JsonKey(name: 'amt_insur', defaultValue: "") required this.amtInsur,
+      @JsonKey(name: 'expenses_count', defaultValue: "")
+      required this.paymentCount,
+      @JsonKey(name: 'maint_count', defaultValue: "")
+      required this.maintenanceCount})
       : super._();
 
   factory _$PropDetailsModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -456,10 +488,16 @@ class _$PropDetailsModelImpl extends _PropDetailsModel {
   @override
   @JsonKey(name: 'amt_insur', defaultValue: "")
   final String amtInsur;
+  @override
+  @JsonKey(name: 'expenses_count', defaultValue: "")
+  final String paymentCount;
+  @override
+  @JsonKey(name: 'maint_count', defaultValue: "")
+  final String maintenanceCount;
 
   @override
   String toString() {
-    return 'PropDetailsModel(propRate: $propRate, propChildAva: $propChildAva, propChildOcc: $propChildOcc, propChildTot: $propChildTot, commercialRented: $commercialRented, commercialRentedTotal: $commercialRentedTotal, commercialRentedRate: $commercialRentedRate, residentialRented: $residentialRented, residentialRentedTotal: $residentialRentedTotal, residentialRentedRate: $residentialRentedRate, balance: $balance, amtPayable: $amtPayable, isRentable: $isRentable, amtDue: $amtDue, amtCollect: $amtCollect, amtCommTot: $amtCommTot, amtPaid: $amtPaid, amtBalance: $amtBalance, amtInsur: $amtInsur)';
+    return 'PropDetailsModel(propRate: $propRate, propChildAva: $propChildAva, propChildOcc: $propChildOcc, propChildTot: $propChildTot, commercialRented: $commercialRented, commercialRentedTotal: $commercialRentedTotal, commercialRentedRate: $commercialRentedRate, residentialRented: $residentialRented, residentialRentedTotal: $residentialRentedTotal, residentialRentedRate: $residentialRentedRate, balance: $balance, amtPayable: $amtPayable, isRentable: $isRentable, amtDue: $amtDue, amtCollect: $amtCollect, amtCommTot: $amtCommTot, amtPaid: $amtPaid, amtBalance: $amtBalance, amtInsur: $amtInsur, paymentCount: $paymentCount, maintenanceCount: $maintenanceCount)';
   }
 
   @override
@@ -501,7 +539,11 @@ class _$PropDetailsModelImpl extends _PropDetailsModel {
             (identical(other.amtBalance, amtBalance) ||
                 other.amtBalance == amtBalance) &&
             (identical(other.amtInsur, amtInsur) ||
-                other.amtInsur == amtInsur));
+                other.amtInsur == amtInsur) &&
+            (identical(other.paymentCount, paymentCount) ||
+                other.paymentCount == paymentCount) &&
+            (identical(other.maintenanceCount, maintenanceCount) ||
+                other.maintenanceCount == maintenanceCount));
   }
 
   @JsonKey(ignore: true)
@@ -526,7 +568,9 @@ class _$PropDetailsModelImpl extends _PropDetailsModel {
         amtCommTot,
         amtPaid,
         amtBalance,
-        amtInsur
+        amtInsur,
+        paymentCount,
+        maintenanceCount
       ]);
 
   @JsonKey(ignore: true)
@@ -581,7 +625,11 @@ abstract class _PropDetailsModel extends PropDetailsModel {
       @JsonKey(name: 'amt_balance', defaultValue: "")
       required final String amtBalance,
       @JsonKey(name: 'amt_insur', defaultValue: "")
-      required final String amtInsur}) = _$PropDetailsModelImpl;
+      required final String amtInsur,
+      @JsonKey(name: 'expenses_count', defaultValue: "")
+      required final String paymentCount,
+      @JsonKey(name: 'maint_count', defaultValue: "")
+      required final String maintenanceCount}) = _$PropDetailsModelImpl;
   _PropDetailsModel._() : super._();
 
   factory _PropDetailsModel.fromJson(Map<String, dynamic> json) =
@@ -644,6 +692,12 @@ abstract class _PropDetailsModel extends PropDetailsModel {
   @override
   @JsonKey(name: 'amt_insur', defaultValue: "")
   String get amtInsur;
+  @override
+  @JsonKey(name: 'expenses_count', defaultValue: "")
+  String get paymentCount;
+  @override
+  @JsonKey(name: 'maint_count', defaultValue: "")
+  String get maintenanceCount;
   @override
   @JsonKey(ignore: true)
   _$$PropDetailsModelImplCopyWith<_$PropDetailsModelImpl> get copyWith =>

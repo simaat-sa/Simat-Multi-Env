@@ -1839,6 +1839,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Vacant`
+  String get vacant {
+    return Intl.message(
+      'Vacant',
+      name: 'vacant',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rented`
+  String get rented {
+    return Intl.message(
+      'Rented',
+      name: 'rented',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reserved`
+  String get reserved {
+    return Intl.message(
+      'Reserved',
+      name: 'reserved',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

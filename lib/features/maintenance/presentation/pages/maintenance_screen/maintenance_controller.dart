@@ -11,11 +11,11 @@ class MaintenanceController {
 
 
 
-  void contractDialog(BuildContext context, MaintenanceModel model) {
+  void maintenanceDialog(BuildContext context, MaintenanceModel model) {
     showDialog(
       context: context,
       builder: (context) {
-        return ContractDialog(
+        return MaintenanceDialog(
           model: model,
         );
       },

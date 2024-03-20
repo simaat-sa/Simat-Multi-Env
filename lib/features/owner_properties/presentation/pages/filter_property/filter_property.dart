@@ -2,20 +2,21 @@ part of 'filter_property_imports.dart';
 
 @RoutePage(name: 'FilterPropertyRoute')
 class FilterProperty extends StatefulWidget {
-  final OwnerPropertyController ownerController;
+  final FilterPropertyController filterController;
 
-  const FilterProperty({super.key, required this.ownerController});
+  const FilterProperty({super.key, required this.filterController});
 
   @override
   State<FilterProperty> createState() => _FilterPropertyState();
 }
 
 class _FilterPropertyState extends State<FilterProperty> {
+
   late FilterPropertyController controller;
 
   @override
   void initState() {
-    controller = FilterPropertyController(widget.ownerController);
+    controller = widget.filterController;
     super.initState();
   }
 
@@ -29,7 +30,7 @@ class _FilterPropertyState extends State<FilterProperty> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const FilterPropertyAppBar(),
+            const FilterAppBarWidget(),
             RequesterConsumer<FilterPropertyModel>(
               requester: controller.requester,
               successBuilder: (context, data) {
@@ -72,7 +73,16 @@ class _FilterPropertyState extends State<FilterProperty> {
                 return const CircularProgressIndicator();
               },
             ),
-            FilterPropertyButtonsWidget(controller: controller),
+            FilterButtonsWidget(
+              onFilterTap: () {
+                controller.onFilter();
+                Navigator.pop(context);
+              },
+              onResetTap: () {
+                controller.onReset();
+                Navigator.pop(context);
+              },
+            ),
           ],
         ),
       ),

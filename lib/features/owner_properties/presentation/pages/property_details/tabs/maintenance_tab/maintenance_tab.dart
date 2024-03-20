@@ -20,21 +20,30 @@ class _MaintenanceTabState extends State<MaintenanceTab> {
 
   @override
   Widget build(BuildContext context) {
-    return PagedListView(
-      pagingController: controller.pagingController,
-      builderDelegate: PagedChildBuilderDelegate<MaintenanceModel>(
-        itemBuilder: (context, item, index) {
-          return MaintenanceTabItemWidget(
-            model: item,
-          );
-        },
-        firstPageErrorIndicatorBuilder: (context) {
-          return const UnitLoadingListWidget();
-        },
-        noItemsFoundIndicatorBuilder: (context) {
-          return const EmptyListItemWidget();
-        },
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        MaintenanceTabHeaderWidget(controller: controller),
+        Flexible(
+          child: PagedListView(
+            pagingController: controller.pagingController,
+            builderDelegate: PagedChildBuilderDelegate<MaintenanceModel>(
+              itemBuilder: (context, item, index) {
+                return MaintenanceTabItemWidget(
+                  model: item,
+                  controller: controller,
+                );
+              },
+              firstPageErrorIndicatorBuilder: (context) {
+                return const UnitLoadingListWidget();
+              },
+              noItemsFoundIndicatorBuilder: (context) {
+                return const EmptyListItemWidget();
+              },
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

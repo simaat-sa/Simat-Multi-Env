@@ -56,9 +56,7 @@ import 'package:flutter_tdd/features/notification/presentation/pages/notices_scr
     as _i12;
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/filter_property/filter_property_imports.dart'
     as _i7;
-import 'package:flutter_tdd/features/owner_properties/presentation/pages/owner_properties/owner_properties_imports.dart'
-    as _i28;
-import 'package:flutter_tdd/features/owner_properties/presentation/pages/paymen_filter/paymen_filter_imports.dart'
+import 'package:flutter_tdd/features/owner_properties/presentation/pages/paymen_filter/payment_filter_imports.dart'
     as _i13;
 import 'package:flutter_tdd/features/owner_properties/presentation/pages/property_details/property_details_imports.dart'
     as _i14;
@@ -132,7 +130,7 @@ abstract class $AppRouter extends _i21.RootStackRouter {
         routeData: routeData,
         child: _i7.FilterProperty(
           key: args.key,
-          ownerController: args.ownerController,
+          filterController: args.filterController,
         ),
       );
     },
@@ -445,13 +443,13 @@ class FilterMaintenanceRouteArgs {
 class FilterPropertyRoute extends _i21.PageRouteInfo<FilterPropertyRouteArgs> {
   FilterPropertyRoute({
     _i22.Key? key,
-    required _i28.OwnerPropertyController ownerController,
+    required _i7.FilterPropertyController filterController,
     List<_i21.PageRouteInfo>? children,
   }) : super(
           FilterPropertyRoute.name,
           args: FilterPropertyRouteArgs(
             key: key,
-            ownerController: ownerController,
+            filterController: filterController,
           ),
           initialChildren: children,
         );
@@ -465,16 +463,16 @@ class FilterPropertyRoute extends _i21.PageRouteInfo<FilterPropertyRouteArgs> {
 class FilterPropertyRouteArgs {
   const FilterPropertyRouteArgs({
     this.key,
-    required this.ownerController,
+    required this.filterController,
   });
 
   final _i22.Key? key;
 
-  final _i28.OwnerPropertyController ownerController;
+  final _i7.FilterPropertyController filterController;
 
   @override
   String toString() {
-    return 'FilterPropertyRouteArgs{key: $key, ownerController: $ownerController}';
+    return 'FilterPropertyRouteArgs{key: $key, filterController: $filterController}';
   }
 }
 

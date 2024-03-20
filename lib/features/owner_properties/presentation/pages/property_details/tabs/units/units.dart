@@ -33,7 +33,7 @@ class _UnitsState extends State<Units> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('الوحدات[${data.length}]',style: AppTextStyle.s16_w400(color: context.colors.blackOpacity),),
+              UnitFilterHeaderWidget(controller: controller, listModel: data),
               Gaps.vGap12,
               UnitItemsWidget(
                 listContract: data,

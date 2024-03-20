@@ -287,11 +287,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("rejected By The Supervisor"),
         "renewal_request_completed": MessageLookupByLibrary.simpleMessage(
             "Renewal request has been completed successfully"),
+        "rented": MessageLookupByLibrary.simpleMessage("Rented"),
         "request_to_renew_contract": MessageLookupByLibrary.simpleMessage(
             "Request to renew the current contract"),
         "requesting_maintenance": MessageLookupByLibrary.simpleMessage(
             "Requesting maintenance or repairs to the unit"),
         "required": MessageLookupByLibrary.simpleMessage("Required"),
+        "reserved": MessageLookupByLibrary.simpleMessage("Reserved"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "residential": MessageLookupByLibrary.simpleMessage("Residential"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
@@ -326,6 +328,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser"),
+        "vacant": MessageLookupByLibrary.simpleMessage("Vacant"),
         "version_label": m4,
         "view_payments": MessageLookupByLibrary.simpleMessage("View payments")
       };

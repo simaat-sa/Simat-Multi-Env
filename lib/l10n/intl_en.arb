@@ -178,5 +178,8 @@
   "tax": "Tax",
   "apply": "Apply",
   "sar": " SAR",
-  "no_items_found":"!No Item Found"
+  "no_items_found":"!No Item Found",
+  "vacant": "Vacant",
+  "rented": "Rented",
+  "reserved": "Reserved"
 }

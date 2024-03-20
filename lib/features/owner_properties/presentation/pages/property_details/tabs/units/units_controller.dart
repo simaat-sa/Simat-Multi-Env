@@ -1,6 +1,8 @@
 part of 'units_imports.dart';
 
 class UnitController {
+  final ObsValue<PropDetailsStatus> selectStatusObs = ObsValue<PropDetailsStatus>.withInit(PropDetailsStatus.non);
+  final ObsValue<bool> applyFilterObs = ObsValue<bool>.withInit(false);
   late PropUnitsRequester requester;
   final PropModel model;
 
@@ -8,9 +10,32 @@ class UnitController {
     requester = PropUnitsRequester(_propEntity());
   }
 
-  PropertyDetailsParams _propEntity() => PropertyDetailsParams(propId: model.areId);
+  void onFilter() {
+    if (selectStatusObs.getValue() != PropDetailsStatus.non) {
+      requester.onFilter(selectStatusObs.getValue().value);
+      applyFilterObs.setValue(true);
+    }
+  }
 
-  Future<void> requestPropUnitData()async{
+  void onResetFilter() {
+    requester.onReset();
+    applyFilterObs.setValue(false);
+  }
+
+  void filterSheet(BuildContext context) {
+    AppBottomSheets.showScrollableBody(
+      context: context,
+      builder: (context) {
+        return UnitFilterWidget(controller: this);
+      },
+    );
+  }
+
+  PropertyDetailsParams _propEntity() {
+    return PropertyDetailsParams(propId: model.areId);
+  }
+
+  Future<void> requestPropUnitData() async {
     requester.request();
   }
 }

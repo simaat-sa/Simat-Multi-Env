@@ -31,7 +31,7 @@ class ApiNames {
   static String ownerPropFilter = "${version1Part}owner/properties/filters";
   static String ownerProps(String header)=> "$version1Part/owner/properties/list$header";
   static String propDetails(String param)=> "${version1Part}owner/properties/details?prop_id=$param";
-  static String propDetailsUnit(String param)=> "${version1Part}owner/properties/units/list?prop_id=$param";
+  static String propDetailsUnit(String header)=> "${version1Part}owner/properties/units/list?$header";
   static String propExpenses(String param)=> "${version1Part}owner/properties/expenses?prop_id=$param";
 
   /// maintenance routes

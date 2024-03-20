@@ -277,11 +277,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مرفوض من قبل المالك"),
         "rejected_by_the_supervisor":
             MessageLookupByLibrary.simpleMessage("مرفوض من المشرف"),
+        "rented": MessageLookupByLibrary.simpleMessage("مؤجر"),
         "request_to_renew_contract":
             MessageLookupByLibrary.simpleMessage("طلب تجديد العقد الحالي"),
         "requesting_maintenance": MessageLookupByLibrary.simpleMessage(
             "طلب اجراء صيانة أو اصلاحات للوحدة"),
         "required": MessageLookupByLibrary.simpleMessage("المطلوب"),
+        "reserved": MessageLookupByLibrary.simpleMessage("محجوز"),
         "reset": MessageLookupByLibrary.simpleMessage("اعادة تعيين"),
         "residential": MessageLookupByLibrary.simpleMessage("سكني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
@@ -313,6 +315,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح"),
+        "vacant": MessageLookupByLibrary.simpleMessage("شاغر"),
         "version_label": m4,
         "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات")
       };

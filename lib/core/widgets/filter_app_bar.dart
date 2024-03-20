@@ -1,8 +1,12 @@
-part of'filter_property_widgets_imports.dart';
 
+import 'package:flutter/material.dart';
+import 'package:flutter_tdd/core/constants/gaps.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
+import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
+import 'package:flutter_tdd/core/theme/text/app_text_style.dart';
 
-class FilterPropertyAppBar extends StatelessWidget {
-  const FilterPropertyAppBar({super.key});
+class FilterAppBarWidget extends StatelessWidget {
+  const FilterAppBarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

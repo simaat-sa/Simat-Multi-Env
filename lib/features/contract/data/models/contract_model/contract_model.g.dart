@@ -36,6 +36,8 @@ _$ContractModelImpl _$$ContractModelImplFromJson(Map<String, dynamic> json) =>
       propCity: json['prop_city'] as String? ?? '',
       propRegion: json['prop_region'] as String? ?? '',
       startDt: json['tts_start_date_dgr'] as String? ?? '',
+      propDetailsStatus:
+          $enumDecode(_$PropDetailsStatusEnumMap, json['acl_status_code']),
     );
 
 Map<String, dynamic> _$$ContractModelImplToJson(_$ContractModelImpl instance) =>
@@ -65,6 +67,8 @@ Map<String, dynamic> _$$ContractModelImplToJson(_$ContractModelImpl instance) =>
       'prop_city': instance.propCity,
       'prop_region': instance.propRegion,
       'tts_start_date_dgr': instance.startDt,
+      'acl_status_code':
+          _$PropDetailsStatusEnumMap[instance.propDetailsStatus]!,
     };
 
 const _$DateTypesEnumMap = {
@@ -78,6 +82,7 @@ const _$TenantVisibilityEnumMap = {
   TenantVisibility.inactive: 'inactive',
   TenantVisibility.closed: 'closed',
   TenantVisibility.expired: 'expired',
+  TenantVisibility.registered: 'registered',
   TenantVisibility.non: '',
 };
 
@@ -85,4 +90,12 @@ const _$ContractTypesEnumMap = {
   ContractTypes.residential: 'residential',
   ContractTypes.commercial: 'commercial',
   ContractTypes.non: '',
+};
+
+const _$PropDetailsStatusEnumMap = {
+  PropDetailsStatus.vacant: '41920',
+  PropDetailsStatus.rented: '41930',
+  PropDetailsStatus.reserved: '41940',
+  PropDetailsStatus.newStatus: '41910',
+  PropDetailsStatus.non: '0',
 };

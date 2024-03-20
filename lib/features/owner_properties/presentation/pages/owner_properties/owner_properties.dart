@@ -13,6 +13,7 @@ class _OwnerPropertiesState extends State<OwnerProperties> {
   @override
   void initState() {
     controller.initPaginationController();
+    controller.filterController = FilterPropertyController(controller);
     super.initState();
   }
 
@@ -34,7 +35,11 @@ class _OwnerPropertiesState extends State<OwnerProperties> {
                 controller.searchText = value;
                 controller.onFilter();
               },
-              onTap: () => AutoRouter.of(context).push( FilterPropertyRoute(ownerController:controller)),
+              onTap: (){
+                AutoRouter.of(context).push( FilterPropertyRoute(filterController:controller.filterController)).then((value) {
+                  controller.handleFilterApplied();
+                });
+              },
             ),
             Gaps.vGap10,
             Flexible(

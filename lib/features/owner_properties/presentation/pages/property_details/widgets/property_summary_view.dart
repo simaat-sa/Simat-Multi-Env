@@ -11,7 +11,7 @@ class PropertySummaryView extends StatelessWidget {
     return RequesterConsumer(
       requester: controller.requester,
       successBuilder: (context, data) {
-        return Column(
+        return ListView(
           children: [
             PropertySummaryHeaderWidget(model: data!, propModel: propModel),
             Gaps.vGap18,
@@ -19,7 +19,7 @@ class PropertySummaryView extends StatelessWidget {
             Gaps.vGap12,
             PropertySummaryCostItemWidget(model: data),
             Gaps.vGap12,
-            const PropertySummaryAddRequestWidget(),
+            PropertySummaryAddRequestWidget(model: propModel),
           ],
         );
       },
