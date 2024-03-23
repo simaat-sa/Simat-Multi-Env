@@ -34,7 +34,7 @@ class GenericHttpImpl<T> extends GenericHttp<T> {
       body: model.requestBody ?? {},
     );
 
-    await _checkInternetConnection();
+    // await _checkInternetConnection();
 
     MyResult<Response> response;
     switch (model.requestMethod) {
