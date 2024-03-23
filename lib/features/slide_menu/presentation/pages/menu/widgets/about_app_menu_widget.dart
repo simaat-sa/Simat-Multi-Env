@@ -17,12 +17,12 @@ class AboutAppMenuWidget extends StatelessWidget {
               text: Translate.of(context).Privacy_Policy,
             ),
           ),
-          GestureDetector(
-            onTap: () {},
-            child: AuthDrawerItemWidget(
-              text: Translate.of(context).About_Simat_application,
-            ),
-          ),
+          // GestureDetector(
+          //   onTap: () {},
+          //   child: AuthDrawerItemWidget(
+          //     text: Translate.of(context).About_Simat_application,
+          //   ),
+          // ),
           AuthDrawerItemWidget(
             padding: const EdgeInsets.only(bottom: 0),
             text: Translate.of(context).About_New_version,

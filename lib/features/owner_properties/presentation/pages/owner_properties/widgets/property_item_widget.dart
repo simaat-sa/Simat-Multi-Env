@@ -71,7 +71,7 @@ class PropertyItemWidget extends StatelessWidget {
                               color: context.colors.black.withOpacity(0.15),
                               borderRadius: BorderRadius.circular(5)),
                           child: Text(
-                            "#${model.areCode}",
+                            "#${model.areId}",
                             style: AppTextStyle.s14_w400(color: context.colors.white)
                                 .copyWith(height: 2.2),
                           ),

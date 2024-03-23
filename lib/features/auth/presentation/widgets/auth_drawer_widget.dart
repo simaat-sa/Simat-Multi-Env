@@ -60,10 +60,10 @@ class AuthDrawerWidget extends StatelessWidget {
                     text: Translate.of(context).Technical_support_ticket,
                     onTap: () => getIt<ShareServices>().launchURL(url: ApiNames.supportLink),
                   ),
-                  AuthDrawerItemWidget(
-                    text: Translate.of(context).About_Simat_application,
-                    onTap: () {},
-                  ),
+                  // AuthDrawerItemWidget(
+                  //   text: Translate.of(context).About_Simat_application,
+                  //   onTap: () {},
+                  // ),
                   AuthDrawerItemWidget(
                     text: Translate.of(context).About_New_version,
                     subtext: 'v.${CurrentVersionHelper.instance.currentVersion}',
