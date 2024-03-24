@@ -38,6 +38,8 @@ _$ContractModelImpl _$$ContractModelImplFromJson(Map<String, dynamic> json) =>
       startDt: json['tts_start_date_dgr'] as String? ?? '',
       propDetailsStatus:
           $enumDecode(_$PropDetailsStatusEnumMap, json['acl_status_code']),
+      balance: json['amt_balance'] as String? ?? '0',
+      payablePrice: json['amt_payable'] as String? ?? '0',
     );
 
 Map<String, dynamic> _$$ContractModelImplToJson(_$ContractModelImpl instance) =>
@@ -69,6 +71,8 @@ Map<String, dynamic> _$$ContractModelImplToJson(_$ContractModelImpl instance) =>
       'tts_start_date_dgr': instance.startDt,
       'acl_status_code':
           _$PropDetailsStatusEnumMap[instance.propDetailsStatus]!,
+      'amt_balance': instance.balance,
+      'amt_payable': instance.payablePrice,
     };
 
 const _$DateTypesEnumMap = {

@@ -20,23 +20,23 @@ class MaintenanceServiceFormOption extends StatelessWidget {
       optionsRequester: BaseOptionsRequester(
         isRemotelySearch: false,
         immediatelyRequestOptions: true,
-        valueMainTitleGetter: (value) => value?.name,
+        valueMainTitleGetter: (value) => value?.getLocalizedName(),
         fetcher: (c) => getIt<MaintenanceRepository>().getMaintenanceServices(true),
       ),
       selectedItems: controller.selectedServices,
       valueIdGetter: (service) => service?.id,
-      valueMainTitleGetter: (service) => service?.name,
+      valueMainTitleGetter: (service) => service?.getLocalizedName(),
       selectedOptionBuilder: (list) {
         return BaseOptionsDisplayWidget<MaintenanceServicesModel>(
           selectedOptions: list,
-          titleGetter: (value) => value.name,
+          titleGetter: (value) => value.getLocalizedName(),
         );
       },
       optionItemBuilder: (item, isSelected) {
         return SelectableOptionItemWidget(
           isSelected: isSelected,
           optionItemWidget: OptionItemWidget(
-            title: item.name,
+            title: item.getLocalizedName(),
           ),
         );
       },

@@ -55,7 +55,7 @@ class UnitItemWidget extends StatelessWidget {
                     child: Text(
                       model.propDetailsStatus.getLocalizedName(),
                       style: AppTextStyle.s14_w400(
-                        color: model.propDetailsStatus.getTextColor(),
+                        color: model.propDetailsStatus.getTextColor()
                       ),
                     ),
                   ),
@@ -65,12 +65,12 @@ class UnitItemWidget extends StatelessWidget {
           Gaps.vGap15,
           CostItemWidget(
             title: Translate.s.balance,
-            value: model.netPrice,
+            value: model.amtBalance,
             color: context.colors.bgLight,
           ),
           CostItemWidget(
             title: Translate.s.required,
-            value: model.duePrice,
+            value: model.amtPayablePrice,
           ),
           CostItemWidget(
               title: Translate.of(context).beginning_of_the_contract,

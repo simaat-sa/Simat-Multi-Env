@@ -43,6 +43,8 @@ class ContractModel with _$ContractModel {
     @JsonKey(name: 'prop_region', defaultValue: "") required String propRegion,
     @JsonKey(name: 'tts_start_date_dgr', defaultValue: "") required String startDt,
     @JsonKey(name: 'acl_status_code') required PropDetailsStatus propDetailsStatus,
+    @JsonKey(name: 'amt_balance', defaultValue: "0") required String balance,
+    @JsonKey(name: 'amt_payable', defaultValue: "0") required String payablePrice,
   }) = _ContractModel;
 
   factory ContractModel.fromJson(Map<String, dynamic> json) => _$ContractModelFromJson(json);
@@ -80,8 +82,12 @@ class ContractModel with _$ContractModel {
   //الاضافي
   String get additionalPrice => contractAdditionalPrice.priceFormat;
 
+  // المطلوب
   String get duePrice => totalDuePrice.priceFormat;
 
-  String get blockName => LocalizedNameModel.fromStrings(ar: blocNameAr, en: blocNameEn).getLocalizedString;
+  // الرصيد
+  String get amtBalance => balance.priceFormat;
+  String get amtPayablePrice => payablePrice.priceFormat;
 
+  String get blockName => LocalizedNameModel.fromStrings(ar: blocNameAr, en: blocNameEn).getLocalizedString;
 }

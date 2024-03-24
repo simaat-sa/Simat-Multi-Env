@@ -33,11 +33,12 @@ class PropModel with _$PropModel {
     @JsonKey(name: 'contact_name', defaultValue: "") required String contactName,
     @JsonKey(name: 'dt_updated', defaultValue: "") required String date,
     @JsonKey(name: 'contract_type') required ContractTypes contractType,
-    @JsonKey(name: 'amt_collect', defaultValue: "0")required String contractCollectPrice,
-    @JsonKey(name: 'amt_due', defaultValue: "0")required String totalDuePrice,
-    @JsonKey(name: 'prop_child_tot', defaultValue: "0")required String propChildTot,
-    @JsonKey(name: 'prop_child_occ', defaultValue: "0")required String propChildOcc,
-    @JsonKey(name: 'prop_address',defaultValue: "")required String propAddress,
+    @JsonKey(name: 'amt_collect', defaultValue: "0") required String contractCollectPrice,
+    @JsonKey(name: 'amt_due', defaultValue: "0") required String totalDuePrice,
+    @JsonKey(name: 'prop_child_tot', defaultValue: "0") required String propChildTot,
+    @JsonKey(name: 'prop_child_occ', defaultValue: "0") required String propChildOcc,
+    @JsonKey(name: 'prop_address', defaultValue: "") required String propAddress,
+    @JsonKey(name: 'amt_payable', defaultValue: "") required String payablePrice,
   }) = _PropModel;
 
   factory PropModel.fromJson(Map<String, dynamic> json) => _$PropModelFromJson(json);
@@ -94,6 +95,7 @@ class PropModel with _$PropModel {
       typeAr: "",
       typeEn: "",
       propAddress: "",
+      payablePrice: '',
     );
   }
 }

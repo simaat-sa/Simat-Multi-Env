@@ -72,6 +72,10 @@ mixin _$ContractModel {
   String get startDt => throw _privateConstructorUsedError;
   @JsonKey(name: 'acl_status_code')
   PropDetailsStatus get propDetailsStatus => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amt_balance', defaultValue: "0")
+  String get balance => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amt_payable', defaultValue: "0")
+  String get payablePrice => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -116,7 +120,9 @@ abstract class $ContractModelCopyWith<$Res> {
       @JsonKey(name: 'prop_city', defaultValue: "") String propCity,
       @JsonKey(name: 'prop_region', defaultValue: "") String propRegion,
       @JsonKey(name: 'tts_start_date_dgr', defaultValue: "") String startDt,
-      @JsonKey(name: 'acl_status_code') PropDetailsStatus propDetailsStatus});
+      @JsonKey(name: 'acl_status_code') PropDetailsStatus propDetailsStatus,
+      @JsonKey(name: 'amt_balance', defaultValue: "0") String balance,
+      @JsonKey(name: 'amt_payable', defaultValue: "0") String payablePrice});
 }
 
 /// @nodoc
@@ -158,6 +164,8 @@ class _$ContractModelCopyWithImpl<$Res, $Val extends ContractModel>
     Object? propRegion = null,
     Object? startDt = null,
     Object? propDetailsStatus = null,
+    Object? balance = null,
+    Object? payablePrice = null,
   }) {
     return _then(_value.copyWith(
       propId: null == propId
@@ -264,6 +272,14 @@ class _$ContractModelCopyWithImpl<$Res, $Val extends ContractModel>
           ? _value.propDetailsStatus
           : propDetailsStatus // ignore: cast_nullable_to_non_nullable
               as PropDetailsStatus,
+      balance: null == balance
+          ? _value.balance
+          : balance // ignore: cast_nullable_to_non_nullable
+              as String,
+      payablePrice: null == payablePrice
+          ? _value.payablePrice
+          : payablePrice // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -307,7 +323,9 @@ abstract class _$$ContractModelImplCopyWith<$Res>
       @JsonKey(name: 'prop_city', defaultValue: "") String propCity,
       @JsonKey(name: 'prop_region', defaultValue: "") String propRegion,
       @JsonKey(name: 'tts_start_date_dgr', defaultValue: "") String startDt,
-      @JsonKey(name: 'acl_status_code') PropDetailsStatus propDetailsStatus});
+      @JsonKey(name: 'acl_status_code') PropDetailsStatus propDetailsStatus,
+      @JsonKey(name: 'amt_balance', defaultValue: "0") String balance,
+      @JsonKey(name: 'amt_payable', defaultValue: "0") String payablePrice});
 }
 
 /// @nodoc
@@ -347,6 +365,8 @@ class __$$ContractModelImplCopyWithImpl<$Res>
     Object? propRegion = null,
     Object? startDt = null,
     Object? propDetailsStatus = null,
+    Object? balance = null,
+    Object? payablePrice = null,
   }) {
     return _then(_$ContractModelImpl(
       propId: null == propId
@@ -453,6 +473,14 @@ class __$$ContractModelImplCopyWithImpl<$Res>
           ? _value.propDetailsStatus
           : propDetailsStatus // ignore: cast_nullable_to_non_nullable
               as PropDetailsStatus,
+      balance: null == balance
+          ? _value.balance
+          : balance // ignore: cast_nullable_to_non_nullable
+              as String,
+      payablePrice: null == payablePrice
+          ? _value.payablePrice
+          : payablePrice // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -498,7 +526,10 @@ class _$ContractModelImpl extends _ContractModel {
       @JsonKey(name: 'prop_region', defaultValue: "") required this.propRegion,
       @JsonKey(name: 'tts_start_date_dgr', defaultValue: "")
       required this.startDt,
-      @JsonKey(name: 'acl_status_code') required this.propDetailsStatus})
+      @JsonKey(name: 'acl_status_code') required this.propDetailsStatus,
+      @JsonKey(name: 'amt_balance', defaultValue: "0") required this.balance,
+      @JsonKey(name: 'amt_payable', defaultValue: "0")
+      required this.payablePrice})
       : super._();
 
   factory _$ContractModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -582,10 +613,16 @@ class _$ContractModelImpl extends _ContractModel {
   @override
   @JsonKey(name: 'acl_status_code')
   final PropDetailsStatus propDetailsStatus;
+  @override
+  @JsonKey(name: 'amt_balance', defaultValue: "0")
+  final String balance;
+  @override
+  @JsonKey(name: 'amt_payable', defaultValue: "0")
+  final String payablePrice;
 
   @override
   String toString() {
-    return 'ContractModel(propId: $propId, code: $code, areId: $areId, areCode: $areCode, areAreId: $areAreId, unitName: $unitName, blocNameAr: $blocNameAr, blocNameEn: $blocNameEn, contactName: $contactName, dateType: $dateType, dataTimeHj: $dataTimeHj, dataTimeStamp: $dataTimeStamp, totalDuePrice: $totalDuePrice, contractCollectPrice: $contractCollectPrice, contractNetPrice: $contractNetPrice, contractAdditionalPrice: $contractAdditionalPrice, contractInsurancePrice: $contractInsurancePrice, status: $status, type: $type, propLat: $propLat, propLng: $propLng, propImg: $propImg, propCity: $propCity, propRegion: $propRegion, startDt: $startDt, propDetailsStatus: $propDetailsStatus)';
+    return 'ContractModel(propId: $propId, code: $code, areId: $areId, areCode: $areCode, areAreId: $areAreId, unitName: $unitName, blocNameAr: $blocNameAr, blocNameEn: $blocNameEn, contactName: $contactName, dateType: $dateType, dataTimeHj: $dataTimeHj, dataTimeStamp: $dataTimeStamp, totalDuePrice: $totalDuePrice, contractCollectPrice: $contractCollectPrice, contractNetPrice: $contractNetPrice, contractAdditionalPrice: $contractAdditionalPrice, contractInsurancePrice: $contractInsurancePrice, status: $status, type: $type, propLat: $propLat, propLng: $propLng, propImg: $propImg, propCity: $propCity, propRegion: $propRegion, startDt: $startDt, propDetailsStatus: $propDetailsStatus, balance: $balance, payablePrice: $payablePrice)';
   }
 
   @override
@@ -635,7 +672,10 @@ class _$ContractModelImpl extends _ContractModel {
                 other.propRegion == propRegion) &&
             (identical(other.startDt, startDt) || other.startDt == startDt) &&
             (identical(other.propDetailsStatus, propDetailsStatus) ||
-                other.propDetailsStatus == propDetailsStatus));
+                other.propDetailsStatus == propDetailsStatus) &&
+            (identical(other.balance, balance) || other.balance == balance) &&
+            (identical(other.payablePrice, payablePrice) ||
+                other.payablePrice == payablePrice));
   }
 
   @JsonKey(ignore: true)
@@ -667,7 +707,9 @@ class _$ContractModelImpl extends _ContractModel {
         propCity,
         propRegion,
         startDt,
-        propDetailsStatus
+        propDetailsStatus,
+        balance,
+        payablePrice
       ]);
 
   @JsonKey(ignore: true)
@@ -731,8 +773,11 @@ abstract class _ContractModel extends ContractModel {
       @JsonKey(name: 'tts_start_date_dgr', defaultValue: "")
       required final String startDt,
       @JsonKey(name: 'acl_status_code')
-      required final PropDetailsStatus
-          propDetailsStatus}) = _$ContractModelImpl;
+      required final PropDetailsStatus propDetailsStatus,
+      @JsonKey(name: 'amt_balance', defaultValue: "0")
+      required final String balance,
+      @JsonKey(name: 'amt_payable', defaultValue: "0")
+      required final String payablePrice}) = _$ContractModelImpl;
   _ContractModel._() : super._();
 
   factory _ContractModel.fromJson(Map<String, dynamic> json) =
@@ -816,6 +861,12 @@ abstract class _ContractModel extends ContractModel {
   @override
   @JsonKey(name: 'acl_status_code')
   PropDetailsStatus get propDetailsStatus;
+  @override
+  @JsonKey(name: 'amt_balance', defaultValue: "0")
+  String get balance;
+  @override
+  @JsonKey(name: 'amt_payable', defaultValue: "0")
+  String get payablePrice;
   @override
   @JsonKey(ignore: true)
   _$$ContractModelImplCopyWith<_$ContractModelImpl> get copyWith =>

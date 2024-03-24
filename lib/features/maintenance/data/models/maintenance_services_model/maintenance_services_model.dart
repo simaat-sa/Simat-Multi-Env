@@ -1,3 +1,8 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tdd/core/bloc/device_cubit/device_cubit.dart';
+import 'package:flutter_tdd/core/helpers/di.dart';
+import 'package:flutter_tdd/core/helpers/global_context.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'maintenance_services_model.freezed.dart';
@@ -31,6 +36,13 @@ class MaintenanceServicesModel with _$MaintenanceServicesModel {
 
   factory MaintenanceServicesModel.fromJson(Map<String, dynamic> json) =>
       _$MaintenanceServicesModelFromJson(json);
-
-  String get name => nameAr;
+  String getLocalizedName() {
+    BuildContext context = getIt<GlobalContext>().context();
+    var lang = context.read<DeviceCubit>().state.model.locale.languageCode;
+    if (lang == 'ar') {
+      return nameAr;
+    } else {
+      return nameEn;
+    }
+  }
 }

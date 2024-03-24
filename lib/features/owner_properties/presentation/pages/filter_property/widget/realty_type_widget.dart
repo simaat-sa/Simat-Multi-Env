@@ -16,7 +16,7 @@ class RealtyTypeWidget extends StatelessWidget {
                 (index) {
               final item = types[index];
               return FilterPropertySelectItemWidget(
-                title: item.name,
+                title: item.getLocalizedName(),
                 onTap: () => _onTap(item,value),
                 iconPath: item.selected ?? false ? Res.checkmark : Res.checkmarkEmpty,
               );
