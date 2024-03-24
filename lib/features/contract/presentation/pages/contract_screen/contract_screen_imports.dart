@@ -17,7 +17,7 @@ import 'package:flutter_tdd/features/contract/domain/entities/contract_params.da
 import 'package:flutter_tdd/features/contract/domain/repositories/contract_repository.dart';
 import 'package:flutter_tdd/features/contract/presentation/pages/filter_contract/filter_contract_imports.dart';
 import 'package:flutter_tdd/features/contract/presentation/widgets/custom_app_bar.dart';
-import 'package:flutter_tdd/features/contract/presentation/widgets/page_header_title_widget.dart';
+import 'package:flutter_tdd/core/widgets/page_header_title_widget.dart';
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 

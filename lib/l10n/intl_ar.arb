@@ -211,6 +211,9 @@
   "beginning_of_the_contract": "بداية العقد",
   "end_of_the_contract": "نهاية العقد",
   "tenant": "المستأجر",
+  "qr_scan": "مسح رمز الإستجابة",
+  "real_estate_count": "العقارات {count}",
+  "cancel_filter": "الغاء التصفية",
   "registered": "مسجل"
 }
 

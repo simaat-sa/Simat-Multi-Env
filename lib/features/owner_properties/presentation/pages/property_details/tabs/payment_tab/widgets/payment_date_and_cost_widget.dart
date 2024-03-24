@@ -28,7 +28,7 @@ class PaymentDateAndCostWidget extends StatelessWidget {
         ),
         Gaps.hGap4,
         Text(
-          "ر.س",
+          Translate.s.sar,
           style: AppTextStyle.s14_w400(color: context.colors.green3),
         )
       ],

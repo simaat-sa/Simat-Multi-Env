@@ -12,7 +12,7 @@ import 'package:flutter_tdd/core/theme/colors/colors_extension.dart';
 import 'package:flutter_tdd/core/widgets/bottom_sheet_views/app_bottom_sheets.dart';
 import 'package:flutter_tdd/core/widgets/empty_list_item_widget.dart';
 import 'package:flutter_tdd/features/contract/presentation/widgets/custom_app_bar.dart';
-import 'package:flutter_tdd/features/contract/presentation/widgets/page_header_title_widget.dart';
+import 'package:flutter_tdd/core/widgets/page_header_title_widget.dart';
 import 'package:flutter_tdd/features/maintenance/data/models/maintenance_model/maintenance_model.dart';
 import 'package:flutter_tdd/features/maintenance/domain/entity/maintenance_params.dart';
 import 'package:flutter_tdd/features/maintenance/domain/repositories/maintenance_repository.dart';

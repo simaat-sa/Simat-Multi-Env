@@ -36,7 +36,7 @@ class UnitFilterHeaderWidget extends StatelessWidget {
                     child: GestureDetector(
                       onTap: () => controller.onResetFilter(),
                       child: Text(
-                        'الغاء التصفية',
+                        Translate.s.cancel_filter,
                         style: AppTextStyle.s14_w400(color: context.colors.secondary),
                       ),
                     ),

@@ -22,7 +22,7 @@ class PropertySummaryHeaderWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(color: context.colors.primary)),
               child: Text(
-                "#${propModel.statusCode}",
+                "#${propModel.areId}",
                 style: AppTextStyle.s14_w500(color: context.colors.primary).copyWith(height: 2),
               ),
             ),

@@ -211,5 +211,9 @@
   "beginning_of_the_contract": "Beginning of the decade",
   "end_of_the_contract": "End of the contract",
   "tenant": "Tenant",
+  "qr_scan": "Scan the QR Code",
+  "real_estate_count": "Real estate {count}",
+  "cancel_filter": "Cancel Filter",
   "registered": "Registered"
+
 }

@@ -11,7 +11,7 @@ class NewMaintenanceRequestButtonWidget extends StatelessWidget {
       txtColor: context.colors.white,
       textSize: 14,
       maxHeight: 45,
-      text: ' طلب صيانة جديد ',
+      text: Translate.s.new_maintenance_request,
     );
   }
 }

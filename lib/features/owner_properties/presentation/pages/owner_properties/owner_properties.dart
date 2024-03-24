@@ -41,6 +41,14 @@ class _OwnerPropertiesState extends State<OwnerProperties> {
                 });
               },
             ),
+            ObsValueConsumer(
+                observable: controller.ownerPropCount,
+                builder: (context, count) {
+                  return PageHeaderTitleWidget(
+                    title: Translate.s.real_estate_count("$count"),
+                  );
+                }
+            ),
             Gaps.vGap10,
             Flexible(
               child: PagedListView(

@@ -51,11 +51,8 @@ class PropertyItemWidget extends StatelessWidget {
                               borderRadius: BorderRadius.circular(5)),
                           child: Row(
                             children: [
-                              Icon(
-                                Icons.map_outlined,
-                                color: context.colors.white,
-                                size: 22,
-                              ),
+                              SvgPicture.asset(Res.unitLocationLogo,color: context.colors.white),
+                              Gaps.hGap5,
                               Text(
                                 "${model.propRegion} . ${model.propCity}",
                                 style: AppTextStyle.s14_w400(color: context.colors.white),

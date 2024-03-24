@@ -57,11 +57,11 @@ class ContractScreenController {
   }
 
   void onFilter() {
-    if (selectTypeObs.getValue() != ContractTypes.non || selectStatusObs.getValue() != TenantVisibility.non) {
+    // if (selectTypeObs.getValue() != ContractTypes.non || selectStatusObs.getValue() != TenantVisibility.non) {
       pagingController.refresh();
       fetchContractData(1);
       filterAppliedObs.setValue(true);
-    }
+    // }
   }
 
   void onResetFilter() {

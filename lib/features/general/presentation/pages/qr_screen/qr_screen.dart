@@ -3,10 +3,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/constants/gaps.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:flutter_tdd/core/widgets/default_app_bar.dart';
 import 'package:flutter_tdd/features/auth/presentation/pages/login/widgets/get_code_text_widget.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:qr_scanner_with_effect/qr_scanner_with_effect.dart';
+
 
 class QrScreen extends StatefulWidget {
   const QrScreen({super.key});
@@ -75,7 +77,7 @@ class _QrScreenState extends State<QrScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const DefaultAppBar(title: "مسح رمز الإستجابة"),
+      appBar: DefaultAppBar(title: Translate.s.qr_scan),
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,

@@ -2160,6 +2160,36 @@ class S {
     );
   }
 
+  /// `Scan the QR Code`
+  String get qr_scan {
+    return Intl.message(
+      'Scan the QR Code',
+      name: 'qr_scan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Real estate {count}`
+  String real_estate_count(Object count) {
+    return Intl.message(
+      'Real estate $count',
+      name: 'real_estate_count',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Cancel Filter`
+  String get cancel_filter {
+    return Intl.message(
+      'Cancel Filter',
+      name: 'cancel_filter',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Registered`
   String get registered {
     return Intl.message(

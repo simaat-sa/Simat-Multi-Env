@@ -50,4 +50,5 @@ class Res {
   static const String avatarSolidLogo = "assets/images/avatar_solid_logo.png";
   static const String balanceLogo = "assets/images/balance_icon.svg";
   static const String tenantLogo = "assets/images/tenant_icon.svg";
+  static const String sedanLogo = "assets/images/saedan_logo.png";
 }

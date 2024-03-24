@@ -32,7 +32,7 @@ class FilterButtonsWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(6),
                 ),
                 child: Text(
-                  'تطبيق',
+                  Translate.s.apply,
                   style: AppTextStyle.s16_w400(color: context.colors.white),
                 ),
               ),

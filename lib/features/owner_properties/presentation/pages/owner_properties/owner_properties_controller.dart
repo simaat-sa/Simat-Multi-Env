@@ -5,6 +5,7 @@ class OwnerPropertyController {
   late FilterPropertyController filterController;
   final PagingController<int, PropModel> pagingController = PagingController(firstPageKey: 1);
   ObsValue<bool> filterAppliedObs = ObsValue<bool>.withInit(false);
+  ObsValue<int> ownerPropCount = ObsValue<int>.withInit(0);
   String searchText = '';
   String? categoryFilter;
   String? typeFilter;
@@ -20,6 +21,7 @@ class OwnerPropertyController {
     var params = _ownerPropertiesParams(pageIndex);
     getIt<PropertyRepository>().getProperties(params).then((result) {
       final data = result.data?.data ?? [];
+      ownerPropCount.setValue(result.data?.total ?? 0);
       final isLastPage = data.length < 10;
       if (pageIndex == 1) {
         pagingController.itemList = [];

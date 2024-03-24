@@ -31,14 +31,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m4(code) =>
       "We have sent a mobile message containing the quality assurance code for your order no${code}";
 
-  static String m5(MB, files) =>
+  static String m5(count) => "Real estate ${count}";
+
+  static String m6(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";
 
-  static String m6(length) => "The Units (${length})";
+  static String m7(length) => "The Units (${length})";
 
-  static String m7(number) => "Unit (${number})";
+  static String m8(number) => "Unit (${number})";
 
-  static String m8(version) => "Version ${version}";
+  static String m9(version) => "Version ${version}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -131,6 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Beginning of the decade"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "cancel_filter": MessageLookupByLibrary.simpleMessage("Cancel Filter"),
         "canceled": MessageLookupByLibrary.simpleMessage("Canceled"),
         "closed": MessageLookupByLibrary.simpleMessage("Closed"),
         "collector": MessageLookupByLibrary.simpleMessage("Collector"),
@@ -320,6 +323,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "prop_type": MessageLookupByLibrary.simpleMessage("Property Type"),
         "property_status":
             MessageLookupByLibrary.simpleMessage("Property Status"),
+        "qr_scan": MessageLookupByLibrary.simpleMessage("Scan the QR Code"),
+        "real_estate_count": m5,
         "real_estate_unit":
             MessageLookupByLibrary.simpleMessage("Real estate unit"),
         "registered": MessageLookupByLibrary.simpleMessage("Registered"),
@@ -348,7 +353,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "server_visit_any_website": MessageLookupByLibrary.simpleMessage(
             "Any time you visit any website, including this site, the hosting server will record your Internet Protocol (IP) address, the date and time of the visit, the type of Internet browser you use, and the URL of any Internet site that refers you to this site at the network."),
-        "size_more_than_mg_error": m5,
+        "size_more_than_mg_error": m6,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "splash_desc_title": MessageLookupByLibrary.simpleMessage(
@@ -365,7 +370,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tax": MessageLookupByLibrary.simpleMessage("Tax"),
         "tenant": MessageLookupByLibrary.simpleMessage("Tenant"),
         "the_due": MessageLookupByLibrary.simpleMessage("The due"),
-        "the_units": m6,
+        "the_units": m7,
         "total_contract":
             MessageLookupByLibrary.simpleMessage("Total Contract"),
         "total_due": MessageLookupByLibrary.simpleMessage("Total due"),
@@ -374,14 +379,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Type of expense"),
         "unit_maintenance":
             MessageLookupByLibrary.simpleMessage("Unit maintenance"),
-        "unit_number": m7,
+        "unit_number": m8,
         "user_or_phone_hint":
             MessageLookupByLibrary.simpleMessage("Mobile phone or Username"),
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser"),
         "vacant": MessageLookupByLibrary.simpleMessage("Vacant"),
-        "version_label": m8,
+        "version_label": m9,
         "view_payments": MessageLookupByLibrary.simpleMessage("View payments"),
         "waste_transportation":
             MessageLookupByLibrary.simpleMessage("Waste transportation"),

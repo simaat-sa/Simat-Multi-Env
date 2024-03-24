@@ -31,14 +31,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m4(code) =>
       "لقد قمنا بإرسال رسالة جوال تحتوي على رمز ضمان الجودة لطلبكم رقم ${code}";
 
-  static String m5(MB, files) =>
+  static String m5(count) => "العقارات ${count}";
+
+  static String m6(MB, files) =>
       "يجب أن تكون حجم الملفات التالية أقل من ${MB} ميحابيت, ${files}";
 
-  static String m6(length) => "الوحدات [${length}]";
+  static String m7(length) => "الوحدات [${length}]";
 
-  static String m7(number) => "وحدات (${number})";
+  static String m8(number) => "وحدات (${number})";
 
-  static String m8(version) => "اصدار ${version}";
+  static String m9(version) => "اصدار ${version}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -132,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("بداية العقد"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
+        "cancel_filter": MessageLookupByLibrary.simpleMessage("الغاء التصفية"),
         "canceled": MessageLookupByLibrary.simpleMessage("ألغيت"),
         "closed": MessageLookupByLibrary.simpleMessage("مغلق"),
         "collector": MessageLookupByLibrary.simpleMessage("محصل"),
@@ -306,6 +309,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "prop_category": MessageLookupByLibrary.simpleMessage("فئة العقار"),
         "prop_type": MessageLookupByLibrary.simpleMessage("نوع العقار"),
         "property_status": MessageLookupByLibrary.simpleMessage("حالة العقار"),
+        "qr_scan": MessageLookupByLibrary.simpleMessage("مسح رمز الإستجابة"),
+        "real_estate_count": m5,
         "real_estate_unit":
             MessageLookupByLibrary.simpleMessage("الوحدة العقارية"),
         "registered": MessageLookupByLibrary.simpleMessage("مسجل"),
@@ -329,7 +334,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sar": MessageLookupByLibrary.simpleMessage(" ر.س"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
-        "size_more_than_mg_error": m5,
+        "size_more_than_mg_error": m6,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "splash_desc_title": MessageLookupByLibrary.simpleMessage(
@@ -346,21 +351,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "tax": MessageLookupByLibrary.simpleMessage("ضريبة"),
         "tenant": MessageLookupByLibrary.simpleMessage("المستأجر"),
         "the_due": MessageLookupByLibrary.simpleMessage("المستحق"),
-        "the_units": m6,
+        "the_units": m7,
         "total_contract": MessageLookupByLibrary.simpleMessage("إجمالي العقد"),
         "total_due": MessageLookupByLibrary.simpleMessage("اجمالي المستحق"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
         "type_of_expense": MessageLookupByLibrary.simpleMessage("نوع المصروف"),
         "unit_maintenance":
             MessageLookupByLibrary.simpleMessage("صيانة الوحدة"),
-        "unit_number": m7,
+        "unit_number": m8,
         "user_or_phone_hint": MessageLookupByLibrary.simpleMessage(
             "هاتفك الجوال او اسم المستخدم"),
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح"),
         "vacant": MessageLookupByLibrary.simpleMessage("شاغر"),
-        "version_label": m8,
+        "version_label": m9,
         "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات"),
         "waste_transportation":
             MessageLookupByLibrary.simpleMessage("نقل مخلفات"),
