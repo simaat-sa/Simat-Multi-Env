@@ -192,7 +192,7 @@
   "general_maint": "General Maintenance",
   "electricity_services": "Electricity services",
   "electricity_for_vacant_apartments": "Electricity for vacant apartments",
-  "water_consumption":"Water consumption",
+  "water_consumption": "Water consumption",
   "elevator_maintenance": "Elevator maintenance",
   "safety_equipment_maintenance": "Safety equipment maintenance",
   "guards": "Guards",
@@ -215,6 +215,8 @@
   "qr_scan": "Scan the QR Code",
   "real_estate_count": "Real estate {count}",
   "cancel_filter": "Cancel Filter",
-  "registered": "Registered"
-
+  "registered": "Registered",
+  "active_fingerprint": "Fingerprint is activation",
+  "do_you_want_to_activate_fingerprint": "Do you want to activate fingerprint?",
+  "confirm": "Confirm"
 }

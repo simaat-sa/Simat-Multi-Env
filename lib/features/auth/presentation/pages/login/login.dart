@@ -15,7 +15,7 @@ class _LoginState extends State<Login> {
 
   @override
   void initState() {
-    controller.checkBiometric();
+    controller.checkBiometric(context);
     super.initState();
   }
 
@@ -58,10 +58,10 @@ class _LoginState extends State<Login> {
                         ],
                       ),
                       // ForgetPasswordViewWidget(controller: controller,),
-                      Gaps.vGap32,
-                      LoginFingerPrintWidget(
-                        controller: controller,
-                      ),
+                      // Gaps.vGap32,
+                      // LoginFingerPrintWidget(
+                      //   controller: controller,
+                      // ),
                     ],
                   ),
                 ),

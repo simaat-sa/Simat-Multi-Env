@@ -111,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "سيتم التعامل مع كافة البيانات المقدمة من قبلك على أساس أنها سرية . تتطلب النماذج التي يتم تقديمها مباشرة على الشبكة تقديم البيانات التي ستساعدنا في تحسين موقعنا.سيتم استخدام البيانات التي يتم تقديمها من قبلك في الرد على كافة استفساراتك , ملاحظاتك , أو طلباتك من قبل هذا الموقع أو أيا من المواقع التابعة له ."),
         "access_denied": MessageLookupByLibrary.simpleMessage("تم رفض الوصول"),
         "active": MessageLookupByLibrary.simpleMessage("فعال"),
+        "active_fingerprint":
+            MessageLookupByLibrary.simpleMessage("تفعيل بصمة الإصبع"),
         "add_maintenance_request":
             MessageLookupByLibrary.simpleMessage("إضافة طلب صيانة"),
         "add_new_contact":
@@ -148,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على شبكة الإنترنت لقد تم إعداد هذه السياسة لمساعدتكم في تفهم طبيعة البيانات التي نقوم بتجميعها منكم عند زيارتكم لموقعنا على شبكة الانترنت وكيفية تعاملنا مع هذه البيانات الشخصية."),
         "conductor": MessageLookupByLibrary.simpleMessage("المحصل"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "من فضلك ادخل كلمة المرورمتطابق"),
         "confirm_payment": MessageLookupByLibrary.simpleMessage("تأكيد السداد"),
@@ -173,6 +176,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("المبلغ المستحق"),
         "district_region":
             MessageLookupByLibrary.simpleMessage("الحي . المنطقة"),
+        "do_you_want_to_activate_fingerprint":
+            MessageLookupByLibrary.simpleMessage("هل تريد تفعيل بصمة الإصبع؟"),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
         "due": MessageLookupByLibrary.simpleMessage("مستحق"),
         "due_date": MessageLookupByLibrary.simpleMessage("تاريخ استحقاق "),

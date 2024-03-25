@@ -16,18 +16,18 @@ class BiometricHelper {
   }
 
   Future<List<BiometricType>> getAvailableBiometricTypes() async {
-    final List<BiometricType> availableBiometrics =
-    await _auth.getAvailableBiometrics();
+    final List<BiometricType> availableBiometrics = await _auth.getAvailableBiometrics();
     return availableBiometrics;
   }
 
   Future<bool> authenticate(BuildContext context) async {
     try {
       final bool didAuthenticate = await _auth.authenticate(
-          localizedReason: Translate.of(context).Please_authenticate_to_login,
-          options: const AuthenticationOptions(
-            biometricOnly: true,
-          ));
+        localizedReason: Translate.of(context).Please_authenticate_to_login,
+        options: const AuthenticationOptions(
+          biometricOnly: true,
+        ),
+      );
       return didAuthenticate;
     } catch (e) {
       AppSnackBar.showSimpleToast(msg: e.toString());

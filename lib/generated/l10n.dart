@@ -2209,6 +2209,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Fingerprint is activation`
+  String get active_fingerprint {
+    return Intl.message(
+      'Fingerprint is activation',
+      name: 'active_fingerprint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to activate fingerprint?`
+  String get do_you_want_to_activate_fingerprint {
+    return Intl.message(
+      'Do you want to activate fingerprint?',
+      name: 'do_you_want_to_activate_fingerprint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

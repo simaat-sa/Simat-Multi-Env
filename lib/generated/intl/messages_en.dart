@@ -110,6 +110,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "All data provided by you will be treated as confidential. The forms that are submitted directly on the network require the submission of data that will help us improve our site. The data provided by you will be used to respond to all your inquiries, comments, or requests by this site or any of its affiliated sites."),
         "access_denied": MessageLookupByLibrary.simpleMessage("Access denied"),
         "active": MessageLookupByLibrary.simpleMessage("Active"),
+        "active_fingerprint":
+            MessageLookupByLibrary.simpleMessage("Fingerprint is activation"),
         "add_maintenance_request":
             MessageLookupByLibrary.simpleMessage("Add a maintenance request"),
         "add_new_contact":
@@ -148,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "We appreciate your concerns and concerns about the privacy of your data on the Internet. This policy has been prepared to help you understand the nature of the data we collect from you when you visit our website and how we deal with this personal data."),
         "conductor": MessageLookupByLibrary.simpleMessage("Conductor"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmValidation": MessageLookupByLibrary.simpleMessage(
             "Please enter the password identical"),
         "confirm_payment":
@@ -178,6 +181,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Deserved amount"),
         "district_region":
             MessageLookupByLibrary.simpleMessage("District . Region"),
+        "do_you_want_to_activate_fingerprint":
+            MessageLookupByLibrary.simpleMessage(
+                "Do you want to activate fingerprint?"),
         "done": MessageLookupByLibrary.simpleMessage("Done"),
         "due": MessageLookupByLibrary.simpleMessage("Due"),
         "due_date": MessageLookupByLibrary.simpleMessage("due date"),

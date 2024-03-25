@@ -216,7 +216,10 @@
   "real_estate_count": "العقارات {count}",
   "cancel_filter": "الغاء التصفية",
   "registered": "مسجل",
-  "scan_qr": "مسح رمز الإستجابة"
+  "scan_qr": "مسح رمز الإستجابة",
+  "active_fingerprint": "تفعيل بصمة الإصبع",
+  "do_you_want_to_activate_fingerprint": "هل تريد تفعيل بصمة الإصبع؟",
+  "confirm": "تأكيد"
 }
 
 

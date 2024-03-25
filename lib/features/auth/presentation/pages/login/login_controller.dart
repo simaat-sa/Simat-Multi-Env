@@ -6,7 +6,6 @@ class LoginController {
   ObsValue<bool> visibleObs = ObsValue.withInit(false);
   ObsValue<BiometricType?> supportBiometricObs = ObsValue.withInit(null);
 
-
   final GlobalKey<FormState> formKey = GlobalKey();
 
   final GlobalKey<CustomButtonState> btnKey = GlobalKey();
@@ -15,25 +14,34 @@ class LoginController {
   final TextEditingController password = TextEditingController();
 
   /// to check if the device support biometric or not [finger print or face id]
-  Future<void> checkBiometric() async {
+  Future<void> checkBiometric(BuildContext context) async {
     var availableBiometrics = await BiometricHelper.instance.getAvailableBiometricTypes();
-    if (availableBiometrics.contains(BiometricType.fingerprint) ||
-        availableBiometrics.contains(BiometricType.strong)) {
+    if (availableBiometrics.contains(BiometricType.fingerprint) || availableBiometrics.contains(BiometricType.strong)) {
       supportBiometricObs.setValue(BiometricType.fingerprint);
     } else if (availableBiometrics.contains(BiometricType.face)) {
       supportBiometricObs.setValue(BiometricType.face);
     }
+    loginWithBiometric(context);
   }
 
   /// to submit the login form
-  Future<bool> onSubmit(BuildContext context) async {
+  Future<bool> callLogin(BuildContext context) async {
     String? deviceId = await _getFirebaseToken();
     if (_checkFormValidation(context)) {
       LoginParams params = loginParams(deviceId ?? '');
       var loginResponse = await getIt<AuthRepository>().login(params);
-      return _handleLoginResponse(context, loginResponse);
+      return _handleLoginResponse(loginResponse);
     } else {
       return false;
+    }
+  }
+
+  void onSubmitLoginBtn(BuildContext context) async {
+    var data = await getIt<SharedPrefService>().getString(ApplicationConstants.userCredential);
+    if (data != null) {
+      callLogin(context);
+    } else {
+      suggestionBiometricAlert(context);
     }
   }
 
@@ -47,7 +55,8 @@ class LoginController {
     return deviceId;
   }
 
-  bool _handleLoginResponse(BuildContext context, MyResult<UserModel> response) {
+  bool _handleLoginResponse(MyResult<UserModel> response) {
+    final context = getIt<GlobalContext>().context();
     return response.when(isSuccess: (userModel) {
       userModel!.userAccess.add(_menuTapModel());
       context.read<UserCubit>().onUpdateUserData(userModel);
@@ -104,7 +113,7 @@ class LoginController {
     print("=========> $deviceId");
     print("=========> ${params.toJson()}");
     var loginResponse = await getIt<AuthRepository>().loginWithQr(params);
-    _handleLoginResponse(context, loginResponse);
+    _handleLoginResponse(loginResponse);
   }
 
   /// to login with credentials
@@ -119,13 +128,13 @@ class LoginController {
       if (authorize) {
         name.text = params.logUser;
         password.text = params.logPassword;
-        onSubmit(context);
+        callLogin(context);
       }
     } else {
       if (_checkFormValidation(context)) {
         var authorize = await BiometricHelper.instance.authenticate(context);
         if (authorize) {
-          onSubmit(context).then((value) {
+          callLogin(context).then((value) {
             if (value) {
               UserHelperService.instance.saveUserCredentials(loginParams(deviceId ?? ''));
             }
@@ -143,15 +152,23 @@ class LoginController {
   /// scan the qr code and get the token
   /// then send the token to the server to get the user data
   void qrScan(BuildContext context) async {
-    String? scannedCode = await Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => const ScannerScreen()));
+    String? scannedCode = await Navigator.push(context, MaterialPageRoute(builder: (context) => const ScannerScreen()));
 
     // String? scannedCode = await Navigator.push(context, MaterialPageRoute(builder: (context) => const QrScreen()));
     if (scannedCode != null) {
       var token = scannedCode.split(",").first.split("<").last;
       _loginWithQr(context, token);
+    }
+  }
+
+  void suggestionBiometricAlert(BuildContext context) {
+    if (_checkFormValidation(context)) {
+      showDialog(
+        context: context,
+        builder: (cxt) {
+          return ActiveFingerPrintAlert(controller: this);
+        },
+      );
     }
   }
 }
