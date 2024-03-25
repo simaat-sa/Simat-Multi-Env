@@ -63,11 +63,11 @@ class UnitItemWidget extends StatelessWidget {
             ),
           ),
           Gaps.vGap15,
-          CostItemWidget(
-            title: Translate.s.balance,
-            value: model.amtBalance,
-            color: context.colors.bgLight,
-          ),
+          // CostItemWidget(
+          //   title: Translate.s.balance,
+          //   value: model.amtBalance,
+          //   color: context.colors.bgLight,
+          // ),
           CostItemWidget(
             title: Translate.s.required,
             value: model.amtPayablePrice,
