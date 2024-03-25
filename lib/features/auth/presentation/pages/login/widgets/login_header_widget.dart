@@ -9,7 +9,7 @@ class LoginHeaderWidget extends StatelessWidget {
     if (logo.contains(".svg")) {
       return Padding(
         padding: const EdgeInsets.only(top: 50),
-        child: Image.asset(
+        child: SvgPicture.asset(
           logo,
           height: 60,
           width: 210,

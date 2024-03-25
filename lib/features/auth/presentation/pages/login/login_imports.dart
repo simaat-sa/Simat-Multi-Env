@@ -26,9 +26,9 @@ import 'package:flutter_tdd/features/auth/domain/repositories/auth_repository.da
 import 'package:flutter_tdd/features/auth/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:flutter_tdd/features/auth/presentation/widgets/auth_app_bar_widget.dart';
 import 'package:flutter_tdd/features/auth/presentation/widgets/auth_scaffold_widget.dart';
-import 'package:flutter_tdd/features/general/presentation/pages/qr_screen/qr_screen.dart';
 import 'package:flutter_tdd/res.dart';
 
+import '../../../../general/presentation/pages/qr_screen/qr_screen.dart';
 import 'widgets/get_code_text_widget.dart';
 import 'widgets/login_widgets_imports.dart';
 

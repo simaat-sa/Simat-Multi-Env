@@ -6,6 +6,7 @@ class LoginController {
   ObsValue<bool> visibleObs = ObsValue.withInit(false);
   ObsValue<BiometricType?> supportBiometricObs = ObsValue.withInit(null);
 
+
   final GlobalKey<FormState> formKey = GlobalKey();
 
   final GlobalKey<CustomButtonState> btnKey = GlobalKey();
@@ -16,9 +17,10 @@ class LoginController {
   /// to check if the device support biometric or not [finger print or face id]
   Future<void> checkBiometric() async {
     var availableBiometrics = await BiometricHelper.instance.getAvailableBiometricTypes();
-    if (availableBiometrics.contains(BiometricType.fingerprint) || availableBiometrics.contains(BiometricType.strong)) {
+    if (availableBiometrics.contains(BiometricType.fingerprint) ||
+        availableBiometrics.contains(BiometricType.strong)) {
       supportBiometricObs.setValue(BiometricType.fingerprint);
-    }else if (availableBiometrics.contains(BiometricType.face)) {
+    } else if (availableBiometrics.contains(BiometricType.face)) {
       supportBiometricObs.setValue(BiometricType.face);
     }
   }
@@ -60,9 +62,7 @@ class LoginController {
       return true;
     }, isError: (error) {
       AppSnackBar.showSimpleToast(
-        msg: Translate
-            .s
-            .Invalid_login_data,
+        msg: Translate.s.Invalid_login_data,
         type: ToastType.error,
       );
       return false;
@@ -81,7 +81,8 @@ class LoginController {
       pageDesc: "",
       pageOrder: "1000000000000000",
       pageName: Translate.s.menu,
-      iconSvg: Res.moreBarLogo,);
+      iconSvg: Res.moreBarLogo,
+    );
   }
 
   /// handle login params
@@ -142,12 +143,15 @@ class LoginController {
   /// scan the qr code and get the token
   /// then send the token to the server to get the user data
   void qrScan(BuildContext context) async {
-    String? scannedCode = await Navigator.push(context, MaterialPageRoute(builder: (context) => const QrScreen()));
+    String? scannedCode = await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => const ScannerScreen()));
+
+    // String? scannedCode = await Navigator.push(context, MaterialPageRoute(builder: (context) => const QrScreen()));
     if (scannedCode != null) {
       var token = scannedCode.split(",").first.split("<").last;
       _loginWithQr(context, token);
     }
   }
-
-
 }
