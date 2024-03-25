@@ -3,7 +3,7 @@
   "APP_ENV_NAME": "sdn",
   "APP_BASE_URL": "dev.simaat.sa",
   "APP_API": "/api/app/",
-  "APP_APP_NAME_EN": "saedan",
+  "APP_APP_NAME_EN": "سعيدان",
   "APP_APP_NAME_AR": "سعيدان",
   "APP_LOCAL_LOGO": "assets/images/saedan.png",
   "SPLASH_LOGO": "assets/images/saedan_splash.png",

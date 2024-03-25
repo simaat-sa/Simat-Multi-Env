@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
+import 'dart:io';
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -33,16 +34,20 @@ class GlobalNotification {
       // onDidReceiveNotificationResponse: (details)=> flutterNotificationClick( details.payload),
     );
     await Firebase.initializeApp();
-    final settings = await messaging.requestPermission(provisional: true);
+
+    final settings = await messaging.requestPermission(provisional: true, sound: true, badge: true, alert: true);
     if (settings.authorizationStatus == AuthorizationStatus.authorized) {
       messaging.getToken().then((token) {
-        log("$token");
+        log("token ===> $token");
       });
-      messaging.setForegroundNotificationPresentationOptions();
+      messaging.setForegroundNotificationPresentationOptions(
+          alert: true, badge: true, sound: true);
       FirebaseMessaging.onMessage.listen((RemoteMessage message) {
         log("_____________________Message data:${message.data}");
         log("_____________________notification:${message.notification?.title}");
-        _showLocalNotification(message);
+        if (Platform.isAndroid) {
+          _showLocalNotification(message);
+        }
         updateNotifyCubit();
         _onMessageStreamController.add(message.data);
         if (int.parse(message.data["type"] ?? "0") == -1) {
@@ -76,17 +81,22 @@ class GlobalNotification {
   Future<void> _showLocalNotification(RemoteMessage? message) async {
     if (message == null) return;
     final android = AndroidNotificationDetails(
-      "${DateTime.now()}",
+      "${DateTime.now().millisecondsSinceEpoch}",
       "Default",
       priority: Priority.high,
       importance: Importance.max,
-      shortcutId: DateTime.now().toIso8601String(),
+      // shortcutId: DateTime.now().toIso8601String(),
     );
-    const ios = DarwinNotificationDetails();
+    const ios = DarwinNotificationDetails(
+      presentSound: true,
+      presentAlert: true,
+    );
     final platform = NotificationDetails(android: android, iOS: ios);
     _flutterLocalNotificationsPlugin.show(DateTime.now().microsecond,
         "${message.notification?.title}", "${message.notification?.body}", platform,
         payload: json.encode(message.data));
+    print("==========> ${message.notification?.title}");
+
   }
 
   static Future flutterNotificationClick(String? details) async {

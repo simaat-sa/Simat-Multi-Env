@@ -640,6 +640,16 @@ class S {
     );
   }
 
+  /// `Properties {count}`
+  String propCount(Object count) {
+    return Intl.message(
+      'Properties $count',
+      name: 'propCount',
+      desc: '',
+      args: [count],
+    );
+  }
+
   /// `Maintenance Orders {count}`
   String maintenanceCount(Object count) {
     return Intl.message(

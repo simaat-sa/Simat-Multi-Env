@@ -59,6 +59,7 @@
   "login_with_qr": "Scan the QR code to log in",
   "how_get_code": "How can I get the code?",
   "contractsCount": "Contracts {count}",
+  "propCount": "Properties {count}",
   "maintenanceCount": "Maintenance Orders {count}",
   "active": "Active",
   "inactive": "Inactive",

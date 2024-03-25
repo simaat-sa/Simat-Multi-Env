@@ -16,7 +16,7 @@ class LoginController {
   /// to check if the device support biometric or not [finger print or face id]
   Future<void> checkBiometric() async {
     var availableBiometrics = await BiometricHelper.instance.getAvailableBiometricTypes();
-    if (availableBiometrics.contains(BiometricType.fingerprint)) {
+    if (availableBiometrics.contains(BiometricType.fingerprint) || availableBiometrics.contains(BiometricType.strong)) {
       supportBiometricObs.setValue(BiometricType.fingerprint);
     }else if (availableBiometrics.contains(BiometricType.face)) {
       supportBiometricObs.setValue(BiometricType.face);
@@ -100,6 +100,8 @@ class LoginController {
   Future<void> _loginWithQr(BuildContext context, String token) async {
     var deviceId = await FirebaseMessaging.instance.getToken();
     final params = qrLoginParams(deviceId ?? '', token);
+    print("=========> $deviceId");
+    print("=========> ${params.toJson()}");
     var loginResponse = await getIt<AuthRepository>().loginWithQr(params);
     _handleLoginResponse(context, loginResponse);
   }

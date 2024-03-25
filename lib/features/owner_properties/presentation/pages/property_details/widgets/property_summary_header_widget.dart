@@ -29,7 +29,8 @@ class PropertySummaryHeaderWidget extends StatelessWidget {
             Gaps.hGap8,
             Text(
               propModel.propType,
-              style: AppTextStyle.s16_w400(color: context.colors.brown).copyWith(overflow: TextOverflow.ellipsis),
+              style: AppTextStyle.s16_w400(color: context.colors.brown)
+                  .copyWith(overflow: TextOverflow.ellipsis),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4),
@@ -45,27 +46,29 @@ class PropertySummaryHeaderWidget extends StatelessWidget {
           ],
         ),
         Gaps.vGap15,
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            SvgPicture.asset(
-              Res.unitLocationLogo,
-              height: 16,
-              width: 16,
-              color: context.colors.primaryText,
-            ),
-            Gaps.hGap8,
-            Expanded(
-              child: Text(
-                propModel.propAddress,
-                style: AppTextStyle.s14_w400(
-                  color: context.colors.primaryText,
-                ),
-                overflow: TextOverflow.ellipsis,
+        if (propModel.propAddress.isNotEmpty)
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              SvgPicture.asset(
+                Res.unitLocationLogo,
+                height: 16,
+                width: 16,
+                color: context.colors.primaryText,
               ),
-            )
-          ],
-        ),
+              Gaps.hGap8,
+              Expanded(
+                child: Text(
+                  propModel.propAddress,
+                  // "${propModel.propRegion} . ${propModel.propCity}",
+                  style: AppTextStyle.s14_w400(
+                    color: context.colors.primaryText,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              )
+            ],
+          ),
       ],
     );
   }

@@ -31,16 +31,18 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m4(code) =>
       "We have sent a mobile message containing the quality assurance code for your order no${code}";
 
-  static String m5(count) => "Real estate ${count}";
+  static String m5(count) => "Properties ${count}";
 
-  static String m6(MB, files) =>
+  static String m6(count) => "Real estate ${count}";
+
+  static String m7(MB, files) =>
       "Files size must be less than ${MB} MB, ${files}";
 
-  static String m7(length) => "The Units (${length})";
+  static String m8(length) => "The Units (${length})";
 
-  static String m8(number) => "Unit (${number})";
+  static String m9(number) => "Unit (${number})";
 
-  static String m9(version) => "Version ${version}";
+  static String m10(version) => "Version ${version}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -318,13 +320,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_fill_all_fields":
             MessageLookupByLibrary.simpleMessage("Please fill all fields"),
         "posted": MessageLookupByLibrary.simpleMessage("Posted"),
+        "propCount": m5,
         "prop_category":
             MessageLookupByLibrary.simpleMessage("Property Category"),
         "prop_type": MessageLookupByLibrary.simpleMessage("Property Type"),
         "property_status":
             MessageLookupByLibrary.simpleMessage("Property Status"),
         "qr_scan": MessageLookupByLibrary.simpleMessage("Scan the QR Code"),
-        "real_estate_count": m5,
+        "real_estate_count": m6,
         "real_estate_unit":
             MessageLookupByLibrary.simpleMessage("Real estate unit"),
         "registered": MessageLookupByLibrary.simpleMessage("Registered"),
@@ -353,7 +356,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "server_visit_any_website": MessageLookupByLibrary.simpleMessage(
             "Any time you visit any website, including this site, the hosting server will record your Internet Protocol (IP) address, the date and time of the visit, the type of Internet browser you use, and the URL of any Internet site that refers you to this site at the network."),
-        "size_more_than_mg_error": m6,
+        "size_more_than_mg_error": m7,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "splash_desc_title": MessageLookupByLibrary.simpleMessage(
@@ -370,7 +373,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tax": MessageLookupByLibrary.simpleMessage("Tax"),
         "tenant": MessageLookupByLibrary.simpleMessage("Tenant"),
         "the_due": MessageLookupByLibrary.simpleMessage("The due"),
-        "the_units": m7,
+        "the_units": m8,
         "total_contract":
             MessageLookupByLibrary.simpleMessage("Total Contract"),
         "total_due": MessageLookupByLibrary.simpleMessage("Total due"),
@@ -379,14 +382,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Type of expense"),
         "unit_maintenance":
             MessageLookupByLibrary.simpleMessage("Unit maintenance"),
-        "unit_number": m8,
+        "unit_number": m9,
         "user_or_phone_hint":
             MessageLookupByLibrary.simpleMessage("Mobile phone or Username"),
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser"),
         "vacant": MessageLookupByLibrary.simpleMessage("Vacant"),
-        "version_label": m9,
+        "version_label": m10,
         "view_payments": MessageLookupByLibrary.simpleMessage("View payments"),
         "waste_transportation":
             MessageLookupByLibrary.simpleMessage("Waste transportation"),

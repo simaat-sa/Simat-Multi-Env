@@ -33,14 +33,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m5(count) => "العقارات ${count}";
 
-  static String m6(MB, files) =>
+  static String m6(count) => "العقارات ${count}";
+
+  static String m7(MB, files) =>
       "يجب أن تكون حجم الملفات التالية أقل من ${MB} ميحابيت, ${files}";
 
-  static String m7(length) => "الوحدات [${length}]";
+  static String m8(length) => "الوحدات [${length}]";
 
-  static String m8(number) => "وحدات (${number})";
+  static String m9(number) => "وحدات (${number})";
 
-  static String m9(version) => "اصدار ${version}";
+  static String m10(version) => "اصدار ${version}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -306,11 +308,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_fill_all_fields":
             MessageLookupByLibrary.simpleMessage("من فضلك املأ جميع الحقول"),
         "posted": MessageLookupByLibrary.simpleMessage("نشر"),
+        "propCount": m5,
         "prop_category": MessageLookupByLibrary.simpleMessage("فئة العقار"),
         "prop_type": MessageLookupByLibrary.simpleMessage("نوع العقار"),
         "property_status": MessageLookupByLibrary.simpleMessage("حالة العقار"),
         "qr_scan": MessageLookupByLibrary.simpleMessage("مسح رمز الإستجابة"),
-        "real_estate_count": m5,
+        "real_estate_count": m6,
         "real_estate_unit":
             MessageLookupByLibrary.simpleMessage("الوحدة العقارية"),
         "registered": MessageLookupByLibrary.simpleMessage("مسجل"),
@@ -334,7 +337,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sar": MessageLookupByLibrary.simpleMessage(" ر.س"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
-        "size_more_than_mg_error": m6,
+        "size_more_than_mg_error": m7,
         "something_went_wrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "splash_desc_title": MessageLookupByLibrary.simpleMessage(
@@ -351,21 +354,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "tax": MessageLookupByLibrary.simpleMessage("ضريبة"),
         "tenant": MessageLookupByLibrary.simpleMessage("المستأجر"),
         "the_due": MessageLookupByLibrary.simpleMessage("المستحق"),
-        "the_units": m7,
+        "the_units": m8,
         "total_contract": MessageLookupByLibrary.simpleMessage("إجمالي العقد"),
         "total_due": MessageLookupByLibrary.simpleMessage("اجمالي المستحق"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
         "type_of_expense": MessageLookupByLibrary.simpleMessage("نوع المصروف"),
         "unit_maintenance":
             MessageLookupByLibrary.simpleMessage("صيانة الوحدة"),
-        "unit_number": m8,
+        "unit_number": m9,
         "user_or_phone_hint": MessageLookupByLibrary.simpleMessage(
             "هاتفك الجوال او اسم المستخدم"),
         "using_the_QR_code_scan_the_QR_code_that_appears":
             MessageLookupByLibrary.simpleMessage(
                 "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح"),
         "vacant": MessageLookupByLibrary.simpleMessage("شاغر"),
-        "version_label": m9,
+        "version_label": m10,
         "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات"),
         "waste_transportation":
             MessageLookupByLibrary.simpleMessage("نقل مخلفات"),

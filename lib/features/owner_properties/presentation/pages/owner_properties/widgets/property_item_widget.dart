@@ -42,22 +42,25 @@ class PropertyItemWidget extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          alignment: Alignment.center,
-                          height: 26,
-                          padding: const EdgeInsets.symmetric(horizontal: 5),
-                          decoration: BoxDecoration(
-                              color: context.colors.black.withOpacity(0.15),
-                              borderRadius: BorderRadius.circular(5)),
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(Res.unitLocationLogo,color: context.colors.white),
-                              Gaps.hGap5,
-                              Text(
-                                "${model.propRegion} . ${model.propCity}",
-                                style: AppTextStyle.s14_w400(color: context.colors.white),
-                              ),
-                            ],
+                        Visibility(
+                          visible: model.propRegion.isNotEmpty && model.propCity.isNotEmpty,
+                          child: Container(
+                            alignment: Alignment.center,
+                            height: 26,
+                            padding: const EdgeInsets.symmetric(horizontal: 5),
+                            decoration: BoxDecoration(
+                                color: context.colors.black.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(5)),
+                            child: Row(
+                              children: [
+                                SvgPicture.asset(Res.unitLocationLogo,color: context.colors.white),
+                                Gaps.hGap5,
+                                Text(
+                                  "${model.propRegion} . ${model.propCity}",
+                                  style: AppTextStyle.s14_w400(color: context.colors.white),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         Container(

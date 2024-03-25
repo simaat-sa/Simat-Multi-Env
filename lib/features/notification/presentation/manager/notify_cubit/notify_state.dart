@@ -7,7 +7,7 @@ abstract class NotifyState extends Equatable {
 }
 
 class NotifyInitial extends NotifyState {
-  const NotifyInitial() : super(count: "");
+  const NotifyInitial() : super(count: "0");
   @override
   List<Object> get props => [count];
 }

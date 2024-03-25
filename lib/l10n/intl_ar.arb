@@ -59,6 +59,7 @@
   "login_with_qr": "مسح رمز الاستجابة لتسجيل الدخول",
   "how_get_code": "كيف يمكنني الحصول علي الرمز؟",
   "contractsCount": "العقود {count}",
+  "propCount": "العقارات {count}",
   "maintenanceCount": "طلبات الصيانة {count}",
   "active": "فعال",
   "inactive": "غير نشط",
@@ -214,7 +215,8 @@
   "qr_scan": "مسح رمز الإستجابة",
   "real_estate_count": "العقارات {count}",
   "cancel_filter": "الغاء التصفية",
-  "registered": "مسجل"
+  "registered": "مسجل",
+  "scan_qr": "مسح رمز الإستجابة"
 }
 
 
