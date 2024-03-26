@@ -10,6 +10,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i21;
 import 'package:flutter/material.dart' as _i22;
+import 'package:flutter_tdd/features/auth/domain/entity/login_params.dart'
+    as _i28;
 import 'package:flutter_tdd/features/auth/presentation/pages/active_account/active_account_imports.dart'
     as _i1;
 import 'package:flutter_tdd/features/auth/presentation/pages/forget_password/forget_password_imports.dart'
@@ -153,6 +155,7 @@ abstract class $AppRouter extends _i21.RootStackRouter {
         child: _i10.Home(
           key: args.key,
           index: args.index,
+          loginParams: args.loginParams,
         ),
       );
     },
@@ -510,12 +513,14 @@ class Home extends _i21.PageRouteInfo<HomeArgs> {
   Home({
     _i22.Key? key,
     int index = 0,
+    _i28.LoginParams? loginParams,
     List<_i21.PageRouteInfo>? children,
   }) : super(
           Home.name,
           args: HomeArgs(
             key: key,
             index: index,
+            loginParams: loginParams,
           ),
           initialChildren: children,
         );
@@ -529,15 +534,18 @@ class HomeArgs {
   const HomeArgs({
     this.key,
     this.index = 0,
+    this.loginParams,
   });
 
   final _i22.Key? key;
 
   final int index;
 
+  final _i28.LoginParams? loginParams;
+
   @override
   String toString() {
-    return 'HomeArgs{key: $key, index: $index}';
+    return 'HomeArgs{key: $key, index: $index, loginParams: $loginParams}';
   }
 }
 

@@ -9,6 +9,19 @@ class LoginParams {
     required this.logUser,
   });
 
+
+  factory LoginParams.copyWith({
+    required String deviceToken,
+    required String logPassword,
+    required String logUser,
+  }) {
+    return LoginParams(
+      deviceToken: deviceToken,
+      logPassword: logPassword,
+      logUser: logUser,
+    );
+  }
+
   Map<String, dynamic> toJson() => {
         'log_user': logUser,
         'log_pass': logPassword,

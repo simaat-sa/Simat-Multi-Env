@@ -3,26 +3,30 @@ part of 'home_imports.dart';
 @RoutePage()
 class Home extends StatefulWidget {
   final int index;
+  final LoginParams? loginParams;
 
-  const Home({super.key, this.index = 0});
+  const Home({super.key, this.index = 0, this.loginParams});
 
   @override
   State<StatefulWidget> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> with TickerProviderStateMixin {
-  final HomeController controller = HomeController();
+  late HomeController controller;
 
   @override
   void initState() {
+    controller = HomeController(widget.loginParams);
     controller.initPages(context);
     controller.initBottomNavigation(this, widget.index);
     NoticesRequester().request();
+    controller.allowBiometricLogin();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    controller.allowBiometricLogin();
     return BaseBlocBuilder(
       bloc: controller.pagesBloc,
       onSuccessWidget: (pages) {

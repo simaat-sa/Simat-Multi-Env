@@ -16,34 +16,28 @@ class LoginController {
   /// to check if the device support biometric or not [finger print or face id]
   Future<void> checkBiometric(BuildContext context) async {
     var availableBiometrics = await BiometricHelper.instance.getAvailableBiometricTypes();
-    if (availableBiometrics.contains(BiometricType.fingerprint) || availableBiometrics.contains(BiometricType.strong)) {
-      supportBiometricObs.setValue(BiometricType.fingerprint);
-    } else if (availableBiometrics.contains(BiometricType.face)) {
-      supportBiometricObs.setValue(BiometricType.face);
+    // if (availableBiometrics.contains(BiometricType.fingerprint) || availableBiometrics.contains(BiometricType.strong)) {
+    //   supportBiometricObs.setValue(BiometricType.fingerprint);
+    // } else if (availableBiometrics.contains(BiometricType.face)) {
+    //   supportBiometricObs.setValue(BiometricType.face);
+    // }
+    if (availableBiometrics.isNotEmpty) {
+      loginWithBiometric(context);
     }
-    loginWithBiometric(context);
   }
 
   /// to submit the login form
-  Future<bool> callLogin(BuildContext context) async {
+  Future<bool> onSubmitLoginBtn(BuildContext context) async {
     String? deviceId = await _getFirebaseToken();
     if (_checkFormValidation(context)) {
       LoginParams params = loginParams(deviceId ?? '');
       var loginResponse = await getIt<AuthRepository>().login(params);
-      return _handleLoginResponse(loginResponse);
+      return _handleLoginResponse(loginResponse,loginParams: params);
     } else {
       return false;
     }
   }
 
-  void onSubmitLoginBtn(BuildContext context) async {
-    var data = await getIt<SharedPrefService>().getString(ApplicationConstants.userCredential);
-    if (data != null) {
-      callLogin(context);
-    } else {
-      suggestionBiometricAlert(context);
-    }
-  }
 
   Future<String?> _getFirebaseToken() async {
     var deviceId = await FirebaseMessaging.instance.getAPNSToken();
@@ -55,7 +49,7 @@ class LoginController {
     return deviceId;
   }
 
-  bool _handleLoginResponse(MyResult<UserModel> response) {
+  bool _handleLoginResponse(MyResult<UserModel> response, {LoginParams? loginParams}) {
     final context = getIt<GlobalContext>().context();
     return response.when(isSuccess: (userModel) {
       userModel!.userAccess.add(_menuTapModel());
@@ -67,7 +61,7 @@ class LoginController {
         msg: Translate.s.successfully_Logged_in,
         type: ToastType.success,
       );
-      AutoRouter.of(context).push(Home());
+      AutoRouter.of(context).push(Home(loginParams: loginParams));
       return true;
     }, isError: (error) {
       AppSnackBar.showSimpleToast(
@@ -110,8 +104,6 @@ class LoginController {
   Future<void> _loginWithQr(BuildContext context, String token) async {
     var deviceId = await FirebaseMessaging.instance.getToken();
     final params = qrLoginParams(deviceId ?? '', token);
-    print("=========> $deviceId");
-    print("=========> ${params.toJson()}");
     var loginResponse = await getIt<AuthRepository>().loginWithQr(params);
     _handleLoginResponse(loginResponse);
   }
@@ -121,28 +113,17 @@ class LoginController {
   /// if yes authenticate with biometric
   /// if no check form validation and authenticate with biometric
   Future<void> loginWithBiometric(BuildContext context) async {
-    var deviceId = await FirebaseMessaging.instance.getToken();
     LoginParams? params = await UserHelperService.instance.getUserCredentials();
     if (params != null) {
       var authorize = await BiometricHelper.instance.authenticate(context);
       if (authorize) {
         name.text = params.logUser;
         password.text = params.logPassword;
-        callLogin(context);
-      }
-    } else {
-      if (_checkFormValidation(context)) {
-        var authorize = await BiometricHelper.instance.authenticate(context);
-        if (authorize) {
-          callLogin(context).then((value) {
-            if (value) {
-              UserHelperService.instance.saveUserCredentials(loginParams(deviceId ?? ''));
-            }
-          });
-        }
+        onSubmitLoginBtn(context);
       }
     }
   }
+
 
   bool _checkFormValidation(BuildContext context) {
     return formKey.currentState!.validate();
@@ -161,14 +142,5 @@ class LoginController {
     }
   }
 
-  void suggestionBiometricAlert(BuildContext context) {
-    if (_checkFormValidation(context)) {
-      showDialog(
-        context: context,
-        builder: (cxt) {
-          return ActiveFingerPrintAlert(controller: this);
-        },
-      );
-    }
-  }
+
 }
