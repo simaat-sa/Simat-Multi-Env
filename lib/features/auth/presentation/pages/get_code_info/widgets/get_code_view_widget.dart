@@ -5,9 +5,16 @@ class GetCodeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var lang = context.watch<DeviceCubit>().state.model.locale.languageCode;
+    if (lang == 'ar') {
+      return Container(
+        margin: const EdgeInsets.symmetric(vertical: 24).r,
+        child: Image.asset(Res.howToLoginQrCodeAr),
+      );
+    }
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 24).r,
-      child: Image.asset(Res.howToLoginQrCode),
+      child: Image.asset(Res.howToLoginQrCodeEn),
     );
   }
 }

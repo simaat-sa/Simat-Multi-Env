@@ -44,12 +44,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m10(version) => "اصدار ${version}";
 
+  static String m11(version) => "اصدار ${version}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "About_New_version":
             MessageLookupByLibrary.simpleMessage("جديد الإصدار"),
         "About_Simat_application":
             MessageLookupByLibrary.simpleMessage("عن تطبيق سمات"),
+        "Active_login_by_biometric": MessageLookupByLibrary.simpleMessage(
+            "تسجيل الدخول النشط باستخدام بيانات الاعتماد بالسيمات الحيوية"),
         "AddressValidation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل العنوان"),
         "Amendments_to_information_confidentiality":
@@ -136,6 +140,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "balance": MessageLookupByLibrary.simpleMessage("الرصيد"),
         "beginning_of_the_contract":
             MessageLookupByLibrary.simpleMessage("بداية العقد"),
+        "biometric_login_app": MessageLookupByLibrary.simpleMessage(
+            "تسجيل الدخول بالسيمات الحيوية للتطبيق"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "cancel_filter": MessageLookupByLibrary.simpleMessage("الغاء التصفية"),
@@ -360,6 +366,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "tenant": MessageLookupByLibrary.simpleMessage("المستأجر"),
         "the_due": MessageLookupByLibrary.simpleMessage("المستحق"),
         "the_units": m8,
+        "today": MessageLookupByLibrary.simpleMessage("اليوم"),
+        "tomorrow": MessageLookupByLibrary.simpleMessage("غدا"),
         "total_contract": MessageLookupByLibrary.simpleMessage("إجمالي العقد"),
         "total_due": MessageLookupByLibrary.simpleMessage("اجمالي المستحق"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
@@ -373,10 +381,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "3.  انتقل الي الجوال ومن شاشة تسجيل الدخول باستخدام ال QR code امسح رمز الإستجابة السريعة الظاهر أمامك في المتصفح"),
         "vacant": MessageLookupByLibrary.simpleMessage("شاغر"),
-        "version_label": m10,
+        "version": m10,
+        "version_label": m11,
         "view_payments": MessageLookupByLibrary.simpleMessage("عرض المدفوعات"),
         "waste_transportation":
             MessageLookupByLibrary.simpleMessage("نقل مخلفات"),
-        "water_consumption": MessageLookupByLibrary.simpleMessage("استهلاك ماء")
+        "water_consumption":
+            MessageLookupByLibrary.simpleMessage("استهلاك ماء"),
+        "yesterday": MessageLookupByLibrary.simpleMessage("أمس")
       };
 }

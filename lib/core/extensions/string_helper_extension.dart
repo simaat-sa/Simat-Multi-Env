@@ -1,4 +1,5 @@
 import 'package:flutter_tdd/core/extensions/date_format.dart';
+import 'package:flutter_tdd/core/localization/translate.dart';
 import 'package:intl/intl.dart' as international;
 
 extension StringExtension on String? {
@@ -14,12 +15,28 @@ extension StringExtension on String? {
   String formatTimeStampDate() {
     if (this == null) return '';
     var date = DateTime.fromMillisecondsSinceEpoch(int.parse(this!) * 1000);
+    int diff = DateTime.now().difference(date).inDays;
+    if (diff == 0) {
+      return Translate.s.today;
+    }else if(diff == 1){
+      return Translate.s.yesterday;
+    }else if(diff == -1){
+      return Translate.s.tomorrow;
+    }
     return date.toFormattedString();
   }
 
   String formatDateTimeStampDate() {
     if (this == null) return '';
     var date = DateTime.fromMillisecondsSinceEpoch(int.parse(this!) * 1000);
+    int diff = DateTime.now().difference(date).inDays;
+    if (diff == 0) {
+      return Translate.s.today;
+    }else if(diff == 1){
+      return Translate.s.yesterday;
+    }else if(diff == -1){
+      return Translate.s.tomorrow;
+    }
     return date.toFormattedDateTimeString();
   }
 

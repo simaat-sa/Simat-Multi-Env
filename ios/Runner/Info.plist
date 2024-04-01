@@ -51,7 +51,7 @@
 	<key>NSDocumentDirectory</key>
 	<string>permissions are necessary to save file in document</string>
 	<key>NSFaceIDUsageDescription</key>
-	<string>Why is my app authenticating using face id?</string>
+	<string>Face id is required for active login using biometric credentials</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Application needs to access your current location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

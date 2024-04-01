@@ -34,28 +34,32 @@ class HomeController {
   }
 
   void allowBiometricLogin() async {
-    Future.delayed(const Duration(milliseconds: 500), () {
-      var context = getIt<GlobalContext>().context();
-      getIt<SharedPrefService>().getString(ApplicationConstants.userCredential).then((data) {
-        if (data == null && loginParams != null) {
-          showDialog(
-            context: context,
-            builder: (cxt) {
-              return AlertDialog(
-                title: Text(
-                  Translate.s.active_fingerprint,
-                  style: AppTextStyle.s18_w500(color: context.colors.textColor),
-                ),
-                content: ActiveFingerPrintContent(controller: this),
-                actions: [
-                  BiometricActions(controller: this),
-                ],
-              );
-            },
-          );
-        }
+    var supportBiometric = await BiometricHelper.instance.getAvailableBiometricTypes();
+    if (supportBiometric.isNotEmpty) {
+      Future.delayed(const Duration(milliseconds: 200), () {
+        var context = getIt<GlobalContext>().context();
+        getIt<SharedPrefService>().getString(ApplicationConstants.userCredential).then((data) {
+          if (data == null && loginParams != null) {
+            showDialog(
+              context: context,
+              builder: (cxt) {
+                return AlertDialog(
+                  title: Text(
+                    Translate.s.biometric_login_app,
+                    style: AppTextStyle.s16_w500(color: context.colors.black),
+                  ),
+                  content: ActiveFingerPrintContent(controller: this),
+                  actions: [
+                    BiometricActions(controller: this),
+                  ],
+                );
+              },
+            );
+          }
+        });
       });
-    });
+    }
+
   }
 
   Future<void> saveUserCredentialsUsingBiometric(BuildContext context) async {

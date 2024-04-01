@@ -44,12 +44,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m10(version) => "Version ${version}";
 
+  static String m11(version) => "Version ${version}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "About_New_version":
             MessageLookupByLibrary.simpleMessage("What\'s New"),
         "About_Simat_application":
             MessageLookupByLibrary.simpleMessage("About Simat application"),
+        "Active_login_by_biometric": MessageLookupByLibrary.simpleMessage(
+            "Active login using biometric credentials"),
         "AddressValidation":
             MessageLookupByLibrary.simpleMessage("Please enter the address"),
         "Amendments_to_information_confidentiality":
@@ -135,6 +139,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "balance": MessageLookupByLibrary.simpleMessage("Balance"),
         "beginning_of_the_contract":
             MessageLookupByLibrary.simpleMessage("Beginning of the decade"),
+        "biometric_login_app":
+            MessageLookupByLibrary.simpleMessage("Biometric login for my app"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancel_filter": MessageLookupByLibrary.simpleMessage("Cancel Filter"),
@@ -241,7 +247,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("General repairs"),
         "guards": MessageLookupByLibrary.simpleMessage("Guards"),
         "how_get_code":
-            MessageLookupByLibrary.simpleMessage("How can I get the code?"),
+            MessageLookupByLibrary.simpleMessage("How to login with QR?"),
         "implemented": MessageLookupByLibrary.simpleMessage("Implemented"),
         "inactive": MessageLookupByLibrary.simpleMessage("Inactive"),
         "insurance": MessageLookupByLibrary.simpleMessage("Insurance"),
@@ -380,6 +386,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "tenant": MessageLookupByLibrary.simpleMessage("Tenant"),
         "the_due": MessageLookupByLibrary.simpleMessage("The due"),
         "the_units": m8,
+        "today": MessageLookupByLibrary.simpleMessage("Today"),
+        "tomorrow": MessageLookupByLibrary.simpleMessage("Tomorrow"),
         "total_contract":
             MessageLookupByLibrary.simpleMessage("Total Contract"),
         "total_due": MessageLookupByLibrary.simpleMessage("Total due"),
@@ -395,11 +403,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "3. Go to your mobile phone and from the login screen using the QR code, scan the QR code that appears in front of you in the browser"),
         "vacant": MessageLookupByLibrary.simpleMessage("Vacant"),
-        "version_label": m10,
+        "version": m10,
+        "version_label": m11,
         "view_payments": MessageLookupByLibrary.simpleMessage("View payments"),
         "waste_transportation":
             MessageLookupByLibrary.simpleMessage("Waste transportation"),
         "water_consumption":
-            MessageLookupByLibrary.simpleMessage("Water consumption")
+            MessageLookupByLibrary.simpleMessage("Water consumption"),
+        "yesterday": MessageLookupByLibrary.simpleMessage("Yesterday")
       };
 }

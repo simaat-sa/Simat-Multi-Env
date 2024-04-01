@@ -26,7 +26,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    controller.allowBiometricLogin();
     return BaseBlocBuilder(
       bloc: controller.pagesBloc,
       onSuccessWidget: (pages) {

@@ -10,14 +10,23 @@ import 'package:injectable/injectable.dart';
 @lazySingleton
 class DioHeader {
   Map<String, String> call() {
-    String? token = AppConfig.instance.token;
-    BuildContext context = getIt<GlobalContext>().context();
-    var lang = context.read<DeviceCubit>().state.model.locale.languageCode;
-    return {
-      "Content-Type": "application/json",
-      'Accept': 'application/json',
-      'Authorization': '${ApplicationConstants.headerBearer} $token',
-      "Accept-Language": lang
-    };
+    try {
+      String? token = AppConfig.instance.token;
+      BuildContext context = getIt<GlobalContext>().context();
+      var lang = context.read<DeviceCubit>().state.model.locale.languageCode;
+      return {
+        "Content-Type": "application/json",
+        'Accept': 'application/json',
+        'Authorization': '${ApplicationConstants.headerBearer} $token',
+        "Accept-Language": lang
+      };
+    } catch (e) {
+      return {
+        "Content-Type": "application/json",
+        'Accept': 'application/json',
+        "Accept-Language": 'ar'
+      };
+    }
+
   }
 }

@@ -179,13 +179,13 @@
   "tax": "ضريبة",
   "apply": "تطبيق",
   "sar": " ر.س",
-  "no_items_found":"لا يوجد نتائج",
+  "no_items_found": "لا يوجد نتائج",
   "vacant": "شاغر",
   "rented": "مؤجر",
   "reserved": "محجوز",
-  "unit_number" : "وحدات ({number})",
-  "main_number" : "صيانة ({number})",
-  "expenses_number" : "مصروفات ({number})",
+  "unit_number": "وحدات ({number})",
+  "main_number": "صيانة ({number})",
+  "expenses_number": "مصروفات ({number})",
   "prop_type": "نوع العقار",
   "prop_category": "فئة العقار",
   "type_of_expense": "نوع المصروف",
@@ -219,7 +219,13 @@
   "scan_qr": "مسح رمز الإستجابة",
   "active_fingerprint": "تفعيل بصمة الإصبع",
   "do_you_want_to_activate_fingerprint": "هل تريد تفعيل بصمة الإصبع؟",
-  "confirm": "تأكيد"
+  "confirm": "تأكيد",
+  "biometric_login_app": "تسجيل الدخول بالسيمات الحيوية للتطبيق",
+  "Active_login_by_biometric": "تسجيل الدخول النشط باستخدام بيانات الاعتماد بالسيمات الحيوية",
+  "today": "اليوم",
+  "yesterday": "أمس",
+  "tomorrow": "غدا",
+  "version": "اصدار {version}"
 }
 
 

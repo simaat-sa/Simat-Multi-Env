@@ -620,10 +620,10 @@ class S {
     );
   }
 
-  /// `How can I get the code?`
+  /// `How to login with QR?`
   String get how_get_code {
     return Intl.message(
-      'How can I get the code?',
+      'How to login with QR?',
       name: 'how_get_code',
       desc: '',
       args: [],
@@ -2237,6 +2237,66 @@ class S {
       name: 'confirm',
       desc: '',
       args: [],
+    );
+  }
+
+  /// `Biometric login for my app`
+  String get biometric_login_app {
+    return Intl.message(
+      'Biometric login for my app',
+      name: 'biometric_login_app',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Active login using biometric credentials`
+  String get Active_login_by_biometric {
+    return Intl.message(
+      'Active login using biometric credentials',
+      name: 'Active_login_by_biometric',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today`
+  String get today {
+    return Intl.message(
+      'Today',
+      name: 'today',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yesterday`
+  String get yesterday {
+    return Intl.message(
+      'Yesterday',
+      name: 'yesterday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tomorrow`
+  String get tomorrow {
+    return Intl.message(
+      'Tomorrow',
+      name: 'tomorrow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version {version}`
+  String version(Object version) {
+    return Intl.message(
+      'Version $version',
+      name: 'version',
+      desc: '',
+      args: [version],
     );
   }
 }

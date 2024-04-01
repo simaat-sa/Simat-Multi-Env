@@ -57,7 +57,7 @@
   "please_fill_all_fields": "Please fill all fields",
   "Invalid_login_data": "Please verify your login information",
   "login_with_qr": "Scan the QR code to log in",
-  "how_get_code": "How can I get the code?",
+  "how_get_code": "How to login with QR?",
   "contractsCount": "Contracts {count}",
   "propCount": "Properties {count}",
   "maintenanceCount": "Maintenance Orders {count}",
@@ -218,5 +218,11 @@
   "registered": "Registered",
   "active_fingerprint": "Fingerprint is activation",
   "do_you_want_to_activate_fingerprint": "Do you want to activate fingerprint?",
-  "confirm": "Confirm"
+  "confirm": "Confirm",
+  "biometric_login_app": "Biometric login for my app",
+  "Active_login_by_biometric": "Active login using biometric credentials",
+  "today": "Today",
+  "yesterday": "Yesterday",
+  "tomorrow": "Tomorrow",
+  "version": "Version {version}"
 }

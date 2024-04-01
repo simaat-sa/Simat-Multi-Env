@@ -14,8 +14,8 @@ class ActiveFingerPrintContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      Translate.s.do_you_want_to_activate_fingerprint,
-      style: AppTextStyle.s15_w500(color: context.colors.primary),
+      Translate.s.Active_login_by_biometric,
+      style: AppTextStyle.s14_w400(color: context.colors.black),
     );
   }
 }
