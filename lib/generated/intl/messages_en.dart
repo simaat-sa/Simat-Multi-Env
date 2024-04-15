@@ -246,6 +246,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "general_repairs":
             MessageLookupByLibrary.simpleMessage("General repairs"),
         "guards": MessageLookupByLibrary.simpleMessage("Guards"),
+        "host_name": MessageLookupByLibrary.simpleMessage("Host name"),
         "how_get_code":
             MessageLookupByLibrary.simpleMessage("How to login with QR?"),
         "implemented": MessageLookupByLibrary.simpleMessage("Implemented"),

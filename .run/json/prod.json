@@ -1,6 +1,7 @@
 {
   "APP_ID": "system.prod",
   "APP_ENV_NAME": "prod",
+  "IS_GENERAL": "true",
   "APP_BASE_URL": "prod/",
   "APP_API": "api/",
   "APP_APP_NAME_EN": "Prod Name",

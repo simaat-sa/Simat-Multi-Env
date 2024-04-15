@@ -11,6 +11,8 @@ class LoginController {
   final GlobalKey<CustomButtonState> btnKey = GlobalKey();
   final GlobalKey<ScaffoldState> drawerKey = GlobalKey<ScaffoldState>();
   final TextEditingController name = TextEditingController();
+  final TextEditingController host = TextEditingController();
+
   final TextEditingController password = TextEditingController();
 
   /// to check if the device support biometric or not [finger print or face id]
@@ -30,11 +32,26 @@ class LoginController {
   Future<bool> onSubmitLoginBtn(BuildContext context) async {
     String? deviceId = await _getFirebaseToken();
     if (_checkFormValidation(context)) {
+      _saveHostUrl();
       LoginParams params = loginParams(deviceId ?? '');
       var loginResponse = await getIt<AuthRepository>().login(params);
       return _handleLoginResponse(loginResponse,loginParams: params);
     } else {
       return false;
+    }
+  }
+
+  void _saveHostUrl() {
+     if (host.text.isNotEmpty) {
+      var url = host.text;
+      if (!host.text.contains("http://") && !host.text.contains("https://")){
+        url = "https://$url";
+      }
+      if (!url.endsWith("/")) {
+        url = "$url/";
+      }
+      UserHelperService.instance.saveBaseUrl(url);
+      GlobalState.instance.set(ApplicationConstants.keyBaseUrl, url);
     }
   }
 

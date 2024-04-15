@@ -1,8 +1,9 @@
 {
   "APP_ID": "du.base.clean",
   "APP_ENV_NAME": "stage",
+  "IS_GENERAL": "true",
   "APP_BASE_URL": "dev.simaat.sa",
-  "APP_API": "/api/app/",
+  "APP_API": "api/app/",
   "APP_APP_NAME_EN": "Simaat",
   "APP_APP_NAME_AR": "سمات",
   "APP_LOCAL_LOGO": "assets/images/icon.png",

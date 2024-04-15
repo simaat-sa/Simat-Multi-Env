@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
+import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/errors/custom_error.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:injectable/injectable.dart';
@@ -20,7 +21,7 @@ class Put extends DioHelper {
     //create multipart request for POST or PATCH method
 
     try {
-      var response = await dio.put(params.url, data: formData ?? json.encode(params.body));
+      var response = await dio.put(AppConfig.instance.baseAPIUrl  + params.url, data: formData ?? json.encode(params.body));
       if (params.showLoader) getIt<LoadingHelper>().dismissDialog();
       return getIt<HandleErrors>().statusError(response, params.errorFunc);
     } on DioException catch (e) {

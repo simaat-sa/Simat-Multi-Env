@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/errors/custom_error.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
@@ -15,7 +16,7 @@ class Delete extends DioHelper {
   Future<MyResult<Response>> call(RequestBodyModel params) async {
     if (params.showLoader) getIt<LoadingHelper>().showLoadingDialog();
     try {
-      var response = await dio.delete(params.url, data: params.body);
+      var response = await dio.delete(AppConfig.instance.baseAPIUrl  + params.url, data: params.body);
       if (params.showLoader) getIt<LoadingHelper>().dismissDialog();
       return getIt<HandleErrors>().statusError(response, params.errorFunc);
     } on DioException catch (e) {

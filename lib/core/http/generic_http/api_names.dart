@@ -1,7 +1,4 @@
-import 'package:flutter_tdd/core/constants/app_config.dart';
-
 class ApiNames {
-  static String baseUrl = AppConfig.instance.baseAPIUrl;
   static String version1Part = "v1/";
 
   // auth routes

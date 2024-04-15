@@ -47,4 +47,15 @@ class UserHelperService {
     }
     return null;
   }
+
+
+  Future<void> saveBaseUrl(String url) async {
+    await getIt<SharedPrefService>().saveString(ApplicationConstants.keyBaseUrl,url);
+  }
+
+  Future<String?> getSavedBaseUrl() async {
+    return await getIt<SharedPrefService>().getString(ApplicationConstants.keyBaseUrl);
+  }
+
+
 }

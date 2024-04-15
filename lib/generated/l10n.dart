@@ -2299,6 +2299,16 @@ class S {
       args: [version],
     );
   }
+
+  /// `Host name`
+  String get host_name {
+    return Intl.message(
+      'Host name',
+      name: 'host_name',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

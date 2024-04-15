@@ -1,7 +1,9 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/errors/custom_error.dart';
+import 'package:flutter_tdd/core/http/generic_http/api_names.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:injectable/injectable.dart';
 
@@ -20,7 +22,7 @@ class Post extends DioHelper {
     FormData? formData = getIt<HandleRequestBody>()(params);
     try {
       var response = await dio.post(
-        params.url,
+        AppConfig.instance.baseAPIUrl + params.url,
         data: formData ?? json.encode(params.body),
       );
       if (params.showLoader) getIt<LoadingHelper>().dismissDialog();

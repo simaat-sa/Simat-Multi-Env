@@ -11,6 +11,28 @@ class LoginFormWidget extends StatelessWidget {
       key: controller.formKey,
       child: Column(
         children: [
+          Gaps.vGap32,
+          if(AppConfig.instance.isGeneralEnv)
+          GenericTextField(
+            radius: BorderRadius.circular(5.r),
+            controller: controller.host,
+            enableBorderColor: context.colors.inputBorder,
+            fillColor: context.colors.white,
+            contentPadding: const EdgeInsets.all(10),
+            fieldTypes: FieldTypes.normal,
+            type: TextInputType.url,
+            action: TextInputAction.next,
+            validate: (value) => value?.validateEmpty(),
+            hint: Translate.of(context).host_name,
+            textColor: context.colors.secondary,
+            margin: const EdgeInsets.only(top: 15),
+            prefixIcon: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Icon(
+                  Icons.link,
+                  color: context.colors.primaryText,
+                )),
+          ),
           GenericTextField(
             radius: BorderRadius.circular(5.r),
             controller: controller.name,
@@ -23,7 +45,7 @@ class LoginFormWidget extends StatelessWidget {
             validate: (value) => value?.validateEmpty(),
             hint: Translate.of(context).user_or_phone_hint,
             textColor: context.colors.secondary,
-            margin: const EdgeInsets.only(top: 40),
+            margin: const EdgeInsets.only(top: 15),
             prefixIcon: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Icon(

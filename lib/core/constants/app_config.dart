@@ -15,14 +15,26 @@ class AppConfig {
 
   String? get token => GlobalState.instance.get(ApplicationConstants.keyToken);
 
-  String get baseUrl => "https://${const String.fromEnvironment('APP_BASE_URL')}/";
+  String get baseUrl {
+   if (isGeneralEnv) {
+     return GlobalState.instance.get(ApplicationConstants.keyBaseUrl);
+   } else {
+     return "https://${const String.fromEnvironment('APP_BASE_URL')}/";
+   }
+  }
+  bool get isGeneralEnv => const bool.fromEnvironment('IS_GENERAL');
 
   // String imageBaseUrl(String imagePath) => "$baseUrl$imagePath?token=$token";
 
   String imageBaseUrl(String imagePath) => "https://cdn.thiqeel.com/apps/sharingpath/thiqeel/uploads/simaatApp/$imagePath";
 
-  String get baseAPIUrl =>
-      "https://${const String.fromEnvironment('APP_BASE_URL')}${const String.fromEnvironment('APP_API')}";
+  String get baseAPIUrl {
+    String url = baseUrl;
+    if (isGeneralEnv) {
+      url = GlobalState.instance.get(ApplicationConstants.keyBaseUrl);
+    }
+    return url + const String.fromEnvironment('APP_API');
+  }
 
   static BoxConstraints get textFieldConstrains =>
       const BoxConstraints(minHeight: 50, maxHeight: 50);

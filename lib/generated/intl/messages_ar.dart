@@ -234,6 +234,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "general_maint": MessageLookupByLibrary.simpleMessage("صيانة عامة"),
         "general_repairs": MessageLookupByLibrary.simpleMessage("اصلاحات عامة"),
         "guards": MessageLookupByLibrary.simpleMessage("حراسات"),
+        "host_name": MessageLookupByLibrary.simpleMessage("اسم المضيف"),
         "how_get_code": MessageLookupByLibrary.simpleMessage(
             "كيف يمكنني الحصول علي الرمز؟"),
         "implemented": MessageLookupByLibrary.simpleMessage("مُنفّذ"),

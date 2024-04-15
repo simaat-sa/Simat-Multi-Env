@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_tdd/core/constants/app_config.dart';
 import 'package:flutter_tdd/core/errors/custom_error.dart';
 import 'package:flutter_tdd/core/http/models/result.dart';
 import 'package:injectable/injectable.dart';
@@ -14,7 +15,7 @@ class Get extends DioHelper {
   @override
   Future<MyResult<Response>> call(RequestBodyModel params) async {
     try {
-      var response = await dio.get(params.url,
+      var response = await dio.get(AppConfig.instance.baseAPIUrl + params.url,
           options: getIt<DioOptions>()(forceRefresh: params.forceRefresh));
       return getIt<HandleErrors>().statusError(response, params.errorFunc);
     } on DioException catch (e) {

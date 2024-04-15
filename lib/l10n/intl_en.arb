@@ -224,5 +224,6 @@
   "today": "Today",
   "yesterday": "Yesterday",
   "tomorrow": "Tomorrow",
-  "version": "Version {version}"
+  "version": "Version {version}",
+  "host_name": "Host name"
 }

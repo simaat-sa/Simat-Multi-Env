@@ -225,7 +225,8 @@
   "today": "اليوم",
   "yesterday": "أمس",
   "tomorrow": "غدا",
-  "version": "اصدار {version}"
+  "version": "اصدار {version}",
+  "host_name": "اسم المضيف"
 }
 
 

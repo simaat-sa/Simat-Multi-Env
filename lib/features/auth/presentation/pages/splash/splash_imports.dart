@@ -2,6 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_tdd/core/constants/app_config.dart';
+import 'package:flutter_tdd/core/constants/app_constants.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/helpers/global_state.dart';
 import 'package:flutter_tdd/core/helpers/services/language_service.dart';
